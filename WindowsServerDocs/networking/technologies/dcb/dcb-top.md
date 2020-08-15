@@ -6,12 +6,12 @@ ms.assetid: da58f312-bd3b-4bb6-98ca-6177869dd6ad
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 646660c1371b592670737b7d7d208b62208bfec9
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 81c35d1a5673793220ec860266d129a4ecdb4046
+ms.sourcegitcommit: b18effcba95c85d6e08e7d29808b576491a5352e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993942"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88243194"
 ---
 # <a name="data-center-bridging-dcb"></a>データ センター ブリッジング\(DCB\)
 
@@ -38,7 +38,7 @@ DCB は \- 、特定の種類のネットワークトラフィックに対して
 DCB は、次の一連のプロトコルで構成されています。
 
 - \( \) 802.1 p と 802.1 q 標準を基にした、高度な転送サービスの作成– IEEE 802.1 qaz
-- 優先順位フロー制御 \( PFS \) 、IEEE 802.1 qbb
+- 優先順位フロー制御 \( pfc \) 、IEEE 802.1 qbb
 - DCB Exchange Protocol \( dcbx \) 、IEEE 802.1 ab。 802.1 qaz standard で拡張されています。
 
 DCBX プロトコルを使用すると、スイッチで DCB を構成して、Windows Server 2016 を実行しているコンピューターなどのエンドデバイスを自動的に構成することができます。
@@ -72,7 +72,7 @@ DCB には、次のような機能があります。
 7. は、Windows Server 2016 のサービス品質 QoS ソリューションの共存をサポートしてい \( \) ます。
 
 >[!NOTE]
->Rdma の集約型イーサネット roce バージョンを使用する前に \( \) 、DCB を有効にする必要があります。 インターネットワイドエリア RDMA プロトコルの iwarp ネットワークには必要ありません \( \) が、テストでは、すべてのイーサネット \- ベースの RDMA テクノロジが DCB で動作しやすくなっていると判断しました。 このため、iWARP RDMA のデプロイには DCB を使用することを検討してください。 詳細については、「[リモートダイレクトメモリアクセス (RDMA) とスイッチ埋め込みチーミング (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)」を参照してください。
+>Rdma の集約型イーサネット roce バージョンを使用する前に \( \) 、DCB を有効にする必要があります。 インターネットワイドエリア RDMA プロトコルの iwarp ネットワークには必要ありません \( \) が、テストでは、すべてのイーサネット \- ベースの RDMA テクノロジが DCB で動作しやすくなっていると判断しました。 このため、iWARP RDMA のデプロイには DCB を使用することを検討してください。 詳細については、「 [リモートダイレクトメモリアクセス (RDMA) とスイッチ埋め込みチーミング (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)」を参照してください。
 
 ##  <a name="practical-applications-of-dcb"></a>DCB の実用的なアプリケーション
 

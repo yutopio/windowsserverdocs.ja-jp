@@ -6,12 +6,12 @@ ms.author: billmath
 manager: daveba
 ms.date: 08/09/2019
 ms.topic: article
-ms.openlocfilehash: 46e78e74781f4a85f279299745d841fd0bcaf7c3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 18e480200bf2d22c5f46dd67d1ee6a704f566d55
+ms.sourcegitcommit: b18effcba95c85d6e08e7d29808b576491a5352e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964859"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88243204"
 ---
 # <a name="ad-fs-openid-connectoauth-concepts"></a>AD FS OpenID 接続/OAuth の概念
 AD FS 2016 以降に適用されます
@@ -35,7 +35,7 @@ AD FS 2016 以降に適用されます
 |アプリケーションの種類|説明|Role|
 |-----|-----|-----|
 |ネイティブ アプリケーション|**パブリッククライアント**とも呼ばれ、これは、ユーザーが操作する pc またはデバイスで実行されるクライアントアプリとして使用することを目的としています。|リソースへのユーザーアクセスのために、承認サーバー (AD FS) からのトークンを要求します。 Http ヘッダーとしてトークンを使用して、保護されたリソースに HTTP 要求を送信します。|
-|サーバーアプリケーション (Web アプリ)|サーバー上で実行され、一般にブラウザーを介してユーザーがアクセスできる web アプリケーション。 独自のクライアント "シークレット" または資格情報を維持できるため、**機密クライアント**と呼ばれることもあります。 |リソースへのユーザーアクセスのために、承認サーバー (AD FS) からのトークンを要求します。 トークンを要求する前に、クライアント (Web アプリ) はそのシークレットを使用して認証する必要があります。 |
+|サーバーアプリケーション (Web アプリ)|サーバー上で実行され、一般にブラウザーを介してユーザーがアクセスできる web アプリケーション。 独自のクライアント "シークレット" または資格情報を維持できるため、 **機密クライアント**と呼ばれることもあります。 |リソースへのユーザーアクセスのために、承認サーバー (AD FS) からのトークンを要求します。 トークンを要求する前に、クライアント (Web アプリ) はそのシークレットを使用して認証する必要があります。 |
 |Web API|ユーザーがアクセスしている終了リソース。 これらは、"証明書利用者" の新しい表現と考えてください。|クライアントによって取得されたベアラーアクセストークンを消費します|
 
 ## <a name="application-group"></a>アプリケーショングループ
@@ -79,25 +79,25 @@ AD FS によって発行されたセキュリティトークン (アクセスト
 
  2. AD FS は、AD FS でクライアントとリソースの登録時に取得したクライアント ID を使用して、認証要求のクライアント ID を検証します。 機密クライアントを使用している場合は、AD FS 認証要求で提供されたクライアントシークレットも検証します。 また AD FS クライアントのリダイレクト uri も検証します。
 
- 3. AD FS は、認証要求で渡されたリソースパラメーターを介してクライアントがアクセスするリソースを識別します。 MSAL クライアントライブラリを使用している場合、resource パラメーターは送信されません。 代わりに、リソース url はスコープパラメーターの一部として送信されます。*スコープ = [リソース url]//[スコープ値 (openid など*)。
+ 3. AD FS は、認証要求で渡されたリソースパラメーターを介してクライアントがアクセスするリソースを識別します。 MSAL クライアントライブラリを使用している場合、resource パラメーターは送信されません。 代わりに、リソース url はスコープパラメーターの一部として送信されます。 *スコープ = [リソース url]/[スコープ値 (openid)* などです。
 
     リソースがリソースまたはスコープパラメーターを使用して渡されない場合、ADFS は既定のリソース urn を使用します。 microsoft: userinfo ポリシー (MFA、発行、または承認ポリシーなど) を構成することはできません。
 
  4. 次の AD FS は、クライアントがリソースにアクセスするためのアクセス許可を持っているかどうかを検証します。 また AD FS は、認証要求で渡されるスコープが、リソースの登録時に構成されたスコープと一致するかどうかを検証します。 クライアントにアクセス許可がない場合、または適切なスコープが auth 要求で送信されない場合は、認証フローが終了します。
 
- 5. アクセス許可とスコープが検証されると、AD FS は、構成された[認証方法](../operations/configure-authentication-policies.md)を使用してユーザーを認証します。
+ 5. アクセス許可とスコープが検証されると、AD FS は、構成された [認証方法](../operations/configure-authentication-policies.md)を使用してユーザーを認証します。
 
- 6. リソースポリシーまたはグローバル認証ポリシーに従って[追加の認証方法](../operations/configure-additional-authentication-methods-for-ad-fs.md)が必要な場合は、AD FS によって追加の認証がトリガーされます。
+ 6. リソースポリシーまたはグローバル認証ポリシーに従って [追加の認証方法](../operations/configure-additional-authentication-methods-for-ad-fs.md) が必要な場合は、AD FS によって追加の認証がトリガーされます。
 
- 7. AD FS は、 [AZURE mfa](../operations/configure-ad-fs-and-azure-mfa.md)または[サードパーティの mfa](../operations/additional-authentication-methods-ad-fs.md)を使用して認証を実行します。
+ 7. AD FS は、 [AZURE mfa](../operations/configure-ad-fs-and-azure-mfa.md) または [サードパーティの mfa](../operations/additional-authentication-methods-ad-fs.md) を使用して認証を実行します。
 
- 8. ユーザーが認証されると、AD FS によって[要求規則](../deployment/configuring-claim-rules.md)が適用され (セキュリティトークンの一部としてリソースに送信される要求が決定されます)、[アクセス制御ポリシー](../operations/ad-fs-client-access-policies.md) (ユーザーがリソースにアクセスするために必要な条件を満たしていることが判断されます)。
+ 8. ユーザーが認証されると、AD FS によって [要求規則](../deployment/configuring-claim-rules.md) が適用され (セキュリティトークンの一部としてリソースに送信される要求が決定されます)、 [アクセス制御ポリシー](../operations/ad-fs-client-access-policies.md) (ユーザーがリソースにアクセスするために必要な条件を満たしていることが判断されます)。
 
  9. 次に、AD FS によってアクセストークンと更新トークンが生成されます。
 
  10. AD FS は、ID トークンも生成します。
 
- 11. スコープ = allatclaims が auth 要求に含まれている場合、定義された要求規則に基づいてアクセストークンに要求が含まれるように、 [ID トークンがカスタマイズされ](custom-id-tokens-in-ad-fs.md)ます。
+ 11. スコープ = allatclaims が auth 要求に含まれている場合、定義された要求規則に基づいてアクセストークンに要求が含まれるように、 [ID トークンがカスタマイズされ](custom-id-tokens-in-ad-fs.md) ます。
 
  12. 必要なトークンが生成され、カスタマイズされると、AD FS はトークンを含むクライアントに応答します。 認証要求に scope = openid が含まれている場合にのみ、ID トークンが応答に含まれます。 クライアントは、トークンエンドポイントを使用して、認証後に常に ID トークンを取得できます。
 
