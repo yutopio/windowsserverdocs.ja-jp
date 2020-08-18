@@ -8,12 +8,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 6a7e916c78ad7b2711268f02bcf028dfb2621303
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 014e19088394135c00d1df63a46ba74f400fa411
+ms.sourcegitcommit: 08da40966c5d633f8748c8ae348f12656a54d3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991869"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88140309"
 ---
 # <a name="privileged-access-workstations"></a>Privileged Access Workstations
 
@@ -28,7 +28,7 @@ Privileged Access Workstation (PAW) は、インターネットからの攻撃�
 > [!NOTE]
 > PAW アーキテクチャは、一般的な構成であるアカウントとワークステーションの 1:1 のマッピングを必要としません。 PAW は、1 つ以上のアカウントで使用できる信頼されたワークステーション環境を作成します。
 
-最大限のセキュリティを提供するために、PAW では常に最新のセキュリティ保護されたオペレーティング システムを実行する必要があります。Microsoft では Windows 10 Enterprise を強くお勧めします。これには、他のエディションでは利用できない追加のセキュリティ機能がいくつか含まれます (特に、[Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard) と [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control))。
+最大限のセキュリティを提供するために、PAW では常に最新のセキュリティ保護されたオペレーティング システムを実行する必要があります。Microsoft では Windows 10 Enterprise を強くお勧めします。この OS には、他のエディションでは利用できない追加のセキュリティ機能が含まれます (特に、[Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard) と [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control))。
 
 > [!NOTE]
 > Windows 10 Enterprise を利用できない組織は、Windows 10 Pro を使用することができます。この OS には、トラスト ブート、BitLocker、リモート デスクトップなどの PAW の多くの重要な基礎テクノロジが採用されています。  教育機関のお客様は、Windows 10 Education を使用できます。  Windows 10 Home を PAW に使用しないでください。
