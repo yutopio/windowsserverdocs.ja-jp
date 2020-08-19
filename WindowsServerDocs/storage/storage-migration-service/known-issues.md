@@ -6,22 +6,22 @@ ms.author: nedpyle
 manager: tiaascs
 ms.date: 07/29/2020
 ms.topic: article
-ms.openlocfilehash: 818fca0ed62c140b3b0c4bbb1394380d42201f79
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0dc49603099427fb00507db021c391500a7c42f2
+ms.sourcegitcommit: 3d59c2aaebcd190b20d24bc8a449eee0681b6a3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961316"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88583317"
 ---
 # <a name="storage-migration-service-known-issues"></a>記憶域移行サービスの既知の問題
 
-このトピックでは、 [Storage Migration Service](overview.md)を使用してサーバーを移行する際の既知の問題に対する回答を示します。
+このトピックでは、 [Storage Migration Service](overview.md) を使用してサーバーを移行する際の既知の問題に対する回答を示します。
 
 記憶域移行サービスは、Windows Server のサービスと Windows 管理センターのユーザーインターフェイスの2つの部分でリリースされます。 このサービスは、Windows server、長期的なサービスチャネル、Windows Server、半期チャネルで利用できます。Windows 管理センターは別途ダウンロードできます。 また、Windows Server の累積的な更新プログラムに加えた変更も、Windows Update によって定期的に追加されます。
 
 たとえば、Windows Server バージョン1903には、記憶域移行サービスの新機能と修正プログラムが含まれています。これは、 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534)をインストールすることによって、windows server 2019 と windows server、バージョン1809でも利用できます。
 
-## <a name="how-to-collect-log-files-when-working-with-microsoft-support"></a><a name="collecting-logs"></a>Microsoft サポートを操作するときにログファイルを収集する方法
+## <a name="how-to-collect-log-files-when-working-with-microsoft-support"></a><a name="collecting-logs"></a> Microsoft サポートを操作するときにログファイルを収集する方法
 
 Storage Migration Service には、Orchestrator サービスとプロキシサービスのイベントログが含まれています。 Orchestrator サーバーには常に両方のイベントログが含まれ、プロキシサービスがインストールされている宛先サーバーにはプロキシログが含まれます。 これらのログは次の場所にあります。
 
@@ -46,11 +46,11 @@ Windows 管理センターの記憶域移行サービス拡張機能は、Window
 
 カットオーバーの検証を実行すると、"失敗: 対象コンピューターのトークンフィルターポリシーのアクセスが拒否されました。" というエラーが表示されます。 これは、移行元コンピューターと移行先コンピューターの両方に対して、正しいローカル管理者の資格情報を指定した場合でも発生します。
 
-この問題は、 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534)更新プログラムで修正されました。
+この問題は、 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) 更新プログラムで修正されました。
 
 ## <a name="storage-migration-service-isnt-included-in-windows-server-2019-evaluation-or-windows-server-2019-essentials-edition"></a>Storage Migration Service が Windows Server 2019 評価版または Windows Server 2019 Essentials edition に含まれていない
 
-Windows 管理センターを使用して[Windows server 2019 評価](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019)版または windows Server 2019 Essentials edition に接続する場合、記憶域移行サービスを管理するオプションはありません。 記憶域移行サービスも、役割と機能には含まれていません。
+Windows 管理センターを使用して [Windows server 2019 評価](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) 版または windows Server 2019 Essentials edition に接続する場合、記憶域移行サービスを管理するオプションはありません。 記憶域移行サービスも、役割と機能には含まれていません。
 
 この問題は、Windows Server 2019 および Windows Server 2019 Essentials の評価メディアに記載されているサービスの問題が原因で発生します。
 
@@ -70,13 +70,13 @@ Transfer Log - Please check file sharing is allowed in your firewall. : This req
 
 この問題の回避方法:
 
-1. Orchestrator コンピューターで、Notepad.exe を使用して *% SYSTEMROOT% \SMS\Microsoft.StorageMigration.Service.exe.config*ファイルを編集し、"sendtimeout" を1分の既定値から10分に変更します。
+1. Orchestrator コンピューターで、Notepad.exe を使用して *% SYSTEMROOT% \SMS\Microsoft.StorageMigration.Service.exe.config* ファイルを編集し、"sendtimeout" を1分の既定値から10分に変更します。
 
     ```
     <bindings>
       <netTcpBinding>
         <binding name="NetTcpBindingSms"
-                 sendTimeout="00:01:00"
+                 sendTimeout="00:10:00"
     ```
 
 2. Orchestrator コンピューターで "Storage Migration Service" サービスを再起動します。
@@ -144,7 +144,7 @@ at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.TryTransfer()
 
 この問題は、backup 特権が呼び出されていないストレージ移行サービスのコード障害が原因で発生します。
 
-この問題を解決するには、 [KB4490481 (OS ビルド 17763.404)](https://support.microsoft.com/help/4490481/windows-10-update-kb4490481)を orchestrator コンピューターに Windows Update インストールし、プロキシサービスがインストールされている場合は対象コンピューターにインストールします。 移行元の移行ユーザーアカウントが、ソースコンピューターのローカル管理者であり、Storage Migration Service orchestrator であることを確認します。 移行先の移行ユーザーアカウントが、移行先コンピューターのローカル管理者であり、記憶域移行サービス orchestrator であることを確認します。
+この問題を解決するには、 [KB4490481 (OS ビルド 17763.404)](https://support.microsoft.com/help/4490481/windows-10-update-kb4490481) を orchestrator コンピューターに Windows Update インストールし、プロキシサービスがインストールされている場合は対象コンピューターにインストールします。 移行元の移行ユーザーアカウントが、ソースコンピューターのローカル管理者であり、Storage Migration Service orchestrator であることを確認します。 移行先の移行ユーザーアカウントが、移行先コンピューターのローカル管理者であり、記憶域移行サービス orchestrator であることを確認します。
 
 ## <a name="dfsr-hashes-mismatch-when-using-storage-migration-service-to-preseed-data"></a>Storage Migration Service を使用してデータをプリシードするときに、DFSR ハッシュが一致しません
 
@@ -232,7 +232,7 @@ at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate(
 at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)
 ```
 
-これは、移行アカウントが SMB 共有に対して少なくとも読み取りアクセス許可を持っていない場合にマニフェストを作成するコードの欠陥でした。 この問題は、累積的な更新プログラム[4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062)で最初に修正されました。
+これは、移行アカウントが SMB 共有に対して少なくとも読み取りアクセス許可を持っていない場合にマニフェストを作成するコードの欠陥でした。 この問題は、累積的な更新プログラム [4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062)で最初に修正されました。
 
 ## <a name="error-0x80005000-when-running-inventory"></a>インベントリの実行時のエラー0x80005000
 
@@ -424,7 +424,7 @@ Guidance: Confirm that the Netlogon service on the computer is reachable through
 
 転送を完了し、その後同じデータの再転送を実行すると、移行元サーバー上でデータがほとんど変更されていない場合でも、転送時間が大幅に短縮されないことがあります。
 
-非常に多数のファイルと入れ子になったフォルダーを転送する場合は、この動作が想定されます。 データのサイズが関連していません。 まず、 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534)でこの動作を改善し、転送のパフォーマンスを最適化しています。 パフォーマンスをさらに調整するには、「[インベントリと転送のパフォーマンスの最適化](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#optimizing-inventory-and-transfer-performance)」を参照してください。
+非常に多数のファイルと入れ子になったフォルダーを転送する場合は、この動作が想定されます。 データのサイズが関連していません。 まず、 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) でこの動作を改善し、転送のパフォーマンスを最適化しています。 パフォーマンスをさらに調整するには、「 [インベントリと転送のパフォーマンスの最適化](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#optimizing-inventory-and-transfer-performance)」を参照してください。
 
 ## <a name="data-does-not-transfer-user-renamed-when-migrating-to-or-from-a-domain-controller"></a>データが転送されず、ドメインコントローラーとの間で移行するときにユーザー名が変更される
 
@@ -458,7 +458,7 @@ Guidance: Confirm that the Netlogon service on the computer is reachable through
         at Microsoft.StorageMigration.Service.DeviceHelper.MigrateSecurity(IDeviceRecord sourceDeviceRecord, IDeviceRecord destinationDeviceRecord, TransferConfiguration config, Guid proxyId, CancellationToken cancelToken)
     ```
 
-    これは、記憶域移行サービスを使用してドメインコントローラーとの間で移行を実行し、[ユーザーとグループの移行] オプションを使用してアカウントの名前を変更したり再利用したりした場合に想定される動作です。 [ユーザーとグループを転送しない] を選択するのではなく、 DC の移行は[、記憶域の移行サービスではサポートされていません](faq.md)。 DC には実際のローカルユーザーとグループがないため、記憶域移行サービスは、2つのメンバーサーバー間で移行する場合と同様に、これらのセキュリティプリンシパルを処理し、指示に従って Acl の調整を試行します。これにより、エラーが発生し、アカウントが破損またはコピーされます。
+    これは、記憶域移行サービスを使用してドメインコントローラーとの間で移行を実行し、[ユーザーとグループの移行] オプションを使用してアカウントの名前を変更したり再利用したりした場合に想定される動作です。 [ユーザーとグループを転送しない] を選択するのではなく、 DC の移行は [、記憶域の移行サービスではサポートされていません](faq.md)。 DC には実際のローカルユーザーとグループがないため、記憶域移行サービスは、2つのメンバーサーバー間で移行する場合と同様に、これらのセキュリティプリンシパルを処理し、指示に従って Acl の調整を試行します。これにより、エラーが発生し、アカウントが破損またはコピーされます。
 
 既に転送を1回以上実行している場合は、次のようにします。
 
@@ -572,7 +572,7 @@ Guidance: Confirm that the Netlogon service on the computer is reachable through
 
 また、カスタムレジストリ設定でグループポリシー設定を使用して設定することもできます。 GPRESULT ツールを使用して、どのポリシーがこの設定をソースコンピュータに適用しているかを判断できます。
 
-Storage Migration Service は、削除プロセスの一環として、一時的に[LocalAccountTokenFilterPolicy](https://support.microsoft.com/help/951016/description-of-user-account-control-and-remote-restrictions-in-windows)を有効にし、完了したら削除します。 競合するグループポリシーオブジェクト (GPO) を適用グループポリシーと、記憶域移行サービスが上書きされ、カットオーバーができなくなります。
+Storage Migration Service は、削除プロセスの一環として、一時的に [LocalAccountTokenFilterPolicy](https://support.microsoft.com/help/951016/description-of-user-account-control-and-remote-restrictions-in-windows) を有効にし、完了したら削除します。 競合するグループポリシーオブジェクト (GPO) を適用グループポリシーと、記憶域移行サービスが上書きされ、カットオーバーができなくなります。
 
 この問題を回避するには、次のいずれかのオプションを使用します。
 
@@ -635,7 +635,7 @@ Error Message:
 Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
 ```
 
-この問題は、Storage Migration Service のコード障害が原因で発生します。 現時点で唯一の回避策は、コンピューターの名前を NetBIOS 名と同じ名前に変更してから、 [NETDOM COMPUTERNAME/add](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11))を使用して、インベントリを開始する前に使用されていた長い名前を含む別のコンピューター名を追加します。 記憶域移行サービスは、別のコンピューター名の移行をサポートしています。
+この問題は、Storage Migration Service のコード障害が原因で発生します。 現時点で唯一の回避策は、コンピューターの名前を NetBIOS 名と同じ名前に変更してから、 [NETDOM COMPUTERNAME/add](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)) を使用して、インベントリを開始する前に使用されていた長い名前を含む別のコンピューター名を追加します。 記憶域移行サービスは、別のコンピューター名の移行をサポートしています。
 
 ## <a name="see-also"></a>関連項目
 

@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 06/30/2020
+ms.date: 08/07/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 5303bb696131d4e122da11c2d72152bf304716b4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 65a2a767e89af6d64893de1b8c7949bedd9e7625
+ms.sourcegitcommit: 9f2e04cd7e52c29fa2fbc64f67dcafbd021015ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961936"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051846"
 ---
 # <a name="supported-remote-desktop-rdp-file-settings"></a>サポートされるリモート デスクトップ RDP ファイルの設定
 
@@ -59,7 +59,9 @@ ms.locfileid: "87961936"
 | camerastoredirect:s:value | カメラのリダイレクト:</br>リダイレクトするカメラを構成します。 この設定では、リダイレクトが有効なカメラの KSCATEGORY_VIDEO_CAMERA インターフェイスをセミコロンで区切った一覧を使用します。 | - * :すべてのカメラをリダイレクトします</br> - カメラのリスト (camerastoredirect:s:\\?\usb#vid_0bda&pid_58b0&mi など)</br>- 特定のカメラを除外するには、シンボリック リンク文字列の前に "-" を付加します | カメラをリダイレクトしない | はい |
 | devicestoredirect:s:value | プラグ アンド プレイ デバイスのリダイレクト:</br>ローカル コンピューター上のどのデバイスがリダイレクトされて、リモート セッションで使用可能になるかを決定します。 | - *:後で接続されるものも含め、サポートされているすべてのデバイスをリダイレクトします</br> - 1 つまたは複数のデバイスの有効なハードウェア ID</br> - DynamicDevices:後で接続される、サポートされているすべてのデバイスをリダイレクトします | デバイスをリダイレクトしない | はい |
 | drivestoredirect:s:value | ドライブ/記憶域のリダイレクト:</br>ローカル コンピューター上のどのディスク ドライブがリダイレクトされて、リモート セッションで使用可能になるかを決定します。 | - 値の指定なし: どのドライブもリダイレクトされない</br>- * :後で接続されるドライブも含めて、すべてのディスク ドライブをリダイレクトする</br>- DynamicDrives: 後で接続されるすべてのドライブをリダイレクトする</br>- 1 つ以上のドライブのドライブとラベル ("drivestoredirect:s:C:;E:;" など): 指定されたドライブをリダイレクトする | ドライブをリダイレクトしない | はい |
+| keyboardhook:i:value | デスクトップ接続のリモート セッションで Windows キーの組み合わせ (WIN キー、ALT + TAB) がいつ適用されるかを決定します。 | - 0:Windows キーの組み合わせは、ローカル コンピューターに適用される</br>- 1:Windows キーの組み合わせは、フォーカスがあるときにリモート コンピューターに適用される</br>- 2:Windows キーの組み合わせは、全画面表示のときにのみリモート コンピューターに適用される | 2 | はい |
 | redirectclipboard:i:value | クリップボードのリダイレクト:</br>クリップボードのリダイレクトを有効にするかどうかを決定します。 | - 0:ローカル コンピューターのクリップボードは、リモート セッションで使用できない</br>- 1:ローカル コンピューターのクリップボードは、リモート セッションで使用できる | 1 | はい |
+| redirectcomports:i:value | COM ポートのリダイレクト:</br>ローカル コンピューターの COM (シリアル) ポートがリダイレクトされて、リモート セッションで使用可能になるかどうかを決定します。 | - 0:ローカル コンピューターの COM ポートはリモート セッションで使用できない</br>- 1:ローカル コンピューターの COM ポートはリモート セッションで使用できる | 0 | はい |
 | redirectprinters:i:value | プリンターのリダイレクト:</br>ローカル コンピューターに構成されたプリンターがリダイレクトされて、リモート セッションで使用可能になるかどうかを決定します。 | - 0:ローカル コンピューターのプリンターはリモート セッションで使用できない</br>- 1:ローカル コンピューターのプリンターはリモート セッションで使用できる | 1 | はい |
 | redirectsmartcards:i:value | スマート カードのリダイレクト:</br>ローカル コンピューターのスマート カード デバイスがリダイレクトされて、リモート セッションで使用可能になるかどうかを決定します。 |- 0:ローカル コンピューターのスマート カード デバイスは、リモート セッションで使用できない</br>- 1:ローカル コンピューターのスマート カード デバイスは、リモート セッションで使用できる | 1 | はい |
 | usbdevicestoredirect:s:value | USB リダイレクト | - *:他の高レベルのリダイレクトによってまだリダイレクトされていないすべての USB デバイスをリダイレクトします</br> - {デバイス セットアップ クラス GUID}:指定された[デバイス セットアップ クラス](/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors/)のメンバーであるすべてのデバイスをリダイレクトします</br> - USBInstanceID:インスタンス ID で識別される特定の USB デバイスをリダイレクトします| USB デバイスをリダイレクトしない | はい |

@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 0077837fc03fbff37ed2a152ee68bfa4f1e24fa8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5f3a2ff6268cbccc2d354227b577441a270faf9f
+ms.sourcegitcommit: f3a72c06e739d9ee9d8cd7e8259ccee8db7c7523
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961826"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089971"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows デスクトップ クライアントの新機能
 
@@ -25,7 +25,19 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 |ユーザー グループ |バージョン  |
 |-----------|---------|
 |パブリック     |1.2.1186 |
-|Insider    |1.2.1186 |
+|Insider    |1.2.1272 |
+
+## <a name="updates-for-version-121272-insider"></a>バージョン 1.2.1272 の更新内容 [INSIDER]
+
+*公開日:2020 年 8 月 11 日*
+
+ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D7LK)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D5aF)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dan3)
+
+- ユーザーの ID からソブリン クラウドを自動検出する機能が追加されました。
+- すべてのユーザーに対してカスタム URL サブスクリプションを有効にする機能が追加されました。
+- アプリをフィード タスク バーにピン留めするときの問題を修正しました。
+- URL を使用してサブスクライブするときのクラッシュを修正しました。
+- リモート アプリ ウィンドウをタッチまたはペンでドラッグするときのエクスペリエンスが向上しました。
 
 ## <a name="updates-for-version-121186"></a>バージョン 1.2.1186 の更新内容
 

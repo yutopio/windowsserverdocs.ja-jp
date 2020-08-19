@@ -7,12 +7,12 @@ ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/23/2018
-ms.openlocfilehash: 7fcf8b095479ec21c045a60244917b09883a6162
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 84b96e724706db49945c2e4936d0b4d8691d8daa
+ms.sourcegitcommit: 3d59c2aaebcd190b20d24bc8a449eee0681b6a3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993765"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88583327"
 ---
 # <a name="deploy-a-software-defined-network-infrastructure-using-scripts"></a>スクリプトを使用してソフトウェア定義ネットワーク インフラストラクチャを展開する
 
@@ -62,7 +62,7 @@ Virtual Machine Manager (VMM) を使用して SDN インフラストラクチャ
    New-NetIPAddress -InterfaceAlias "vEthernet (<switch name>)" -IPAddress <IP> -DefaultGateway <Gateway IP> -AddressFamily IPv4 -PrefixLength <Length of Subnet Mask - for example: 24>
    ```
 
-5. Optionalバーチャルマシンをホスト Active Directory Domain Services に展開します ([Active Directory Domain Services (レベル 100)](../../../identity/ad-ds/deploy/install-active-directory-domain-services--level-100-.md)と DNS サーバーをインストールします。
+5. Optionalバーチャルマシンをホスト Active Directory Domain Services に展開します ([Active Directory Domain Services (レベル 100)](../../../identity/ad-ds/deploy/install-active-directory-domain-services--level-100-.md) と DNS サーバーをインストールします。
 
     a. Active Directory/DNS サーバー仮想マシンを管理 VLAN に接続します。
 
@@ -81,9 +81,9 @@ Virtual Machine Manager (VMM) を使用して SDN インフラストラクチャ
    Set-DnsClientServerAddress -InterfaceAlias "vEthernet (<switch name>)" -ServerAddresses <DNS Server IP>
    ```
 
-   a. [**スタート**] ボタンを右クリックし、[**システム**] をクリックして、[**設定の変更**] をクリックします。
+   a. [ **スタート**] ボタンを右クリックし、[ **システム**] をクリックして、[ **設定の変更**] をクリックします。
    b. **[変更]** をクリックします。
-   c. [**ドメイン**] をクリックし、ドメイン名を指定します。  "" "" d. **[OK]** をクリックします。
+   c. [ **ドメイン** ] をクリックし、ドメイン名を指定します。  "" "" d. **[OK]** をクリックします。
    e. プロンプトが表示されたら、ユーザー名とパスワードの資格情報を入力します。
    f. サーバーを再起動します。
 
@@ -114,31 +114,16 @@ Virtual Machine Manager (VMM) を使用して SDN インフラストラクチャ
 
    ``winrm id -r:<Hyper-V Host FQDN>``
 
-### <a name="nano-installation-requirements-and-notes"></a>Nano のインストール要件と注意事項
-
-Nano を Hyper-v ホスト (物理サーバー) として展開に使用する場合は、次の追加要件があります。
-
-1. すべての Nano ノードには、次の言語パックと共に DSC パッケージがインストールされている必要があります。
-
-   - Microsoft-NanoServer-DSC-Package.cab
-   - Microsoft-NanoServer-DSC-Package_en-us.cab
-
-     ``dism /online /add-package /packagepath:<Path> /loglevel:4``
-
-2. SDN Express スクリプトは、Nano 以外のホスト (Windows Server Core または Windows Server/GUI) から実行する必要があります。 PowerShell ワークフローは、Nano ではサポートされていません。
-
-3. PowerShell または NC REST ラッパー (Invoke-restmethod とに依存します) を使用したネットワークコントローラー NorthBound API の呼び出しは、Nano 以外のホストから実行する必要があります。
-
 ### <a name="run-sdn-express-scripts"></a>SDN Express スクリプトを実行する
 
-1. インストールファイルについては、 [MICROSOFT SDN GitHub リポジトリ](https://github.com/Microsoft/SDN.git)を参照してください。
+1. インストールファイルについては、 [MICROSOFT SDN GitHub リポジトリ](https://github.com/Microsoft/SDN.git) を参照してください。
 
-2. 指定された展開コンピューターにリポジトリからインストールファイルをダウンロードします。 [**複製またはダウンロード**] をクリックし、[ **ZIP のダウンロード**] をクリックします。
+2. 指定された展開コンピューターにリポジトリからインストールファイルをダウンロードします。 [ **複製またはダウンロード** ] をクリックし、[ **ZIP のダウンロード**] をクリックします。
 
    >[!NOTE]
    >指定された展開コンピューターは、Windows Server 2016 以降を実行している必要があります。
 
-3. Zip ファイルを展開し、 **Sdnexpress**フォルダーを展開コンピューターのフォルダーにコピーし `C:\` ます。
+3. Zip ファイルを展開し、 **Sdnexpress** フォルダーを展開コンピューターのフォルダーにコピーし `C:\` ます。
 
 4. `C:\SDNExpress`**すべてのユーザー**が**読み取り/書き込み**可能なアクセス許可を持つフォルダーを "**sdnexpress**" として共有します。
 
@@ -153,9 +138,9 @@ Nano を Hyper-v ホスト (物理サーバー) として展開に使用する�
    | スクリプト | 配置スクリプト。<p>- **SDNExpress.ps1**<br>ネットワークコントローラー仮想マシン、SLB Mux 仮想マシン、ゲートウェイプール、およびプールに対応する HNV ゲートウェイ仮想マシンを含む、ファブリックをデプロイして構成します。<br />-   **FabricConfig.psd1**<br>SDNExpress スクリプト用の構成ファイルテンプレート。  これは、環境に合わせてカスタマイズします。<br />-   **SDNExpressTenant.ps1**<br>負荷分散された VIP を使用して、仮想ネットワーク上にサンプルテナントワークロードをデプロイします。<br>また、は、以前に作成されたテナントワークロードに接続されているサービスプロバイダーのエッジゲートウェイに対して、1つまたは複数のネットワーク接続 (IPSec S2S VPN、GRE、L3) をプロビジョニングします。 IPSec と GRE ゲートウェイは、対応する VIP IP アドレスと、対応するアドレスプール上の L3 転送ゲートウェイを介して接続するために使用できます。<br>このスクリプトを使用すると、[元に戻す] オプションを使用して、対応する構成を削除することもできます。<br />- **TenantConfig.psd1**<br>テナントワークロードと S2S ゲートウェイ構成用のテンプレート構成ファイル。<br />- **SDNExpressUndo.ps1**<br>Fabric 環境をクリーンアップし、開始状態にリセットします。<br />- **SDNExpressEnterpriseExample.ps1**<br>1つのリモートアクセスゲートウェイと (必要に応じて) サイトごとに1つの対応するエンタープライズ仮想マシンを使用して、1つまたは複数のエンタープライズサイト環境をプロビジョニングします。 IPSec または GRE エンタープライズゲートウェイは、サービスプロバイダーゲートウェイの対応する VIP IP アドレスに接続して、S2S トンネルを確立します。 L3 転送ゲートウェイは、対応するピア IP アドレスを介して接続します。 <br> このスクリプトを使用すると、[元に戻す] オプションを使用して、対応する構成を削除することもできます。<br />- **EnterpriseConfig.psd1**<br>エンタープライズサイト間ゲートウェイとクライアント VM 構成用のテンプレート構成ファイル。 |
    | TenantApps | テナントのワークロード例をデプロイするために使用されるファイル。 |
 
-6. Windows Server 2016 VHDX ファイルが**Images**フォルダーにあることを確認します。
+6. Windows Server 2016 VHDX ファイルが **Images** フォルダーにあることを確認します。
 
-7. SDNExpress\scripts\FabricConfig.psd1 ファイルをカスタマイズするには、「Planning Network」トピックに記載されているネットワークのホスト名、ドメイン名、ユーザー名とパスワード、ネットワーク情報などのラボインフラストラクチャに合わせて** >><< **を変更します。
+7. SDNExpress\scripts\FabricConfig.psd1 ファイルをカスタマイズするには、「Planning Network」トピックに記載されているネットワークのホスト名、ドメイン名、ユーザー名とパスワード、ネットワーク情報などのラボインフラストラクチャに合わせて ** >><< ** を変更します。
 
 8. NetworkControllerRestName (FQDN) と NetworkControllerRestIP の DNS にホスト A レコードを作成します。
 
@@ -180,13 +165,13 @@ SDN Express スクリプトがエラーを報告せずに完了するように�
 
 ファブリックリソースがデプロイされたので、サンプルのテナントワークロードをデプロイして、SDN デプロイをエンドツーエンドで検証できます。 このテナントワークロードは、SDN 分散ファイアウォールを使用して Access Control リスト (ACL) 規則によって保護されている2つの仮想サブネット (web 層とデータベース層) で構成されます。 Web 層の仮想サブネットには、仮想 IP (VIP) アドレスを使用して SLB/MUX 経由でアクセスできます。 このスクリプトは、2つの web 層仮想マシンと1つのデータベース層仮想マシンを自動的にデプロイし、仮想サブネットに接続します。
 
-1.  << を変更して SDNExpress\scripts\TenantConfig.psd1 ファイルをカスタマイズします。 >>タグは特定の値に**置き換え**てください (たとえば、FabricConfig.psd1 ファイルで定義されているように、VHD イメージ名、ネットワークコントローラー REST 名、vSwitch 名など)。
+1.  << を変更して SDNExpress\scripts\TenantConfig.psd1 ファイルをカスタマイズします。 >>タグは特定の値に ** 置き換え ** てください (たとえば、FabricConfig.psd1 ファイルで定義されているように、VHD イメージ名、ネットワークコントローラー REST 名、vSwitch 名など)。
 
-2.  スクリプトを実行します。 例:
+2.  スクリプトを実行します。 次に例を示します。
 
     ``SDNExpress\scripts\SDNExpressTenant.ps1 -ConfigurationDataFile TenantConfig.psd1 -Verbose``
 
-3.  構成を元に戻すには、 **undo**パラメーターを指定して同じスクリプトを実行します。 例:
+3.  構成を元に戻すには、 **undo** パラメーターを指定して同じスクリプトを実行します。 次に例を示します。
 
     ``SDNExpress\scripts\SDNExpressTenant.ps1 -Undo -ConfigurationDataFile TenantConfig.psd1 -Verbose``
 

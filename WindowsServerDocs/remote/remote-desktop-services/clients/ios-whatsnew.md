@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/06/2020
+ms.date: 08/17/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 16e142a299b43ac6167fa4bf34d5782899f28846
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0afb5a64a86d3b33ea5d78756abe09bf87564928
+ms.sourcegitcommit: 3ed5dd72451b494e17d508fed82fdc5559ba4ef0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88270144"
 ---
 # <a name="whats-new-in-the-ios-client"></a>iOS クライアントの新機能
 
@@ -21,6 +21,15 @@ ms.locfileid: "87970159"
 ## <a name="how-to-report-issues"></a>問題を報告する方法
 
 Microsoft は最適な iOS 用リモート デスクトップ クライアントをご提供できるように取り組んでおり、お客様のフィードバックを大切にしています。 問題がある場合は、 **[ヘルプ]**  >  **[問題の報告]** でご報告いただけます。
+
+## <a name="updates-for-version-1012"></a>バージョン 10.1.2 の更新内容
+
+*公開日: 2020 年 8 月 17 日*
+
+この更新プログラムでは、バージョン 10.1.1 の更新プログラムで報告された問題に対処しました。
+
+- ブローカー以外の認証を使用して Windows Virtual Desktop フィードにサブスクライブするときに、一部のユーザーで発生するクラッシュを修正しました。
+- IPhone X、iPhone XS、iPhone 11 Pro でのワークスペース アイコンのレイアウトを修正しました。
 
 ## <a name="updates-for-version-1007"></a>バージョン 10.0.7 の更新内容
 
