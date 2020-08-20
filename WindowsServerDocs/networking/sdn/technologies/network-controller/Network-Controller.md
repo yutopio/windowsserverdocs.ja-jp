@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 31f3fa4e-cd25-4bf3-89e9-a01a6cec7893
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 2bf49dbd17e1724782b27f8b306c04346f194242
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 9623ce4e5e31b905c1c18e9359811389d8d75f23
+ms.sourcegitcommit: 1eaad076ea74e72b36e8893aaa15f3e5f4237bd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991361"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88659387"
 ---
 # <a name="network-controller"></a>ネットワーク コントローラー
 
@@ -28,7 +28,7 @@ ms.locfileid: "87991361"
 > - [Windows PowerShell を使用してネットワーク コントローラーを展開する](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
 > - [サーバー マネージャーを使用してネットワーク コントローラー サーバーの役割をインストールする](Install-the-Network-Controller-server-role-using-Server-Manager.md)
 > - [ネットワークコントローラーの展開後の手順](post-deploy-steps-nc.md)
-> - [ネットワーク コント ローラーのコマンドレット](https://technet.microsoft.com/library/mt576401.aspx)
+> - [ネットワーク コント ローラーのコマンドレット](https://docs.microsoft.com/powershell/module/networkcontroller/?view=win10-ps)
 
 ## <a name="network-controller-overview"></a><a name="bkmk_overview"></a>ネットワークコントローラーの概要
 
@@ -37,7 +37,7 @@ ms.locfileid: "87991361"
 ドメインと非ドメイン環境の両方のネットワーク コント ローラーを展開することができます。 ドメイン環境でネットワーク コント ローラーのユーザーとネットワーク デバイスを使用して認証 Kerberos です。非ドメイン環境では、認証に証明書を展開する必要があります。
 
 >[!IMPORTANT]
->ネットワークコントローラーのサーバーの役割を物理ホストに展開しないでください。 ネットワークコントローラーを展開するに \( は、hyper-v ホストにインストールされている hyper-v 仮想マシン VM にネットワークコントローラーサーバーの役割をインストールする必要があり \) ます。 3つの異なる Hyper-v ホスト上の Vm にネットワークコントローラーをインストールした後 \- 、 \- \( \) Windows PowerShell コマンド**NetworkControllerServer**を使用してネットワークコントローラーにホストを追加することで、ソフトウェア定義ネットワーク SDN 用の hyper-v ホストを有効にする必要があります。 これにより、SDN ソフトウェア Load Balancer を機能させることができます。 詳細については、「 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)」を参照してください。
+>ネットワークコントローラーのサーバーの役割を物理ホストに展開しないでください。 ネットワークコントローラーを展開するに \( は、hyper-v ホストにインストールされている hyper-v 仮想マシン VM にネットワークコントローラーサーバーの役割をインストールする必要があり \) ます。 3つの異なる Hyper-v ホスト上の Vm にネットワークコントローラーをインストールした後 \- 、 \- \( \) Windows PowerShell コマンド **NetworkControllerServer**を使用してネットワークコントローラーにホストを追加することで、ソフトウェア定義ネットワーク SDN 用の hyper-v ホストを有効にする必要があります。 これにより、SDN ソフトウェア Load Balancer を機能させることができます。 詳細については、「 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)」を参照してください。
 
 ネットワーク コントローラーは、Southbound API を使用してネットワーク デバイス、サービス、コンポーネントと通信します。 ネットワーク デバイスの検出、サービス構成の検出、ネットワークについて必要なすべての情報の収集に Southbound API を利用できます。 さらに、Southbound API を使用して、構成の変更などの情報をネットワーク インフラストラクチャに送信することもできます。
 
@@ -66,7 +66,7 @@ Windows PowerShell、REST API、または管理アプリケーションを使用
 
 テストラボ環境にネットワークコントローラーを展開する場合は、 \( hyper-v ホストにインストールされている hyper-v 仮想マシン VM でネットワークコントローラーサーバーの役割を実行でき \) ます。
 
-大規模なデータセンターで高可用性を実現するために、3つ以上の Hyper-v ホストにインストールされた3つの Vm を使用してクラスターを展開できます。 詳細については、「[ネットワークコントローラーの高可用性](network-controller-high-availability.md)」を参照してください。
+大規模なデータセンターで高可用性を実現するために、3つ以上の Hyper-v ホストにインストールされた3つの Vm を使用してクラスターを展開できます。 詳細については、「 [ネットワークコントローラーの高可用性](network-controller-high-availability.md)」を参照してください。
 
 ## <a name="network-controller-features"></a><a name="bkmk_features"></a>ネットワーク コントローラーの機能
 
@@ -128,6 +128,6 @@ RAS ゲートウェイの詳細については、次を参照してください�
 
 System Center Virtual Machine Manager vmm を使用してネットワークコントローラーを展開する方法に \( \) ついては、「 [vmm ファブリックでの SDN ネットワークコントローラーのセットアップ](/system-center/vmm/sdn-controller?view=sc-vmm-2019)」を参照してください。
 
-スクリプトを使用してネットワークコントローラーを展開する方法については、「[スクリプトを使用したソフトウェア定義ネットワークインフラストラクチャの展開](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)」を参照してください。
+スクリプトを使用してネットワークコントローラーを展開する方法については、「 [スクリプトを使用したソフトウェア定義ネットワークインフラストラクチャの展開](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)」を参照してください。
 
 Windows PowerShell を使用してネットワークコントローラーを展開するには、「 [Windows powershell を使用したネットワークコントローラーの展開](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)」を参照してください。
