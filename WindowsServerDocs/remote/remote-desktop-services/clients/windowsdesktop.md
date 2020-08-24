@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/26/2020
+ms.date: 08/20/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: fa1c713b06e63c919bc2e42e8d4ba3c14eecf8f0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5bd3e1d5f06e5c415b4f300d9a2c8a9b390e5051
+ms.sourcegitcommit: 8e5530ba7f7d3e2569590949e1f443d908683a17
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971609"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88702831"
 ---
 # <a name="get-started-with-the-windows-desktop-client"></a>Windows デスクトップ クライアントの概要
 
@@ -70,8 +70,8 @@ Windows のお使いのバージョンに対応したクライアントを選択
 1. クライアントのメインページから、 **[Subscribe with URL]\(URLでサブスクライブする\)** をタップします。
 2. ワークスペースの URL またはメール アドレスを入力します。
    - **ワークスペースの URL** を使用する場合は、管理者から提供されたものを使用します。 Windows Virtual Desktop からリソースにアクセスする場合は、次の URL のいずれかを使用できます。
-     - Windows Virtual Desktop Fall 2019: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
-     - Windows Virtual Desktop Spring 2020: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
+     - Windows Virtual Desktop (クラシック): `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
+     - Windows Virtual Desktop: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
    - **メール**を使用するには、メール アドレスを入力します。 これにより、管理者が[メール検出](../rds-email-discovery.md)を設定している場合、メール アドレスに関連付けられている URL を検索するようにクライアントに指示します。
 3. **[Next]** \(次へ\) をタップします。
 4. プロンプトが表示されたら、自分のユーザー アカウントを使用してサインインします。

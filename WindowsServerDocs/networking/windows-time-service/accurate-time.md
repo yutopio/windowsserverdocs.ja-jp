@@ -2,16 +2,16 @@
 ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Windows Server 2016 の正確な時刻
 description: Windows Server 2016 での同期の精度が大幅に向上しました。その一方で、以前の Windows バージョンとの NTP の完全な後方互換性が維持されています。
-author: dcuomo
-ms.author: dacuo
+author: dahavey
+ms.author: dahavey
 ms.date: 05/08/2018
 ms.topic: article
-ms.openlocfilehash: 26e8183414da80009ecf28829b833ca3c22058a5
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 82c4935adb10dea93a98c105191a52850b31ca42
+ms.sourcegitcommit: b5b040a47cf48c94852de9aad8b91475f891d2f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992646"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563322"
 ---
 # <a name="accurate-time-for-windows-server-2016"></a>Windows Server 2016 の正確な時刻
 

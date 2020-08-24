@@ -6,19 +6,19 @@ ms.author: billmath
 manager: daveba
 ms.date: 05/23/2019
 ms.topic: article
-ms.openlocfilehash: c817567d081ebcd7b6349d80b0590042528135be
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2a4df9738c1510aa35270fad1283b0b137aeac82
+ms.sourcegitcommit: a868f7d8bb9c5becffc688fd9b75c80802af71ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965029"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778623"
 ---
 # <a name="build-a-custom-authentication-method-for-ad-fs-in-windows-server"></a>Windows Server での AD FS のためのカスタム認証方法を構築する
 
-このチュートリアルでは、Windows Server 2012 R2 で AD FS 用のカスタム認証方法を実装する手順について説明します。 詳細については、「[その他の認証方法](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))」を参照してください。
+このチュートリアルでは、Windows Server 2012 R2 で AD FS 用のカスタム認証方法を実装する手順について説明します。 詳細については、「 [その他の認証方法](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))」を参照してください。
 
 > [!WARNING]
-> ここで作成できる例は、 &nbsp; 学習のみを目的としています。 &nbsp;これらの手順は、モデルの必須要素を公開するために使用できる、最も単純で最小の実装用です。 &nbsp;認証バックエンド、エラー処理、または構成データはありません。
+> ここで作成できる例は、 &nbsp; 学習のみを目的としています。 &nbsp;これらの手順は、モデルの必須要素を公開するために使用できる、最も単純で最小の実装用です。 &nbsp; 認証バックエンド、エラー処理、または構成データはありません。
 
 ## <a name="setting-up-the-development-box"></a>開発ボックスの設定
 
@@ -36,7 +36,7 @@ ms.locfileid: "87965029"
 
     ![プロバイダーの作成](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "プロバイダーの作成")
 
-3. AD FS がインストールされている Windows Server 2012 R2 サーバーで、% windir% ADFS から**Microsoft.IdentityServer.Web.dll**のコピーを作成し、開発用コンピューターのプロジェクトフォルダーに貼り付けます。
+3. AD FS がインストールされている Windows Server 2012 R2 サーバーで、% windir% ADFS から **Microsoft.IdentityServer.Web.dll** のコピーを作成し、開発用コンピューターのプロジェクトフォルダーに貼り付けます。
 
 4. **ソリューションエクスプローラー**で、[**参照**] を右クリックし、[**参照の追加**] をクリックします。
 
@@ -68,9 +68,139 @@ ms.locfileid: "87965029"
         using Claim = System.Security.Claims.Claim;
 
         namespace MFAadapter
-        {
-        class MyAdapter : IAuthenticationAdapter
-        {
+         {
+         class MyAdapter : IAuthenticationAdapter
+         {
+         public IAuthenticationAdapterMetadata Metadata
+         {
+         //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
+         }
+
+         public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
+         {
+         //return new instance of IAdapterPresentationForm derived class
+
+         }
+
+         public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
+         {
+         return true; //its all available for now
+
+         }
+
+         public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
+         {
+         //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
+
+         }
+
+         public void OnAuthenticationPipelineUnload()
+         {
+
+         }
+
+         public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
+         {
+         //return new instance of IAdapterPresentationForm derived class
+
+         }
+
+         public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
+         {
+         //return new instance of IAdapterPresentationForm derived class
+
+         }
+
+         }
+         }
+
+10. We are not ready to build yet... there are two more interfaces to go.
+
+    Add two more classes to your project: one is for the metadata, and the other for the presentation form.  You can add these within the same file as the class above.
+
+        class MyMetadata : IAuthenticationAdapterMetadata
+         {
+
+         }
+
+         class MyPresentationForm : IAdapterPresentationForm
+         {
+
+         }
+
+11. Next, you can add the required members for each.First, the metadata (with helpful inline comments)
+
+        class MyMetadata : IAuthenticationAdapterMetadata
+         {
+         //Returns the name of the provider that will be shown in the AD FS management UI (not visible to end users)
+         public string AdminName
+         {
+         get { return "My Example MFA Adapter"; }
+         }
+
+         //Returns an array of strings containing URIs indicating the set of authentication methods implemented by the adapter 
+         /// AD FS requires that, if authentication is successful, the method actually employed will be returned by the
+         /// final call to TryEndAuthentication(). If no authentication method is returned, or the method returned is not
+         /// one of the methods listed in this property, the authentication attempt will fail.
+         public virtual string[] AuthenticationMethods 
+         {
+         get { return new[] { "http://example.com/myauthenticationmethod1", "http://example.com/myauthenticationmethod2" }; }
+         }
+
+         /// Returns an array indicating which languages are supported by the provider. AD FS uses this information
+         /// to determine the best language\locale to display to the user.
+         public int[] AvailableLcids
+         {
+         get
+         {
+         return new[] { new CultureInfo("en-us").LCID, new CultureInfo("fr").LCID};
+         }
+         }
+
+         /// Returns a Dictionary containing the set of localized friendly names of the provider, indexed by lcid. 
+         /// These Friendly Names are displayed in the "choice page" offered to the user when there is more than 
+         /// one secondary authentication provider available.
+         public Dictionary<int, string> FriendlyNames
+         {
+         get
+         {
+         Dictionary<int, string> _friendlyNames = new Dictionary<int, string>();
+         _friendlyNames.Add(new CultureInfo("en-us").LCID, "Friendly name of My Example MFA Adapter for end users (en)");
+         _friendlyNames.Add(new CultureInfo("fr").LCID, "Friendly name translated to fr locale");
+         return _friendlyNames;
+         }
+         }
+
+         /// Returns a Dictionary containing the set of localized descriptions (hover over help) of the provider, indexed by lcid. 
+         /// These descriptions are displayed in the "choice page" offered to the user when there is more than one 
+         /// secondary authentication provider available.
+         public Dictionary<int, string> Descriptions
+         {
+         get 
+         {
+         Dictionary<int, string> _descriptions = new Dictionary<int, string>();
+         _descriptions.Add(new CultureInfo("en-us").LCID, "Description of My Example MFA Adapter for end users (en)");
+         _descriptions.Add(new CultureInfo("fr").LCID, "Description translated to fr locale");
+         return _descriptions; 
+         }
+         }
+
+         /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
+         /// Note that although the property is an array, only the first element is currently used.
+         /// MUST BE ONE OF THE FOLLOWING
+         /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
+         /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
+         /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
+         /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"
+         public string[] IdentityClaims
+         {
+         get { return new[] { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" }; }
+         }
+
+         //All external providers must return a value of "true" for this property.
+         public bool RequiresIdentity
+         {
+         get { return true; }
          }
         }
     ```
@@ -241,9 +371,9 @@ ms.locfileid: "87965029"
     }
     ```
 
-3.  上の**リソースの FormPageHtml**要素の ' todo ' に注意してください。
+3.  上の **リソースの FormPageHtml** 要素の ' todo ' に注意してください。
 
-    1分以内に修正できますが、最初に、新しく実装された型に基づいて、最後に必要な return ステートメントを最初の MyAdapter クラスに追加してみましょう。 これを行うには、次の*斜体*の項目を既存の IAuthenticationAdapter 実装に追加します。
+    1分以内に修正できますが、最初に、新しく実装された型に基づいて、最後に必要な return ステートメントを最初の MyAdapter クラスに追加してみましょう。 これを行うには、次の *斜体* の項目を既存の IAuthenticationAdapter 実装に追加します。
 
     ```
     class MyAdapter : IAuthenticationAdapter
@@ -294,36 +424,36 @@ ms.locfileid: "87965029"
 
 13. ここで、html フラグメントを含むリソースファイルを使用します。 次の内容を含む新しいテキストファイルをプロジェクトフォルダーに作成します。
 
-    ```
-    <div id="loginArea">
-    <form method="post" id="loginForm" >
-    <!-- These inputs are required by the presentation framework. Do not modify or remove -->
-    <input id="authMethod" type="hidden" name="AuthMethod" value="%AuthMethod%"/>
-    <input id="context" type="hidden" name="Context" value="%Context%"/>
-    <!-- End inputs are required by the presentation framework. -->
-    <p id="pageIntroductionText">This content is provided by the MFA sample adapter. Challenge inputs should be presented below.</p>
-    <label for="challengeQuestionInput" class="block">Question text</label>
-    <input id="challengeQuestionInput" name="ChallengeQuestionAnswer" type="text" value="" class="text" placeholder="Answer placeholder" />
-    <div id="submissionArea" class="submitMargin">
-    <input id="submitButton" type="submit" name="Submit" value="Submit" onclick="return AuthPage.submitAnswer()"/>
-    </div>
-    </form>
-    <div id="intro" class="groupMargin">
-    <p id="supportEmail">Support information</p>
-    </div>
-    <script type="text/javascript" language="JavaScript">
-    //<![CDATA[
-    function AuthPage() { }
-    AuthPage.submitAnswer = function () { return true; };
-    //]]>
-    </script></div>
-    ```
+       ```html
+       <div id="loginArea">
+        <form method="post" id="loginForm" >
+        <!-- These inputs are required by the presentation framework. Do not modify or remove -->
+        <input id="authMethod" type="hidden" name="AuthMethod" value="%AuthMethod%"/>
+        <input id="context" type="hidden" name="Context" value="%Context%"/>
+        <!-- End inputs are required by the presentation framework. -->
+        <p id="pageIntroductionText">This content is provided by the MFA sample adapter. Challenge inputs should be presented below.</p>
+        <label for="challengeQuestionInput" class="block">Question text</label>
+        <input id="challengeQuestionInput" name="ChallengeQuestionAnswer" type="text" value="" class="text" placeholder="Answer placeholder" />
+        <div id="submissionArea" class="submitMargin">
+        <input id="submitButton" type="submit" name="Submit" value="Submit" onclick="return AuthPage.submitAnswer()"/>
+        </div>
+        </form>
+        <div id="intro" class="groupMargin">
+        <p id="supportEmail">Support information</p>
+        </div>
+        <script type="text/javascript" language="JavaScript">
+        //<![CDATA[
+        function AuthPage() { }
+        AuthPage.submitAnswer = function () { return true; };
+        //]]>
+        </script></div>
+       ```
 
-14. 次に、[**プロジェクト->コンポーネントの追加] を選択します。リソース**ファイルにファイル**リソース**の名前を指定し、[追加] をクリックし**ます。**
+14. 次に、[ **プロジェクト- \> コンポーネントの追加...] を選択します。リソース** ファイルにファイル **リソース**の名前を指定し、[追加] をクリックし **ます。**
 
    ![プロバイダーの作成](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "プロバイダーの作成")
 
-15. 次に、**リソース .resx**ファイル内で、[リソースの追加] を選択します。 **既存のファイルを追加**します。 前の手順で保存したテキストファイル (html フラグメントを含む) に移動します。
+15. 次に、 **リソース .resx** ファイル内で、[リソースの追加] を選択します。 **既存のファイルを追加**します。 前の手順で保存したテキストファイル (html フラグメントを含む) に移動します。
 
    リソースファイル (.resx ファイル) 名のプレフィックスとリソース自体の名前によって、新しいリソースの名前が GetFormHtml コードによって正しく解決されることを確認します。
 
@@ -341,9 +471,9 @@ ms.locfileid: "87965029"
 
 アダプターは、Windows の GAC にインストールできる厳密に名前が付けられた .NET アセンブリに組み込まれている必要があります。 これを Visual Studio プロジェクトで実現するには、次の手順を実行します。
 
-1. ソリューションエクスプローラーでプロジェクト名を右クリックし、[**プロパティ**] をクリックします。
+1. ソリューションエクスプローラーでプロジェクト名を右クリックし、[ **プロパティ**] をクリックします。
 
-2. [**署名**] タブで、 **[アセンブリの署名**] チェックボックスをオンにし、[**厳密な名前のキーファイルを選択**してください] で [ **<新規作成... >** を選択します。キーファイル名とパスワードを入力し、[ **OK]** をクリックします。 次に **、[アセンブリの署名**がチェックされ、**遅延署名のみ**] がオフになっていることを確認します。 [プロパティ] [**署名**] ページは次のようになります。
+2. [**署名**] タブで、 **[アセンブリの署名**] チェックボックスをオンにし、[**厳密な名前のキーファイルを選択**してください] で [ **<新規作成... >** を選択します。キーファイル名とパスワードを入力し、[ **OK]** をクリックします。 次に **、[アセンブリの署名** がチェックされ、 **遅延署名のみ** ] がオフになっていることを確認します。 [プロパティ] [ **署名** ] ページは次のようになります。
 
     ![プロバイダーの構築](media/ad-fs-build-custom-auth-method/Dn783423.0b1a1db2-d64e-4bb8-8c01-ef34296a2668(MSDN.10).jpg "プロバイダーの構築")
 
@@ -365,13 +495,13 @@ ms.locfileid: "87965029"
 
 3. Gacutil.exe ツールをサーバーにコピーします。
 
-    Gacutil.exe は、Windows 8 コンピューター上の **% homedrive% Program Files (x86) Microsoft sdkswindowsv 8.0 abinnetfx 4.0 ツール**にあります。 **gacutil.exe**ファイル自体に加え、 **1033**、 **En-us**、および**NETFX 4.0 ツール**の場所の下にあるその他のローカライズされたリソースフォルダーが必要です。
+    Gacutil.exe は、Windows 8 コンピューター上の **% homedrive% Program Files (x86) Microsoft sdkswindowsv 8.0 abinnetfx 4.0 ツール** にあります。 **gacutil.exe**ファイル自体に加え、 **1033**、 **En-us**、および**NETFX 4.0 ツール**の場所の下にあるその他のローカライズされたリソースフォルダーが必要です。
 
-4. プロバイダーファイル (1 つまたは複数の厳密な名前の署名された .dll ファイル) を**gacutil.exe**と同じフォルダーの場所にコピーします (場所は便宜上)
+4. プロバイダーファイル (1 つまたは複数の厳密な名前の署名された .dll ファイル) を **gacutil.exe** と同じフォルダーの場所にコピーします (場所は便宜上)
 
 5. ファーム内の各 AD FS フェデレーションサーバーの GAC に .dll ファイルを追加します。
 
-    例: コマンドラインツール GACutil.exe を使用して、GAC に dll を追加します。`C:>.gacutil.exe /if .<yourdllname>.dll`
+    例: コマンドラインツール GACutil.exe を使用して、GAC に dll を追加します。 `C:>.gacutil.exe /if .<yourdllname>.dll`
 
     GAC に結果のエントリを表示するには、次のようにします。`C:>.gacutil.exe /l <yourassemblyname>`
 
@@ -402,7 +532,7 @@ ms.locfileid: "87965029"
     net start adfssrv
     ```
 
-    AD FS 環境でデバイス登録サービスが有効になっている場合は、次の PowerShell コマンドも実行します。`net start drs`
+    AD FS 環境でデバイス登録サービスが有効になっている場合は、次の PowerShell コマンドも実行します。 `net start drs`
 
     登録されているプロバイダーを確認するには、次の PowerShell コマンドを使用し `Get-AdfsAuthenticationProvider` ます。
 
@@ -412,15 +542,15 @@ ms.locfileid: "87965029"
 
 #### <a name="create-the-authentication-policy-using-the-ad-fs-management-snap-in"></a>AD FS 管理スナップインを使用して認証ポリシーを作成する
 
-1. [サーバーマネージャー**ツール**] メニューから AD FS 管理スナップインを開きます。
+1. [サーバーマネージャー **ツール** ] メニューから AD FS 管理スナップインを開きます。
 
-2. [**認証ポリシー**] をクリックします。
+2. [ **認証ポリシー**] をクリックします。
 
 3. 中央のウィンドウで、[ **Multi-Factor Authentication**] の下にある [**グローバル設定**] の右側にある [**編集**] リンクをクリックします。
 
-4. ページの下部にある [**追加の認証方法の選択**] で、プロバイダーの adminname のチェックボックスをオンにします。 **[適用]** をクリックします。
+4. ページの下部にある [ **追加の認証方法の選択** ] で、プロバイダーの adminname のチェックボックスをオンにします。 **[Apply]** をクリックします。
 
-5. アダプターを使用して MFA を呼び出す "トリガー" を提供するには、[**場所**] で、**エクストラネット**と**イントラネット**の両方を確認します (例)。 **[OK]** をクリックします。 (証明書利用者ごとにトリガーを構成するには、後述の「Windows PowerShell を使用して認証ポリシーを作成する」を参照してください)。
+5. アダプターを使用して MFA を呼び出す "トリガー" を提供するには、[ **場所** ] で、 **エクストラネット** と **イントラネット**の両方を確認します (例)。 **[OK]** をクリックします。 (証明書利用者ごとにトリガーを構成するには、後述の「Windows PowerShell を使用して認証ポリシーを作成する」を参照してください)。
 
 6. 次のコマンドを使用して結果を確認します。
 
@@ -446,16 +576,15 @@ ms.locfileid: "87965029"
 2. 次に、グローバルまたは証明書利用者固有の規則を構成して、MFA をトリガーします。
 
    例 1: 外部要求に対して MFA を要求するグローバルルールを作成するには、次のようにします。
-
-   ```powershell
-   Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );
+   
    ```
-
+   PS C:\>Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
+   ```
    例 2: 特定の証明書利用者への外部要求に対して MFA を要求する MFA 規則を作成するには (個々のプロバイダーは、Windows Server 2012 R2 の AD FS の個々の証明書利用者に接続できないことに注意してください)。
 
     ```powershell
-    $rp = Get-AdfsRelyingPartyTrust –Name <Relying Party Name>
-    Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );
+    PS C:\>$rp = Get-AdfsRelyingPartyTrust –Name <Relying Party Name>
+    PS C:\>Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
     ```
 
 ### <a name="authenticate-with-mfa-using-your-adapter"></a>アダプターを使用して MFA で認証する
@@ -468,7 +597,7 @@ ms.locfileid: "87965029"
 
         1. または、**多要素ポリシー** UI の [**プライマリ**] タブをクリックします。
 
-2. エクストラネットとイントラネットの両方の認証方法で、**フォーム認証**が唯一のオプションとして選択されていることを確認します。 **[OK]** をクリックします。
+2. エクストラネットとイントラネットの両方の認証方法で、 **フォーム認証** が唯一のオプションとして選択されていることを確認します。 **[OK]** をクリックします。
 
 3. IDP で開始されたサインオン html ページ (https:// <fsname> /adfs/ls/idpinitiatedsignon.htm) を開き、テスト環境で有効な AD ユーザーとしてサインインします。
 
@@ -597,25 +726,25 @@ return new MyPresentationForm();
 
 ### <a name="create-the-authentication-policy-using-the-ad-fs-management-snap-in"></a>AD FS 管理スナップインを使用して認証ポリシーを作成する
 
-1. [サーバーマネージャー**ツール**] メニューから AD FS 管理スナップインを開きます。
+1. [サーバーマネージャー **ツール** ] メニューから AD FS 管理スナップインを開きます。
 
-2. [**認証ポリシー**] をクリックします。
+2. [ **認証ポリシー**] をクリックします。
 
 3. [ **Multi-Factor Authentication**で、[**グローバル設定**] の右側にある [**編集**] リンクをクリックします。
 
-4. [**追加の認証方法の選択**] で、プロバイダーの adminname のチェックボックスをオンにします。 **[適用]** をクリックします。
+4. [ **追加の認証方法の選択**] で、プロバイダーの adminname のチェックボックスをオンにします。 **[Apply]** をクリックします。
 
-5. アダプターを使用して MFA を呼び出す "トリガー" を提供するには、[場所] で、**エクストラネット**と**イントラネット**の両方を確認します (例)。 **[OK]** をクリックします。
+5. アダプターを使用して MFA を呼び出す "トリガー" を提供するには、[場所] で、 **エクストラネット** と **イントラネット**の両方を確認します (例)。 **[OK]** をクリックします。
 
 ### <a name="authenticate-with-mfa-using-your-adapter"></a>アダプターを使用して MFA で認証する
 
 最後に、次の手順を実行してアダプターをテストします。
 
-1. AD FS のグローバルプライマリ認証の種類が、エクストラネットとイントラネットの両方の**フォーム認証**として構成されていることを確認します (これにより、特定のユーザーとして認証が容易になります)。
+1. AD FS のグローバルプライマリ認証の種類が、エクストラネットとイントラネットの両方の **フォーム認証** として構成されていることを確認します (これにより、特定のユーザーとして認証が容易になります)。
 
     1. AD FS 管理スナップインの [**認証ポリシー**] の [**プライマリ認証**] 領域で、[**グローバル設定**] の横にある [**編集**] をクリックします。
 
-        1. または、多要素ポリシー UI の [**プライマリ**] タブをクリックします。
+        1. または、多要素ポリシー UI の [ **プライマリ** ] タブをクリックします。
 
 2. **エクストラネット**と**イントラネット**の両方の認証方法で、**フォーム認証**が唯一のオプションとして選択されていることを確認します。 **[OK]** をクリックします。
 

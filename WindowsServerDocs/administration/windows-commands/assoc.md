@@ -7,19 +7,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e802756bc1d70e077126170a94a8b8ac6f72dc96
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 682375733bdd269150cb6d557db730283ee3267e
+ms.sourcegitcommit: a868f7d8bb9c5becffc688fd9b75c80802af71ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895537"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778603"
 ---
 # <a name="assoc"></a>assoc
 
-ファイル名拡張子の関連付けを表示または変更します。 パラメーターを指定せずに使用した場合、 **assoc**は、現在のファイル名拡張子のすべての関連付けの一覧を表示します。
+ファイル名拡張子の関連付けを表示または変更します。 パラメーターを指定せずに使用した場合、 **assoc** は、現在のファイル名拡張子のすべての関連付けの一覧を表示します。
 
 > [!NOTE]
 > このコマンドは cmd.exe 内でのみサポートされており、PowerShell からは使用できません。
+> ただし、を `cmd /c assoc` 回避策として使用することもできます。
 
 ## <a name="syntax"></a>構文
 
@@ -35,11 +36,11 @@ assoc [<.ext>[=[<filetype>]]]
 | `<filetype>` | 指定したファイル名拡張子に関連付けるファイルの種類を指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 - ファイル名拡張子のファイルの種類の関連付けを削除するには、SPACE キーを押して等号の後に空白を追加します。
 
-- 開いているコマンド文字列が定義されている現在のファイルの種類を表示するには、 **ftype**コマンドを使用します。
+- 開いているコマンド文字列が定義されている現在のファイルの種類を表示するには、 **ftype** コマンドを使用します。
 
 - **Assoc**の出力をテキストファイルにリダイレクトするには、リダイレクト演算子を使用し `>` ます。
 
@@ -66,7 +67,7 @@ assoc .bak=
 assoc | more
 ```
 
-ファイル assoc.txt に**assoc**の出力を送信するには、次のように入力します。
+ファイル assoc.txt に **assoc** の出力を送信するには、次のように入力します。
 
 ```
 assoc>assoc.txt

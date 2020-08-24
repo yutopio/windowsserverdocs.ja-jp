@@ -1,17 +1,16 @@
 ---
 title: Windows タイムの追跡可能性
 description: さまざまな部門の規制により、システムが UTC に対して追跡可能であることが要求されます。  これは、システムのオフセットを UTC に関して証明できることを意味します。
-author: dcuomo
-ms.author: dacuo
-manager: dougkim
+author: dahavey
+ms.author: dahavey
 ms.date: 10/17/2018
 ms.topic: article
-ms.openlocfilehash: 20b2e3335fa769b230f55f0c7958a9c5445b5b25
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 297e6b3716c03c37089daef1b4658850479ae0e8
+ms.sourcegitcommit: b5b040a47cf48c94852de9aad8b91475f891d2f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939923"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563342"
 ---
 # <a name="windows-time-for-traceability"></a>Windows タイムの追跡可能性
 >適用先:Windows Server 2016 バージョン 1709 以降、および Windows 10 バージョン 1703 以上

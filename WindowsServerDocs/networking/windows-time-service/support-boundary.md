@@ -1,17 +1,16 @@
 ---
 title: 高精度の時間のサポート範囲
 description: この記事では、高精度かつ安定したシステム時刻を必要とする環境での Windows タイム (W32Time) サービスのサポート範囲について説明します。
-author: dcuomo
-ms.author: dacuo
-manager: dougkim
+author: dahavey
+ms.author: dahavey
 ms.date: 10/17/2018
 ms.topic: article
-ms.openlocfilehash: a7c57c3b35deb6fe8975fcdfa0cf9ecb0127f70c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 17be7ecaa08cfa6a1f5aac378ebd860b6b276678
+ms.sourcegitcommit: b5b040a47cf48c94852de9aad8b91475f891d2f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970719"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563362"
 ---
 # <a name="support-boundary-for-high-accuracy-time"></a>高精度の時間のサポート範囲
 

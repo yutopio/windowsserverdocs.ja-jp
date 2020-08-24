@@ -2,16 +2,16 @@
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
 title: Windows タイム サービスのテクニカル リファレンス
 description: W32Time サービスを使用すると、広範な構成を必要とせずに、コンピューターのネットワーク クロック同期を行うことができます。 W32Time サービスは Kerberos V5 認証が正常に動作するために必須の機能であるため、AD DS ベースの認証にも必須です。
-author: dcuomo
-ms.author: dacuo
+author: dahavey
+ms.author: dahavey
 ms.date: 05/08/2018
 ms.topic: article
-ms.openlocfilehash: 01dc71fb483dfa426d7c7239145391260f2534e0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7017657c92f581560d7d0053d067f97ab6d16db8
+ms.sourcegitcommit: b5b040a47cf48c94852de9aad8b91475f891d2f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939883"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563332"
 ---
 # <a name="windows-time-service-technical-reference"></a>Windows タイム サービスのテクニカル リファレンス
 >適用先:Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows 10 以降
