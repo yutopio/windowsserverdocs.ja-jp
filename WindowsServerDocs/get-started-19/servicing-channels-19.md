@@ -1,17 +1,17 @@
 ---
-title: サービス チャネル
+title: Windows Server サービス チャネル
 description: Windows Server サービス チャネルの説明 - LTSC と SAC
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: 47fd1d50e9f90fb6617e2ded4bff3efeab5cd117
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 49de69c5a21a9c16012d79609784ff89395358db
+ms.sourcegitcommit: 893b9a24fd2efe30f5af909e3aa1f25907a17427
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969969"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88681283"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Windows Server サービス チャネル: LTSC と SAC
 
@@ -36,8 +36,8 @@ Windows Server のユーザーは、長期サービス チャネルと半期チ�
 
 半期チャネルは、[ソフトウェア アシュアランス](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) をご利用のボリューム ライセンスのお客様以外にも、Azure Marketplace やその他のクラウド/ホスティング サービス プロバイダー、Visual Studio サブスクリプションなどのロイヤルティ プログラム経由で入手できます。
 
-> [!NOTE]
-> **半期チャネルの現在のリリースは、Windows Server バージョン 1909 です**。 サーバーをこのチャネルで利用する場合は、Windows Server バージョン 1909 をインストールする必要があります。この場合、Server Core モードで、またはコンテナー内で実行される Nano Server としてインストールすることができます。 長期サービス チャネル リリースからの一括アップグレードは、**異なるリリース チャネル**にあるためサポートされていません。 半期チャネルのリリースは更新プログラムではありません。これは、半期チャネルにおける Windows Server の次のリリースです。
+> [!Note]
+> **半期チャネルの現在のリリースは、Windows Server バージョン 2004 です**。 サーバーをこのチャネルで利用する場合は、Windows Server バージョン 2004 をインストールする必要があります。この場合、Server Core モードで、またはコンテナー内で実行される Nano Server としてインストールすることができます。 長期サービス チャネル リリースからの一括アップグレードは、**異なるリリース チャネル**にあるためサポートされていません。 半期チャネルのリリースは更新プログラムではありません。これは、半期チャネルにおける Windows Server の次のリリースです。
 
 このモデルでは、Windows Server のリリースが、リリースの年と月によって識別されます。たとえば、2017 年の 9 番目の月 (9 月) のリリースは、**バージョン 1709** となります。 半期チャネルでは、Windows Server の新しいリリースが毎年 2 回提供されます。 各リリースのサポート ライフサイクルは、18 か月です。
 
@@ -45,7 +45,8 @@ Windows Server のユーザーは、長期サービス チャネルと半期チ�
 
 決定にあたっては、次の重要な相違点を考慮する必要があります。
 
-- Devops、コンテナー、マイクロサービスの新しいテクノロジをステップアップする必要がありますか。 そうであれば、**Windows Server バージョン 1909** をインストールして、**半期チャネルに参加**することを検討してください。 その場合、このトピックで説明したように、年に 2 回新しいバージョンを受け取り、各リリースのメインストリームの運用サポートは 18 か月になります。 これは、ボリューム ライセンス、Azure、または Visual Studio サブスクリプション サービスを通じて提供されます。 現時点では、製品を運用環境で実行する場合に、半期チャネルのリリースを利用するには、ボリューム ライセンスとソフトウェア アシュアランスが必要です。
+- 革新的な機能を迅速に取り入れる必要がありますか。 Windows Server の最新機能への早期アクセスが必要ですか。 頻繁に更新されるハイブリッド アプリケーション、DevOps、および Hyper-V ファブリックをサポートする必要がありますか。 そうであれば、**Windows Server バージョン 2004** をインストールして、**半期チャネルに参加**することを検討してください。 その場合、このトピックで説明したように、年に 2 回新しいバージョンを受け取り、各リリースのメインストリームの運用サポートは 18 か月になります。 これは、ボリューム ライセンス、Azure、または Visual Studio サブスクリプション サービスを通じて提供されます。 現時点では、製品を運用環境で実行する場合に、半期チャネルのリリースを利用するには、ボリューム ライセンスとソフトウェア アシュアランスが必要です。
+
 - 安定性と予測可能性を確保する必要がありますか。 物理サーバー上の仮想マシンと従来のワークロードを実行する必要がありますか。 そうであれば、**それらのサーバーを長期サービス チャネルのまま**利用します。 現在の LTSC リリースは、**Windows Server 2019** です。 その場合、このトピックで説明したように、2 から 3 年ごとに新しいバージョンが提供されます。各リリースのメインストリームの運用サポートは 5 年間で、その後 5 年間サポートを延長することができます。 LTSC リリースは、すべてのリリース メカニズムで利用できます。 LTSC のリリースは、使用しているライセンス モデルに関係なく、すべてのユーザーが利用できます。
 
 次の表は、チャネル間の主な違いをまとめたものです。
@@ -170,12 +171,12 @@ State   :     Installed
 
 ## <a name="additional-references"></a>その他の参照情報
 
-[Windows Server 半期チャネルで Nano Server に加えられる変更](../get-started/nano-in-semi-annual-channel.md)
+- [Windows Server 半期チャネルで Nano Server に加えられる変更](../get-started/nano-in-semi-annual-channel.md)
 
-[Windows Server のサポート ライフサイクル](https://support.microsoft.com/lifecycle)
+- [Windows Server のサポート ライフサイクル](https://support.microsoft.com/lifecycle)
 
-[Server Core が実行されているかどうかを調べる](/previous-versions/windows/desktop/legacy/hh846315(v=vs.85)?f=255&MSPPError=-2147217396)
+- [Server Core が実行されているかどうかを調べる](https://msdn.microsoft.com/library/hh846315%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)
 
-[GetProductInfo 関数](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
+- [GetProductInfo 関数](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
 
-[ソフトウェア インベントリ ログ コマンドレット](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
+- [ソフトウェア インベントリ ログ コマンドレット](https://docs.microsoft.com/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
