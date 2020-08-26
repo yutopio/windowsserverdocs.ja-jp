@@ -6,14 +6,14 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 07/16/2020
+ms.date: 08/20/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 70d334aa13b96a210a2b168129119d09b0297f20
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 90a0796818a2beb7e592eae1556999729b2d9ab2
+ms.sourcegitcommit: 8e5530ba7f7d3e2569590949e1f443d908683a17
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970149"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88702871"
 ---
 # <a name="get-started-with-the-android-client"></a>Android クライアントの概要
 
@@ -75,8 +75,8 @@ Android デバイスでリモート デスクトップ クライアントを設�
 1. 接続センターで **[+]** をタップした後、 **[Remote Resource Feed]\(リモート リソースのフィード\)** をタップします。
 2. **[Feed URL]** \(フィード URL\) を入力します。 URL またはメール アドレスを指定できます。
    - **[URL]** は、管理者によって提供されている RD Web アクセス サーバーです。Windows Virtual Desktop からリソースにアクセスする場合は、使用しているバージョンに応じて次の URL のいずれかを使用できます。
-     - Fall 2019 バージョンを使用している場合は、`https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx` を使用します。
-     - Spring 2020 バージョンを使用している場合は、`https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery` を使用します。
+     - Windows Virtual Desktop (クラシック) を使用している場合は、`https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx` を使用します。
+     - Windows Virtual Desktop を使用している場合は、`https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery` を使用します。
    - **[Email]** \(電子メール\) を使用する予定の場合は、このフィールドにメール アドレスを入力してください。 これにより、管理者によって構成されている場合、メール アドレスに関連付けられている RD Web アクセス サーバーを検索するようにクライアントに指示します。
 3. **[Next]** \(次へ\) をタップします。
 4. 入力を求められたら、サインイン情報を入力します。 これは、展開によって異なる場合があり、次のものが含まれる場合があります。

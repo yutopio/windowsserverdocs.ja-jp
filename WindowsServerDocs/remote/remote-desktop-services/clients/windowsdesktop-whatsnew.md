@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f3a2ff6268cbccc2d354227b577441a270faf9f
-ms.sourcegitcommit: f3a72c06e739d9ee9d8cd7e8259ccee8db7c7523
+ms.openlocfilehash: b23c19304aa7773dbb3c4e1406e065fb68947c5d
+ms.sourcegitcommit: 8e5530ba7f7d3e2569590949e1f443d908683a17
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88089971"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88702841"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows デスクトップ クライアントの新機能
 
@@ -57,7 +57,7 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 
 ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHS)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zrAd)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHR)
 
-- Windows Virtual Desktop Spring 2020 Update をサポートするために、**サブスクライブ** オプションの自動検出ロジックが更新されました。 Spring Update リソースのみを使用しているお客様は、Fall 2019 リリースについて同意する必要がなくなります。
+- Windows Virtual Desktop の Azure Resource Manager 統合バージョンをサポートするために、**サブスクライブ** オプションの自動検出ロジックを更新しました。 Windows Virtual Desktop リソースのみを使用しているお客様は、Windows Virtual Desktop (クラシック) への同意を提供する必要はなりました。
 - スケール ファクターが最大 400% の高 DPI デバイスのサポートが強化されました。
 - 切断ダイアログが表示されない問題が修正されました。
 - コマンド バーのヒントが予想よりも長く表示される問題を修正しました。
@@ -71,7 +71,7 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xsGB)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xd8P)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xq7m)
 
 - サブスクライブするときに、メール アドレスを入力する代わりに、アカウントを選択できるようになりました。
-- 新しい **[Subscribe with URL]\(URL でサブスクライブ\)** オプションが追加されました。これを使用すると、リソースを自動的に検出できない場合に、サブスクライブするワークスペースの URL を指定したり、[メール検出](../rds-email-discovery.md) (使用可能な場合) を利用したりすることができます。 これは、他のリモート デスクトップ クライアントでのサブスクリプション プロセスに似ています。 これを使用して、WVD Spring 2020 Update ワークスペースに直接サブスクライブできます。
+- 新しい **[Subscribe with URL]\(URL でサブスクライブ\)** オプションが追加されました。これを使用すると、リソースを自動的に検出できない場合に、サブスクライブするワークスペースの URL を指定したり、[メール検出](../rds-email-discovery.md) (使用可能な場合) を利用したりすることができます。 これは、他のリモート デスクトップ クライアントでのサブスクリプション プロセスに似ています。 これを使用して、Windows Virtual Desktop ワークスペースに直接サブスクライブできます。
 - 新しい [URI スキーム](remote-desktop-uri.md) を使用してワークスペースをサブスクライブするためのサポートが追加されました。これは、電子メールでユーザーに送信したり、サポート Web サイトに追加したりすることができます。
 - デスクトップとアプリ セッションのクライアント、ネットワーク、およびサーバーの詳細を提供する新しい**接続情報**ダイアログが追加されました。 このダイアログには、全画面表示モードの場合は接続バーから、ウィンドウの場合は [システム] メニューからアクセスできます。
 - ウィンドウ モードで起動したデスクトップ セッションは、ウィンドウを最大化するときに、全画面表示ではなく常に最大化されるようになりました。 全画面表示にするには、システム メニューの **[全画面表示]** オプションを使用します。

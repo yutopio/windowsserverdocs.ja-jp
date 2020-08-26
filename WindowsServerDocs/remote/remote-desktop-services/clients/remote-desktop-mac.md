@@ -6,14 +6,14 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 07/16/2020
+ms.date: 08/20/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a0c93ddc6bf891a3f8157d36b67f60241d4d41b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: e0ce10cbdc1dfe70156d36a96978222395afaa94
+ms.sourcegitcommit: 8e5530ba7f7d3e2569590949e1f443d908683a17
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991594"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88702821"
 ---
 # <a name="get-started-with-the-macos-client"></a>macOS クライアントの概要
 
@@ -49,8 +49,8 @@ AppCenter 上のプレビュー チャネルで新機能をテストしていま
 1. メイン ページで **[Add feed]\(フィードの追加\)** を選択して、サービスに接続し、リソースを取得します。
 2. フィード URL を入力します。 URL またはメール アドレスを指定できます。
    - この URL は、通常、Windows Virtual Desktop の URL です。 どれを使用するかは、使用している Windows Virtual Desktop のバージョンによって異なります。
-      - Fall 2019 バージョンの場合は、`https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx` を使用します。
-      - Spring 2020 バージョンの場合は、`https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery` を使用します。
+      - Windows Virtual Desktop (クラシック) の場合は、`https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx` を使用します。
+      - Windows Virtual Desktop の場合は、`https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery` を使用します。
    - 電子メールを使用するには、電子メール アドレスを入力します。 これにより、電子メール アドレスに関連付けられている URL を検索するように、管理者がサーバーを構成している場合に、そのようにクライアントに指示します。
 3. **[サブスクライブ]** を選択します。
 4. プロンプトが表示されたら、自分のユーザー アカウントを使用してサインインします。

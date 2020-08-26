@@ -5,18 +5,34 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/20/2020
+ms.date: 08/19/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 985d7b015c2ff3fe1d117e8277b445744f6a51e6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dbaaafe2c01d41a9786d6718bad850dc08deaa81
+ms.sourcegitcommit: 6d991b16a6d9129e1f5d1ca7d688bd621b72d586
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961856"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88638879"
 ---
 # <a name="whats-new-in-the-windows-store-client"></a>Microsoft Store クライアントの新機能
 
 [Windows ストア クライアント](windows.md)は定期的に更新され、新機能の追加と問題の修正が行われています。 ここでは、最新の更新プログラムを紹介します。
+
+## <a name="updates-for-version-1021519-insider"></a>バージョン 10.2.1519 の更新内容 (Insider)
+
+*公開日:2020 年 8 月 19 日*
+
+- iOS、macOS、Android クライアントと同じ基になる RDP コアエンジンを使用するようにクライアントを書き直しました。
+- Windows Virtual Desktop の Azure Resource Manager 統合バージョンのサポートを追加しました。
+- X64 と ARM64 のサポートを追加しました。
+- サイド パネルのデザインを全画面表示に更新しました。
+- ライトおよびダーク モードのサポートを追加しました。
+- ソブリン クラウド デプロイにサブスクライブおよび接続するための機能を追加しました。
+- RTM (Release to Manufacturing) でのワークスペース (ブックマーク) のバックアップと復元を可能にする機能を追加しました。
+- サブスクリプション プロセス中に既存の Azure Active Directory (Azure AD) トークンを使用してユーザーがサインインする必要がある回数を減らす機能を更新しました。
+- 更新されたサブスクリプションで、ユーザーが Windows Virtual Desktop または Windows Virtual Desktop (クラシック) のどちらを使用しているか検出できるようになりました。
+- リモート PC へのファイルのコピーに関する問題を修正しました。
+- ボタンに関してよく報告されるアクセシビリティの問題を修正しました。
 
 ## <a name="updates-for-version-1011215"></a>バージョン 10.1.1215 の更新内容
 
@@ -60,7 +76,7 @@ ms.locfileid: "87961856"
 - 接続がまだアクティブなときにクライアント ウィンドウを閉じると発生するクラッシュを修正しました。
 - クライアントが最小化された後に再接続すると発生するハングを修正しました。
 - デスクトップをグループ内の任意の場所にドラッグできるようになりました。
-- ジャンプリストから接続を起動できるようになり、必要に応じて別のウィンドウが開きます。
+- ジャンプ リストから接続を起動できるようになり、必要に応じて別のウィンドウが開きます。
 - その他のバグ修正。
 
 ## <a name="updates-for-version-1011060"></a>バージョン 10.1.1060 の更新内容
