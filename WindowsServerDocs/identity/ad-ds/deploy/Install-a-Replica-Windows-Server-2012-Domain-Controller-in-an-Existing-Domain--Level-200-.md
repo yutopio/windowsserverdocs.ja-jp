@@ -1,17 +1,17 @@
 ---
 ms.assetid: e6da5984-d99d-4c34-9c11-4a18cd413f06
 title: Windows Server 2012 のレプリカ ドメイン コントローラーを既存のドメインにインストールする (レベル 200)
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 76bda25100766524fde490c0afc4b92b9d9fb7b7
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a7a9b59d9676484ea39262fb023b56374533e6ec
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968039"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88940882"
 ---
 # <a name="install-a-replica-windows-server-2012-domain-controller-in-an-existing-domain-level-200"></a>Windows Server 2012 のレプリカ ドメイン コントローラーを既存のドメインにインストールする (レベル 200)
 
@@ -39,7 +39,7 @@ ms.locfileid: "87968039"
 > [!NOTE]
 > **-credential** 引数は、フォレストをアップグレードする場合は、Enterprise Admins および Schema Admins グループのメンバーとしてログインしていない場合のみ必須です。新しい DC を既存のドメインに追加する場合は、Domain Admins グループのメンバーとしてログインしていない場合のみ必須です。
 
-## <a name="deployment"></a><a name="BKMK_Dep"></a>デプロイ
+## <a name="deployment"></a><a name="BKMK_Dep"></a>ディストリビューション
 
 ### <a name="deployment-configuration"></a>デプロイ構成
 ![レプリカをインストールする](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDeployConfig.png)
@@ -118,7 +118,7 @@ Install-AddsDomainController
 
 ```
 
-最後に、暗号化したパスワードをファイルに保存して後で使用することができます。こうするとクリア テキストのパスワードを表示せずに済みます。 例:
+最後に、暗号化したパスワードをファイルに保存して後で使用することができます。こうするとクリア テキストのパスワードを表示せずに済みます。 次に例を示します。
 
 ```
 $file = "c:\pw.txt"
@@ -217,7 +217,7 @@ Active Directory Paths ADDSDeployment コマンドレット引数は以下のと
 
 サーバー マネージャーの **[オプションの確認]** ページにあるオプションの **[スクリプトの表示]** ボタンを使用すると、現在の ADDSDeployment モジュール構成を単一の Windows PowerShell スクリプトとして含む Unicode テキスト ファイルを作成することもできます。 これにより、サーバー マネージャーのグラフィカル インターフェイスを Windows PowerShell 展開スタジオとして使用できます。 Active Directory ドメイン サービス構成ウィザードを使用してオプションを構成し、構成をエクスポートした後、ウィザードをキャンセルします。  これによって有効で正しい構文のサンプルが作成されるので、それをさらに変更したり、直接使用したりできます。
 
-例:
+次に例を示します。
 
 ```
 #
@@ -308,7 +308,7 @@ Windows PowerShell を使用してドメインコントローラーをリモー�
 invoke-command {install-addsdomaincontroller "domainname <domain> -credential (get-credential)} -computername <dc name>
 ```
 
-例:
+次に例を示します。
 
 ![レプリカをインストールする](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeExample.gif)
 

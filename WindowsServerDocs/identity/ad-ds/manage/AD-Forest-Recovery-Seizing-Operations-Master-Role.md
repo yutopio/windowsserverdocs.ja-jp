@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復-操作マスターの役割の強制
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 7e6bb370-f840-4416-b5e2-86b0ba715f4f
-ms.openlocfilehash: dc9c435d45e15af627a259c73dcdd81a7689cbe6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7d7b1abfaf7e3ed4f3780ff2d819340ba8fe98c0
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943725"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941532"
 ---
 # <a name="ad-forest-recovery---seizing-an-operations-master-role"></a>AD フォレストの回復-操作マスターの役割の強制
 
@@ -33,7 +33,7 @@ ms.locfileid: "87943725"
    roles
    ```
 
-3. FSMO の**メンテナンス:** プロンプトで、次のコマンドを入力し、enter キーを押します。
+3. FSMO の **メンテナンス:** プロンプトで、次のコマンドを入力し、enter キーを押します。
 
    ```
    connections
@@ -45,7 +45,7 @@ ms.locfileid: "87943725"
    Connect to server ServerFQDN
    ```
 
-   ここで、 *Serverfqdn*はこの DC の完全修飾ドメイン名 (FQDN) です。たとえば、 **server nycdc01.example.com に接続**します。
+   ここで、 *Serverfqdn* はこの DC の完全修飾ドメイン名 (FQDN) です。たとえば、 **server nycdc01.example.com に接続**します。
 
    *Serverfqdn*が成功しない場合は、DC の NetBIOS 名を使用します。
 
@@ -55,17 +55,17 @@ ms.locfileid: "87943725"
    quit
    ```
 
-6. 強制移動するロールに応じて、**次の表**の説明に従って、適切なコマンドを入力し、enter キーを押します。
+6. 強制移動するロールに応じて、 **次の表** の説明に従って、適切なコマンドを入力し、enter キーを押します。
 
-|Role|資格情報|command|
+|Role|資格情報|コマンド|
 |----------|-----------------|-------------|
 |ドメイン名前付けマスタ|Enterprise Admins|**名前付けマスタの強制移動**|
 |スキーママスタ|Schema Admins|**スキーママスタの強制移動**|
-|インフラストラクチャマスターの**注意:** インフラストラクチャマスターの役割を強制終了した後、Adprep/Rodcprep. を実行する必要がある場合は、後でエラーが発生することがあります。 詳細については、サポート技術情報の記事[949257](https://support.microsoft.com/kb/949257)を参照してください。|Domain Admins|**インフラストラクチャマスターの強制**|
+|インフラストラクチャマスターの **注意:**  インフラストラクチャマスターの役割を強制終了した後、Adprep/Rodcprep. を実行する必要がある場合は、後でエラーが発生することがあります。 詳細については、サポート技術情報の記事 [949257](https://support.microsoft.com/kb/949257)を参照してください。|Domain Admins|**インフラストラクチャマスターの強制**|
 |PDC エミュレーターマスター|Domain Admins|**Pdc を強制する**|
 |RID マスター|Domain Admins|**マスターの強制移動**|
 
-要求を確認すると、Active Directory または AD DS によってロールの転送が試行されます。 転送が失敗すると、いくつかのエラー情報が表示され、Active Directory または AD DS が強制実行を続行します。 強制が完了すると、ロールの一覧と、各ロールを現在保持しているサーバーのライトウェイトディレクトリアクセスプロトコル (LDAP) 名が表示されます。 また、管理者特権でのコマンドプロンプトで**Netdom QUERY FSMO**を実行して、現在のロールの所有者を確認することもできます。
+要求を確認すると、Active Directory または AD DS によってロールの転送が試行されます。 転送が失敗すると、いくつかのエラー情報が表示され、Active Directory または AD DS が強制実行を続行します。 強制が完了すると、ロールの一覧と、各ロールを現在保持しているサーバーのライトウェイトディレクトリアクセスプロトコル (LDAP) 名が表示されます。 また、管理者特権でのコマンドプロンプトで **Netdom QUERY FSMO** を実行して、現在のロールの所有者を確認することもできます。
 
 > [!NOTE]
 > エラーが発生する前にこのコンピュータが RID マスタではない場合、RID マスタの役割を強制移動しようとすると、コンピュータはこの役割を受け入れる前に、レプリケーションパートナーと同期しようとします。 ただし、この手順はコンピューターが分離されている場合に実行されるため、パートナーとの同期は成功しません。 このため、このコンピューターがパートナーと同期できないにもかかわらず、操作を続行するかどうかを確認するダイアログボックスが表示されます。 **[はい]** をクリックします。

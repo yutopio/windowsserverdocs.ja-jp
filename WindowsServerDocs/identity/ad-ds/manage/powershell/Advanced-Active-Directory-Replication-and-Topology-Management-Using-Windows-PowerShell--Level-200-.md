@@ -1,23 +1,23 @@
 ---
 ms.assetid: fe05e52c-cbf8-428b-8176-63407991042f
 title: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 058e1ba1cd68c1d33aee6e85dfb0de572a480d26
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dd63784bd61a374ca92419c6bfa38a3f81b7f8c2
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967979"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941552"
 ---
 # <a name="advanced-active-directory-replication-and-topology-management-using-windows-powershell-level-200"></a>Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
 
 >適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 
-このトピックでは、AD DS のレプリケーションとトポロジを管理するための新しいコマンドレットの詳細を説明し、いくつかの例を示します。 概要については、「 [Windows PowerShell &#40;レベル 100&#41;を使用した Active Directory レプリケーションとトポロジ管理の概要」を](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)参照してください。
+このトピックでは、AD DS のレプリケーションとトポロジを管理するための新しいコマンドレットの詳細を説明し、いくつかの例を示します。 概要については、「 [Windows PowerShell &#40;レベル 100&#41;を使用した Active Directory レプリケーションとトポロジ管理の概要」を ](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)参照してください。
 
 1. [はじめに](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_Intro)
 
@@ -78,7 +78,7 @@ Windows Server 2012 では、Windows PowerShell の Active Directory モジュ�
 Get-command -module ActiveDirectory
 ```
 
-すべての Active Directory Windows PowerShell コマンドレットの引数の一覧については、ヘルプを参照してください。 例:
+すべての Active Directory Windows PowerShell コマンドレットの引数の一覧については、ヘルプを参照してください。 次に例を示します。
 
 ```
 Get-help New-ADReplicationSite
@@ -219,7 +219,7 @@ Get-ADDomainController -filter * | foreach {Sync-ADObject -object "cn=tony wang,
 
 ![powershell を使用した高度な管理](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSSyncAD.png)
 
-### <a name="topology"></a><a name="BKMK_Topo"></a>モジュール
+### <a name="topology"></a><a name="BKMK_Topo"></a>トポロジ
 Repadmin.exe は、サイト、サイト リンク、サイト リンク ブリッジ、および接続のようなレプリケーション トポロジに関する情報を返すには便利ですが、変更を加えるための包括的な引数のセットが用意されていません。 実際、AD DS トポロジを作成および変更する管理者向けに特化して設計された、スクリプトが実行可能な付属の Windows ユーティリティはこれまで存在しませんでした。 Active Directory が普及し、非常に多くのカスタマー環境で利用されるようになったことで、Active Directory の論理情報を一括で変更するニーズが高まっています。
 
 たとえば、新しいブランチ オフィスを迅速に展開した後に、他のオフィスとの統合作業だけでなく、物理的な場所、ネットワークの変更、および新しいキャパシティ要件に基づいて、サイトに多数の変更を加えることが必要になる場合があります。 このような場合、Dssites.msc や Adsiedit.msc を使用して変更を加える代わりに、変更作業を自動化することができます。 これは、ネットワークおよび施設のチームから提供されたスプレッドシート形式のデータを使用する場合に特に役立ちます。

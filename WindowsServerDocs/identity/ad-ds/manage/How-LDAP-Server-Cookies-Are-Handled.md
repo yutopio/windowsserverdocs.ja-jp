@@ -1,17 +1,17 @@
 ---
 ms.assetid: 3acaa977-ed63-4e38-ac81-229908c47208
 title: LDAP サーバー Cookie の処理方法
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 077c40d6ed61da1d36bdfd792af41ea5067421fc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7e01afeeef7bb9751b4c23839569a9395fbd9c51
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943596"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941352"
 ---
 # <a name="how-ldap-server-cookies-are-handled"></a>LDAP サーバー Cookie の処理方法
 
@@ -26,7 +26,7 @@ LDAP では、一部のクエリによって膨大な結果セットが返され
 これらの容量およびロジスティックの問題により、Microsoft LDAP 開発者は、"ページングクエリ" と呼ばれる LDAP 拡張機能を作成するようになりました。 LDAP コントロールを実装し、1 つの膨大なクエリを大量の小さな結果セットに分割します。 [RFC 2696](http://www.ietf.org/rfc/rfc2696) として RFC 標準になりました。
 
 ## <a name="cookie-handling-on-client"></a>クライアント上の Cookie 処理
-ページングクエリメソッドは、クライアントまたは[LDAP ポリシー](https://support.microsoft.com/kb/315071/en-us) ("maxpagesize") のいずれかで設定されたページサイズを使用します。 クライアントは、LDAP コントロールを送信してページングを常に有効にする必要があります。
+ページングクエリメソッドは、クライアントまたは [LDAP ポリシー](https://support.microsoft.com/kb/315071/en-us) ("maxpagesize") のいずれかで設定されたページサイズを使用します。 クライアントは、LDAP コントロールを送信してページングを常に有効にする必要があります。
 
 
 多くの結果を照会するクエリを使用する場合、ある時点でオブジェクトの最大許容数に到達します。 LDAP サーバーは、応答メッセージをパッケージ化し、後で検索を継続するために必要な情報を含む Cookie を追加します。
@@ -125,7 +125,7 @@ DC や LDAP サーバーにイベント 2898 が表示された場合は、MaxRe
 
 250 MB 以上のプールでイベント 2899 が変わらず表示される場合は、多くのクライアントに非常に大量のオブジェクトが返され、非常に高い頻度でクエリを実行している可能性があります。 [Active Directory のデータ コレクター セット](/archive/blogs/askds/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond)を使用して収集できるデータは、LDAP サーバーを常にビジー状態にする、反復ページング クエリを検索するのに役立ちます。 これらのクエリはすべて、使用されたページのサイズに一致する "返されたエントリ" が多数表示されます。
 
-可能であれば、アプリケーションの設計を確認し、頻度が低く、データ量が少なく、このデータを照会するクライアントインスタンスの数が少ない別のアプローチを実装する必要があります。ソースコードにアクセスできるアプリケーションの場合、[効率的な Ad 対応アプリケーションを作成](/previous-versions/ms808539(v=msdn.10))するためのこのガイドは、アプリケーションが ad にアクセスするための最適な方法を理解するのに役立ちます。
+可能であれば、アプリケーションの設計を確認し、頻度が低く、データ量が少なく、このデータを照会するクライアントインスタンスの数が少ない別のアプローチを実装する必要があります。ソースコードにアクセスできるアプリケーションの場合、  [効率的な Ad 対応アプリケーションを作成](/previous-versions/ms808539(v=msdn.10)) するためのこのガイドは、アプリケーションが ad にアクセスするための最適な方法を理解するのに役立ちます。
 
 クエリの動作を変更できない場合は、必要な名前付けコンテキストのレプリケートされたインスタンスをさらに追加し、クライアントを再配布し、最終的に個々の LDAP サーバーの負荷を軽減する方法もあります。
 

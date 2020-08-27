@@ -1,17 +1,17 @@
 ---
 ms.assetid: 249ba1be-b0d3-4a77-99af-3699074a2b6e
 title: 仮想化ドメイン コントローラーのトラブルシューティング
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b3e384eaa85e0becfa501743fc4d7efa45eac02a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 75f4ce8516e48dc76200b8fb1d19e56ba969e70b
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87941566"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941302"
 ---
 # <a name="virtualized-domain-controller-troubleshooting"></a>仮想化ドメイン コントローラーのトラブルシューティング
 
@@ -171,7 +171,7 @@ Server Core インストールが実行されているサーバーでイベン�
 
 ### <a name="troubleshooting-specific-problems"></a><a name="BKMK_SpecificProblems"></a>特定の問題のトラブルシューティング
 
-#### <a name="events"></a>イベント
+#### <a name="events"></a>events
 すべての仮想化ドメイン コントローラーの複製イベントによって、複製ドメイン コントローラー VM のディレクトリ サービス イベント ログへの書き込みが行われます。 アプリケーション、ファイル レプリケーション サービス、および DFS レプリケーションのイベント ログにも、複製失敗に関する有用なトラブルシューティング情報が含まれていることがあります。 PDC エミュレーターのイベント ログでは、PDC エミュレーターへの RPC 呼び出し中に発生したエラーを確認できる場合があります。
 
 ディレクトリ サービス イベント ログに示される Windows Server 2012 の複製固有のイベントを、エラーの説明と推奨される解決策と共に次に示します。
@@ -182,8 +182,8 @@ Server Core インストールが実行されているサーバーでイベン�
 | -- |--|
 | **イベント ID** | **2160** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message**
+| **Severity** | Informational |
+| **メッセージ**
 | ローカルで、 *<COMPUTERNAME>* 仮想ドメインコントローラー複製構成ファイルが検出されました。<p>仮想ドメイン コントローラー複製構成ファイルが検出された場所: %1<p>仮想ドメイン コントローラー複製構成ファイルが存在する場合、そのローカル仮想ドメイン コントローラーは別の仮想ドメイン コントローラーの複製です。 は *<COMPUTERNAME>* 自身の複製を開始します。 |
  **説明と解決策** | これは成功イベントです。予期せず発生した場合にのみ問題になります。 DSA 作業ディレクトリ %systemroot%\ntds と、ローカル ディスクまたはリムーバブル ディスクのルートにある dcclconeconfig.xml ファイルを調べます。 |
 
@@ -191,261 +191,261 @@ Server Core インストールが実行されているサーバーでイベン�
 | -- |--|
 | **イベント ID** | **2161** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | ローカルで、 *<COMPUTERNAME>* 仮想ドメインコントローラー複製構成ファイルが見つかりませんでした。 このローカル コンピューターは複製された DC ではありません。| **説明と解決策** | これは成功イベントです。予期せず発生した場合にのみ問題になります。 DSA 作業ディレクトリ %systemroot%\ntds と、ローカル ディスクまたはリムーバブル ディスクのルートにある dcclconeconfig.xml ファイルを調べます。 |
+| **Severity** | Informational |
+| **メッセージ** | ローカルで、 *<COMPUTERNAME>* 仮想ドメインコントローラー複製構成ファイルが見つかりませんでした。 このローカル コンピューターは複製された DC ではありません。| **説明と解決策** | これは成功イベントです。予期せず発生した場合にのみ問題になります。 DSA 作業ディレクトリ %systemroot%\ntds と、ローカル ディスクまたはリムーバブル ディスクのルートにある dcclconeconfig.xml ファイルを調べます。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2162** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | 仮想ドメイン コントローラーの複製に失敗しました。<p>仮想ドメイン コントローラーの複製の試行に対応するエラーの詳細については、システム イベント ログおよび %systemroot%\debug\dcpromo.log に記録されているイベントを確認してください。<p>エラー コード: %1 |
+| **Severity** | エラー |
+| **メッセージ** | 仮想ドメイン コントローラーの複製に失敗しました。<p>仮想ドメイン コントローラーの複製の試行に対応するエラーの詳細については、システム イベント ログおよび %systemroot%\debug\dcpromo.log に記録されているイベントを確認してください。<p>エラー コード: %1 |
 | **説明と解決策** | メッセージの指示に従ってください。これは包括的なエラーです。 |
 
 | events | 説明 |
 | -- |--|
 |**イベント ID**|**2163**|
 |**ソース**|Microsoft-Windows-ActiveDirectory_DomainService|
-|**重大度**|Informational|
-|**Message**|ローカル仮想ドメイン コントローラーを複製するために DsRoleSvc サービスが開始されました。|
+|**Severity**|Informational|
+|**メッセージ**|ローカル仮想ドメイン コントローラーを複製するために DsRoleSvc サービスが開始されました。|
 |**説明と解決策**|これは成功イベントです。予期せず発生した場合にのみ問題になります。 DSA 作業ディレクトリ %systemroot%\ntds と、ローカル ディスクまたはリムーバブル ディスクのルートにある dcclconeconfig.xml ファイルを調べます。|
 
 | events | 説明 |
 | -- |--|
 | **イベント ID** | **2164** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* ローカル仮想ドメインコントローラーを複製するために Dsのロール Vc サービスを開始できませんでした。 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* ローカル仮想ドメインコントローラーを複製するために Dsのロール Vc サービスを開始できませんでした。 |
 | **説明と解決策** | DS 役割サーバー サービス (DsRoleSvc) のサービス設定を調べて、開始の種類が手動に設定されていることを確認します。 このサービスの開始を妨げているサード パーティのプログラムがないことを検証します。 |
 
 | events | 説明 |
 | -- |--|
 | **イベント ID** | **2165** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* ローカル仮想ドメインコントローラーの複製中にスレッドを開始できませんでした。<p>エラー コード: %1<p>エラー メッセージ: %2<p>スレッド名: %3 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* ローカル仮想ドメインコントローラーの複製中にスレッドを開始できませんでした。<p>エラー コード: %1<p>エラー メッセージ: %2<p>スレッド名: %3 |
 | **説明と解決策** | Microsoft 製品サポートにお問い合わせください |
 
 | events | 説明 |
 | -- |--|
 | **イベント ID** | **2166** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* DSRM での再起動を開始するには、RPCSS サービスが必要です。 RPCSS が初期化されて実行状態になるのを待機している間にエラーが発生しました。<p>エラー コード: %1 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* DSRM での再起動を開始するには、RPCSS サービスが必要です。 RPCSS が初期化されて実行状態になるのを待機している間にエラーが発生しました。<p>エラー コード: %1 |
 | **説明と解決策** | RPC サーバー サービス (Rpcss) のシステム イベント ログとサービス設定を調べます |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2168** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | Microsoft-Windows-ActiveDirectory_DomainService<p>この DC は、サポートされているハイパーバイザーで実行されています。 VM 生成 ID が検出されました。<p>VM 生成 ID の現在の値: %1 |
+| **Severity** | Informational |
+| **メッセージ** | Microsoft-Windows-ActiveDirectory_DomainService<p>この DC は、サポートされているハイパーバイザーで実行されています。 VM 生成 ID が検出されました。<p>VM 生成 ID の現在の値: %1 |
 | **説明と解決策** | これは成功イベントです。予期せず発生した場合にのみ問題になります。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2169** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | VM 生成 ID が検出されませんでした。 この DC は、物理コンピューター、ダウンレベル バージョンの Hyper-V、または VM 生成 ID をサポートしていないハイパーバイザーでホストされています。<p>追加データ<p>VM 生成 ID を確認するときに返されたエラー コード: %1 |
+| **Severity** | Informational |
+| **メッセージ** | VM 生成 ID が検出されませんでした。 この DC は、物理コンピューター、ダウンレベル バージョンの Hyper-V、または VM 生成 ID をサポートしていないハイパーバイザーでホストされています。<p>追加データ<p>VM 生成 ID を確認するときに返されたエラー コード: %1 |
 | **説明と解決策** | 複製目的でない場合、これは成功イベントです。 それ以外の場合は、システム イベント ログを調べて、ハイパーバイザー製品サポート ドキュメントを確認します。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2170** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | 警告 |
-| **Message** | 生成 ID の変更が検出されました。<p>DS にキャッシュされている生成 ID (古い値): %1<p>現在 VM にある生成 ID (新しい値): %2<p>生成 ID の変更は、仮想マシン スナップショットの適用、仮想マシンのインポート操作、またはライブ マイグレーション操作の後に発生します。 *<COMPUTERNAME>* では、ドメインコントローラーを回復するための新しい起動 ID が作成されます。 仮想マシン スナップショットを使用して仮想化ドメイン コントローラーを復元しないでください。 Active Directory Domain Services データベースの内容を復元またはロールバックするには、Active Directory Domain Services 対応のバックアップ アプリケーションを使用して作成されたシステム状態バックアップを使用する必要があります。 |
+| **Severity** | 警告 |
+| **メッセージ** | 生成 ID の変更が検出されました。<p>DS にキャッシュされている生成 ID (古い値): %1<p>現在 VM にある生成 ID (新しい値): %2<p>生成 ID の変更は、仮想マシン スナップショットの適用、仮想マシンのインポート操作、またはライブ マイグレーション操作の後に発生します。 *<COMPUTERNAME>* では、ドメインコントローラーを回復するための新しい起動 ID が作成されます。 仮想マシン スナップショットを使用して仮想化ドメイン コントローラーを復元しないでください。 Active Directory Domain Services データベースの内容を復元またはロールバックするには、Active Directory Domain Services 対応のバックアップ アプリケーションを使用して作成されたシステム状態バックアップを使用する必要があります。 |
 | **説明と解決策** | 複製目的の場合、これは成功イベントです。 それ以外の場合は、システム イベント ログを調べてください。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2171** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | 生成 ID の変更は検出されませんでした。<p>DS にキャッシュされている生成 ID (古い値): %1<p>現在 VM にある生成 ID (新しい値): %2 |
+| **Severity** | Informational |
+| **メッセージ** | 生成 ID の変更は検出されませんでした。<p>DS にキャッシュされている生成 ID (古い値): %1<p>現在 VM にある生成 ID (新しい値): %2 |
 | **説明と解決策** | 複製目的でない場合、これは成功イベントです。このイベントは、仮想化 DC を再起動するたびに発生します。 それ以外の場合は、システム イベント ログを調べてください。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2172** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | ドメイン コントローラーのコンピューター オブジェクトの msDS-GenerationId 属性を読み取ります。<p>msDS-GenerationId 属性の値: %1 |
+| **Severity** | Informational |
+| **メッセージ** | ドメイン コントローラーのコンピューター オブジェクトの msDS-GenerationId 属性を読み取ります。<p>msDS-GenerationId 属性の値: %1 |
 | **説明と解決策** | 複製目的の場合、これは成功イベントです。 それ以外の場合は、システム イベント ログを調べてください。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2173** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | ドメイン コントローラーのコンピューター オブジェクトの msDS-GenerationId 属性を読み取ることができませんでした。 データベース トランザクション エラーが発生したか、生成 ID がローカル データベースに存在しない可能性があります。 dcpromo 完了後の最初の再起動の際に msDS-GenerationId が存在しなかったか、DC が仮想ドメイン コントローラーではありません。<p>追加データ<p>エラー コード: %1 |
+| **Severity** | Informational |
+| **メッセージ** | ドメイン コントローラーのコンピューター オブジェクトの msDS-GenerationId 属性を読み取ることができませんでした。 データベース トランザクション エラーが発生したか、生成 ID がローカル データベースに存在しない可能性があります。 dcpromo 完了後の最初の再起動の際に msDS-GenerationId が存在しなかったか、DC が仮想ドメイン コントローラーではありません。<p>追加データ<p>エラー コード: %1 |
 | **説明と解決策** | 複製目的の場合、これは成功イベントです。このイベントは、複線完了後の最初の VM 再起動です。 仮想でないドメイン コントローラーでは、無視することもできます。 それ以外の場合は、システム イベント ログを調べてください。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2174** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | この DC は、仮想ドメイン コントローラーの複製でも、復元された仮想ドメイン コントローラー スナップショットでもありません。 |
+| **Severity** | Informational |
+| **メッセージ** | この DC は、仮想ドメイン コントローラーの複製でも、復元された仮想ドメイン コントローラー スナップショットでもありません。 |
 | **説明と解決策** | 複製目的でない場合、これは成功イベントです。 それ以外の場合は、システム イベント ログを調べてください。 |
 
 | events | 説明 |
 | -- |--|
 |**イベント ID**|**2175**|
 |**ソース**|Microsoft-Windows-ActiveDirectory_DomainService|
-|**重大度**|エラー|
-|**Message**|仮想ドメイン コントローラー複製構成ファイルが、サポートされていないプラットフォームにあります。|
+|**Severity**|エラー|
+|**メッセージ**|仮想ドメイン コントローラー複製構成ファイルが、サポートされていないプラットフォームにあります。|
 |**説明と解決策**|dccloneconfig.xml ファイルが、VM Generation-ID をサポートしていない物理コンピューターまたはハイパーバイザー上にある場合など、dccloneconfig.xml が見つかったが、VM Generation-ID が見つからなかった場合に発生します。|
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2176** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | 仮想ドメイン コントローラー複製構成ファイルの名前を変更しました。<p>追加データ<p>古いファイル名: %1<p>新しいファイル名: %2 |
+| **Severity** | Informational |
+| **メッセージ** | 仮想ドメイン コントローラー複製構成ファイルの名前を変更しました。<p>追加データ<p>古いファイル名: %1<p>新しいファイル名: %2 |
 | **説明と解決策** | VM Generation ID が変更されていないため、ソース VM バックアップをブートするときに名前が変更される可能性があります。 これにより、ソース ドメイン コントローラーが複製を行おうとするのを防ぐことができます。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2177** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | 仮想ドメイン コントローラー複製構成ファイルの名前を変更できませんでした。<p>追加データ<p>ファイル名: %1<p>エラー コード: %2 %3 |
+| **Severity** | エラー |
+| **メッセージ** | 仮想ドメイン コントローラー複製構成ファイルの名前を変更できませんでした。<p>追加データ<p>ファイル名: %1<p>エラー コード: %2 %3 |
 | **説明と解決策** | VM Generation ID が変更されていないため、ソース VM バックアップをブートするときに名前を変更しようとする処理が実行される可能性があります。 これにより、ソース ドメイン コントローラーが複製を行おうとするのを防ぐことができます。 ファイルの名前を手動で変更し、ファイル名の変更を妨げる可能性があるインストールされているサード パーティ製品を調査します。 |
 
 | events | 説明 |
 | -- |--|
 |**イベント ID**|**2178**|
 |**ソース**|Microsoft-Windows-ActiveDirectory_DomainService|
-|**重大度**|Informational|
-|**Message**|仮想ドメイン コントローラー複製構成ファイルが検出されましたが、VM 生成 ID が変更されていません。 このローカル DC は複製元の DC です。 複製構成ファイルの名前を変更してください。|
+|**Severity**|Informational|
+|**メッセージ**|仮想ドメイン コントローラー複製構成ファイルが検出されましたが、VM 生成 ID が変更されていません。 このローカル DC は複製元の DC です。 複製構成ファイルの名前を変更してください。|
 |**説明と解決策**|VM Generation ID が変更されていないため、ソース VM バックアップをブートするときに発生する可能性があります。 これにより、ソース ドメイン コントローラーが複製を行おうとするのを防ぐことができます。|
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2179** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | ドメイン コントローラーのコンピューター オブジェクトの msDS-GenerationId 属性が次のパラメーターに設定されました:<p>GenerationID 属性: %1 |
+| **Severity** | Informational |
+| **メッセージ** | ドメイン コントローラーのコンピューター オブジェクトの msDS-GenerationId 属性が次のパラメーターに設定されました:<p>GenerationID 属性: %1 |
 | **説明と解決策** | これは成功イベントです。予期せず発生した場合にのみ問題になります。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2180** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | 警告 |
-| **Message** | ドメイン コントローラーのコンピューター オブジェクトの msDS-GenerationId 属性を設定できませんでした。<p>追加データ<p>エラー コード: %1 |
+| **Severity** | 警告 |
+| **メッセージ** | ドメイン コントローラーのコンピューター オブジェクトの msDS-GenerationId 属性を設定できませんでした。<p>追加データ<p>エラー コード: %1 |
 | **説明と解決策** | システム イベント ログと Dcpromo.log を調べます。 MS TechNet、MS サポート技術情報、および MS のブログで特定のエラーを検索して、そのエラーが示す一般的な意味を確認し、その結果に基づいてトラブルシューティングを行います。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2182** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | 内部イベント: ディレクトリ サービスは、リモート DSA を複製するように指示されています。 |
+| **Severity** | Informational |
+| **メッセージ** | 内部イベント: ディレクトリ サービスは、リモート DSA を複製するように指示されています。 |
 | **説明と解決策** | これは成功イベントです。予期せず発生した場合にのみ問題になります。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2183** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | 内部イベント: *<COMPUTERNAME>* リモートディレクトリシステムエージェントを複製する要求を完了しました。<p>元の DC の名前: %3<p>要求複製 DC 名: %4<p>要求複製 DC サイト: %5<p>追加データ<p>エラー値: %1 %2 |
+| **Severity** | Informational |
+| **メッセージ** | 内部イベント: *<COMPUTERNAME>* リモートディレクトリシステムエージェントを複製する要求を完了しました。<p>元の DC の名前: %3<p>要求複製 DC 名: %4<p>要求複製 DC サイト: %5<p>追加データ<p>エラー値: %1 %2 |
 | **説明と解決策** | これは成功イベントです。予期せず発生した場合にのみ問題になります。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2184** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* 複製された DC のドメインコントローラーアカウントを作成できませんでした。<p>元の DC の名前: %1<p>複製された DC の最大数: %2<p>複製することによって生成できるドメイン コント ローラー アカウントの数に制限 <em><COMPUTERNAME></em>を超えています。 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* 複製された DC のドメインコントローラーアカウントを作成できませんでした。<p>元の DC の名前: %1<p>複製された DC の最大数: %2<p>複製することによって生成できるドメイン コント ローラー アカウントの数に制限 <em><COMPUTERNAME></em>を超えています。 |
 | **説明と解決策** | ドメイン コントローラーが降格されていない場合、単一のソース ドメイン コントローラー名は名前付け規則に基づいて 9999 回しか自動生成できません。 XML の <computername> 要素を使用して、新しい一意の名前を生成するか、異なる名前の DC から複製してください。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2191** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | *<COMPUTERNAME>* DNS の更新を無効にするには、次のレジストリ値を設定します。<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>複製処理の間、ローカル コンピューターのコンピューター名が短時間、複製元のコンピューターと同じになる可能性があります。 その間は、DNS の A レコードと AAAA レコードの登録が無効になるため、クライアントは複製中のローカル コンピューターに要求を送信できません。 複製が完了すると再び DNS の更新が有効になります。 |
+| **Severity** | Informational |
+| **メッセージ** | *<COMPUTERNAME>* DNS の更新を無効にするには、次のレジストリ値を設定します。<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>複製処理の間、ローカル コンピューターのコンピューター名が短時間、複製元のコンピューターと同じになる可能性があります。 その間は、DNS の A レコードと AAAA レコードの登録が無効になるため、クライアントは複製中のローカル コンピューターに要求を送信できません。 複製が完了すると再び DNS の更新が有効になります。 |
 | **説明と解決策** | これは成功イベントです。予期せず発生した場合にのみ問題になります。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2192** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* DNS の更新を無効にするために、次のレジストリ値を設定できませんでした。<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>エラー コード: %4<p>エラー メッセージ: %5<p>複製処理の間、ローカル コンピューターのコンピューター名が短時間、複製元のコンピューターと同じになる可能性があります。 その間は、DNS の A レコードと AAAA レコードの登録が無効になるため、クライアントは複製中のローカル コンピューターに要求を送信できません。 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* DNS の更新を無効にするために、次のレジストリ値を設定できませんでした。<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>エラー コード: %4<p>エラー メッセージ: %5<p>複製処理の間、ローカル コンピューターのコンピューター名が短時間、複製元のコンピューターと同じになる可能性があります。 その間は、DNS の A レコードと AAAA レコードの登録が無効になるため、クライアントは複製中のローカル コンピューターに要求を送信できません。 |
 | **説明と解決策** | アプリケーション イベント ログおよびシステム イベント ログを調べます。 レジストリの更新をブロックしている可能性があるサード パーティのアプリケーションを調査します。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2193** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | *<COMPUTERNAME>* DNS の更新を有効にするには、次のレジストリ値を設定します。<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>複製処理の間、ローカル コンピューターのコンピューター名が短時間、複製元のコンピューターと同じになる可能性があります。 その間は、DNS の A レコードと AAAA レコードの登録が無効になるため、クライアントは複製中のローカル コンピューターに要求を送信できません。 |
+| **Severity** | Informational |
+| **メッセージ** | *<COMPUTERNAME>* DNS の更新を有効にするには、次のレジストリ値を設定します。<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>複製処理の間、ローカル コンピューターのコンピューター名が短時間、複製元のコンピューターと同じになる可能性があります。 その間は、DNS の A レコードと AAAA レコードの登録が無効になるため、クライアントは複製中のローカル コンピューターに要求を送信できません。 |
 | **説明と解決策** | これは成功イベントです。予期せず発生した場合にのみ問題になります。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2194** |
 |--|--|
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* DNS の更新を有効にするために、次のレジストリ値を設定できませんでした。<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>エラー コード: %4<p>エラー メッセージ: %5<p>複製処理の間、ローカル コンピューターのコンピューター名が短時間、複製元のコンピューターと同じになる可能性があります。 その間は、DNS の A レコードと AAAA レコードの登録が無効になるため、クライアントは複製中のローカル コンピューターに要求を送信できません。 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* DNS の更新を有効にするために、次のレジストリ値を設定できませんでした。<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>エラー コード: %4<p>エラー メッセージ: %5<p>複製処理の間、ローカル コンピューターのコンピューター名が短時間、複製元のコンピューターと同じになる可能性があります。 その間は、DNS の A レコードと AAAA レコードの登録が無効になるため、クライアントは複製中のローカル コンピューターに要求を送信できません。 |
 | **説明と解決策** | アプリケーション イベント ログおよびシステム イベント ログを調べます。 レジストリの更新をブロックしている可能性があるサード パーティのアプリケーションを調査します。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2195** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | DSRM ブートを設定できませんでした。<p>エラー コード: %1<p>エラー メッセージ: %2<p>仮想ドメイン コントローラーの複製に失敗した場合、または仮想ドメイン コントローラー複製構成ファイルがあるハイパーバイザーがサポートされていない場合、ローカル コンピューターはトラブルシューティングのために DSRM で再起動します。 DSRM ブートの設定に失敗しました。 |
+| **Severity** | エラー |
+| **メッセージ** | DSRM ブートを設定できませんでした。<p>エラー コード: %1<p>エラー メッセージ: %2<p>仮想ドメイン コントローラーの複製に失敗した場合、または仮想ドメイン コントローラー複製構成ファイルがあるハイパーバイザーがサポートされていない場合、ローカル コンピューターはトラブルシューティングのために DSRM で再起動します。 DSRM ブートの設定に失敗しました。 |
 | **説明と解決策** | アプリケーション イベント ログおよびシステム イベント ログを調べます。 レジストリの更新をブロックしている可能性があるサード パーティのアプリケーションを調査します。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2196** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | シャットダウン特権を有効にすることができませんでした。<p>エラー コード: %1<p>エラー メッセージ: %2<p>仮想ドメイン コントローラーの複製に失敗した場合、または仮想ドメイン コントローラー複製構成ファイルがあるハイパーバイザーがサポートされていない場合、ローカル コンピューターはトラブルシューティングのために DSRM で再起動します。 シャットダウン特権の有効化に失敗しました。 |
+| **Severity** | エラー |
+| **メッセージ** | シャットダウン特権を有効にすることができませんでした。<p>エラー コード: %1<p>エラー メッセージ: %2<p>仮想ドメイン コントローラーの複製に失敗した場合、または仮想ドメイン コントローラー複製構成ファイルがあるハイパーバイザーがサポートされていない場合、ローカル コンピューターはトラブルシューティングのために DSRM で再起動します。 シャットダウン特権の有効化に失敗しました。 |
 | **説明と解決策** | アプリケーション イベント ログおよびシステム イベント ログを調べます。 特権の使用をブロックしている可能性があるサード パーティのアプリケーションを調査します。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2197** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | システム シャットダウンを開始できませんでした。<p>エラー コード: %1<p>エラー メッセージ: %2<p>仮想ドメイン コントローラーの複製に失敗した場合、または仮想ドメイン コントローラー複製構成ファイルがあるハイパーバイザーがサポートされていない場合、ローカル コンピューターはトラブルシューティングのために DSRM で再起動します。 システム シャットダウンの開始に失敗しました。 |
+| **Severity** | エラー |
+| **メッセージ** | システム シャットダウンを開始できませんでした。<p>エラー コード: %1<p>エラー メッセージ: %2<p>仮想ドメイン コントローラーの複製に失敗した場合、または仮想ドメイン コントローラー複製構成ファイルがあるハイパーバイザーがサポートされていない場合、ローカル コンピューターはトラブルシューティングのために DSRM で再起動します。 システム シャットダウンの開始に失敗しました。 |
 | **説明と解決策** | アプリケーション イベント ログおよびシステム イベント ログを調べます。 特権の使用をブロックしている可能性があるサード パーティのアプリケーションを調査します。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2198** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* 次の複製された DC オブジェクトを作成または変更できませんでした。<p>追加データ:<p>オブジェクト:<p>%1<p>エラー値: %2<p>%3 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* 次の複製された DC オブジェクトを作成または変更できませんでした。<p>追加データ:<p>オブジェクト:<p>%1<p>エラー値: %2<p>%3 |
 | **説明と解決策** | MS TechNet、MS サポート技術情報、および MS のブログで特定のエラーを検索して、そのエラーが示す一般的な意味を確認し、その結果に基づいてトラブルシューティングを行います。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2199** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* オブジェクトが既に存在するため、次の複製された DC オブジェクトを作成できませんでした。<p>追加データ:<p>ソース DC:<p>%1<p>オブジェクト:<p>%2 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* オブジェクトが既に存在するため、次の複製された DC オブジェクトを作成できませんでした。<p>追加データ:<p>ソース DC:<p>%1<p>オブジェクト:<p>%2 |
 | **説明と解決策** | dccloneconfig.xml が既存のドメイン コントローラーを指定しなかったこと、または dccloneconfig.xml のコピーが名前が編集されないまま複数の複製で使用されていることを検証します。 競合がまだ予期されない場合は、これを昇格した管理者を確認し、その管理者に連絡して、既存のドメイン コントローラーを降格するかどうか、既存のドメイン コントローラー メタデータをクリーンアップするかどうか、または複製で別の名前を使用するかどうかを話し合います。 |
 
 | events | 説明 |
 |--|--|
 | **イベント ID** | **2203** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | 仮想ドメイン コントローラーの前回の複製は失敗しています。 それ以降に行われた最初の再起動であるため、今回の複製は再試行になります。 しかし、仮想ドメイン コントローラー複製構成ファイルが存在していません。また、仮想マシン生成 ID の変更も検出されていません。 DSRM でブートされます。<p>失敗した前回の仮想ドメイン コントローラーの複製: %1<p>存在する仮想ドメイン コントローラー複製構成ファイル: %2<p>検出された仮想マシン生成 ID の変更: %3 |
+| **Severity** | エラー |
+| **メッセージ** | 仮想ドメイン コントローラーの前回の複製は失敗しています。 それ以降に行われた最初の再起動であるため、今回の複製は再試行になります。 しかし、仮想ドメイン コントローラー複製構成ファイルが存在していません。また、仮想マシン生成 ID の変更も検出されていません。 DSRM でブートされます。<p>失敗した前回の仮想ドメイン コントローラーの複製: %1<p>存在する仮想ドメイン コントローラー複製構成ファイル: %2<p>検出された仮想マシン生成 ID の変更: %3 |
 | **説明と解決策** | dccloneconfig.xml が見つからないか無効であることが原因で前回の複製が失敗した場合に予期されます。 |
 
 | events | 説明 |
 |--|--|
 | イベント ID | 2210 |
-| ソース | Microsoft-Windows-ActiveDirectory_DomainService |
+| source | Microsoft-Windows-ActiveDirectory_DomainService |
 | 重大度 | エラー |
 | Message | <COMPUTERNAME> は、複製ドメイン コントローラーのオブジェクトを作成できませんでした。<p>追加データ:<p>複製 ID: %6<p>複製ドメイン コントローラー名: %1<p>再試行のループ: %2<p>例外値: %3<p>エラー値: %4<p>DSID: %5 |
 | 説明と解決策 | システムおよびディレクトリ サービスのイベント ログと dcpromo.log で、複製に失敗した理由について詳しく調べます。 |
@@ -453,7 +453,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 |--|--|
 | イベント ID | 2211 |
-| ソース | Microsoft-Windows-ActiveDirectory_DomainService |
+| source | Microsoft-Windows-ActiveDirectory_DomainService |
 | 重大度 | Informational |
 | Message | <COMPUTERNAME> によって、複製ドメイン コントローラーのオブジェクトが作成されました。<p>追加データ:<p>複製 ID: %3<p>複製ドメイン コントローラー名: %1<p>再試行のループ: %2 |
 | 説明と解決策 | これは成功イベントです。予期せず発生した場合にのみ問題になります。 |
@@ -461,7 +461,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 |--|--|
 | イベント ID | 2212 |
-| ソース | Microsoft-Windows-ActiveDirectory_DomainService |
+| source | Microsoft-Windows-ActiveDirectory_DomainService |
 | 重大度 | Informational |
 | Message | <COMPUTERNAME> によって、複製ドメイン コントローラーのオブジェクトの作成が開始されました。<p>追加データ:<p>複製 ID: %1<p>複製名: %2<p>複製サイト: %3<p>複製 RODC: %4 |
 | 説明と解決策 | これは成功イベントです。予期せず発生した場合にのみ問題になります。 |
@@ -469,7 +469,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 |--|--|
 | イベント ID | 2213 |
-| ソース | Microsoft-Windows-ActiveDirectory_DomainService |
+| source | Microsoft-Windows-ActiveDirectory_DomainService |
 | 重大度 | Informational |
 | Message | <COMPUTERNAME> によって、読み取り専用ドメイン コントローラーを複製するための新しい KrbTgt オブジェクトが作成されました。<p>追加データ:<p>複製 ID: %1<p>新しい KrbTgt オブジェクト GUID: %2 |
 | 説明と解決策 | これは成功イベントです。予期せず発生した場合にのみ問題になります。 |
@@ -477,7 +477,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2214|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|Informational|
 |Message|<COMPUTERNAME> によって、複製ドメイン コントローラーのコンピューター オブジェクトが作成されます。<p>追加データ:<p>複製 ID: %1<p>元のドメイン コントローラー: %2<p>複製ドメイン コントローラー: %3|
 |説明と解決策|これは成功イベントです。予期せず発生した場合にのみ問題になります。|
@@ -485,7 +485,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2215|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|Informational|
 |Message|<COMPUTERNAME> によって、次のサイトに複製ドメイン コントローラーが追加されます。<p>追加データ:<p>複製 ID: %1<p>サイト: %2|
 |説明と解決策|これは成功イベントです。予期せず発生した場合にのみ問題になります。|
@@ -493,7 +493,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2216|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|Informational|
 |Message|<COMPUTERNAME> によって、複製ドメイン コントローラーのサーバー コンテナーが作成されます。<p>追加データ:<p>複製 ID: %1<p>サーバー コンテナー: %2|
 |説明と解決策|これは成功イベントです。予期せず発生した場合にのみ問題になります。|
@@ -501,7 +501,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2217|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|Informational|
 |Message|<COMPUTERNAME> によって、複製ドメイン コントローラーのサーバー オブジェクトが作成されます。<p>追加データ:<p>複製 ID: %1<p>サーバー オブジェクト: %2|
 |説明と解決策|これは成功イベントです。予期せず発生した場合にのみ問題になります。|
@@ -509,7 +509,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2218|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|Informational|
 |Message|<COMPUTERNAME> によって、複製ドメイン コントローラーの NTDS Settings オブジェクトが作成されます。<p>追加データ:<p>複製 ID: %1<p>オブジェクト: %2|
 |説明と解決策|これは成功イベントです。予期せず発生した場合にのみ問題になります。|
@@ -517,7 +517,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2219|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|Informational|
 |Message|<COMPUTERNAME> によって、複製の読み取り専用ドメイン コントローラーの接続オブジェクトが作成されます。<p>追加データ:<p>複製 ID: %1|
 |説明と解決策|これは成功イベントです。予期せず発生した場合にのみ問題になります。|
@@ -525,7 +525,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2220|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|Informational|
 |Message|<COMPUTERNAME> によって、複製の読み取り専用ドメイン コントローラーの SYSVOL オブジェクトが作成されます。<p>追加データ:<p>複製 ID: %1|
 |説明と解決策|これは成功イベントです。予期せず発生した場合にのみ問題になります。|
@@ -533,7 +533,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2221|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|エラー|
 |Message|<COMPUTERNAME> は、複製ドメイン コントローラーの無作為なパスワードを生成できませんでした。<p>追加データ:<p>複製 ID: %1<p>複製ドメイン コントローラー名: %2<p>エラー: %3 %4|
 |説明と解決策|システム イベント ログで、コンピューター アカウントのパスワードを作成できなかった理由について詳しく調べます。|
@@ -541,7 +541,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2222|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|エラー|
 |Message|<COMPUTERNAME> は、複製ドメイン コントローラーのパスワードを設定できませんでした。<p>追加データ:<p>複製 ID: %1<p>複製ドメイン コントローラー名: %2<p>エラー: %3 %4|
 |説明と解決策|システム イベント ログで、コンピューター アカウントのパスワードを設定できなかった理由について詳しく調べます。|
@@ -549,7 +549,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2223|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|Informational|
 |Message|<COMPUTERNAME> によって、複製ドメイン コントローラーのコンピューター アカウントのパスワードが正常に設定されました。<p>追加データ:<p>複製 ID: %1<p>複製ドメイン コントローラー名: %2<p>再試行の合計回数:%3|
 |説明と解決策|これは成功イベントです。予期せず発生した場合にのみ問題になります。|
@@ -557,7 +557,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2224|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|エラー|
 |Message|仮想ドメイン コントローラーの複製に失敗しました。 複製されるコンピューターには、次の管理されたサービス アカウント %1 が存在します:<p>%2<p>複製を正常に実行するには、管理されたサービス アカウントをすべて削除する必要があります。 この操作を行うには、Remove-ADComputerServiceAccount PowerShell コマンドレットを使用します。|
 |説明と解決策|(グループ MSA ではなく) スタンドアロンの MSA の使用時に発生する可能性があります。 アカウントを削除するときにイベントのアドバイスには従わないでください。** このアドバイスは誤っています。 Uninstall-AdServiceAccount-を使用 [https://technet.microsoft.com/library/hh852310](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176927(v=technet.10)) します。<p>Windows Server 2008 R2 で初めてリリースされたスタンドアロンの MSA は、Windows Server 2012 ではグループ MSA (gMSA) で置き換えられました。 GMSA では複製がサポートされています。|
@@ -565,7 +565,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2225|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|Informational|
 |Message|ローカル ドメイン コントローラーから次のセキュリティ プリンシパルのキャッシュされたシークレットが正常に削除されました:<p>%1<p>読み取り専用ドメイン コントローラーの複製後は、複製元の読み取り専用ドメイン コントローラーで以前キャッシュされたシークレットが、複製先のドメイン コントローラーで削除されます。|
 |説明と解決策|これは成功イベントです。予期せず発生した場合にのみ問題になります。|
@@ -573,7 +573,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2226|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|エラー|
 |Message|ローカル ドメイン コントローラーから次のセキュリティ プリンシパルのキャッシュされたシークレットを削除できませんでした:<p>%1<p>エラー: %2 (%3)<p>読み取り専用ドメイン コントローラーの複製後に、複製元の読み取り専用ドメイン コントローラーで以前キャッシュされたシークレットを、複製先で削除する必要があります。この失敗により、複製の盗難またはセキュリティ侵害によって攻撃者がこれらの資格情報を獲得するリスクが高まります。 このセキュリティ プリンシパルが高い権限を持つアカウントで、このようなリスクから保護する必要がある場合には、rootDSE 操作の rODCPurgeAccount を使用して、ローカル ドメイン コントローラーから手動でこのシークレットを消去してください。|
 |説明と解決策|システムおよびディレクトリ サービスのイベント ログでさらに詳しく調べます。|
@@ -581,7 +581,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2227|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|エラー|
 |Message|ローカル ドメイン コントローラーからキャッシュされたシークレットを削除しようとしたときに例外が発生しました。<p>追加データ:<p>例外値: %1<p>エラー値: %2<p>DSID: %3<p>読み取り専用ドメイン コントローラーの複製後に、複製元の読み取り専用ドメイン コントローラーで以前キャッシュされたシークレットを、複製先で削除する必要があります。この失敗により、複製の盗難またはセキュリティ侵害によって攻撃者がこれらの資格情報を獲得するリスクが高まります。 このいずれかのセキュリティ プリンシパルが高い権限を持つアカウントで、このようなリスクから保護する必要がある場合には、rootDSE 操作の rODCPurgeAccount を使用して、ローカル ドメイン コントローラーから手動でこのシークレットを消去してください。|
 |説明と解決策|システムおよびディレクトリ サービスのイベント ログでさらに詳しく調べます。|
@@ -589,7 +589,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|2228|
-|ソース|Microsoft-Windows-ActiveDirectory_DomainService|
+|source|Microsoft-Windows-ActiveDirectory_DomainService|
 |重大度|エラー|
 |Message|このドメイン コントローラーの Active Directory データベース内の仮想マシン生成 ID は、仮想マシンの現在の値と異なっています。 しかし、仮想ドメイン コントローラー複製構成ファイル (DCCloneConfig.xml) が見つからなかったため、ドメイン コントローラーの複製は行われませんでした。 ドメイン コントローラーの複製操作を行う場合には、サポートされるすべての場所に DCCloneConfig.xml が提供されるようにしてください。 さらに、このドメイン コントローラーの IP アドレスが、他のドメイン コントローラーの IP アドレスと競合しています。 サービスの中断が起こらないようにするには、ドメイン コントローラーが DSRM で起動するように構成します。<p>追加データ:<p>重複する IP アドレス: %1|
 |説明と解決策|この保護メカニズムは、ドメイン コントローラーの重複を防ぎます (可能な場合。たとえば、DHCP を使用している場合、重複は防止されません)。 有効な DcCloneConfig.xml ファイルを追加し、DSRM フラグを削除して、複製を再度実行してください。|
@@ -597,7 +597,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29218|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|エラー|
 |Message|仮想ドメイン コントローラーの複製に失敗しました。 複製操作を完了できず、複製されたドメイン コントローラーはディレクトリ サービス復元モード (DSRM) で再起動されました。<p>以前記録されたイベントおよび %systemroot%\debug\dcpromo.log を確認して、仮想ドメイン コントローラーの複製の試行に対応するエラーの詳細情報と、この複製イメージを再利用可能かどうかについて確認してください。<p>1 つ以上のログ エントリによって、複製プロセスを終わらせることができないことが示されている場合は、イメージを安全に削除してください。 そうでない場合は、エラーを修正し、DSRM ブート フラグを解除して通常どおり再起動してください。再起動すると、複製操作は終了します。|
 |説明と解決策|システムおよびディレクトリ サービスのイベント ログと dcpromo.log で、複製に失敗した理由について詳しく調べます。|
@@ -605,7 +605,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29219|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|Informational|
 |Message|仮想ドメイン コントローラーの複製が成功しました。|
 |説明と解決策|これは成功イベントです。予期せず発生した場合にのみ問題になります。|
@@ -613,7 +613,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29248|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|エラー|
 |Message|仮想ドメイン コントローラーの複製で、Winlogon 通知を取得できませんでした。 返されたエラー コードは %1 (%2) です。<p>このエラーの詳細については、%systemroot%\debug\dcpromo.log で、仮想ドメイン コントローラーの複製の試行に対応するエラーを確認してください。|
 |説明と解決策|Microsoft 製品サポートにお問い合わせください|
@@ -621,7 +621,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29249|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|エラー|
 |Message|仮想ドメイン コントローラーの複製で、仮想ドメイン コントローラーの構成ファイルを解析できませんでした。<p>返された HRESULT コードは %1 です。<p>構成ファイル: %2<p>構成ファイルのエラーを修正し、複製操作を再試行してください。<p>このエラーの詳細については、%systemroot%\debug\dcpromo.log を参照してください。|
 |説明と解決策|XML エディターを使用して、dclconeconfig.xml ファイルで構文エラーがないかどうか、および DCCloneConfigSchema.xsd スキーマ ファイルを調べます。|
@@ -629,7 +629,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29250|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|エラー|
 |Message|仮想ドメイン コントローラーの複製に失敗しました。 複製された仮想ドメイン コントローラーで現在有効になっているソフトウェアまたはサービスの中に、仮想ドメイン コントローラーの複製で許可されるアプリケーションの一覧に含まれていないものがあります。<p>含まれていないエントリ:<p>%2<p>%1 は、(存在する場合) 定義された対象一覧として使用されます。<p>複製できないアプリケーションがインストールされている場合、複製操作を完了することはできません。<p>Active Directory Powershell コマンドレット Get-ADDCCloningExcludedApplicationList を実行して、複製されるコンピューターにインストールされているアプリケーションのうち、許可一覧に含まれていないものを確認してください。それらが仮想ドメイン コントローラーの複製と互換性がある場合は、許可一覧に追加してください。 仮想ドメイン コントローラーの複製と互換性がない場合は、それらをアンインストールしてから複製操作を再試行してください。<p>仮想ドメイン コントローラーの複製プロセスでは、許可アプリケーション一覧ファイルの CustomDCCloneAllowList.xml が検索されます。検索は次の順序で行われて、最初に見つかったファイルが使用され、その他は無視されます:<p>1. レジストリ値の名前: HKey_Local_Machine \System\CurrentControlSet\Services\NTDS\Parameters\AllowListFolder<p>2. DSA 作業ディレクトリフォルダーが存在する同じディレクトリ<p>3. %windir%\NTDS<p>4. ドライブのルートにあるドライブ文字の順序でのリムーバブル読み取り/書き込みメディア|
 |説明と解決策|メッセージの指示に従ってください|
@@ -637,15 +637,15 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 |--|--|
 | イベント ID | 29251 |
-| ソース | Microsoft-Windows-DirectoryServices-DSROLE-Server |
+| source | Microsoft-Windows-DirectoryServices-DSROLE-Server |
 | 重大度 | エラー |
-| Message | 仮想ドメイン コントローラーの複製で、複製コンピューターの IP アドレスをリセットできませんでした。<p>返されたエラー コードは %1 (%2) です。<p>このエラーの原因として、仮想ドメイン コントローラーの構成ファイル内のネットワーク構成セクションに誤りがあることが考えられます。<p>このエラーの詳細については、%systemroot%\debug\dcpromo.log で、仮想ドメイン コントローラーの複製の試行時の IP アドレスのリセットに対応するエラーを確認してください。<p>複製されたマシンでのコンピューターの IP アドレスのリセットの詳細については、「」を参照してください。https://go.microsoft.com/fwlink/?LinkId=208030 |
+| Message | 仮想ドメイン コントローラーの複製で、複製コンピューターの IP アドレスをリセットできませんでした。<p>返されたエラー コードは %1 (%2) です。<p>このエラーの原因として、仮想ドメイン コントローラーの構成ファイル内のネットワーク構成セクションに誤りがあることが考えられます。<p>このエラーの詳細については、%systemroot%\debug\dcpromo.log で、仮想ドメイン コントローラーの複製の試行時の IP アドレスのリセットに対応するエラーを確認してください。<p>複製されたマシンでのコンピューターの IP アドレスのリセットの詳細については、「」を参照してください。 https://go.microsoft.com/fwlink/?LinkId=208030 |
 | 説明と解決策 | dccloneconfig.xml に設定されている IP 情報が有効であること、また、元のソース コンピューターと重複していないことを確認します。 |
 
 | events | 説明 |
 |--|--|
 | イベント ID | 29253 |
-| ソース | Microsoft-Windows-DirectoryServices-DSROLE-Server |
+| source | Microsoft-Windows-DirectoryServices-DSROLE-Server |
 | 重大度 | エラー |
 | Message | 仮想ドメイン コントローラーの複製に失敗しました。 複製ドメイン コントローラーで、複製されるコンピューターのホーム ドメイン内のプライマリ ドメイン コントローラー (PDC) 操作マスターを特定できませんでした。<p>返されたエラー コードは %1 (%2) です。<p>複製されるコンピューターのホーム ドメイン内のプライマリ ドメイン コントローラーが実行中のドメイン コントローラーに割り当てられていて、オンラインで機能していることを確認してください。 また、複製されるコンピューターからプライマリ ドメイン コントローラーへの LDAP/RPC 接続が、必要なポートとプロトコルを介して確立されていることを確認してください。 |
 | 説明と解決策 | 複製されたドメイン コントローラー IP および DNS 情報が設定されていることを検証します。 Dcdiag.exe/test: locatorcheck を使用して PDCE がオンラインであるかどうかを検証し、Nltest.exe/server: *<PDCE>* /dclist: *<domain>* を有効な RPC に使用します。複製に失敗し、トラフィックを分析しますが、pdce からネットワークキャプチャを取得します。 |
@@ -653,7 +653,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 |--|--|
 | イベント ID | 29254 |
-| ソース | Microsoft-Windows-DirectoryServices-DSROLE-Server |
+| source | Microsoft-Windows-DirectoryServices-DSROLE-Server |
 | 重大度 | エラー |
 | Message | 仮想ドメイン コントローラーの複製で、プライマリ ドメイン コントローラー %1 にバインドできませんでした。<p>返されたエラー コードは %2 (%3) です。<p>プライマリ ドメイン コントローラー %1 がオンラインで機能していることを確認してください。 また、複製されるコンピューターからプライマリ ドメイン コントローラーへの LDAP/RPC 接続が、必要なポートとプロトコルを介して確立されていることを確認してください。 |
 | 説明と解決策 | 複製されたドメイン コントローラー IP および DNS 情報が設定されていることを検証します。 Dcdiag.exe/test: locatorcheck を使用して PDCE がオンラインであるかどうかを検証し、Nltest.exe/server: *<PDCE>* /dclist: *<domain>* を有効な RPC に使用します。複製に失敗し、トラフィックを分析しますが、pdce からネットワークキャプチャを取得します。 |
@@ -661,7 +661,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29255|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|エラー|
 |Message|仮想ドメイン コントローラーの複製に失敗しました。<p>プライマリ ドメイン コントローラー %1 でオブジェクトの作成を試行するには、イメージを複製する必要があります。返されたエラー コードは %2 (%3) です。<p>複製されたドメイン コントローラーに自らを複製するための特権があることを確認し、 プライマリ ドメイン コントローラー %1 のディレクトリ サービスのイベント ログで、関連するイベントを確認してください。|
 |説明と解決策|MS TechNet、MS サポート技術情報、および MS のブログで特定のエラーを検索して、そのエラーが示す一般的な意味を確認し、その結果に基づいてトラブルシューティングを行います。|
@@ -669,7 +669,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29256|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|エラー|
 |Message|"ディレクトリ サービスの復元モードで起動" フラグを設定しようとしましたが、エラー コード %1 で失敗しました。<p>エラーの詳細については、%systemroot%\debug\dcpromo.log を参照してください。|
 |説明と解決策|ディレクトリ サービス ログおよび dcpromo.log で詳しく調べます。 アプリケーション イベント ログおよびシステム イベント ログを調べます。 特権の使用をブロックしている可能性があるサード パーティのアプリケーションを調査します。|
@@ -677,7 +677,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29257|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|エラー|
 |Message|仮想ドメイン コントローラーの複製が終了しました。 コンピューターを再起動しようとしましたが、エラー コード %1 で失敗しました。<p>複製操作を完了させるために、コンピューターを再起動してください。|
 |説明と解決策|アプリケーション イベント ログおよびシステム イベント ログを調べます。 特権の使用をブロックしている可能性があるサード パーティのアプリケーションを調査します。|
@@ -685,7 +685,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29264|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|エラー|
 |Message|" ディレクトリ サービスの復元モードで起動" フラグをクリアしようとしましたが、エラー コード %1 で失敗しました。<p>エラーの詳細については、%systemroot%\debug\dcpromo.log を参照してください。|
 |説明と解決策|ディレクトリ サービス ログおよび dcpromo.log で詳しく調べます。 アプリケーション イベント ログおよびシステム イベント ログを調べます。 特権の使用をブロックしている可能性があるサード パーティのアプリケーションを調査します。|
@@ -693,7 +693,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29265|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|Informational|
 |Message|仮想ドメイン コントローラーの複製が成功しました。 仮想ドメイン コントローラーの複製構成ファイルの名前 %1 が %2 に変更されました。|
 |説明と解決策|対応不要。これは成功イベントです。|
@@ -701,7 +701,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29266|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|エラー|
 |Message|仮想ドメイン コントローラーの複製が成功しました。 仮想ドメイン コントローラーの複製構成ファイル %1 の名前を変更しようとしましたが、エラー コード %2 で失敗しました (%3)。|
 |説明と解決策|dccloneconfig.xml ファイルの名前を手動で変更します|
@@ -709,7 +709,7 @@ Server Core インストールが実行されているサーバーでイベン�
 | events | 説明 |
 | -- |--|
 |イベント ID|29267|
-|ソース|Microsoft-Windows-DirectoryServices-DSROLE-Server|
+|source|Microsoft-Windows-DirectoryServices-DSROLE-Server|
 |重大度|エラー|
 |Message|仮想ドメイン コントローラーの複製で、仮想ドメイン コントローラーの複製が許可されているアプリケーションのリストを確認できませんでした。<p>返されたエラー コードは %1 (%2) です。<p>このエラーの原因は、複製許可リスト ファイルの構文エラーである可能性があります (現在の確認対象ファイル: %3)。 このエラーの詳細については、%systemroot%\debug\dcpromo.log を参照してください。|
 |説明と解決策|イベントの指示に従ってください|
@@ -739,7 +739,7 @@ Windows Server 2012 開発プロセス中に発生する一般的な問題を次
 
 |**問題点**|**複製ですべてのサービス プリンシパル名が再作成されない**|
 | -- |--|
-|**現象**|一連の 3 部構成** サービス プリンシパル名 (SPN) に、ポートが含まれる NetBIOS 名と、ポートが含まれない同じ NetBIOS 名の両方が含まれる場合、ポートなしのエントリは新しいコンピューター名では再作成されません。 例:<p>customspn/DC1:200/app1 INVALID USE OF SYMBOLS これは新しいコンピューター名で再作成されたものです **<p>customspn/DC1/app1 INVALID USE OF SYMBOLS これは新しいコンピューター名で再作成されたものではありません **<p>ポートに関係なく、完全修飾名が再作成され、3 部構成でない SPN が再作成されます。 たとえば、次が複製で正常に作成されます。<p>customspn/DC1:202 INVALID USE OF SYMBOLS これは再作成されたものです **<p>customspn/DC1 INVALID USE OF SYMBOLS これは再作成されたものです **<p>customspn/DC1.corp.contoso.com:202 INVALID USE OF SYMBOLS これは再作成された名前です **<p>customspn/DC1.corp.contoso.com INVALID USE OF SYMBOLS これは再作成されたものです **|
+|**現象**|一連の 3 部構成** サービス プリンシパル名 (SPN) に、ポートが含まれる NetBIOS 名と、ポートが含まれない同じ NetBIOS 名の両方が含まれる場合、ポートなしのエントリは新しいコンピューター名では再作成されません。 次に例を示します。<p>customspn/DC1:200/app1 INVALID USE OF SYMBOLS これは新しいコンピューター名で再作成されたものです **<p>customspn/DC1/app1 INVALID USE OF SYMBOLS これは新しいコンピューター名で再作成されたものではありません **<p>ポートに関係なく、完全修飾名が再作成され、3 部構成でない SPN が再作成されます。 たとえば、次が複製で正常に作成されます。<p>customspn/DC1:202 INVALID USE OF SYMBOLS これは再作成されたものです **<p>customspn/DC1 INVALID USE OF SYMBOLS これは再作成されたものです **<p>customspn/DC1.corp.contoso.com:202 INVALID USE OF SYMBOLS これは再作成された名前です **<p>customspn/DC1.corp.contoso.com INVALID USE OF SYMBOLS これは再作成されたものです **|
 |**解決策と説明**|これは、複製だけでなく、Windows におけるドメイン コントローラーの名前変更プロセスの制限です。 どのシナリオでも、3 部構成 SPN が名前変更のロジックで処理されることはありません。 この影響を受ける Windows サービスはあまりありません。見つからない SPN はすべて必要に応じて作成されるからです。 他のアプリケーションについては、手動で SPN を入力して問題を解決しなければならない可能性があります。<p>KB 2742874 で説明されています。|
 
 |**問題点**|**複製に失敗して、DSRM でブートされる。一般的なネットワーク エラー**|
@@ -801,7 +801,7 @@ Windows Server 2012 開発プロセス中に発生する一般的な問題を次
 ##### <a name="directory-services-event-log"></a>ディレクトリ サービス イベント ログ
 ディレクトリ サービス ログには、イベント ベースの複製操作に関する情報の大部分が含まれます。 ハイパーバイザーによって VM-Generation ID が変更されると、NTDS サービスはそれを確認し、RID プールを無効にして、起動 ID を変更します。 その後、新しい VM-Generation ID が設定され、サーバーは Active Directory データを入力方向にレプリケートします。 DFSR サービスは停止され、SYSVOL をホストするそのデータベースは削除され、権限のない入力方向の同期が強制的に実行されます。 また、USN 高基準値が調整されます。
 
-| **イベント ID** | **ソース** | **Message** |
+| **イベント ID** | **ソース** | **メッセージ** |
 |--|--|--|
 | **2160** | ActiveDirectory_DomainService | ローカル Active Directory Domain Services により、仮想ドメイン コントローラー複製構成ファイルが検出されました。<p>仮想ドメイン コントローラー複製構成ファイルが検出された場所:<p>*<path>* \DCCloneConfig.xml<p>仮想ドメイン コントローラー複製構成ファイルが存在する場合、そのローカル仮想ドメイン コントローラーは別の仮想ドメイン コントローラーの複製です。 Active Directory Domain Services は自らの複製を開始します。 |
 | **2191** | ActiveDirectory_DomainService | Active Directory Domain Services は、DNS の更新を無効にするために次のレジストリ値を設定しました。<p>レジストリ キー:<p>SYSTEM\CurrentControlSet\Services\Netlogon\Parameters<p>レジストリ値:<p>UseDynamicDns<p>レジストリ値のデータ:<p>0<p>複製処理の間、ローカル コンピューターのコンピューター名が短時間、複製元のコンピューターと同じになる可能性があります。 その間は、DNS の A レコードと AAAA レコードの登録が無効になるため、クライアントは複製中のローカル コンピューターに要求を送信できません。 複製が完了すると再び DNS の更新が有効になります。 |
@@ -830,13 +830,13 @@ Windows Server 2012 開発プロセス中に発生する一般的な問題を次
 | **2173** | ActiveDirectory_DomainService | ドメイン コントローラーのコンピューター オブジェクトの msDS-GenerationId 属性を読み取ることができませんでした。 データベース トランザクション エラーが発生したか、生成 ID がローカル データベースに存在しない可能性があります。 dcpromo 完了後の最初の再起動の際に msDS-GenerationId が存在しなかったか、DC が仮想ドメイン コントローラーではありません。<p>追加データ<p>エラー コード:<p>6 |
 | **1000** | ActiveDirectory_DomainService | Microsoft Active Directory Domain Services のスタートアップが完了しました。バージョン 6.2.8225.0 |
 | **1394** | ActiveDirectory_DomainService | Active Directory Domain Services データベースの更新を妨げていたすべての問題が解決しました。 Active Directory Domain Services のデータベースへの新規更新に成功しています。 Net Logon サービスが再開されました。 |
-| **1128** | ActiveDirectory_DomainService | 1128 知識整合性チェッカー "レプリケーション接続は、次のソース ディレクトリ サービスからローカル ディレクトリ サービスに作成されました。<p>ソース ディレクトリ サービス:<p>CN = NTDS 設定、*<Domain Controller DN>*<p>ローカル ディレクトリ サービス:<p>CN = NTDS 設定、*<Domain Controller DN>*<p>追加データ<p>理由コード:<p>0x2<p>作成ポイント内部 ID:<p>f0a025d |
+| **1128** | ActiveDirectory_DomainService | 1128 知識整合性チェッカー "レプリケーション接続は、次のソース ディレクトリ サービスからローカル ディレクトリ サービスに作成されました。<p>ソース ディレクトリ サービス:<p>CN = NTDS 設定、*<Domain Controller DN>*<p>ローカル ディレクトリ サービス:<p>CN = NTDS 設定、 *<Domain Controller DN>*<p>追加データ<p>理由コード:<p>0x2<p>作成ポイント内部 ID:<p>f0a025d |
 | **1999** | ActiveDirectory_DomainService | ソース ディレクトリ サービスによって宛先ディレクトリ サービスで表される更新シーケンス番号 (USN) が最適化されました。 ソース ディレクトリ サービスおよび宛先ディレクトリ サービスには共通のレプリケーション パートナーがあります。 宛先ディレクトリ サービスは共通レプリケーション パートナーで最新の状態であり、ソース ディレクトリ サービスはこのパートナーのバックアップを使ってインストールされました。<p>宛先ディレクトリ サービス ID:<p>*<GUID> (<FQDN>)*<p>共通ディレクトリ サービス ID:<p>*<GUID>*<p>共通プロパティ USN:<p>*<Number>*<p>このため、宛先ディレクトリ サービス最新のベクターは次の設定で構成されています。<p>前のオブジェクト USN:<p>0<p>前のプロパティ USN:<p>0<p>データベース GUID:<p>*<GUID>*<p>オブジェクト USN:<p>*<Number>*<p>プロパティ USN:<p>*<Number>* |
 
 ##### <a name="system-event-log"></a>システム イベント ログ
 次の複製操作は、システム イベント ログに示されています。 ハイパーバイザーが、スナップショットからの複製または復元が行われたことをゲスト コンピューターに通知すると、ドメイン コントローラーは、セキュリティ プリンシパルが後で重複しないようにその RID プールを直ちに無効にします。 複製の続行中は、想定されるさまざまな操作とメッセージが表示されます。ほとんどがサービスの開始と停止に関連するもので、これにより予期されるエラーもいくつかあります。 完了すると、システム イベント ログには、複製の成功すべてが示されます。
 
-|**イベント ID**|**ソース**|**Message**|
+|**イベント ID**|**ソース**|**メッセージ**|
 |--|--|--|
 |**16654**|Directory-Services-SAM|アカウント識別子 (RID) のプールが無効化されました。 この問題は、次のような場合に発生することが考えられます:<p>1. ドメインコントローラーはバックアップから復元されます。<p>2. 仮想マシンで実行されているドメインコントローラーをスナップショットから復元します。<p>3. 管理者が手動でプールを無効にした|
 |**7036**|サービス コントロール マネージャー|Active Directory Domain Services のサービスが実行状態になりました。|
@@ -1345,20 +1345,20 @@ Microsoft Active Directory Domain Services startup complete, version 6.2.8225.0
 ##### <a name="active-directory-web-services-event-log"></a>Active Directory Web サービス イベント ログ
 複製中、NTDS.DIT データベースが長時間オフラインになることがよくあります。 ADWS サービスでは、これに対して少なくとも 1 つのイベントがログに記録されます。 複製が完了すると、ADWS サービスは開始され、有効なコンピューター証明書がまだないことを示し (存在するかどうかは、自動登録で Microsoft PKI がデプロイされているかによって決まります)、新しいドメイン コントローラーのインスタンスを開始します。
 
-|**イベント ID**|**ソース**|**Message**|
+|**イベント ID**|**ソース**|**メッセージ**|
 |--|--|--|
 |**1202**|ADWS インスタンス イベント|現在このコンピューターは指定されたディレクトリ インスタンスをホストしていますが、Active Directory Web サービスはこのサービスを提供できません。 Active Directory Web サービスはこの操作を定期的に再試行します。<p>ディレクトリ インスタンス: NTDS<p>ディレクトリ インスタンス LDAP ポート: 389<p>ディレクトリ インスタンス SSL ポート: 636|
 |**1000**|ADWS インスタンス イベント|Active Directory Web サービスを開始しています|
 |**1008**|ADWS インスタンス イベント|Active Directory Web サービスは正常にセキュリティ特権を降格しました|
 |**1100**|ADWS インスタンス イベント|Active Directory Web サービス構成ファイルの <appsettings> セクションに指定されている値は問題なく読み込まれました。|
-|**1400**|ADWS インスタンス イベント|Active Directory Web サービスは、指定された証明書名のサーバー証明書を見つけることができませんでした。 SSL/TLS 接続を使用するには証明書が必要です。 SSL/TLS 接続を使用するには、信頼された証明機関 (CA) からの有効なサーバー認証証明書がコンピューターにインストールされていることを確認してください。<p>証明書名:*<Server FQDN>*|
+|**1400**|ADWS インスタンス イベント|Active Directory Web サービスは、指定された証明書名のサーバー証明書を見つけることができませんでした。 SSL/TLS 接続を使用するには証明書が必要です。 SSL/TLS 接続を使用するには、信頼された証明機関 (CA) からの有効なサーバー認証証明書がコンピューターにインストールされていることを確認してください。<p>証明書名: *<Server FQDN>*|
 |**1100**|ADWS インスタンス イベント|Active Directory Web サービス構成ファイルの <appsettings> セクションに指定されている値は問題なく読み込まれました。|
 |**1200**|ADWS インスタンス イベント|現在 Active Directory Web サービスは指定されたディレクトリ インスタンスに対してサービスを提供しています。<p>ディレクトリ インスタンス: NTDS<p>ディレクトリ インスタンス LDAP ポート: 389<p>ディレクトリ インスタンス SSL ポート: 636|
 
 ##### <a name="dns-server-event-log"></a>DNS サーバー イベント ログ
 複製中、DNS サービスは短時間停止します (予期された停止)。AD DS データベースがオフラインでも、DNS サービスは引き続き実行されているからです。 これは、Active Directory 統合 DNS を使用している場合、ただし、標準のプライマリまたはセカンダリ DNS は使用されていない場合に発生します。 これらのエラーは、複数回ログに記録されます。 複製完了後、DNS は通常どおりオンラインに戻ります。
 
-|**イベント ID**|**ソース**|**Message**|
+|**イベント ID**|**ソース**|**メッセージ**|
 |--|--|--|
 |**4013**|DNS-Server-Service|DNS サーバーは、ディレクトリの初期同期の完了について Active Directory Domain Services (AD DS) から通知されるのを待っています。 重要な DNS データがこのドメイン コントローラーにまだレプリケートされていない可能性があるため、初期同期が完了するまでは DNS サーバー サービスを開始できません。 DNS 名の解決に問題があることを AD DS イベント ログ内のイベントが示している場合は、このコンピューターのインターネット プロトコルのプロパティで、DNS サーバー一覧にこのドメインの別の DNS サーバーの IP アドレスを追加することを検討してください。 このイベントは、初期同期が正常に完了したことが AD DS から通知されるまで 2 分ごとに記録されます。|
 |**4015**|DNS-Server-Service|DNS サーバーは Active Directory からの致命的なエラーを発見しました。 Active Directory が正しく機能していることを確認してください。 拡張エラーのデバッグ情報は """" です。これは空の場合もあります。 イベント データにはエラーが含まれています。|
@@ -1370,7 +1370,7 @@ Microsoft Active Directory Domain Services startup complete, version 6.2.8225.0
 ##### <a name="file-replication-service-event-log"></a>ファイル レプリケーション サービス イベント ログ
 ファイル レプリケーション サービスでは、複製中、権限のない同期がパートナーから実行されます。 複製でこれを行うには、プレシードされたデータとして使用するために、NTFRS データベース ファイルを削除し、SYSVOL の内容はそのままにしておきます。 同期は 2 回試行されます。
 
-| **イベント ID** | **ソース** | **Message** |
+| **イベント ID** | **ソース** | **メッセージ** |
 |--|--|--|
 | **13562** | NtFrs | 次は FRS レプリカ セットの構成情報のためにドメイン コントローラー DC2.root.fabrikam.com のポーリングを行っているときに、ファイル レプリケーション サービスで検出された警告とエラーの概要です。<p>ドメイン コントローラーに結合できませんでした。 次のポーリング サイクルで再実行します |
 | **13502** | NtFrs | ファイル レプリケーション サービスを停止しています。 |
@@ -1380,7 +1380,7 @@ Microsoft Active Directory Domain Services startup complete, version 6.2.8225.0
 | **13503** | NtFrs | ファイル レプリケーション サービスを停止しました。 |
 | **13565** | NtFrs | ファイル レプリケーション サービスでは、別のドメイン コントローラーのデータでシステム ボリュームを初期化しています。 この処理が完了するまでコンピューター DC2 をドメイン コントローラーにすることはできません。 それからシステム ボリュームは SYSVOL として共有されます。<p>SYSVOL の共有を確認するには、コマンド プロンプトで次のコマンドを実行してください:<p>net share<p>ファイル レプリケーション サービスで初期化の処理が完了すると、SYSVOL の共有が表示されます。<p>システム ボリュームの初期化には時間がかかる可能性があります。 この時間はシステム ボリュームのデータ量、他のドメイン コントローラーの稼働状態、およびドメイン コントローラー間のレプリケーション間隔によります。 |
 | **13501** | NtFrs | ファイル レプリケーション サービスを開始しています。 |
-| **13553** | NtFrs | ファイル レプリケーション サービス: このコンピューターを次のレプリカ セットに正しく追加しました:<p>"DOMAIN SYSTEM VOLUME (SYSVOL SHARE)"<p>このイベントに関する情報は以下に表示されています:<p>コンピューターの DNS 名*<Domain Controller FQDN>*<p>レプリカセットメンバー名はです*<Domain Controller>*<p>レプリカセットのルートパス*<path>*<p>レプリカステージングディレクトリのパス*<path>*<p>レプリカ作業用ディレクトリのパス*<path>* |
+| **13553** | NtFrs | ファイル レプリケーション サービス: このコンピューターを次のレプリカ セットに正しく追加しました:<p>"DOMAIN SYSTEM VOLUME (SYSVOL SHARE)"<p>このイベントに関する情報は以下に表示されています:<p>コンピューターの DNS 名  *<Domain Controller FQDN>*<p>レプリカセットメンバー名はです *<Domain Controller>*<p>レプリカセットのルートパス *<path>*<p>レプリカステージングディレクトリのパス *<path>*<p>レプリカ作業用ディレクトリのパス *<path>* |
 | **13520** | NtFrs | ファイルレプリケーションサービスによって、の既存のファイルが <path> \ NtFrs_PreExisting___See_EventLog に移動されました *<path>* 。<p>ファイルレプリケーションサービスは、\ NtFrs_PreExisting___See_EventLog 内のファイルをいつでも削除することがあり *<path>* ます。 ファイルは、\ NtFrs_PreExisting___See_EventLog からコピーすることによって削除から保存でき *<path>* ます。 ファイルを c:\windows\sysvol\domain へコピーすると、別のレプリケーション パートナーによるファイルが既に存在する場合、名前の競合が発生することがあります。<p>場合によっては、ファイルレプリケーションサービスが、 *<path>* *<path>* 他のレプリケーションパートナーからファイルをレプリケートするのではなく、\ NtFrs_PreExisting___See_EventLog からにファイルをコピーすることがあります。<p>\ NtFrs_PreExisting___See_EventLog にあるファイルを削除することで、いつでも空き領域を増やすことができ *<path>* ます。 " |
 | **13508** | NtFrs | ファイルレプリケーションサービスでは、からへのレプリケーションを有効にする際に問題が発生し *\\\\<Domain Controller FQDN>* *<Domain Controller>* てい *<path>* ます。<p>DNS 名 *\\\\<Domain Controller FQDN>* 。 FRS は再実行し続けます。<p>この警告が表示される理由のいくつかが次に示されています。<p>[1] FRS は、このコンピューターの DNS 名を正しく解決できません *\\\\<Domain Controller FQDN>* 。<p>[2] FRS はで実行されていません *\\\\<Domain Controller FQDN>* 。<p>[3] このレプリカの Active Directory Domain Services にあるトポロジ情報は、まだすべてのドメイン コントローラーにレプリケートされていない。<p>このイベント ログ メッセージは、1 つの接続ごとに 1 回表示されます。問題が解決されると、接続が確立されたことを示す別のイベント ログ メッセージが表示されます。 |
 | **13509** | NtFrs | ファイルレプリケーションサービスは、 *\\\\<Domain Controller FQDN>* *<Domain Controller>* 再試行の繰り返し後にからへのレプリケーションを有効にしました *<Path>* 。 |
@@ -1389,15 +1389,15 @@ Microsoft Active Directory Domain Services startup complete, version 6.2.8225.0
 ##### <a name="dfs-replication-event-log"></a>DFS レプリケーション イベント ログ
 DFSR サービスでは、複製中、権限のない同期がパートナーから実行されます。 複製でこれを行うには、プレシードされたデータとして使用するために、DFSR データベース ファイルを削除し、SYSVOL の内容はそのままにしておきます。 同期は 2 回試行されます。
 
-| **イベント ID** | **ソース** | **Message** |
+| **イベント ID** | **ソース** | **メッセージ** |
 |--|--|--|
 | **1004** | DFSR | DFS レプリケーション サービスを開始しました。 |
 | **1314** | DFSR | DFS レプリケーション サービスは、デバッグ ログ ファイルを正常に構成しました。<p>追加情報:<p>ログ ファイルのパスのデバッグ: C:\Windows\debug |
 | **6102** | DFSR | DFS レプリケーション サービスは、WMI プロバイダーを正しく登録しました |
 | **1206** | DFSR | DFS レプリケーション サービスは、ドメイン コントローラー DC2.corp.contoso.com に正常に接続し、構成オブジェクトにアクセスできました。 |
 | **1210** | DFSR | DFS レプリケーション サービスは、レプリケーション要求を受信する RPC リスナーを正常にセットアップしました。<p>追加情報:<p>ポート: 0" |
-| **4614** | DFSR | DFS レプリケーション サービスは、ローカル パス C:\Windows\SYSVOL\domain の SYSVOL を初期化し、初期レプリケーションの実行を待機しています。 レプリケート フォルダーはパートナーとレプリケートされるまで初期同期状態のままです。 サーバーがドメイン コントローラーに昇格している場合、ドメイン コントローラーはこの問題が解決するまでアドバタイズされず、ドメイン コントローラーとして機能しません。 これは特定のパートナーも初期同期状態であるか、共有違反がサーバーあるいは同期パートナーで発生した場合に発生することがあります。 このイベントが、ファイル レプリケーション サービス (FRS) から DFS レプリケーションへの SYSVOL の移行中に発生した場合、この問題が解決されるまで、変更はレプリケートされません。 これにより、このサーバー上の SYSVOL フォルダーが他のドメイン コントローラーと同期できなくなることがあります。<p>追加情報:<p>SYSVOL 共有のレプリケート フォルダー名:<p>レプリケートフォルダー ID:*<GUID>*<p>ドメイン システム ボリュームのレプリケーション グループ名:<p>レプリケーショングループ ID:*<GUID>*<p>メンバー ID:*<GUID>*<p>読み取り専用: 0 |
-| **4604** | DFSR | DFS レプリケーション サービスは、ローカル パス C:\Windows\SYSVOL\domain の SYSVOL レプリケート フォルダーの初期化に成功しました。 このメンバーは、パートナー dc1.corp.contoso.com との SYSVOL の初期同期を完了しています。 SYSVOL 共有をチェックするには、コマンド プロンプト ウィンドウを開き、「net share」と入力してください。<p>追加情報:<p>SYSVOL 共有のレプリケート フォルダー名:<p>レプリケートフォルダー ID:*<GUID>*<p>ドメイン システム ボリュームのレプリケーション グループ名:<p>レプリケーショングループ ID:*<GUID>*<p>メンバー ID:*<GUID>*<p>同期パートナー:*<domain controller FQDN>* |
+| **4614** | DFSR | DFS レプリケーション サービスは、ローカル パス C:\Windows\SYSVOL\domain の SYSVOL を初期化し、初期レプリケーションの実行を待機しています。 レプリケート フォルダーはパートナーとレプリケートされるまで初期同期状態のままです。 サーバーがドメイン コントローラーに昇格している場合、ドメイン コントローラーはこの問題が解決するまでアドバタイズされず、ドメイン コントローラーとして機能しません。 これは特定のパートナーも初期同期状態であるか、共有違反がサーバーあるいは同期パートナーで発生した場合に発生することがあります。 このイベントが、ファイル レプリケーション サービス (FRS) から DFS レプリケーションへの SYSVOL の移行中に発生した場合、この問題が解決されるまで、変更はレプリケートされません。 これにより、このサーバー上の SYSVOL フォルダーが他のドメイン コントローラーと同期できなくなることがあります。<p>追加情報:<p>SYSVOL 共有のレプリケート フォルダー名:<p>レプリケートフォルダー ID: *<GUID>*<p>ドメイン システム ボリュームのレプリケーション グループ名:<p>レプリケーショングループ ID: *<GUID>*<p>メンバー ID: *<GUID>*<p>読み取り専用: 0 |
+| **4604** | DFSR | DFS レプリケーション サービスは、ローカル パス C:\Windows\SYSVOL\domain の SYSVOL レプリケート フォルダーの初期化に成功しました。 このメンバーは、パートナー dc1.corp.contoso.com との SYSVOL の初期同期を完了しています。 SYSVOL 共有をチェックするには、コマンド プロンプト ウィンドウを開き、「net share」と入力してください。<p>追加情報:<p>SYSVOL 共有のレプリケート フォルダー名:<p>レプリケートフォルダー ID: *<GUID>*<p>ドメイン システム ボリュームのレプリケーション グループ名:<p>レプリケーショングループ ID: *<GUID>*<p>メンバー ID: *<GUID>*<p>同期パートナー: *<domain controller FQDN>* |
 
 ## <a name="troubleshooting-virtualized-domain-controller-safe-restore"></a><a name="BKMK_TshootVDCSafeRestore"></a>仮想化ドメイン コントローラーの安全な復元のトラブルシューティング
 
@@ -1450,7 +1450,7 @@ DFSR サービスでは、複製中、権限のない同期がパートナーか
 
 ### <a name="troubleshooting-specific-problems"></a><a name="BKMK_TshootSpecificSafeRestore"></a>特定の問題のトラブルシューティング
 
-#### <a name="events"></a>イベント
+#### <a name="events"></a>events
 すべての仮想化ドメイン コントローラーの安全なスナップショットの復元イベントによって、復元されたドメイン コントローラー VM のディレクトリ サービス イベント ログへの書き込みが行われます。 アプリケーション、システム、ファイル レプリケーション サービス、および DFS レプリケーションのイベント ログにも、復元失敗に関する有用なトラブルシューティング情報が含まれていることがあります。
 
 ディレクトリ サービス イベント ログに示される Windows Server 2012 の安全な復元固有のイベントを次に示します。
@@ -1459,143 +1459,143 @@ DFSR サービスでは、複製中、権限のない同期がパートナーか
 |--|--|
 | **イベント ID** | **2170** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | 警告 |
-| **Message** | 生成 ID の変更が検出されました。<p>DS にキャッシュされている生成 ID (古い値): %1<p>現在 VM にある生成 ID (新しい値): %2<p>生成 ID の変更は、仮想マシン スナップショットの適用、仮想マシンのインポート操作、またはライブ マイグレーション操作の後に発生します。 *<COMPUTERNAME>* では、ドメインコントローラーを回復するための新しい起動 ID が作成されます。 仮想マシン スナップショットを使用して仮想化ドメイン コントローラーを復元しないでください。 Active Directory Domain Services データベースの内容を復元またはロールバックするには、Active Directory Domain Services 対応のバックアップ アプリケーションを使用して作成されたシステム状態バックアップを使用する必要があります。 |
+| **Severity** | 警告 |
+| **メッセージ** | 生成 ID の変更が検出されました。<p>DS にキャッシュされている生成 ID (古い値): %1<p>現在 VM にある生成 ID (新しい値): %2<p>生成 ID の変更は、仮想マシン スナップショットの適用、仮想マシンのインポート操作、またはライブ マイグレーション操作の後に発生します。 *<COMPUTERNAME>* では、ドメインコントローラーを回復するための新しい起動 ID が作成されます。 仮想マシン スナップショットを使用して仮想化ドメイン コントローラーを復元しないでください。 Active Directory Domain Services データベースの内容を復元またはロールバックするには、Active Directory Domain Services 対応のバックアップ アプリケーションを使用して作成されたシステム状態バックアップを使用する必要があります。 |
 | **説明と解決策** | スナップショットが予期されていた場合、これは成功イベントです。 それ以外の場合は、Hyper-V-Worker イベント ログを調べるか、ハイパーバイザー管理者にお問い合わせください。 |
 
 | events | 説明 |
 | -- |--|
 |**イベント ID**|**2174**|
 |**ソース**|Microsoft-Windows-ActiveDirectory_DomainService|
-|**重大度**|Informational|
-|**Message**|この DC は、仮想ドメイン コントローラーの複製でも、復元された仮想ドメイン コントローラー スナップショットでもありません。|
+|**Severity**|Informational|
+|**メッセージ**|この DC は、仮想ドメイン コントローラーの複製でも、復元された仮想ドメイン コントローラー スナップショットでもありません。|
 |**説明と解決策**|スナップショットから復元されていない物理ドメイン コントローラーまたは仮想化ドメイン コントローラーを起動するときに、予期されるイベント|
 
 | events | 説明 |
 | -- |--|
 |**イベント ID**|**2181**|
 |**ソース**|Microsoft-Windows-ActiveDirectory_DomainService|
-|**重大度**|Informational|
-|**Message**|トランザクションは、仮想マシンが以前の状態に戻されたことにより中止されました。 これは、仮想マシン スナップショットの適用、仮想マシンのインポート操作、またはライブ マイグレーション操作の後に発生します。|
+|**Severity**|Informational|
+|**メッセージ**|トランザクションは、仮想マシンが以前の状態に戻されたことにより中止されました。 これは、仮想マシン スナップショットの適用、仮想マシンのインポート操作、またはライブ マイグレーション操作の後に発生します。|
 |**説明と解決策**|スナップショットを復元するときに発生する可能性があります。 トランザクションによって、VM 生成 ID の変更が追跡されます|
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2185** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | *<COMPUTERNAME>* SYSVOL フォルダーのレプリケーションに使用される FRS サービスまたは DFSR サービスを停止しました。<p>サービス名: %1<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL フォルダーのレプリケーションに使用されている FRS サービスまたは DFSR サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われます。 FRS サービスまたは DFSR サービスが再開されるとイベント 2187 がログに記録されます。 |
+| **Severity** | Informational |
+| **メッセージ** | *<COMPUTERNAME>* SYSVOL フォルダーのレプリケーションに使用される FRS サービスまたは DFSR サービスを停止しました。<p>サービス名: %1<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL フォルダーのレプリケーションに使用されている FRS サービスまたは DFSR サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われます。 FRS サービスまたは DFSR サービスが再開されるとイベント 2187 がログに記録されます。 |
 | **説明と解決策** | スナップショットを復元するときに発生する可能性があります。 このドメイン コントローラーにあるすべての SYSVOL データが、パートナー DC のコピーに置き換えられます。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | 2186 |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* SYSVOL フォルダーのレプリケーションに使用される FRS サービスまたは DFSR サービスを停止できませんでした。<p>サービス名: %1<p>エラー コード: %2<p>エラー メッセージ: %3<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL フォルダーのレプリケーションに使用されている FRS レプリケーション サービスまたは DFSR レプリケーション サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われます。 *<COMPUTERNAME>* 現在実行中のサービスを停止できませんでした。非 authoritative restore を完了できません。 手動で非 Authoritative Restore を実行してください。 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* SYSVOL フォルダーのレプリケーションに使用される FRS サービスまたは DFSR サービスを停止できませんでした。<p>サービス名: %1<p>エラー コード: %2<p>エラー メッセージ: %3<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL フォルダーのレプリケーションに使用されている FRS レプリケーション サービスまたは DFSR レプリケーション サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われます。 *<COMPUTERNAME>* 現在実行中のサービスを停止できませんでした。非 authoritative restore を完了できません。 手動で非 Authoritative Restore を実行してください。 |
 | **説明と解決策** | システム、FRS、および DFSR のイベント ログでさらに詳しく調べます。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2187** |
-| **重大度** | Informational |
-| **Message** | *<COMPUTERNAME>* SYSVOL フォルダーのレプリケーションに使用される FRS サービスまたは DFSR サービスを開始しました。<p>サービス名: %1<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL フォルダーのレプリケーションに使用されている FRS サービスまたは DFSR サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われました。 |
+| **Severity** | Informational |
+| **メッセージ** | *<COMPUTERNAME>* SYSVOL フォルダーのレプリケーションに使用される FRS サービスまたは DFSR サービスを開始しました。<p>サービス名: %1<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL フォルダーのレプリケーションに使用されている FRS サービスまたは DFSR サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われました。 |
 | **説明と解決策** | スナップショットを復元するときに発生する可能性があります。 このドメイン コントローラーにあるすべての SYSVOL データが、パートナー DC のコピーに置き換えられます。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2188** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* SYSVOL フォルダーのレプリケーションに使用される FRS サービスまたは DFSR サービスを開始できませんでした。<p>サービス名: %1<p>エラー コード: %2<p>エラー メッセージ: %3<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* は、ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL のレプリケーションに使用されている FRS サービスまたは DFSR サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われます。 *<COMPUTERNAME>* SYSVOL フォルダーのレプリケーションに使用される FRS サービスまたは DFSR サービスを開始できなかったため、非 authoritative restore を完了できません。 手動で非 Authoritative Restore を実行してサービスを再起動してください。 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* SYSVOL フォルダーのレプリケーションに使用される FRS サービスまたは DFSR サービスを開始できませんでした。<p>サービス名: %1<p>エラー コード: %2<p>エラー メッセージ: %3<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* は、ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL のレプリケーションに使用されている FRS サービスまたは DFSR サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われます。 *<COMPUTERNAME>* SYSVOL フォルダーのレプリケーションに使用される FRS サービスまたは DFSR サービスを開始できなかったため、非 authoritative restore を完了できません。 手動で非 Authoritative Restore を実行してサービスを再起動してください。 |
 | **説明と解決策** | システム、FRS、および DFSR のイベント ログでさらに詳しく調べます。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2189** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | *<COMPUTERNAME>* 非 authoritative restore の実行中に SYSVOL レプリカを初期化するには、次のレジストリ値を設定します。<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* は、ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL フォルダーのレプリケーションに使用されている FRS サービスまたは DFSR サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われます。 |
+| **Severity** | Informational |
+| **メッセージ** | *<COMPUTERNAME>* 非 authoritative restore の実行中に SYSVOL レプリカを初期化するには、次のレジストリ値を設定します。<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* は、ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL フォルダーのレプリケーションに使用されている FRS サービスまたは DFSR サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われます。 |
 | **説明と解決策** | スナップショットを復元するときに発生する可能性があります。 このドメイン コントローラーにあるすべての SYSVOL データが、パートナー DC のコピーに置き換えられます。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2190** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* 権限のない復元中に SYSVOL レプリカを初期化するために、次のレジストリ値を設定できませんでした:<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>エラー コード: %4<p>エラー メッセージ: %5<p>Active Directory により、ドメイン コントローラーの役割をホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* は、ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL フォルダーのレプリケーションに使用されている FRS サービスまたは DFSR サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われます。 *<COMPUTERNAME>* 上記のレジストリ値を設定できなかったため、非 authoritative restore を完了できません。 手動で非 Authoritative Restore を実行してください。 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* 権限のない復元中に SYSVOL レプリカを初期化するために、次のレジストリ値を設定できませんでした:<p>レジストリ キー: %1<p>レジストリ値: %2<p>レジストリ値のデータ: %3<p>エラー コード: %4<p>エラー メッセージ: %5<p>Active Directory により、ドメイン コントローラーの役割をホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* は、ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 これは、SYSVOL フォルダーのレプリケーションに使用されている FRS サービスまたは DFSR サービスを停止し、復元をトリガーする適切なレジストリ キーとレジストリ値を設定して、サービスを開始することで行われます。 *<COMPUTERNAME>* 上記のレジストリ値を設定できなかったため、非 authoritative restore を完了できません。 手動で非 Authoritative Restore を実行してください。 |
 | **説明と解決策** | アプリケーション イベント ログおよびシステム イベント ログを調べます。 レジストリの更新をブロックしている可能性があるサード パーティのアプリケーションを調査します。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2200** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* ドメインコントローラーを最新の状態にするには、レプリケーションを初期化します。 レプリケーションが完了すると、イベント 2201 がログに記録されます。 |
+| **Severity** | Informational |
+| **メッセージ** | Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* ドメインコントローラーを最新の状態にするには、レプリケーションを初期化します。 レプリケーションが完了すると、イベント 2201 がログに記録されます。 |
 | **説明と解決策** | スナップショットを復元するときに発生する可能性があります。 入力方向の AD レプリケーションの先頭をマークします。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2201** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* は、ドメインコントローラーを最新の状態にするためのレプリケーションを完了しました。 |
+| **Severity** | Informational |
+| **メッセージ** | Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* は、ドメインコントローラーを最新の状態にするためのレプリケーションを完了しました。 |
 | **説明と解決策** | スナップショットを復元するときに発生する可能性があります。 入力方向の AD レプリケーションの末尾をマークします。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2202** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* ドメインコントローラを最新の状態にするためのレプリケーションに失敗しました。 ドメイン コントローラーは、次回の定期的レプリケーション後に更新されます。 |
+| **Severity** | エラー |
+| **メッセージ** | Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* ドメインコントローラを最新の状態にするためのレプリケーションに失敗しました。 ドメイン コントローラーは、次回の定期的レプリケーション後に更新されます。 |
 | **説明と解決策** | ディレクトリ サービスおよびシステムのイベント ログを調べます。 repadmin.exe を使用してレプリケーションを強制的に実行し、エラーを確認します。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2204** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | *<COMPUTERNAME>* により、仮想マシンの生成 ID の変更が検出されました。 この変更は、仮想ドメイン コントローラーが以前の状態に戻ったことを意味しています。 *<COMPUTERNAME>* は、元に戻されたドメインコントローラーのデータの相違を防ぎ、Sid が重複するセキュリティプリンシパルの作成を保護するために、次の操作を実行します。<p>新しい起動 ID を作成する<p>現在の RID プールを無効にする<p>FSMO 役割の所有権は、次回の入力方向のレプリケーションで検証されます。 このウィンドウの間にドメイン コントローラーが FSMO 役割を保持していた場合、その役割は使用できなくなります。<p>SYSVOL レプリケーション サービスの復元操作を開始する。<p>レプリケーションを開始し、元に戻されたドメイン コントローラーを最新の状態にする。<p>新しい RID プールを要求する。 |
+| **Severity** | Informational |
+| **メッセージ** | *<COMPUTERNAME>* により、仮想マシンの生成 ID の変更が検出されました。 この変更は、仮想ドメイン コントローラーが以前の状態に戻ったことを意味しています。 *<COMPUTERNAME>* は、元に戻されたドメインコントローラーのデータの相違を防ぎ、Sid が重複するセキュリティプリンシパルの作成を保護するために、次の操作を実行します。<p>新しい起動 ID を作成する<p>現在の RID プールを無効にする<p>FSMO 役割の所有権は、次回の入力方向のレプリケーションで検証されます。 このウィンドウの間にドメイン コントローラーが FSMO 役割を保持していた場合、その役割は使用できなくなります。<p>SYSVOL レプリケーション サービスの復元操作を開始する。<p>レプリケーションを開始し、元に戻されたドメイン コントローラーを最新の状態にする。<p>新しい RID プールを要求する。 |
 | **説明と解決策** | スナップショットを復元するときに発生する可能性があります。 これにより、安全な復元プロセスの一環として発生するすべてのリセット操作の説明がつきます。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2205** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | *<COMPUTERNAME>* 仮想ドメインコントローラーが以前の状態に戻った後に、現在の RID プールが無効になりました。 |
+| **Severity** | Informational |
+| **メッセージ** | *<COMPUTERNAME>* 仮想ドメインコントローラーが以前の状態に戻った後に、現在の RID プールが無効になりました。 |
 | **説明と解決策** | スナップショットを復元するときに発生する可能性があります。 ドメイン コントローラーの時間が戻り、既に発行されている可能性があるため、ローカル RID プールを削除する必要があります。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2206** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | ERROR |
-| **Message** | *<COMPUTERNAME>* 仮想ドメインコントローラーが以前の状態に戻った後に、現在の RID プールを無効にできませんでした。<p>追加データ:<p>エラー コード: %1<p>エラー値: %2 |
+| **Severity** | ERROR |
+| **メッセージ** | *<COMPUTERNAME>* 仮想ドメインコントローラーが以前の状態に戻った後に、現在の RID プールを無効にできませんでした。<p>追加データ:<p>エラー コード: %1<p>エラー値: %2 |
 | **説明と解決策** | ディレクトリ サービスおよびシステムのイベント ログを調べます。 RID マスターがオンラインで、Dcdiag.exe /test:ridmanager を使用してこのサーバーからアクセスできることを検証します |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2207** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | ERROR |
-| **Message** | *<COMPUTERNAME>* 仮想ドメインコントローラーが以前の状態に戻った後に、復元できませんでした。 DSRM での再起動が要求されました。 詳細については、過去のイベントを確認してください。 |
+| **Severity** | ERROR |
+| **メッセージ** | *<COMPUTERNAME>* 仮想ドメインコントローラーが以前の状態に戻った後に、復元できませんでした。 DSRM での再起動が要求されました。 詳細については、過去のイベントを確認してください。 |
 | **説明と解決策** | ディレクトリ サービスおよびシステムのイベント ログを調べます。 |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2208** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | Informational |
-| **Message** | *<COMPUTERNAME>* 非 authoritative restore の実行中に SYSVOL レプリカを初期化するために、DFSR データベースを削除しました。 |
+| **Severity** | Informational |
+| **メッセージ** | *<COMPUTERNAME>* 非 authoritative restore の実行中に SYSVOL レプリカを初期化するために、DFSR データベースを削除しました。 |
 | **説明と解決策** | スナップショットを復元するときに発生する可能性があります。 これにより、DFSR によってパートナー DC から権限のない SYSVOL 同期が実行されることが保証されます。 SYSVOL と同じボリュームにある他の DFSR レプリケート フォルダーでも、権限のない同期が行われることに注意してください (ドメイン コントローラーを使用して、SYSVOL と同じボリュームでカスタム DFSR セットをホストすることはお勧めしません). |
 
 | Event | 説明 |
 |--|--|
 | **イベント ID** | **2209** |
 | **ソース** | Microsoft-Windows-ActiveDirectory_DomainService |
-| **重大度** | エラー |
-| **Message** | *<COMPUTERNAME>* DFSR データベースを削除できませんでした。<p>追加データ:<p>エラー コード: %1<p>エラー値: %2<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* は、ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 DFSR では、これは DFSR サービスを停止し、DFSR データベースを削除して、サービスを再開することで行われます。 DFSR は、再開時にデータベースを再構築し、初期同期を開始します。 |
+| **Severity** | エラー |
+| **メッセージ** | *<COMPUTERNAME>* DFSR データベースを削除できませんでした。<p>追加データ:<p>エラー コード: %1<p>エラー値: %2<p>Active Directory により、ドメイン コントローラーをホストしている仮想マシンが以前の状態に戻されたことが検出されました。 *<COMPUTERNAME>* は、ローカル SYSVOL レプリカで非 authoritative restore を初期化する必要があります。 DFSR では、これは DFSR サービスを停止し、DFSR データベースを削除して、サービスを再開することで行われます。 DFSR は、再開時にデータベースを再構築し、初期同期を開始します。 |
 | **説明と解決策** | DFSR イベント ログを調べます。 |
 
 #### <a name="error-messages"></a>エラー メッセージ
@@ -1622,7 +1622,7 @@ DFSR サービスでは、複製中、権限のない同期がパートナーか
 ##### <a name="directory-services-event-log"></a>ディレクトリ サービス イベント ログ
 ディレクトリ サービス ログには、安全な復元操作に関する情報の大部分が含まれます。 ハイパーバイザーによって VM-Generation ID が変更されると、NTDS サービスはそれを確認し、RID プールを無効にして、起動 ID を変更します。 その後、新しい VM-Generation ID が設定され、サーバーは AD データを入力方向にレプリケートします。 DFSR サービスは停止され、SYSVOL をホストするそのデータベースは削除され、権限のない入力方向の同期が強制的に実行されます。 また、USN 高基準値が調整されます。
 
-| **イベント ID** | **ソース** | **Message** |
+| **イベント ID** | **ソース** | **メッセージ** |
 |--|--|--|
 | **2170** | ActiveDirectory_DomainService | 生成 ID の変更が検出されました。<p>DS にキャッシュされている生成 ID (古い値):<p>*<number>*<p>現在 VM にある生成 ID (新しい値):<p>*<number>*<p>生成 ID の変更は、仮想マシン スナップショットの適用、仮想マシンのインポート操作、またはライブ マイグレーション操作の後に発生します。 Active Directory Domain Services は、新しい起動 ID を作成してドメイン コントローラーを復旧します。 仮想マシン スナップショットを使用して仮想化ドメイン コントローラーを復元しないでください。 Active Directory Domain Services データベースの内容を復元またはロールバックするには、Active Directory Domain Services 対応のバックアップ アプリケーションを使用して作成されたシステム状態バックアップを使用する必要があります。 |
 | **2181** | ActiveDirectory_DomainService | トランザクションは、仮想マシンが以前の状態に戻されたことにより中止されました。 これは、仮想マシン スナップショットの適用、仮想マシンのインポート操作、またはライブ マイグレーション操作の後に発生します。 |
@@ -1640,7 +1640,7 @@ DFSR サービスでは、複製中、権限のない同期がパートナーか
 ##### <a name="system-event-log"></a>システム イベント ログ
 システム イベント ログには、オフラインの仮想マシンをオンラインに戻して、ホストの時間と同期させたときのコンピューター時間が示されています。 RID プールが無効になり、DFSR または FRS サービスが再会されます。
 
-| **イベント ID** | **ソース** | **Message** |
+| **イベント ID** | **ソース** | **メッセージ** |
 |--|--|--|
 | **1** | Kernel-General | システム時刻がに変更されました*か? <now> * *< 時刻と日付のスナップショット >* します。<p>変更理由: アプリケーションまたはシステム コンポーネントは、時間を変更します。 |
 | **16654** | Directory-Services-SAM | アカウント識別子 (RID) のプールが無効化されました。 この問題は、次のような場合に発生することが考えられます:<p>1. ドメインコントローラーはバックアップから復元されます。<p>2. 仮想マシンで実行されているドメインコントローラーをスナップショットから復元します。<p>3. 管理者が手動でプールを無効化した。<p>詳細については、「 <https://go.microsoft.com/fwlink/?LinkId=226247> 」を参照してください。 |
@@ -1650,7 +1650,7 @@ DFSR サービスでは、複製中、権限のない同期がパートナーか
 ##### <a name="application-event-log"></a>アプリケーション イベント ログ
 アプリケーション イベント ログには、DFSR データベースの停止と開始が示されています。
 
-| **イベント ID** | **ソース** | **Message** |
+| **イベント ID** | **ソース** | **メッセージ** |
 |--|--|--|
 | **103** | ESENT | Dfsrs (1360) \\ \\ \System: <em> <GUID> </em> データベースエンジンはインスタンス (0) を停止しました。<p>ダーティ シャット ダウン: 0<p>内部のタイミング シーケンス: [1] 0.000、[2] 0.000、[3] 0.000、[4] 0.000、[5] 0.141、[6] 0.000、[7] 0.000、[8] 0.000、[9] 0.000、[10] 0.000、[11] 0.016、[12] 0.000、[13] 0.000、[14] 0.000、[15] 0.000。 |
 | **102** | ESENT | Dfsrs (532) \\ \\ \System: <em> <GUID> </em> データベースエンジン (6.02.8189.0000) は新しいインスタンス (0) を開始しています。 |
@@ -1660,7 +1660,7 @@ DFSR サービスでは、複製中、権限のない同期がパートナーか
 ##### <a name="dfs-replication-event-log"></a>DFS レプリケーション イベント ログ
 DFSR サービスは停止され、SYSVOL が含まれるデータベースは削除され、権限のない入力方向の同期が強制的に実行されます。
 
-| **イベント ID** | **ソース** | **Message** |
+| **イベント ID** | **ソース** | **メッセージ** |
 |--|--|--|
 | **1006** | DFSR | DFS レプリケーション サービスを停止しています。 |
 | **1008** | DFSR | DFS レプリケーション サービスを停止しました。 |
@@ -1670,8 +1670,8 @@ DFSR サービスは停止され、SYSVOL が含まれるデータベースは�
 | **6102** | DFSR | DFS レプリケーション サービスは、WMI プロバイダーを正しく登録しました。 |
 | **1206** | DFSR | DFS レプリケーションサービスは、 *<domain controller FQDN>* 構成情報にアクセスするためにドメインコントローラーに正常に接続しました。 |
 | **1210** | DFSR | DFS レプリケーション サービスは、レプリケーション要求を受信する RPC リスナーを正常にセットアップしました。<p>追加情報:<p>ポート: 0 |
-| **4614** | DFSR | DFS レプリケーション サービスは、ローカル パス C:\Windows\SYSVOL\domain の SYSVOL を初期化し、初期レプリケーションの実行を待機しています。 レプリケート フォルダーはパートナーとレプリケートされるまで初期同期状態のままです。 サーバーがドメイン コントローラーに昇格している場合、ドメイン コントローラーはこの問題が解決するまでアドバタイズされず、ドメイン コントローラーとして機能しません。 これは特定のパートナーも初期同期状態であるか、共有違反がサーバーあるいは同期パートナーで発生した場合に発生することがあります。 このイベントが、ファイル レプリケーション サービス (FRS) から DFS レプリケーションへの SYSVOL の移行中に発生した場合、この問題が解決されるまで、変更はレプリケートされません。 これにより、このサーバー上の SYSVOL フォルダーが他のドメイン コントローラーと同期できなくなることがあります。<p>追加情報:<p>SYSVOL 共有のレプリケート フォルダー名:<p>レプリケートフォルダー ID:*<GUID>*<p>ドメイン システム ボリュームのレプリケーション グループ名:<p>レプリケーショングループ ID:*<GUID>*<p>メンバー ID:*<GUID>*<p>読み取り専用: 0 |
-| **4604** | DFSR | DFS レプリケーション サービスは、ローカル パス C:\Windows\SYSVOL\domain の SYSVOL レプリケート フォルダーの初期化に成功しました。 このメンバーは、パートナー dc1.corp.contoso.com との SYSVOL の初期同期を完了しています。 SYSVOL 共有をチェックするには、コマンド プロンプト ウィンドウを開き、「net share」と入力してください。<p>追加情報:<p>SYSVOL 共有のレプリケート フォルダー名:<p>レプリケートフォルダー ID:*<GUID>*<p>ドメイン システム ボリュームのレプリケーション グループ名:<p>レプリケーショングループ ID:*<GUID>*<p>メンバー ID:*<GUID>*<p>同期パートナー:*<partner domain controller FQDN>* |
+| **4614** | DFSR | DFS レプリケーション サービスは、ローカル パス C:\Windows\SYSVOL\domain の SYSVOL を初期化し、初期レプリケーションの実行を待機しています。 レプリケート フォルダーはパートナーとレプリケートされるまで初期同期状態のままです。 サーバーがドメイン コントローラーに昇格している場合、ドメイン コントローラーはこの問題が解決するまでアドバタイズされず、ドメイン コントローラーとして機能しません。 これは特定のパートナーも初期同期状態であるか、共有違反がサーバーあるいは同期パートナーで発生した場合に発生することがあります。 このイベントが、ファイル レプリケーション サービス (FRS) から DFS レプリケーションへの SYSVOL の移行中に発生した場合、この問題が解決されるまで、変更はレプリケートされません。 これにより、このサーバー上の SYSVOL フォルダーが他のドメイン コントローラーと同期できなくなることがあります。<p>追加情報:<p>SYSVOL 共有のレプリケート フォルダー名:<p>レプリケートフォルダー ID: *<GUID>*<p>ドメイン システム ボリュームのレプリケーション グループ名:<p>レプリケーショングループ ID: *<GUID>*<p>メンバー ID: *<GUID>*<p>読み取り専用: 0 |
+| **4604** | DFSR | DFS レプリケーション サービスは、ローカル パス C:\Windows\SYSVOL\domain の SYSVOL レプリケート フォルダーの初期化に成功しました。 このメンバーは、パートナー dc1.corp.contoso.com との SYSVOL の初期同期を完了しています。 SYSVOL 共有をチェックするには、コマンド プロンプト ウィンドウを開き、「net share」と入力してください。<p>追加情報:<p>SYSVOL 共有のレプリケート フォルダー名:<p>レプリケートフォルダー ID: *<GUID>*<p>ドメイン システム ボリュームのレプリケーション グループ名:<p>レプリケーショングループ ID: *<GUID>*<p>メンバー ID: *<GUID>*<p>同期パートナー: *<partner domain controller FQDN>* |
 
 #### <a name="restoring-a-domain-controller-that-replicates-sysvol-using-frs"></a>FRS を使用して SYSVOL をレプリケートするドメイン コントローラーの復元
 ここでは、DFSR イベント ログの代わりに、ファイル レプリケーション イベント ログを使用します。 また、アプリケーション イベント ログも、さまざまな FRS 関連のイベントを書き込みます。 それ以外の場合、一般的に、ディレクトリ サービスおよびシステムのイベント ログ メッセージは、その順番を含め、既に説明したように同じです。
@@ -1679,7 +1679,7 @@ DFSR サービスは停止され、SYSVOL が含まれるデータベースは�
 ##### <a name="file-replication-service-event-log"></a>ファイル レプリケーション サービス イベント ログ
 FRS サービスは、権限のない SYSVOL 同期を実行するために停止され、D2 BURFLAGS 値で再開されます。
 
-| **イベント ID** | **ソース** | **Message** |
+| **イベント ID** | **ソース** | **メッセージ** |
 |--|--|--|
 | **13502** | NTFRS | ファイル レプリケーション サービスを停止しています。 |
 | **13503** | NTFRS | ファイル レプリケーション サービスを停止しました。 |
@@ -1694,7 +1694,7 @@ FRS サービスは、権限のない SYSVOL 同期を実行するために停�
 ##### <a name="application-event-log"></a>アプリケーション イベント ログ
 FRS データベースは停止してから開始し、D2 BURFLAGS 操作が原因で消去されます。
 
-| **イベント ID** | **ソース** | **Message** |
+| **イベント ID** | **ソース** | **メッセージ** |
 |--|--|--|
 | **327** | ESENT | ntfrs (1424) データベース エンジンはデータベース (1、c:\windows\ntfrs\jet\ntfrs.jdb) を接続解除しました。 (時間 = 0 秒)<p>内部のタイミング シーケンス: [1] 0.000、[2] 0.015、[3] 0.000、[4] 0.000、[5] 0.000、[6] 0.516、[7] 0.000、[8] 0.000、[9] 0.000、[10] 0.000、[11] 0.063、[12] 0.000。<p>キャッシュは復元: 0 |
 | **103** | ESENT | ntfrs (1424) データベース エンジンはインスタンス (0) を停止しました。<p>ダーティ シャット ダウン: 0<p>内部のタイミング シーケンス: [1] 0.000、[2] 0.000、[3] 0.000、[4] 0.000、[5] 0.000、[6] 0.000、[7] 0.000、[8] 0.000、[9] 0.031、[10] 0.000、[11] 0.016、[12] 0.000、[13] 0.000、[14] 0.047、[15] 0.000。 |

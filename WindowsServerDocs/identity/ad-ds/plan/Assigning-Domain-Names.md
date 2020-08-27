@@ -1,17 +1,17 @@
 ---
 ms.assetid: 73897497-b189-4305-b234-e057ffda163a
 title: ドメイン名を割り当てる
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 2b25f714913df4c8453194dbc2b691c5cca0db80
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8d6f85cc59b7f031f6985936ce8725de6d477815
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947916"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941222"
 ---
 # <a name="assigning-domain-names"></a>ドメイン名を割り当てる
 
@@ -28,10 +28,10 @@ ms.locfileid: "87947916"
 詳細については、「 [Active Directory のコンピューター、ドメイン、サイト、および ou の名前付け規則](https://support.microsoft.com/help/909264/)」を参照してください。
 
 > [!NOTE]
-> Windows Server 2008 および Windows Server 2003 の Dcpromo.exe を使用すれば、単一ラベル DNS ドメイン名を作成できますが、いくつかの理由からドメインに対しては単一ラベル DNS 名を使用しないでください。 Windows Server 2008 R2 では、Dcpromo.exe を使用して、ドメインに対して単一ラベル DNS 名を作成することはできません。 詳細については、「[単一ラベルの DNS 名を使用して構成された Active Directory ドメインの展開と操作](https://support.microsoft.com/help/300684/)」を参照してください。
+> Windows Server 2008 および Windows Server 2003 の Dcpromo.exe を使用すれば、単一ラベル DNS ドメイン名を作成できますが、いくつかの理由からドメインに対しては単一ラベル DNS 名を使用しないでください。 Windows Server 2008 R2 では、Dcpromo.exe を使用して、ドメインに対して単一ラベル DNS 名を作成することはできません。 詳細については、「 [単一ラベルの DNS 名を使用して構成された Active Directory ドメインの展開と操作](https://support.microsoft.com/help/300684/)」を参照してください。
 
 ドメインの現在の NetBIOS 名が、リージョンを表すのに適していない場合、またはプレフィックスの名前付け規則に適合しない場合は、新しいプレフィックスを選択します。 この場合、ドメインの NetBIOS 名がドメインの DNS プレフィックスと異なっています。
 
 デプロイする新しいドメインごとに、プレフィックスの名前付け規則を満たす、リージョンに適したプレフィックスを選択します。 ドメインの NetBIOS 名は、DNS プレフィックスと同じにすることをお勧めします。
 
-フォレスト内の各ドメインに対して選択した DNS プレフィックスと NetBIOS 名を文書化します。 DNS と NetBIOS 名の情報は、新しく作成したドメインの計画を文書化するために作成した "ドメイン計画" ワークシートに追加できます。 これを開くには、 [Windows Server 2003 Deployment Kit のジョブエイド](https://microsoft.com/download/details.aspx?id=9608)から Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードして、"ドメイン計画" (DSSLOGI_5.doc) を開きます。
+フォレスト内の各ドメインに対して選択した DNS プレフィックスと NetBIOS 名を文書化します。 DNS と NetBIOS 名の情報は、新しく作成したドメインの計画を文書化するために作成した "ドメイン計画" ワークシートに追加できます。 これを開くには、 [Windows Server 2003 Deployment Kit のジョブエイド](https://microsoft.com/download/details.aspx?id=9608) から Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードして、"ドメイン計画" (DSSLOGI_5.doc) を開きます。

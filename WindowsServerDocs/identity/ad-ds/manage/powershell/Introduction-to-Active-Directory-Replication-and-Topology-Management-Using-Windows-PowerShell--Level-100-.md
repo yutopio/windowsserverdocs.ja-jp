@@ -1,17 +1,17 @@
 ---
 ms.assetid: c54b544f-cc32-4837-bb2d-a8656b22f3de
 title: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 62ba9e757195861989fcd6d9eca395a47262aa7e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fd08814cd60f71f4ace9cfc0e374e80f54c6d89d
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967779"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941502"
 ---
 # <a name="introduction-to-active-directory-replication-and-topology-management-using-windows-powershell-level-100"></a>Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
 
@@ -27,7 +27,7 @@ Active Directory 用 Windows PowerShell には、レプリケーション、サ�
 > -   &reg;AD DS および AD LDS のリモートサーバー管理ツールがインストールされた Windows 8。
 
 ## <a name="installing-the-active-directory-module-for-windows-powershell"></a>Windows PowerShell 用 Active Directory モジュールのインストール
-Windows Server 2012 を実行しているサーバーに AD DS サーバーの役割がインストールされている場合、Windows PowerShell の Active Directory モジュールは既定でインストールされます。 サーバー役割を追加する以外に、追加の手順は必要ありません。 リモートサーバー管理ツールをインストールして、Windows Server 2012 を実行しているサーバーに Active Directory モジュールをインストールすることもできます。また、[リモートサーバー管理ツール (RSAT)](https://www.microsoft.com/download/details.aspx?id=28972)をダウンロードしてインストールすることにより、windows 8 を実行しているコンピューターに Active Directory モジュールをインストールできます。 インストール手順については、「[Instructions (手順)](https://www.microsoft.com/download/details.aspx?id=28972)」を参照してください。
+Windows Server 2012 を実行しているサーバーに AD DS サーバーの役割がインストールされている場合、Windows PowerShell の Active Directory モジュールは既定でインストールされます。 サーバー役割を追加する以外に、追加の手順は必要ありません。 リモートサーバー管理ツールをインストールして、Windows Server 2012 を実行しているサーバーに Active Directory モジュールをインストールすることもできます。また、 [リモートサーバー管理ツール (RSAT)](https://www.microsoft.com/download/details.aspx?id=28972)をダウンロードしてインストールすることにより、windows 8 を実行しているコンピューターに Active Directory モジュールをインストールできます。 インストール手順については、「[Instructions (手順)](https://www.microsoft.com/download/details.aspx?id=28972)」を参照してください。
 
 ## <a name="scenarios-for-testing-windows-powershell-for-active-directory-replication-and-topology-management-cmdlets"></a>Active Directory 用 Windows PowerShell レプリケーションおよびトポロジ管理コマンドレットをテストするためのシナリオ
 次に示すのは、管理者が新しい管理コマンドレットを理解できるように設計されたシナリオです。
@@ -40,7 +40,7 @@ Windows Server 2012 を実行しているサーバーに AD DS サーバーの�
 
 ## <a name="lab-requirements"></a>ラボ要件
 
--   Contoso.com ドメインの一部であり、そのドメイン内の企業サイトに存在する2つの Windows Server 2012 ドメインコントローラー: **DC1**と**DC2** 。
+-   Contoso.com ドメインの一部であり、そのドメイン内の企業サイトに存在する2つの Windows Server 2012 ドメインコントローラー: **DC1** と **DC2** 。
 
 ## <a name="view-domain-controllers-and-their-sites"></a>ドメイン コントローラーとそのサイトの表示
 この手順では、Windows PowerShell 用 Active Directory モジュールを使用して、既存のドメイン コントローラーとドメインのレプリケーション トポロジを表示します。
@@ -152,6 +152,6 @@ Windows Server 2012 を実行しているサーバーに AD DS サーバーの�
     並べ替えを行うことで、特定のレプリケーション パートナーに関して各ドメイン コントローラーから見た最後の USN を簡単に比較できます。 これにより、環境でレプリケーションが発生しているかどうかを簡単に調べることができます。 レプリケーションが適切に動作している場合、特定のレプリケーション パートナーに対して報告される UsnFilter 値は、すべてのドメイン コントローラーで類似しています。
 
 ## <a name="see-also"></a>参照
-[Windows PowerShell &#40;レベル 200&#41;を使用した高度な Active Directory レプリケーションおよびトポロジ管理](Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
+[Windows PowerShell &#40;レベル 200&#41;を使用した高度な Active Directory レプリケーションおよびトポロジ管理 ](Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
 
 

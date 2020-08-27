@@ -1,17 +1,17 @@
 ---
 ms.assetid: b3d6fb87-c4d4-451c-b3de-a53d2402d295
 title: Windows Server 2012 の新しい Active Directory フォレストをインストールする (レベル 200)
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 0b83588268e6a6c8dd685082b3862520fcbd80d5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 50fd78a480a369030e8874054f583dc163a3a0b3
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968259"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941032"
 ---
 # <a name="install-a-new-windows-server-2012-active-directory-forest-level-200"></a>Windows Server 2012 の新しい Active Directory フォレストをインストールする (レベル 200)
 
@@ -88,11 +88,11 @@ Dcpromo.exe はコマンドラインからの無人インストールのため�
 > [!IMPORTANT]
 > Dcpromo.exe は GUI によるウィザードを提供しなくなり、役割や機能のバイナリをインストールをしなくなりました。 Explorer シェルから Dcpromo.exe を実行すると、次のメッセージが返されます。
 >
-> "Active Directory ドメインサービスインストールウィザードはサーバーマネージャーで再配置されます。 詳細については、「」を参照してください <https://go.microsoft.com/fwlink/?LinkId=220921> 。
+> "Active Directory ドメインサービスインストールウィザードはサーバーマネージャーで再配置されます。 詳細については、<https://go.microsoft.com/fwlink/?LinkId=220921> をご覧ください。"
 >
 > Dcpromo.exe /unattend を実行すると、以前のオペレーティング システムの場合と同様にバイナリがインストールされますが、次の警告が表示されます。
 >
-> "Dcpromo の無人操作は、Windows PowerShell の ADDSDeployment モジュールに置き換えられています。 詳細については、「」を参照してください <https://go.microsoft.com/fwlink/?LinkId=220924> 。
+> "Dcpromo の無人操作は、Windows PowerShell の ADDSDeployment モジュールに置き換えられています。 詳細については、<https://go.microsoft.com/fwlink/?LinkId=220924> をご覧ください。"
 >
 > Windows Server 2012 では dcpromo.exe を非推奨としており、この実行可能ファイルは、Windows の将来のバージョンに含まれることもなければ、このオペレーティング システムで機能拡張されることもありません。 管理者はその使用を今後停止して、コマンドラインからドメイン コントローラーを作成したい場合は、サポートされている Windows PowerShell モジュールに切り替える必要があります。
 
@@ -217,7 +217,7 @@ AD DS の役割のインストール終了時、[**このサーバーをドメ�
 ### <a name="uninstallingdisabling"></a>アンインストール/無効化
 AD DS の役割は他のすべての役割と同様に削除します。サーバーをドメイン コントローラーに昇格したかどうかは関係ありません。 ただし、AD DS の役割を削除するときは、完了時に再起動が必要になります。
 
-Active Directory ドメイン サービスの役割の削除は、作業完了の前にドメイン コントローラーの降格が必要になるという点で、インストールとは異なります。 メタデータのクリーンアップがフォレスト内で適切に行われることなく、ドメイン コントローラーがその役割のバイナリをアンインストールされてしまうことを防ぐために降格は必要です。 詳細については、「[ドメインコントローラーとドメインの降格 &#40;レベル 200&#41;](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)」を参照してください。
+Active Directory ドメイン サービスの役割の削除は、作業完了の前にドメイン コントローラーの降格が必要になるという点で、インストールとは異なります。 メタデータのクリーンアップがフォレスト内で適切に行われることなく、ドメイン コントローラーがその役割のバイナリをアンインストールされてしまうことを防ぐために降格は必要です。 詳細については、「 [ドメインコントローラーとドメインの降格 &#40;レベル 200&#41;](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)」を参照してください。
 
 > [!WARNING]
 > ドメイン コントローラーに昇格した後に Dism.exe または Windows PowerShell DISM モジュールを使用して AD DS 役割を削除することはサポートされておらず、サーバーの正常な起動を妨げます。
@@ -284,7 +284,7 @@ DNS 委任を作成する必要があるかどうかの詳細については、�
 
 [**オプションの確認**] ページでは、インストールを開始する前に、設定を確認し、それらが要件を満たしているかどうか確認することができます。 これがサーバー マネージャーの使用中においてインストールを中止する最後の機会ではありません。 構成を続行する前に設定を確認するためのオプションにすぎません。
 
-サーバー マネージャーの **[オプションの確認]** ページにあるオプションの **[スクリプトの表示]** ボタンを使用すると、現在の ADDSDeployment モジュール構成を単一の Windows PowerShell スクリプトとして含む Unicode テキスト ファイルを作成することもできます。 これにより、サーバー マネージャーのグラフィカル インターフェイスを Windows PowerShell 展開スタジオとして使用できます。 Active Directory ドメイン サービス構成ウィザードを使用してオプションを構成し、構成をエクスポートした後、ウィザードをキャンセルします。 これによって有効で正しい構文のサンプルが作成されるので、それをさらに変更したり、直接使用したりできます。 例:
+サーバー マネージャーの **[オプションの確認]** ページにあるオプションの **[スクリプトの表示]** ボタンを使用すると、現在の ADDSDeployment モジュール構成を単一の Windows PowerShell スクリプトとして含む Unicode テキスト ファイルを作成することもできます。 これにより、サーバー マネージャーのグラフィカル インターフェイスを Windows PowerShell 展開スタジオとして使用できます。 Active Directory ドメイン サービス構成ウィザードを使用してオプションを構成し、構成をエクスポートした後、ウィザードをキャンセルします。 これによって有効で正しい構文のサンプルが作成されるので、それをさらに変更したり、直接使用したりできます。 次に例を示します。
 
 ```powershell
 #
@@ -363,7 +363,7 @@ ServerManager 内のエイリアスとコマンドレットをエクスポート
 Get-Command -module ServerManager
 ```
 
-例:
+次に例を示します。
 
 ![新しいフォレストをインストールする](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSGetCommand.png)
 
@@ -379,7 +379,7 @@ AD DS の管理ツールもインストールしたい場合は (強くお勧め
 Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools
 ```
 
-例:
+次に例を示します。
 
 ![新しいフォレストをインストールする](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallWinFeature.png)
 
@@ -413,7 +413,7 @@ Get-WindowsFeature | where displayname -like "*active dir*"
 Get-WindowsFeature | where {$_.displayname - like "*active dir*"}
 ```
 
-Windows PowerShell パイプラインを使用することで、判読しやすい結果が生成されます。 例:
+Windows PowerShell パイプラインを使用することで、判読しやすい結果が生成されます。 次に例を示します。
 
 ```powershell
 Install-WindowsFeature | Format-List
@@ -491,7 +491,7 @@ Install-ADDSForest
 -safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)
 ```
 
-最後に、暗号化したパスワードをファイルに保存して後で使用することができます。こうするとクリア テキストのパスワードを表示せずに済みます。 例:
+最後に、暗号化したパスワードをファイルに保存して後で使用することができます。こうするとクリア テキストのパスワードを表示せずに済みます。 次に例を示します。
 
 ```powershell
 $file = "c:\pw.txt"
@@ -538,7 +538,7 @@ ADDSDeployment コマンドレットには、DNS クライアント設定、フ�
 
 構成情報を確認するには、**Install-ADDSForest** コマンドレットと共にオプションの **Whatif** 引数を使用します。 これによって、コマンドレットの引数の明示的な値と暗黙的な値を確認できます。
 
-例:
+次に例を示します。
 
 ![新しいフォレストをインストールする](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSPaths.png)
 

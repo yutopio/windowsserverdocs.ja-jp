@@ -1,17 +1,17 @@
 ---
 ms.assetid: b8df1828-5ead-4c90-b0fe-95c675116b7c
 title: 組織単位の設計を作成する
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 96fd3dd2d090ef6b39b99962e6b639bf2abdcb62
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3676d489f3ac0b59ba00904afc04e865150d901e
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947743"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941122"
 ---
 # <a name="creating-an-organizational-unit-design"></a>組織単位の設計を作成する
 
@@ -19,7 +19,7 @@ ms.locfileid: "87947743"
 
 フォレスト所有者は、ドメインの組織単位 (OU) 設計を作成します。 Ou 設計を作成するには、ou 構造の設計、OU 所有者ロールの割り当て、およびアカウントとリソース Ou の作成が必要になります。
 
-最初に、OU 構造を設計して、管理の委任を有効にします。 OU の設計が完了したら、ユーザーとコンピューターにグループポリシーを適用するための追加の OU 構造を作成したり、オブジェクトの表示を制限したりすることができます。 詳細については、「[グループポリシーインフラストラクチャの設計](/previous-versions/windows/it-pro/windows-server-2003/cc786524(v=ws.10))」を参照してください。
+最初に、OU 構造を設計して、管理の委任を有効にします。 OU の設計が完了したら、ユーザーとコンピューターにグループポリシーを適用するための追加の OU 構造を作成したり、オブジェクトの表示を制限したりすることができます。 詳細については、「 [グループポリシーインフラストラクチャの設計](/previous-versions/windows/it-pro/windows-server-2003/cc786524(v=ws.10))」を参照してください。
 
 ## <a name="ou-owner-role"></a>OU 所有者ロール
 フォレストの所有者は、ドメインに対して設計する OU ごとに OU 所有者を指定します。 OU の所有者は、Active Directory Domain Services (AD DS) 内のオブジェクトのサブツリーを制御するデータマネージャーです。 OU の所有者は、管理を委任する方法と、OU 内のオブジェクトにポリシーを適用する方法を制御できます。 また、新しいサブツリーを作成し、そのサブツリー内の Ou の管理を委任することもできます。
@@ -38,7 +38,7 @@ Ou は、ディレクトリ内のオブジェクトの表示を制御するた�
 
 OU の設計を文書化することが重要です。 作成する Ou の名前を一覧表示します。 さらに、ou ごとに、ou の種類、OU 所有者、親 OU (該当する場合)、およびその OU の出所を文書化します。
 
-OU 設計を文書化するのに役立つワークシートについては、 [Windows Server 2003 Deployment Kit のジョブエイド](https://microsoft.com/download/details.aspx?id=9608)から Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードし、「各ドメインの Ou を識別する」 (DSSLOGI_9.doc) を開いてください。
+OU 設計を文書化するのに役立つワークシートについては、 [Windows Server 2003 Deployment Kit のジョブエイド](https://microsoft.com/download/details.aspx?id=9608) から Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードし、「各ドメインの Ou を識別する」 (DSSLOGI_9.doc) を開いてください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

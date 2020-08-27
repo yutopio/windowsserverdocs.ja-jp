@@ -1,17 +1,17 @@
 ---
 title: Windows Server 2016 へのドメイン コントローラーのアップグレード
 description: このドキュメントでは、Windows Server 2012 R2 から Windows Server 2016 にアップグレードする方法について説明します。
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 78e245767857111f71a6252094ef0e74fda7f714
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 747c71d3c0b3dd7afb0fb1dda1b922ac58330e02
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965269"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88940242"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2016"></a>Windows Server 2016 へのドメイン コントローラーのアップグレード
 
@@ -29,11 +29,11 @@ ms.locfileid: "87965269"
 1. セキュリティ設定を確認します。 詳細については、「 [Windows Server 2016 の AD DS に関連する非推奨の機能と動作の変更](../../../get-started/deprecated-features.md)」を参照してください。
 1. インストールを実行するコンピューターからターゲット サーバーに接続できることを確認します。
 1. 必要な操作マスターの役割を使用できることを確認します。
-   - 既存のドメインおよびフォレストで Windows Server 2016 を実行する最初の DC をインストールするには、インストールを実行するコンピューターが、adprep/forestprep を実行するために**スキーママスター**に接続し、adprep/domainprep を実行するためにインフラストラクチャマスターに接続する必要があります。
-   - フォレストスキーマが既に拡張されているドメインに最初の DC をインストールするには、**インフラストラクチャマスター**への接続のみが必要です。
-   - 既存のフォレスト内のドメインをインストールまたは削除するには、**ドメイン名前付けマスター**への接続が必要です。
+   - 既存のドメインおよびフォレストで Windows Server 2016 を実行する最初の DC をインストールするには、インストールを実行するコンピューターが、adprep/forestprep を実行するために **スキーママスター** に接続し、adprep/domainprep を実行するためにインフラストラクチャマスターに接続する必要があります。
+   - フォレストスキーマが既に拡張されているドメインに最初の DC をインストールするには、 **インフラストラクチャマスター**への接続のみが必要です。
+   - 既存のフォレスト内のドメインをインストールまたは削除するには、 **ドメイン名前付けマスター**への接続が必要です。
    - ドメインコントローラーのインストールでは、 **RID マスター**への接続も必要です。
-   - 最初の読み取り専用ドメインコントローラーを既存のフォレストにインストールする場合は、各アプリケーションディレクトリパーティションの**インフラストラクチャマスター**への接続が必要です。これは、非ドメイン名前付けコンテキストまたは ndnc とも呼ばれます。
+   - 最初の読み取り専用ドメインコントローラーを既存のフォレストにインストールする場合は、各アプリケーションディレクトリパーティションの **インフラストラクチャマスター** への接続が必要です。これは、非ドメイン名前付けコンテキストまたは ndnc とも呼ばれます。
 
 ### <a name="installation-steps-and-required-administrative-levels"></a>インストール手順と必要な管理レベル
 
@@ -137,14 +137,14 @@ Contoso フォレストを Windows Server 2012 R2 から Windows Server 2016 に
 
    ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
 
-1. [**展開構成**] 画面で、[**ドメインコントローラーを既存のフォレストに追加する**] を選択し、[次へ] をクリックします。
+1. [ **展開構成** ] 画面で、[ **ドメインコントローラーを既存のフォレストに追加する** ] を選択し、[次へ] をクリックします。
 
    ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
 
-1. [**ドメインコントローラーオプション**] 画面で、**ディレクトリサービス復元モード (DSRM)** のパスワードを入力し、[次へ] をクリックします。
-1. 画面の残りの部分について、[**次へ**] をクリックします。
-1. [**前提条件の確認**] 画面で、[**インストール**] をクリックします。 再起動が完了したら、サインインし直すことができます。
-1. Windows Server 2012 R2 サーバーの**サーバーマネージャー**の [ツール] で、[ **Windows PowerShell の Active Directory モジュール**] を選択します。
+1. [ **ドメインコントローラーオプション** ] 画面で、 **ディレクトリサービス復元モード (DSRM)** のパスワードを入力し、[次へ] をクリックします。
+1. 画面の残りの部分について、[ **次へ**] をクリックします。
+1. [ **前提条件の確認** ] 画面で、[ **インストール**] をクリックします。 再起動が完了したら、サインインし直すことができます。
+1. Windows Server 2012 R2 サーバーの **サーバーマネージャー**の [ツール] で、[ **Windows PowerShell の Active Directory モジュール**] を選択します。
 
    ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
 
@@ -168,5 +168,5 @@ Contoso フォレストを Windows Server 2012 R2 から Windows Server 2016 に
 ## <a name="next-steps"></a>次の手順
 
 - [Active Directory Domain Services のインストールと削除の新機能](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)
-- [Active Directory Domain Services &#40;レベル 100&#41;のインストール](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md)
+- [Active Directory Domain Services &#40;レベル 100&#41;のインストール ](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md)
 - [Windows Server 2016 の機能レベル](../active-directory-functional-levels.md)

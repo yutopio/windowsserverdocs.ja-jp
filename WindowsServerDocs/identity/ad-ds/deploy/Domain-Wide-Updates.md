@@ -2,17 +2,17 @@
 ms.assetid: 2a5d5271-6ac6-4c1b-b4ef-9b568932a55a
 title: ドメイン全体でのスキーマの更新の Active Directory
 description: ドメインコントローラーを昇格するときに adprep/domainprep によって実行されるドメイン全体のスキーマの更新
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
-ms.openlocfilehash: 606e48502587675b9a98e279f1b9047db8789021
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cc22ebec3546c852dff811b00a0e430c7f740abc
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87959100"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88940782"
 ---
 # <a name="domain-wide-schema-updates"></a>ドメイン全体でのスキーマの更新
 
@@ -26,7 +26,7 @@ Windows Server 2012 以降では、Adprep コマンドは、AD DS のインス�
 
 ## <a name="windows-server-semi-annual-channel-domain-wide-updates"></a>Windows Server (半期チャネル): ドメイン全体の更新
 
-Windows Server 2016 (operation 89) で**domainprep**によって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = domainupdates, Cn = SYSTEM, DC = ForestRootDomain オブジェクトの**revision**属性が**16**に設定されます。
+Windows Server 2016 (operation 89) で **domainprep** によって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = domainupdates, Cn = SYSTEM, DC = ForestRootDomain オブジェクトの **revision** 属性が **16**に設定されます。
 
 |操作番号と GUID|説明|アクセス許可|
 |------------------------------|---------------|--------------|---------------|
@@ -34,7 +34,7 @@ Windows Server 2016 (operation 89) で**domainprep**によって実行された�
 
 ## <a name="windows-server-2016-domain-wide-updates"></a>Windows Server 2016: ドメイン全体の更新プログラム
 
-Windows Server 2016 (operations 82-88) で**domainprep**によって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = domainupdates, Cn = SYSTEM, DC = ForestRootDomain オブジェクトの**revision**属性が**15**に設定されます。
+Windows Server 2016 (operations 82-88) で **domainprep** によって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = domainupdates, Cn = SYSTEM, DC = ForestRootDomain オブジェクトの **revision** 属性が **15**に設定されます。
 
 |操作番号と GUID|説明|属性|アクセス許可|
 |------------------------------|---------------|--------------|---------------|
@@ -50,15 +50,15 @@ Enterprise Key Admins グループと Key Admins グループが作成される�
 
 ## <a name="windows-server-2012-r2-domain-wide-updates"></a>Windows Server 2012 R2: ドメイン全体の更新プログラム
 
-Windows Server 2012 R2 では、 **domainprep**によって操作は実行されませんが、コマンドの完了後、Cn = ACTIVEDIRECTORYUPDATE, Cn = domainupdates, Cn = SYSTEM, DC = ForestRootDomain オブジェクトの**revision**属性は**10**に設定されます。
+Windows Server 2012 R2 では、 **domainprep** によって操作は実行されませんが、コマンドの完了後、Cn = ACTIVEDIRECTORYUPDATE, Cn = domainupdates, Cn = SYSTEM, DC = ForestRootDomain オブジェクトの **revision** 属性は **10**に設定されます。
 
 ## <a name="windows-server-2012-domain-wide-updates"></a>Windows Server 2012: ドメイン全体の更新プログラム
 
-Windows Server 2012 (operations 78、79、80、および 81) で**domainprep**によって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = domainupdates, Cn = SYSTEM, DC = ForestRootDomain オブジェクトの**revision**属性が**9**に設定されます。
+Windows Server 2012 (operations 78、79、80、および 81) で **domainprep** によって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = domainupdates, Cn = SYSTEM, DC = ForestRootDomain オブジェクトの **revision** 属性が **9**に設定されます。
 
 |操作番号と GUID|説明|属性|アクセス許可|
 |------------------------------|---------------|--------------|---------------|
 |**操作 78**: {c3c927a6-cc1d-47c0-966b-be8f9b63d991}|新しいオブジェクト CN = TPM デバイスをドメインパーティションに作成します。|オブジェクトクラス: msTPM|該当なし|
 |**操作 79**: {54afcfb9-637a-4251-9f47-4d50e7021211}|TPM サービスのアクセス制御エントリが作成されました。|該当なし|OACIIO。WP、ea1b7b93-5e48-46d5-bc6c-4df4fda78a35、bf967a86-0de6-11d0-a285-00aa003049e2、PS)|
-|**操作 80**: {f4728883-84dd-483c-9897-274f2ebcf11e}|"複製 DC" を、複製可能**ドメインコントローラー**グループに付与します|該当なし|(OA;;CR; 3e0f7e18-2c7a-4c10-ba82-4d926db99a3e;;*ドメイン SID*-522)|
+|**操作 80**: {f4728883-84dd-483c-9897-274f2ebcf11e}|"複製 DC" を、複製可能 **ドメインコントローラー** グループに付与します|該当なし|(OA;;CR; 3e0f7e18-2c7a-4c10-ba82-4d926db99a3e;;*ドメイン SID*-522)|
 |**操作 81**: {ff4f9d27-7157-4cb0-80a9-5d6f2b14c8ff}|すべてのオブジェクトに対して、その他の Id を使用することをプリンシパルに許可します。|該当なし|OACIOI;3f78c3e5-f79a-46bd-a0b8-9d18116ddc79;;PS|

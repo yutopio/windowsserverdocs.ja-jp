@@ -1,17 +1,17 @@
 ---
 ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
 title: AD DS インストール ウィザードおよび削除ウィザードのページの説明
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 39d41b605db94931731f29aa25990672332c8056
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0eab71426d282bbd1c0411b13286a9cc93dc38ab
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87959430"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941022"
 ---
 # <a name="ad-ds-installation-and-removal-wizard-page-descriptions"></a>AD DS インストール ウィザードおよび削除ウィザードのページの説明
 
@@ -48,7 +48,7 @@ ms.locfileid: "87959430"
 -   [ロール削除選択の確認](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_ConfirmRoleRemovalPage)
 
 ## <a name="deployment-configuration"></a><a name="BKMK_DepConfigPage"></a>配置構成
-サーバー マネージャーは、すべてのドメイン コントローラーのインストールを **[配置構成]** ページで開始します。 このページおよび以降のページの他のオプションおよび必須フィールドは、選択した展開操作によって異なります。 たとえば、新しいフォレストを作成した場合、[**準備オプション**] ページは表示されませんが、既存のフォレストまたはドメインで Windows Server 2012 を実行する最初のドメインコントローラーをインストールした場合に表示されます。
+サーバー マネージャーは、すべてのドメイン コントローラーのインストールを **[配置構成]** ページで開始します。 このページおよび以降のページの他のオプションおよび必須フィールドは、選択した展開操作によって異なります。 たとえば、新しいフォレストを作成した場合、[ **準備オプション** ] ページは表示されませんが、既存のフォレストまたはドメインで Windows Server 2012 を実行する最初のドメインコントローラーをインストールした場合に表示されます。
 
 一部の検証テストは、このページで実行され、後で前提条件確認の一部として再度実行されます。 たとえば、Windows 2000 の機能レベルがあるフォレストに最初の Windows Server 2012 ドメインコントローラーをインストールしようとすると、このページにエラーが表示されます。
 
@@ -157,13 +157,13 @@ DNS サーバーをインストールするときは、ゾーンに対する権�
 
 親ドメインと昇格されるサブドメインの間の委任は、インストールの前または後に作成して検証できます。 DNS 委任を作成または更新することはできないので、新しいドメイン コントローラーのインストールを遅延する必要はありません。
 
-委任の詳細については、「[ゾーンの委任](https://go.microsoft.com/fwlink/?LinkId=164773)について」 (を参照してください https://go.microsoft.com/fwlink/?LinkId=164773) 。 ご使用の状況で委任が不可能な場合は、他のドメインから現在のドメイン内のホストへの名前解決を指定する別の方法を検討してください。 たとえば、別のドメインの DNS 管理者は、現在のドメイン内の名前を解決するために、条件付き転送、スタブ ゾーン、またはセカンダリ ゾーンを構成できます。 詳細については、次のトピックを参照してください。
+委任の詳細については、「 [ゾーンの委任](https://go.microsoft.com/fwlink/?LinkId=164773) について」 (を参照してください https://go.microsoft.com/fwlink/?LinkId=164773) 。 ご使用の状況で委任が不可能な場合は、他のドメインから現在のドメイン内のホストへの名前解決を指定する別の方法を検討してください。 たとえば、別のドメインの DNS 管理者は、現在のドメイン内の名前を解決するために、条件付き転送、スタブ ゾーン、またはセカンダリ ゾーンを構成できます。 詳細については、次のトピックを参照してください。
 
--   [ゾーンの種類につい](https://go.microsoft.com/fwlink/?LinkID=157399)て (https://go.microsoft.com/fwlink/?LinkID=157399)
+-   [ゾーンの種類につい](https://go.microsoft.com/fwlink/?LinkID=157399) て (https://go.microsoft.com/fwlink/?LinkID=157399)
 
--   [スタブゾーンについ](https://go.microsoft.com/fwlink/?LinkId=164776)て (https://go.microsoft.com/fwlink/?LinkId=164776)
+-   [スタブゾーンについ](https://go.microsoft.com/fwlink/?LinkId=164776) て (https://go.microsoft.com/fwlink/?LinkId=164776)
 
--   [フォワーダーについ](https://go.microsoft.com/fwlink/?LinkId=164778)て (https://go.microsoft.com/fwlink/?LinkId=164778)
+-   [フォワーダーについ](https://go.microsoft.com/fwlink/?LinkId=164778) て (https://go.microsoft.com/fwlink/?LinkId=164778)
 
 ## <a name="rodc-options"></a><a name="BKMK_RODCOptionsPage"></a>RODC オプション
 読み取り専用ドメイン コントローラー (RODC) をインストールするときは、次のオプションが表示されます。
@@ -178,7 +178,7 @@ DNS サーバーをインストールするときは、ゾーンに対する権�
 
     許可されていない (暗黙を含みます)、または拒否されているユーザーまたはコンピューターのパスワードはキャッシュされません。 このようなユーザーまたはコンピューターは、書き込み可能なドメイン コントローラーにアクセスできない場合、AD DS が提供するリソースまたは機能にアクセスできません。 PRP の詳細については、「[Password Replication Policy (パスワード レプリケーション ポリシー)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730883(v=ws.10))」を参照してください。 PRP の管理の詳細については、[パスワード レプリケーション ポリシーの管理に関する説明](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754646(v=ws.10))を参照してください。
 
-Rodc のインストールの詳細については、「 [Windows Server 2012 Active Directory 読み取り専用ドメインコントローラー &#40;RODC&#41; &#40;レベル 200&#41;をインストールする](../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md)」を参照してください。
+Rodc のインストールの詳細については、「 [Windows Server 2012 Active Directory 読み取り専用ドメインコントローラー &#40;RODC&#41; &#40;レベル 200&#41;をインストールする ](../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md)」を参照してください。
 
 ## <a name="additional-options"></a><a name="BKMK_AdditionalOptionsPage"></a>その他のオプション
 新しいドメインを作成している場合、**[追加オプション]** ページには次のオプションが表示されます。
@@ -251,14 +251,14 @@ AD DS のインストールで実行される具体的な前提条件の確認�
 
 降格オプションは **[資格情報]** ページで構成します。 次の一覧から降格の実行に必要な資格情報を指定します。
 
--   追加ドメイン コントローラーの降格には、Domain Admin 資格情報が必要です。 [**ドメインコントローラーの削除を強制**する] を選択すると、Active Directory からドメインコントローラーオブジェクトのメタデータが削除されることなく、ドメインコントローラーが降格されます。
+-   追加ドメイン コントローラーの降格には、Domain Admin 資格情報が必要です。 [ **ドメインコントローラーの削除を強制** する] を選択すると、Active Directory からドメインコントローラーオブジェクトのメタデータが削除されることなく、ドメインコントローラーが降格されます。
 
     > [!IMPORTANT]
     > ドメイン コントローラーが他のドメイン コントローラーに接続できず、そのネットワークの問題を解決するために*他に有効な方法が*ない場合にのみ、このオプションを選択してください。 強制的に降格を行うと、フォレスト内の他のドメイン コントローラーの Active Directory に孤立したメタデータが残ります。 さらに、そのドメイン コントローラーで複製されていないすべての変更 (パスワードや新しいユーザー アカウントなど) が失われます。 孤立したメタデータは、AD DS、Exchange、SQL、他のソフトウェアに関する Microsoft カスタマー サポートへの問い合わせの根本原因として大きな割合を占めます。 ドメイン コントローラーを強制的に降格する場合は、手動でメタデータのクリーンアップをすぐに実行する*必要があります*。 手順については、「 [Clean Up Server Metadata (サーバー メタデータのクリーンアップ)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10))」をご覧ください。
 
 -   ドメインの最後のドメイン コントローラーを降格する場合は、ドメイン自体が削除されるので (フォレストの最後のドメインの場合は、フォレストも削除されます)、Enterprise Admins グループのメンバーシップが必要です。 現在のドメイン コントローラーがドメインにある最後のドメイン コントローラーである場合は、サーバー マネージャーからそのことが通知されます。 ドメイン コントローラーがドメインの最後のドメイン コントローラーであることを確認するには、**[ドメイン内の最後のドメイン コントローラー]** を選択します。
 
-AD DS の削除の詳細については、「 [Active Directory Domain Services を削除する (レベル 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) 」および「[ドメインコントローラーとドメインの降格 &#40;レベル 200&#41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md)」を参照してください。
+AD DS の削除の詳細については、「 [Active Directory Domain Services を削除する (レベル 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) 」および「 [ドメインコントローラーとドメインの降格 &#40;レベル 200&#41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md)」を参照してください。
 
 ## <a name="ad-ds-removal-options-and-warnings"></a><a name="BKMK_RemovalOptionsPage"></a>AD DS の削除のオプションと警告
 [オプションの確認] ページに関するヘルプが必要な場合は、「オプションの確認」を参照してください。
@@ -293,14 +293,14 @@ AD DS の削除の詳細については、「 [Active Directory Domain Services 
 
 ![AD DS インストール](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_RemovalOptions.gif)
 
-AD DS の削除の詳細については、「 [Active Directory Domain Services を削除する (レベル 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) 」および「[ドメインコントローラーとドメインの降格 &#40;レベル 200&#41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md)」を参照してください。
+AD DS の削除の詳細については、「 [Active Directory Domain Services を削除する (レベル 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) 」および「 [ドメインコントローラーとドメインの降格 &#40;レベル 200&#41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md)」を参照してください。
 
 ## <a name="new-administrator-password"></a><a name="BKMK_NewAdminPwdPage"></a>新しい Administrator パスワード
-降格が完了し、コンピューターがドメインメンバーサーバーまたはワークグループコンピューターになると、[**新しい管理者パスワード**] ページでビルトインローカルコンピューターの管理者アカウントのパスワードを入力する必要があります。
+降格が完了し、コンピューターがドメインメンバーサーバーまたはワークグループコンピューターになると、[ **新しい管理者パスワード** ] ページでビルトインローカルコンピューターの管理者アカウントのパスワードを入力する必要があります。
 
 ![AD DS インストール](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_NewAdminPwd.gif)
 
-AD DS の削除の詳細については、「 [Active Directory Domain Services を削除する (レベル 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) 」および「[ドメインコントローラーとドメインの降格 &#40;レベル 200&#41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md)」を参照してください。
+AD DS の削除の詳細については、「 [Active Directory Domain Services を削除する (レベル 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) 」および「 [ドメインコントローラーとドメインの降格 &#40;レベル 200&#41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md)」を参照してください。
 
 ## <a name="review-options"></a><a name="BKMK_ConfirmRoleRemovalPage"></a>オプションの確認
 **[オプションの確認]** ページでは、他の降格を自動的に実行できるように、降格の構成設定を Windows PowerShell スクリプトにエクスポートできます。 AD DS を削除するには **[降格]** をクリックします。

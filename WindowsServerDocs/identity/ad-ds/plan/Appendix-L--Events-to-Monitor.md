@@ -1,23 +1,23 @@
 ---
 ms.assetid: 99a68050-8d19-4c58-ad86-e08a3dcdb4f7
 title: 付録 L-監視するイベント
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 07/30/2018
 ms.topic: article
-ms.openlocfilehash: 2c54a4615cf998b4f8358c71079ebe166bbd1d52
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 69cee9735f4cd59545fca2428702fe2670091ede
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969809"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941232"
 ---
 # <a name="appendix-l-events-to-monitor"></a>付録 L: 監視するイベント
 
 >適用先:Windows Server
 
-次の表に、「[セキュリティ侵害の兆候の監視 Active Directory](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md)」に記載されている推奨事項に従って、ご使用の環境で監視する必要があるイベントを示します。 次の表の "現在の Windows イベント ID" 列には、現在メインストリームサポートにあるバージョンの Windows および Windows Server で実装されているイベント ID が一覧表示されています。
+次の表に、「 [セキュリティ侵害の兆候の監視 Active Directory](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md)」に記載されている推奨事項に従って、ご使用の環境で監視する必要があるイベントを示します。 次の表の "現在の Windows イベント ID" 列には、現在メインストリームサポートにあるバージョンの Windows および Windows Server で実装されているイベント ID が一覧表示されています。
 
 [レガシ Windows イベント ID] 列には、windows XP 以前のバージョンを実行しているクライアントコンピューターや、Windows Server 2003 以前を実行しているサーバーなど、従来のバージョンの Windows で対応するイベント ID が一覧表示されます。 "潜在的な重要度" 列は、攻撃を検出するときにイベントを低、中、または高の重要度と見なすかどうかを指定し、[イベントの概要] 列にはイベントの簡単な説明が表示されます。
 
@@ -406,8 +406,8 @@ ms.locfileid: "87969809"
 |5478|該当なし|低|IPsec サービスが正常に開始しました。|
 
 > [!NOTE]
-> 多くのセキュリティイベント Id とその意味については、「 [Windows セキュリティ監査イベント](https://www.microsoft.com/download/details.aspx?id=50034)」を参照してください。
+> 多くのセキュリティイベント Id とその意味については、「 [Windows セキュリティ監査イベント](https://www.microsoft.com/download/details.aspx?id=50034) 」を参照してください。
 >
-> すべてのセキュリティイベント Id の詳細な一覧を取得するには、 **wevtutil gp/ge/gm: true**を実行します。
+> すべてのセキュリティイベント Id の詳細な一覧を取得するには、 **wevtutil gp/ge/gm: true** を実行します。
 
 Windows セキュリティイベント Id とその意味の詳細については、windows [7 および Windows Server 2008 R2 のセキュリティイベントの](https://support.microsoft.com/kb/977519)Microsoft サポートに関する記事を参照してください。 また、 [windows 7、Windows server 2008 R2](https://www.microsoft.com/download/details.aspx?id=21561) 、 [windows 8、および windows Server 2012 のセキュリティイベントの詳細](https://www.microsoft.com/download/details.aspx?id=35753)については、参照されているオペレーティングシステムの詳細なイベント情報をスプレッドシート形式で提供するセキュリティ監査イベントをダウンロードすることもできます。

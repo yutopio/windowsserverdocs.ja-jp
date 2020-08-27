@@ -1,17 +1,17 @@
 ---
 ms.assetid: 3647b7e3-54a4-46c6-ab68-82fcf3bfacda
 title: フォレスト全体の更新を Active Directory
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
-ms.openlocfilehash: 5f5320129710749b271eee3097d80a6a246265f3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3e1c732bdb941c184c14952a31d902c72933ca88
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953361"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88940652"
 ---
 # <a name="forest-wide-updates"></a>フォレスト全体の更新
 
@@ -25,7 +25,7 @@ Windows Server 2012 以降では、Adprep コマンドは、AD DS のインス�
 
 ## <a name="windows-server-2016-forest-wide-updates"></a>Windows Server 2016: フォレスト全体の更新
 
-Windows Server 2016 (operations 136-142) で**forestprep**コマンドによって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = FORESTUPDATES, Cn = CONFIGURATION, DC = ForestRootDomain オブジェクトの**revision**属性が**16**に設定されます。
+Windows Server 2016 (operations 136-142) で **forestprep** コマンドによって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = FORESTUPDATES, Cn = CONFIGURATION, DC = ForestRootDomain オブジェクトの **revision** 属性が **16**に設定されます。
 
 | 操作番号と GUID | 説明 | 属性 | アクセス許可 |
 |--|--|--|--|
@@ -39,7 +39,7 @@ Windows Server 2016 (operations 136-142) で**forestprep**コマンドによっ�
 
 ## <a name="windows-server-2012-r2-forest-wide-updates"></a>Windows Server 2012 R2: フォレスト全体の更新
 
-Windows Server 2012 R2 (operations 131-135) で**forestprep**コマンドによって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = FORESTUPDATES, Cn = CONFIGURATION, DC = ForestRootDomain オブジェクトの**revision**属性が**15**に設定されます。
+Windows Server 2012 R2 (operations 131-135) で **forestprep** コマンドによって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = FORESTUPDATES, Cn = CONFIGURATION, DC = ForestRootDomain オブジェクトの **revision** 属性が **15**に設定されます。
 
 | 操作番号と GUID | 説明 | 属性 | アクセス許可 |
 |--|--|--|--|
@@ -51,7 +51,7 @@ Windows Server 2012 R2 (operations 131-135) で**forestprep**コマンドによ�
 
 ## <a name="windows-server-2012-forest-wide-updates"></a>Windows Server 2012: フォレスト全体の更新
 
-Windows Server 2012 (operations 84-130) で**forestprep**コマンドによって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = FORESTUPDATES, Cn = CONFIGURATION, DC = ForestRootDomain オブジェクトの**revision**属性が**11**に設定されます。
+Windows Server 2012 (operations 84-130) で **forestprep** コマンドによって実行された操作が完了すると、Cn = ACTIVEDIRECTORYUPDATE, Cn = FORESTUPDATES, Cn = CONFIGURATION, DC = ForestRootDomain オブジェクトの **revision** 属性が **11**に設定されます。
 
 |操作番号と GUID|説明|属性|アクセス許可|
 |-----------------------------|---------------|--------------|---------------|
@@ -95,7 +95,7 @@ Windows Server 2012 (operations 84-130) で**forestprep**コマンドによっ�
 |**操作 121**: {93efec15-4dd9-4850-bc86-a1f2c8e2ebb9}|新しい保有期間のリソースプロパティオブジェクト CN = RetentionPeriod_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services が構成パーティションに作成されました。|-objectClass: Msds-replauthenticationmode-ResourceProperty<br />-description: 保有期間のプロパティは、ファイルを保持する最大期間を指定します。<br />-displayname: 保有期間<br />-Enabled: False<br />-IsUsedAsResourceSecurityAttribute: True<br />-ValueTypeReference: CN = MS-CHAP-SinglevaluedChoice、CN = Value Types、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain>|(D;;SDDT;;;WORD<br />(A;;RPLCLORC;;;AU<br />(A;;RPQ WPCRLCLOCCRCWDWOSW;;;A<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY|
 |**操作 122**: {9e108d96-672f-40f0-b6bd-69ee1f0b7ac4}|新しい保有開始日リソースプロパティオブジェクト CN = RetentionStartDate_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services が構成パーティションに作成されました。|-objectClass: Msds-replauthenticationmode-ResourceProperty<br />-description: retention Start Date プロパティは、保有期間の開始日を定義します。 保有期間は、保有期間の開始日から開始されます。<br />-displayname: リテンション期間の開始日<br />-Enabled: False<br />-IsUsedAsResourceSecurityAttribute: False<br />-ValueTypeReference: CN = MS-DS-DateTime, CN = 値 Types, CN = Claim Configuration, CN = Services, CN = Configuration, CN =<forest root domain>|(D;;SDDT;;;WORD<br />(A;;RPLCLORC;;;AU<br />(A;;RPQ WPCRLCLOCCRCWDWOSW;;;A<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY|
 |**操作 123**: {1e269508-f862-4c4a-b01f-420d26c4ff8c}|新しい会社のリソースプロパティオブジェクト CN = Company_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services が構成パーティションに作成されました。|-objectClass: Msds-replauthenticationmode-ResourceProperty<br />-description: Company プロパティは、リソースが属する会社を指定します。<br />-displayname: Company<br />-Enabled: False<br />-IsUsedAsResourceSecurityAttribute: True<br />-ValueTypeReference: CN = MS-CHAP-SinglevaluedChoice、CN = Value Types、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain>|(D;;SDDT;;;WORD<br />(A;;RPLCLORC;;;AU<br />(A;;RPQ WPCRLCLOCCRCWDWOSW;;;A<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY|
-|**操作 125**: {e1ab17ed-5efb-4691-ad2d-0424592c5755}**メモ:** 操作124が削除されました。|新しいフォルダー使用リソースプロパティオブジェクト CN = FolderUsage_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services が構成パーティションに作成されました。|-objectClass: Msds-replauthenticationmode-ResourceProperty<br />-description: フォルダー Usage プロパティは、フォルダーの目的と、そのフォルダーに格納されているファイルの種類を指定します。<br />-displayname: フォルダーの使用法<br />-Enabled: False<br />-IsUsedAsResourceSecurityAttribute: False<br />-AppliestoResourceTypes:-DS-コンテナー<br />-ValueTypeReference: CN = MS-DS-MultivaluedChoice、CN = Value Types、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain>|(D;;SDDT;;;WORD<br />(A;;RPLCLORC;;;AU<br />(A;;RPQ WPCRLCLOCCRCWDWOSW;;;A<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY|
+|**操作 125**: {e1ab17ed-5efb-4691-ad2d-0424592c5755} **メモ:** 操作124が削除されました。|新しいフォルダー使用リソースプロパティオブジェクト CN = FolderUsage_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services が構成パーティションに作成されました。|-objectClass: Msds-replauthenticationmode-ResourceProperty<br />-description: フォルダー Usage プロパティは、フォルダーの目的と、そのフォルダーに格納されているファイルの種類を指定します。<br />-displayname: フォルダーの使用法<br />-Enabled: False<br />-IsUsedAsResourceSecurityAttribute: False<br />-AppliestoResourceTypes:-DS-コンテナー<br />-ValueTypeReference: CN = MS-DS-MultivaluedChoice、CN = Value Types、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain>|(D;;SDDT;;;WORD<br />(A;;RPLCLORC;;;AU<br />(A;;RPQ WPCRLCLOCCRCWDWOSW;;;A<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY|
 |**操作 126**: {0e848bd4-7c70-48f2-b8fc-00fbaa82e360}|新しいグローバルリソースプロパティリスト構成オブジェクト CN = グローバルリソースプロパティリスト、CN = リソースプロパティリスト、CN = 要求構成、CN = Services が構成パーティションに作成されました。|-objectClass:-ResourcePropertyList<br />-description: これは、アプリケーションで使用できるすべてのリソースプロパティを含む、グローバルなボックス内のリソースプロパティリストです。<br />-showInAdvancedViewOnly: True<br />-MembersOfResourcePropertyList: CN = PII_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = ProtectedHealthInformation_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = RequiredClearance_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = Confidentiality_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = Compliancy_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = Discoverability_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = Immutable_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = IntellectualProperty_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = Department_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = Impact_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = PersonalUse_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = Project_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = RetentionPeriod_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = RetentionStartDate_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = Company_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain><br />-MembersOfResourcePropertyList: CN = FolderUsage_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services、CN = Configuration、CN =<forest root domain>|(D;;SDDT;;;WORD<br />(A;;RPLCLORC;;;AU<br />(A;;RPQ WPCRLCLOCCRCWDWOSW;;;A<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY|
 |**操作 127**: {016f23f7-077d47 1fa356de7cfdb01797}|コールバック関数を呼び出して、表示指定子をアップグレードします。|該当なし|該当なし|
 |**操作 128**: {49c140db-2de3-44c2-a99a-bab2e6d2ba81}|構成パーティションのフォルダー使用リソースプロパティオブジェクト CN = FolderUsage_MS、CN = Resource Properties、CN = Claim Configuration、CN = Services の文字列が更新されました。|-description: フォルダー Usage プロパティは、フォルダーの目的と、そのフォルダーに格納されているファイルの種類を指定します。|該当なし|

@@ -1,17 +1,17 @@
 ---
 ms.assetid: 83f746e5-81db-4610-9977-1d5c57699f50
 title: サイト設計の作成
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b66ffcb88e2f8093cb896f81fb61f815d15d6dea
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cad87edb2c29ea0fa445bc194598dc54996731d5
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938502"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941152"
 ---
 # <a name="creating-a-site-design"></a>サイト設計の作成
 
@@ -37,14 +37,14 @@ ms.locfileid: "87938502"
 
 サイトの作成を決定した場所ごとに、Active Directory Domain Services (AD DS) でサイトオブジェクトの作成を計画します。 "サブネットとサイトの関連付け" ワークシート内のサイトになるドキュメントの場所。
 
-サイトオブジェクトの作成方法の詳細については、「[サイトを作成](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772304(v=ws.11))する」を参照してください。
+サイトオブジェクトの作成方法の詳細については、「 [サイトを作成](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772304(v=ws.11))する」を参照してください。
 
 ## <a name="creating-a-subnet-object-design"></a>サブネットオブジェクトの設計を作成する
 
 各場所に関連付けられているすべての IP サブネットとサブネットマスクについて、サイト内のすべての IP アドレスを表す AD DS でサブネットオブジェクトを作成することを計画します。
 
-Active Directory サブネットオブジェクトを作成すると、ネットワーク IP サブネットとサブネットマスクに関する情報が、ネットワークプレフィックス長表記形式に自動的に変換され <IP address> / <prefix length> ます。 たとえば、サブネットマスク255.255.252.0 を持つネットワーク IP version 4 (IPv4) アドレス172.16.4.0 は、172.16.4.0/22 として表示されます。 IPv4 アドレスに加えて、Windows Server 2008 では IP version 6 (IPv6) のサブネットプレフィックスもサポートされています。たとえば、3FFE: FFFF: 0: C000::/64 のようになります。 各場所の IP サブネットの詳細については、「[ネットワーク情報の収集](../../ad-ds/plan/Collecting-Network-Information.md)」および「[付録 a: 場所とサブネットプレフィックス](Appendix-A--Locations-and-Subnet-Prefixes.md)」の「場所とサブネット」 (DSSTOPO_2.doc) ワークシートを参照してください。
+Active Directory サブネットオブジェクトを作成すると、ネットワーク IP サブネットとサブネットマスクに関する情報が、ネットワークプレフィックス長表記形式に自動的に変換され <IP address> / <prefix length> ます。 たとえば、サブネットマスク255.255.252.0 を持つネットワーク IP version 4 (IPv4) アドレス172.16.4.0 は、172.16.4.0/22 として表示されます。 IPv4 アドレスに加えて、Windows Server 2008 では IP version 6 (IPv6) のサブネットプレフィックスもサポートされています。たとえば、3FFE: FFFF: 0: C000::/64 のようになります。 各場所の IP サブネットの詳細については、「 [ネットワーク情報の収集](../../ad-ds/plan/Collecting-Network-Information.md) 」および「 [付録 a: 場所とサブネットプレフィックス](Appendix-A--Locations-and-Subnet-Prefixes.md)」の「場所とサブネット」 (DSSTOPO_2.doc) ワークシートを参照してください。
 
 各サブネットオブジェクトをサイトオブジェクトに関連付けるには、「サイトになる場所を決定する」の「サブネットをサイトに関連付ける」 (DSSTOPO_6.doc) ワークシートを参照して、どのサブネットをどのサイトに関連付けるかを決定します。 「サブネットとサイトの関連付け」 (DSSTOPO_6.doc) ワークシートの各場所に関連付けられている Active Directory サブネットオブジェクトを文書化します。
 
-サブネットオブジェクトを作成する方法の詳細については、「[サブネットの作成](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770372(v=ws.11))」を参照してください。
+サブネットオブジェクトを作成する方法の詳細については、「 [サブネットの作成](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770372(v=ws.11))」を参照してください。

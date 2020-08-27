@@ -1,17 +1,17 @@
 ---
 ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: SPN と UPN の一意性
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: c3e2cac6cb4d7cb5e76c4c59bfa2b8431f2401c6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cafbc577bd025fc30f409385f51f6981fb3ab81d
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972379"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941382"
 ---
 # <a name="spn-and-upn-uniqueness"></a>SPN と UPN の一意性
 
@@ -34,7 +34,7 @@ Windows Server 2012 R2 のブロックの作成を実行しているドメイン
 
 **テーブル SEQ テーブル \\ \* アラビア語 1: UPN と SPN の一意性**
 
-|機能|解説|
+|特徴量|コメント|
 |-----------|-----------|
 |UPN の一意性|重複する Upn 中断同期の内部設置型 Windows Azure AD ベースのサービスと Office 365 などの AD アカウントです。|
 |SPN の一意性|Kerberos では、相互認証用の Spn が必要です。  Spn が重複すると、認証エラーが発生します。|

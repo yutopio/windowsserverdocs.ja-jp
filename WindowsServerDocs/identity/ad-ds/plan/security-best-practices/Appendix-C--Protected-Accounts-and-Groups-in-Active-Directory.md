@@ -1,17 +1,17 @@
 ---
 ms.assetid: 5b2876ac-fe7d-4054-bfba-b692e57bc0d2
 title: 付録 C-Active Directory の保護されたアカウントとグループ
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: e539a91e4d844074c76f6d1f41eb4e6824db242a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7a62ad9ecd14d4f4a3126d0294c56082e8a5f701
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87963356"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941619"
 ---
 # <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>付録 C: Active Directory の保護されたアカウントとグループ
 
@@ -68,41 +68,41 @@ SDProp は、ドメインの PDC エミュレーター (PDCE) を保持してい
 
 AdminSDHolder の変更をテストするには、手動で SDProp を実行します。これにより、タスクは直ちに実行されますが、スケジュールされた実行には影響しません。 Windows server 2008 以前を実行しているドメインコントローラーと windows server 2012 または Windows Server 2008 R2 を実行しているドメインコントローラーでは、SDProp を手動で実行する方法が少し異なります。
 
-以前のオペレーティングシステムで SDProp を手動で実行する手順については[Microsoft サポートの記事 251343](https://support.microsoft.com/kb/251343)で説明しています。また、古いオペレーティングシステムと新しいオペレーティングシステムの詳細な手順については、以下を参照してください。 どちらの場合も、Active Directory で rootDSE オブジェクトに接続し、rootDSE オブジェクトに対して null の DN を指定して変更操作を実行し、変更する属性として操作の名前を指定する必要があります。 RootDSE オブジェクトでの変更可能な操作の詳細については、MSDN web サイトの「 [rootdse の変更操作](/openspecs/windows_protocols/ms-adts/fc74972f-b267-4c1a-8716-0f5b48cf52b9)」を参照してください。
+以前のオペレーティングシステムで SDProp を手動で実行する手順については [Microsoft サポートの記事 251343](https://support.microsoft.com/kb/251343)で説明しています。また、古いオペレーティングシステムと新しいオペレーティングシステムの詳細な手順については、以下を参照してください。 どちらの場合も、Active Directory で rootDSE オブジェクトに接続し、rootDSE オブジェクトに対して null の DN を指定して変更操作を実行し、変更する属性として操作の名前を指定する必要があります。 RootDSE オブジェクトでの変更可能な操作の詳細については、MSDN web サイトの「 [rootdse の変更操作](/openspecs/windows_protocols/ms-adts/fc74972f-b267-4c1a-8716-0f5b48cf52b9) 」を参照してください。
 
 ###### <a name="running-sdprop-manually-in-windows-server-2008-or-earlier"></a>Windows Server 2008 以前での SDProp の手動実行
 
 Ldp.exe を使用するか、LDAP 変更スクリプトを実行して、強制的に SDProp を実行することができます。 Ldp.exe を使用して SDProp を実行するには、ドメイン内の AdminSDHolder オブジェクトに変更を加えた後で、次の手順を実行します。
 
 1. **Ldp.exe**を起動します。
-2. [Ldp] ダイアログボックスの [**接続**] をクリックし、[**接続**] をクリックします。
+2. [Ldp] ダイアログボックスの [ **接続** ] をクリックし、[ **接続**] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_9.gif)
 
-3. [**接続**] ダイアログボックスで、PDC エミュレーター (pdce) の役割を持つドメインのドメインコントローラーの名前を入力し、[ **OK]** をクリックします。
+3. [ **接続** ] ダイアログボックスで、PDC エミュレーター (pdce) の役割を持つドメインのドメインコントローラーの名前を入力し、[ **OK]** をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_10.png)
 
-4. 次のスクリーンショットの**Dn: (RootDSE)** で示されているように、正常に接続したことを確認します。 [**接続**] をクリックし、[**バインド**] をクリックします。
+4. 次のスクリーンショットの **Dn: (RootDSE)** で示されているように、正常に接続したことを確認します。 [ **接続** ] をクリックし、[ **バインド**] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_11.png)
 
-5. [**バインド**] ダイアログボックスで、rootDSE オブジェクトを変更するアクセス許可を持つユーザーアカウントの資格情報を入力します。 (そのユーザーとしてログオンしている場合は、[現在のログオンユーザー**としてバインド**する] を選択できます)。[ **OK]** をクリックします。
+5. [ **バインド** ] ダイアログボックスで、rootDSE オブジェクトを変更するアクセス許可を持つユーザーアカウントの資格情報を入力します。 (そのユーザーとしてログオンしている場合は、[現在のログオンユーザー **としてバインド** する] を選択できます)。[ **OK]** をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_12.png)
 
-6. バインド操作が完了したら、[**参照**] をクリックし、[**変更**] をクリックします。
+6. バインド操作が完了したら、[ **参照**] をクリックし、[ **変更**] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_13.png)
 
-7. [**変更**] ダイアログボックスで、 **DN**フィールドを空白のままにします。 [**エントリ属性の編集**] フィールドに「 **fixupinheritance**」と入力し、[**値**] フィールドに「 **Yes」** と入力します。 **Enter キーを押し**て、次のスクリーンショットに示すように入力**リスト**を設定します。
+7. [ **変更** ] ダイアログボックスで、 **DN** フィールドを空白のままにします。 [ **エントリ属性の編集** ] フィールドに「 **fixupinheritance**」と入力し、[ **値** ] フィールドに「 **Yes」** と入力します。 **Enter キーを押し**て、次のスクリーンショットに示すように入力**リスト**を設定します。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_14.gif)
 
 8. [設定された変更] ダイアログボックスで、[実行] をクリックし、AdminSDHolder オブジェクトに対して行った変更がそのオブジェクトに表示されていることを確認します。
 
 > [!NOTE]
-> 指定した特権のないアカウントが保護されたグループのメンバーシップを変更することを許可するように AdminSDHolder を変更する方法については、「[付録 I: Active Directory で保護されたアカウントとグループの管理アカウントを作成](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)する」をご覧ください。
+> 指定した特権のないアカウントが保護されたグループのメンバーシップを変更することを許可するように AdminSDHolder を変更する方法については、「 [付録 I: Active Directory で保護されたアカウントとグループの管理アカウントを作成](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)する」をご覧ください。
 
 LDIFDE またはスクリプトを使用して手動で SDProp を実行する場合は、次に示すように、変更エントリを作成できます。
 
@@ -114,31 +114,31 @@ Ldp.exe を使用するか、LDAP 変更スクリプトを実行して、強制�
 
 1. **Ldp.exe**を起動します。
 
-2. [ **Ldp** ] ダイアログボックスで、[**接続**] をクリックし、[**接続**] をクリックします。
+2. [ **Ldp** ] ダイアログボックスで、[ **接続**] をクリックし、[ **接続**] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_16.gif)
 
-3. [**接続**] ダイアログボックスで、PDC エミュレーター (pdce) の役割を持つドメインのドメインコントローラーの名前を入力し、[ **OK]** をクリックします。
+3. [ **接続** ] ダイアログボックスで、PDC エミュレーター (pdce) の役割を持つドメインのドメインコントローラーの名前を入力し、[ **OK]** をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_17.gif)
 
-4. 次のスクリーンショットの**Dn: (RootDSE)** で示されているように、正常に接続したことを確認します。 [**接続**] をクリックし、[**バインド**] をクリックします。
+4. 次のスクリーンショットの **Dn: (RootDSE)** で示されているように、正常に接続したことを確認します。 [ **接続** ] をクリックし、[ **バインド**] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_18.gif)
 
-5. [**バインド**] ダイアログボックスで、rootDSE オブジェクトを変更するアクセス許可を持つユーザーアカウントの資格情報を入力します。 (そのユーザーとしてログオンしている場合は、[**現在のログオンユーザーとしてバインド**する] を選択できます)。[ **OK]** をクリックします。
+5. [ **バインド** ] ダイアログボックスで、rootDSE オブジェクトを変更するアクセス許可を持つユーザーアカウントの資格情報を入力します。 (そのユーザーとしてログオンしている場合は、[ **現在のログオンユーザーとしてバインド**する] を選択できます)。[ **OK]** をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_19.gif)
 
-6. バインド操作が完了したら、[**参照**] をクリックし、[**変更**] をクリックします。
+6. バインド操作が完了したら、[ **参照**] をクリックし、[ **変更**] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_20.gif)
 
-7. [**変更**] ダイアログボックスで、 **DN**フィールドを空白のままにします。 [**エントリ属性の編集**] フィールドに「 **RunProtectAdminGroupsTask**」と入力し、[**値**] フィールドに「 **1**」と入力します。 **Enter キーを押し**て、次に示すように入力リストを設定します。
+7. [ **変更** ] ダイアログボックスで、 **DN** フィールドを空白のままにします。 [ **エントリ属性の編集** ] フィールドに「 **RunProtectAdminGroupsTask**」と入力し、[ **値** ] フィールドに「 **1**」と入力します。 **Enter キーを押し**て、次に示すように入力リストを設定します。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_21.gif)
 
-8. [設定された**変更**] ダイアログボックスで、[**実行**] をクリックし、AdminSDHolder オブジェクトに対して行った変更がそのオブジェクトに表示されていることを確認します。
+8. [設定された **変更** ] ダイアログボックスで、[ **実行**] をクリックし、AdminSDHolder オブジェクトに対して行った変更がそのオブジェクトに表示されていることを確認します。
 
 LDIFDE またはスクリプトを使用して手動で SDProp を実行する場合は、次に示すように、変更エントリを作成できます。
 

@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復-グローバルカタログを削除します。
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 60087a62-11e6-4750-a70e-510f35315688
-ms.openlocfilehash: b05415e73faef73831cccbbd9785dd1cf2d1cf9e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e24449f2debdeeaf1e0ccdaf51a44d041c7dcc61
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969849"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941582"
 ---
 # <a name="ad-forest-recovery---removing-the-global-catalog"></a>AD フォレストの回復-グローバルカタログの削除
 
@@ -23,13 +23,13 @@ ms.locfileid: "87969849"
 
 ## <a name="to-remove-the-global-catalog-using-active-directory-sites-and-services"></a>Active Directory サイトとサービスを使用してグローバルカタログを削除するには
 
-1. サーバーマネージャーを開き、[**ツール**] をクリックして [ **Active Directory サイトとサービス**] をクリックします。
-2. コンソールツリーで、[**サイト**] コンテナを展開し、対象サーバーが含まれている適切なサイトを選択します。
-3. [**サーバー** ] コンテナーを展開し、グローバルカタログを削除する DC の*サーバー*オブジェクトを展開します。
-4. [ **NTDS 設定**] を右クリックし、[**プロパティ**] をクリックします。
-5. [**グローバルカタログ**] チェックボックスをオフにします。
+1. サーバーマネージャーを開き、[ **ツール** ] をクリックして [ **Active Directory サイトとサービス**] をクリックします。
+2. コンソールツリーで、[ **サイト** ] コンテナを展開し、対象サーバーが含まれている適切なサイトを選択します。
+3. [ **サーバー** ] コンテナーを展開し、グローバルカタログを削除する DC の *サーバー* オブジェクトを展開します。
+4. [ **NTDS 設定**] を右クリックし、[ **プロパティ**] をクリックします。
+5. [ **グローバルカタログ** ] チェックボックスをオフにします。
    ![GC の削除](media/AD-Forest-Recovery-Remove-GC/removegc1.png)
-6. **[適用]** をクリックします。
+6. **[Apply]** をクリックします。
 
 ## <a name="to-remove-the-global-catalog-using-repadmin"></a>Repadmin を使用してグローバルカタログを削除するには
 

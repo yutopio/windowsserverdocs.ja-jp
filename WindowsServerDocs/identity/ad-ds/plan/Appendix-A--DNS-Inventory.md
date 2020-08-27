@@ -1,17 +1,17 @@
 ---
 ms.assetid: f3506489-f695-4d7d-b27a-ec714843c002
 title: 付録 A-DNS インベントリ
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 55762c105f6854efe00dae1431502b9623475042
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0258bd54be992dc6804290484ff2c02ea3632a3b
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87941437"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941262"
 ---
 # <a name="appendix-a-dns-inventory"></a>付録 A: DNS インベントリ
 
@@ -21,12 +21,12 @@ ms.locfileid: "87941437"
 
 ## <a name="root-hints"></a>ルート ヒント
 
-|名前|IPv4 アドレス|IPv6 アドレス|
+|Name|IPv4 アドレス|IPv6 アドレス|
 |--------|----------------|----------------|
 ||||
 
 ## <a name="forwarding"></a>ルーティング
 
-|名前|IPv4 アドレス|IPv6 アドレス|物理的な場所|
+|Name|IPv4 アドレス|IPv6 アドレス|物理的な場所|
 |--------|----------------|----------------|---------------------|
 |||||

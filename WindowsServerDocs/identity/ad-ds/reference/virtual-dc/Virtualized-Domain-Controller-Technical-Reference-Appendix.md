@@ -1,17 +1,17 @@
 ---
 ms.assetid: 73a4deba-7da6-4eae-8fdd-2a4d369f9cbb
 title: 仮想化ドメイン コントローラーのテクニカル リファレンスの付録
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 058dbc3082a5d35f29e049d2eb8661e4d2624961
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6387abbe150630d2fd8f6f14724618a6ab32b94a
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954408"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88940282"
 ---
 # <a name="virtualized-domain-controller-technical-reference-appendix"></a>仮想化ドメイン コントローラーのテクニカル リファレンスの付録
 
@@ -23,15 +23,15 @@ ms.locfileid: "87954408"
 
 -   [FixVDCPermissions.ps1](../../../ad-ds/reference/virtual-dc/../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_FixPDCPerms)
 
-## <a name="terminology"></a><a name="BKMK_Terms"></a>関する
+## <a name="terminology"></a><a name="BKMK_Terms"></a>用語
 
 -   **Snapshot** -特定の時点における仮想マシンの状態。 これは、作成された以前のスナップショットのチェーン、ハードウェア、および仮想化プラットフォームに依存します。
 
--   **複製**-仮想マシンの完全で個別のコピー。 これは、仮想ハードウェア (ハイパーバイザー) に依存します。
+-   **複製** -仮想マシンの完全で個別のコピー。 これは、仮想ハードウェア (ハイパーバイザー) に依存します。
 
--   **完全な複製**-完全な複製は、複製操作後に親仮想マシンとリソースを共有しない仮想マシンの独立したコピーです。 完全な複製の継続的な操作は、親のバーチャルマシンと完全に分離されています。
+-   **完全な複製** -完全な複製は、複製操作後に親仮想マシンとリソースを共有しない仮想マシンの独立したコピーです。 完全な複製の継続的な操作は、親のバーチャルマシンと完全に分離されています。
 
--   **差分ディスク**-親仮想マシンと仮想ディスクを継続的に共有する仮想マシンのコピー。 これにより、通常、ディスク領域が節約され、複数の仮想マシンが同じソフトウェアインストールを使用できるようになります。
+-   **差分ディスク** -親仮想マシンと仮想ディスクを継続的に共有する仮想マシンのコピー。 これにより、通常、ディスク領域が節約され、複数の仮想マシンが同じソフトウェアインストールを使用できるようになります。
 
 -   **VM コピー**-仮想マシンのすべての関連ファイルとフォルダーのファイルシステムコピー。
 

@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復-RID プールを生成しています
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4
-ms.openlocfilehash: 624aac31ac92ea16dffcd84a323cc0b13037efde
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 96e27aac4f63008c2ae694c2fe365d6391d3c949
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969919"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941562"
 ---
 # <a name="ad-forest-recovery---raising-the-value-of-available-rid-pools"></a>AD フォレストの回復-使用可能な RID プールの値を上げる
 
@@ -34,39 +34,39 @@ ms.locfileid: "87969919"
 
 ### <a name="to-raise-the-value-of-available-rid-pools-using-adsiedit-and-the-calculator"></a>Adsiedit と電卓を使用して使用可能な RID プールの値を上げるには
 
-1. サーバーマネージャーを開き、[**ツール**] をクリックし、[ **ADSI エディター**] をクリックします。
-2. 右クリックして [**接続**] を選択し、既定の名前付けコンテキストを接続して [ **OK]** をクリックします。
+1. サーバーマネージャーを開き、[ **ツール** ] をクリックし、[ **ADSI エディター**] をクリックします。
+2. 右クリックして [ **接続** ] を選択し、既定の名前付けコンテキストを接続して [ **OK]** をクリックします。
    ![ADSI エディター](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png)
 3. 次の識別名パスを参照します。 **CN = RID Manager $、cn = System、 <domain name> DC =**。
    ![ADSI エディター](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png)
 3. を右クリックし、CN = RID Manager $ のプロパティを選択します。
-4. 属性**rIDAvailablePool**を選択し、[**編集**] をクリックしてから、大きな整数値をクリップボードにコピーします。
+4. 属性 **rIDAvailablePool**を選択し、[ **編集**] をクリックしてから、大きな整数値をクリップボードにコピーします。
    ![ADSI エディター](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png)
-5. 電卓を起動し、[**表示**] メニューの [**科学的モード**] をクリックします。
+5. 電卓を起動し、[ **表示** ] メニューの [ **科学的モード**] をクリックします。
 6. 現在の値に10万を追加します。
    ![ADSI エディター](media/AD-Forest-Recovery-Raise-RID-Pool/adsi4.png)
 7. Ctrl + c キーを使用するか、または [**編集**] メニューの [**コピー** ] コマンドを使用して、値をクリップボードにコピーします。
 8. Adsiedit の [編集] ダイアログで、この新しい値を貼り付けます。
    ![ADSI エディター](media/AD-Forest-Recovery-Raise-RID-Pool/adsi5.png)
-9. ダイアログで [ **OK** ] をクリックし、プロパティシートでを**適用**して**rIDAvailablePool**属性を更新します。
+9. ダイアログで [ **OK** ] をクリックし、プロパティシートでを **適用** して **rIDAvailablePool** 属性を更新します。
 
 ### <a name="to-raise-the-value-of-available-rid-pools-using-ldp"></a>LDP を使用して使用可能な RID プールの値を上げるには
 
-1. コマンドプロンプトで、次のコマンドを入力し、enter キーを押し**ます。**
-2. [**接続**] をクリックし、[**接続**] をクリックして、RID マネージャーの名前を入力し、[ **OK**] をクリックします。
+1. コマンドプロンプトで、次のコマンドを入力し、enter キーを押し **ます。**
+2. [ **接続**] をクリックし、[ **接続**] をクリックして、RID マネージャーの名前を入力し、[ **OK**] をクリックします。
    ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp1.png)
-3. [**接続**] をクリックし、[**バインド**] をクリックして、[**資格情報でバインド**する] を選択し、管理者の資格情報を入力して、[ **OK**] をクリック
+3. [ **接続**] をクリックし、[ **バインド**] をクリックして、[ **資格情報でバインド** する] を選択し、管理者の資格情報を入力して、[ **OK**] をクリック
    ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp2.png)
 4. [**表示**]、[**ツリー** ] の順にクリックし、次の識別名のパスを入力します。 cn = RID Manager $, cn = System, DC =*domain name* 
     ![ LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp3.png)
-5. [**参照**] をクリックし、[**変更**] をクリックします。
-6. 現在の**rIDAvailablePool**値に10万を追加し、合計を**値**に入力します。
+5. [ **参照**] をクリックし、[ **変更**] をクリックします。
+6. 現在の **rIDAvailablePool** 値に10万を追加し、合計を **値**に入力します。
 7. [ **Dn**] に `cn=RID Manager$,cn=System,dc=` *<ドメイン名 \> *を入力します。
-8. [**エントリ属性の編集**] に、「」と入力 `rIDAvailablePool` します。
-9. 操作として [**置換**] を選択し、 **enter キー**を押します。
+8. [ **エントリ属性の編集**] に、「」と入力 `rIDAvailablePool` します。
+9. 操作として [ **置換** ] を選択し、 **enter キー**を押します。
    ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp4.png)
-10. [**実行**] をクリックして操作を実行します。 **[閉じる]** をクリックします。
-11. 変更を検証するには、[**表示**]、[**ツリー**] の順にクリックし、次の識別名のパスを入力します。 cn = RID Manager $, CN = System, DC =*ドメイン名*です。   **RIDAvailablePool**属性を確認します。
+10. [ **実行** ] をクリックして操作を実行します。 **[閉じる]** をクリックします。
+11. 変更を検証するには、[ **表示**]、[ **ツリー**] の順にクリックし、次の識別名のパスを入力します。 cn = RID Manager $, CN = System, DC =*ドメイン名*です。   **RIDAvailablePool**属性を確認します。
    ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp5.png)
 
 ## <a name="next-steps"></a>次の手順

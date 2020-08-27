@@ -1,17 +1,17 @@
 ---
 ms.assetid: 8f994e2e-6c07-43f0-aef4-75f8b2c9a144
 title: セキュリティが強化された環境を維持する
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d4ddefda4ce9488320927542dcd24b9ac092bdb4
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 7cde4344a28888c997cfb751b2943429fbc4e686
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994314"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941412"
 ---
 # <a name="maintaining-a-more-secure-environment"></a>セキュリティが強化された環境を維持する
 
@@ -70,5 +70,5 @@ Active Directory でユーザーアカウントを作成すると、オブジェ
 
 ビジネス情報をインフラストラクチャに統合することにより、そのビジネス情報を使用して誤検知を識別できます。 たとえば、役員旅行が、環境の監視を担当する IT スタッフにアクセスできるカレンダーに記録されている場合、接続試行を役員の既知の場所と関連付けることができます。
 
-経営陣は通常シカゴにあり、セキュリティで保護されたワークステーションを使用してデスクからのビジネスクリティカルなデータにアクセスします。イベントは、アトランタにあるセキュリティで保護されていないワークステーションからのデータにアクセスしようとしたときに発生します。 役員が現在アトランタにあるかどうかを確認できる場合は、役員または役員のアシスタントに連絡して、セキュリティで保護されたワークステーションを使用してデータにアクセスできなかったことが役員によるものかどうかを判断して、イベントを解決できます。 「[セキュリティ侵害の計画](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md)」で説明されている方法を使用するプログラムを作成することによって、Active Directory のインストールで最も重要なアカウントに対して想定される動作のデータベースの構築を開始し、攻撃を迅速に検出して対応できるようにすることができます。
+経営陣は通常シカゴにあり、セキュリティで保護されたワークステーションを使用してデスクからのビジネスクリティカルなデータにアクセスします。イベントは、アトランタにあるセキュリティで保護されていないワークステーションからのデータにアクセスしようとしたときに発生します。 役員が現在アトランタにあるかどうかを確認できる場合は、役員または役員のアシスタントに連絡して、セキュリティで保護されたワークステーションを使用してデータにアクセスできなかったことが役員によるものかどうかを判断して、イベントを解決できます。 「 [セキュリティ侵害の計画](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md)」で説明されている方法を使用するプログラムを作成することによって、Active Directory のインストールで最も重要なアカウントに対して想定される動作のデータベースの構築を開始し、攻撃を迅速に検出して対応できるようにすることができます。
 

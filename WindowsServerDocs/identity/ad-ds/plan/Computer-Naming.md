@@ -1,17 +1,17 @@
 ---
 ms.assetid: f7002265-60fa-40b8-9dd7-4bf131d9320a
 title: コンピューターの名前付け
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 37f877b3165f5de31c8a26ae4000b8064362fa17
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 59b6be118a93881d5800e2f0032e0738c7e3bdfa
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947850"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941192"
 ---
 # <a name="computer-naming"></a>コンピューターの名前付け
 
@@ -21,4 +21,4 @@ Windows 2000、Windows XP、Windows Server 2003、Windows Server 2008、また�
 
 DNS ゾーンに静的に入力された、または統合 DNS/動的ホスト構成プロトコル (DHCP) サーバーサービスによって登録された別の DNS ドメイン名がコンピューターに既に存在する場合、コンピューターの FQDN は、以前に登録された名前とは異なります。 コンピューターは、どちらの名前でも参照できます。
 
-Active Directory Domain Services (AD DS) の名前付け規則の詳細については、「[コンピューター、ドメイン、サイト、および ou の Active Directory の名前付け規則](https://support.microsoft.com/help/909264/)」を参照してください。
+Active Directory Domain Services (AD DS) の名前付け規則の詳細については、「 [コンピューター、ドメイン、サイト、および ou の Active Directory の名前付け規則](https://support.microsoft.com/help/909264/)」を参照してください。

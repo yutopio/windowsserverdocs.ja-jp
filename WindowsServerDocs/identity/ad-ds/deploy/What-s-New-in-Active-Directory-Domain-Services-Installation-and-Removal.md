@@ -1,17 +1,17 @@
 ---
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: Active Directory Domain Services のインストールと削除の新機能
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 09863123a69eec72b3d8bfaaf138bb2d2562f687
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 9658fe8ea7c9c11cda10989bfe9d1568c21d9704
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994508"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88940592"
 ---
 # <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Active Directory Domain Services のインストールと削除の新機能
 
@@ -121,7 +121,7 @@ AD DS インストール ウィザードでは、インストールが開始さ�
 
 ## <a name="system-requirements"></a><a name="BKMK_SystemReqs"></a>システム要件
 
-Windows server 2012 のシステム要件は、Windows Server 2008 R2 から変更されていません。 詳細については、「 [Windows Server 2008 R2 SP1 のシステム要件](https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx)」 () を参照してください https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) 。
+Windows server 2012 のシステム要件は、Windows Server 2008 R2 から変更されていません。 詳細については、「 [Windows Server 2008 R2 SP1 のシステム要件](https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) 」 () を参照してください https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) 。
 
 機能によっては、追加の要件がある場合があります。 たとえば、仮想ドメインコントローラーの複製機能を使用するには、PDC エミュレーターが Windows Server 2012 を実行し、Hyper-v の役割がインストールされた Windows Server 2012 を実行しているコンピューターが必要です。
 

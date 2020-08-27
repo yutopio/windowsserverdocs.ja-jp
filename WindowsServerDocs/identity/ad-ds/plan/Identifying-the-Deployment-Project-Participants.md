@@ -1,17 +1,17 @@
 ---
 ms.assetid: 50bd2566-e03c-4884-b5c4-895c8aab80aa
 title: 展開プロジェクトの参加者を識別する
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 16edfc28e90ca5e5755305a1e95c338b604a72f2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5330b9ea3d06ce122708a87b396ee38f465f58b3
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87959050"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941062"
 ---
 # <a name="identifying-the-deployment-project-participants"></a>展開プロジェクトの参加者を識別する
 
@@ -249,4 +249,4 @@ Active Directory 配置チームには、次のメンバーが含まれていま
 デプロイチームは、デプロイフェーズ中にサービス管理者とデータ管理者と連携して、運用チームのメンバーが新しい設計に習熟していることを確認します。 これにより、配置操作が完了したときに、所有権をスムーズに移行することができます。 デプロイプロセスが完了すると、新しい Active Directory 環境を維持する責任が運用チームに渡されます。
 
 ### <a name="documenting-the-design-and-deployment-teams"></a>設計チームと展開チームのドキュメント
-AD DS の設計と展開に参加するユーザーの名前と連絡先情報を文書化します。 設計チームと配置チームで、各ロールの責任者を特定します。 この一覧には、フォレストの所有者、プロジェクトマネージャー、およびプロジェクトアーキテクトが含まれています。 デプロイするフォレストの数を決定するときに、追加のフォレストに対して新しい設計チームを作成することが必要になる場合があります。 チームメンバーシップの変更に合わせてドキュメントを更新する必要があることに注意してください。設計プロセス中にさまざまな Active Directory 所有者を識別するためです。 各フォレストの設計チームと展開チームのドキュメントを作成するのに役立つワークシートについては、「 [Windows Server 2003 Deployment Kit のジョブエイド](https://microsoft.com/download/details.aspx?id=9608)」から Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードし、「設計と展開のチーム情報」 (DSSLOGI_1.doc) を参照してください。
+AD DS の設計と展開に参加するユーザーの名前と連絡先情報を文書化します。 設計チームと配置チームで、各ロールの責任者を特定します。 この一覧には、フォレストの所有者、プロジェクトマネージャー、およびプロジェクトアーキテクトが含まれています。 デプロイするフォレストの数を決定するときに、追加のフォレストに対して新しい設計チームを作成することが必要になる場合があります。 チームメンバーシップの変更に合わせてドキュメントを更新する必要があることに注意してください。設計プロセス中にさまざまな Active Directory 所有者を識別するためです。 各フォレストの設計チームと展開チームのドキュメントを作成するのに役立つワークシートについては、「 [Windows Server 2003 Deployment Kit のジョブエイド](https://microsoft.com/download/details.aspx?id=9608) 」から Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードし、「設計と展開のチーム情報」 (DSSLOGI_1.doc) を参照してください。

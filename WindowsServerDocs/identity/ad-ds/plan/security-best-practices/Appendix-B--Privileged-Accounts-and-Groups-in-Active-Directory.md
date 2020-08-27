@@ -1,17 +1,17 @@
 ---
 ms.assetid: 79b9c912-ea3e-4679-ab41-893e096c4d09
 title: 付録 B-Active Directory の特権アカウントとグループ
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: dbccc8f7adac03815c6ced2ceee22210d44dbce9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 22bcea1426502af83fdeeecb0005324de2d54e64
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87963260"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941572"
 ---
 # <a name="appendix-b-privileged-accounts-and-groups-in-active-directory"></a>付録 B: Active Directory の特権アカウントとグループ
 
@@ -27,7 +27,7 @@ Active Directory の "Privileged" アカウントとグループは、強力な�
 権利、アクセス許可、および特権の違いは、Microsoft のドキュメント内でも、混乱を招く可能性があります。 このセクションでは、このドキュメントで使用される各の特性について説明します。 これらの説明は、これらの用語を異なる方法で使用する可能性があるため、他の Microsoft ドキュメントに対して権威を持つものとは見なさないでください。
 
 #### <a name="rights-and-privileges"></a>権限と特権
-権限と特権は、実質的には、ユーザー、サービス、コンピューター、グループなどのセキュリティプリンシパルに付与されるシステム全体の機能と同じです。 通常、IT プロフェッショナルが使用するインターフェイスでは、これらは "権限" または "ユーザー権利" と呼ばれ、グループポリシーオブジェクトによって割り当てられることがよくあります。 次のスクリーンショットは、セキュリティプリンシパルに割り当てることができる最も一般的なユーザー権利の一部を示しています (Windows Server 2012 ドメインの既定のドメインコントローラー GPO を表します)。 これらの権限の一部は Active Directory に適用されます。たとえば、[**コンピューターアカウントとユーザーアカウントを委任に対して信頼できる**ようにする] ユーザー権利は、Windows オペレーティングシステムに適用されます (**システム時刻の変更**など)。
+権限と特権は、実質的には、ユーザー、サービス、コンピューター、グループなどのセキュリティプリンシパルに付与されるシステム全体の機能と同じです。 通常、IT プロフェッショナルが使用するインターフェイスでは、これらは "権限" または "ユーザー権利" と呼ばれ、グループポリシーオブジェクトによって割り当てられることがよくあります。 次のスクリーンショットは、セキュリティプリンシパルに割り当てることができる最も一般的なユーザー権利の一部を示しています (Windows Server 2012 ドメインの既定のドメインコントローラー GPO を表します)。 これらの権限の一部は Active Directory に適用されます。たとえば、[ **コンピューターアカウントとユーザーアカウントを委任に対して信頼できる** ようにする] ユーザー権利は、Windows オペレーティングシステムに適用されます ( **システム時刻の変更**など)。
 
 ![特権アカウントとグループ](media/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory/SAD_8.gif)
 

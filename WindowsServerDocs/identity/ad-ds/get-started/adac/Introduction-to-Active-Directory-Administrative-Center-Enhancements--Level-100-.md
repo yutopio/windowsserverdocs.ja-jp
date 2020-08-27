@@ -1,17 +1,17 @@
 ---
 ms.assetid: 074e63e9-976c-49da-8cba-9ae0b3325e34
 title: Introduction to Active Directory Administrative Center Enhancements (Level 100)
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: f494fc09027b17d2110731d73d3d8de6d0496342
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a7639fccf472d3b23b06a64dc0e621cfa4f8bb37
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957029"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88940112"
 ---
 # <a name="introduction-to-active-directory-administrative-center-enhancements-level-100"></a>Introduction to Active Directory Administrative Center Enhancements (Level 100)
 
@@ -46,7 +46,7 @@ Windows Server で Active Directory のごみ箱を有効にする予定があ�
     > [!NOTE]
     > **サーバーマネージャー**を使用すると、リモートサーバー管理ツール (RSAT) をインストールして、正しいバージョンの Active Directory 管理センターを使用して、ユーザーインターフェイスからごみ箱を管理できます。
     >
-    > RSAT のインストールの詳細については、「[リモートサーバー管理ツール](../../../../remote/remote-server-administration-tools.md)」を参照してください。
+    > RSAT のインストールの詳細については、「 [リモートサーバー管理ツール](../../../../remote/remote-server-administration-tools.md)」を参照してください。
 
 ### <a name="active-directory-recycle-bin-step-by-step"></a>Active Directory のごみ箱の手順
 
@@ -123,7 +123,7 @@ Enable-ADOptionalFeature -Identity 'CN=Recycle Bin Feature,CN=Optional Features,
    - フル ネーム: test1
    - ユーザー SAM アカウント名ログオン: test1
    - パスワード: p@ssword1
-   - パスワードの確認入力:p@ssword1
+   - パスワードの確認入力: p@ssword1
 
 5. 前の手順を繰り返して 2 つ目のユーザー test2 を作成します。
 
@@ -150,7 +150,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 #### <a name="to-create-an-organizational-unit"></a>組織単位を作成するには
 
 1. Windows PowerShell アイコンを右クリックして、クリックして **管理者として実行** と種類 **dsac.exe** ADAC を開きます。
-2. [**管理**] をクリックし、[**ナビゲーションノードの追加**] をクリックして、[**ナビゲーションノードの追加**] ダイアログボックスで適切なターゲットドメインを選択し、[OK] をクリックします。
+2. [ **管理**] をクリックし、[ **ナビゲーションノードの追加** ] をクリックして、[ **ナビゲーションノードの追加** ] ダイアログボックスで適切なターゲットドメインを選択し、[OK] をクリックします。
 3. **[タスク]** ウィンドウの **[新規]** をクリックし、**[組織単位]** をクリックします。
 4. **[組織単位]** に次の情報を入力して **[OK]** をクリックします。
 
@@ -242,7 +242,7 @@ Windows Server 2012 で細かいパスワードポリシーを使用する場合
     > [!NOTE]
     > **サーバーマネージャー**を使用すると、リモートサーバー管理ツール (RSAT) をインストールして、正しいバージョンの Active Directory 管理センターを使用して、ユーザーインターフェイスからごみ箱を管理できます。
     >
-    > RSAT のインストールの詳細については、「[リモートサーバー管理ツール](../../../../remote/remote-server-administration-tools.md)」を参照してください。
+    > RSAT のインストールの詳細については、「 [リモートサーバー管理ツール](../../../../remote/remote-server-administration-tools.md)」を参照してください。
 
 ### <a name="fine-grained-password-policy-step-by-step"></a>細かい設定が可能なパスワード ポリシーの手順
 
@@ -280,7 +280,7 @@ Set-ADDomainMode -Identity contoso.com -DomainMode 3
 
 #### <a name="step-2-create-test-users-group-and-organizational-unit"></a><a name="bkmk2_test_fgpp"></a>手順 2:テスト用のユーザー、グループ、組織単位を作成する
 
-この手順に必要なテストユーザーとグループを作成するには、次の手順に従います。[手順 3: テストユーザー、グループ、組織単位を作成](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env)する (詳細なパスワードポリシーを示すために OU を作成する必要はありません)。
+この手順に必要なテストユーザーとグループを作成するには、次の手順に従います。 [手順 3: テストユーザー、グループ、組織単位を作成](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) する (詳細なパスワードポリシーを示すために OU を作成する必要はありません)。
 
 #### <a name="step-3-create-a-new-fine-grained-password-policy"></a><a name="bkmk_create_fgpp"></a>手順 3:新しい細かい設定が可能なパスワード ポリシーを作成する
 
@@ -403,7 +403,7 @@ Windows Server 2012 以降で Windows PowerShell 履歴ビューアーを使用�
     > [!NOTE]
     > **サーバーマネージャー**を使用すると、リモートサーバー管理ツール (RSAT) をインストールして、正しいバージョンの Active Directory 管理センターを使用して、ユーザーインターフェイスからごみ箱を管理できます。
     >
-    > RSAT のインストールの詳細については、「[リモートサーバー管理ツール](../../../../remote/remote-server-administration-tools.md)」を参照してください。
+    > RSAT のインストールの詳細については、「 [リモートサーバー管理ツール](../../../../remote/remote-server-administration-tools.md)」を参照してください。
 
 - Windows PowerShell についての基本的な知識があること。 たとえば、Windows PowerShell のパイプ処理についての知識が必要です。 Windows PowerShell のパイプ処理の詳細については、「 [Piping and the Pipeline in Windows PowerShell (Windows PowerShell のパイプ処理とパイプライン)](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176927(v=technet.10))」を参照してください。
 

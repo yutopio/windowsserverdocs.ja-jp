@@ -1,17 +1,17 @@
 ---
 ms.assetid: b11f7a65-ec7b-4c11-8dc4-d7cabb54cd94
 title: Active Directory レプリケーションの問題のトラブルシューティングに関するページ
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 630ba90cd2e5c00753b707754d32530b38c8db8d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2ceb13e3729310e01063c0c5c3694806b1565363
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87941621"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941492"
 ---
 # <a name="troubleshooting-active-directory-replication-problems"></a>Active Directory レプリケーションの問題のトラブルシューティングに関するページ
 
@@ -56,11 +56,11 @@ Repadmin を使用したレプリケーションの問題のトラブルシュ�
 
 ### <a name="firewall-configuration"></a>ファイアウォールの構成
 
-既定では、Active Directory レプリケーションのリモートプロシージャコール (Rpc) は、ポート135で RPC エンドポイントマッパー (RPCSS) を介して使用可能なポートを介して動的に実行されます。 セキュリティが強化された Windows ファイアウォールとその他のファイアウォールが、レプリケーションを許可するように正しく構成されていることを確認します。 Active Directory レプリケーションとポート設定のポートを指定する方法の詳細について[は、Microsoft サポート技術情報の記事 224196](https://go.microsoft.com/fwlink/?LinkId=22578)を参照してください。
+既定では、Active Directory レプリケーションのリモートプロシージャコール (Rpc) は、ポート135で RPC エンドポイントマッパー (RPCSS) を介して使用可能なポートを介して動的に実行されます。 セキュリティが強化された Windows ファイアウォールとその他のファイアウォールが、レプリケーションを許可するように正しく構成されていることを確認します。 Active Directory レプリケーションとポート設定のポートを指定する方法の詳細について [は、Microsoft サポート技術情報の記事 224196](https://go.microsoft.com/fwlink/?LinkId=22578)を参照してください。
 
 レプリケーション Active Directory で使用するポートの詳細については、「 [Active Directory レプリケーションツールと設定](https://go.microsoft.com/fwlink/?LinkId=123774)」を参照してください。
 
-ファイアウォール経由で Active Directory レプリケーションを管理する方法の詳細については、「[ファイアウォール経由のレプリケーションの Active Directory](https://go.microsoft.com/fwlink/?LinkId=123775)」を参照してください。
+ファイアウォール経由で Active Directory レプリケーションを管理する方法の詳細については、「 [ファイアウォール経由のレプリケーションの Active Directory](https://go.microsoft.com/fwlink/?LinkId=123775)」を参照してください。
 
 ## <a name="responding-to-failure-of-an-outdated-server-running-windows-2000-server"></a>Windows 2000 Server を実行している古いサーバーの障害への対応
 
@@ -91,13 +91,13 @@ Windows 2000 Server を実行しているドメインコントローラが廃棄
 
 1. レプリケーションの正常性を毎日監視するか、Repadmin.exe を使用して毎日レプリケーションの状態を取得します。
 2. 「イベントメッセージとこのガイド」で説明されている方法を使用して、報告されたエラーを適切なタイミングで解決しようとします。 ソフトウェアが問題の原因になっている可能性がある場合は、他のソリューションを続行する前に、ソフトウェアをアンインストールしてください。
-3. レプリケーションが失敗する原因となっている問題が、既知の方法で解決できない場合は、サーバーから AD DS を削除し、AD DS を再インストールします。 AD DS の再インストールの詳細については、「[ドメインコントローラーの使用を停止する](https://go.microsoft.com/fwlink/?LinkId=128290)」を参照してください。
+3. レプリケーションが失敗する原因となっている問題が、既知の方法で解決できない場合は、サーバーから AD DS を削除し、AD DS を再インストールします。 AD DS の再インストールの詳細については、「 [ドメインコントローラーの使用を停止する](https://go.microsoft.com/fwlink/?LinkId=128290)」を参照してください。
 4. サーバーがネットワークに接続されている間に AD DS を正常に削除できない場合は、次のいずれかの方法を使用して問題を解決します。
 
    - ディレクトリサービス復元モード (DSRM) で AD DS 削除を強制し、サーバーメタデータをクリーンアップしてから AD DS を再インストールします。
    - オペレーティングシステムを再インストールし、ドメインコントローラーを再構築します。
 
-AD DS を強制的に削除する方法の詳細については、「[ドメインコントローラーを強制的に削除](https://go.microsoft.com/fwlink/?LinkId=128291)する」を参照してください。
+AD DS を強制的に削除する方法の詳細については、「 [ドメインコントローラーを強制的に削除](https://go.microsoft.com/fwlink/?LinkId=128291)する」を参照してください。
 
 ## <a name="using-repadmin-to-retrieve-replication-statustitle"></a>Repadmin を使用してレプリケーションの状態を取得する</title>
 
@@ -114,7 +114,7 @@ AD DS を強制的に削除する方法の詳細については、「[ドメイ�
 
 フォレスト内のすべてのドメインコントローラーのレプリケーションの状態を取得するには、次の手順を実行します。
 
-要件
+必要条件
 
 この手順を完了するには、少なくとも、**Enterprise Admins** グループ、またはそれと同等の権限を持つグループのメンバーである必要があります。
 
@@ -126,7 +126,7 @@ AD DS を強制的に削除する方法の詳細については、「[ドメイ�
 ### <a name="to-generate-a-repadmin-showrepl-spreadsheet-for-domain-controllers"></a>ドメインコントローラーの repadmin/showrepl スプレッドシートを生成するには
 
 1. 管理者としてコマンドプロンプトを開きます。 [スタート] メニューで、[コマンドプロンプト] を右クリックし、[管理者として実行] をクリックします。 [ユーザーアカウント制御] ダイアログボックスが表示されたら、必要に応じて Enterprise Admins の資格情報を入力し、[続行] をクリックします。
-2. コマンドプロンプトで、次のコマンドを入力し、enter キーを押します。`repadmin /showrepl * /csv > showrepl.csv`
+2. コマンドプロンプトで、次のコマンドを入力し、enter キーを押します。 `repadmin /showrepl * /csv > showrepl.csv`
 3. Excel を開きます。
 4. [Office] ボタンをクリックし、[開く] をクリックして showrepl.csv に移動し、[開く] をクリックします。
 5. 次のように、列 A とトランスポートの種類の列を非表示または削除します。
@@ -149,11 +149,11 @@ AD DS を強制的に削除する方法の詳細については、「[ドメイ�
 
 レプリケーションの問題は、イベントメッセージと、アプリケーションまたはサービスが操作を試行したときに発生するさまざまなエラーメッセージで報告されます。 これらのメッセージは、監視アプリケーションによって収集されるか、またはレプリケーションの状態を取得するときに使用するのが理想的です。
 
-ほとんどのレプリケーションの問題は、ディレクトリサービスのイベントログに記録されるイベントメッセージで識別されます。 レプリケーションの問題は、 <system>repadmin/showrepl</system>コマンドの出力でエラーメッセージの形式で識別されることもあります。
+ほとんどのレプリケーションの問題は、ディレクトリサービスのイベントログに記録されるイベントメッセージで識別されます。 レプリケーションの問題は、 <system>repadmin/showrepl</system> コマンドの出力でエラーメッセージの形式で識別されることもあります。
 
 ### <a name="repadmin-showrepl-error-messages-that-indicate-replication-problems"></a>レプリケーションの問題を示す repadmin/showrepl エラーメッセージ
 
-Active Directory レプリケーションの問題を特定するには、前のセクションで説明したように、 <system>repadmin/showrepl</system>コマンドを使用します。 次の表は、このコマンドによって生成されるエラーメッセージとエラーの根本原因、およびエラーの解決策を提供するトピックへのリンクを示しています。
+Active Directory レプリケーションの問題を特定するには、前のセクションで説明したように、 <system>repadmin/showrepl</system> コマンドを使用します。 次の表は、このコマンドによって生成されるエラーメッセージとエラーの根本原因、およびエラーの解決策を提供するトピックへのリンクを示しています。
 
 |Repadmin エラー|根本原因|解決策|
 | --- | --- | --- |

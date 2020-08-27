@@ -1,17 +1,17 @@
 ---
 ms.assetid: a91339ef-6ad4-445f-8ecc-a95fbcc04296
 title: Active Directory の設計と計画について
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: b735852f8e2428c3d6375a3168f204e403a461f5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 935ed41c8c821621df829a87d561a2decadd8b07
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87941458"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941282"
 ---
 # <a name="ad-ds-design-and-planning"></a>Active Directory の設計と計画について
 
@@ -27,7 +27,7 @@ ms.locfileid: "87941458"
 
 このガイドに記載されている戦略は、ほぼすべてのサーバーオペレーティングシステムの展開に適していますが、10万人未満のユーザーが含まれ、1000サイトよりも少ない環境に対しては、特に28.8 キロビット/秒 (Kbps) のネットワーク接続を使用してテストおよび検証されています。 環境がこれらの条件を満たしていない場合は、より複雑な環境で AD DS のデプロイ経験を持つコンサルティング会社を使用することを検討してください。
 
-AD DS のデプロイプロセスのテストの詳細については、「[デプロイプロセスのテストと検証](/previous-versions/windows/it-pro/windows-server-2003/cc772722(v=ws.10))」を参照してください。
+AD DS のデプロイプロセスのテストの詳細については、「 [デプロイプロセスのテストと検証](/previous-versions/windows/it-pro/windows-server-2003/cc772722(v=ws.10))」を参照してください。
 
 ## <a name="in-this-guide"></a>このガイドの内容
 

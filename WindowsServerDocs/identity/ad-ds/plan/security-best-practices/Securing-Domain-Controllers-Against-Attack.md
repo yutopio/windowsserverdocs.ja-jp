@@ -1,17 +1,17 @@
 ---
 ms.assetid: ba28bd05-16e6-465f-982b-df49633cfde4
 title: 攻撃に対してドメイン コントローラーをセキュリティで保護する
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 06/18/2017
 ms.topic: article
-ms.openlocfilehash: 0ac2a3b67b0c3407db017c63d5e5187d36f08aa5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7fe76d6e6f2bb640e69b46faacacf87f533ad80d
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958850"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941362"
 ---
 # <a name="securing-domain-controllers-against-attack"></a>攻撃に対してドメイン コントローラーをセキュリティで保護する
 
@@ -51,7 +51,7 @@ ms.locfileid: "87958850"
 
 ### <a name="remote-locations-with-limited-space-and-security"></a>領域とセキュリティが制限されたリモートの場所
 
-1台の物理サーバーのみをインストールできる場所がインフラストラクチャに含まれている場合は、仮想化ワークロードを実行できるサーバーをリモートの場所にインストールし、サーバー内のすべてのボリュームを保護するように BitLocker ドライブ暗号化を構成する必要があります。 サーバー上の1台の仮想マシンで、ホスト上で別の仮想マシンとして実行されている他のサーバーを使用して、RODC を実行する必要があります。 RODC の展開の計画に関する情報については、 [「読み取り専用ドメインコントローラーの計画と展開ガイド](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771744(v=ws.10))」を参照してください。 仮想化ドメインコントローラーの展開とセキュリティ保護の詳細については、「 [hyper-v でのドメインコントローラーの実行](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd363553(v=ws.10))」を参照してください。 Hyper-v のセキュリティ強化、仮想マシンの管理の委任、および仮想マシンの保護に関する詳細なガイダンスについては、Microsoft web サイトの「 [Hyper-v セキュリティガイド](https://www.microsoft.com/download/details.aspx?id=16650)ソリューションアクセラレータ」を参照してください。
+1台の物理サーバーのみをインストールできる場所がインフラストラクチャに含まれている場合は、仮想化ワークロードを実行できるサーバーをリモートの場所にインストールし、サーバー内のすべてのボリュームを保護するように BitLocker ドライブ暗号化を構成する必要があります。 サーバー上の1台の仮想マシンで、ホスト上で別の仮想マシンとして実行されている他のサーバーを使用して、RODC を実行する必要があります。 RODC の展開の計画に関する情報については、 [「読み取り専用ドメインコントローラーの計画と展開ガイド](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771744(v=ws.10))」を参照してください。 仮想化ドメインコントローラーの展開とセキュリティ保護の詳細については、「 [hyper-v でのドメインコントローラーの実行](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd363553(v=ws.10))」を参照してください。 Hyper-v のセキュリティ強化、仮想マシンの管理の委任、および仮想マシンの保護に関する詳細なガイダンスについては、Microsoft web サイトの「 [Hyper-v セキュリティガイド](https://www.microsoft.com/download/details.aspx?id=16650) ソリューションアクセラレータ」を参照してください。
 
 ## <a name="domain-controller-operating-systems"></a>ドメインコントローラーのオペレーティングシステム
 
@@ -67,7 +67,7 @@ Windows に既定でインストールされている、無償で利用可能な
 
 ### <a name="microsoft-security-compliance-toolkit"></a>Microsoft セキュリティコンプライアンスツールキット
 
-[Microsoft セキュリティコンプライアンスツールキット](https://microsoft.com/download/details.aspx?id=55319)のドメインコントローラー設定をセキュリティ構成ウィザードの設定と組み合わせると、Active Directory のドメインコントローラー OU に展開されている gpo によって展開および適用されるドメインコントローラーの包括的な構成基準を作成できます。
+[Microsoft セキュリティコンプライアンスツールキット](https://microsoft.com/download/details.aspx?id=55319) のドメインコントローラー設定をセキュリティ構成ウィザードの設定と組み合わせると、Active Directory のドメインコントローラー OU に展開されている gpo によって展開および適用されるドメインコントローラーの包括的な構成基準を作成できます。
 
 ### <a name="rdp-restrictions"></a>RDP の制限
 
@@ -81,7 +81,7 @@ Windows に既定でインストールされている、無償で利用可能な
 
 Active Directory セキュリティ評価の一部として実行されるチェックの1つは、ドメインコントローラーでの Internet Explorer の使用と構成です。 Internet Explorer (またはその他の web ブラウザー) はドメインコントローラーでは使用しないでください。しかし、多数のドメインコントローラーを分析することで、多くの場合、特権のあるユーザーが Internet Explorer を使用して組織のイントラネットまたはインターネットを参照することが明らかになりました。
 
-セキュリティを[侵害する手段](../../../ad-ds/plan/security-best-practices/Avenues-to-Compromise.md)について前述したように、高い特権を持つアカウント (既定ではドメインコントローラーへのローカルログオンが許可されている唯一のアカウント) を使用して、Windows インフラストラクチャ内の最も強力なコンピューターからインターネット (または感染したイントラネット) を参照すると、組織のセキュリティに大きなリスクが生じます。 ダウンロードによってドライブを使用する場合でも、マルウェアに感染したユーティリティをダウンロードする場合でも、攻撃者は、Active Directory 環境を完全に侵害したり破壊したりするために必要なすべてのものにアクセスできます。
+セキュリティを [侵害する手段](../../../ad-ds/plan/security-best-practices/Avenues-to-Compromise.md)について前述したように、高い特権を持つアカウント (既定ではドメインコントローラーへのローカルログオンが許可されている唯一のアカウント) を使用して、Windows インフラストラクチャ内の最も強力なコンピューターからインターネット (または感染したイントラネット) を参照すると、組織のセキュリティに大きなリスクが生じます。 ダウンロードによってドライブを使用する場合でも、マルウェアに感染したユーティリティをダウンロードする場合でも、攻撃者は、Active Directory 環境を完全に侵害したり破壊したりするために必要なすべてのものにアクセスできます。
 
 Windows Server 2012、Windows Server 2008 R2、Windows Server 2008、および Internet Explorer の現在のバージョンでは、悪意のあるダウンロードに対するさまざまな保護が提供されています。ただし、ほとんどの場合、ドメインコントローラーと特権アカウントを使用してインターネットを参照しているか、ドメインコントローラーで Windows Server 2003 が実行されています。
 
@@ -89,7 +89,7 @@ Windows Server 2012、Windows Server 2008 R2、Windows Server 2008、および I
 
 ### <a name="perimeter-firewall-restrictions"></a>境界ファイアウォールの制限
 
-境界ファイアウォールは、ドメインコントローラーからインターネットへの送信接続をブロックするように構成する必要があります。 ドメインコントローラーはサイトの境界を越えて通信する必要がある場合がありますが、境界ファイアウォールを構成してサイト間通信を許可することができます。そのためには、Microsoft サポート web サイトで[Active Directory ドメインと信頼のためにファイアウォールを構成する方法](https://support.microsoft.com/kb/179442)に関するページのガイドラインに従ってください。
+境界ファイアウォールは、ドメインコントローラーからインターネットへの送信接続をブロックするように構成する必要があります。 ドメインコントローラーはサイトの境界を越えて通信する必要がある場合がありますが、境界ファイアウォールを構成してサイト間通信を許可することができます。そのためには、Microsoft サポート web サイトで [Active Directory ドメインと信頼のためにファイアウォールを構成する方法](https://support.microsoft.com/kb/179442) に関するページのガイドラインに従ってください。
 
 ### <a name="dc-firewall-configurations"></a>DC ファイアウォールの構成
 

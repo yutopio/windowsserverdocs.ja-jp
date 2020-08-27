@@ -1,17 +1,17 @@
 ---
 ms.assetid: eafdddc3-40d7-4a75-8f4f-a45294aabfc8
 title: 安全な管理用のホストを実装する
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: e4a969049c28b29fff61d4ede7995153ed3c5818
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 63f4f805ca5326f480ce3496deecf04a40d5ffa4
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958940"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941432"
 ---
 # <a name="implementing-secure-administrative-hosts"></a>安全な管理用のホストを実装する
 
@@ -81,7 +81,7 @@ ms.locfileid: "87958940"
 権限のあるユーザーによる対話型ログオンを許可する必要があります。また、サーバーへのアクセスに不要な他のログオンの種類を削除するか、ブロックする必要があります。
 
 ### <a name="patch-and-configuration-management"></a>パッチと構成の管理
-小規模な組織では、Windows システムへの更新プログラムの展開を管理するために Windows Update や[Windows Server Update Services](/windows/deployment/deploy-whats-new) (WSUS) などのオファリングを使用する場合がありますが、大規模な組織では Microsoft Endpoint Configuration Manager などのエンタープライズ修正プログラムおよび構成管理ソフトウェアを実装する場合があります。 一般的なサーバーとワークステーションの作成に更新プログラムを展開するために使用するメカニズムに関係なく、ドメインコントローラー、証明機関、管理ホストなどの高度にセキュリティ保護されたシステムの展開を分離することを検討する必要があります。 これらのシステムを一般的な管理インフラストラクチャから分離することにより、管理ソフトウェアまたはサービスアカウントが侵害された場合に、インフラストラクチャ内のセキュリティで保護されたシステムに簡単に侵入することはできません。
+小規模な組織では、Windows システムへの更新プログラムの展開を管理するために Windows Update や [Windows Server Update Services](/windows/deployment/deploy-whats-new) (WSUS) などのオファリングを使用する場合がありますが、大規模な組織では Microsoft Endpoint Configuration Manager などのエンタープライズ修正プログラムおよび構成管理ソフトウェアを実装する場合があります。 一般的なサーバーとワークステーションの作成に更新プログラムを展開するために使用するメカニズムに関係なく、ドメインコントローラー、証明機関、管理ホストなどの高度にセキュリティ保護されたシステムの展開を分離することを検討する必要があります。 これらのシステムを一般的な管理インフラストラクチャから分離することにより、管理ソフトウェアまたはサービスアカウントが侵害された場合に、インフラストラクチャ内のセキュリティで保護されたシステムに簡単に侵入することはできません。
 
 セキュリティで保護されたシステムの手動更新プロセスは実装しないでくださいが、セキュリティで保護されたシステムを更新するための個別のインフラストラクチャを構成する必要があります。 非常に大規模な組織でも、このインフラストラクチャは通常、専用の WSUS サーバーとセキュリティで保護されたシステム用の Gpo を使用して実装できます。
 
@@ -155,7 +155,7 @@ ms.locfileid: "87958940"
 ### <a name="implementing-secure-administrative-workstations-and-jump-servers"></a>セキュリティで保護された管理ワークステーションとジャンプサーバーの実装
 管理ワークステーションをセキュリティで保護する代わりに、セキュリティで保護されたジャンプサーバーを実装することもできます。また、管理ユーザーは RDP とスマートカードを使用してジャンプサーバーに接続し、管理タスクを実行できます。
 
-ジャンプサーバーとそのサーバーから管理される対象サーバーへの接続に制限を実装できるように、リモートデスクトップゲートウェイの役割を実行するようにジャンプサーバーを構成する必要があります。 可能であれば、Hyper-v の役割をインストールし、[個人用仮想デスクトップ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759174(v=ws.11))またはその他のユーザーごとの仮想マシンを作成して、管理ユーザーがジャンプサーバーでのタスクに使用できるようにする必要もあります。
+ジャンプサーバーとそのサーバーから管理される対象サーバーへの接続に制限を実装できるように、リモートデスクトップゲートウェイの役割を実行するようにジャンプサーバーを構成する必要があります。 可能であれば、Hyper-v の役割をインストールし、 [個人用仮想デスクトップ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759174(v=ws.11)) またはその他のユーザーごとの仮想マシンを作成して、管理ユーザーがジャンプサーバーでのタスクに使用できるようにする必要もあります。
 
 ユーザーごとの管理ユーザーのバーチャルマシンにジャンプサーバーを提供することで、管理ワークステーションに物理的なセキュリティを提供し、管理ユーザーは使用していないときにバーチャルマシンをリセットまたはシャットダウンできます。 Hyper-v の役割とリモートデスクトップゲートウェイの役割を同じ管理ホストにインストールしない場合は、別のコンピューターにインストールすることができます。
 

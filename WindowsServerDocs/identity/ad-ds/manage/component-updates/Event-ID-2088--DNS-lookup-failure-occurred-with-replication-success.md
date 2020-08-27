@@ -1,17 +1,17 @@
 ---
 ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: イベント ID 2088-レプリケーションの成功時に DNS 参照エラーが発生しました
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9dbb7debbca8d1625ebe975a051ed8b607d1ddd0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a6e78c458f92e477ddeaf156370f5e254caf4679
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943287"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941342"
 ---
 # <a name="event-id-2088-dns-lookup-failure-occurred-with-replication-success"></a>イベント ID 2088: DNS 参照エラーが発生しましたが、レプリケーションは成功しました
 
@@ -51,7 +51,7 @@ Active Directory could not use DNS to resolve the IP address of the source domai
 
 2) ソースドメインコントローラが Active Directory 実行されていて、ネットワーク上で "net view \\ <source DC name> " または "ping" と入力してアクセス可能であることを確認し <source DC name> ます。
 
-3) ソースドメインコントローラが DNS サービスに有効な DNS サーバーを使用しており、ソースドメインコントローラのホストレコードと CNAME レコードが正しく登録されていることを確認します。これには、で利用可能な DCDIAG.EXE の DNS 拡張バージョンを使用します。<https://www.microsoft.com/dns>
+3) ソースドメインコントローラが DNS サービスに有効な DNS サーバーを使用しており、ソースドメインコントローラのホストレコードと CNAME レコードが正しく登録されていることを確認します。これには、で利用可能な DCDIAG.EXE の DNS 拡張バージョンを使用します。 <https://www.microsoft.com/dns>
 
 dcdiag/test: dns
 
@@ -59,9 +59,9 @@ dcdiag/test: dns
 
 dcdiag/test: dns
 
-5) DNS エラーエラーの詳細な分析については、KB 824449 を参照してください。<https://support.microsoft.com/?kbid=824449>
+5) DNS エラーエラーの詳細な分析については、KB 824449 を参照してください。 <https://support.microsoft.com/?kbid=824449>
 
-追加データエラー値: 11004 要求された名前は有効ですが、要求された種類のデータが見つかり </code> ませんでした</introduction>
+追加データエラー値: 11004 要求された名前は有効ですが、要求された種類のデータが見つかり </code> ませんでした </introduction>
   <section>
     <title>診断</title>
     <content>

@@ -1,17 +1,17 @@
 ---
 ms.assetid: 70c99703-ff0d-4278-9629-b8493b43c833
 title: 保護されたアカウントの構成方法に関するガイダンス
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7e69a808a48c3dedcc29d8876dc460559157f191
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: e8d16d1d33e8e0bd55457daa98b4aad454dafe3f
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994823"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88940762"
 ---
 # <a name="guidance-about-how-to-configure-protected-accounts"></a>保護されたアカウントの構成方法に関するガイダンス
 
@@ -169,7 +169,7 @@ AP 交換は通常、アプリケーション プロトコル内部のデータ�
 
 ### <a name="requirements-for-using-authentication-policies"></a><a name="BKMK_ReqForAuthnPolicies"></a>認証ポリシーを使用するための要件
 
-|ポリシー|要件|
+|ポリシー|必要条件|
 |----------|----------------|
 |TGT の有効期間のカスタマイズ| Windows Server 2012 R2 のドメイン機能レベルのアカウント ドメイン|
 |ユーザー サインオンの制限|-ダイナミック アクセス制御のサポート Windows Server 2012 R2 のドメイン機能レベルのアカウント ドメイン<br />Windows 8、Windows 8.1、Windows Server 2012 またはダイナミック アクセス制御を持つデバイスの Windows Server 2012 R2 のサポートします。|
@@ -296,7 +296,7 @@ AP 交換は通常、アプリケーション プロトコル内部のデータ�
 ##### <a name="troubleshoot-missing-computer-claims"></a>コンピューターの要求が見つからない場合のトラブルシューティング
 プロビジョニング済みの要求を使用できない場合、**[コンピューター]** クラスに対してのみ構成されている可能性があります。
 
-コンピューターの組織単位 (OU) に基づいて認証を制限するとします。これは既に構成されていますが、**コンピューター**クラスに対してのみ使用できます。
+コンピューターの組織単位 (OU) に基づいて認証を制限するとします。これは既に構成されていますが、 **コンピューター** クラスに対してのみ使用できます。
 
 ![保護されたアカウント](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictComputers.gif)
 
