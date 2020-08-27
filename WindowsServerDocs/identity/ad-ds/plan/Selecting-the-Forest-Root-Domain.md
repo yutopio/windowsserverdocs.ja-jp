@@ -1,17 +1,17 @@
 ---
 ms.assetid: ef4ef4a9-8969-4ad0-bd17-b2bb24f36ef6
 title: フォレスト ルート ドメインを選択する
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: c0a814932bfb5a232e55857e3cc10af4068d14c9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 32171395c7b0d854492568214b67f99a74919f6b
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972239"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938502"
 ---
 # <a name="selecting-the-forest-root-domain"></a>フォレスト ルート ドメインを選択する
 
@@ -66,7 +66,7 @@ Active Directory フォレストに展開する最初のドメインは、フォ
 Active Directory 名前空間のインターネット証明機関に登録されている DNS 名を使用することをお勧めします。 グローバルに一意であることが保証されるのは、登録されている名前だけです。 別の組織が後で同じ DNS ドメイン名を登録する場合 (または、組織が同じ DNS 名を使用する別の会社によってマージ、取得、または取得された場合)、2つのインフラストラクチャが相互に通信することはできません。
 
 > [!CAUTION]
-> 単一ラベルの DNS 名は使用しないでください。 詳細については、「[単一ラベルの DNS 名を使用して構成された Active Directory ドメインの展開と操作](https://support.microsoft.com/help/300684/)」を参照してください。 また、. local のような未登録のサフィックスは使用しないことをお勧めします。
+> 単一ラベルの DNS 名は使用しないでください。 詳細については、「 [単一ラベルの DNS 名を使用して構成された Active Directory ドメインの展開と操作](https://support.microsoft.com/help/300684/)」を参照してください。 また、. local のような未登録のサフィックスは使用しないことをお勧めします。
 
 ### <a name="selecting-a-prefix"></a>プレフィックスの選択
 
@@ -86,4 +86,4 @@ Active Directory DNS 所有者は、組織の DNS 所有者と連携して、Act
 
 ## <a name="documenting-the-forest-root-domain-name"></a>フォレストルートドメイン名を文書化する
 
-フォレストルートドメインに選択した DNS プレフィックスとサフィックスを文書化します。 この時点で、どのドメインがフォレストのルートになるかを特定します。 フォレストルートドメイン名の情報を、作成した "ドメイン計画" ワークシートに追加して、新規およびアップグレードされたドメインとドメイン名の計画を文書化することができます。 これを開くには、 [Windows Server 2003 Deployment Kit のジョブエイド](https://microsoft.com/download/details.aspx?id=9608)から Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードして、"ドメイン計画" (DSSLOGI_5.doc) を開きます。
+フォレストルートドメインに選択した DNS プレフィックスとサフィックスを文書化します。 この時点で、どのドメインがフォレストのルートになるかを特定します。 フォレストルートドメイン名の情報を、作成した "ドメイン計画" ワークシートに追加して、新規およびアップグレードされたドメインとドメイン名の計画を文書化することができます。 これを開くには、 [Windows Server 2003 Deployment Kit のジョブエイド](https://microsoft.com/download/details.aspx?id=9608) から Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードして、"ドメイン計画" (DSSLOGI_5.doc) を開きます。

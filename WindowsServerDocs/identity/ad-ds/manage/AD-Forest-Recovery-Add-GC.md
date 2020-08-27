@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復-GC の追加
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: a2f9cc50143d1cb5e08531c623f754599ab1c51e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 00a95269891074f95184c52f5244176f18de7b37
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956839"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88939942"
 ---
 # <a name="ad-forest-recovery---adding-the-gc"></a>AD フォレストの回復-GC の追加
 
@@ -21,11 +21,11 @@ ms.locfileid: "87956839"
 
 ## <a name="to-add-the-global-catalog"></a>グローバルカタログを追加するには
 
-1. [**スタート**] をクリックし、[**すべてのプログラム**]、[**管理ツール**] の順にポイントして、[ **Active Directory サイトとサービス**] をクリックします。
-2. コンソールツリーで、[**サイト**] コンテナを展開し、対象サーバーが含まれている適切なサイトを選択します。
-3. [**サーバー** ] コンテナーを展開し、グローバルカタログを追加する DC のサーバーオブジェクトを展開します。
-4. [ **NTDS 設定**] を右クリックし、[**プロパティ**] をクリックします。
-5. [**グローバルカタログ**] チェックボックスをオンにします。
+1. [ **スタート**] をクリックし、[ **すべてのプログラム**]、[ **管理ツール**] の順にポイントして、[ **Active Directory サイトとサービス**] をクリックします。
+2. コンソールツリーで、[ **サイト** ] コンテナを展開し、対象サーバーが含まれている適切なサイトを選択します。
+3. [ **サーバー** ] コンテナーを展開し、グローバルカタログを追加する DC のサーバーオブジェクトを展開します。
+4. [ **NTDS 設定**] を右クリックし、[ **プロパティ**] をクリックします。
+5. [ **グローバルカタログ** ] チェックボックスをオンにします。
 ![GC の追加](media/AD-Forest-Recovery-Add-GC/addgc1.png)
 
 ## <a name="to-add-the-global-catalog-using-repadmin"></a>Repadmin を使用してグローバルカタログを追加するには
@@ -38,7 +38,7 @@ ms.locfileid: "87956839"
 
 次に、グローバルカタログをルートドメインの DC に追加するプロセスを高速化する方法を示します。
 
-- ルートドメインの DC は、ルート以外のドメインの復元された Dc のレプリケーションパートナーであることが理想的です。 その場合は、知識整合性チェッカー (KCC) によって、ルート DC 内のソース DC およびパーティションに対応する**repsFrom**オブジェクトが作成されていることを確認します。 これを確認するには、 **repadmin/showreps/v**コマンドを実行します。
+- ルートドメインの DC は、ルート以外のドメインの復元された Dc のレプリケーションパートナーであることが理想的です。 その場合は、知識整合性チェッカー (KCC) によって、ルート DC 内のソース DC およびパーティションに対応する **repsFrom** オブジェクトが作成されていることを確認します。 これを確認するには、 **repadmin/showreps/v** コマンドを実行します。
 
 - **RepsFrom**オブジェクトが作成されていない場合は、構成パーティション用にこのオブジェクトを作成します。 これにより、ルートドメインの DC は、ルート以外のドメイン内のどの Dc が削除されたかを判断できます。 これを行うには、次のコマンドを使用します。
 
@@ -69,7 +69,7 @@ ms.locfileid: "87956839"
    Repadmin /sync DomainNamingContext DestinationDomainController SourceDomainControllerGUID
    ```
 
-   ここで、 *DestinationDomainController*はルートドメインの Dc、 *SourceDomainController*はルート以外のドメインの復元された dc です。
+   ここで、 *DestinationDomainController* はルートドメインの Dc、 *SourceDomainController* はルート以外のドメインの復元された dc です。
 
 - ルートドメインの DNS サーバーには、ソース DC のエイリアス (CNAME) リソースレコードが必要です。 親 DNS ゾーンに、子ゾーンの正しい Dc (バックアップから復元された Dc) の委任リソースレコード (ネームサーバー (NS) とホスト (A) リソースレコード) が含まれていることを確認します。
 - ルートドメインの DC が、ルート以外のドメインの正しいキー配布センター (KDC) に接続していることを確認します。 これをテストするには、コマンドプロンプトで次のコマンドを入力し、enter キーを押します。

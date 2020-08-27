@@ -1,17 +1,17 @@
 ---
 ms.assetid: e3ea1f67-60d4-4566-b24c-37faa95c3b2a
 title: コストを決定する
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f99c151840fcd32fd94567bba8a0bd9ce5196c69
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: acf68e45a1d914bcbf5e780f51d2455fe43ab3e3
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943096"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88939412"
 ---
 # <a name="determining-the-cost"></a>コストを決定する
 
@@ -21,7 +21,7 @@ ms.locfileid: "87943096"
 
 コストの値は、サイト全体に対して定義することをお勧めします。 コストは、通常、リンクの合計帯域幅だけでなく、リンクの可用性、待機時間、および金銭的コストにも基づいています。
 
-サイトリンクに配置するコストを決定するには、各サイトリンクの接続速度を文書化します。 特定した接続速度の詳細については、「[ネットワーク情報の収集](../../ad-ds/plan/Collecting-Network-Information.md)」の「地理的な場所と通信リンク」 (DSSTOPO_1.doc) ワークシートを参照してください。
+サイトリンクに配置するコストを決定するには、各サイトリンクの接続速度を文書化します。 特定した接続速度の詳細については、「 [ネットワーク情報の収集](../../ad-ds/plan/Collecting-Network-Information.md) 」の「地理的な場所と通信リンク」 (DSSTOPO_1.doc) ワークシートを参照してください。
 
 次の表に、さまざまな種類のネットワークの速度を示します。
 

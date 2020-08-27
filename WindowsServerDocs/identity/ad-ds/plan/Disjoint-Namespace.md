@@ -1,17 +1,17 @@
 ---
 ms.assetid: d92731f1-e4d8-4223-9b07-ca1f40bb0e1f
 title: 名前空間の不整合
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 8f96ecaff5fbe31c4d9d037861685a2e4c008e63
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 06506ac47fe22724047cff73fb88972b868600b5
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87941222"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88939282"
 ---
 # <a name="disjoint-namespace"></a>名前空間の不整合
 
@@ -83,7 +83,7 @@ ms.locfileid: "87941222"
 
 - すべてのアプリケーションの互換性の問題を注意深くテストする必要があります。
 
-これらの欠点に対処するために実行できる手順の詳細については、「[不整合な名前空間を作成](/previous-versions/windows/it-pro/windows-server-2003/cc755926(v=ws.10))する」を参照してください。
+これらの欠点に対処するために実行できる手順の詳細については、「 [不整合な名前空間を作成](/previous-versions/windows/it-pro/windows-server-2003/cc755926(v=ws.10))する」を参照してください。
 
 ### <a name="planning-a-namespace-transition"></a>名前空間の移行の計画
 
@@ -91,15 +91,15 @@ ms.locfileid: "87941222"
 
 - 名前空間を変更した後、手動で構成されたサービスプリンシパル名 (Spn) が DNS 名と一致しなくなる場合があります。 これにより、認証エラーが発生する可能性があります。
 
-    詳細については、「Spn が正しく設定されていない[ためにサービスログオンが失敗する](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10))」を参照してください。
+    詳細については、「Spn が正しく設定されていない [ためにサービスログオンが失敗する](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10))」を参照してください。
 
-    - 制約付き委任を使用する Windows Server 2003 ベースのコンピューターを使用する場合、これらのコンピューターで Spn を変更するには追加の構成が必要になることがあります。 詳細については、Microsoft サポート技術情報の記事936628を参照してください。 SPN は、Windows Server 2003 (404) を実行している[コンピューターで制約付き委任を構成しようとすると、アカウントに委任できるサービスの一覧に表示されません](https://support.microsoft.com/help/936628)。
+    - 制約付き委任を使用する Windows Server 2003 ベースのコンピューターを使用する場合、これらのコンピューターで Spn を変更するには追加の構成が必要になることがあります。 詳細については、Microsoft サポート技術情報の記事936628を参照してください。 SPN は、Windows Server 2003 (404) を実行している [コンピューターで制約付き委任を構成しようとすると、アカウントに委任できるサービスの一覧に表示されません](https://support.microsoft.com/help/936628) 。
 
     - Spn を変更するアクセス許可を下位の管理者に委任する場合は、「 [spn を変更するため](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770439(v=ws.10))の権限の委任」を参照してください。
 
 - 不整合な名前空間に構成されているドメインコントローラーがある、展開内の CA と Secure Sockets Layer (LDAPS と呼ばれます) を介してライトウェイトディレクトリアクセスプロトコル (LDAP) を使用する場合は、LDAPS 証明書を構成するときに、適切な Active Directory ドメイン名とプライマリ DNS サフィックスを使用する必要があります。
 
-    ドメインコントローラー証明書の要件の詳細については、Microsoft サポート技術情報の記事321051を参照してください。[サードパーティの証明機関との SSL 経由で LDAP を有効にする方法](https://support.microsoft.com/help/321051/)です。
+    ドメインコントローラー証明書の要件の詳細については、Microsoft サポート技術情報の記事321051を参照してください。 [サードパーティの証明機関との SSL 経由で LDAP を有効にする方法](https://support.microsoft.com/help/321051/)です。
 
     > [!NOTE]
     > LDAPS に証明書を使用するドメインコントローラーでは、証明書の再展開が必要になる場合があります。 この場合、ドメインコントローラーは、再起動されるまで適切な証明書を選択しないことがあります。 Windows Server 2003 のライトウェイトディレクトリアクセスプロトコル (LDAP) over Secure Sockets Layer (LDAPS) 認証の詳細については、Microsoft サポート技術情報の記事938703を参照してください。 [ldap OVER SSL 接続の問題をトラブルシューティングする方法](https://support.microsoft.com/help/938703/)については、「」を参照してください。

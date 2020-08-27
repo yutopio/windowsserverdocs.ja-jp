@@ -1,17 +1,17 @@
 ---
 ms.assetid: 6785de86-4f7d-4ed1-9055-8de0871d59b5
 title: 付録 M-ドキュメントリンクと推奨資料
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 977ea36fefaa05b49034367594e1d952d712adb2
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 891ddf584fb8dc2936d51051aef63f2a7cbab8a2
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994474"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938752"
 ---
 # <a name="appendix-m-document-links-and-recommended-reading"></a>付録 M: ドキュメントのリンクと推奨資料
 
@@ -35,7 +35,7 @@ ms.locfileid: "87994474"
 | [Microsoft サポートの記事814777](https://support.microsoft.com/kb/814777) | [https://support.microsoft.com/kb/814777](https://support.microsoft.com/kb/814777) |
 | [Web アプリケーションセキュリティプロジェクトを開く (OWASP)](https://www.owasp.org/index.php/Main_Page) | [https://www.owasp.org/index.php/Main_Page](https://www.owasp.org/index.php/Main_Page) |
 | [Microsoft セキュリティ開発ライフサイクル](https://www.microsoft.com/security/sdl/default.aspx) | [https://www.microsoft.com/security/sdl/default.aspx](https://www.microsoft.com/security/sdl/default.aspx) |
-| [PtH (パススルー) 攻撃とその他の資格情報の盗難手法の緩和](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf) | [https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigatingハッシュ (PtH) 攻撃およびその他の資格情報の盗難の Techniques_English.pdf](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf) |
+| [PtH (パススルー) 攻撃とその他の資格情報の盗難手法の緩和](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf) | [https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating ハッシュ (PtH) 攻撃およびその他の資格情報の盗難の Techniques_English.pdf](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf) |
 | [特定された敵対者と対象の攻撃](https://www.microsoft.com/download/details.aspx?id=34793) | [https://www.microsoft.com/download/details.aspx?id=34793](https://www.microsoft.com/download/details.aspx?id=34793) |
 | [GPO を使用してビルトイン Administrator アカウントのパスワードを管理するためのソリューション](https://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789) | [https://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789](https://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789) |
 | [Microsoft サポートの記事817433](https://support.microsoft.com/?id=817433) | [https://support.microsoft.com/?id=817433](https://support.microsoft.com/?id=817433) |
@@ -173,7 +173,7 @@ ms.locfileid: "87994474"
 | [Microsoft セキュリティインテリジェンスレポート](https://www.microsoft.com/security/sir/default.aspx) |
 | [PTH (パススルー) 攻撃とその他の資格情報の盗難手法の緩和](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf) |
 | [オーストラリア政府の防御では、ディレクトリの上位35の軽減戦略を通知します](http://www.dsd.gov.au/infosec/top35mitigationstrategies.htm) |
-| [2012 データ侵害の調査レポート](http://www.verizonbusiness.com/resources/reports/rp_data-breach-investigations-report-2012_en_xg.pdf)-(VERIZON、US Secret Service) |
+| [2012 データ侵害の調査レポート](http://www.verizonbusiness.com/resources/reports/rp_data-breach-investigations-report-2012_en_xg.pdf) -(VERIZON、US Secret Service) |
 | [2009データ侵害の調査レポート](http://www.verizonbusiness.com/resources/security/reports/2009_databreach_rp.pdf) |
 | [クラウドコンピューティングのセキュリティの利点](https://www.microsoft.com/news/Press/2012/May12/05-14SMBSecuritySurveyPR.aspx) |
 | [Windows のユーザーアカウントに最小特権の原則を適用する](https://www.microsoft.com/download/details.aspx?id=4868) |
@@ -181,9 +181,9 @@ ms.locfileid: "87994474"
 | Windows Server 2003 の[Active Directory インストールをセキュリティで保護するためのベストプラクティスガイド](https://www.microsoft.com/download/details.aspx?id=16755) |
 | Windows Server 2003 の[Active Directory 管理の委任に関するベストプラクティス](https://www.microsoft.com/download/details.aspx?id=21678) |
 | [マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle/) |
-| [Active Directory 技術仕様](/openspecs/windows_protocols/ms-adts/d2435927-0999-4c62-8c6d-13ba31a52e1a)-dSHeuristics 情報 |
+| [Active Directory 技術仕様](/openspecs/windows_protocols/ms-adts/d2435927-0999-4c62-8c6d-13ba31a52e1a) -dSHeuristics 情報 |
 | [Nonadministrator ユーザーが委任されている場合に、Windows Server 2003 ベースまたは Windows Server 2008 ベースのドメインコントローラーにコンピューターを参加させると、エラーメッセージ "アクセスが拒否されました"](https://support.microsoft.com/kb/932455) |
-| [Active Directory Installations.docをセキュリティで保護するためのベストプラクティスガイド](https://go.microsoft.com/fwlink/?LinkId=140862) |
+| [Active Directory Installations.docをセキュリティで保護するためのベストプラクティスガイド ](https://go.microsoft.com/fwlink/?LinkId=140862) |
 | [Hyper-v セキュリティガイド](https://www.microsoft.com/download/details.aspx?id=16650) |
 | [Windows Server 2008 R2 の AD DS の認証メカニズムの保証」](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378897(v=ws.10))を参照してください。 |
 | [厳密な KDC 検証](https://www.microsoft.com/download/details.aspx?id=6382) |

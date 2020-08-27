@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復 - FAQ
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: ac9e5a3d-8b1e-41b7-8e02-f64b7acf1359
-ms.openlocfilehash: 62f0653d0d35a1fb21d7de452401c48291e4259c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 954ad8f4af588f5edb0746e67bfc9b29c0b8945d
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87959060"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88939762"
 ---
 # <a name="ad-forest-recovery---faq"></a>AD フォレストの回復 - FAQ
 
@@ -43,11 +43,11 @@ ms.locfileid: "87959060"
 - Dc を再構築すると、ネットワークベースの昇格のためにデータをレプリケートするのに時間がかかります。
    - 次の手順を実行して、Dc の復元に必要な時間を短縮できます。
 - 次の方法でバックアップメディアを取得する時間を短縮します。
-   - Active Directory データベースマウントツール (Dsamain.exe) を使用して、復元操作に使用する最適なバックアップを特定します。 Active Directory データベースマウントツールの使用方法の詳細については、「 [Active Directory データベースマウントツールのステップバイステップガイド](https://go.microsoft.com/fwlink/?LinkId=132577)」 (を参照してください https://go.microsoft.com/fwlink/?LinkId=132577) 。
+   - Active Directory データベースマウントツール (Dsamain.exe) を使用して、復元操作に使用する最適なバックアップを特定します。 Active Directory データベースマウントツールの使用方法の詳細については、「 [Active Directory データベースマウントツールのステップバイステップガイド](https://go.microsoft.com/fwlink/?LinkId=132577) 」 (を参照してください https://go.microsoft.com/fwlink/?LinkId=132577) 。
    - バックアップメディアに明確にラベルを付け、簡単で安全な場所にメディアを保存して、すばやく検索できるようにします。
    - 記憶域ネットワーク (SAN) でボリュームシャドウコピーサービスを使用して、さまざまな時点からのバックアップを維持する。 詳細については、「 [Windows Server 2003 Active Directory Fast Recovery with ボリュームシャドウコピーサービス And Virtual Disk Service](https://go.microsoft.com/fwlink/?LinkId=70781) (」を参照してください https://go.microsoft.com/fwlink/?LinkId=70781) 。
 - オペレーティングシステムを再インストールするのではなく、Dc から AD DS を強制的に削除します。 フォレスト全体の障害の原因が AD DS の範囲内であると特定されている場合は、Dc にオペレーティングシステムを再インストールする必要はありません。
-   - Windows Server 2008 以降を実行している DC から AD DS を強制的に削除する方法の詳細については、「 [Windows server 2008 ドメインコントローラーを強制的に削除](https://go.microsoft.com/fwlink/?LinkId=132627)する」 (を参照してください https://go.microsoft.com/fwlink/?LinkId=132627) 。 Windows Server 2003 を実行している DC から AD DS を強制的に削除する方法の詳細については、Microsoft サポート技術情報の[記事 332199](https://go.microsoft.com/fwlink/?LinkId=70780) (「」を参照してください https://go.microsoft.com/fwlink/?LinkId=70780) 。
+   - Windows Server 2008 以降を実行している DC から AD DS を強制的に削除する方法の詳細については、「 [Windows server 2008 ドメインコントローラーを強制的に削除](https://go.microsoft.com/fwlink/?LinkId=132627) する」 (を参照してください https://go.microsoft.com/fwlink/?LinkId=132627) 。 Windows Server 2003 を実行している DC から AD DS を強制的に削除する方法の詳細については、Microsoft サポート技術情報の [記事 332199](https://go.microsoft.com/fwlink/?LinkId=70780) (「」を参照してください https://go.microsoft.com/fwlink/?LinkId=70780) 。
 - 高速なテープデバイスまたはディスクバックアップを使用して、復元操作に必要な時間を短縮します。
 
 また、メディアからのインストール (IFM) 機能を使用して各ドメインで Dc を再構築することにより、AD DS のインストールを高速化することもできます。 IFM を使用すると、各ドメインで Dc を再構築するときに発生するレプリケーション待機時間を短縮できます。

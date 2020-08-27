@@ -1,17 +1,17 @@
 ---
 ms.assetid: b146f47e-3081-4c8e-bf68-d0f993564db2
 title: 仮想化ドメイン コントローラーのデプロイと構成
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 6804df686635e441c667ab395ca486d3791a2aa5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7c2ae279a39566a30670111198d0e4840f57f6fc
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87959410"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88939072"
 ---
 # <a name="virtualized-domain-controller-deployment-and-configuration"></a>仮想化ドメイン コントローラーのデプロイと構成
 
@@ -92,7 +92,7 @@ USN バブルおよび残留オブジェクトの詳細については、「 [�
 ## <a name="virtualized-domain-controller-cloning"></a><a name="BKMK_VDCCloning"></a>仮想化ドメイン コントローラーの複製
 グラフィカル ツールまたは Windows PowerShell のいずれを使用しても、仮想化ドメイン コントローラーを複製は、複数の段階および手順に従って行います。 大きく分けると 3 つの段階があります。
 
-**環境の準備**
+**環境を準備する**
 
 - 手順 1: ハイパーバイザーで VM-Generation ID、ひいては複製をサポートしているかを検証します。
 
@@ -262,7 +262,7 @@ New-ADDCCloneConfigFile
 
 このコマンドレットを、提案された複製対象のソース ドメイン コントローラーで実行します。 コマンドレットは複数の引数をサポートしており、これを使用することで、-offline 引数を指定しない限り実行されるコンピューターおよび環境がテストされます。
 
-|**ActiveDirectory**<p>**コマンドレット**|**引数**|**説明**|
+|**Active Directory**<p>**コマンドレット**|**引数**|**説明**|
 |--|--|--|
 |**New-ADDCCloneConfigFile**|*<no argument specified>*|ブランクの DcCloneConfig.xml ファイルを DSA 作業ディレクトリ (既定: %systemroot%\ntds)|
 ||-CloneComputerName|複製 DC コンピューター名を指定します。 文字列データ型。|
@@ -427,7 +427,7 @@ Export-vm
 ##### <a name="hyper-v-manager-method"></a>Hyper-V マネージャーによる方法
 Hyper-V マネージャーを使用して、結合ディスクを作成するには:
 
-1. [**ディスクの編集**] をクリックします。
+1. [ **ディスクの編集**] をクリックします。
 
 2. 最下位の子ディスクを参照します。 たとえば、差分ディスクを使用している場合は、子ディスクが最下位の子です。 仮想マシンにスナップショットが 1 つ (または複数) ある場合は、現在選択されているスナップショットが最下位の子ディスクです。
 
@@ -541,7 +541,7 @@ copy-item <xml file path><destination path>\dccloneconfig.xml
 dismount-vhd <disk path>
 ```
 
-例:
+次に例を示します。
 
 ![仮想化 DC の展開](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSMountVHD.png)
 
@@ -635,14 +635,14 @@ Get-VMSnapshot
 Remove-VMSnapshot
 ```
 
-例:
+次に例を示します。
 
 ![仮想化 DC の展開](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSGetVMSnap.png)
 
 > [!WARNING]
 > コンピューターをインポートするときに、静的 MAC アドレスがソース ドメイン コントローラーに割り当てられていないことを確認します。 静的 MAC を持つソース コンピューターが複製されると、そのコピーされたコンピューターではネットワーク トラフィックが正しく送受信されません。 この場合は、一意の静的または動的 MAC アドレスを新しく設定します。 VM で静的 MAC アドレスが使用されているかどうかを確認するには、次のコマンドを使用します。
 >
-> **VMName**の***テスト-vm* |VMNetworkAdapter |fl\\***
+> **VMName**の ***テスト-vm* |VMNetworkAdapter |fl \\***
 
 ### <a name="step-9---clone-the-new-virtual-machine"></a>手順 9 - 新しい仮想マシンを複製する
 複製を開始する前に、オプションで、オフラインの複製ソース ドメイン コントローラーを再起動します。 ただし、PDC エミュレーターはオンラインであることを確認します。
@@ -658,7 +658,7 @@ Windows PowerShell を使用して VM を起動する場合、新しい Hyper-V 
 Start-VM
 ```
 
-例:
+次に例を示します。
 
 ![仮想化 DC の展開](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSStartVM.png)
 

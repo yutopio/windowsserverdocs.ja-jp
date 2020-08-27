@@ -1,17 +1,17 @@
 ---
 ms.assetid: c8597cc8-bdcb-4e59-a09e-128ef5ebeaf8
 title: コマンド ライン プロセスの監査
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 1499927a0ecc01255e5da5f9c0fff2ea064d4b5e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 12bf07aa5fb60f18cdd5b04b7d7f91c00388ed42
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943457"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88939572"
 ---
 # <a name="command-line-process-auditing"></a>コマンド ライン プロセスの監査
 
@@ -38,7 +38,7 @@ ms.locfileid: "87943457"
 
 **図 SEQ 図 \\ \* アラビア語16イベント4688**
 
-参照 _Ref366427278 \h 図16で更新されたイベント ID 4688 を確認します。  この更新の前に、**プロセスのコマンドライン**の情報はログに記録されません。  このログの追加により、wscript.exe プロセスが開始されただけでなく、VB スクリプトの実行にも使用されていることがわかります。
+参照 _Ref366427278 \h 図16で更新されたイベント ID 4688 を確認します。  この更新の前に、 **プロセスのコマンドライン** の情報はログに記録されません。  このログの追加により、wscript.exe プロセスが開始されただけでなく、VB スクリプトの実行にも使用されていることがわかります。
 
 ## <a name="configuration"></a>構成
 この更新プログラムの影響を確認するには、2つのポリシー設定を有効にする必要があります。
@@ -65,7 +65,7 @@ ms.locfileid: "87943457"
 ### <a name="in-order-to-see-the-additions-to-event-id-4688-you-must-enable-the-new-policy-setting-include-command-line-in-process-creation-events"></a>イベント ID 4688 への追加を確認するには、新しいポリシー設定を有効にする必要があります。 [コマンドラインをプロセス作成イベントに含める]
 **テーブル SEQ テーブル \\ \* アラビア19コマンドラインプロセスポリシー設定**
 
-|ポリシーの構成|詳細情報|
+|ポリシーの構成|詳細|
 |------------------------|-----------|
 |**パス**|管理用システム \ システムの監査プロセスの作成|
 |**設定**|**プロセス作成イベントにコマンド ラインを含める**|
@@ -96,7 +96,7 @@ ms.locfileid: "87943457"
 
 6.  [ 有効] をクリックしてから、[ OK] をクリックします。
 
-## <a name="additional-resources"></a>その他の情報
+## <a name="additional-resources"></a>その他のリソース
 [プロセス作成の監査](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941613(v=ws.10))
 
 [セキュリティ監査ポリシーのステップ バイ ステップ ガイドの詳細](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd408940(v=ws.10))

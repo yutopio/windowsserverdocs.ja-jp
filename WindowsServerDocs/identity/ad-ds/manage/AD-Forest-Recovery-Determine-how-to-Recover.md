@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復-フォレストを回復する方法を決定する
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: fcc344010f25a11051bed5afc6bc6632729f7f4e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dda621c8b567822a882e8230aba604ce0a115835
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949936"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88939792"
 ---
 # <a name="determine-how-to-recover-the-forest"></a>フォレストを回復する方法を決定する
 
@@ -23,7 +23,7 @@ Active Directory フォレスト全体を回復するには、バックアップ
 - 最後に信頼されたバックアップ以降に既存のオブジェクトに対して行われたすべての更新
 - 最後に信頼されたバックアップ以降に構成パーティションまたはスキーマパーティションに対して行われたすべての変更 (スキーマの変更など) は、AD DS ます。
 
-フォレスト内のドメインごとに、ドメイン管理者アカウントのパスワードがわかっている必要があります。 これは、組み込みの Administrator アカウントのパスワードです。 DC のシステム状態の復元を実行するには、DSRM パスワードも必要です。 一般に、バックアップが有効である (つまり、Active Directory のごみ箱が有効になっている場合は、廃棄済みオブジェクトの有効期間内または削除されたオブジェクトの有効期間内である限り) ため、管理者アカウントと DSRM パスワードの履歴を安全な場所に保管することをお勧めします。 覚えやすいように、DSRM パスワードをドメインユーザーアカウントと同期することもできます。 詳細については、サポート技術情報の記事[961320](https://support.microsoft.com/kb/961320)を参照してください。 DSRM アカウントの同期は、準備の一環として、フォレストの回復よりも前に行う必要があります。
+フォレスト内のドメインごとに、ドメイン管理者アカウントのパスワードがわかっている必要があります。 これは、組み込みの Administrator アカウントのパスワードです。 DC のシステム状態の復元を実行するには、DSRM パスワードも必要です。 一般に、バックアップが有効である (つまり、Active Directory のごみ箱が有効になっている場合は、廃棄済みオブジェクトの有効期間内または削除されたオブジェクトの有効期間内である限り) ため、管理者アカウントと DSRM パスワードの履歴を安全な場所に保管することをお勧めします。 覚えやすいように、DSRM パスワードをドメインユーザーアカウントと同期することもできます。 詳細については、サポート技術情報の記事 [961320](https://support.microsoft.com/kb/961320)を参照してください。 DSRM アカウントの同期は、準備の一環として、フォレストの回復よりも前に行う必要があります。
 
 > [!NOTE]
 > Administrator アカウントは、既定では、Domain Admins グループおよび Enterprise Admins グループと同様に、組み込みの Administrators グループのメンバーです。 このグループには、ドメイン内のすべての Dc を完全に制御できます。
@@ -44,17 +44,17 @@ Active Directory を別のハードウェアに復元する必要がある場合
 > 1. オペレーティングシステムとすべてのファイルとアプリケーションを復元するために、サーバーの完全復元を実行します。
 > 2. SYSVOL を権限のあるものとしてマークするために wbadmin.exe を使用してシステム状態の復元を実行します。
 >
-> 詳細については、マイクロソフトサポート技術情報の記事[249694](https://support.microsoft.com/kb/249694)を参照してください。
+> 詳細については、マイクロソフトサポート技術情報の記事 [249694](https://support.microsoft.com/kb/249694)を参照してください。
 
 エラーが発生した時刻が不明な場合は、さらに調査して、フォレストの最後の安全な状態を保持しているバックアップを特定します。 この方法は、あまり好ましくありません。 したがって、AD DS の正常性状態に関する詳細なログを毎日保持しておくことを強くお勧めします。これにより、フォレスト全体で障害が発生した場合に、おおよその障害が特定されます。 また、迅速な回復を可能にするために、バックアップのローカルコピーも保持する必要があります。
 
-Active Directory のごみ箱が有効になっている場合、バックアップの有効期間は**msds-deletedobjectlifetime**値または**tombstoneLifetime**値のいずれか小さい方と等しくなります。 詳細については、 [Active Directory ごみ箱のステップバイステップガイド](https://go.microsoft.com/fwlink/?LinkId=178657)() を参照してください https://go.microsoft.com/fwlink/?LinkId=178657) 。
+Active Directory のごみ箱が有効になっている場合、バックアップの有効期間は **msds-deletedobjectlifetime** 値または **tombstoneLifetime** 値のいずれか小さい方と等しくなります。 詳細については、 [Active Directory ごみ箱のステップバイステップガイド](https://go.microsoft.com/fwlink/?LinkId=178657) () を参照してください https://go.microsoft.com/fwlink/?LinkId=178657) 。
 
 別の方法として、Active Directory データベースマウントツール (Dsamain.exe) とライトウェイトディレクトリアクセスプロトコル (LDAP) ツール (Ldp.exe または Active Directory ユーザーとコンピューターなど) を使用して、どのバックアップにどのバックアップが最後に安全な状態にあるかを特定することもできます。 Active Directory データベースマウントツールは、Windows server 2008 以降の Windows Server オペレーティングシステムに含まれており、LDAP サーバーとしてバックアップまたはスナップショットに格納されている Active Directory データを公開します。 次に、LDAP ツールを使用してデータを参照できます。 このアプローチには、ディレクトリサービス復元モード (DSRM) で DC を再起動して AD DS のバックアップの内容を確認する必要がないという利点があります。
 
 Active Directory データベースマウントツールの使用方法の詳細については、「 [Active Directory データベースマウントツールのステップバイステップガイド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10))」を参照してください。
 
-また、 **ntdsutil snapshot**コマンドを使用して、Active Directory データベースのスナップショットを作成することもできます。 定期的にスナップショットを作成するようにタスクをスケジュールすることで、Active Directory データベースの追加のコピーを時間の経過と共に取得できます。 これらのコピーを使用して、フォレスト全体の障害が発生したことをより明確に識別し、復元する最適なバックアップを選択することができます。 スナップショットを作成するには、Windows Server 2008 に付属しているバージョンの**ntdsutil** 、または windows Vista 以降のリモートサーバー管理ツール (RSAT) を使用します。 ターゲット DC は、任意のバージョンの Windows Server を実行できます。 **Ntdsutil snapshot**コマンドの使用方法の詳細については、「 [snapshot](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10))」を参照してください。
+また、 **ntdsutil snapshot** コマンドを使用して、Active Directory データベースのスナップショットを作成することもできます。 定期的にスナップショットを作成するようにタスクをスケジュールすることで、Active Directory データベースの追加のコピーを時間の経過と共に取得できます。 これらのコピーを使用して、フォレスト全体の障害が発生したことをより明確に識別し、復元する最適なバックアップを選択することができます。 スナップショットを作成するには、Windows Server 2008 に付属しているバージョンの **ntdsutil** 、または windows Vista 以降のリモートサーバー管理ツール (RSAT) を使用します。 ターゲット DC は、任意のバージョンの Windows Server を実行できます。 **Ntdsutil snapshot**コマンドの使用方法の詳細については、「 [snapshot](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10))」を参照してください。
 
 ## <a name="determining-which-domain-controllers-to-restore"></a>復元するドメインコントローラーを決定する
 
@@ -73,7 +73,7 @@ Active Directory データベースマウントツールの使用方法の詳細
 - 障害が発生する前にドメインネームシステム (DNS) サーバーであった DC。 これにより、DNS を再インストールするために必要な時間が短縮されます。
 - Windows 展開サービスも使用する場合は、BitLocker ネットワークロック解除を使用するように構成されていない DC を選択します。 この場合、フォレストの回復中にバックアップから復元する最初の DC に対して、BitLocker ネットワークロック解除を使用することはできません。
 
-   BitLocker ネットワークロック解除は *、Windows 展開サービス*(wds) を展開した dc では使用*できません*。これは、最初の dc がロックを解除するために Active Directory と WDS が動作することを必要とするシナリオになるためです。 ただし、最初の DC を復元する前に、Active Directory は WDS ではまだ使用できないため、ロックを解除できません。
+   BitLocker ネットワークロック解除は *、Windows 展開サービス* (wds) を展開した dc では使用 *できません* 。これは、最初の dc がロックを解除するために Active Directory と WDS が動作することを必要とするシナリオになるためです。 ただし、最初の DC を復元する前に、Active Directory は WDS ではまだ使用できないため、ロックを解除できません。
 
    DC が BitLocker ネットワークロック解除を使用するように構成されているかどうかを判断するには、次のレジストリキーでネットワークロック解除証明書が指定されていることを確認します。
 
@@ -87,15 +87,15 @@ Active Directory を含むバックアップファイルを処理または復元
 
 次の例に示すように、ドメイン内の各 DC の機能を表示するテーブルを準備します。 これにより、回復後にフォレストの障害前の構成に戻すことができます。
 
-|DC 名|オペレーティング システム|FSMO|[GC]|RODC|バックアップ|DNS|Server Core|VM|VM-GenID|
+|DC 名|オペレーティング システム|FSMO|[GC]|RODC|Backup|DNS|Server Core|VM|VM-GenID|
 |-------------|----------------------|----------|--------|----------|------------|---------|-----------------|--------|---------------|
 |DC_1|Windows Server 2012|スキーママスタ、ドメイン名前付けマスタ|はい|いいえ|はい|いいえ|いいえ|はい|はい|
-|DC_2|Windows Server 2012|None|はい|いいえ|はい|はい|いいえ|はい|はい|
+|DC_2|Windows Server 2012|なし|はい|いいえ|はい|はい|いいえ|はい|はい|
 |DC_3|Windows Server 2012|インフラストラクチャ マスタ|いいえ|いいえ|いいえ|はい|はい|はい|はい|
 |DC_4|Windows Server 2012|PDC エミュレーター、RID マスター|はい|いいえ|いいえ|いいえ|いいえ|はい|いいえ|
-|DC_5|Windows Server 2012|None|いいえ|いいえ|はい|はい|いいえ|はい|はい|
-|RODC_1|Windows Server 2008 R2|None|はい|はい|はい|はい|はい|はい|いいえ|
-|RODC_2|Windows Server 2008|None|はい|はい|いいえ|はい|はい|はい|いいえ|
+|DC_5|Windows Server 2012|なし|いいえ|いいえ|はい|はい|いいえ|はい|はい|
+|RODC_1|Windows Server 2008 R2|なし|はい|はい|はい|はい|はい|はい|いいえ|
+|RODC_2|Windows Server 2008|なし|はい|はい|いいえ|はい|はい|はい|いいえ|
 
 フォレスト内のドメインごとに、そのドメインの Active Directory データベースの信頼されたバックアップを持つ、1つの書き込み可能 DC を識別します。 DC を復元するバックアップを選択するときは、注意してください。 障害の日と原因がほぼわかっている場合、一般的な推奨事項は、その日の前に数日前に作成されたバックアップを使用することです。
 

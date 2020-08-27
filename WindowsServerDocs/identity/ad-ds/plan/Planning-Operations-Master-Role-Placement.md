@@ -1,17 +1,17 @@
 ---
 ms.assetid: bd64a766-5362-4f29-b963-5465c2bb79e7
 title: 操作マスターの役割の配置を計画する
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: 9437992e5e12622b132380b63aaccd56140bd21d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e1117677b9d1e898a3c93850c69230e6912c20c3
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970949"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938622"
 ---
 # <a name="planning-operations-master-role-placement"></a>操作マスターの役割の配置を計画する
 
@@ -71,7 +71,7 @@ PDC エミュレーターは、クライアントパスワードの変更を処�
 
 操作マスターの役割の所有者を配置できる中央の場所またはハブサイトが環境にある場合は、それらの操作マスターの役割所有者の可用性に依存する特定のドメインコントローラー操作が影響を受ける可能性があることに注意してください。
 
-たとえば、組織が A、B、C、および D というサイトを作成したとします。サイトリンクは A と B の間、B と C の間、および C と D の間に存在します。ネットワーク接続は、サイトリンクのネットワーク接続を正確に反映します。 この例では、すべての操作マスタの役割がサイト A に配置され、**すべてのサイトリンクをブリッジ**するオプションが選択されていません。
+たとえば、組織が A、B、C、および D というサイトを作成したとします。サイトリンクは A と B の間、B と C の間、および C と D の間に存在します。ネットワーク接続は、サイトリンクのネットワーク接続を正確に反映します。 この例では、すべての操作マスタの役割がサイト A に配置され、 **すべてのサイトリンクをブリッジ** するオプションが選択されていません。
 
 この構成では、すべてのサイト間でレプリケーションが正常に実行されますが、操作マスターの役割の機能には次の制限があります。
 

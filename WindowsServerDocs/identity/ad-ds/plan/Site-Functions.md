@@ -1,17 +1,17 @@
 ---
 ms.assetid: 22c514b2-401e-49e1-a87e-0cbaa2c1dac1
 title: サイトの機能
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 40fa12c7bb301e0701fbac2e148cfe32820e1fa0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 20ca1c9e3a4b0ef750d787289bf8563ead5a5ae1
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967719"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938362"
 ---
 # <a name="site-functions"></a>サイトの機能
 
@@ -38,4 +38,4 @@ SYSVOL は、ドメイン内の各ドメインコントローラー上に存在�
 DFSN は、サイト情報を使用して、サイト内の要求されたデータをホストしているサーバーにクライアントを送信します。 DFSN がクライアントと同じサイト内にデータのコピーを見つけられない場合、DFSN は AD DS のサイト情報を使用して、クライアントに最も近い DFSN 共有データを持つファイルサーバーを特定します。
 
 ## <a name="service-location"></a>サービスの場所
-AD DS のファイルサービスや印刷サービスなどのサービスを公開することにより、Active Directory クライアントは、同じサイト内または最も近いサイト内で要求されたサービスを見つけることができます。 印刷サービスでは、AD DS に格納されている場所の属性を使用して、ユーザーが正確な場所を知らなくても場所でプリンターを参照できるようにします。 プリントサーバーの設計と展開の詳細については、「[プリントサーバーの設計と展開](/previous-versions/windows/it-pro/windows-server-2003/cc785842(v=ws.10))」を参照してください。
+AD DS のファイルサービスや印刷サービスなどのサービスを公開することにより、Active Directory クライアントは、同じサイト内または最も近いサイト内で要求されたサービスを見つけることができます。 印刷サービスでは、AD DS に格納されている場所の属性を使用して、ユーザーが正確な場所を知らなくても場所でプリンターを参照できるようにします。 プリントサーバーの設計と展開の詳細については、「 [プリントサーバーの設計と展開](/previous-versions/windows/it-pro/windows-server-2003/cc785842(v=ws.10))」を参照してください。

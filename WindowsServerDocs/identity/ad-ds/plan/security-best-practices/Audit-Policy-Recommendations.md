@@ -1,17 +1,17 @@
 ---
 ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 title: 監査ポリシーの推奨事項
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 5b5ce5e7b53c7b82732613022c8309efe044143f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 33ce3713f95b995fdab63b9e3bd27650fae58347
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972229"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938232"
 ---
 # <a name="audit-policy-recommendations"></a>監査ポリシーの推奨事項
 
@@ -19,7 +19,7 @@ ms.locfileid: "87972229"
 
 このセクションでは、ワークステーションとサーバーの製品について、Windows の既定の監査ポリシー設定、基本設定として推奨される監査ポリシー設定、および Microsoft からの積極的な推奨事項について説明します。
 
-ここに示されている SCM のベースラインの推奨事項と、セキュリティの侵害を検出するために推奨される設定は、管理者にとって最初のベースラインガイドにすぎません。 各組織は、直面する脅威、許容されるリスク許容範囲、および有効にする必要がある監査ポリシーカテゴリまたはサブカテゴリについて、独自の決定を行う必要があります。 脅威の詳細については、[脅威と対策](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125921(v=ws.10))に関するガイドを参照してください。 適切な監査ポリシーが設定されていない管理者は、運用環境でを実装する前に、ここで推奨されている設定から開始し、変更してテストすることをお勧めします。
+ここに示されている SCM のベースラインの推奨事項と、セキュリティの侵害を検出するために推奨される設定は、管理者にとって最初のベースラインガイドにすぎません。 各組織は、直面する脅威、許容されるリスク許容範囲、および有効にする必要がある監査ポリシーカテゴリまたはサブカテゴリについて、独自の決定を行う必要があります。 脅威の詳細については、 [脅威と対策](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125921(v=ws.10))に関するガイドを参照してください。 適切な監査ポリシーが設定されていない管理者は、運用環境でを実装する前に、ここで推奨されている設定から開始し、変更してテストすることをお勧めします。
 
 推奨事項は、エンタープライズクラスのコンピューターを対象としています。 Microsoft は、平均的なセキュリティ要件を持ち、高いレベルの運用機能を必要とするコンピューターとして定義されています。 より高いセキュリティ要件を必要とするエンティティは、より積極的な監査ポリシーを検討する必要があります。
 
@@ -92,7 +92,7 @@ ms.locfileid: "87972229"
 | IPsec メイン モードの監査 |  |  | IF の場合 |
 | IPsec クイック モードの監査 |  |  |  |
 | ログオフの監査 | はいいいえ | はいいいえ | はいいいえ |
-| ログオンの監査<sup>1</sup> | そうそう | そうそう | そうそう |
+| ログオンの監査 <sup>1</sup> | そうそう | そうそう | そうそう |
 | ネットワーク ポリシー サーバーの監査 | そうそう |  |  |
 | その他のログオン/ログオフ イベントの監査 |  |  |  |
 | 特殊なログオンの監査 | はいいいえ | はいいいえ | そうそう |
@@ -253,7 +253,7 @@ ms.locfileid: "87972229"
 
 ログオンに失敗した aberrant の数は、パスワード推測攻撃を示している可能性があります。 失敗したログオンの数が異常に多い場合にアラートを提供するには、まず、悪意のあるセキュリティイベントが発生する前に、環境内で失敗したログオンの通常レベルを把握しておく必要があります。
 
-侵害の兆候を監視するときに含める必要があるイベントの包括的な一覧については、「[付録 L: 監視するイベント](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md)」を参照してください。
+侵害の兆候を監視するときに含める必要があるイベントの包括的な一覧については、「 [付録 L: 監視するイベント](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md)」を参照してください。
 
 ## <a name="active-directory-objects-and-attributes-to-monitor"></a>監視するオブジェクトと属性の Active Directory
 次に示すのは、Active Directory Domain Services のインストールを侵害する試みを検出するために監視する必要があるアカウント、グループ、および属性です。
@@ -266,7 +266,7 @@ ms.locfileid: "87972229"
 
 - AD DS の特権および VIP アカウント。 [アカウント] タブの属性 (cn、name、sAMAccountName、userPrincipalName、userAccountControl など) の変更、特に変更を監視します。 アカウントの監視に加えて、アカウントを変更できるユーザーを、可能な限り少数の管理ユーザーに制限します。
 
-監視する推奨イベントの一覧、重要度の評価、およびイベントメッセージの概要については、 [「付録 L: 監視するイベント](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md)」を参照してください。
+監視する推奨イベントの一覧、重要度の評価、およびイベントメッセージの概要については、 [「付録 L: 監視するイベント](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md) 」を参照してください。
 
 - サーバーをワークロードの分類によってグループ化することで、最も厳密に監視され、最も厳密に構成されたサーバーを簡単に識別できるようになります。
 
@@ -281,15 +281,15 @@ ms.locfileid: "87972229"
 ## <a name="additional-information-for-monitoring-active-directory-domain-services"></a>Active Directory Domain Services の監視に関する追加情報
 AD DS の監視の詳細については、次のリンクを参照してください。
 
-- [グローバルオブジェクトアクセスの監査はマジック](/archive/blogs/askds/global-object-access-auditing-is-magic)で、windows 7 および windows Server 2008 R2 に追加された高度な監査ポリシーの構成と使用に関する情報を提供します。
+- [グローバルオブジェクトアクセスの監査はマジック](/archive/blogs/askds/global-object-access-auditing-is-magic) で、windows 7 および windows Server 2008 R2 に追加された高度な監査ポリシーの構成と使用に関する情報を提供します。
 
-- [Windows 2008 での監査の変更の概要](/archive/blogs/askds/introducing-auditing-changes-in-windows-2008)-windows 2008 で行われた監査の変更について説明します。
+- [Windows 2008 での監査の変更の概要](/archive/blogs/askds/introducing-auditing-changes-in-windows-2008) -windows 2008 で行われた監査の変更について説明します。
 
-- [Vista および2008での優れた監査手法](/archive/blogs/askds/cool-auditing-tricks-in-vista-and-2008)-windows Vista および windows Server 2008 での監査の興味深い新機能について説明します。この機能を使用して、問題のトラブルシューティングや、環境内で起こっていることを確認できます。
+- [Vista および2008での優れた監査手法](/archive/blogs/askds/cool-auditing-tricks-in-vista-and-2008) -windows Vista および windows Server 2008 での監査の興味深い新機能について説明します。この機能を使用して、問題のトラブルシューティングや、環境内で起こっていることを確認できます。
 
-- [Windows server 2008 および Windows vista で監査を行うためのワンストップショップ](/archive/blogs/askds/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista)-windows server 2008 および windows vista に含まれる監査機能と情報のコンパイルが含まれています。
+- [Windows server 2008 および Windows vista で監査を行うためのワンストップショップ](/archive/blogs/askds/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista) -windows server 2008 および windows vista に含まれる監査機能と情報のコンパイルが含まれています。
 
-- [AD DS 監査のステップバイステップガイド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731607(v=ws.10))-Windows Server 2008 の新しい Active Directory Domain Services (AD DS) 監査機能について説明します。 また、この新しい機能を実装する手順を示します。
+- [AD DS 監査のステップバイステップガイド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731607(v=ws.10)) -Windows Server 2008 の新しい Active Directory Domain Services (AD DS) 監査機能について説明します。 また、この新しい機能を実装する手順を示します。
 
 ## <a name="general-list-of-security-event-id-recommendation-criticalities"></a>セキュリティイベント ID の推奨事項の一般的な一覧 Criticalities
 すべてのイベント ID の推奨事項には、次のような重要度の評価が伴います。
@@ -302,4 +302,4 @@ AD DS の監視の詳細については、次のリンクを参照してくだ�
 
 これらの推奨事項は、管理者のベースラインガイドを提供することを目的としています。 すべての推奨事項は、運用環境で実装する前に十分に確認してください。
 
-監視する推奨イベントの一覧、重要度の評価、およびイベントメッセージの概要については、 [「付録 L: 監視するイベント](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md)」を参照してください。
+監視する推奨イベントの一覧、重要度の評価、およびイベントメッセージの概要については、 [「付録 L: 監視するイベント](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md) 」を参照してください。

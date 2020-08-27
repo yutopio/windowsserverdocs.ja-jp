@@ -1,17 +1,17 @@
 ---
 ms.assetid: 853b7f02-bc69-416e-87b1-556f51cb2cea
 title: Windows PowerShell を使用した Active Directory レプリケーションおよびトポロジ管理
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 8f843d8746fc7549098706b724ee85b89338b6bd
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 442c26e0ea61283de9c869a316b41366a4bf8992
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87963297"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938162"
 ---
 # <a name="active-directory-replication-and-topology-management-using-windows-powershell"></a>Windows PowerShell を使用した Active Directory レプリケーションおよびトポロジ管理
 
@@ -21,7 +21,7 @@ Active Directory 用の Windows PowerShell には、レプリケーションと�
 
 -   [Windows PowerShell &#40;レベル100を使用した Active Directory レプリケーションとトポロジ管理の概要&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)
 
--   [Windows PowerShell &#40;レベル 200&#41;を使用した高度な Active Directory レプリケーションおよびトポロジ管理](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
+-   [Windows PowerShell &#40;レベル 200&#41;を使用した高度な Active Directory レプリケーションおよびトポロジ管理 ](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
 
 
 

@@ -2,24 +2,24 @@
 ms.assetid: cb834273-828a-4141-9387-37dd8270e932
 title: Winlogon 自動再起動サインオン (ARSO)
 description: Windows 自動再起動サインオンを使用すると、ユーザーの生産性を向上させることができます。
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.reviewer: cahick
 ms.date: 08/20/2019
 ms.topic: article
-ms.openlocfilehash: 711a3fc22977d7aa9751c8e200524f4cd295110b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3f2957d2290934505f67edbcb8a49733452939e2
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943309"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88939872"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>Winlogon 自動再起動サインオン (ARSO)
 
 Windows Update 中に、更新を完了するために必要なユーザー固有のプロセスがあります。 これらのプロセスでは、ユーザーがデバイスにログインする必要があります。 更新が開始された後の最初のログインでは、ユーザーは、デバイスの使用を開始する前に、これらのユーザー固有のプロセスが完了するまで待つ必要があります。
 
-## <a name="how-does-it-work"></a>それはどのように機能するのでしょうか。
+## <a name="how-does-it-work"></a>それはどのように機能しますか?
 
 Windows Update が自動再起動を開始すると、現在ログインしているユーザーの派生した資格情報を抽出してディスクに保存し、ユーザーの自動ログオンを構成します。 TCB 特権を持つシステムとして実行されている Windows Update でこれを行う RPC 呼び出しを開始します。
 
@@ -70,14 +70,14 @@ Windows 10 では、サーバーの Sku に対して ARSO が無効になって�
 
 **レジストリエディター:**
 
-| 値名 | 種類 | データ |
+| 値の名前 | 種類 | データ |
 | --- | --- | --- |
 | DisableAutomaticRestartSignOn | DWORD | 0 (ARSO を有効にする) |
 |   |   | 1 (ARSO を無効にする) |
 
 **ポリシーのレジストリの場所:** HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
 
-**型:** DWORD
+**種類:** プロシージャ
 
 ![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/gtr-adds-signinpolicy.png)
 
@@ -111,14 +111,14 @@ Windows 10 では、サーバーの Sku に対して ARSO が無効になって�
 
 **レジストリ エディター**
 
-| 値名 | 種類 | データ |
+| 値の名前 | 種類 | データ |
 | --- | --- | --- |
 | AutomaticRestartSignOnConfig | DWORD | 0 (セキュリティで保護されている場合は ARSO を有効にする) |
 |   |   | 1 (常に ARSO を有効にする) |
 
 **ポリシーのレジストリの場所:** HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
 
-**型:** DWORD
+**種類:** プロシージャ
 
 ![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/arso-policy-setting.png)
 

@@ -1,17 +1,17 @@
 ---
 ms.assetid: 2a2f493a-9796-454a-9721-e223b799dfa7
 title: フォレスト ルート ドメイン コントローラーの配置を計画する
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 125aa57086a396c643cc3c042376b7fecc17ede8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 16779bc5f5e0aa20a9824854f572a691af5bf561
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970969"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938732"
 ---
 # <a name="planning-forest-root-domain-controller-placement"></a>フォレスト ルート ドメイン コントローラーの配置を計画する
 
@@ -19,7 +19,7 @@ ms.locfileid: "87970969"
 
 フォレストルートドメインコントローラーは、自身以外のドメインのリソースにアクセスする必要があるクライアントの信頼パスを作成するために必要です。 ハブの場所およびデータセンターをホストする場所に、フォレストルートドメインコントローラーを配置します。 特定の場所のユーザーが同じ場所にある他のドメインのリソースにアクセスする必要があり、データセンターとユーザーの場所の間のネットワークの可用性が低い場合は、その場所にフォレストルートドメインコントローラーを追加するか、2つのドメイン間にショートカットの信頼を作成することができます。 フォレストルートドメインコントローラーをその場所に配置する他の理由がない限り、ドメイン間にショートカットの信頼を作成する方がコスト効率が高くなります。
 
-ショートカットの信頼は、いずれかのドメインにあるユーザーからの認証要求を最適化するのに役立ちます。 ドメイン間のショートカットの信頼の詳細については、「[ショートカットの信頼を作成する場合](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754538(v=ws.11))」を参照してください。
+ショートカットの信頼は、いずれかのドメインにあるユーザーからの認証要求を最適化するのに役立ちます。 ドメイン間のショートカットの信頼の詳細については、「 [ショートカットの信頼を作成する場合](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754538(v=ws.11))」を参照してください。
 
 フォレストルートドメインコントローラーの配置を文書化するのに役立つワークシートについては、「 [Windows Server 2003 展開キット用のジョブエイド](https://microsoft.com/download/details.aspx?id=9608)」、「Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードする」、および「ドメインコントローラーの配置」 (DSSTOPO_4.doc) を参照してください。
 

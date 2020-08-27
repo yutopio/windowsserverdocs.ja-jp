@@ -1,17 +1,17 @@
 ---
 ms.assetid: 87bca912-b912-4bbe-9533-2c34a7abc52d
 title: 必要なドメイン数を決定する
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: 6ff1d69afc95aa87d81c8737313d425e84cbc531
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8fe9e6d50bef530d50ba8e7a33432fe2613b871b
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87941330"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88939352"
 ---
 # <a name="determining-the-number-of-domains-required"></a>必要なドメイン数を決定する
 
@@ -42,7 +42,7 @@ ms.locfileid: "87941330"
 
 このテーブルを使用するには、次のようにします。
 
-1. [**ドメインコントローラーを接続する最も遅いリンク**] 列で、AD DS がドメイン内でレプリケートされる最も低速なリンクの速度と一致する値を見つけます。
+1. [ **ドメインコントローラーを接続する最も遅いリンク** ] 列で、AD DS がドメイン内でレプリケートされる最も低速なリンクの速度と一致する値を見つけます。
 
 2. 最も低速なリンク速度に対応する行で、AD DS に割り当てる帯域幅の割合を表す列を見つけます。 その場所の値は、単一ドメインフォレスト内のドメインに含めることができるユーザーの最大数です。
 
@@ -80,7 +80,7 @@ ms.locfileid: "87941330"
 
 このテーブルを使用するには、次のようにします。
 
-1. [**ドメインコントローラーを接続する最も遅いリンク**] 列で、AD DS がフォレスト内でレプリケートされる最も低速なリンクの速度と一致する値を見つけます。
+1. [ **ドメインコントローラーを接続する最も遅いリンク** ] 列で、AD DS がフォレスト内でレプリケートされる最も低速なリンクの速度と一致する値を見つけます。
 
 2. 最も低速なリンク速度に対応する行で、AD DS に割り当てる帯域幅の割合を表す列を見つけます。 その場所の値は、フォレストがホストできるユーザーの最大数です。
 
@@ -114,7 +114,7 @@ ms.locfileid: "87941330"
 
 このテーブルを使用するには、次のようにします。
 
-1. [**ドメインコントローラーを接続する最も遅いリンク**] 列で、AD DS がリージョン内でレプリケートされる最も低速なリンクの速度と一致する値を見つけます。
+1. [ **ドメインコントローラーを接続する最も遅いリンク** ] 列で、AD DS がリージョン内でレプリケートされる最も低速なリンクの速度と一致する値を見つけます。
 
 2. 最も低速なリンク速度に対応する行で、AD DS に割り当てる帯域幅の割合を表す列を見つけます。 この値は、リージョンがホストできるユーザーの最大数を表します。
 
@@ -126,4 +126,4 @@ ms.locfileid: "87941330"
 
 組織を地域ドメインに分割した後は、表示するリージョンと、各リージョンに存在するユーザーの数を文書化します。 さらに、Active Directory レプリケーションに使用する各リージョンの低速リンクの速度に注意してください。 この情報は、追加のドメインまたはフォレストが必要かどうかを判断するために使用されます。
 
-特定したリージョンを文書化するのに役立つワークシートについては、「 [Windows Server 2003 Deployment Kit のジョブエイド](https://microsoft.com/download/details.aspx?id=9608)」から Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードして、「識別領域」 (DSSLOGI_4.doc) を開きます。
+特定したリージョンを文書化するのに役立つワークシートについては、「 [Windows Server 2003 Deployment Kit のジョブエイド](https://microsoft.com/download/details.aspx?id=9608) 」から Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードして、「識別領域」 (DSSLOGI_4.doc) を開きます。

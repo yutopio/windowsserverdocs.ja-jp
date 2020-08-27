@@ -1,17 +1,17 @@
 ---
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: ディレクトリ サービス コンポーネントの更新
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b3614679780395defcd182394f4a6cdd7f4ad832
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 39f13d18210a6527c5da2ccb6655150be9608a46
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943410"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88939592"
 ---
 # <a name="directory-services-component-updates"></a>ディレクトリ サービス コンポーネントの更新
 
@@ -55,7 +55,7 @@ ms.locfileid: "87943410"
 
 1.  *保護されたユーザー*の DC 側の保護
 
-    *保護されたユーザー*が Windows Server 2012 R2 ドメインに対する認証を行うことができ**なくなり**ます。
+    *保護されたユーザー* が Windows Server 2012 R2 ドメインに対する認証を行うことができ **なくなり**ます。
 
     -   NTLM 認証で認証を行う
 
@@ -87,7 +87,7 @@ Windows Server 2008 DFL は、新しいドメインの作成でサポートさ�
 ### <a name="lowering-the-forest-and-domain-functional-levels"></a>フォレストおよびドメインの機能レベルを下げる
 フォレストおよびドメインの機能レベルは、新しいドメインと新しいフォレストの作成時に既定で Windows Server 2012 R2 に設定されますが、Windows PowerShell を使用して下げることができます。
 
-Windows PowerShell を使用してフォレストの機能レベルを上げたり下げたりするには、 **set-adforestmode**コマンドレットを使用します。
+Windows PowerShell を使用してフォレストの機能レベルを上げたり下げたりするには、 **set-adforestmode** コマンドレットを使用します。
 
 **Contoso.com FFL を Windows Server 2008 モードに設定するには、次のようにします。**
 
@@ -112,7 +112,7 @@ Windows Server 2012 R2 を実行している DC を、2003 DFL を実行して�
 ### <a name="adprep"></a>ADPREP
 このリリースでは、新しいフォレストまたはドメインの操作はありません。
 
-これらの .ldf ファイルには、**デバイス登録サービス**のスキーマ変更が含まれています。
+これらの .ldf ファイルには、 **デバイス登録サービス**のスキーマ変更が含まれています。
 
 1.  Sch59
 
@@ -269,17 +269,17 @@ Log Record Bytes Generated: 0
 
 1.  LDP.exe を開き、ドメインコントローラーに接続してバインドします。
 
-2.  [**オプション**] メニューの [**コントロール**] をクリックします。
+2.  [ **オプション** ] メニューの [ **コントロール**] をクリックします。
 
-3.  [コントロール] ダイアログボックスで、[**事前定義済み**] プルダウンメニューを展開し、[**検索統計**] をクリックして、[ **OK**] をクリックします。
+3.  [コントロール] ダイアログボックスで、[ **事前定義済み** ] プルダウンメニューを展開し、[ **検索統計** ] をクリックして、[ **OK**] をクリックします。
 
     ![ディレクトリサービスの更新](media/Directory-Services-component-updates/GTR_ADDS_Controls.gif)
 
 4.  [**参照**] メニューの [**検索**] をクリックします。
 
-5.  [検索] ダイアログボックスで、[**オプション**] ボタンを選択します。
+5.  [検索] ダイアログボックスで、[ **オプション** ] ボタンを選択します。
 
-6.  [検索オプション] ダイアログボックスの [**拡張**] チェックボックスがオンになっていることを確認し、[ **OK]** を選択します。
+6.  [検索オプション] ダイアログボックスの [ **拡張** ] チェックボックスがオンになっていることを確認し、[ **OK]** を選択します。
 
     ![ディレクトリサービスの更新](media/Directory-Services-component-updates/GTR_ADDS_SearchOptions.gif)
 
@@ -294,9 +294,9 @@ Log Record Bytes Generated: 0
 
 4.  属性インデックスのためにクエリオプティマイザーで最適化できる LDAP 検索を実行する
 
-5.  完了までに長い時間がかかる検索を作成しようとしています (検索がタイムアウトにならないように、[**制限時間**] オプションを長くすることもできます)。
+5.  完了までに長い時間がかかる検索を作成しようとしています (検索がタイムアウトにならないように、[ **制限時間** ] オプションを長くすることもできます)。
 
-### <a name="additional-resources"></a>その他の情報
+### <a name="additional-resources"></a>その他のリソース
 [Active Directory 検索とは何ですか。](/previous-versions/windows/it-pro/windows-server-2003/cc783845(v=ws.10))
 
 [Active Directory 検索のしくみ](/previous-versions/windows/it-pro/windows-server-2003/cc755809(v=ws.10))
@@ -308,7 +308,7 @@ Log Record Bytes Generated: 0
 ## <a name="1644-event-improvements"></a><a name="BKMK_1644"></a>1644 イベントの改善
 
 ### <a name="overview"></a>概要
-この更新により、トラブルシューティングのために、LDAP 検索結果の統計がイベント ID 1644 に追加されます。  また、新しいレジストリ値を使用して、時間ベースのしきい値でログ記録を有効にすることもできます。  これらの機能強化は、Windows server 2012 および Windows Server 2008 R2 SP1 で、KB [2800945](https://support.microsoft.com/kb/2800945)を使用して提供され、windows SERVER 2008 SP2 で使用できるようになりました。
+この更新により、トラブルシューティングのために、LDAP 検索結果の統計がイベント ID 1644 に追加されます。  また、新しいレジストリ値を使用して、時間ベースのしきい値でログ記録を有効にすることもできます。  これらの機能強化は、Windows server 2012 および Windows Server 2008 R2 SP1 で、KB [2800945](https://support.microsoft.com/kb/2800945) を使用して提供され、windows SERVER 2008 SP2 で使用できるようになりました。
 
 > [!NOTE]
 > -   非効率的または高価な LDAP 検索のトラブルシューティングを支援するために、追加の LDAP 検索統計情報がイベント ID 1644 に追加されます。
@@ -399,6 +399,6 @@ AD レプリケーションでは、レプリケーショントランスポー�
 > [!NOTE]
 > この動作を変更するための構成可能な設定はありません。
 
-### <a name="additional-resources"></a>その他の情報
+### <a name="additional-resources"></a>その他のリソース
 [Active Directory レプリケーションモデルのしくみ](/previous-versions/windows/it-pro/windows-server-2003/cc772726(v=ws.10))
 

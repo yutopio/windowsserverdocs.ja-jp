@@ -1,17 +1,17 @@
 ---
 ms.assetid: 399a8bbe-3375-4bb0-b55b-5f46e7050028
 title: 'レプリケーション エラー 1396。ログオン エラー: 対象のアカウント名は間違っています'
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: acd42fc1290639dddf9dbc283a873c8b7fca49c2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2a4c135f7f4e74c5c5e96e8e9366635db84030df
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972279"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938592"
 ---
 # <a name="replication-error-1396-logon-failure-the-target-account-name-is-incorrect"></a>レプリケーション エラー 1396。ログオン エラー: 対象のアカウント名は間違っています
 
@@ -62,7 +62,7 @@ Last attempt @ &lt;date&gt; &lt;time&gt; failed, <codeFeaturedElement>result 139
 Logon Failure: The target account name is incorrect.</codeFeaturedElement>
 &lt;#&gt; consecutive failure(s).
 Last success @ &lt;date&gt; &lt;time&gt;.
-</code></listItem><listItem><para>Active Directory サイトおよびサービスの [<ui>今すぐレプリケート</ui>] コマンドを実行すると、ログオンエラーが返されます。 &quot; ターゲットアカウント名が正しくありません。&quot;</para><para>ソース DC からの接続オブジェクトを右クリックし、[<ui>今すぐレプリケート</ui>] を選択すると、ログオンエラーが発生します。 &quot; ターゲットアカウント名が正しくありません。 &quot;画面上のエラーメッセージは次のようになります。</para><para>ダイアログのタイトルのテキスト:</para><para>今すぐレプリケート</para><para>ダイアログメッセージのテキスト: </para><para>&lt; &gt; ドメインコントローラーのソース dc からドメインコントローラーの宛先 dc への名前付けコンテキストパーティションの DNS パスを同期しようとして、次のエラーが発生しました &lt; &gt; &lt; &gt; : ログオンに失敗しました: ターゲットアカウント名が正しくありません。 この操作は続行されません。 </para></listItem><listItem><para>1396状態の NTDS KCC、NTDS General、または Microsoft-Windows ActiveDirectory_DomainService イベントは、イベントビューアーのディレクトリサービスログに記録されます。</para><para>1396状態を一般的に示す Active Directory イベントは次のとおりです。</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>イベント ID</para></TD><TD><para>イベント ソース</para></TD><TD><para>イベントの文字列</para></TD></tr></thead><tbody><tr><TD><para>1125</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>Active Directory ドメインサービスインストールウィザード (Dcpromo) は、次のドメインコントローラーとの接続を確立できませんでした。</para></TD></tr><tr><TD><para>1645</para><para>このイベントは、3つの部分から構成される SPN を一覧表示します。</para></TD><TD><para>NTDS レプリケーション</para></TD><TD><para>Active Directory は、宛先ドメイン コントローラの要求されたサービス プリンシパル名 (SPN) が、SPN を解決するキー配布センター (KDC) ドメイン コントローラ上で登録されていないため、認証済みのリモート プロシージャ コール (RPC) を別のドメイン コントローラに対して実行しませんでした。</para></TD></tr><tr><TD><para>1655</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>Active Directory Domain Services が次のグローバルカタログと通信しようとしましたが、試行は失敗しました。</para></TD></tr><tr><TD><para>2847</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>知識整合性チェッカーは、ローカルの読み取り専用ディレクトリサービスのレプリケーション接続を検出し、次のディレクトリサービスインスタンスでリモートで更新しようとしました。 操作が失敗しました。 再試行されます。</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>次の書き込み可能なディレクトリ パーティションのレプリケーション リンクを確立できませんでした。</para></TD></tr><tr><TD><para>1926</para></TD><TD><para>NTDS KCC</para></TD><TD><para>失敗した次のパラメーターを使用して、読み取り専用のディレクトリ パーティションへのレプリケーション リンクを確立するために試行します。</para></TD></tr><tr><TD><para>5781</para></TD><TD><para>ネット</para></TD><TD><para> サーバーの名前を DNS に登録できません。</para></TD></tr></tbody></table></listItem><listItem><para>DCPROMO がスクリーンエラーで失敗する</para><para>ダイアログのタイトルのテキスト:</para><para>Active Directory のインストールに失敗しました</para><para>ダイアログメッセージのテキスト:</para><para>サーバー ReplicationSourceDC.contoso.com で、ディレクトリサービスが CN = NTDS 設定、CN = Server、cn = Servers、CN = Site、CN = Sites、CN = Configuration、DC = contoso、DC = com のサーバーオブジェクトを作成できなかったため、操作に失敗しました。 </para><para>指定されたネットワーク資格情報に、レプリカを追加するための十分なアクセス権があることを確認してください。 </para><para>
+</code></listItem><listItem><para>Active Directory サイトおよびサービスの [ <ui>今すぐレプリケート</ui> ] コマンドを実行すると、ログオンエラーが返されます。 &quot; ターゲットアカウント名が正しくありません。&quot;</para><para>ソース DC からの接続オブジェクトを右クリックし、[ <ui>今すぐレプリケート</ui> ] を選択すると、ログオンエラーが発生します。 &quot; ターゲットアカウント名が正しくありません。 &quot; 画面上のエラーメッセージは次のようになります。</para><para>ダイアログのタイトルのテキスト:</para><para>今すぐレプリケート</para><para>ダイアログメッセージのテキスト: </para><para>&lt; &gt; ドメインコントローラーのソース dc からドメインコントローラーの宛先 dc への名前付けコンテキストパーティションの DNS パスを同期しようとして、次のエラーが発生しました &lt; &gt; &lt; &gt; : ログオンに失敗しました: ターゲットアカウント名が正しくありません。 この操作は続行されません。 </para></listItem><listItem><para>1396状態の NTDS KCC、NTDS General、または Microsoft-Windows ActiveDirectory_DomainService イベントは、イベントビューアーのディレクトリサービスログに記録されます。</para><para>1396状態を一般的に示す Active Directory イベントは次のとおりです。</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>イベント ID</para></TD><TD><para>イベント ソース</para></TD><TD><para>イベントの文字列</para></TD></tr></thead><tbody><tr><TD><para>1125</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>Active Directory ドメインサービスインストールウィザード (Dcpromo) は、次のドメインコントローラーとの接続を確立できませんでした。</para></TD></tr><tr><TD><para>1645</para><para>このイベントは、3つの部分から構成される SPN を一覧表示します。</para></TD><TD><para>NTDS レプリケーション</para></TD><TD><para>Active Directory は、宛先ドメイン コントローラの要求されたサービス プリンシパル名 (SPN) が、SPN を解決するキー配布センター (KDC) ドメイン コントローラ上で登録されていないため、認証済みのリモート プロシージャ コール (RPC) を別のドメイン コントローラに対して実行しませんでした。</para></TD></tr><tr><TD><para>1655</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>Active Directory Domain Services が次のグローバルカタログと通信しようとしましたが、試行は失敗しました。</para></TD></tr><tr><TD><para>2847</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>知識整合性チェッカーは、ローカルの読み取り専用ディレクトリサービスのレプリケーション接続を検出し、次のディレクトリサービスインスタンスでリモートで更新しようとしました。 操作が失敗しました。 再試行されます。</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>次の書き込み可能なディレクトリ パーティションのレプリケーション リンクを確立できませんでした。</para></TD></tr><tr><TD><para>1926</para></TD><TD><para>NTDS KCC</para></TD><TD><para>失敗した次のパラメーターを使用して、読み取り専用のディレクトリ パーティションへのレプリケーション リンクを確立するために試行します。</para></TD></tr><tr><TD><para>5781</para></TD><TD><para>ネット</para></TD><TD><para> サーバーの名前を DNS に登録できません。</para></TD></tr></tbody></table></listItem><listItem><para>DCPROMO がスクリーンエラーで失敗する</para><para>ダイアログのタイトルのテキスト:</para><para>Active Directory のインストールに失敗しました</para><para>ダイアログメッセージのテキスト:</para><para>サーバー ReplicationSourceDC.contoso.com で、ディレクトリサービスが CN = NTDS 設定、CN = Server、cn = Servers、CN = Site、CN = Sites、CN = Configuration、DC = contoso、DC = com のサーバーオブジェクトを作成できなかったため、操作に失敗しました。 </para><para>指定されたネットワーク資格情報に、レプリカを追加するための十分なアクセス権があることを確認してください。 </para><para>
 &quot;ログオンエラー: ターゲットアカウント名が正しくありません。 &quot;</para><para>この場合、イベント ID 1645、1168、および1125は、昇格されているサーバーにログ記録されます。</para></listItem><listItem><para><embeddedLabel>Net use</embeddedLabel>を使用してドライブをマップする:</para><code>C:&gt;net use z: &lt;server_name&gt;c$
 System error 1396 has occurred.
 Logon Failure: The target account name is incorrect.</code><para>この場合、サーバーはイベント ID 333 をシステムイベントログに記録し、SQL Server などのアプリケーションに対して大量の仮想メモリを使用することもできます。</para></listItem><listItem><para>DC 時刻が正しくありません。</para></listItem><listItem><para>RODC の krbtgt アカウントを復元した後、削除された KDC は RODC で開始されません。 たとえば、復元後にエラー1396が表示されます。 </para><para>
@@ -113,7 +113,7 @@ Logon Failure: The target account name is incorrect.</code><para>この場合、
         <listItem>
           <para>手順 2. で検出されたグローバルカタログの手順1で検出された SPN を検索します。</para>
           <code>C:&gt;repadmin /showattr Server_Name DC=corp,DC=contoso,dc=com &lt;GC used by KDC&gt; &lt;DN path of forest root domain&gt; /filter:&quot;(serviceprincipalname=&lt;SPN cited in the NTDS Replication event 1645&gt;)&quot; /gc /subtree /atts:cn,serviceprincipalname</code>
-          <para>または</para>
+          <para>OR</para>
           <code>C:&gt;dsquery * forestroot -scope subtree -filter &quot;(serviceprincipalname=E3514235-4B06-11D1-AB04-00C04FC2DCD2/65cead9f-4949-46a3-a49a-f1fbfe13d2b3*)&quot; -attr * -s Server_Name.europe.corp.contoso.com</code>
           <para>SPN のホストオブジェクトが存在することを確認します。</para>
           <para>オブジェクトが MY.CNF または conflict で破損しているか、または lost and found コンテナーに存在するかを含め、ホストオブジェクトの DN パスを確認します。</para>

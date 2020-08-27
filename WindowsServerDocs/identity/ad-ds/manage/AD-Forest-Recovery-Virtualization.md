@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復の仮想化
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
-ms.openlocfilehash: e02fbf15ee3f9edc68bbfc479c2ab06aba32a959
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: aa6598c2a033147928d05c8175886c1c2425b4cd
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943755"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938052"
 ---
 # <a name="active-directory-forest-recovery-virtualization"></a>Active Directory フォレスト回復の仮想化
 
@@ -29,7 +29,7 @@ ms.locfileid: "87943755"
 - 複製のソースとして使用される仮想化 DC は、Windows Server 2016 または2012を実行し、複製可能なドメインコントローラーグループのメンバーである必要があります。
 - PDC エミュレーターは、Windows Server 2016 または2012を実行している必要があります。 PDC エミュレーターが仮想化されている場合は、複製できます。
 
-仮想化 DC の複製を実行する詳細な手順については、「 [Active Directory Domain Services (AD DS) の仮想化 (レベル 100) の概要」を](../Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md)参照してください。 仮想化 DC の複製のしくみの詳細については、「[仮想化ドメインコントローラーのテクニカルリファレンス (レベル 300)](../deploy/virtual-dc/virtualized-domain-controller-technical-reference--level-300-.md)」を参照してください。
+仮想化 DC の複製を実行する詳細な手順については、「 [Active Directory Domain Services (AD DS) の仮想化 (レベル 100) の概要」を](../Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md)参照してください。 仮想化 DC の複製のしくみの詳細については、「 [仮想化ドメインコントローラーのテクニカルリファレンス (レベル 300)](../deploy/virtual-dc/virtualized-domain-controller-technical-reference--level-300-.md)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -1,17 +1,17 @@
 ---
 ms.assetid: 407d5e81-c04c-4275-9ae9-35f65b4a371a
 title: グローバル カタログ サーバーの配置の計画
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: a8ef90ec13b67fdb3bc0e37e02d571721a0ea77a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e82b9c7db0db62f4e74e6114d78aca59b21f8525
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970979"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938702"
 ---
 # <a name="planning-global-catalog-server-placement"></a>グローバル カタログ サーバーの配置の計画
 
@@ -47,6 +47,6 @@ Microsoft Exchange、メッセージ キュー (MSMQ とも呼ばれます)、�
 
 ## <a name="enabling-universal-group-membership-caching"></a>ユニバーサル グループ メンバーシップのキャッシュを有効にします。
 
-100人未満のユーザーを含み、グローバルカタログサーバーを必要とする多数のローミングユーザーまたはアプリケーションが含まれていない場所については、Windows Server 2008 を実行しているドメインコントローラーを展開して、ユニバーサルグループメンバーシップのキャッシュを有効にすることができます。 グローバル カタログ サーバーは、ユニバーサル グループ メンバーシップのキャッシュが有効になっている、キャッシュ内のユニバーサル グループ情報を更新できるようにドメイン コント ローラーから 1 つ以上のレプリケーション ホップではないことを確認します。 ユニバーサルグループキャッシュのしくみの詳細については、記事「[グローバルカタログの](/previous-versions/windows/it-pro/windows-server-2003/cc737410(v=ws.10))しくみ」を参照してください。
+100人未満のユーザーを含み、グローバルカタログサーバーを必要とする多数のローミングユーザーまたはアプリケーションが含まれていない場所については、Windows Server 2008 を実行しているドメインコントローラーを展開して、ユニバーサルグループメンバーシップのキャッシュを有効にすることができます。 グローバル カタログ サーバーは、ユニバーサル グループ メンバーシップのキャッシュが有効になっている、キャッシュ内のユニバーサル グループ情報を更新できるようにドメイン コント ローラーから 1 つ以上のレプリケーション ホップではないことを確認します。 ユニバーサルグループキャッシュのしくみの詳細については、記事「 [グローバルカタログの](/previous-versions/windows/it-pro/windows-server-2003/cc737410(v=ws.10))しくみ」を参照してください。
 
 ユニバーサルグループキャッシュが有効になっているグローバルカタログサーバーとドメインコントローラーを配置する場所を文書化するためのワークシートについては、「 [Windows Server 2003 展開キット用のジョブエイド](https://microsoft.com/download/details.aspx?id=9608)」、「Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip をダウンロードして、ドメインコントローラーの配置を開く (DSSTOPO_4.doc)」を参照してください。 地域ドメイン、フォレスト ルート ドメインを展開するときに、グローバル カタログ サーバーを配置する必要がある場所に関する情報を参照してください。

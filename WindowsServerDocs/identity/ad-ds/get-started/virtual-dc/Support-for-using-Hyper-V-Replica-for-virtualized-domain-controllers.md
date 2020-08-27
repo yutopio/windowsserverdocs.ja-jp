@@ -1,17 +1,17 @@
 ---
 ms.assetid: 45a65504-70b5-46ea-b2e0-db45263fabaa
 title: 仮想化ドメイン コントローラー用 Hyper-V レプリカの使用のサポート
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: a751e8d6f170a83027f417855da1bdaa471de01b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8c4d96bbf23e9f25a0ed38f6ca9d6e4c33cdb7b7
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954418"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938192"
 ---
 # <a name="support-for-using-hyper-v-replica-for-virtualized-domain-controllers"></a>仮想化ドメイン コントローラー用 Hyper-V レプリカの使用のサポート
 
@@ -68,5 +68,5 @@ Hyper-V レプリカを使用する場合は、必ず [Hyper-V で仮想ドメ�
 
 | 計画されたフェールオーバー。 | 計画外フェールオーバー |
 |--|--|
-| サポートされていますが、お勧めしません。これらのバージョンの Windows Server が実行されている DC では VMGenID がサポートされていないか、または関連する仮想化セーフガードが使用されないからです。 これにより、USN ロールバックが発生するリスクがあります。 詳細については、[USN および USN ロールバックに関するページ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553(v=ws.10))をご覧ください。 | サポートなし<p>**注:** 計画外のフェールオーバーでは、フォレスト内の単一の DC (推奨されていない構成) など、USN ロールバックがリスクにならないようにすることができます。 |
+| サポートされていますが、お勧めしません。これらのバージョンの Windows Server が実行されている DC では VMGenID がサポートされていないか、または関連する仮想化セーフガードが使用されないからです。 これにより、USN ロールバックが発生するリスクがあります。 詳細については、[USN および USN ロールバックに関するページ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553(v=ws.10))をご覧ください。 | サポートされていません<p>**注:** 計画外のフェールオーバーでは、フォレスト内の単一の DC (推奨されていない構成) など、USN ロールバックがリスクにならないようにすることができます。 |
 | テスト ケース:<p>-DC1 および DC2 では、Windows Server 2008 R2 が実行されています。<p>-DC2 がシャットダウンし、計画されたフェールオーバーが DC2-Rec で実行されます。DC2 のすべてのデータは、シャットダウンが完了する前に DC2 にレプリケートされます。<p>-DC2 の開始後、DC2 と同じ invocationID を使用して DC1 とのレプリケーションが再開されます。 | N/A |

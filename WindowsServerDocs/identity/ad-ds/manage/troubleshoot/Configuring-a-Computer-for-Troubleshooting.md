@@ -1,17 +1,17 @@
 ---
 ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: トラブルシューティング用コンピューターを構成する
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 05aa12b16d67a8f91ed82064c8464927546bfee8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 049addf848e231104e844c06627997c71b335d20
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947906"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938742"
 ---
 # <a name="configuring-a-computer-for-troubleshooting"></a>トラブルシューティング用コンピューターを構成する
 
@@ -29,7 +29,7 @@ Active Directory Domain Services (AD DS) のトラブルシューティングの
 
 AD DS をインストールしてドメインコントローラーを作成すると、AD DS の管理に使用する管理ツールが自動的にインストールされます。 ドメインコントローラーではないコンピューターからドメインコントローラーをリモートで管理する場合は、サポートされているバージョンの Windows を実行しているメンバーサーバーまたはワークステーションにリモートサーバー管理ツール (RSAT) をインストールすることができます。 RSAT は、windows サポートツールを Windows Server 2003 から置き換えます。
 
-RSAT のインストールの詳細については、「[リモートサーバー管理ツール](../../../../remote/remote-server-administration-tools.md)」を参照してください。
+RSAT のインストールの詳細については、「 [リモートサーバー管理ツール](../../../../remote/remote-server-administration-tools.md)」を参照してください。
 
 ### <a name="configure-reliability-and-performance-monitor"></a>信頼性とパフォーマンスモニターの構成
 
@@ -41,7 +41,7 @@ Windows Server には、Windows 信頼性とパフォーマンスモニターが
 
 イベントビューアーディレクトリサービスのログに記録された情報がトラブルシューティングに十分ではない場合は、 **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\ntds\diagnostics**で適切なレジストリエントリを使用してログレベルを上げます。
 
-既定では、すべてのエントリのログ記録レベルは**0**に設定されます。これにより、最小限の情報が提供されます。 最も高いログ記録レベルは**5**です。 エントリのレベルを上げると、ディレクトリサービスのイベントログに追加のイベントが記録されます。
+既定では、すべてのエントリのログ記録レベルは **0**に設定されます。これにより、最小限の情報が提供されます。 最も高いログ記録レベルは **5**です。 エントリのレベルを上げると、ディレクトリサービスのイベントログに追加のイベントが記録されます。
 
 診断エントリのログ記録レベルを変更するには、次の手順に従います。 この手順を完了するには、少なくとも、**Domain Admins** グループ、またはそれと同等の権限を持つグループのメンバである必要があります。
 
@@ -55,4 +55,4 @@ Windows Server には、Windows 信頼性とパフォーマンスモニターが
 2. ログインを設定するエントリに移動します。
    * 例: HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesNTDSDiagnostics
 3. エントリをダブルクリックし、[ **Base**] で [ **Decimal**] をクリックします。
-4. [**値**] に**0** ~ **5**の整数を入力し、[ **OK]** をクリックします。
+4. [ **値**] に **0** ~ **5**の整数を入力し、[ **OK]** をクリックします。

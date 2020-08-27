@@ -1,17 +1,17 @@
 ---
 title: Active Directory フォレストの回復を計画するための前提条件
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
-ms.openlocfilehash: 827a983e49d9e20aafe2e7361f87e9f00ec117b0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: bb640474ca990d7853a35ad684889b389affb69d
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969869"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938102"
 ---
 # <a name="active-directory-forest-recovery-prerequisites"></a>Active Directory フォレスト回復の前提条件
 
@@ -46,7 +46,7 @@ Active Directory フォレストの回復計画を開始する前に、次のこ
   - プライマリドメインコントローラー (PDC) エミュレーターマスター
   - インフラストラクチャマスター
 
-さらに、ラボ環境で AD DS と SYSVOL を定期的にバックアップして復元する必要があります。 詳細については、「[システム状態データをバックアップ](AD-Forest-Recovery-Procedures.md)し、 [Active Directory Domain Services の権限のない復元を実行する](AD-Forest-Recovery-Procedures.md)」を参照してください。
+さらに、ラボ環境で AD DS と SYSVOL を定期的にバックアップして復元する必要があります。 詳細については、「 [システム状態データをバックアップ](AD-Forest-Recovery-Procedures.md) し、 [Active Directory Domain Services の権限のない復元を実行する](AD-Forest-Recovery-Procedures.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
