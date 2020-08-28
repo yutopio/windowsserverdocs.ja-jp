@@ -1,17 +1,17 @@
 ---
 title: bitsadmin getpriority
 description: Bitsadmin getpriority コマンドの参照記事。指定されたジョブの優先順位を取得します。
-ms.topic: article
+ms.topic: reference
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 57d51e4a2a34fb5ae1361e864ee932ac314662b2
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 2aeff973b0ca285cc8c9852f284e314879f8de02
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87894040"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89028700"
 ---
 # <a name="bitsadmin-getpriority"></a>bitsadmin getpriority
 
@@ -29,7 +29,7 @@ bitsadmin /getpriority <job>
 | -------------- | -------------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>Output
 
 このコマンドで返される優先順位は次のとおりです。
 

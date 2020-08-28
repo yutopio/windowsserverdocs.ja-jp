@@ -1,18 +1,18 @@
 ---
 title: auditpol get
 description: Auditpol get コマンドの参照記事。システムポリシー、ユーザーごとのポリシー、監査オプション、および監査セキュリティ記述子オブジェクトを取得します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: fe13de4e-836c-4207-b47c-64b6272d6c41
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: edb6619ed551de481b77009c320240951cdca06e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 23de44ebc9bc91ad4db52ee7362b14d9c93648d8
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895434"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029090"
 ---
 # <a name="auditpol-get"></a>auditpol get
 
@@ -20,7 +20,7 @@ ms.locfileid: "87895434"
 
 システムポリシー、ユーザーごとのポリシー、監査オプション、および監査セキュリティ記述子オブジェクトを取得します。
 
-*ユーザーごと*のポリシーと*システム*ポリシーに対して*get*操作を実行するには、セキュリティ記述子でそのオブジェクトの**読み取り**アクセス許可を持っている必要があります。 "**監査とセキュリティログの管理**" (SeSecurityPrivilege) ユーザー権利を持っている場合は、 *get*操作を実行することもできます。 ただし、この権限は、全体的な*get*操作を実行するために必要ではない追加のアクセスを許可します。
+*ユーザーごと*のポリシーと*システム*ポリシーに対して*get*操作を実行するには、セキュリティ記述子でそのオブジェクトの**読み取り**アクセス許可を持っている必要があります。 "**監査とセキュリティログの管理**" (SeSecurityPrivilege) ユーザー権利を持っている場合は、 *get*操作を実行することもできます。 ただし、この権限は、全体的な *get* 操作を実行するために必要ではない追加のアクセスを許可します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,7 +46,7 @@ auditpol /get
 | /r | 出力をレポート形式で、コンマ区切り値 (CSV) で表示します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 すべてのカテゴリおよびサブカテゴリは、引用符 (") で囲まれた GUID または名前で指定できます。 ユーザーは SID または名前で指定できます。
 

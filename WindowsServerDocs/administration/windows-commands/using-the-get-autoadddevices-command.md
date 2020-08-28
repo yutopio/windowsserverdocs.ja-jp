@@ -1,18 +1,18 @@
 ---
 title: 取得-AutoaddDevices
 description: Get AutoaddDevices の参照記事。 Windows 展開サービスサーバー上の自動追加データベースにあるすべてのコンピューターが表示されます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 24b4b688-55b0-4bd9-a2f5-7ef4b3dfe2f2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e9fcb25f465cdb26112a48e25c856a42dd21326
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: f449ddb58bb4e5f28a3cee02e9c769d363baf3b7
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892465"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035900"
 ---
 # <a name="get-autoadddevices"></a>取得-AutoaddDevices
 
@@ -28,7 +28,7 @@ wdsutil [Options] /Get-AutoaddDevices [/Server:<Server name>] /Devicetype:{Pendi
 |パラメーター|説明|
 |-------|--------|
 |[/Server:<Server name>]|サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 サーバー名が指定されていない場合は、ローカルのサーバーが使用されます。|
-|/Devicetype: {PendingDevices &#124; RejectedDevices &#124; ApprovedDevices}|コンピューターに戻すの種類を指定します。<p>-   **Pendingdevices**は、状態が [保留中] になっているデータベース内のすべてのコンピューターを返します。<br />-   **RejectedDevices**は、データベース内の、状態が拒否のすべてのコンピューターを返します。<br />-   **ApprovedDevices**は、状態が承認済みのデータベース内のすべてのコンピューターを返します。|
+|/Devicetype: {PendingDevices &#124; RejectedDevices &#124; ApprovedDevices}|コンピューターに戻すの種類を指定します。<p>-   **Pendingdevices** は、状態が [保留中] になっているデータベース内のすべてのコンピューターを返します。<br />-   **RejectedDevices** は、データベース内の、状態が拒否のすべてのコンピューターを返します。<br />-   **ApprovedDevices** は、状態が承認済みのデータベース内のすべてのコンピューターを返します。|
 ## <a name="examples"></a>例
 すべての承認済みのコンピューターを表示するには、次のように入力します。
 ```

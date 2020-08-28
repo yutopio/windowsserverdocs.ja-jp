@@ -1,18 +1,18 @@
 ---
 title: auditpol set
 description: Auditpol set コマンドの参照記事。ユーザーごとの監査ポリシー、システム監査ポリシー、または監査オプションを設定します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: f4947486-87bd-48cb-ba81-7230c8e70895
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 06dcac123a56adbab93aab4dfa44fcc47d26220d
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 674de256eba3ee4b55f2b889717b7c2ed2defa3d
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895323"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89028970"
 ---
 # <a name="auditpol-set"></a>auditpol set
 
@@ -20,7 +20,7 @@ ms.locfileid: "87895323"
 
 ユーザーごとの監査ポリシー、システム監査ポリシー、または監査オプションを設定します。
 
-*ユーザーごと*のポリシーおよび*システム*ポリシーに対して*設定*操作を実行するには、セキュリティ記述子でそのオブジェクトセットの**書き込み**または**フルコントロール**のアクセス許可を持っている必要があります。 **監査とセキュリティログの管理**(SeSecurityPrivilege) ユーザー権限を持っている場合は、*設定*操作を実行することもできます。 ただし、この権限では、全体的な*セット*操作を実行する必要がない追加のアクセスが許可されます。
+*ユーザーごと*のポリシーおよび*システム*ポリシーに対して*設定*操作を実行するには、セキュリティ記述子でそのオブジェクトセットの**書き込み**または**フルコントロール**のアクセス許可を持っている必要があります。 **監査とセキュリティログの管理**(SeSecurityPrivilege) ユーザー権限を持っている場合は、*設定*操作を実行することもできます。 ただし、この権限では、全体的な *セット* 操作を実行する必要がない追加のアクセスが許可されます。
 
 ## <a name="syntax"></a>構文
 

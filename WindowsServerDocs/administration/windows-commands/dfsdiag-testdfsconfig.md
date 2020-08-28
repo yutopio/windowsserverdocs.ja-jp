@@ -1,18 +1,18 @@
 ---
 title: dfsdiag testdfsconfig
 description: 分散ファイルシステム (DFS) 名前空間の構成をチェックする、dfsdiag testdfsconfig のリファレンス記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 106aeeb9-ea79-4e6e-829c-eca06309bab2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c714780d43f0fbd95c18f2041c54df8fd23282e8
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 60070b9f4076ee90cf0705992f31aff583f92968
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87891163"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89024006"
 ---
 # <a name="dfsdiag-testdfsconfig"></a>dfsdiag testdfsconfig
 
@@ -20,7 +20,7 @@ ms.locfileid: "87891163"
 
 次のアクションを実行して、分散ファイルシステム (DFS) 名前空間の構成を確認します。
 
-- DFS 名前空間サービスが実行されていること、およびすべての名前空間サーバーでそのスタートアップの種類が [**自動**] に設定されていることを確認します。
+- DFS 名前空間サービスが実行されていること、およびすべての名前空間サーバーでそのスタートアップの種類が [ **自動** ] に設定されていることを確認します。
 
 - DFS レジストリの構成が名前空間サーバー間で一貫していることを確認します。
 

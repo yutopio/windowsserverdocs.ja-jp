@@ -1,18 +1,18 @@
 ---
 title: ftp quote
 description: リモート ftp サーバーに逐語的引数を送信する、ftp 引用符コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4500a1d3-c091-42c7-a909-f61df7f2e993
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8f4fb1f8edeacd3d17fc1b54b357bf609cd8d704
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 5e70c93e7a8fe5c32038eec08c7115aa1fec80bf
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889113"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035800"
 ---
 # <a name="ftp-quote"></a>ftp quote
 
@@ -37,7 +37,7 @@ quote <argument>[ ]
 
 ### <a name="examples"></a>例
 
-リモート ftp サーバーに**quit**コマンドを送信するには、次のように入力します。
+リモート ftp サーバーに **quit** コマンドを送信するには、次のように入力します。
 
 ```
 quote quit

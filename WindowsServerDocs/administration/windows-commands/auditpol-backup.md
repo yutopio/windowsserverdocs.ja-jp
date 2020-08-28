@@ -1,18 +1,18 @@
 ---
 title: auditpol backup
 description: Auditpol backup コマンドの参照記事。このコマンドは、システム監査ポリシー設定、すべてのユーザーのユーザーごとの監査ポリシー設定、およびすべての監査オプションをコンマ区切り値 (CSV) テキストファイルにバックアップします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: dc84e581-aa0f-4c91-b13b-1d970bad5517
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6f1ddca1dc141e4905ae4b1cd6e9041d9c8c1ce0
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 4c5dc71ef737c3c939d895a0693ff8213105caa1
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895461"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029150"
 ---
 # <a name="auditpol-backup"></a>auditpol backup
 
@@ -20,7 +20,7 @@ ms.locfileid: "87895461"
 
 システム監査ポリシー設定、すべてのユーザーのユーザーごとの監査ポリシー設定、およびすべての監査オプションをコンマ区切り値 (CSV) テキストファイルにバックアップします。
 
-*ユーザーごと*のポリシーと*システム*ポリシーで*バックアップ*操作を実行するには、セキュリティ記述子でそのオブジェクトセットに対する**書き込み**または**フルコントロール**のアクセス許可が必要です。 "**監査とセキュリティログの管理**" (SeSecurityPrivilege) ユーザー権利がある場合は、*バックアップ*操作を実行することもできます。 ただし、この権限では、*バックアップ*操作全体を実行するために必要な追加のアクセス権が許可されます。
+*ユーザーごと*のポリシーと*システム*ポリシーで*バックアップ*操作を実行するには、セキュリティ記述子でそのオブジェクトセットに対する**書き込み**または**フルコントロール**のアクセス許可が必要です。 "**監査とセキュリティログの管理**" (SeSecurityPrivilege) ユーザー権利がある場合は、*バックアップ*操作を実行することもできます。 ただし、この権限では、 *バックアップ* 操作全体を実行するために必要な追加のアクセス権が許可されます。
 
 ## <a name="syntax"></a>構文
 

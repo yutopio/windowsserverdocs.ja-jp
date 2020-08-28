@@ -1,18 +1,18 @@
 ---
 title: ftp remotehelp
 description: リモートコマンドのヘルプを表示する、ftp remotehelp コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: ef23adf3-ead4-44c8-ac1d-c8a6f4b2bf73
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e428a43ddcf36f1125c3fa83ddeeeff3cae979d
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: e404b9c75d28c45feebb300d8538d9998b2d9753
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889018"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035790"
 ---
 # <a name="ftp-remotehelp"></a>ftp remotehelp
 
@@ -30,7 +30,7 @@ remotehelp [<command>]
 
 | パラメーター | 説明 |
 | ------- | -------- |
-| `[<command>]` | ヘルプを表示するコマンドの名前を指定します。 が `<command>` 指定されていない場合、このコマンドはすべてのリモートコマンドの一覧を表示します。 また、 [ftp 引用符](ftp-quote.md)または[ftp リテラル](ftp-literal_1.md)を使用してリモートコマンドを実行することもできます。 |
+| `[<command>]` | ヘルプを表示するコマンドの名前を指定します。 が `<command>` 指定されていない場合、このコマンドはすべてのリモートコマンドの一覧を表示します。 また、 [ftp 引用符](ftp-quote.md) または [ftp リテラル](ftp-literal_1.md)を使用してリモートコマンドを実行することもできます。 |
 
 ### <a name="examples"></a>例
 
@@ -40,7 +40,7 @@ remotehelp [<command>]
 remotehelp
 ```
 
-この*コマンドの構文*を表示するには、次のように入力します。
+この *コマンドの構文* を表示するには、次のように入力します。
 
 ```
 remotehelp feat

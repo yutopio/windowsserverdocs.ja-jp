@@ -1,18 +1,18 @@
 ---
 title: ftp mdir
 description: Ftp mdir コマンドの参照記事。リモートディレクトリ内のファイルとサブディレクトリのディレクトリ一覧を表示します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 90eec45b-558b-4b8d-bbe4-b56d98e1ca70
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ddd4a5adb282464d2b5a202ea8ed2838be7a4676
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 3f5666157032df499309118955a8f39b668ee980
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888724"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035570"
 ---
 # <a name="ftp-mdir"></a>ftp mdir
 
@@ -30,7 +30,7 @@ mdir <remotefile>[...] <localfile>
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `<remotefile>` | 一覧を表示するディレクトリまたはファイルを指定します。 複数の*remotefiles*を指定できます。 リモートコンピューター上の現在の作業ディレクトリを使用するには、ハイフン (-) を入力します。 |
+| `<remotefile>` | 一覧を表示するディレクトリまたはファイルを指定します。 複数の *remotefiles*を指定できます。 リモートコンピューター上の現在の作業ディレクトリを使用するには、ハイフン (-) を入力します。 |
 | `<localfile>` | 一覧を格納するローカルファイルを指定します。 このパラメーターは必須です。 画面に一覧を表示するには、ハイフン (-) を入力します。 |
 
 ### <a name="examples"></a>例

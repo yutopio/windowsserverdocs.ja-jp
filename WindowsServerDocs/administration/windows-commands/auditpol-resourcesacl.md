@@ -1,18 +1,18 @@
 ---
 title: auditpol resourceSACL
 description: リソースシステムアクセス制御リスト (Sacl) を構成する auditpol resourceSACL コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 28771ba7-967a-45e9-9bf0-b2a2673070f0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b20c97fce42bb57613ac421eabc5ac7acf7a921d
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 408dadfd29fb1dd6227d4d27651da400d1ede333
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895357"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029000"
 ---
 # <a name="auditpol-resourcesacl"></a>auditpol resourceSACL
 
@@ -46,7 +46,7 @@ auditpol /resourceSACL
 
 | 引数 | 説明 |
 | -------- | ----------- |
-| /type | オブジェクトアクセスの監査を構成する対象のリソース。 サポートされている、大文字と小文字を区別する引数の値は、*ファイル*(ディレクトリおよびファイルの場合) と*キー* (レジストリキーの場合) です。 |
+| /type | オブジェクトアクセスの監査を構成する対象のリソース。 サポートされている、大文字と小文字を区別する引数の値は、 *ファイル* (ディレクトリおよびファイルの場合) と *キー* (レジストリキーの場合) です。 |
 | /success | 成功の監査を指定します。 |
 | /failure | 失敗の監査を指定します。 |
 | /user | 次のいずれかの形式のユーザーを指定します。<ul><li> DomainName\Account (Dom\ 管理者など)</li><li>スタンドアロングループアカウント (「 [LookupAccountName 関数](/windows/win32/api/winbase/nf-winbase-lookupaccountnamea)」を参照)</li><li>{S-1-x-x-x}(x は10進数で表され、SID 全体は中かっこで囲む必要があります)。 例: {S-1-5-21-5624481-130208933-164394174-1001}<p>**注:** SID フォームが使用されている場合、このアカウントの存在を確認するためのチェックは行われません。</li></ul> |

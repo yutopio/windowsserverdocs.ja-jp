@@ -1,18 +1,18 @@
 ---
 title: auditpol clear
 description: Auditpol clear コマンドの参照記事。すべてのユーザーについてユーザーごとの監査ポリシーが削除され、すべてのサブカテゴリのシステム監査ポリシーがリセット (無効) され、すべての監査オプションが無効に設定されます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 05bfa218-2434-4ad1-b33c-e6fcfb2b4f67
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2cdb55633e15484f8ca98432fbe8bc28b5f59fd0
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ba2a4759d5c1aacdf6fae27e00a9a2e74b4597dc
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895453"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029110"
 ---
 # <a name="auditpol-clear"></a>auditpol clear
 
@@ -20,7 +20,7 @@ ms.locfileid: "87895453"
 
 すべてのユーザーのユーザーごとの監査ポリシーを削除し、すべてのサブカテゴリのシステム監査ポリシーをリセット (無効) し、すべての監査オプションを [無効] に設定します。
 
-*ユーザーごと*のポリシーと*システム*ポリシーに対して*明確*な操作を実行するには、セキュリティ記述子でそのオブジェクトセットの**書き込み**または**フルコントロール**のアクセス許可を持っている必要があります。 **監査とセキュリティログの管理**(SeSecurityPrivilege) ユーザー権限を持っている場合は、*クリア*操作を実行することもできます。 ただし、この権限を使用すると、全体的な*クリア*操作を実行するために必要な追加のアクセス権が許可されます。
+*ユーザーごと*のポリシーと*システム*ポリシーに対して*明確*な操作を実行するには、セキュリティ記述子でそのオブジェクトセットの**書き込み**または**フルコントロール**のアクセス許可を持っている必要があります。 **監査とセキュリティログの管理**(SeSecurityPrivilege) ユーザー権限を持っている場合は、*クリア*操作を実行することもできます。 ただし、この権限を使用すると、全体的な *クリア* 操作を実行するために必要な追加のアクセス権が許可されます。
 
 ## <a name="syntax"></a>構文
 

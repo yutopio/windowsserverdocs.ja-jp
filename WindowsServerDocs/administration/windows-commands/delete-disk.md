@@ -1,25 +1,25 @@
 ---
 title: delete disk
 description: ディスクの削除コマンドの参照記事。ディスクの一覧から、不足しているダイナミックディスクを削除します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 44079900-e4ed-49d0-81e4-d652c38cd636
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 85657e571fb5f0f4e0a55cf54065056a8f28c385
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: b02f88027d3fa7d425d65024350805eb2279185b
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87891445"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89024216"
 ---
 # <a name="delete-disk"></a>delete disk
 
 ディスクの一覧から不足しているダイナミックディスクを削除します。
 
 > [!NOTE]
-> このコマンドの使用方法の詳細については、「不足している[ダイナミックディスクを削除する](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc753029(v=ws.11))」を参照してください。
+> このコマンドの使用方法の詳細については、「不足している [ダイナミックディスクを削除する](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc753029(v=ws.11))」を参照してください。
 
 ## <a name="syntax"></a>構文
 

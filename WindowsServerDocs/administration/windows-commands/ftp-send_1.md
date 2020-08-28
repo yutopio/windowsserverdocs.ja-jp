@@ -1,18 +1,18 @@
 ---
 title: ftp send
 description: Ftp 送信コマンドの参照記事。現在のファイル転送の種類を使用してローカルファイルをリモートコンピューターにコピーします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 000aa80a-60a0-4b51-815f-3237a4f3e0f4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 93b2af82954535d409eb16ab46c0feb918e18b21
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 300b73bdcaeaa7854980698fad100b5b4f1d58b8
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888929"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035710"
 ---
 # <a name="ftp-send"></a>ftp send
 
@@ -38,13 +38,13 @@ send <localfile> [<remotefile>]
 
 ### <a name="examples"></a>例
 
-ローカルファイル*test.txt*をコピーし、リモートコンピューターで*test1.txt*という名前を指定するには、次のように入力します。
+ローカルファイル *test.txt* をコピーし、リモートコンピューターで *test1.txt* という名前を指定するには、次のように入力します。
 
 ```
 send test.txt test1.txt
 ```
 
-ローカルファイル*program.exe*をリモートコンピューターにコピーするには、次のように入力します。
+ローカルファイル *program.exe* をリモートコンピューターにコピーするには、次のように入力します。
 
 ```
 send program.exe

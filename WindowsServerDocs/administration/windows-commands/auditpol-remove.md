@@ -1,18 +1,18 @@
 ---
 title: auditpol remove
 description: Auditpol remove コマンドの参照記事。指定されたアカウントまたはすべてのアカウントのユーザーごとの監査ポリシーを削除します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: be42ec55-235c-44f7-9abd-ed1cf3f5b1f5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8560f1c9d951f7c2c0cfd93638a85d9e43880da5
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: eee48822a082c3e7f5aa37cbd09a24059c94624e
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895380"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029030"
 ---
 # <a name="auditpol-remove"></a>auditpol remove
 
@@ -20,7 +20,7 @@ ms.locfileid: "87895380"
 
 指定されたアカウントまたはすべてのアカウントについて、ユーザーごとの監査ポリシーを削除します。
 
-*ユーザーごと*のポリシーに対して*削除*操作を実行するには、セキュリティ記述子でそのオブジェクトセットの**書き込み**または**フルコントロール**のアクセス許可を持っている必要があります。 "**監査とセキュリティログの管理**" (SeSecurityPrivilege) ユーザー権利を持っている場合は、*削除*操作を実行することもできます。 ただし、この権限では、*削除*操作全体を実行するために必要な追加のアクセス権が許可されます。
+*ユーザーごと*のポリシーに対して*削除*操作を実行するには、セキュリティ記述子でそのオブジェクトセットの**書き込み**または**フルコントロール**のアクセス許可を持っている必要があります。 "**監査とセキュリティログの管理**" (SeSecurityPrivilege) ユーザー権利を持っている場合は、*削除*操作を実行することもできます。 ただし、この権限では、 *削除* 操作全体を実行するために必要な追加のアクセス権が許可されます。
 
 ## <a name="syntax"></a>構文
 

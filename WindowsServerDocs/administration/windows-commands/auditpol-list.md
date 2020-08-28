@@ -1,18 +1,18 @@
 ---
 title: auditpol list
 description: '[Auditpol リスト] コマンドの参照記事。監査ポリシーのカテゴリとサブカテゴリを一覧表示したり、ユーザーごとの監査ポリシーが定義されているユーザーの一覧を表示したりします。'
-ms.topic: article
+ms.topic: reference
 ms.assetid: 45502abe-3d6e-4e13-94f0-8e6fcb6db860
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5047708056e4e926dc917b80b4b0a41ce5f9d773
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: b49b138de8f25f25b00e593d6bd02620a3f2f624
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895425"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029080"
 ---
 # <a name="auditpol-list"></a>auditpol list
 
@@ -20,7 +20,7 @@ ms.locfileid: "87895425"
 
 監査ポリシーのカテゴリとサブカテゴリを一覧表示します。または、ユーザーごとの監査ポリシーが定義されているユーザーの一覧を表示します。
 
-*ユーザーごと*のポリシーに対して*リスト*操作を実行するには、セキュリティ記述子でそのオブジェクトの**読み取り**アクセス許可を持っている必要があります。 また、"**監査とセキュリティログの管理**" (SeSecurityPrivilege) ユーザー権利を持っている場合は、*リスト*操作を実行することもできます。 ただし、この権限を使用すると、*リスト*操作全体を実行するために必要な追加のアクセス権が許可されます。
+*ユーザーごと*のポリシーに対して*リスト*操作を実行するには、セキュリティ記述子でそのオブジェクトの**読み取り**アクセス許可を持っている必要があります。 また、"**監査とセキュリティログの管理**" (SeSecurityPrivilege) ユーザー権利を持っている場合は、*リスト*操作を実行することもできます。 ただし、この権限を使用すると、 *リスト* 操作全体を実行するために必要な追加のアクセス権が許可されます。
 
 ## <a name="syntax"></a>構文
 

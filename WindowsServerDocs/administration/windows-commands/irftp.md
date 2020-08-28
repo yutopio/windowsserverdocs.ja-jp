@@ -1,18 +1,18 @@
 ---
 title: irftp
 description: Irftp コマンドの参照記事。赤外線リンク経由でファイルを送信します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: e15c60a7-546d-4e9f-9871-43aaa1b569d6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd1ecf6b1fafcf9070edb717d5c4ce5aa861fabd
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 4c9d135dd0bb16f10e99fd7916a0965c0542f862
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888227"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035430"
 ---
 # <a name="irftp"></a>irftp
 
@@ -36,11 +36,11 @@ irftp [<drive>:\] [[<path>] <filename>] [/h][/s]
 | `<drive>:\` | 赤外線リンクを介して送信するファイルが格納されているドライブを指定します。 |
 | `[path]<filename>` | 赤外線リンクを介して送信するファイルまたはファイルのセットの場所と名前を指定します。 ファイルのセットを指定する場合は、各ファイルの完全なパスを指定する必要があります。 |
 | /h | 非表示モードを指定します。 非表示モードを使用すると、[ワイヤレスリンク] ダイアログボックスを表示せずにファイルが送信されます。 |
-| /s | [**ワイヤレスリンク**] ダイアログボックスを開きます。これにより、コマンドラインを使用せずに、ドライブ、パス、およびファイル名を指定して、送信するファイルまたはファイルのセットを選択できます。 パラメーターを指定せずにこのコマンドを使用すると、[**ワイヤレスリンク**] ダイアログボックスも開きます。 |
+| /s | [ **ワイヤレスリンク** ] ダイアログボックスを開きます。これにより、コマンドラインを使用せずに、ドライブ、パス、およびファイル名を指定して、送信するファイルまたはファイルのセットを選択できます。 パラメーターを指定せずにこのコマンドを使用すると、[ **ワイヤレスリンク** ] ダイアログボックスも開きます。 |
 
 ### <a name="examples"></a>例
 
-赤外線リンク上で*c:\example.txt*を送信するには、次のように入力します。
+赤外線リンク上で *c:\example.txt* を送信するには、次のように入力します。
 
 ```
 irftp c:\example.txt

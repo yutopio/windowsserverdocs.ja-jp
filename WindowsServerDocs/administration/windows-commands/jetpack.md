@@ -1,18 +1,18 @@
 ---
 title: jetpack
 description: Windows インターネットネームサービス (WINS) または動的ホスト構成プロトコル (DHCP) データベースを圧縮する、jetpack コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 82a2b7ef-0db5-4575-a028-8acb0bf6c7ba
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6850c7d00f11278bbc904f7ad7d2e7edaf30d229
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: bf2664c142a169982acc0d11c34a53aea193d030
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888194"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035420"
 ---
 # <a name="jetpack"></a>jetpack
 
@@ -44,7 +44,7 @@ jetpack.exe <database_name> <temp_database_name>
 
 ### <a name="examples"></a>例
 
-WINS データベースを圧縮するには、次のように指定します。この場合、 **.tmp**は一時データベースで、 **wins**は wins データベースです。
+WINS データベースを圧縮するには、次のように指定します。この場合、 **.tmp** は一時データベースで、 **wins** は wins データベースです。
 
 ```
 cd %SYSTEMROOT%\SYSTEM32\WINS
@@ -53,7 +53,7 @@ jetpack Wins.mdb Tmp.mdb
 NET start WINS
 ```
 
-DHCP データベースを圧縮するには、 **.tmp**が一時データベースで、 **dhcp**データベースである場合は、次のように入力します。
+DHCP データベースを圧縮するには、 **.tmp** が一時データベースで、 **dhcp** データベースである場合は、次のように入力します。
 
 ```
 cd %SYSTEMROOT%\SYSTEM32\DHCP

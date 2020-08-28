@@ -1,18 +1,18 @@
 ---
 title: bitsadmin getproxyusage
 description: Bitsadmin getproxyusage コマンドの参照記事。指定されたジョブのプロキシ使用法の設定を取得します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: f940a70e-3b02-497e-a47f-b37b905c299e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ff2320ba66cdc11781ac56900e5a4aaa9fb1dc0f
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 423168d72a88ecad90fd8de43eab3cb4486a750b
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87893937"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89024406"
 ---
 # <a name="bitsadmin-getproxyusage"></a>bitsadmin getproxyusage
 
@@ -30,7 +30,7 @@ bitsadmin /getproxyusage <job>
 | -------------- | -------------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>Output
 
 返されるプロキシの使用値は、次のようになります。
 
@@ -40,7 +40,7 @@ bitsadmin /getproxyusage <job>
 
 - **Override** -明示的なプロキシリストを使用します。
 
-- **自動**検出-プロキシ設定を自動的に検出します。
+- **自動** 検出-プロキシ設定を自動的に検出します。
 
 ## <a name="examples"></a>例
 

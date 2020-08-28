@@ -1,22 +1,22 @@
 ---
 title: graftabl
 description: Graftabl コマンドのリファレンス記事。 Windows オペレーティングシステムで、拡張文字セットをグラフィックモードで表示できるようにします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: b08351d4-3d24-490c-86f6-1252da11d923
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cd20baaca94c13e725cf3121ba7a9f4f9f5524b1
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 8b92cc0501b69127bb8dd9e3faba5591a48542ea
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888508"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035490"
 ---
 # <a name="graftabl"></a>graftabl
 
-Windows オペレーティングシステムで、拡張文字セットをグラフィックモードで表示できるようにします。 パラメーターを指定せずに**graftabl**を使用すると、前のコードページと現在のコードページが表示されます。
+Windows オペレーティングシステムで、拡張文字セットをグラフィックモードで表示できるようにします。 パラメーターを指定せずに **graftabl** を使用すると、前のコードページと現在のコードページが表示されます。
 
 ## <a name="syntax"></a>構文
 
@@ -33,9 +33,9 @@ graftabl /status
 | /status | このコマンドによって使用されている現在のコードページを表示します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-- **Graftabl**コマンドは、指定したコードページの拡張文字のモニター表示にのみ影響します。 コンソールの実際の入力コードページは変更されません。 コンソールの入力コードページを変更するには、 [mode](mode.md)または[chcp](chcp.md)コマンドを使用します。
+- **Graftabl**コマンドは、指定したコードページの拡張文字のモニター表示にのみ影響します。 コンソールの実際の入力コードページは変更されません。 コンソールの入力コードページを変更するには、 [mode](mode.md) または [chcp](chcp.md) コマンドを使用します。
 
 - 各終了コードとその簡単な説明を次に示します。
 

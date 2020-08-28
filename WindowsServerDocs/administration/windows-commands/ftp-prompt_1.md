@@ -1,18 +1,18 @@
 ---
 title: ftp prompt
 description: プロンプトモードのオンとオフを切り替える ftp prompt コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 930df39b-45c4-4e0b-bfe2-1d1963be817a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4315a4550bd59d06a7a06e1d822256ed7dab73b6
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 4d337e01c3e1bfe93d15c65f0885ec8e7e9dfee2
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889137"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89023876"
 ---
 # <a name="ftp-prompt"></a>ftp prompt
 
@@ -21,7 +21,7 @@ ms.locfileid: "87889137"
 プロンプトモードのオンとオフを切り替えます。 既定では、プロンプトモードはオンになっています。 プロンプトモードが有効になっている場合、ftp コマンドは複数のファイル転送中にプロンプトを表示して、ファイルを選択して取得または保存できるようにします。
 
 > [!NOTE]
-> プロンプトモードがオフになっている場合は、 [ftp の mget](ftp-mget.md)コマンドと[ftp mput](ftp-mput_1.md)コマンドを使用してすべてのファイルを転送できます。
+> プロンプトモードがオフになっている場合は、 [ftp の mget](ftp-mget.md) コマンドと [ftp mput](ftp-mput_1.md) コマンドを使用してすべてのファイルを転送できます。
 
 ## <a name="syntax"></a>構文
 

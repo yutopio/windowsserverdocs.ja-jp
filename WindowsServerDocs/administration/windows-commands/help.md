@@ -1,24 +1,24 @@
 ---
 title: help
 description: 使用可能なコマンドの一覧または指定されたコマンドの詳細なヘルプ情報を表示する、ヘルプコマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: c65b5ac3-711a-4368-95b8-ba82e2d00713
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b91b93b5ef8964cb73e9bb122f4e53d9d8343086
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 701b3a1840ac56e399bb4febf0765c2f69a84633
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888495"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035460"
 ---
 # <a name="help"></a>help
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-使用可能なコマンドの一覧、または指定したコマンドの詳細なヘルプ情報を表示します。 パラメーターを指定せずに使用する場合は、すべてのシステムコマンドについての説明と**ヘルプ**が表示されます。
+使用可能なコマンドの一覧、または指定したコマンドの詳細なヘルプ情報を表示します。 パラメーターを指定せずに使用する場合は、すべてのシステムコマンドについての説明と **ヘルプ** が表示されます。
 
 ## <a name="syntax"></a>構文
 
@@ -46,7 +46,7 @@ DiskPart で使用可能なすべてのコマンドの一覧を表示するに�
 help
 ```
 
-DiskPart で**create partition primary**コマンドを使用する方法に関する詳細なヘルプ情報を表示するには、次のように入力します。
+DiskPart で **create partition primary** コマンドを使用する方法に関する詳細なヘルプ情報を表示するには、次のように入力します。
 
 ```
 help create partition primary

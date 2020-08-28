@@ -1,18 +1,18 @@
 ---
 title: gpt
 description: Gpt コマンドの参照記事。フォーカスのあるパーティションに gpt 属性を割り当てます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1d6f9029-807f-4420-a336-36669b5361bc
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 561bc4a11580a45452ac71cffddee1c58e48cf86
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ce16138ec968451b68f7324cefd6097f2351a274
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888553"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035520"
 ---
 # <a name="gpt"></a>gpt
 
@@ -37,7 +37,7 @@ gpt attributes=<n>
 | --------- | ----------- |
 | 属性 =`<n>` | フォーカスのあるパーティションに適用する属性の値を指定します。 Gpt 属性フィールドは、2つのサブフィールドを含む64ビットフィールドです。 上位フィールドは、パーティション ID との関係でのみ解釈され、下位フィールドは、すべてのパーティション ID に共通です。 許容される値は次のとおりです。<ul><li>**0x0000000000000001** -コンピューターが正常に機能するためにパーティションが必要であることを指定します。</li><li>**0x8000000000000000** -ディスクが別のコンピューターに移動されたとき、またはディスクがコンピューターによって初めて検出されたときに、パーティションが既定でドライブ文字を受け取らないことを指定します。</li><li>**0x4000000000000000** -パーティションのボリュームを非表示にして、マウントマネージャーによって検出されないようにします。</li><li>**0x2000000000000000** -パーティションが別のパーティションのシャドウコピーであることを指定します。</li><li>**0x1000000000000000** -パーティションが読み取り専用であることを指定します。 この属性は、ボリュームが書き込まれないようにします。</li></ul><p>これらの属性の詳細については、「 [Create_PARTITION_PARAMETERS Structure](/windows/win32/api/vds/ns-vds-create_partition_parameters)」の「attributes」セクションを参照してください。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - EFI システムパーティションには、オペレーティングシステムを起動するために必要なバイナリのみが含まれています。 これにより、OEM バイナリまたはオペレーティングシステム固有のバイナリを他のパーティションに簡単に配置できます。
 

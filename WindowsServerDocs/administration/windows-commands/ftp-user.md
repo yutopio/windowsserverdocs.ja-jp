@@ -1,18 +1,18 @@
 ---
 title: ftp user
 description: リモートコンピューターに対してユーザーを指定する、ftp ユーザーコマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0a77bfeb-27a9-4f2f-a3c4-2fef529fb569
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd015b7f84a6f5a4f3ee10a3cbe351a5bfa4a563
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 7c1e928dd3aa30784d607da6f84ad9ae024881f3
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888822"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035660"
 ---
 # <a name="ftp-user"></a>ftp user
 
@@ -31,7 +31,7 @@ user <username> [<password>] [<account>]
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `<username>` | リモート コンピューターへのログオンに使用するユーザー名を指定します。 |
-| `[<password>]` | *ユーザー名*のパスワードを指定します。 パスワードが指定されておらず、必須の場合は、 **ftp**コマンドによってパスワードの入力が求められます。 |
+| `[<password>]` | *ユーザー名*のパスワードを指定します。 パスワードが指定されておらず、必須の場合は、 **ftp** コマンドによってパスワードの入力が求められます。 |
 | `[<account>]` | リモート コンピューターへのログオンに使用するアカウントを指定します。 *アカウント*が指定されておらず、必須の場合は、 **ftp**コマンドによってアカウントの入力が求められます。 |
 
 ### <a name="examples"></a>例

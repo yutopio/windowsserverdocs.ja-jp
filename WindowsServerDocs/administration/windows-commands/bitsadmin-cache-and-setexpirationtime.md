@@ -1,18 +1,18 @@
 ---
 title: bitsadmin cache および setexpirationtime
 description: キャッシュの有効期限を設定する bitsadmin cache と setexpirationtime コマンドの参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 00ea6e4e-b707-4b31-88dd-b61a78565c8d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 367088525366707797296d844f134dcf8a02def7
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: e07e862d8577c33daec24bbc93fe5859f13944db
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87894733"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89028810"
 ---
 # <a name="bitsadmin-cache-and-setexpirationtime"></a>bitsadmin cache および setexpirationtime
 
