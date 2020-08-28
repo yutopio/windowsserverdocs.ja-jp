@@ -1,18 +1,18 @@
 ---
 title: Windows のコマンド
 description: リファレンス
-ms.topic: article
+ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.date: 06/29/2020
-ms.openlocfilehash: 5b596523cc47d9798733ce4f57da43faa9ac075b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: c389d0889d4dfca46472215f014e77e9b2346f87
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991135"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89022850"
 ---
 # <a name="windows-commands"></a>Windows のコマンド
 
@@ -36,22 +36,22 @@ ms.locfileid: "87991135"
 
 ### <a name="command-shell-overview"></a>コマンド シェルの概要
 
-コマンドシェルは、ユーザーアカウント管理や夜間バックアップなどの日常的なタスクをバッチ (.bat) ファイルで自動化するために Windows に組み込まれた最初のシェルでした。 Windows スクリプトホストを使用すると、コマンドシェルでより高度なスクリプトを実行できます。 詳細については、「 [cscript](cscript.md)または[wscript](wscript.md)」を参照してください。 ユーザーインターフェイスを使用する場合よりも、スクリプトを使用すると操作をより効率的に実行できます。 スクリプトは、コマンドラインで使用可能なすべてのコマンドを受け入れます。
+コマンドシェルは、ユーザーアカウント管理や夜間バックアップなどの日常的なタスクをバッチ (.bat) ファイルで自動化するために Windows に組み込まれた最初のシェルでした。 Windows スクリプトホストを使用すると、コマンドシェルでより高度なスクリプトを実行できます。 詳細については、「 [cscript](cscript.md) または [wscript](wscript.md)」を参照してください。 ユーザーインターフェイスを使用する場合よりも、スクリプトを使用すると操作をより効率的に実行できます。 スクリプトは、コマンドラインで使用可能なすべてのコマンドを受け入れます。
 
-Windows には、コマンドシェルと[PowerShell](/powershell/scripting/overview)という2つのコマンドシェルがあります。 各シェルは、ユーザーとオペレーティングシステムまたはアプリケーションとの直接通信を提供するソフトウェアプログラムであり、IT 運用を自動化するための環境を提供します。
+Windows には、コマンドシェルと [PowerShell](/powershell/scripting/overview)という2つのコマンドシェルがあります。 各シェルは、ユーザーとオペレーティングシステムまたはアプリケーションとの直接通信を提供するソフトウェアプログラムであり、IT 運用を自動化するための環境を提供します。
 
 PowerShell は、コマンドシェルの機能を拡張して、コマンドレットと呼ばれる PowerShell コマンドを実行するように設計されています。 コマンドレットは Windows コマンドに似ていますが、より拡張可能なスクリプト言語を提供します。 Powershell では Windows コマンドと PowerShell コマンドレットを実行できますが、コマンドシェルで実行できるのは PowerShell コマンドレットではなく Windows コマンドだけです。
 
 最も堅牢で最新の Windows オートメーションの場合は、windows コマンドや windows スクリプトホストの代わりに PowerShell を使用することをお勧めします。
 
 > [!NOTE]
->Powershell のオープンソースバージョンである[Powershell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6)をダウンロードしてインストールすることもできます。
+>Powershell のオープンソースバージョンである [Powershell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6)をダウンロードしてインストールすることもできます。
 
 > [!CAUTION]
 > レジストリを正しく編集しないと、システムが正常に動作しなくなる場合があります。 レジストリに次の変更を加える前に、コンピューター上の重要なデータをバックアップする必要があります。
 
 > [!NOTE]
-> コンピューターまたはユーザーのログオンセッションでコマンドシェルのファイル名とディレクトリ名の入力候補を有効または無効にするには、 **regedit.exe**を実行し、次の**reg_DWOrd 値**を設定します。
+> コンピューターまたはユーザーのログオンセッションでコマンドシェルのファイル名とディレクトリ名の入力候補を有効または無効にするには、 **regedit.exe** を実行し、次の **reg_DWOrd 値**を設定します。
 >
 > HKEY_LOCAL_MACHINE \Software\Microsoft\Command Processor\ reg_DWOrd
 >
@@ -546,7 +546,7 @@ PowerShell は、コマンドシェルの機能を拡張して、コマンドレ
 - [msinfo32](msinfo32.md)
 - [mstsc](mstsc.md)
 
-### <a name="n"></a>N
+### <a name="n"></a>×
 
 - [nbtstat](nbtstat.md)
 - [netcfg](netcfg.md)
@@ -838,6 +838,6 @@ PowerShell は、コマンドシェルの機能を拡張して、コマンドレ
 - [writer](writer.md)
 - [wscript](wscript.md)
 
-### <a name="x"></a>x
+### <a name="x"></a>X
 
 - [xcopy](xcopy.md)

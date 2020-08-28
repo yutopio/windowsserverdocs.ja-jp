@@ -1,18 +1,18 @@
 ---
 title: mqbkup
 description: Mqbkup コマンドの参照記事。これは、MSMQ メッセージファイルとレジストリ設定をストレージデバイスにバックアップし、以前に保存されたメッセージと設定を復元します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7bdd41c4-75ef-455f-b241-1d64a4c7acf5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7eecb016efd039d87774c3fd869e746df1e60178
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 0f10948a7f3561d8916c5ceb94aff58076cdd68f
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886303"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033930"
 ---
 # <a name="mqbkup"></a>mqbkup
 
@@ -39,7 +39,7 @@ mqbkup {/b | /r} <folder path_to_storage_device>
 | `<folder path_to_storage_device>` | MSMQ メッセージファイルとレジストリ設定が格納されるパスを指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - バックアップ操作または復元操作の実行中に指定されたフォルダーが存在しない場合、そのフォルダーはユーティリティによって自動的に作成されます。
 
@@ -49,13 +49,13 @@ mqbkup {/b | /r} <folder path_to_storage_device>
 
 ### <a name="examples"></a>例
 
-すべての MSMQ メッセージファイルとレジストリ設定をバックアップし、C: ドライブの*msmqbkup*フォルダーに保存するには、次のように入力します。
+すべての MSMQ メッセージファイルとレジストリ設定をバックアップし、C: ドライブの *msmqbkup* フォルダーに保存するには、次のように入力します。
 
 ```
 mqbkup /b c:\msmqbkup
 ```
 
-C: ドライブの*oldbkup*フォルダーにある既存のすべてのファイルとサブフォルダーを削除し、MSMQ メッセージファイルとレジストリ設定をフォルダーに格納するには、次のように入力します。
+C: ドライブの *oldbkup* フォルダーにある既存のすべてのファイルとサブフォルダーを削除し、MSMQ メッセージファイルとレジストリ設定をフォルダーに格納するには、次のように入力します。
 
 ```
 mqbkup /b /y c:\oldbkup

@@ -1,17 +1,17 @@
 ---
 title: Vssadmin delete の影
 description: Vssadmin delete shadows コマンドの説明です。
-ms.topic: article
+ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 884407cee82926b3b258afba5ab2e47dc640e10f
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 667aaa7477666c6128aaed4ddb10a9f3695e571a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87891809"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89022866"
 ---
 # <a name="vssadmin-delete-shadows"></a>Vssadmin delete の影
 
@@ -32,10 +32,10 @@ vssadmin delete shadows /for=<ForVolumeSpec> [/oldest | /all | /shadow=<ShadowID
 |/for =\<ForVolumeSpec>|削除するボリュームのシャドウコピーを指定します。|
 |/最も古い|最も古いシャドウコピーだけを削除します。|
 |/all|指定されたボリュームのシャドウコピーをすべて削除します。|
-|/シャドウ =\<ShadowID>|ShadowID によって指定されたシャドウコピーを削除します。 シャドウコピー ID を取得するには、 **vssadmin list shadows**コマンドを使用します。 シャドウコピー ID を入力するときは、次の形式を使用します。各*X*は16進文字を表します。<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-XXXX-XXXX-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
+|/シャドウ =\<ShadowID>|ShadowID によって指定されたシャドウコピーを削除します。 シャドウコピー ID を取得するには、 **vssadmin list shadows** コマンドを使用します。 シャドウコピー ID を入力するときは、次の形式を使用します。各 *X* は16進文字を表します。<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-XXXX-XXXX-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
 |スイッチを|コマンドの実行中にメッセージを表示しないように指定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 シャドウコピーを削除できるのは、クライアントからアクセス可能な型の場合のみです。
 

@@ -1,18 +1,18 @@
 ---
 title: Scwcmd 分析
 description: 参照記事 * * * *-
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0259271b-be5b-48d7-a51d-8b9b6786efb4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 635da8cd31140ea0b1d0cd786e7b16e2ce692bcd
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: c839f8abdd3f5913b3ade7a8228ce5d070d0c278
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87883228"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89027990"
 ---
 # <a name="scwcmd-analyze"></a>Scwcmd: 分析
 
@@ -43,7 +43,7 @@ scwcmd analyze [[[/m:<ComputerName> | /ou:<Ou>] /p:<Policy>] | /i:<ComputerList>
 |/e|不一致が検出された場合は、アプリケーション イベント ログにイベントを記録します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 Scwcmd.exe は Windows Server 2008 R2、Windows Server 2008 または Windows Server 2003 を実行するコンピューターにできるだけです。
 

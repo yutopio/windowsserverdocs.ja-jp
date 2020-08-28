@@ -1,22 +1,22 @@
 ---
 title: 中断 (シャドウコピーボリューム)
 description: 中断コマンドの参照記事。 VSS からシャドウコピーボリュームの関連付けを解除し、通常のボリュームとしてアクセスできるようにします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: de2b6c95-1c2e-4a43-bec5-341a9014371b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 125f986152d10844bbab5a7b57a1a2ea4080aa3e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: d94275b83ad65f70db4bd1850f55ea527292d1bc
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880463"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034310"
 ---
 # <a name="break-shadow-copy-volume"></a>中断 (シャドウコピーボリューム)
 
-シャドウコピーボリュームを VSS から切り離し、通常のボリュームとしてアクセスできるようにします。 ボリュームには、ドライブ文字 (割り当てられている場合) またはボリューム名を使用してアクセスできます。 パラメーターを指定せずに使用した場合は、コマンドプロンプトに [**ヘルプ] が**表示されます。
+シャドウコピーボリュームを VSS から切り離し、通常のボリュームとしてアクセスできるようにします。 ボリュームには、ドライブ文字 (割り当てられている場合) またはボリューム名を使用してアクセスできます。 パラメーターを指定せずに使用した場合は、コマンドプロンプトに [ **ヘルプ] が** 表示されます。
 
 > [!NOTE]
 > このコマンドは、インポート後のハードウェアシャドウコピーにのみ関連します。

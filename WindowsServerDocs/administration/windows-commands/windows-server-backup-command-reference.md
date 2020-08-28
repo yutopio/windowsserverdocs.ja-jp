@@ -1,18 +1,18 @@
 ---
 title: Windows Server バックアップ コマンドのリファレンス
 description: Backup コマンドリファレンスの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 03de0a65-21f0-4dd7-a3ae-251c98bbf6eb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2042c55774aefbb603c8592d48be12d22c0f545e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 14367db03c7ddbeae9f8e91179b6b5a4b8200e9b
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896852"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89022756"
 ---
 # <a name="windows-server-backup-command-reference"></a>Windows Server バックアップ コマンドのリファレンス
 
@@ -22,7 +22,7 @@ ms.locfileid: "87896852"
 
 バックアップのスケジュールを構成する、 **管理者** グループです。 このコマンドを使用して他のすべてのタスクを実行する、 **Backup Operators** または **管理者** グループ、またはをされている必要が適切なアクセス許可を委任します。
 
-実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権のコマンドプロンプトを開くには、[**スタート**] ボタンをクリックし、[**コマンドプロンプト**] を右クリックして、[**管理者として実行**] をクリックします)。
+実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権のコマンドプロンプトを開くには、[ **スタート**] ボタンをクリックし、[ **コマンドプロンプト**] を右クリックして、[ **管理者として実行**] をクリックします)。
 
 |サブコマンド|説明|
 |----------|-----------|

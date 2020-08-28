@@ -1,18 +1,18 @@
 ---
 title: prnqctl
 description: Prnqctl.vbs コマンドの参照記事。テストページを印刷し、プリンターを一時停止または再開します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8df9dfa7-984c-4276-bb7d-e7675e7c399e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 9ab7c6e8302ebd2c94daee98d8bbef87ecfd4854
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: fd5eb91f280df80685d07c0b809e16edeae3d893
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884689"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033860"
 ---
 # <a name="prnqctl"></a>prnqctl
 
@@ -35,11 +35,11 @@ cscript Prnqctl {-z | -m | -e | -x | -?} [-s <Servername>] [-p <Printername>] [-
 | -E | **-P**パラメーターによって指定されたプリンターにテストページを印刷します。 |
 | -X | **-P**パラメーターによって指定されたプリンターのすべての印刷ジョブをキャンセルします。 |
 | -s `<Servername>` | 管理するプリンターをホストするリモート コンピューターの名前を指定します。 コンピューターを指定しない場合は、ローカルコンピューターが使用されます。 |
-| -p`<Printername>` | 必須。 管理するプリンターの名前を指定します。 |
-| -u `<Username>` -w`<password>` | 管理するプリンターをホストするコンピューターに接続するアクセス許可を持つアカウントを指定します。 ターゲット コンピューターのローカル Administrators グループのすべてのメンバーはこれらのアクセス許可を持っていますが、アクセス許可を他のユーザーに与えることもできます。 アカウントを指定しない場合は、コマンドが機能するように、これらのアクセス許可を持つアカウントでログオンする必要があります。 |
+| -p `<Printername>` | 必須。 管理するプリンターの名前を指定します。 |
+| -u `<Username>` -w `<password>` | 管理するプリンターをホストするコンピューターに接続するアクセス許可を持つアカウントを指定します。 ターゲット コンピューターのローカル Administrators グループのすべてのメンバーはこれらのアクセス許可を持っていますが、アクセス許可を他のユーザーに与えることもできます。 アカウントを指定しない場合は、コマンドが機能するように、これらのアクセス許可を持つアカウントでログオンする必要があります。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - 入力した情報にスペースが含まれている場合は、テキストを引用符で囲みます (例、"コンピューター名")。
 

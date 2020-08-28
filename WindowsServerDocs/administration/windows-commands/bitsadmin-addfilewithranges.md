@@ -1,18 +1,18 @@
 ---
 title: bitsadmin addfilewithranges
 description: Bitsadmin addfilewithranges コマンドの参照記事。指定されたジョブにファイルを追加します。 BITS は、指定された範囲をリモートファイルからダウンロードします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: df0ce0bf-dff1-4a48-a16f-fd2f4d5f7189
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c19c6dfec23cf012f42ab7d10b1d3df90ca957ff
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 08f9031ebd6ffe2e1480e59e5e357a33b9895766
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87894872"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89027850"
 ---
 # <a name="bitsadmin-addfilewithranges"></a>bitsadmin addfilewithranges
 
@@ -33,9 +33,9 @@ bitsadmin /addfilewithranges <job> <remoteURL> <localname> <rangelist>
 | localname | ローカルコンピューター上のファイルの名前。 ファイルへの絶対パスが含まれている必要があります。 |
 | rangelist | オフセットの長さのコンマ区切りの一覧。 長さの値からオフセット値を区切るには、コロンを使用します。 たとえば、値がの場合は、オフセット `0:100,2000:100,5000:eof` 0 から100バイト、オフセット2000からの100バイト、およびオフセット5000からファイルの末尾までの残りのバイトを転送するようにビットに指示します。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-- トークン**eof**は、のオフセットと長さのペア内の有効な長さの値です `<rangelist>` 。 このメソッドは、指定されたファイルの末尾に読み取るようにサービスに指示します。
+- トークン **eof** は、のオフセットと長さのペア内の有効な長さの値です `<rangelist>` 。 このメソッドは、指定されたファイルの末尾に読み取るようにサービスに指示します。
 
 - `addfilewithranges`長さ0の範囲が同じオフセットを使用して別の範囲と共に指定されている場合、コマンドはエラーコード0x8020002c で失敗します。次に例を示します。
 

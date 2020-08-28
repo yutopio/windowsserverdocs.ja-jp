@@ -1,18 +1,18 @@
 ---
 title: prnport
 description: Prnport.vbs コマンドの参照記事。ポート構成の表示と変更に加えて、標準の TCP/IP プリンターポートを作成、削除、および一覧表示します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 6a0ec638-a21e-4a34-be5c-bd0f7ca89ffe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a8aa1729c84b54393a6154dd5fc4ba5a5e6834fc
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 4723d266ed70c7e9bf56fd65216dcce0bab1188c
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884705"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033890"
 ---
 # <a name="prnport"></a>prnport
 
@@ -35,20 +35,20 @@ cscript prnport {-a | -d | -l | -g | -t | -?} [-r <portname>] [-s <Servername>] 
 | -l | **-S**パラメーターによって指定されたコンピューター上のすべての標準 tcp/ip プリンターポートを一覧表示します。 |
 | -g | 標準 TCP/IP プリンタ ポートの構成を表示します。 |
 | -t | 標準 TCP/IP プリンタ ポートのポートの設定を構成します。 |
-| -r`<portname>` | プリンターが接続されているポートを指定します。 |
+| -r `<portname>` | プリンターが接続されているポートを指定します。 |
 | -s `<Servername>` | 管理するプリンターをホストするリモート コンピューターの名前を指定します。 コンピューターを指定しない場合は、ローカルコンピューターが使用されます。 |
-| -u `<Username>` -w`<password>` | 管理するプリンターをホストするコンピューターに接続するアクセス許可を持つアカウントを指定します。 ターゲット コンピューターのローカル Administrators グループのすべてのメンバーはこれらのアクセス許可を持っていますが、アクセス許可を他のユーザーに与えることもできます。 アカウントを指定しない場合は、コマンドが機能するように、これらのアクセス許可を持つアカウントでログオンする必要があります。 |
-| -o`{raw|lpr}` | ポートが使用するプロトコル (TCP raw または TCP lpr) を指定します。 TCP raw プロトコルは、lpr プロトコルよりも Windows での高パフォーマンスプロトコルです。 使用してポート番号を必要に応じて指定生 TCP を使用する場合、 **-n** パラメーター。 既定のポート番号は 9100 です。 |
-| -h`<Hostaddress>` | ポートを構成するプリンターを (IP アドレス) を指定します。 |
-| -q`<Queuename>` | 生の TCP ポートのキュー名を指定します。 |
-| -n`<portnumber>` | 生の TCP ポートのポート番号を指定します。 既定のポート番号は 9100 です。 |
+| -u `<Username>` -w `<password>` | 管理するプリンターをホストするコンピューターに接続するアクセス許可を持つアカウントを指定します。 ターゲット コンピューターのローカル Administrators グループのすべてのメンバーはこれらのアクセス許可を持っていますが、アクセス許可を他のユーザーに与えることもできます。 アカウントを指定しない場合は、コマンドが機能するように、これらのアクセス許可を持つアカウントでログオンする必要があります。 |
+| -o `{raw|lpr}` | ポートが使用するプロトコル (TCP raw または TCP lpr) を指定します。 TCP raw プロトコルは、lpr プロトコルよりも Windows での高パフォーマンスプロトコルです。 使用してポート番号を必要に応じて指定生 TCP を使用する場合、 **-n** パラメーター。 既定のポート番号は 9100 です。 |
+| -h `<Hostaddress>` | ポートを構成するプリンターを (IP アドレス) を指定します。 |
+| -q `<Queuename>` | 生の TCP ポートのキュー名を指定します。 |
+| -n `<portnumber>` | 生の TCP ポートのポート番号を指定します。 既定のポート番号は 9100 です。 |
 | -m`{e|d}` | SNMP が有効になっているかどうかを指定します。 パラメーター **e** SNMP を使用します。 パラメーター **d** SNMP を無効にします。 |
-| -i`<SNMPindex` | SNMP が有効になっている場合は、SNMP インデックスを指定します。 詳細については、 [rfc editor web サイト](https://www.ietf.org/rfc/rfc1759.txt?number=1759)の**rfc 1759**を参照してください。 |
-| -y`<communityname>` | SNMP が有効になっている場合は、SNMP コミュニティ名を指定します。 |
+| -i `<SNMPindex` | SNMP が有効になっている場合は、SNMP インデックスを指定します。 詳細については、 [rfc editor web サイト](https://www.ietf.org/rfc/rfc1759.txt?number=1759)の**rfc 1759**を参照してください。 |
+| -y `<communityname>` | SNMP が有効になっている場合は、SNMP コミュニティ名を指定します。 |
 | -2`{e|-d}` | TCP lpr ポートに対して、二重スプール (respooling とも呼ばれます) を有効にするかどうかを指定します。 TCP lpr は、プリンターに送信されるコントロールファイルに正確なバイト数を含める必要がありますが、プロトコルはローカルの印刷プロバイダーからカウントを取得できないため、二重スプールが必要です。 このため、ファイルが TCP lpr 印刷キューにスプールされると、ファイルは system32 ディレクトリ内の一時ファイルとしてもスプールされます。 TCP lpr は、一時ファイルのサイズを決定し、そのサイズを LPD を実行しているサーバーに送信します。 パラメーター **e** 二重スプールを使用します。 パラメーター **d** 二重スプールを無効にします。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - 入力した情報にスペースが含まれている場合は、テキストを引用符で囲みます (例、"コンピューター名")。
 

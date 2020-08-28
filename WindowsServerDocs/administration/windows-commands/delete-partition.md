@@ -1,18 +1,18 @@
 ---
 title: delete partition
 description: '[パーティションの削除] コマンドの参照記事。フォーカスのあるパーティションを削除します。'
-ms.topic: article
+ms.topic: reference
 ms.assetid: 65752312-cb16-46f6-870f-1b95c507b101
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a783a7d94b48f088eeb868ac64ca355d8829c25
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 9a3b0f6b57f700201c05bd81c706d07de589e9f7
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87891436"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89027740"
 ---
 # <a name="delete-partition"></a>delete partition
 
@@ -36,11 +36,11 @@ delete partition [noerr] [override]
 | noerr | スクリプト専用です。 エラーが発生しても、エラーが発生しなかったかのように DiskPart はコマンドの処理を続けます。 このパラメーターは、エラー発生すると、DiskPart はエラー コードを生成して終了します。 |
 | override | パーティションの種類にかかわらず、DiskPart ですべてのパーティションを削除できるようにします。 通常、DiskPart では既知のデータパーティションのみを削除できます。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-- ダイナミックボリュームを削除するには、代わりに [[ボリュームの削除](delete-volume.md)] コマンドを常に使用します。
+- ダイナミックボリュームを削除するには、代わりに [ [ボリュームの削除](delete-volume.md) ] コマンドを常に使用します。
 
-- パーティションはダイナミックディスクから削除できますが、作成することはできません。 たとえば、ダイナミック GPT ディスク上の認識されていない GUID パーティションテーブル (GPT) パーティションを削除することができます。 このようなパーティションを削除しても、結果として得られる空き領域が使用できなくなることはありません。 代わりに、このコマンドは、DiskPart の[clean](clean.md)コマンドを使用できない緊急の状況で、破損したオフラインダイナミックディスク上の領域を再利用できるようにするためのものです。
+- パーティションはダイナミックディスクから削除できますが、作成することはできません。 たとえば、ダイナミック GPT ディスク上の認識されていない GUID パーティションテーブル (GPT) パーティションを削除することができます。 このようなパーティションを削除しても、結果として得られる空き領域が使用できなくなることはありません。 代わりに、このコマンドは、DiskPart の [clean](clean.md) コマンドを使用できない緊急の状況で、破損したオフラインダイナミックディスク上の領域を再利用できるようにするためのものです。
 
 ## <a name="examples"></a>例
 

@@ -1,18 +1,18 @@
 ---
 title: quser
 description: リモートデスクトップセッションホストサーバー上のユーザーセッションに関する情報を表示する、quser コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8056204f-ed11-4c91-bb1d-c799283a48a4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dd56263e65ed9b6749f6d3d63c60bce32bb8ed53
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 0697fd6ef780f177f0905d2f2af5deb316c61037
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884385"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89028080"
 ---
 # <a name="quser"></a>quser
 
@@ -51,11 +51,11 @@ quser [<username> | <sessionname> | <sessionID>] [/server:<servername>]
 | /server:`<servername>` | クエリを実行するリモートデスクトップセッションホストサーバーを指定します。 それ以外の場合は、現在のリモートデスクトップセッションホストサーバーが使用されます。 このパラメーターは、リモートサーバーからこのコマンドを使用している場合にのみ必要です。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - このコマンドを使用するには、フルコントロールアクセス許可または特殊なアクセス許可が必要です。
 
-- <*username*> *、<の*sessionID>、または*sessionID*パラメーターを使用してユーザーを指定しない場合、サーバーにログオンしているすべてのユーザーの一覧が返されます。 または、 **query session**コマンドを使用して、サーバー上のすべてのセッションの一覧を表示することもできます。
+- <*username*> *、<の* sessionID>、または *sessionID* パラメーターを使用してユーザーを指定しない場合、サーバーにログオンしているすべてのユーザーの一覧が返されます。 または、 **query session** コマンドを使用して、サーバー上のすべてのセッションの一覧を表示することもできます。
 
 - **Quser**が情報を返すと、 `(>)` 現在のセッションの前に不等号が表示されます。
 

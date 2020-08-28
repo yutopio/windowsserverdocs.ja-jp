@@ -1,17 +1,17 @@
 ---
 title: Vssadmin resize shadowstorage
 description: Vssadmin resize shadowstorage コマンドの説明です。
-ms.topic: article
+ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
 ms.date: 03/05/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b49c85ab628de040cf58d47b4e4c694674ce6e7
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 0eb9a4096c529b73a87c5a9fb4d6a95b5e655fe3
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892336"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89022836"
 ---
 # <a name="vssadmin-resize-shadowstorage"></a>Vssadmin resize shadowstorage
 
@@ -19,7 +19,7 @@ ms.locfileid: "87892336"
 
 シャドウコピーの記憶域に使用できる記憶域の最大容量のサイズを変更します。
 
-シャドウコピー記憶域に使用できる記憶域の最小容量は、 **Mindiffgram**のレジストリ値を使用して指定できます。 詳細については、「 [Mindiffgram](/windows/win32/backup/registry-keys-for-backup-and-restore#mindiffareafilesize)」を参照してください。
+シャドウコピー記憶域に使用できる記憶域の最小容量は、 **Mindiffgram** のレジストリ値を使用して指定できます。 詳細については、「 [Mindiffgram](/windows/win32/backup/registry-keys-for-backup-and-restore#mindiffareafilesize)」を参照してください。
 
 > [!WARNING]
 > 記憶域の関連付けのサイズを変更すると、シャドウコピーが消失する可能性があります。

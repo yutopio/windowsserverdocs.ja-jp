@@ -1,18 +1,18 @@
 ---
 title: bootcfg debug
 description: 指定されたオペレーティングシステムエントリのデバッグ設定を追加または変更する、bootcfg debug コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 28afa5fb-a236-46e2-b1a4-a3c43a49c437
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8b3cbde64da67196a1067791e5dad3c2b02756d4
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: afeb4f0f522c7c8bea2cf29bd0987622b4bb2e94
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880694"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034520"
 ---
 # <a name="bootcfg-debug"></a>bootcfg debug
 
@@ -21,7 +21,7 @@ ms.locfileid: "87880694"
 指定したオペレーティングシステムエントリのデバッグ設定を追加または変更します。
 
 >[!NOTE]
-> ポート1394をデバッグする場合は、代わりに[bootcfg dbg1394](bootcfg-dbg1394.md)コマンドを使用します。
+> ポート1394をデバッグする場合は、代わりに [bootcfg dbg1394](bootcfg-dbg1394.md) コマンドを使用します。
 
 ## <a name="syntax"></a>構文
 

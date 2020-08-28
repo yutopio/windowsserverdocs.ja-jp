@@ -1,18 +1,18 @@
 ---
 title: waitfor
 description: システムでシグナルを送信または待機する waitfor のリファレンス記事です。 **Waitfor** をネットワーク経由でコンピューターを同期するために使用します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: a48ef70d-4d28-4035-b6b0-7d7b46ac2157
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e061c36f7cdf949ea76d548a4ed804a0e12169bf
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 1a55629f6715e8b1d2e1aaede4153f74ac05ac98
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892241"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89022915"
 ---
 # <a name="waitfor"></a>waitfor
 
@@ -33,15 +33,15 @@ waitfor [/t <Timeout>] <SignalName>
 
 |       パラメーター       |                                                                                         説明                                                                                          |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    /s\<Computer>     | 名前またはリモート コンピューターの IP アドレスを指定します (円記号を使用しない)。 既定値はローカル コンピューターです。 このパラメーターは、コマンドで指定されたすべてのファイルとフォルダーに適用されます。 |
+|    /s \<Computer>     | 名前またはリモート コンピューターの IP アドレスを指定します (円記号を使用しない)。 既定値はローカル コンピューターです。 このパラメーターは、コマンドで指定されたすべてのファイルとフォルダーに適用されます。 |
 | u\<Domain>\]<User> |                              指定したユーザー アカウントの資格情報を使用してスクリプトを実行します。 既定では、 **waitfor** 現在のユーザーの資格情報を使用します。                               |
 |   /p [\<Password>]    |                                                    指定されているユーザー アカウントのパスワードを指定します、 **/u** パラメーター。                                                     |
 |          /si          |                                                                        ネットワーク経由で指定されたシグナルを送信します。                                                                        |
-|     /t\<Timeout>     |                                              シグナルを待機する秒数を指定します。 既定では、 **waitfor** が無制限に待機します。                                               |
+|     /t \<Timeout>     |                                              シグナルを待機する秒数を指定します。 既定では、 **waitfor** が無制限に待機します。                                               |
 |     \<SignalName>     |                                                信号を指定する **waitfor** まで待機するか、または送信します。 *信号名* 小文字は区別されません。                                                 |
 |          /?           |                                                                             コマンド プロンプトにヘルプを表示します。                                                                             |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 -   シグナル名には、225 文字を超えることはできません。 有効な文字には、a ~ z、A ~ Z、0 ~ 9、および拡張文字セット (128 ~ 255) ASCII が含まれます。
 -   使用しない場合 **/s**, 、信号は、ドメイン内のすべてのシステムにブロードキャストされます。 使用する場合 **/s**, 、信号が、指定したシステムにのみ送信します。

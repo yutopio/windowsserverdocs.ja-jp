@@ -1,23 +1,23 @@
 ---
 title: cacls
 description: Cacls コマンドの参照記事です。 このコマンドは非推奨とされており、Windows の将来のリリースでサポートされるとは限りません。
-ms.topic: article
+ms.topic: reference
 ms.assetid: b5bdbaaa-4557-48b8-80df-e75ee0d2f27d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0a6033d6631fd3269f00f52df14fd5e94994b278
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 8261e9711cee85ad1d59ff71f9cd8ac55e63fab8
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880420"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034280"
 ---
 # <a name="cacls"></a>cacls
 
 >[!IMPORTANT]
-> このコマンドは非推奨とされました。 代わりに[icacls](icacls.md)を使用してください。
+> このコマンドは非推奨とされました。 代わりに [icacls](icacls.md) を使用してください。
 
 指定されたファイルの随意アクセス制御リスト (DACL) を表示または変更します。
 
@@ -35,7 +35,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 | /t | 現在のディレクトリとすべてのサブディレクトリ内の指定されたファイルの Acl を変更します。 |
 | /m | ディレクトリにマウントされているボリュームの Acl を変更します。 |
 | /l | ターゲットではなく、シンボリックリンク自体に対して機能します。 |
-| /s: sddl | Acl を SDDL 文字列で指定された Acl に置き換えます。 このパラメーターは、 **/e**、 **/g**、 **/r**、 **/p**、または **/d**パラメーターでは使用できません。 |
+| /s: sddl | Acl を SDDL 文字列で指定された Acl に置き換えます。 このパラメーターは、 **/e**、 **/g**、 **/r**、 **/p**、または **/d** パラメーターでは使用できません。 |
 | /e | ACL を置き換えるのではなく、編集します。 |
 | /c | アクセス拒否エラーの後に続行します。 |
 | `/g user:<perm>` | 指定されたユーザーアクセス権を付与します。アクセス許可には、次の有効な値が含まれます。<ul><li>**n** -なし</li><li>**r** -読み取り</li><li>**w** -書き込み</li><li>**c** -変更 (書き込み)</li><li>**f** -フルコントロール</li></ul> |
@@ -44,9 +44,9 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 | [/d ユーザー [...] | 指定されたユーザーアクセスを拒否します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="sample-output"></a>出力例
+#### <a name="sample-output"></a>サンプル出力
 
-| 出力 | アクセス制御エントリ (ACE) はに適用されます |
+| Output | アクセス制御エントリ (ACE) はに適用されます |
 -------- | ------------------------------------- |
 | OI | オブジェクト継承。 このフォルダーとファイル。 |
 | CI | コンテナーの継承。 このフォルダーとサブフォルダー。 |
@@ -57,7 +57,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 | 項目IO | サブフォルダーのみです。 |
 | OIIO | ファイルのみ。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - ワイルドカード (**?** と **&#42;**) を指定して、複数のファイルを指定します。
 

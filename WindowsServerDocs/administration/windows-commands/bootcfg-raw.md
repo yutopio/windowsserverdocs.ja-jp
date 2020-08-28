@@ -1,18 +1,18 @@
 ---
 title: bootcfg raw
 description: Bootcfg raw コマンドのリファレンス記事。文字列として指定されたオペレーティングシステムの読み込みオプションを、Boot.ini ファイルのオペレーティングシステムセクションのオペレーティングシステムエントリに追加します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: e3458749-b0a0-460f-a022-3ff199a71f27
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9cba66ccebeacd21d337e04c97d935bd2c260b24
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: d0ca0d6a4201ae292998de420a80b781c9bb1b6c
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880558"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034410"
 ---
 # <a name="bootcfg-raw"></a>bootcfg raw
 
@@ -42,7 +42,7 @@ bootcfg /raw [/s <computer> [/u <domain>\<user> /p <password>]] <osloadoptionsst
 
 このテキストに**は、有効**な OS 読み込みオプション ( **/debug**、 **/fastdetect**、 **/nodebug**、 **/crashdebug**、 **/sos**など) が含まれている必要があります。
 
-最初のオペレーティングシステムエントリの末尾に **/debug/fastdetect**を追加するには、以前のオペレーティングシステムエントリのオプションを置き換えます。
+最初のオペレーティングシステムエントリの末尾に **/debug/fastdetect** を追加するには、以前のオペレーティングシステムエントリのオプションを置き換えます。
 
 ```
 bootcfg /raw /debug /fastdetect /id 1

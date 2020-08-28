@@ -1,24 +1,24 @@
 ---
 title: cd
 description: Cd コマンドの参照記事。現在のディレクトリの名前を表示するか、現在のディレクトリを変更します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 932d9cc1-3dff-40da-835c-1cb0894874f1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87766cd7be95eeb9cbecd29ec88a044224dc81da
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ef5f6f247702c96b3dcca0bda7596ae43867d9e7
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880380"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034200"
 ---
 # <a name="cd"></a>cd
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-現在のディレクトリの名前を表示するか、現在のディレクトリを変更します。 ドライブ文字 (など) でのみ使用する場合 `cd C:` 、 **cd**は、指定されたドライブの現在のディレクトリの名前を表示します。 パラメーターを指定せずに使用した場合、 **cd**には現在のドライブとディレクトリが表示されます。
+現在のディレクトリの名前を表示するか、現在のディレクトリを変更します。 ドライブ文字 (など) でのみ使用する場合 `cd C:` 、 **cd** は、指定されたドライブの現在のディレクトリの名前を表示します。 パラメーターを指定せずに使用した場合、 **cd** には現在のドライブとディレクトリが表示されます。
 
 > [!NOTE]
 > このコマンドは、 [chdir コマンド](chdir.md)と同じです。
@@ -42,9 +42,9 @@ chdir [..]
 | [..] | 親フォルダーに変更することを指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-コマンド拡張機能が有効になっている場合、 **cd**コマンドには次の条件が適用されます。
+コマンド拡張機能が有効になっている場合、 **cd** コマンドには次の条件が適用されます。
 
 - 現在のディレクトリ文字列は、ディスク上の名前と同じケースを使用するように変換されます。 たとえば、は、 `cd c:\temp` ディスク上の場合、現在のディレクトリを C:\Temp に設定します。
 

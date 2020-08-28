@@ -1,18 +1,18 @@
 ---
 title: bitsadmin getaclflags
 description: アクセス制御リスト (ACL) の伝達フラグを取得する bitsadmin getaclflags コマンドの参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 99266def-7479-4430-a61c-98ec433fa88b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 437ad345ec778290499b7b128ee08ffd41be320c
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 5254d65bb5ba3e35fcf5368e24045530a76bfd95
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87894573"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033700"
 ---
 # <a name="bitsadmin-getaclflags"></a>bitsadmin getaclflags
 
@@ -30,7 +30,7 @@ bitsadmin /getaclflags <job>
 | --------- | ----------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 次のフラグ値のうち1つ以上を返します。
 

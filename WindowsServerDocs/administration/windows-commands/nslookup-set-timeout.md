@@ -1,18 +1,18 @@
 ---
 title: nslookup set timeout
 description: Nslookup set timeout コマンドの参照記事。これにより、検索要求への応答を待機する秒数の初期値が変更されます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 07afdaf4-ffec-496f-a188-4e91cf1a28f8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ae0d23296e05519eef02384ebb90b8aa16d8c499
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: fb245e062f510ebef0e0b26176e8e5be7c9cfaea
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87885473"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033910"
 ---
 # <a name="nslookup-set-timeout"></a>nslookup set timeout
 
@@ -30,7 +30,7 @@ set timeout=<number>
 
 | パラメーター | 説明 |
 | ---------- | ---------- |
-| `<number>` | 応答を待機する秒数を指定します。 待機する既定の秒数は**5**です。 |
+| `<number>` | 応答を待機する秒数を指定します。 待機する既定の秒数は **5**です。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 | /help | コマンド プロンプトにヘルプを表示します。 |
 

@@ -1,18 +1,18 @@
 ---
 title: bootcfg query
 description: Boot.ini からブートローダーとオペレーティングシステムのセクションエントリを照会して表示する、bootcfg query コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: a4cacfd1-10a6-4a11-b0c5-f8abde72bfc8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bb4ff06e8c0e5f31c0132f7fbc4fad49be53dd62
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 9e6b5a34a0af467c12549f4921d8d5c99e79aaa9
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880568"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034440"
 ---
 # <a name="bootcfg-query"></a>bootcfg query
 
@@ -35,7 +35,7 @@ bootcfg /query [/s <computer> [/u <domain>\<user> /p <password>]]
 | `/p <password>` | 指定されているユーザー アカウントのパスワードを指定します、 **/u** パラメーター。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="sample-output"></a>出力例
+#### <a name="sample-output"></a>サンプル出力
 
 **Bootcfg/query**コマンドのサンプル出力を次に示します。
 
@@ -52,7 +52,7 @@ path: multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
 OS Load Options: /fastdetect /debug /debugport=com1:
 ```
 
-- [**ブートローダーの設定**] 領域には、Boot.ini の [ブートローダー] セクションの各エントリが表示されます。
+- [ **ブートローダーの設定** ] 領域には、Boot.ini の [ブートローダー] セクションの各エントリが表示されます。
 
 - **ブートエントリ**領域には、の [オペレーティングシステム] セクションの各オペレーティングシステムエントリの詳細が表示され Boot.ini
 

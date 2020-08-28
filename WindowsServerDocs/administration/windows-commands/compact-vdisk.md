@@ -1,18 +1,18 @@
 ---
 title: compact vdisk
 description: Compact vdisk コマンドの参照記事。容量可変の拡張バーチャルハードディスク (VHD) ファイルの物理サイズが削減されます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 40ca0820-67de-4160-b62a-e9bf63fe2790
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0e8f29cf7188d2630f15bee9bde2910c64f325b5
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 505d04cea68a3b005490a264c8c9e77f60e22a35
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892626"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89027750"
 ---
 # <a name="compact-vdisk"></a>compact vdisk
 
@@ -26,7 +26,7 @@ ms.locfileid: "87892626"
 compact vdisk
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 - この操作を成功させるには、動的に拡張された VHD を選択する必要があります。 [Select vdisk コマンド](select-vdisk.md)を使用して VHD を選択し、それにフォーカスを移動します。
 
