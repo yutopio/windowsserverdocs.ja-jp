@@ -1,18 +1,18 @@
 ---
 title: nlbmgr
 description: ネットワーク負荷分散マネージャーを使用して、1台のコンピューターからネットワーク負荷分散クラスターとすべてのクラスターホストを構成および管理する際に役立つ、nlbmgr コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 89cb8590-b7cf-4a27-89fa-0fa62ea1a1ca
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ac0eeb423c5cd590befcce8d7f986fc6b6ebf7d1
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 5e9036a5fc4a0941445be4c9e9cf11c8064caa08
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87885944"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89023586"
 ---
 # <a name="nlbmgr"></a>nlbmgr
 
@@ -33,8 +33,8 @@ nlbmgr [/noping][/hostlist <filename>][/autorefresh <interval>][/help | /?]
 | パラメーター | 説明 |
 | --------- | ----------- |
 | /noping | ネットワーク負荷分散マネージャが Windows Management Instrumentation (WMI) を使用してホストに接続する前に、ホストに対して ping を実行しないようにします。 使用可能なすべてのネットワークアダプターでインターネット制御メッセージプロトコル (ICMP) を無効にしている場合は、このオプションを使用します。 ネットワーク負荷分散マネージャーが、利用できないホストに接続しようとすると、このオプションを使用すると遅延が発生します。 |
-| /hostlist`<filename>` | Filename で指定されたホストをネットワーク負荷分散マネージャーに読み込みます。 |
-| /autorefresh`<interval>` | ネットワーク負荷分散マネージャーによって、ホストとクラスターの情報が毎秒更新され `<interval>` ます。 間隔が指定されていない場合、情報は60秒ごとに更新されます。 |
+| /hostlist `<filename>` | Filename で指定されたホストをネットワーク負荷分散マネージャーに読み込みます。 |
+| /autorefresh `<interval>` | ネットワーク負荷分散マネージャーによって、ホストとクラスターの情報が毎秒更新され `<interval>` ます。 間隔が指定されていない場合、情報は60秒ごとに更新されます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 | /help | コマンド プロンプトにヘルプを表示します。 |
 

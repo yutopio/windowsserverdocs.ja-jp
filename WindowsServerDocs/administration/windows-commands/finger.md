@@ -1,24 +1,24 @@
 ---
 title: finger
 description: 指のサービスまたはデーモンを実行している指定されたリモートコンピューター上のユーザーに関する情報を表示する、finger コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 907ea637-5c6c-4752-84c2-46bbf2a68a33
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 503b431905d764d371bff0c69eef9032fb0c8644
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 55b9fe07b45b669f2d669d388883e5a363eda54f
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87890206"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035090"
 ---
 # <a name="finger"></a>finger
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-指サービスまたはデーモンを実行している、指定されたリモートコンピューター (通常は UNIX を実行しているコンピューター) 上のユーザーに関する情報を表示します。 リモートコンピューターは、ユーザー情報の表示形式と出力形式を指定します。 パラメーターを指定せずに使用すると、**指**でヘルプが表示されます。
+指サービスまたはデーモンを実行している、指定されたリモートコンピューター (通常は UNIX を実行しているコンピューター) 上のユーザーに関する情報を表示します。 リモートコンピューターは、ユーザー情報の表示形式と出力形式を指定します。 パラメーターを指定せずに使用すると、 **指** でヘルプが表示されます。
 
 > [!IMPORTANT]
 > このコマンドは、インターネット プロトコル (TCP/IP) プロトコルがネットワーク接続のネットワーク アダプターのプロパティでコンポーネントとしてインストールされている場合にのみ使用できます。
@@ -38,7 +38,7 @@ finger [-l] [<user>] [@<host>] [...]
 | `@<host>` | ユーザー情報を探している finger サービスを実行しているリモートコンピューターを指定します。 コンピューター名または IP アドレスを指定できます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - **指**パラメーターの前には、スラッシュ (/) ではなくハイフン (-) を付ける必要があります。
 

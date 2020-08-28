@@ -1,18 +1,18 @@
 ---
 title: eventcreate
 description: Eventcreate コマンドの参照記事。管理者は、指定されたイベントログにカスタムイベントを作成できます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: f2b1b26d-a70e-49a6-832b-91eb5a1a159a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bf5cc7e1c36dc0af7325172325a55edb314664ab
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 374dd015cdccbac308fa099854e46765a672ef9f
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87890581"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035200"
 ---
 # <a name="eventcreate"></a>eventcreate
 
@@ -31,19 +31,19 @@ eventcreate [/s <computer> [/u <domain\user> [/p <password>]] {[/l {APPLICATION|
 
 | パラメーター | 説明 |
 | --------- |------------ |
-| /s`<computer>` | 名前またはリモート コンピューターの IP アドレスを指定します (円記号を使用しない)。 既定値はローカル コンピューターです。 |
-| /u`<domain\user>` | またはによって指定されたユーザーのアカウントアクセス許可を使用してコマンドを実行し `<user>` `<domain\user>` ます。 既定値は、コマンドを実行しているコンピューターの現在のログオンユーザーのアクセス許可です。 |
-| /p`<password>` | 指定されているユーザー アカウントのパスワードを指定します、 **/u** パラメーター。 |
-| /l`{APPLICATION | SYSTEM}` | イベントが作成されるイベントログの名前を指定します。 有効なログ名は、**アプリケーション**または**システム**です。 |
-| /so`<srcname>` | イベントに使用するソースを指定します。 有効なソースは任意の文字列にすることができ、イベントを生成しているアプリケーションまたはコンポーネントを表す必要があります。 |
-| /t`{ERROR | WARNING | INFORMATION | SUCCESSAUDIT | FAILUREAUDIT}` | 作成するイベントの種類を指定します。 有効な種類は、 **ERROR**、 **WARNING**、 **INFORMATION**、 **SUCCESSAUDIT**、および**failureaudit**です。 |
-| /id`<eventID>` | イベントのイベント ID を指定します。 有効な ID は、1 ~ 1000 の任意の数です。 |
-| d`<description>` | 新しく作成されたイベントに使用する説明を指定します。 |
+| /s `<computer>` | 名前またはリモート コンピューターの IP アドレスを指定します (円記号を使用しない)。 既定値はローカル コンピューターです。 |
+| /u `<domain\user>` | またはによって指定されたユーザーのアカウントアクセス許可を使用してコマンドを実行し `<user>` `<domain\user>` ます。 既定値は、コマンドを実行しているコンピューターの現在のログオンユーザーのアクセス許可です。 |
+| /p `<password>` | 指定されているユーザー アカウントのパスワードを指定します、 **/u** パラメーター。 |
+| /l `{APPLICATION | SYSTEM}` | イベントが作成されるイベントログの名前を指定します。 有効なログ名は、 **アプリケーション** または **システム**です。 |
+| /so `<srcname>` | イベントに使用するソースを指定します。 有効なソースは任意の文字列にすることができ、イベントを生成しているアプリケーションまたはコンポーネントを表す必要があります。 |
+| /t `{ERROR | WARNING | INFORMATION | SUCCESSAUDIT | FAILUREAUDIT}` | 作成するイベントの種類を指定します。 有効な種類は、 **ERROR**、 **WARNING**、 **INFORMATION**、 **SUCCESSAUDIT**、および **failureaudit**です。 |
+| /id `<eventID>` | イベントのイベント ID を指定します。 有効な ID は、1 ~ 1000 の任意の数です。 |
+| d `<description>` | 新しく作成されたイベントに使用する説明を指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
 ### <a name="examples"></a>例
 
-次の例は、 **eventcreate**コマンドを使用する方法を示しています。
+次の例は、 **eventcreate** コマンドを使用する方法を示しています。
 
 ```
 eventcreate /t error /id 100 /l application /d Create event in application log

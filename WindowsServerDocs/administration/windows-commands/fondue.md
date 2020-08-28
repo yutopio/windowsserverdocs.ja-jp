@@ -1,18 +1,18 @@
 ---
 title: fondue
 description: Windows Update またはグループポリシーによって指定された別のソースから必要なファイルをダウンロードすることによって Windows オプション機能を有効にする、オプションのコマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: fc4467f6-ddbb-4d6d-b51e-5a50a957b8c0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 16660ed745c28f84d7911f9784fbeb19a5c03ae3
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 132441d48ce1f65b38955130fe19535775d02377
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87890187"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035070"
 ---
 # <a name="fondue"></a>fondue
 
@@ -32,7 +32,7 @@ fondue.exe /enable-feature:<feature_name> [/caller-name:<program_name>] [/hide-u
 | --------- | ----------- |
 | /enable-feature`<feature_name>` | 有効にする Windows オプション機能の名前を指定します。 有効にできる機能は、コマンドラインごとに1つだけです。 複数の機能を有効にするには、各機能に対して fondue.exe を使用します。 |
 | 名前 (& i):`<program_name>` | スクリプトまたはバッチファイルから fondue.exe を呼び出すときのプログラム名またはプロセス名を指定します。 このオプションを使用すると、エラーが発生した場合にプログラム名を SQM レポートに追加できます。 |
-| /hideux:`{all | rebootrequest}` | [**すべて**] を使用して、Windows Update にアクセスするための進行状況とアクセス許可要求を含むすべてのメッセージをユーザーに非表示にします。 アクセス許可が必要な場合、操作は失敗します。<p>**Rebootrequest**を使用して、コンピューターを再起動するアクセス許可を求めるユーザーメッセージのみを非表示にします。 このオプションは、再起動要求を制御するスクリプトがある場合に使用します。 |
+| /hideux:`{all | rebootrequest}` | [ **すべて** ] を使用して、Windows Update にアクセスするための進行状況とアクセス許可要求を含むすべてのメッセージをユーザーに非表示にします。 アクセス許可が必要な場合、操作は失敗します。<p>**Rebootrequest**を使用して、コンピューターを再起動するアクセス許可を求めるユーザーメッセージのみを非表示にします。 このオプションは、再起動要求を制御するスクリプトがある場合に使用します。 |
 
 ### <a name="examples"></a>例
 

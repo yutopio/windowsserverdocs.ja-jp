@@ -1,22 +1,22 @@
 ---
 title: ktmutil
 description: カーネルトランザクションマネージャーユーティリティを起動する ktmutil コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 53bc56df-f0e5-443b-ab20-bbf8b11d4a9a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ff65e7e228f4876e51e3132d3a430ceec3837053
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 2bc69964d0fbf7ad93a91b16f78ed86515e537b3
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87887664"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89028260"
 ---
 # <a name="ktmutil"></a>ktmutil
 
-カーネルトランザクションマネージャーユーティリティを開始します。 パラメーターを指定せずに使用した場合、 **ktmutil**は使用可能なサブコマンドを表示します。
+カーネルトランザクションマネージャーユーティリティを開始します。 パラメーターを指定せずに使用した場合、 **ktmutil** は使用可能なサブコマンドを表示します。
 
 ## <a name="syntax"></a>構文
 

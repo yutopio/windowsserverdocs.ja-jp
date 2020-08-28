@@ -1,18 +1,18 @@
 ---
 title: bitsadmin setvalidationstate
 description: Bitsadmin setvalidationstate コマンドの参照記事。このコマンドは、ジョブ内の指定されたファイルのコンテンツ検証の状態を設定します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: e8fc8e8c-171c-4681-8057-6986b018e576
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1dcdbd017f225704fc20d0472346d98fd84bb2c0
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 5885f0f43e7c33e55dc05182819a339d69519d84
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87881028"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034730"
 ---
 # <a name="bitsadmin-setvalidationstate"></a>bitsadmin setvalidationstate
 
@@ -30,7 +30,7 @@ bitsadmin /setvalidationstate <job> <file_index> <TRUE|FALSE>
 | --------- | ---------- |
 | ジョブ | ジョブの表示名または GUID。 |
 | file_index | 0から開始します。 |
-| TRUE または FALSE | **TRUE**を指定すると、指定したファイルのコンテンツの検証が有効になり、 **FALSE**の場合は無効になります。 |
+| TRUE または FALSE | **TRUE** を指定すると、指定したファイルのコンテンツの検証が有効になり、 **FALSE** の場合は無効になります。 |
 
 ## <a name="examples"></a>例
 

@@ -1,18 +1,18 @@
 ---
 title: diskpart のスクリプトと例
 description: Diskpart スクリプトのリファレンス記事と、ディスク関連のタスク (ボリュームの作成やダイナミックディスクへのディスクの変換など) を自動化する方法の例を紹介します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 319c0795-11df-47c8-b203-eadb0577ee0d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1ff62c18c567af3ab064683663f5112090250307
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 94dbcba1ff88cc265e8006511bb3831ac7d12831
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87890933"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89028280"
 ---
 # <a name="diskpart-scripts-and-examples"></a>diskpart のスクリプトと例
 
@@ -33,23 +33,23 @@ assign letter=T
 
 ## <a name="examples"></a>例
 
-- Diskpart スクリプトを実行するには、コマンドプロンプトで次のコマンドを入力します。ここで、 *scriptname*は、スクリプトが含まれているテキストファイルの名前です。
+- Diskpart スクリプトを実行するには、コマンドプロンプトで次のコマンドを入力します。ここで、 *scriptname* は、スクリプトが含まれているテキストファイルの名前です。
 
 ```
 diskpart /s scriptname.txt
 ```
 
-- Diskpart のスクリプト出力をファイルにリダイレクトするには、次のコマンドを入力します。ここで、 *logfile*は、diskpart によって出力が書き込まれるテキストファイルの名前です。
+- Diskpart のスクリプト出力をファイルにリダイレクトするには、次のコマンドを入力します。ここで、 *logfile* は、diskpart によって出力が書き込まれるテキストファイルの名前です。
 
 ```
 diskpart /s scriptname.txt > logfile.txt
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-- **Diskpart**コマンドをスクリプトの一部として使用する場合は、すべての diskpart 操作を1つの diskpart スクリプトの一部として実行することをお勧めします。 連続した diskpart スクリプトを実行できますが、その後のスクリプトで**diskpart**コマンドを実行する前に、前回の実行を完全にシャットダウンするには、各スクリプトの間に少なくとも15秒かかることが必要です。 このようにしないと、以降のスクリプトが失敗することがあります。 `timeout /t 15`Diskpart スクリプトと共にコマンドをバッチファイルに追加することで、連続する diskpart スクリプトの間に一時停止を追加できます。
+- **Diskpart**コマンドをスクリプトの一部として使用する場合は、すべての diskpart 操作を1つの diskpart スクリプトの一部として実行することをお勧めします。 連続した diskpart スクリプトを実行できますが、その後のスクリプトで **diskpart** コマンドを実行する前に、前回の実行を完全にシャットダウンするには、各スクリプトの間に少なくとも15秒かかることが必要です。 このようにしないと、以降のスクリプトが失敗することがあります。 `timeout /t 15`Diskpart スクリプトと共にコマンドをバッチファイルに追加することで、連続する diskpart スクリプトの間に一時停止を追加できます。
 
-- Diskpart の起動時に、diskpart のバージョンとコンピューター名がコマンドプロンプトに表示されます。 既定では、スクリプト化されたタスクの実行中に diskpart によってエラーが検出された場合、diskpart はスクリプトの処理を停止し、エラーコードを表示します ( **noerr**パラメーターを指定していない場合)。 ただし、 **noerr**パラメーターを使用したかどうかにかかわらず、構文エラーが発生した場合、diskpart は常にエラーを返します。 **Noerr**パラメーターを使用すると、ディスクの合計数に関係なく、1つのスクリプトを使用してすべてのディスクのすべてのパーティションを削除するなど、便利なタスクを実行できます。
+- Diskpart の起動時に、diskpart のバージョンとコンピューター名がコマンドプロンプトに表示されます。 既定では、スクリプト化されたタスクの実行中に diskpart によってエラーが検出された場合、diskpart はスクリプトの処理を停止し、エラーコードを表示します ( **noerr** パラメーターを指定していない場合)。 ただし、 **noerr** パラメーターを使用したかどうかにかかわらず、構文エラーが発生した場合、diskpart は常にエラーを返します。 **Noerr**パラメーターを使用すると、ディスクの合計数に関係なく、1つのスクリプトを使用してすべてのディスクのすべてのパーティションを削除するなど、便利なタスクを実行できます。
 
 ## <a name="additional-references"></a>その他の参照情報
 

@@ -1,18 +1,18 @@
 ---
 title: pnpunattend
 description: Pnpunattend コマンドの参照記事。コンピューター上のデバイスドライバーを監査するだけでなく、サイレントドライバインストールも実行します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4fa88932-cff0-4dfc-936c-98c0e3dfbeb8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 72cb158804bcec3c57ef9bae8d21f8e15a7978d9
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 27f59cc85dcd872f1f4c0bebdd042fb1b264d65c
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884933"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035260"
 ---
 # <a name="pnpunattend"></a>pnpunattend
 
@@ -24,7 +24,7 @@ ms.locfileid: "87884933"
 
 1. インストールするドライバー用のディレクトリを作成します。 たとえばでフォルダーを作成 **C:\Drivers\Video** のビデオ アダプターのドライバーです。
 
-2. ダウンロードして、デバイスのドライバー パッケージを抽出します。 オペレーティング システムのバージョンの INF ファイルを含むサブフォルダーおよびサブフォルダーの内容を作成したビデオ フォルダーにコピーします。 たとえば、ビデオドライバーファイルを**C:\Drivers\Video**にコピーします。
+2. ダウンロードして、デバイスのドライバー パッケージを抽出します。 オペレーティング システムのバージョンの INF ファイルを含むサブフォルダーおよびサブフォルダーの内容を作成したビデオ フォルダーにコピーします。 たとえば、ビデオドライバーファイルを **C:\Drivers\Video**にコピーします。
 
 3. たとえば、手順 1. で作成したフォルダーにシステム環境のパス変数を追加 **C:\Drivers\Video**します。
 
@@ -42,14 +42,14 @@ PnPUnattend.exe auditsystem [/help] [/?] [/h] [/s] [/l]
 
 | パラメーター | 説明 |
 |--|--|
-| auditsystem | オンラインでのドライバーのインストールを指定します。<p>必須。ただし、 **/help**または/? でこのコマンドを実行する場合を除き**ます。** %2!d! です。 |
+| auditsystem | オンラインでのドライバーのインストールを指定します。<p>必須。ただし、 **/help** または/? でこのコマンドを実行する場合を除き **ます。** %2!d! です。 |
 | /s | 省略可能。 インストールしなくてもドライバーの検索を指定します。 |
 | /l | 省略可能。 コマンド プロンプトで、このコマンドのログ情報を指定します。 |
 | `/? | /help` | 省略可能。 コマンド プロンプトで次のコマンドのヘルプを表示します。 |
 
 ### <a name="examples"></a>例
 
-次のコマンドは、 **PNPUnattend.exe**を使用してコンピューターを監査し、ドライバーが更新される可能性があるかどうかを確認し、結果をコマンドプロンプトに報告する方法を示しています。
+次のコマンドは、 **PNPUnattend.exe** を使用してコンピューターを監査し、ドライバーが更新される可能性があるかどうかを確認し、結果をコマンドプロンプトに報告する方法を示しています。
 
 ```
 pnpunattend auditsystem /s /l

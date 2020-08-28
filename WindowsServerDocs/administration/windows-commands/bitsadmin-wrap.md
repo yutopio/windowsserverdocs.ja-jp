@@ -1,18 +1,18 @@
 ---
 title: bitsadmin wrap
 description: Bitsadmin wrap コマンドの参照記事。コマンドウィンドウの右端から次の行まで拡張する出力テキストの行をラップします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 14e57522-539d-4621-ad15-09f7a44ccab7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5d17678ec735f9e7d6319368b0b35a67b47ea576
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 14ea78a09af0ba4dedce8438c5ec80cc39fcec9a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880763"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034640"
 ---
 # <a name="bitsadmin-wrap"></a>bitsadmin wrap
 
@@ -20,7 +20,7 @@ ms.locfileid: "87880763"
 
 コマンドウィンドウの右端から次の行まで拡張する出力テキストの行をラップします。 このスイッチは、他のスイッチの前に指定する必要があります。
 
-既定では、 [bitsadmin monitor](bitsadmin-monitor.md)スイッチを除くすべてのスイッチによって出力テキストがラップされます。
+既定では、 [bitsadmin monitor](bitsadmin-monitor.md) スイッチを除くすべてのスイッチによって出力テキストがラップされます。
 
 ## <a name="syntax"></a>構文
 

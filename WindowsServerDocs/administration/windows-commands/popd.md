@@ -1,18 +1,18 @@
 ---
 title: popd
 description: Pnputil コマンドの参照記事。現在のディレクトリを、pushd コマンドによって最後に格納されたディレクトリに変更します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8a4c52d5-9fd1-4eac-9c0c-5767b25728ed
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: d78566cf53d7618d0fb5b7fc57ca02b8ee82484c
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 0d62716785546f9ca4259f99fbe9c5cd9ca9a718
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884910"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035230"
 ---
 # <a name="popd"></a>popd
 
@@ -20,7 +20,7 @@ ms.locfileid: "87884910"
 
 **Popd**コマンドは、現在のディレクトリを、 **pushd**コマンドによって最後に格納されたディレクトリに変更します。
 
-**Pushd**コマンドを使用するたびに、使用するために1つのディレクトリが格納されます。 ただし、 **pushd**コマンドを複数回使用して、複数のディレクトリを格納することができます。 ディレクトリは仮想スタックに連続して格納されるため、 **pushd**コマンドを1回使用すると、コマンドを使用するディレクトリがスタックの一番下に配置されます。 コマンドを再度使用すると、2つ目のディレクトリが最初のディレクトリの上に配置されます。 このプロセスは、 **pushd**コマンドを使用するたびに繰り返されます。
+**Pushd**コマンドを使用するたびに、使用するために1つのディレクトリが格納されます。 ただし、 **pushd** コマンドを複数回使用して、複数のディレクトリを格納することができます。 ディレクトリは仮想スタックに連続して格納されるため、 **pushd** コマンドを1回使用すると、コマンドを使用するディレクトリがスタックの一番下に配置されます。 コマンドを再度使用すると、2つ目のディレクトリが最初のディレクトリの上に配置されます。 このプロセスは、 **pushd** コマンドを使用するたびに繰り返されます。
 
 **Popd**コマンドを使用すると、スタックの一番上にあるディレクトリが削除され、現在のディレクトリがそのディレクトリに変更されます。 **Popd**コマンドを再度使用すると、スタック上の次のディレクトリが削除されます。 コマンド拡張機能が有効になっている場合は、 **pushd**コマンドによって作成されたドライブ文字の割り当てが削除**されます**。
 

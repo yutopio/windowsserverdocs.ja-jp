@@ -1,18 +1,18 @@
 ---
 title: bitsadmin setsecurityflags
 description: Bitsadmin setsecurityflags コマンドの参照記事。 HTTP のセキュリティフラグを設定して、BITS が証明書失効リストを確認し、特定の証明書エラーを無視し、サーバーが HTTP 要求をリダイレクトするときに使用するポリシーを定義するかどうかを決定します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0da5cbf5-5f7f-4833-bbbe-c4e8379a78ab
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 270d584aca7e81ac53b2c93e652b0a73a5167271
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 56f1888eef89a0d6ef6dbe70ea08e99503e0d8b6
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892916"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034740"
 ---
 # <a name="bitsadmin-setsecurityflags"></a>bitsadmin setsecurityflags
 

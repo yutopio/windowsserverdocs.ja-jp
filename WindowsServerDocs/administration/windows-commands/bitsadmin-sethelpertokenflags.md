@@ -1,17 +1,17 @@
 ---
 title: bitsadmin sethelpertokenflags
 description: Bitsadmin se pertokenflags コマンドのリファレンス記事。 BITS 転送ジョブに関連付けられているヘルパートークンの使用フラグを設定します。
-ms.topic: article
+ms.topic: reference
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 1d3fee2b69ba498e3eae771b4be42848b1d88065
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 9cb562debae43be41ba1c126b0270ffbcf1e4f25
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87893122"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89028520"
 ---
 # <a name="bitsadmin-sethelpertokenflags"></a>bitsadmin sethelpertokenflags
 

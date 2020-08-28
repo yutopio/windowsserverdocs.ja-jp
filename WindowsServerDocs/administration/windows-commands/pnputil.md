@@ -1,18 +1,18 @@
 ---
 title: pnputil
 description: pnputil.exe ユーティリティを使用して、ドライバーパッケージの追加、ドライバーパッケージの削除、およびドライバーストア内のドライバーパッケージの一覧表示を行う、pnputil コマンドの参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: fab686b8-09d3-4f6c-afa2-630e6036f44c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 4bd4a5ed4dcadb1011dfbf28647ba4f223249a34
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: adc465cfd2d94c2959b38af32104c7f829067cb8
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884920"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035240"
 ---
 # <a name="pnputil"></a>pnputil
 
@@ -32,7 +32,7 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 | -d | 特定された INF ファイルを削除することを指定します。 |
 | -E | すべてのサードパーティ製 INF ファイルを列挙するように指定します。 |
 | -f | 特定された INF ファイルを強制的に削除するように指定します。 **– I**パラメーターと共に使用することはできません。 |
-| -i | 識別された INF ファイルをインストールするように指定します。 は、 **-f**パラメーターと組み合わせて使用することはできません。 |
+| -i | 識別された INF ファイルをインストールするように指定します。 は、 **-f** パラメーターと組み合わせて使用することはできません。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
 ### <a name="examples"></a>例

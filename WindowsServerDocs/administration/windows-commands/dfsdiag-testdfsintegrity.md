@@ -1,18 +1,18 @@
 ---
 title: dfsdiag testdfsintegrity
 description: 分散ファイルシステム (DFS) 名前空間の整合性をチェックする、DFS diag testdfsintegrity コマンドの参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 173ee832-26e1-4ec8-a23a-38a7d6229ac3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: da30b85acfccee47f976a932c71c2a8906f45a4f
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 7bcfbe7f35965322a347651133a90e6806a5bb95
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87891144"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89028420"
 ---
 # <a name="dfsdiag-testdfsintegrity"></a>dfsdiag testdfsintegrity
 
@@ -36,7 +36,7 @@ dfsdiag /testdfsintegrity /DFSroot: <DFS root path> [/recurse] [/full]
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| /Dfs ルート:`<DFS root path>` | 診断する DFS 名前空間。 |
+| /Dfs ルート: `<DFS root path>` | 診断する DFS 名前空間。 |
 | /recurse | 名前空間の interlinks を含め、テストを実行します。 |
 | /full | 共有および NTFS Acl の一貫性と、すべてのフォルダーターゲットのクライアント側の構成を確認します。 また、online プロパティが設定されていることを確認します。 |
 

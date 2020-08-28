@@ -1,18 +1,18 @@
 ---
 title: tsprof
 description: リモートデスクトップサービスユーザーの構成情報をあるユーザーから別のユーザーにコピーする tsprof のリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 27047868-b706-4208-b7e0-1437a2325dd3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 43a9c986a58a28b8de8110789be99f157be9fb66
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: f676b1d11586d413e544d451043da242861083e1
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896661"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89023396"
 ---
 # <a name="tsprof"></a>tsprof
 
@@ -21,12 +21,10 @@ ms.locfileid: "87896661"
 1 人のユーザーから別のリモート デスクトップ サービス ユーザーの構成情報をコピーします。
 リモートデスクトップサービスユーザーの構成情報は、[ローカルユーザーとグループ]、[active directory ユーザーとコンピューター] のリモートデスクトップサービスの拡張機能に表示されます。
 
-**tsprof**では、ユーザーのプロファイルパスを設定することもできます。
-
-
+**tsprof** では、ユーザーのプロファイルパスを設定することもできます。
 
 > [!NOTE]
-> Windows Server 2008 R2 で、「ターミナル サービス」は「リモート デスクトップ サービス」に名前変更されました。 最新バージョンの新機能については、Windows Server TechNet ライブラリの「 [Windows server 2012 のリモートデスクトップサービスの新機能](/previous-versions/orphan-topics/ws.11/hh831527(v=ws.11))」を参照してください。
+> 最新バージョンの新機能については、Windows Server TechNet ライブラリの「 [Windows server 2012 のリモートデスクトップサービスの新機能](/previous-versions/orphan-topics/ws.11/hh831527(v=ws.11)) 」を参照してください。
 
 ## <a name="syntax"></a>構文
 ```
@@ -49,7 +47,7 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
 |/q|サーバープロファイルパスに対してクエリを実行するユーザーの現在のプロファイルパスを表示します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 -   **Tsprof**コマンドを使用できるのは、windows server 2008 を実行しているコンピューターにターミナルサーバーの役割サービスをインストールした場合、または windows Server 2008 R2 を実行しているコンピューターに RD セッションホスト役割サービスをインストールした場合のみです。
 
 ## <a name="examples"></a>例

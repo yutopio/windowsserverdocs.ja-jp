@@ -1,18 +1,18 @@
 ---
 title: bitsadmin getstate
 description: Bitsadmin getstate コマンドの参照記事。指定されたジョブの状態を取得します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1252d6cf-14ca-44df-beb2-930ff011f297
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 38ad3cedbd4dc9b0cc3d5e855ea4fabd1736b6aa
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 7267afde1062c1b8d3383ea92f02d18728650136
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87893841"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034820"
 ---
 # <a name="bitsadmin-getstate"></a>bitsadmin getstate
 
@@ -30,7 +30,7 @@ bitsadmin /getstate <job>
 | -------------- | -------------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>Output
 
 返される出力値は次のようになります。
 

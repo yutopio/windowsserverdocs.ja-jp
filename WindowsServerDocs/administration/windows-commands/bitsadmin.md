@@ -1,18 +1,18 @@
 ---
 title: bitsadmin
 description: Bitsadmin コマンドのリファレンス記事。ジョブの作成、ダウンロード、アップロード、およびジョブの進行状況の監視に使用されるコマンドラインツールです。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4853036e-1df8-45ad-8be6-cfb097b8dd27
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4bfaa79720dafdbed62a704b20940143b82390ac
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 3744d45265b0b0ae7143d1e37c5e53511a23e26a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880753"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89034611"
 ---
 # <a name="bitsadmin"></a>bitsadmin
 
@@ -22,7 +22,7 @@ Bitsadmin は、ジョブの作成、ダウンロード、アップロード、�
 
 ほとんどのスイッチにはパラメーターが必要です `<job>` 。これは、ジョブの表示名または GUID に設定します。 ジョブの表示名は一意である必要はありません。 **/Create**スイッチと **/list**スイッチは、ジョブの GUID を返します。
 
-既定では、自分のジョブに関する情報にアクセスできます。 別のユーザーのジョブに関する情報にアクセスするには、管理者特権が必要です。 ジョブが管理者特権で作成された場合は、管理者特権のウィンドウから**bitsadmin**を実行する必要があります。それ以外の場合は、ジョブへの読み取り専用アクセス権が付与されます。
+既定では、自分のジョブに関する情報にアクセスできます。 別のユーザーのジョブに関する情報にアクセスするには、管理者特権が必要です。 ジョブが管理者特権で作成された場合は、管理者特権のウィンドウから **bitsadmin** を実行する必要があります。それ以外の場合は、ジョブへの読み取り専用アクセス権が付与されます。
 
 スイッチの多くは、 [BITS インターフェイス](/windows/win32/bits/bits-interfaces)のメソッドに対応しています。 スイッチの使用に関連する可能性のあるその他の詳細については、対応するメソッドを参照してください。
 

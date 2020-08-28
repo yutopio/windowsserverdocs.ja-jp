@@ -1,18 +1,18 @@
 ---
 title: 検出イメージ
 description: 既存のブートイメージから新しい検出イメージを作成する検出イメージのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: ede9fbbb-0bba-4309-8c21-3cc13e1dc3cd
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b6c84735b868af92c6a3f2f16dc872e12c9f38c1
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 94860a992dcc781cfdbf07916cc383526a12202b
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892408"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89023276"
 ---
 # <a name="new-discoverimage"></a>検出イメージ
 
