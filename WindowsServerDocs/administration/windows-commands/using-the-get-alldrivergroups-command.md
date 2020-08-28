@@ -1,18 +1,18 @@
 ---
 title: get AllDriverGroups
 description: サーバー上のすべてのドライバーグループに関する情報を表示する、get AllDriverGroups のリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: f245ba53-f150-41b1-8418-38dcf0410a05
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3a8ab0e97247900c3f9503863a3d4256c1248a8b
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ed6c58a07d9a9efc5cebea64409a2566b3c0aa04
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896403"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89026760"
 ---
 # <a name="get-alldrivergroups"></a>get AllDriverGroups
 

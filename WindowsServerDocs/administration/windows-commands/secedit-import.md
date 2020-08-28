@@ -1,18 +1,18 @@
 ---
 title: 'secedit: インポート'
 description: 参照記事 * * * *-
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1dd59d4c-9d48-444a-871b-b957eb682597
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 38f6b55d8c6cec30fbaa7de1fa3295df5cbfc26d
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 8ad13d04ac894bc11aa26790239370147ce9d140
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87882946"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037430"
 ---
 # <a name="seceditimport"></a>secedit: インポート
 
@@ -38,7 +38,7 @@ Secedit /import /db <database file name> /cfg <configuration file name> [/overwr
 |log|省略可能。</br>プロセスのログ ファイルのパスとファイル名を指定します。|
 |quiet|省略可能。</br>画面とログの出力を抑制します。 できます分析結果を表示する、セキュリティの構成と分析スナップインを Microsoft 管理コンソール (MMC) を使用しています。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 別のコンピュータに、.inf ファイルをインポートする前にデータベースに対してコマンド secedit/generaterollback で実行、インポートに実行されると secedit、整合性を検証するインポート ファイルを検証/です。
 

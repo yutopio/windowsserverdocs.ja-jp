@@ -1,18 +1,18 @@
 ---
 title: ksetup
 description: Kerberos プロトコルとキー配布センター (KDC) を設定および管理して Kerberos 領域をサポートするためのタスクを実行する、ksetup コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4e046f8a-811b-48dc-9a69-18d8e097f353
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fc51f90f553ea2478c0c8f78cf77f7373eb47d7f
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 8745b095b097935661bd5d45190c4060d75261ce
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87887674"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037700"
 ---
 # <a name="ksetup"></a>ksetup
 
@@ -64,7 +64,7 @@ ksetup
 | [ksetup server](ksetup-server.md) | 変更を適用する Windows コンピューターの名前を指定できます。 |
 | [ksetup setcomputerpassword](ksetup-setcomputerpassword.md) | コンピューターのドメインアカウント (またはホストプリンシパル) のパスワードを設定します。 |
 | [ksetup removerealm](ksetup-removerealm.md) | 指定された領域のすべての情報をレジストリから削除します。 |
-| [ksetup domain](ksetup-domain.md) | ドメインを指定できます (が `<domainname>` **/domain**パラメーターによってまだ設定されていない場合)。 |
+| [ksetup domain](ksetup-domain.md) | ドメインを指定できます (が `<domainname>` **/domain** パラメーターによってまだ設定されていない場合)。 |
 | [ksetup changepassword](ksetup-changepassword.md) | Kpasswd を使用して、ログオンしているユーザーのパスワードを変更できます。 |
 | [ksetup listrealmflags](ksetup-listrealmflags.md) | **Ksetup**が検出できる領域フラグを一覧表示します。 |
 | [ksetup setrealmflags](ksetup-setrealmflags.md) | 特定の領域の領域フラグを設定します。 |

@@ -1,18 +1,18 @@
 ---
 title: コンテキストの設定
 description: シャドウコピーの作成のコンテキストを設定する、Set context の参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: fc16c7dd-e8f0-4c2a-8742-0bddb2848bfd
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3506a79ec713f26b16f58cd8cda3903ce6503adf
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: d9097db093d10203c3cbdf753666408cd3932aaf
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87882704"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037400"
 ---
 # <a name="set-contex"></a>セットのコンテキスト
 
@@ -35,7 +35,7 @@ set context {clientaccessible | persistent [nowriters] | volatile [nowriters]}
 |volatile|上のシャドウ コピーの削除は、終了またはリセットします。|
 |nowriters|すべてのライターを除外することを指定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 -   *Clientaccessible* コンテキストは既定では永続的です。
 

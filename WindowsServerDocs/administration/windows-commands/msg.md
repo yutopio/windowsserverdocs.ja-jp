@@ -1,18 +1,18 @@
 ---
 title: msg
 description: リモートデスクトップセッションホストサーバー上のユーザーにメッセージを送信する msg コマンドのリファレンス記事
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9501cf3e-568e-4982-9987-8daecc6c17ff
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 044d6c7e6dbf7c92cb0c947fcb60eb79ab1db05b
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: c2f26e12b10d0eb10197018d10d21f34f0da9cb5
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886195"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037650"
 ---
 # <a name="msg"></a>msg
 
@@ -38,10 +38,10 @@ msg {<username> | <sessionname> | <sessionID>| @<filename> | *} [/server:<server
 | `<sessionID>` | メッセージを受信するユーザーのセッションの数値 ID を指定します。 |
 | `@<filename>` | メッセージを受信するユーザー名、セッション名、セッション Id の一覧を含むファイルを識別します。 |
 | * | システム上のすべてのユーザー名にメッセージを送信します。 |
-| /server:`<servername>` | メッセージを受信するセッションまたはユーザーを含むリモートデスクトップセッションホストサーバーを指定します。 指定されていない場合、 **/server**は、現在ログオンしているサーバーを使用します。 |
+| /server:`<servername>` | メッセージを受信するセッションまたはユーザーを含むリモートデスクトップセッションホストサーバーを指定します。 指定されていない場合、 **/server** は、現在ログオンしているサーバーを使用します。 |
 | /時刻`<seconds>` | 送信したメッセージがユーザーの画面に表示される時間を指定します。 制限時間に達すると、メッセージは表示されなくなります。 時間制限が設定されていない場合は、ユーザーがメッセージを確認して **[OK]** をクリックするまで、メッセージはユーザーの画面に残ります。 |
 | /v | 実行されているアクションに関する情報を表示します。 |
-| /w | メッセージが受信されたことを示す受信確認を待機します。 ユーザーがすぐに応答しない場合は、を使用して、 `/time:<*seconds*>` 長い遅延が発生しないようにします。 このパラメーターを **/v**と共に使用することも役立ちます。 |
+| /w | メッセージが受信されたことを示す受信確認を待機します。 ユーザーがすぐに応答しない場合は、を使用して、 `/time:<*seconds*>` 長い遅延が発生しないようにします。 このパラメーターを **/v** と共に使用することも役立ちます。 |
 | `<message>` | 送信するメッセージのテキストを指定します。 メッセージが指定されていない場合は、メッセージを入力するように求められます。 ファイルに含まれているメッセージを送信するには、不等号 (<) 記号を入力し、その後にファイル名を入力します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
@@ -53,7 +53,7 @@ msg {<username> | <sessionname> | <sessionID>| @<filename> | *} [/server:<server
 msg User1 Let's meet at 1PM today
 ```
 
-セッション*modeM02*に同じメッセージを送信するには、次のように入力します。
+セッション *modeM02*に同じメッセージを送信するには、次のように入力します。
 
 ```
 msg modem02 Let's meet at 1PM today

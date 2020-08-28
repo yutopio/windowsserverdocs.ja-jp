@@ -5,14 +5,14 @@ manager: dmoss
 ms.author: toklima
 author: toklima
 ms.assetid: 9f3dc104-dd69-4b03-b824-a29896780164
-ms.topic: article
+ms.topic: reference
 ms.date: 10/16/2017
-ms.openlocfilehash: 92b048d0ad3a7cb1f0c21dabf3cc14dc9850a251
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 69ef36a03c22d7e14d4d657ce5ebab85b63afbd7
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889991"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037380"
 ---
 # <a name="fsutil-file"></a>fsutil file
 
@@ -68,9 +68,9 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 | `<shortname>` | ファイルの短い名前を指定します。 |
 | setvaliddata | NTFS ボリューム上のファイルの有効なデータ長を設定します。 |
 | `<datalength>` | ファイルの長さをバイト単位で指定します。 |
-| データの setゼロ | ファイルの範囲 (*オフセット*と*長さ*で指定) をゼロに設定します。これにより、ファイルが空になります。 ファイルがスパースファイルの場合は、基になるアロケーションユニットがデコミットされます。 |
+| データの setゼロ | ファイルの範囲 ( *オフセット* と *長さ*で指定) をゼロに設定します。これにより、ファイルが空になります。 ファイルがスパースファイルの場合は、基になるアロケーションユニットがデコミットされます。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - NTFS には、ファイルの長さに関する重要な概念が2つあります。ファイルの終端 (EOF) マーカーと有効なデータ長 (VDL) です。 EOF は、ファイルの実際の長さを示します。 VDL は、ディスク上の有効なデータの長さを識別します。 VDL と EOF の間の読み取りでは、C2 オブジェクト再利用要件を維持するために、自動的に0が返されます。
 
@@ -84,7 +84,7 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 
 ### <a name="examples"></a>例
 
-ドライブ C の*scottb*によって所有されているファイルを検索するには、次のように入力します。
+ドライブ C の *scottb* によって所有されているファイルを検索するには、次のように入力します。
 
 ```
 fsutil file findbysid scottb c:\users

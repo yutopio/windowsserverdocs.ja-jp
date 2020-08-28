@@ -1,18 +1,18 @@
 ---
 title: Diskshadow (英語の可能性あり)
 description: ボリュームシャドウコピーサービス (VSS) によって提供される機能を公開するツールである、Diskshadow コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: e962537d-b759-4368-b6f1-e8391cf7b221
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3170cde50208eb54d1657ceee0c409d76ed3b806
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: bf36485319a74694b08a094950d52d70f7cd213a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87890801"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89030860"
 ---
 # <a name="diskshadow"></a>Diskshadow (英語の可能性あり)
 
@@ -31,7 +31,7 @@ Diskshadow.exe は、ボリュームシャドウコピーサービス (VSS) に�
 diskshadow
 ```
 
-スクリプトモードの場合は、次のように入力します。 *script.txt*は、Diskshadow コマンドを含むスクリプトファイルです。
+スクリプトモードの場合は、次のように入力します。 *script.txt* は、Diskshadow コマンドを含むスクリプトファイルです。
 
 ```
 diskshadow -s script.txt
@@ -39,7 +39,7 @@ diskshadow -s script.txt
 
 ### <a name="parameters"></a>パラメーター
 
-Diskshadow コマンドインタープリターで、またはスクリプトファイルを使用して、次のコマンドを実行できます。 シャドウコピーを作成するには、少なくとも**追加**と**作成**のみが必要です。 ただし、これによってコンテキストとオプションの設定がなくなりされ、コピーバックアップが作成され、バックアップ実行スクリプトを使用せずにシャドウコピーが作成されます。
+Diskshadow コマンドインタープリターで、またはスクリプトファイルを使用して、次のコマンドを実行できます。 シャドウコピーを作成するには、少なくとも **追加** と **作成** のみが必要です。 ただし、これによってコンテキストとオプションの設定がなくなりされ、コピーバックアップが作成され、バックアップ実行スクリプトを使用せずにシャドウコピーが作成されます。
 
 | command | 説明 |
 | --------- | ----------- |
@@ -50,16 +50,16 @@ Diskshadow コマンドインタープリターで、またはスクリプトフ
 | [create コマンド](create.md) | 現在のコンテキストとオプションの設定を使用して、シャドウコピーの作成プロセスを開始します。 |
 | [exec コマンド](exec.md) | ローカルコンピューター上のファイルを実行します。 |
 | [バックアップの開始コマンド](begin-backup.md) | 完全バックアップセッションを開始します。 |
-| [バックアップの終了コマンド](end-backup.md) | 完全バックアップセッションを終了し、必要に応じて、適切なライター状態の**backupcomplete**イベントを発行します。 |
-| [restore コマンドの開始](begin-restore.md) | 復元セッションを開始し、関連するライターに**復元前**イベントを発行します。 |
-| [復元コマンドの終了](end-restore.md) | 復元セッションを終了し、関連するライターに**postrestore**イベントを発行します。 |
+| [バックアップの終了コマンド](end-backup.md) | 完全バックアップセッションを終了し、必要に応じて、適切なライター状態の **backupcomplete** イベントを発行します。 |
+| [restore コマンドの開始](begin-restore.md) | 復元セッションを開始し、関連するライターに **復元前** イベントを発行します。 |
+| [復元コマンドの終了](end-restore.md) | 復元セッションを終了し、関連するライターに **postrestore** イベントを発行します。 |
 | [reset コマンド](reset.md) | Diskshadow を既定の状態にリセットします。 |
 | [list コマンド](list.md) | システム上にあるライター、シャドウコピー、または現在登録されているシャドウコピープロバイダーの一覧を表示します。 |
 | [shadows コマンドの削除](delete-shadows.md) | シャドウコピーを削除します。 |
 | [import コマンド](import.md) | 読み込まれたメタデータファイルからシステムに転送可能なシャドウコピーをインポートします。 |
 | [mask コマンド](mask.md) | **インポート**コマンドを使用してインポートされたハードウェアシャドウコピーを削除します。 |
 | [コマンドの公開](expose.md) | は、ドライブ文字、共有、またはマウントポイントとして、永続的なシャドウコピーを公開します。 |
-| [コマンドを公開しません](unexpose.md) | [**公開**] コマンドを使用して公開されたシャドウコピーを公開しません。 |
+| [コマンドを公開しません](unexpose.md) | [ **公開** ] コマンドを使用して公開されたシャドウコピーを公開しません。 |
 | [break コマンド](break_2.md) | VSS からシャドウコピーボリュームの関連付けを解除します。 |
 | [revert コマンド](revert.md) | 指定したシャドウ コピーにボリュームを元に戻します。 |
 | [exit コマンド](exit.md) | コマンドインタープリターまたはスクリプトを終了します。 |

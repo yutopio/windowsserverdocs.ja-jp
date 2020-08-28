@@ -1,18 +1,18 @@
 ---
 title: Sc.exe クエリ
 description: sc.exe ユーティリティを使用して、サービス、ドライバー、サービスの種類、またはドライバーの種類に関する情報を取得する方法について説明します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3d07d472d2c8a037899c654963e1d0e0b7cb1bb3
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 9b3d7967597724dfae4ab5a12ecee9698a43236f
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87883255"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037530"
 ---
 # <a name="scexe-query"></a>Sc.exe クエリ
 
@@ -33,12 +33,12 @@ sc.exe [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [ty
 |     種類 = {ドライバー      |                                                                                                                            サービス (service)                                                                                                                            |
 |       種類 = {独自       |                                                                                                                             共有                                                                                                                             |
 |     状態 = {アクティブ     |                                                                                                                           非アクティブ                                                                                                                            |
-| bufsize =\<BufferSize> |                     列挙バッファーのサイズをバイト単位で指定します。 既定のバッファー サイズは、1,024 バイトです。 クエリの結果の表示が 1,024 バイトを超えると、列挙型のバッファーのサイズを増やす必要があります。                      |
-|   ri =\<ResumeIndex>   | 列挙を開始または再開するにはインデックス番号を指定します。 既定値は**0** (ゼロ) です。 組み合わせてこのパラメーターを使用して、 **bufsize =** パラメーターの詳細については、バッファーの既定で表示できるよりも、クエリによって返されたとき。 |
-|  グループ =\<GroupName>   |                                                                             列挙するサービス グループを指定します。 既定では、すべてのグループが列挙されます (* * グループ = * *)。                                                                              |
+| bufsize = \<BufferSize> |                     列挙バッファーのサイズをバイト単位で指定します。 既定のバッファー サイズは、1,024 バイトです。 クエリの結果の表示が 1,024 バイトを超えると、列挙型のバッファーのサイズを増やす必要があります。                      |
+|   ri = \<ResumeIndex>   | 列挙を開始または再開するにはインデックス番号を指定します。 既定値は **0** (ゼロ) です。 組み合わせてこのパラメーターを使用して、 **bufsize =** パラメーターの詳細については、バッファーの既定で表示できるよりも、クエリによって返されたとき。 |
+|  グループ = \<GroupName>   |                                                                             列挙するサービス グループを指定します。 既定では、すべてのグループが列挙されます (* * グループ = * *)。                                                                              |
 |           /?           |                                                                                                             コマンド プロンプトにヘルプを表示します。                                                                                                              |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 - パラメーターと値の間のスペースのない (つまり、 **型 = 独自**, ではなく、 **型 = 独自**)、操作は失敗します。
 - **クエリ** 操作には、サービスに関する次の情報が表示されます: WIN32_EXIT_B、SERVICE_EXIT_B、チェックポイント、および WAIT_HINT (状態は使用できない) と同様に状態 (サービスのレジストリ サブキーの名前)、サービス名を入力します。

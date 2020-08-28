@@ -5,14 +5,14 @@ manager: dmoss
 ms.author: toklima
 author: toklima
 ms.assetid: 21225c11-7c72-4ea2-96bd-e63d4beb3be5
-ms.topic: article
+ms.topic: reference
 ms.date: 10/16/2017
-ms.openlocfilehash: 7edf7ac908df419611fb42dd819323b15c8ded4e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: e59885b3cf2b51b8d62446a6f1e4ab2ff3b90b3f
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889926"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037350"
 ---
 # <a name="fsutil-quota"></a>fsutil quota
 
@@ -46,11 +46,11 @@ fsutil quota [violations]
 | `<limit>` | 最大許容ディスク使用量 (バイト単位) を設定します。 このパラメーターは、コマンドに必要です `fsutil quota modify` 。 |
 | `<username>` | ドメインまたはユーザー名を指定します。 このパラメーターは、コマンドに必要です `fsutil quota modify` 。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - ディスククォータはボリューム単位で実装され、ハードおよびソフトの両方の記憶域の制限をユーザーごとに実装することができます。
 
-- 新しいユーザーを追加するたびにクォータ制限を設定したり、クォータ制限を自動的に追跡したり、レポートにコンパイルしたり、システム管理者に電子メールで自動的に送信したりするために、 **fsutil quota**を使用する書き込みスクリプトを使用できます。
+- 新しいユーザーを追加するたびにクォータ制限を設定したり、クォータ制限を自動的に追跡したり、レポートにコンパイルしたり、システム管理者に電子メールで自動的に送信したりするために、 **fsutil quota** を使用する書き込みスクリプトを使用できます。
 
 ### <a name="examples"></a>例
 
@@ -60,7 +60,7 @@ GUID を使用して指定されたディスクボリュームの既存のディ
 fsutil quota query volume{928842df-5a01-11de-a85c-806e6f6e6963}
 ```
 
-ドライブ文字**C:** で指定されたディスクボリュームの既存のディスククォータを一覧表示するには、次のように入力します。
+ドライブ文字 **C:** で指定されたディスクボリュームの既存のディスククォータを一覧表示するには、次のように入力します。
 
 ```
 fsutil quota query C:

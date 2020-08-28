@@ -1,18 +1,18 @@
 ---
 title: chglogon
 description: Chglogon コマンドの参照記事。リモートデスクトップセッションホストサーバー上のクライアントセッションからのログオンを有効または無効にしたり、現在のログオンステータスを表示したりします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8280c5b3-ac10-48ae-87ca-678594837f03
 ms.date: 10/16/2017
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: db2fdcced28cbf3be2a05338209d3e0b16a84cbc
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 5d40e9d07bb1a387f64010865ec79c7aca6b9562
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892800"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89031060"
 ---
 # <a name="chglogon"></a>chglogon
 
@@ -21,7 +21,7 @@ ms.locfileid: "87892800"
 リモートデスクトップセッションホストサーバー上のクライアントセッションからのログオンを有効または無効にします。または、現在のログオン状態を表示します。
 
 > [!NOTE]
-> このコマンドは、**変更ログコマンド**に置き換えられました。 構文とパラメーターの詳細を含む詳細については、「 [change logon コマンド](change-logon.md)」を参照してください。
+> このコマンドは、 **変更ログコマンド**に置き換えられました。 構文とパラメーターの詳細を含む詳細については、「 [change logon コマンド](change-logon.md)」を参照してください。
 
 ## <a name="additional-references"></a>その他の参照情報
 

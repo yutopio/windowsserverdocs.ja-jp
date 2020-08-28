@@ -5,14 +5,14 @@ manager: dmoss
 ms.author: toklima
 author: toklima
 ms.assetid: 693ab895-9d0c-47c1-9f52-df5cd287842a
-ms.topic: article
+ms.topic: reference
 ms.date: 10/16/2017
-ms.openlocfilehash: f24a434a3b48186baa1743cc6159cac39443231e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 27b7048ebb659c29bd6aa7d41c0be9b26deca547
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889967"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037340"
 ---
 # <a name="fsutil-objectid"></a>fsutil objectid
 
@@ -36,17 +36,17 @@ fsutil objectid [set] <objectID> <birthvolumeID> <birthobjectID> <domainID> <fil
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| create | 指定したファイルに存在しない場合は、オブジェクト識別子を作成します。 ファイルに既にオブジェクト識別子が含まれている場合、このサブコマンドは**query**サブコマンドと同じです。 |
+| create | 指定したファイルに存在しない場合は、オブジェクト識別子を作成します。 ファイルに既にオブジェクト識別子が含まれている場合、このサブコマンドは **query** サブコマンドと同じです。 |
 | delete | オブジェクト識別子を削除します。 |
 | query | オブジェクト識別子を照会します。 |
 | set | オブジェクト識別子を設定します。 |
 | `<objectID>` | ボリューム内で一意であることが保証されるファイル固有の16バイトの16進数識別子を設定します。 オブジェクト識別子は、分散リンク追跡 (DLT) クライアントサービスとファイルレプリケーションサービス (FRS) がファイルを識別するために使用されます。 |
 | `<birthvolumeID>` | オブジェクト識別子を最初に取得したときにファイルが配置されたボリュームを示します。 この値は、DLT クライアントサービスによって使用される16バイトの16進数識別子です。 |
-| `<birthobjectID>` | ファイルの元のオブジェクト識別子を示します (ファイルの移動時に*objectID*が変更される可能性があります)。 この値は、DLT クライアントサービスによって使用される16バイトの16進数識別子です。 |
+| `<birthobjectID>` | ファイルの元のオブジェクト識別子を示します (ファイルの移動時に *objectID* が変更される可能性があります)。 この値は、DLT クライアントサービスによって使用される16バイトの16進数識別子です。 |
 | `<domainID>` | 16バイトの16進数ドメイン識別子。 この値は現在使用されていないため、すべてゼロに設定する必要があります。 |
-| `<filename>` | ファイル名と拡張子を含むファイルへの完全パスを指定します (例*C:\documents\filename.txt*)。 |
+| `<filename>` | ファイル名と拡張子を含むファイルへの完全パスを指定します (例 *C:\documents\filename.txt*)。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - オブジェクト識別子を持つすべてのファイルには、誕生日のボリューム識別子、生のオブジェクト識別子、およびドメイン識別子も含まれています。 ファイルを移動すると、オブジェクト識別子が変更される場合がありますが、誕生日のボリュームと生のオブジェクトの識別子は変わりません。 この動作により、Windows オペレーティングシステムは、移動された場所に関係なく、常にファイルを見つけることができます。
 

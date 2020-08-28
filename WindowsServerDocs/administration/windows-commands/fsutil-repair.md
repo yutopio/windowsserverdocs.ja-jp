@@ -5,20 +5,20 @@ manager: dmoss
 ms.author: toklima
 author: toklima
 ms.assetid: 62d77150-1d9e-4069-ab4a-299f33024912
-ms.topic: article
+ms.topic: reference
 ms.date: 10/16/2017
-ms.openlocfilehash: 17deb2d592ba9b5532d33a71dd8687708c8bd0bf
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 9c26f2be8e586205271ba1d150bb2378cc8b2045
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889915"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037330"
 ---
 # <a name="fsutil-repair"></a>fsutil repair
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows 10、Windows Server 2012 R2、Windows 8.1、Windows Server 2012、Windows 8
 
-NTFS 自己修復修復操作を管理および監視します。 自己修復 NTFS は、NTFS ファイルシステムの破損を修復しようとしますが、 **Chkdsk.exe**を実行する必要はありません。 詳細については、「[自己修復 NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771388(v=ws.10))」を参照してください。
+NTFS 自己修復修復操作を管理および監視します。 自己修復 NTFS は、NTFS ファイルシステムの破損を修復しようとしますが、 **Chkdsk.exe** を実行する必要はありません。 詳細については、「 [自己修復 NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771388(v=ws.10))」を参照してください。
 
 ## <a name="syntax"></a>構文
 

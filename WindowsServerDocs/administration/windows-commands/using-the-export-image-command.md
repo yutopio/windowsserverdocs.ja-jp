@@ -1,18 +1,18 @@
 ---
 title: エクスポート-イメージ
 description: エクスポートイメージの参照記事。イメージストアから別の Windows イメージ (.wim) ファイルに既存のイメージをエクスポートします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: a9b8b467-0f2d-4754-8998-55503a262778
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f06ded887cf7fcd134ffb8d5b9bfbe588a584e1
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: f31159d0cfaeb135bf1e5db6f1dec48352fbcf48
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896985"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89026780"
 ---
 # <a name="export-image"></a>エクスポート-イメージ
 
@@ -52,7 +52,7 @@ mediatype: {Boot &#124; Install}|エクスポートする画像の種類を指�
 |/アーキテクチャ: {x86 & #124; ia64 & #124; x64}|エクスポートするイメージのアーキテクチャを指定します。 さまざまなアーキテクチャでブート イメージで同じイメージの名前を持つことなのではアーキテクチャの値を指定する適切なイメージが必ず返されるようにします。|
 |[/ファイル名:<Filename>]|イメージを名前で一意に識別できない場合は、ファイル名を指定する必要があります。|
 |/DestinationImage|コピー先の画像の設定を指定します。 次のオプションを使用してこれらの設定を指定することができます。<p>-/Filepath: <File path and name> -新しいイメージの完全ファイルパスを指定します。<br />-[/Name:<Name>]-イメージの表示名を設定します。 名が指定されていない場合は、ソース イメージの表示名が使用されます。<br />-[/Description: <Description>]-イメージの説明を設定します。|
-|[/Overwrite: {はい &#124; &#124; 追加}]|/Filepath にその名前の既存のファイルが既に存在する場合に、 **/destinationimage**オプションで指定されたファイルを上書きするかどうかを指定します。<p>-   **[はい]** に設定すると、既存のファイルが上書きされます。<br />-   [**いいえ**] (既定のオプション) を指定すると、同じ名前のファイルが既に存在する場合にエラーが発生します。<br />-   **append**を指定すると、生成されたイメージが既存の .wim ファイル内に新しいイメージとして追加されます。|
+|[/Overwrite: {はい &#124; &#124; 追加}]|/Filepath にその名前の既存のファイルが既に存在する場合に、 **/destinationimage** オプションで指定されたファイルを上書きするかどうかを指定します。<p>-   **[はい]** に設定すると、既存のファイルが上書きされます。<br />-   [**いいえ**] (既定のオプション) を指定すると、同じ名前のファイルが既に存在する場合にエラーが発生します。<br />-   **append** を指定すると、生成されたイメージが既存の .wim ファイル内に新しいイメージとして追加されます。|
 ## <a name="examples"></a>例
 ブート イメージをエクスポートするには、次のいずれかを入力します。
 ```

@@ -1,22 +1,22 @@
 ---
 title: bitsadmin replaceremoteprefix
-description: Bitsadmin replaceremoteprefix コマンドの参照記事。必要に応じて、ジョブ内のすべてのファイルのリモート URL を*oldprefix*から*newprefix*に変更します。
-ms.topic: article
+description: Bitsadmin replaceremoteprefix コマンドの参照記事。必要に応じて、ジョブ内のすべてのファイルのリモート URL を *oldprefix* から *newprefix*に変更します。
+ms.topic: reference
 ms.assetid: d0e0abb1-bdb4-4c74-abbc-16c809f5fd81
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 86149b09c65f430bf0a3bbe7a1595bb5385c6dcc
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 21c1ede5b05a80ba80b1bd470065e914fb353c3c
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87893366"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89026330"
 ---
 # <a name="bitsadmin-replaceremoteprefix"></a>bitsadmin replaceremoteprefix
 
-必要に応じて、ジョブ内のすべてのファイルのリモート URL を*oldprefix*から*newprefix*に変更します。
+必要に応じて、ジョブ内のすべてのファイルのリモート URL を *oldprefix* から *newprefix*に変更します。
 
 ## <a name="syntax"></a>構文
 

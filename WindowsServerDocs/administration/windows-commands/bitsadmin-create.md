@@ -1,18 +1,18 @@
 ---
 title: bitsadmin create
 description: 指定された表示名で転送ジョブを作成する bitsadmin create コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9a8c53af-900b-4c24-9265-5b8b08213fac
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca651705955826ab3b65bd95aa90c98170bdb935
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 516f751109724688579f084fd0ccdb5f5bda85a3
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87894596"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89026680"
 ---
 # <a name="bitsadmin-create"></a>bitsadmin create
 
@@ -33,7 +33,7 @@ bitsadmin /create [type] displayname
 
 | パラメーター | 説明 |
 | ------- | -------- |
-| type | ジョブには次の3つの種類があります。<ul><li>**ダウンロード.** サーバーからローカルファイルにデータを転送します。</li><li>**5d.** ローカルファイルからサーバーにデータを転送します。</li><li>**/Upload-Reply.** ローカルファイルからサーバーにデータを転送し、サーバーから応答ファイルを受信します。</li></ul>このパラメーターの既定値は、指定されていない場合は **/ダウンロード**です。 |
+| type | ジョブには次の3つの種類があります。<ul><li>**ダウンロード.** サーバーからローカルファイルにデータを転送します。</li><li>**5d.** ローカルファイルからサーバーにデータを転送します。</li><li>**/Upload-Reply.** ローカルファイルからサーバーにデータを転送し、サーバーから応答ファイルを受信します。</li></ul>このパラメーターの既定値は、指定されていない場合は **/ダウンロード** です。 |
 | displayName | 新しく作成されたジョブに割り当てられた表示名。 |
 
 ## <a name="examples"></a>例

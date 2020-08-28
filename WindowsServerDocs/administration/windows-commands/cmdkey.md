@@ -1,18 +1,18 @@
 ---
 title: cmdkey
 description: 保存されているユーザー名とパスワードまたは資格情報を作成、一覧表示、削除する、cmdkey コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5fcd68ee-a14a-4b71-9300-c3f5c5d31e8e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d7194b19231209150197fbc4c20175b319da77cd
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 7ead7a9c3b5168789136c895c6cc6febcbb486f1
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880062"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89030970"
 ---
 # <a name="cmdkey"></a>cmdkey
 
@@ -32,7 +32,7 @@ cmdkey [{/add:<targetname>|/generic:<targetname>}] {/smartcard | /user:<username
 | ---------- | ----------- |
 | /add`<targetname>` | ユーザー名とパスワードを一覧に追加します。<p>には、 `<targetname>` このエントリが関連付けられるコンピューターまたはドメイン名を識別するのパラメーターが必要です。 |
 | /一般`<targetname>` | 汎用的な資格情報をリストに追加します。<p>には、 `<targetname>` このエントリが関連付けられるコンピューターまたはドメイン名を識別するのパラメーターが必要です。 |
-| /smartcard | スマートカードから資格情報を取得します。 このオプションを使用したときにシステムに複数のスマートカードが見つかった場合、 **cmdkey**は使用可能なすべてのスマートカードに関する情報を表示し、使用するスマートカードを指定するようにユーザーに求めます。 |
+| /smartcard | スマートカードから資格情報を取得します。 このオプションを使用したときにシステムに複数のスマートカードが見つかった場合、 **cmdkey** は使用可能なすべてのスマートカードに関する情報を表示し、使用するスマートカードを指定するようにユーザーに求めます。 |
 | /user`<username>` | このエントリで格納するユーザー名またはアカウント名を指定します。 が指定されていない場合は `<username>` 、要求されます。 |
 |渡す`<password>` | このエントリで格納するパスワードを指定します。 が指定されていない場合は `<password>` 、要求されます。 パスワードは、保存された後は表示されません。 |
 | /delete{:`<targetname>` | 電話帳 | ユーザー名とパスワードを一覧から削除します。 `<targetname>`が指定されている場合、そのエントリは削除されます。 を指定した場合 `/ras` 、格納されているリモートアクセスエントリは削除されます。 |

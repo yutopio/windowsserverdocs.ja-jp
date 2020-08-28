@@ -1,18 +1,18 @@
 ---
 title: ftp append
 description: Ftp append コマンドの参照記事。現在のファイルの種類の設定を使用して、リモートコンピューター上のファイルにローカルファイルを追加します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7c1a133c-31dc-41a4-9eb9-258efd79804d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0c98e9eb4ed5d2dc560deac0720158cf90d801e4
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 58f85a99eed60bffafaa71d9b0af1cc67462453b
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889690"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037750"
 ---
 # <a name="ftp-append"></a>ftp append
 

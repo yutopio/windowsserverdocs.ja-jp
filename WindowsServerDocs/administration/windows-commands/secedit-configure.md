@@ -1,18 +1,18 @@
 ---
 title: 'secedit: 構成'
 description: 参照記事 * * * *-
-ms.topic: article
+ms.topic: reference
 ms.assetid: a92e68ca-003c-4219-8655-0e7734f5fab3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6da1afd83e1c50393581da932c894fa25d3f1583
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 2250310d830b9037fc0b5148af74afb386be5f42
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87883011"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037460"
 ---
 # <a name="seceditconfigure"></a>secedit: 構成
 
@@ -37,7 +37,7 @@ Secedit /configure /db <database file name> [/cfg <configuration file name>] [/o
 |log|省略可能。</br>プロセスのログ ファイルのパスとファイル名を指定します。|
 |quiet|省略可能。</br>画面とログの出力を抑制します。 できます分析結果を表示する、セキュリティの構成と分析スナップインを Microsoft 管理コンソール (MMC) を使用しています。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ログ ファイルのパスを指定しない場合、既定のログ ファイル (*systemroot*\Users \*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) を使用します。
 

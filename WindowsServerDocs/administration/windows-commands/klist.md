@@ -1,25 +1,25 @@
 ---
 title: klist
 description: Klist コマンドの参照記事。現在キャッシュされている Kerberos チケットの一覧を表示します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4689b4a9-1740-47dd-9240-02105efca428
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2e37946106d7c47f058fd42b9926e388ab830e47
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: d5284feae5da9c8c7fcdab90dd34ce7855128d5f
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888186"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037720"
 ---
 # <a name="klist"></a>klist
 
 現在キャッシュされている Kerberos チケットの一覧を表示します。
 
 > [!IMPORTANT]
-> このコマンドのすべてのパラメーターを実行するには、少なくとも1つの**ドメイン管理者**またはそれと同等の権限を持っている必要があります。
+> このコマンドのすべてのパラメーターを実行するには、少なくとも1つの **ドメイン管理者**またはそれと同等の権限を持っている必要があります。
 
 ## <a name="syntax"></a>構文
 
@@ -45,13 +45,13 @@ klist [-lh <logonID.highpart>] [-li <logonID.lowpart>] tickets | tgt | purge | s
 | kdcoptions | RFC 4120 で指定されているキー配布センター (KDC) オプションを表示します。 |
 | /? | このコマンドのヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-- パラメーターが指定されていない場合、 **klist**は、現在ログオンしているユーザーのすべてのチケットを取得します。
+- パラメーターが指定されていない場合、 **klist** は、現在ログオンしているユーザーのすべてのチケットを取得します。
 
 - パラメーターには、次の情報が表示されます。
 
-  - **チケット**-ログオン後に認証したサービスの現在のキャッシュチケットが一覧表示されます。 キャッシュされたすべてのチケットの次の属性を表示します。
+  - **チケット** -ログオン後に認証したサービスの現在のキャッシュチケットが一覧表示されます。 キャッシュされたすべてのチケットの次の属性を表示します。
 
     - **LogonID:** LUID。
 

@@ -1,22 +1,22 @@
 ---
 title: chcp
 description: アクティブなコンソールのコードページを変更する chcp コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: dc7b1c71-7b80-443d-9cf1-9bcf305aa1fd
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 21dcdc1e663656439bece576287877653d0dcd8c
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 8e725bb3220546864642b2e6a39ddcc0163b1b98
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892812"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89031090"
 ---
 # <a name="chcp"></a>chcp
 
-アクティブなコンソールのコードページを変更します。 パラメーターを指定せずに使用した場合、 **chcp**には、アクティブなコンソールコードページの数が表示されます。
+アクティブなコンソールのコードページを変更します。 パラメーターを指定せずに使用した場合、 **chcp** には、アクティブなコンソールコードページの数が表示されます。
 
 ## <a name="syntax"></a>構文
 
@@ -40,15 +40,15 @@ chcp [<nnn>]
 | 852 | スラブ語 (ラテン II) |
 | 855 | キリル語 (ロシア) |
 | 857 | トルコ語 |
-| 860 | Portuguese |
+| 860 | ポルトガル語 |
 | 861 | アイスランド語 |
 | 863 | カナダ-フランス語 |
 | 865 | 北欧 |
 | 866 | ロシア語 |
 | 869 | モダンギリシャ語 |
-| 936 | Chinese |
+| 936 | 中国語 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - Windows と共にインストールされる相手先ブランド供給 (OEM) コードページのみが、ラスターフォントを使用するコマンドプロンプトウィンドウに正しく表示されます。 他のコードページは、全画面表示モードまたは TrueType フォントを使用するコマンドプロンプトウィンドウで正しく表示されます。
 
@@ -64,7 +64,7 @@ chcp [<nnn>]
 chcp
 ```
 
-次のようなメッセージが表示されます。`Active code page: 437`
+次のようなメッセージが表示されます。 `Active code page: 437`
 
 アクティブなコードページを 850 (多言語) に変更するには、次のように入力します。
 
@@ -72,7 +72,7 @@ chcp
 chcp 850
 ```
 
-指定したコードページが無効な場合は、次のエラーメッセージが表示されます。`Invalid code page`
+指定したコードページが無効な場合は、次のエラーメッセージが表示されます。 `Invalid code page`
 
 ## <a name="additional-references"></a>その他の参照情報
 

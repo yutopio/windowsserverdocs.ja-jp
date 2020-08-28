@@ -1,18 +1,18 @@
 ---
 title: ksetup addenctypeattr
 description: Ksetup addenctypeattr コマンドの参照記事。このコマンドにより、暗号化の種類の属性がドメインの使用可能な種類の一覧に追加されます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 32cc87d7-b9e1-4d14-9eb7-3b439c55aa3a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d1520451b7802c5e7cdd308cf40e61de356d3fab
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 8a49780a7a229c1c30d827632b1a6d71584f09c6
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888149"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037710"
 ---
 # <a name="ksetup-addenctypeattr"></a>ksetup addenctypeattr
 
@@ -31,7 +31,7 @@ ksetup /addenctypeattr <domainname> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 | 
 | `<domainname>` | 接続を確立するドメインの名前。 完全修飾ドメイン名、または名前の単純な形式 (corp.contoso.com や contoso など) を使用します。 |
 | 暗号化の種類 | は、次のサポートされている暗号化の種類のいずれかである必要があります。<ul><li>DES-CBC-CRC</li><li>DES-CBC-MD5</li><li>RC4-HMAC-MD5</li><li>AES128---SHA1-96</li><li>AES256---SHA1-96</li></ul> |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - コマンド内の暗号化の種類をスペースで区切って、複数の暗号化の種類を設定または追加できます。 ただし、一度に1つのドメインに対してのみ実行できます。
 
@@ -49,7 +49,7 @@ klist
 ksetup /domain corp.contoso.com
 ```
 
-暗号化の種類として*AES-256-* *corp.contoso.com*-96-96 を追加するには、次のように入力します。
+暗号化の種類として *AES-256-* *corp.contoso.com*-96-96 を追加するには、次のように入力します。
 
 ```
 ksetup /addenctypeattr corp.contoso.com AES-256-CTS-HMAC-SHA1-96

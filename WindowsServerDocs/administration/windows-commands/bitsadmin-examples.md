@@ -1,18 +1,18 @@
 ---
 title: bitsadmin の例
 description: Bitsadmin ツールを使用して最も一般的なタスクを実行する方法を示す例。
-ms.topic: article
+ms.topic: reference
 ms.assetid: cb8f8374-ba6e-4a68-85a1-9a95b8215354
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cf827ebc96c2caf114a9605482a33636689dc25
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: e1fcf545efee765b5130c616ddee53b25f03d0d3
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87894587"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89030490"
 ---
 # <a name="bitsadmin-examples"></a>bitsadmin の例
 
@@ -36,7 +36,7 @@ bitsadmin /create myDownloadJob
 
 BITSAdmin は、ジョブを一意に識別する GUID を返します。 その後の呼び出しでは、GUID またはジョブ名を使用します。 次のテキストはサンプル出力です。
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 `created job {C775D194-090F-431F-B5FB-8334D00D1CB6}`
 
@@ -48,7 +48,7 @@ BITSAdmin は、ジョブを一意に識別する GUID を返します。 その
 bitsadmin /addfile myDownloadJob https://downloadsrv/10mb.zip c:\\10mb.zip
 ```
 
-追加するファイルごとにこの呼び出しを繰り返します。 複数のジョブが*Mydownloadjob*を名前として使用している場合は、ジョブの GUID を使用して、ジョブの完了を一意に識別する必要があります。
+追加するファイルごとにこの呼び出しを繰り返します。 複数のジョブが *Mydownloadjob* を名前として使用している場合は、ジョブの GUID を使用して、ジョブの完了を一意に識別する必要があります。
 
 ## <a name="activate-the-download-job"></a>ダウンロードジョブのアクティブ化
 
@@ -58,11 +58,11 @@ bitsadmin /addfile myDownloadJob https://downloadsrv/10mb.zip c:\\10mb.zip
 bitsadmin /resume myDownloadJob
 ```
 
-複数のジョブが*Mydownloadjob*を名前として使用している場合は、ジョブの GUID を使用して、ジョブの完了を一意に識別する必要があります。
+複数のジョブが *Mydownloadjob* を名前として使用している場合は、ジョブの GUID を使用して、ジョブの完了を一意に識別する必要があります。
 
 ## <a name="determine-the-progress-of-the-download-job"></a>ダウンロードジョブの進行状況を確認する
 
-**/Info**スイッチは、ジョブの状態と転送されたファイルの数とバイト数を返します。 状態がと表示されている場合は、BITS によって `TRANSFERRED` ジョブ内のすべてのファイルが正常に転送されたことを意味します。 また、 **/verbose**引数を追加してジョブの完全な詳細情報を取得し、 **/list**または **/monitor**を追加して、転送キュー内のすべてのジョブを取得することもできます。
+**/Info**スイッチは、ジョブの状態と転送されたファイルの数とバイト数を返します。 状態がと表示されている場合は、BITS によって `TRANSFERRED` ジョブ内のすべてのファイルが正常に転送されたことを意味します。 また、 **/verbose** 引数を追加してジョブの完全な詳細情報を取得し、 **/list** または **/monitor** を追加して、転送キュー内のすべてのジョブを取得することもできます。
 
 ジョブの状態を取得するには、次のようにします。
 
@@ -70,7 +70,7 @@ bitsadmin /resume myDownloadJob
 bitsadmin /info myDownloadJob /verbose
 ```
 
-複数のジョブが*Mydownloadjob*を名前として使用している場合は、ジョブの GUID を使用して、ジョブの完了を一意に識別する必要があります。
+複数のジョブが *Mydownloadjob* を名前として使用している場合は、ジョブの GUID を使用して、ジョブの完了を一意に識別する必要があります。
 
 ## <a name="complete-the-download-job"></a>ダウンロードジョブの完了
 
@@ -80,7 +80,7 @@ bitsadmin /info myDownloadJob /verbose
 bitsadmin /complete myDownloadJob
 ```
 
-このスイッチは、 `/complete` ジョブ内のファイルが使用可能になる前に実行する必要があります。 複数のジョブが*Mydownloadjob*を名前として使用している場合は、ジョブの GUID を使用して、ジョブの完了を一意に識別する必要があります。
+このスイッチは、 `/complete` ジョブ内のファイルが使用可能になる前に実行する必要があります。 複数のジョブが *Mydownloadjob* を名前として使用している場合は、ジョブの GUID を使用して、ジョブの完了を一意に識別する必要があります。
 
 ## <a name="monitor-jobs-in-the-transfer-queue-using-the-list-switch"></a>/List スイッチを使用して転送キュー内のジョブを監視する
 
@@ -90,7 +90,7 @@ bitsadmin /complete myDownloadJob
 bitsadmin /list
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```
 {6AF46E48-41D3-453F-B7AF-A694BBC823F7} job1 SUSPENDED 0 / 0 0 / 0
@@ -110,7 +110,7 @@ bitsadmin /monitor
 > [!NOTE]
 > 更新を停止するには、CTRL + C キーを押します。
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```
 MONITORING BACKGROUND COPY MANAGER(5 second refresh)
@@ -127,7 +127,7 @@ MONITORING BACKGROUND COPY MANAGER(5 second refresh)
 bitsadmin /info
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```
 GUID: {482FCAF0-74BF-469B-8929-5CCD028C9499} DISPLAY: myDownloadJob
@@ -156,7 +156,7 @@ NOTIFICATION COMMAND LINE: none
 bitsadmin /reset
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```
 {DC61A20C-44AB-4768-B175-8000D02545B9} canceled.

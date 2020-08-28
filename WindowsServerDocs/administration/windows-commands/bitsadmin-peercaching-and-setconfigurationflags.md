@@ -1,18 +1,18 @@
 ---
 title: bitsadmin peercaching および setconfigurationflags
 description: Bitsadmin のピアリングと setconfigurationflags コマンドのリファレンス記事。コンピューターがコンテンツをピアに提供できるかどうか、およびピアからコンテンツをダウンロードできるかどうかを決定する構成フラグを設定します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: ff0a2b49-66e3-4d40-824c-6a3816055d2e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6ed6f638766378a24bc06c488cb90703d05f9c05
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 0027fa5c926f09b95541906f168e852292b19aaf
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87893590"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89026526"
 ---
 # <a name="bitsadmin-peercaching-and-setconfigurationflags"></a>bitsadmin peercaching および setconfigurationflags
 

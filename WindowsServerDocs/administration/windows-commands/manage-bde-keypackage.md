@@ -1,18 +1,18 @@
 ---
 title: manage-bde keypackage
 description: ドライブのキーパッケージを生成する manage-bde keypackage コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: c631ef10-2a2f-4541-8578-292f2d4e9e80
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 969b9fc85959d137ec8b6bfc6b377f48e02e5157
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: c0a5e812b47990fce1544d36815ca47b89db7c48
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886873"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037680"
 ---
 # <a name="manage-bde-keypackage"></a>manage-bde keypackage
 
@@ -29,9 +29,9 @@ manage-bde -keypackage [<drive>] [-ID <keyprotectoryID>] [-path <pathtoexternalk
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `<drive>` | コロンの後にドライブ文字を表します。 |
-| -ID | キープロテクターと、この ID 値で指定した識別子を使用して、キーパッケージを作成します。 **ヒント:** キーパッケージを作成するドライブ文字と共に**manage-bde – protectors – get**コマンドを使用して、ID 値として使用する使用可能な guid の一覧を取得します。 |
+| -ID | キープロテクターと、この ID 値で指定した識別子を使用して、キーパッケージを作成します。 **ヒント:** キーパッケージを作成するドライブ文字と共に **manage-bde – protectors – get** コマンドを使用して、ID 値として使用する使用可能な guid の一覧を取得します。 |
 | -path | 作成したキーパッケージを保存する場所を指定します。 |
-| -computername | manage-bde.exe が別のコンピューターの BitLocker 保護を変更するために使用されることを指定します。 また、このコマンドの省略版として **-cn**を使用することもできます。 |
+| -computername | manage-bde.exe が別のコンピューターの BitLocker 保護を変更するために使用されることを指定します。 また、このコマンドの省略版として **-cn** を使用することもできます。 |
 | `<name>` | BitLocker による保護を変更するコンピューターの名前を表します。 指定できる値には、コンピューターの NetBIOS 名とコンピューターの IP アドレスが含まれます。 |
 | -? または /? | コマンドプロンプトで簡単なヘルプを表示します。 |
 | -help または-h | 表示は、コマンド プロンプトでヘルプを完了します。 |

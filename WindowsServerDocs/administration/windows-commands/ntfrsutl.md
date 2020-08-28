@@ -1,18 +1,18 @@
 ---
 title: ntfrsutl
 description: Ntfrsutl コマンドの参照記事。これにより、NT ファイルレプリケーションサービス (NTFRS) の内部テーブル、スレッド、およびメモリ情報がダンプされます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: d7721a19-5a87-4ab6-b816-65d2da2c811f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2676e4cc4d920d766f9cc122f127d3d5e8c9548a
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 6fdbb82322e2aaa130d396b4917f01e7b4391a31
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87885293"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037260"
 ---
 # <a name="ntfrsutl"></a>ntfrsutl
 
@@ -46,7 +46,7 @@ ntfrsutl poll[/quickly[=[<n>]]][/slowly[=[<n>]]][/now][<computer>]
 | ds | NTFRS サービスの DS のビューを一覧表示します。 |
 | セット | アクティブなレプリカセットを指定します。 |
 | version | API と NTFRS サービスのバージョンを指定します。 |
-| 投票 | 現在のポーリング間隔を指定します。<ul><li>`/quickly`-安定した構成を取得するまで迅速にポーリングします。</li><li>`/quickly=`-既定の分単位の間隔でポーリングを迅速に行います。</li><li>`/quickly=<n>`- *N*分ごとにポーリングを迅速に行います。</li><li>`/slowly`-安定した構成を取得するまで、ポーリング速度が低下します。</li><li>`/slowly=`-既定の分数 (分単位) ごとにポーリングが遅くなります。</li><li>`/slowly=<n>`- *N*分ごとにポーリングが遅くなります。</li><li>`/now`-今すぐポーリング。</li></ul>|
+| 投票 | 現在のポーリング間隔を指定します。<ul><li>`/quickly` -安定した構成を取得するまで迅速にポーリングします。</li><li>`/quickly=` -既定の分単位の間隔でポーリングを迅速に行います。</li><li>`/quickly=<n>` - *N* 分ごとにポーリングを迅速に行います。</li><li>`/slowly` -安定した構成を取得するまで、ポーリング速度が低下します。</li><li>`/slowly=` -既定の分数 (分単位) ごとにポーリングが遅くなります。</li><li>`/slowly=<n>` - *N* 分ごとにポーリングが遅くなります。</li><li>`/now` -今すぐポーリング。</li></ul>|
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
 ### <a name="examples"></a>例
