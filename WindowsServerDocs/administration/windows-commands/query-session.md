@@ -1,18 +1,18 @@
 ---
 title: query session
 description: クエリセッションコマンドの参照記事。リモートデスクトップセッションホストサーバー上のセッションに関する情報を表示します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: abc0ace8-0b74-4b6e-a937-a78bb4b61a1f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4ef51631c497b72de4a8fbf5073c5a2c376a668e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 55f0269c57b70944befa4483cdeab96ec89b2bd9
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884426"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038410"
 ---
 # <a name="query-session"></a>query session
 
@@ -43,11 +43,11 @@ query session [<sessionname> | <username> | <sessionID>] [/server:<servername>] 
 | /counter | 作成、切断、再接続されたセッションの合計数など、現在のカウンター情報が表示されます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - ユーザーは、ユーザーが現在ログオンしているセッションに対していつでもクエリを実行できます。 他のセッションを照会するには、ユーザーに特別なアクセス許可が必要です。
 
-- <*username*> *、<sessions*>、または*sessionID*パラメーターを使用してセッションを指定しない場合、このクエリでは、システム内のすべてのアクティブなセッションに関する情報が表示されます。
+- <*username*> *、<sessions*>、または *sessionID* パラメーターを使用してセッションを指定しない場合、このクエリでは、システム内のすべてのアクティブなセッションに関する情報が表示されます。
 
 - **クエリセッション**で情報が返されると、 `(>)` 現在のセッションの前に不等号が表示されます。 以下に例を示します。
 
@@ -63,11 +63,11 @@ query session [<sessionname> | <username> | <sessionID>] [/server:<servername>] 
 
     条件:
   - [セッション名は、セッションに割り当てられた名前**を指定し**ます。
-  - **USERNAME**は、セッションに接続されているユーザーのユーザー名を示します。
-  - **State**は、セッションの現在の状態に関する情報を提供します。
-  - **種類**は、セッションの種類を示します。
+  - **USERNAME** は、セッションに接続されているユーザーのユーザー名を示します。
+  - **State** は、セッションの現在の状態に関する情報を提供します。
+  - **種類** は、セッションの種類を示します。
   - コンソールまたはネットワークに接続されたセッションには存在しない**デバイス**は、セッションに割り当てられているデバイス名です。
-  - 初期状態が無効として構成されているセッションは、有効になるまで**クエリセッション**の一覧に表示されません。
+  - 初期状態が無効として構成されているセッションは、有効になるまで **クエリセッション** の一覧に表示されません。
 
 ### <a name="examples"></a>例
 
@@ -77,7 +77,7 @@ query session [<sessionname> | <username> | <sessionID>] [/server:<servername>] 
 query session /server:Server2
 ```
 
-アクティブなセッションの*modeM02*に関する情報を表示するには、次のように入力します。
+アクティブなセッションの *modeM02*に関する情報を表示するには、次のように入力します。
 
 ```
 query session modeM02

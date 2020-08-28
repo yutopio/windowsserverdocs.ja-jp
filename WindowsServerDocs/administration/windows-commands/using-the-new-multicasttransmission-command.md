@@ -1,24 +1,24 @@
 ---
 title: /Get-multicasttransmission
 description: /Get-multicasttransmission のリファレンス記事。イメージの新しいマルチキャスト転送を作成します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: c1f1dc46-dd50-4eb9-9f72-cf0e5d71bd3d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 77f25940a3316d715bced365e92ed0614c74ed33
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 30988ad23151f12533b75323f9376859a4c5d2a5
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896905"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038150"
 ---
 # <a name="new-multicasttransmission"></a>/Get-multicasttransmission
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-イメージのマルチキャスト転送を新しいを作成します。 このコマンドは、Windows 展開サービス mmc スナップインを使用して転送を作成することと同じです ([**マルチキャスト転送**] ノードを右クリックし、[**マルチキャスト転送**] をクリックします)。 展開サーバーの役割サービスと、トランスポート サーバー役割サービスがインストールされる既定のインストール) の両方がある場合は、このコマンドを使用する必要があります。 トランスポート サーバーの役割サービスのみがインストールされていれば、使用 [新しい名前空間のコマンドを使用して](using-the-new-namespace-command.md)します。
+イメージのマルチキャスト転送を新しいを作成します。 このコマンドは、Windows 展開サービス mmc スナップインを使用して転送を作成することと同じです ([ **マルチキャスト転送** ] ノードを右クリックし、[ **マルチキャスト転送**] をクリックします)。 展開サーバーの役割サービスと、トランスポート サーバー役割サービスがインストールされる既定のインストール) の両方がある場合は、このコマンドを使用する必要があります。 トランスポート サーバーの役割サービスのみがインストールされていれば、使用 [新しい名前空間のコマンドを使用して](using-the-new-namespace-command.md)します。
 ## <a name="syntax"></a>構文
 インストールイメージの転送:
 ```

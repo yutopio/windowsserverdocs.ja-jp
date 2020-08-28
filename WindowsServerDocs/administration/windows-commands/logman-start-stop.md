@@ -1,18 +1,18 @@
 ---
 title: logman start および logman stop
 description: Logman start および logman stop コマンドのリファレンス記事。データコレクターを起動し、開始時刻を手動に設定します。または、データコレクターセットを停止し、終了時刻を手動に設定します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: a40006a1-876e-474b-aaf1-f365c730deea
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7a3ce29afa974a65ac86e9e17dd4ec7eb65135fd
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 5b573ecd78ad9f062162d2c1ad16d59aebe740ee
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87887266"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038863"
 ---
 # <a name="logman-start-and-logman-stop"></a>logman start および logman stop
 
@@ -32,8 +32,8 @@ logman stop <[-n] <name>> [options]
 | パラメーター | 説明 |
 | --------- | ----------- |
 | -s `<computer name>` | 指定したリモートコンピューターでコマンドを実行します。 |
-| -config`<value>` | コマンドオプションを含む設定ファイルを指定します。 |
-| [-n]`<name>` | ターゲットオブジェクトの名前を指定します。 |
+| -config `<value>` | コマンドオプションを含む設定ファイルを指定します。 |
+| [-n] `<name>` | ターゲットオブジェクトの名前を指定します。 |
 | -/ | イベントトレースセッションに直接コマンドを送信します。保存もスケジュールもされません。 |
 | -as | 要求された操作を非同期的に実行します。 |
 | -? | 状況依存のヘルプを表示します。 |

@@ -1,18 +1,18 @@
 ---
 title: nslookup server
 description: Nslookup サーバーコマンドの参照記事。既定のサーバーを指定したドメインネームシステム (DNS) ドメインに変更します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 608267f8-f7b4-412a-8dcd-e08b5ffc2085
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: eacb1807810627956fcf75455e861d3ac381cf13
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 32450197fe7d3c04258b7fb3f77f8e17cd1c113e
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87885784"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038763"
 ---
 # <a name="nslookup-server"></a>nslookup server
 
@@ -20,7 +20,7 @@ ms.locfileid: "87885784"
 
 指定したドメインネームシステム (DNS) ドメインに既定のサーバーを変更します。
 
-このコマンドは、現在の既定のサーバーを使用して、指定された DSN ドメインに関する情報を検索します。 最初のサーバーを使用して情報を参照する場合は、 [nslookup lserver](nslookup-lserver.md)コマンドを使用します。
+このコマンドは、現在の既定のサーバーを使用して、指定された DSN ドメインに関する情報を検索します。 最初のサーバーを使用して情報を参照する場合は、 [nslookup lserver](nslookup-lserver.md) コマンドを使用します。
 
 ## <a name="syntax"></a>構文
 

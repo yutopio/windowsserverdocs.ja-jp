@@ -1,18 +1,18 @@
 ---
 title: PowerShell_ise
 description: Windows PowerShell Integrated Scripting Environment (ISE) セッションを開始する PowerShell_ise コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 32c41b5b-a210-47d9-bd8c-91eb9830b4f0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f82779d122d3fedf3dac7ecf51b6da0601373421
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ec82a8ca484e8392339be9489990da4e633da475
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884869"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89032469"
 ---
 # <a name="powershell_ise"></a>PowerShell_ise
 
@@ -22,7 +22,7 @@ Windows PowerShell Integrated Scripting Environment (ISE) は、読み取り、�
 
 **PowerShell_ISE.exe** ツールは Windows PowerShell ISE セッションを開始します。 使用すると **PowerShell_ISE.exe**, 、Windows PowerShell ISE でファイルを開くか、プロファイルなしで、またはマルチ スレッド アパートメントで Windows PowerShell ISE のセッションを開始する、省略可能パラメーターを使用することができます。
 
-- コマンドプロンプトウィンドウ、Windows PowerShell、または [**スタート**] メニューで Windows PowerShell ISE セッションを開始するには、次のように入力します。
+- コマンドプロンプトウィンドウ、Windows PowerShell、または [ **スタート** ] メニューで Windows PowerShell ISE セッションを開始するには、次のように入力します。
 
   ```powershell
   PowerShell_Ise.exe
@@ -40,7 +40,7 @@ Windows PowerShell Integrated Scripting Environment (ISE) は、読み取り、�
   PowerShell_Ise.exe -file <filepath>
   ```
 
-- Windows PowerShell プロファイルいない Windows PowerShell ISE のセッションを開始するには、使用、 **NoProfile** パラメーター。 ( **Noprofile**パラメーターは Windows PowerShell 3.0 で導入されました)。次のように入力します。
+- Windows PowerShell プロファイルいない Windows PowerShell ISE のセッションを開始するには、使用、 **NoProfile** パラメーター。 ( **Noprofile** パラメーターは Windows PowerShell 3.0 で導入されました)。次のように入力します。
 
   ```powershell
   PowerShell_Ise.exe -NoProfile
@@ -54,7 +54,7 @@ Windows PowerShell Integrated Scripting Environment (ISE) は、読み取り、�
     PowerShell_Ise.exe /?
     ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 - **PowerShell_ISE.exe**のコマンドラインパラメーターの完全な一覧については、「 [about_PowerShell_Ise.Exe](/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe)」を参照してください。
 

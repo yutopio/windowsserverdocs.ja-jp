@@ -1,24 +1,24 @@
 ---
 title: AutoaddDevices を拒否する
 description: 管理者の承認が保留されているコンピューターを拒否する [自動追加デバイスを拒否する] の参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: ea25a4b2-5fad-4360-9c47-c2c9df7ea31f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7b6b134b89040982325d55822583475fe91044cd
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 636e7db0338e77b4cbe041ea3b69fdfe6dfb5af7
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896351"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038130"
 ---
 # <a name="reject-autoadddevices"></a>AutoaddDevices を拒否する
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-管理者の承認が保留中のコンピューターを拒否します。 自動追加ポリシーを有効にすると、不明なコンピューター (事前登録されていないコンピューター) がイメージをインストールする前に、管理者の承認が必要になります。 このポリシーを有効にするには、[サーバーのプロパティ] ページの [ **PXE 応答**] タブを使用します。
+管理者の承認が保留中のコンピューターを拒否します。 自動追加ポリシーを有効にすると、不明なコンピューター (事前登録されていないコンピューター) がイメージをインストールする前に、管理者の承認が必要になります。 このポリシーを有効にするには、[サーバーのプロパティ] ページの [ **PXE 応答** ] タブを使用します。
 ## <a name="syntax"></a>構文
 ```
 wdsutil [Options] /Reject-AutoaddDevices [/Server:<Server name>] /RequestId:<Request ID or ALL>

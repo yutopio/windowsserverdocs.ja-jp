@@ -1,18 +1,18 @@
 ---
 title: cscript
 description: Cscript コマンドのリファレンス記事。コマンドライン環境で実行されるようにスクリプトを開始します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: fba3cbca-594e-4663-bb22-4ee0f63a1ac6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3f6e27cae1531e0c10e8721d7f7fe11487406e35
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 6b5c711d59f69267f8e2de51f34cb1c450e95fab
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87891534"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033030"
 ---
 # <a name="cscript"></a>cscript
 
@@ -40,17 +40,17 @@ cscript <scriptname.extension> [/b] [/d] [/e:<engine>] [{/h:cscript | /h:wscript
 | /h: cscript | スクリプトを実行するための既定のスクリプトホストとして cscript.exe を登録します。 |
 | /h: wscript | スクリプトを実行するための既定のスクリプトホストとして wscript.exe を登録します。 既定値です。 |
 | /i | アラート、スクリプトエラー、および入力プロンプトを表示する対話モードを指定します。 これは既定値であり、の逆 `/b` です。 |
-| /ジョブ (<identifier> | Wsf スクリプトファイル内の*識別子*によって識別されるジョブを実行します。 |
+| /ジョブ (<identifier> | Wsf スクリプトファイル内の *識別子* によって識別されるジョブを実行します。 |
 | /ロゴ | スクリプトを実行する前に、Windows スクリプトホストバナーをコンソールに表示することを指定します。 これは既定値であり、の逆 `/nologo` です。 |
 | /nologo | スクリプトを実行する前に、Windows スクリプトホストバナーを表示しないように指定します。 |
 | /s | 現在のユーザーの現在のコマンドプロンプトオプションを保存します。 |
 | /t: <seconds> | スクリプトを実行できる最長時間を秒単位で指定します。 最大32767秒を指定できます。 既定では、時間制限はありません。 |
 | /U | コンソールからリダイレクトされる入力と出力の Unicode を指定します。 |
 | /x | デバッガーでスクリプトを開始します。 |
-| /? | 使用可能なコマンドパラメーターを表示し、それらを使用するためのヘルプを提供します。 これは、パラメーターを指定せずに**cscript.exe**を入力する場合と同じですが、スクリプトはありません。 |
+| /? | 使用可能なコマンドパラメーターを表示し、それらを使用するためのヘルプを提供します。 これは、パラメーターを指定せずに **cscript.exe** を入力する場合と同じですが、スクリプトはありません。 |
 | scriptarguments | スクリプトに渡される引数を指定します。 各スクリプト引数の前にはスラッシュ () を付ける必要があり **/** ます。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - 各パラメーターは省略可能です。ただし、スクリプトを指定せずにスクリプトの引数を指定することはできません。 スクリプトまたはスクリプトの引数を指定しない場合は、cscript.exe の構文と有効なホストオプションが cscript.exe 表示されます。
 
@@ -58,7 +58,7 @@ cscript <scriptname.extension> [/b] [/d] [/e:<engine>] [{/h:cscript | /h:wscript
 
 - Windows スクリプトファイルは、通常、次のファイル名拡張子のいずれかになります。 wsf、.vbs、.js。 Windows スクリプトホストでは、wsf スクリプトファイルを使用できます。 各 wsf ファイルは、複数のスクリプトエンジンを使用して複数のジョブを実行できます。
 
-- 拡張子が関連付けられていないスクリプトファイルをダブルクリックすると、[**ファイルを開くアプリケーション**の選択] ダイアログボックスが表示されます。 [Wscript] または [cscript] を選択し、[この**ファイルの種類を開くには常にこのプログラムを使用する**] を選択します。 これにより、このファイルの種類のファイルの既定のスクリプトホストとして wscript.exe または cscript が登録されます。
+- 拡張子が関連付けられていないスクリプトファイルをダブルクリックすると、[ **ファイルを開くアプリケーション** の選択] ダイアログボックスが表示されます。 [Wscript] または [cscript] を選択し、[この **ファイルの種類を開くには常にこのプログラムを使用する**] を選択します。 これにより、このファイルの種類のファイルの既定のスクリプトホストとして wscript.exe または cscript が登録されます。
 
 ## <a name="additional-references"></a>その他の参照情報
 

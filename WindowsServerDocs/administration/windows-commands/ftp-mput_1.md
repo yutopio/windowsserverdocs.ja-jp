@@ -1,18 +1,18 @@
 ---
 title: ftp mput
 description: Ftp mput コマンドの参照記事。現在のファイル転送の種類を使用してローカルファイルをリモートコンピューターにコピーします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 980f15e7-7cf1-4813-9946-a8cc4edfb198
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d2caf7e91341f470fc265d0d1dbf6a51b6fe99bb
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: f9b90cc6454e64e74684a44f3d69149886c6778a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889233"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89032850"
 ---
 # <a name="ftp-mput"></a>ftp mput
 
@@ -34,7 +34,7 @@ mput <localfile>[ ]
 
 ### <a name="examples"></a>例
 
-現在のファイル転送の種類を使用して*Program1.exe*および*Program2.exe*をリモートコンピューターにコピーするには、次のように入力します。
+現在のファイル転送の種類を使用して *Program1.exe* および *Program2.exe* をリモートコンピューターにコピーするには、次のように入力します。
 
 ```
 mput Program1.exe Program2.exe

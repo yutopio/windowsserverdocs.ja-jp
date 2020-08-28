@@ -1,18 +1,18 @@
 ---
 title: prompt
 description: プロンプトコマンドの参照記事。 Cmd.exe コマンドプロンプトをカスタマイズします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 3d98e965-02eb-46ad-9d0a-5dc44830373e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: df849e70da973276360da6e81390466f0484f4b5
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: b674f219147471c872f5fa8db0d266e3f664c302
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884625"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89032411"
 ---
 # <a name="prompt"></a>prompt
 
@@ -31,7 +31,7 @@ prompt [<text>]
 | `<text>` | テキストと、コマンド プロンプトに追加する情報を指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - *Text*パラメーター内の1つ以上の文字列の代わりに、またはその他に含めることができる文字の組み合わせ。
 
@@ -46,7 +46,7 @@ prompt [<text>]
     | $n | 現在のドライブ |
     | $g | > (符号より大きい) |
     | $l | < (符号未満) |
-    | $b | `|`(パイプ記号) |
+    | $b | `|` (パイプ記号) |
     | $_ | 改行を入力してください。 |
     | $e | ANSI エスケープ コード (コード 27) |
     | $h | バック スペース (がコマンドラインに書き込まれた文字を削除) する |
@@ -55,7 +55,7 @@ prompt [<text>]
     | $f | ) (右かっこ) |
     | $s | Space |
 
-- コマンド拡張機能が有効になっている場合、 **prompt**コマンドでは次の書式設定文字がサポートされます。
+- コマンド拡張機能が有効になっている場合、 **prompt** コマンドでは次の書式設定文字がサポートされます。
 
     | 文字 | 説明 |
     |--|--|

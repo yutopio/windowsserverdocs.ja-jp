@@ -1,18 +1,18 @@
 ---
 title: bitsadmin util および enableanalyticchannel
 description: BITS クライアント分析チャネルを有効または無効にする bitsadmin util および enableanalytics のチャネルコマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0d7645aa-b91b-4ed7-b630-a1e1be6f6ae9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2c4577f635444c1830e232e1baeb12fac8c75476
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: b4b6dd18fada99d63fcea7e3ca7338567fcb3894
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880958"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033340"
 ---
 # <a name="bitsadmin-util-and-enableanalyticchannel"></a>bitsadmin util および enableanalyticchannel
 
@@ -26,7 +26,7 @@ bitsadmin /util /enableanalyticchannel TRUE|FALSE
 
 | パラメーター | 説明 |
 | --------- | ---------- |
-| TRUE または FALSE | **TRUE**を指定すると、指定したファイルのコンテンツの検証が有効になり、 **FALSE**の場合は無効になります。 |
+| TRUE または FALSE | **TRUE** を指定すると、指定したファイルのコンテンツの検証が有効になり、 **FALSE** の場合は無効になります。 |
 
 ## <a name="examples"></a>例
 

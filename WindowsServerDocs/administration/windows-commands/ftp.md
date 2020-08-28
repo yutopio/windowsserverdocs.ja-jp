@@ -1,18 +1,18 @@
 ---
 title: ftp
 description: Ftp コマンドのリファレンス記事です。このコマンドは、ファイル転送プロトコル (ftp) サーバーサービスを実行しているコンピューターとの間でファイルを転送します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 758335e1-fd8d-448c-a654-993126239dd9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 369a41cf6ad803a4fce939da58228997410cf177
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 9f5cb70e6b42e390f8e279152e736b0226e74f9d
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888795"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038903"
 ---
 # <a name="ftp"></a>ftp
 
@@ -45,13 +45,13 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<filename>] [-a] [-A] [-x:<sendbuffer>] [-r:<re
 | `<host>` | 接続先の ftp サーバーのコンピューター名、IP アドレス、または IPv6 アドレスを指定します。 ホスト名またはアドレスを指定した場合は、行の最後のパラメーターになる可能性があります。 |
 | -? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - **Ftp**のコマンドラインパラメーターでは、大文字と小文字が区別されます。
 
 - このコマンドは、使用可能な場合にのみ、 **インターネット プロトコル (TCP/IP)** プロトコルはネットワーク接続のネットワーク アダプターのプロパティ内のコンポーネントとしてインストールします。
 
-- **Ftp**コマンドは対話形式で使用できます。 起動すると、 **ftp** により、使用することができますサブ環境 **ftp** コマンドです。 」と入力して、コマンド プロンプトに返すことができます、 **終了** コマンドです。 **Ftp**サブ環境が実行されている場合は、コマンドプロンプトによって示され `ftp >` ます。 詳細については、 **ftp**コマンドを参照してください。
+- **Ftp**コマンドは対話形式で使用できます。 起動すると、 **ftp** により、使用することができますサブ環境 **ftp** コマンドです。 」と入力して、コマンド プロンプトに返すことができます、 **終了** コマンドです。 **Ftp**サブ環境が実行されている場合は、コマンドプロンプトによって示され `ftp >` ます。 詳細については、 **ftp** コマンドを参照してください。
 
 - **Ftp**コマンドは、ipv6 プロトコルがインストールされている場合に ipv6 の使用をサポートします。
 

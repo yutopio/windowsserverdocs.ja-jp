@@ -5,14 +5,14 @@ manager: dmoss
 ms.author: toklima
 author: toklima
 ms.assetid: 77545920-2d13-4f35-a4d1-14dbec8340dc
-ms.topic: article
+ms.topic: reference
 ms.date: 10/16/2017
-ms.openlocfilehash: d79144d3894e9e181ebd889ce7bf281b827dea26
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 50b8fb1428de955b38d2f6e3a059046d7f670558
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889839"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033000"
 ---
 # <a name="fsutil-sparse"></a>fsutil sparse
 
@@ -39,11 +39,11 @@ fsutil sparse [setrange] <filename> <beginningoffset> <length>
 | queryrange | ファイルをスキャンし、0以外のデータを含む可能性のある範囲を検索します。 |
 | setflag | 指定されたファイルをスパースとしてマークします。 |
 | setrange | 指定されたファイルの範囲を0で塗りつぶします。 |
-| `<filename>` | ファイル名と拡張子を含むファイルへの完全パスを指定します (例*C:\documents\filename.txt*)。 |
+| `<filename>` | ファイル名と拡張子を含むファイルへの完全パスを指定します (例 *C:\documents\filename.txt*)。 |
 | `<beginningoffset>` | スパースとしてマークするファイル内のオフセットを指定します。 |
 | `<length>` | スパースとしてマークするファイル内の領域の長さを指定します (バイト単位)。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - 意味のある、または0以外のデータはすべて割り当てられますが、意味のないすべてのデータ (0 で構成される大きな文字列データ) は割り当てられません。
 

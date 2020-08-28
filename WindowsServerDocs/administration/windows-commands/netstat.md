@@ -1,18 +1,18 @@
 ---
 title: netstat
 description: Netstat コマンドの参照記事。アクティブな TCP 接続、コンピューターがリッスンしているポート、イーサネット統計、IP ルーティングテーブル、IPv4 統計情報、および IPv6 統計が表示されます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 60e2718f-93cc-4ceb-bf0e-58a6a6e4fc8b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9fe7fc15e86df884fb9610ba5d6e72ab52e2d129
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 4d68ec2e21c4248769973b3409896ba9d5bd15e5
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886018"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038803"
 ---
 # <a name="netstat"></a>netstat
 
@@ -38,13 +38,13 @@ netstat [-a] [-b] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<interval>]
 | -E | バイトと送受信されるパケットの数などのイーサネットの統計情報を表示します。 このパラメーターと組み合わせることができます **-s**します。 |
 | -n | アクティブな TCP 接続の表示、ただし、アドレスし [ポート番号が数値で表される、名前を決定する試行が行われません。 |
 | -o | アクティブな TCP 接続が表示され、接続ごとにプロセス ID (PID) が含まれています。 Windows タスク マネージャーで [プロセス] タブには、PID に基づくアプリケーションが表示されます。 このパラメーターと組み合わせることができます **-a**, 、**-n**, 、および **-p**します。 |
-| -p`<Protocol>` | によって指定されたプロトコルの接続を示します *プロトコル*します。 ここで、 *プロトコル* tcp、udp、tcpv6、または udpv6 できます。 このパラメーターを使用した場合 **-s** プロトコルで統計を表示する *プロトコル* は、tcp、udp、icmp、ip、tcpv6、udpv6、icmpv6、または ipv6 します。 |
+| -p `<Protocol>` | によって指定されたプロトコルの接続を示します *プロトコル*します。 ここで、 *プロトコル* tcp、udp、tcpv6、または udpv6 できます。 このパラメーターを使用した場合 **-s** プロトコルで統計を表示する *プロトコル* は、tcp、udp、icmp、ip、tcpv6、udpv6、icmpv6、または ipv6 します。 |
 | -S | プロトコルによって統計が表示されます。 既定では、TCP、UDP、ICMP、および IP プロトコルに対して統計値が表示されます。 IPv6 プロトコルがインストールされている場合統計値が表示 (TCP)、IPv6、UDP 経由で、IPv6、ICMPv6、IPv6 プロトコルです。 **-P** パラメーターは、一連のプロトコルの指定を使用することができます。 |
 | -r | IP ルーティング テーブルの内容を表示します。 これは、route print コマンドに相当します。 |
 | `<interval>` | *間隔*(秒単位) ごとに、選択した情報を再指定します。 再表示を停止するには、CTRL + C キーを押します。 このパラメーターを省略した場合、このコマンドは選択した情報を1回だけ印刷します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - **Netstat**コマンドは、次の統計情報を提供します。
 

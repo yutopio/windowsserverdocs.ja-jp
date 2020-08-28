@@ -1,18 +1,18 @@
 ---
 title: timeout
 description: タイムアウトの参照記事。指定された秒数のコマンドプロセッサを一時停止します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: e26b4a84-0e30-46e1-aa10-0667b7d3cb4c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 90ba2da52f97ee603ce7992e4df135c1284c4070
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 4905eaadc745fc5499cb393b1808794e2f803361
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87881399"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038260"
 ---
 # <a name="timeout"></a>timeout
 
@@ -30,11 +30,11 @@ timeout /t <TimeoutInSeconds> [/nobreak]
 
 |パラメーター|説明|
 |---------|-----------|
-|/t\<TimeoutInSeconds>|コマンド プロセッサが処理を続行する前に待機するには、10 進数 (-1 ~ 99999) 秒数を指定します。 値-1 は、キーストロークを無期限に待機するコンピューターです。|
+|/t \<TimeoutInSeconds>|コマンド プロセッサが処理を続行する前に待機するには、10 進数 (-1 ~ 99999) 秒数を指定します。 値-1 は、キーストロークを無期限に待機するコンピューターです。|
 |/nobreak|ユーザー キー ストロークを無視するように指定します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 -   **タイムアウト** コマンドは、通常、バッチ ファイルで使用します。
 -   ユーザーのキー入力は、タイムアウト期間の有効期限が切れていない場合でも、すぐに、コマンド プロセッサの実行を再開します。

@@ -1,18 +1,18 @@
 ---
 title: online disk
 description: オンラインディスクコマンドの参照記事。オフラインディスクがオンライン状態になります。
-ms.topic: article
+ms.topic: reference
 ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 81bfd2dfc8e32656602066d702e8c1af5f4d1c82
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 934e6bb1d7d5b52b00ac7eadea35e6f022906e5b
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87885240"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89032700"
 ---
 # <a name="online-disk"></a>online disk
 
@@ -34,7 +34,7 @@ online disk [noerr]
 
 ### <a name="parameters"></a>パラメーター
 
-このコマンドの使用方法について[は、「不足またはオフラインのダイナミックディスクを再アクティブ化する](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732026(v=ws.11))」を参照してください。
+このコマンドの使用方法について [は、「不足またはオフラインのダイナミックディスクを再アクティブ化する](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732026(v=ws.11))」を参照してください。
 
 | パラメーター | 説明 |
 |--|--|

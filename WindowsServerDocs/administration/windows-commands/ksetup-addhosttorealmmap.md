@@ -1,24 +1,24 @@
 ---
 title: ksetup addhosttorealmmap
 description: Ksetup addhost almmap コマンドの参照記事。このコマンドは、指定されたホストと領域の間にサービスプリンシパル名 (SPN) マッピングを追加します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 237742d5-fa68-466c-b97e-636f489248ea
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9722560a9ddebd01120dd60661ec895771ff9c6b
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 900bab0d86da82d8c81ca10f0f23fec9a44b198c
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888141"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038873"
 ---
 # <a name="ksetup-addhosttorealmmap"></a>ksetup addhosttorealmmap
 
 指定されたホストと領域の間に、サービスプリンシパル名 (SPN) マッピングを追加します。 このコマンドでは、同じ DNS サフィックスを共有しているホストまたは複数のホストを領域にマップすることもできます。
 
-マッピングは**HKEY_LOCAL_MACHINE \system\currentcontolset\lsa\kerberos\hosttorealm**の下のレジストリに格納されます。
+マッピングは **HKEY_LOCAL_MACHINE \system\currentcontolset\lsa\kerberos\hosttorealm**の下のレジストリに格納されます。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ ksetup /addhosttorealmmap <hostname> <realmname>
 
 ### <a name="examples"></a>例
 
-ホストコンピューター *IPops897*を*CONTOSO*領域にマップするには、次のように入力します。
+ホストコンピューター *IPops897* を *CONTOSO* 領域にマップするには、次のように入力します。
 
 ```
 ksetup /addhosttorealmmap IPops897 CONTOSO

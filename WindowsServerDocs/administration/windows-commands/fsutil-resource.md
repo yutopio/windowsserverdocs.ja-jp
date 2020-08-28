@@ -5,14 +5,14 @@ manager: dmoss
 ms.author: toklima
 author: toklima
 ms.assetid: b198d8ca-a5b7-430f-8911-5cbb9f50484c
-ms.topic: article
+ms.topic: reference
 ms.date: 10/16/2017
-ms.openlocfilehash: 85b52c1ad124ac47617948f1683038108214e2e3
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: a39bb99e570f09b57962d8b3d64ec783611ac04b
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889871"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033020"
 ---
 # <a name="fsutil-resource"></a>fsutil resource
 
@@ -53,14 +53,14 @@ fsutil resource [stop] <rmrootpathname>
 | setavailable | トランザクションリソースマネージャーが整合性よりも可用性を優先することを指定します。 |
 | setconsistent | トランザクションリソースマネージャーが可用性よりも一貫性を優先することを指定します。 |
 | growth | 既に実行されているトランザクションリソースマネージャーの特性を変更します。 |
-| 成長 | トランザクションリソースマネージャーのログを拡張できる量を指定します。<p>拡張パラメーターは次のように指定できます。<ul><li>形式を使用したコンテナーの数:`<containers> containers`</li><li>形式を使用したパーセンテージ。`<percent> percent`</li></ul> |
+| 成長 | トランザクションリソースマネージャーのログを拡張できる量を指定します。<p>拡張パラメーターは次のように指定できます。<ul><li>形式を使用したコンテナーの数: `<containers> containers`</li><li>形式を使用したパーセンテージ。 `<percent> percent`</li></ul> |
 | `<containers>` | トランザクションリソースマネージャーによって使用されるデータオブジェクトを指定します。 |
 | maxextent | 指定したトランザクションリソースマネージャーのコンテナーの最大数を指定します。 |
 | minextent | 指定されたトランザクションリソースマネージャーのコンテナーの最小数を指定します。 |
-| mode`{full|undo}` | すべてのトランザクションをログに記録するか (**完全**)、ロールバックされたイベントのみをログに記録するか (**元に戻す**) を指定します。 |
+| mode `{full|undo}` | すべてのトランザクションをログに記録するか ( **完全**)、ロールバックされたイベントのみをログに記録するか (**元に戻す**) を指定します。 |
 | rename | トランザクションリソースマネージャーの GUID を変更します。 |
 | shrink | トランザクションリソースマネージャーのログを自動的に減らすことができる割合を指定します。 |
-| size | 指定された*コンテナー*数として、トランザクションリソースマネージャーのサイズを指定します。 |
+| size | 指定された *コンテナー*数として、トランザクションリソースマネージャーのサイズを指定します。 |
 | start | 指定されたトランザクションリソースマネージャーを開始します。 |
 | stop | 指定されたトランザクションリソースマネージャーを停止します。 |
 

@@ -1,24 +1,24 @@
 ---
 title: bitsadmin transfer
 description: Bitsadmin transfer コマンドの参照記事。1つ以上のファイルを転送します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: fe302141-b33a-4a05-835e-dc4fc4db7d5a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 06496dffa417bb611700a9d6cec2262fd4d6e690
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 989c2ace5aa8cb0f123dec6f2ad490c1c8c778cd
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880977"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033350"
 ---
 # <a name="bitsadmin-transfer"></a>bitsadmin transfer
 
-1つ以上のファイルを転送します。 既定では、BITSAdmin サービスは、**通常**の優先順位で実行されるダウンロードジョブを作成し、転送が完了するか重大なエラーが発生するまで、進行状況の情報を使用してコマンドウィンドウを更新します。
+1つ以上のファイルを転送します。 既定では、BITSAdmin サービスは、 **通常** の優先順位で実行されるダウンロードジョブを作成し、転送が完了するか重大なエラーが発生するまで、進行状況の情報を使用してコマンドウィンドウを更新します。
 
-サービスは、すべてのファイルを正常に転送し、重大なエラーが発生した場合にジョブをキャンセルすると、ジョブを完了します。 ジョブにファイルを追加できない場合、または*種類*または*job_priority*に無効な値を指定した場合、サービスはジョブを作成しません。 複数のファイルを転送するには、複数のペアを指定し `<RemoteFileName>-<LocalFileName>` ます。 ペアはスペースで区切る必要があります。
+サービスは、すべてのファイルを正常に転送し、重大なエラーが発生した場合にジョブをキャンセルすると、ジョブを完了します。 ジョブにファイルを追加できない場合、または *種類* または *job_priority*に無効な値を指定した場合、サービスはジョブを作成しません。 複数のファイルを転送するには、複数のペアを指定し `<RemoteFileName>-<LocalFileName>` ます。 ペアはスペースで区切る必要があります。
 
 > [!NOTE]
 > 一時的なエラーが発生した場合、BITSAdmin コマンドは引き続き実行されます。 コマンドを終了するには、CTRL + C キーを押します。

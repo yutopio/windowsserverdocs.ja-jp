@@ -1,18 +1,18 @@
 ---
 title: create volume simple
 description: Create volume simple コマンドの参照記事。指定されたダイナミックディスクにシンプルボリュームを作成します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: da0f208d-7fda-471a-9db2-5de5ba5207c6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a434cc959eac79011cf57e2aca101ffc536b7633
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: e1eeca9aedfcd473d937017b5889c1f58880e10a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87891630"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89033120"
 ---
 # <a name="create-volume-simple"></a>create volume simple
 
@@ -32,7 +32,7 @@ create volume simple [size=<n>] [disk=<n>] [align=<n>] [noerr]
 | --------- | ----------- |
 | サイズ =`<n>`  | ボリュームのサイズ (MB 単位) です。 サイズを指定しないと、新しいボリュームはディスク上の残りの空き領域を占有します。 |
 | ディスク =`<n>`  | ボリュームが作成されるダイナミックディスク。 ディスクが指定されていない場合は、現在のディスクが使用されます。 |
-| align =`<n>` | すべてのボリュームエクステントを最も近い配置境界に配置します。 通常、パフォーマンスを向上させるために、ハードウェア RAID 論理ユニット番号 (LUN) アレイと共に使用します。 `<n>`ディスクの先頭から最も近いアラインメント境界までのキロバイト (KB) 数を指定します。 |
+| align =`<n>` | すべてのボリュームエクステントを最も近い配置境界に配置します。 通常、パフォーマンスを向上させるために、ハードウェア RAID 論理ユニット番号 (LUN) アレイと共に使用します。 `<n>` ディスクの先頭から最も近いアラインメント境界までのキロバイト (KB) 数を指定します。 |
 | noerr | スクリプト専用です。 エラーが発生しても、エラーが発生しなかったかのように DiskPart はコマンドの処理を続けます。 このパラメーターは、エラー発生すると、DiskPart はエラー コードを生成して終了します。 |
 
 ## <a name="examples"></a>例

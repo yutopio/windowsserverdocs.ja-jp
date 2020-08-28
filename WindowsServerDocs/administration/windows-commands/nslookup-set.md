@@ -1,18 +1,18 @@
 ---
 title: nslookup set
 description: Nslookup set コマンドのリファレンス記事。参照の動作に影響する構成設定を変更します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1fe5b36d-e93e-468b-abca-43b0204b32d1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e6c9fc242470395e5c4c5b3de7b235531ccf091
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: b156ef987c1aec67cc979fe08b6f2b75f86d5e6a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87885440"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038733"
 ---
 # <a name="nslookup-set"></a>nslookup set
 
