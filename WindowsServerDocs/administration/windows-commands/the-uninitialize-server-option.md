@@ -1,24 +1,24 @@
 ---
 title: 初期化解除-サーバー
 description: 初期サーバー構成中にサーバーに加えられた変更を元に戻すサーバーの初期化解除に関するリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 015efb04-fe84-469f-bd81-49d0046296b2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 954c56d8a9c901431859e7a424c5df436ab6858a
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 4ce98df7fa7c094970474432dd8fdedc56e302c6
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87881454"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029980"
 ---
 # <a name="uninitialize-server"></a>初期化解除-サーバー
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-サーバーの初期構成中に、サーバーに加えられた変更を元に戻します。 これには、**サーバー**オプションまたは Windows 展開サービス mmc スナップインのいずれかによって行われた変更が含まれます。 このコマンドは、サーバーを未構成の状態にリセットしていることに注意してください。 このコマンドでは、remoteInstall 共有フォルダーの内容は変更されません。 代わりに、サーバーを再初期化できるように、サーバーの状態をリセットします。
+サーバーの初期構成中に、サーバーに加えられた変更を元に戻します。 これには、 **サーバー** オプションまたは Windows 展開サービス mmc スナップインのいずれかによって行われた変更が含まれます。 このコマンドは、サーバーを未構成の状態にリセットしていることに注意してください。 このコマンドでは、remoteInstall 共有フォルダーの内容は変更されません。 代わりに、サーバーを再初期化できるように、サーバーの状態をリセットします。
 
 ## <a name="syntax"></a>構文
 ```

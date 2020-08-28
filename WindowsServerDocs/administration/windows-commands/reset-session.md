@@ -1,60 +1,64 @@
 ---
 title: reset session
-description: 参照記事 * * * *-
-ms.topic: article
+description: Reset session コマンドの参照記事。リモートデスクトップセッションホストサーバー上のセッションをリセットできます。
+ms.topic: reference
 ms.assetid: 4f029ecc-874e-415a-95a8-8b731bae35f9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 2f910dfc1c13b0e8555078acfb4e7ad830049592
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: a154ffb27ac8ead093c0e41f9a50d0952b736abc
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87883668"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037030"
 ---
 # <a name="reset-session"></a>reset session
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-リモートデスクトップセッションホスト (rd セッションホスト) サーバー上のセッションをリセット (削除) できます。
-
+リモートデスクトップセッションホストサーバー上のセッションをリセット (削除) できます。 セッションをリセットする必要がありますのみが正しく動作しないか、または場合に、応答を停止しています。
 
 > [!NOTE]
-> Windows Server 2008 R2 で、「ターミナル サービス」は「リモート デスクトップ サービス」に名前変更されました。 最新バージョンの新機能については、Windows Server TechNet ライブラリの「 [Windows server 2012 のリモートデスクトップサービスの新機能](/previous-versions/orphan-topics/ws.11/hh831527(v=ws.11))」を参照してください。
+> 最新バージョンの新機能については、「 [Windows Server でのリモートデスクトップサービスの新](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11))機能」を参照してください。
 
 ## <a name="syntax"></a>構文
+
 ```
-reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
+reset session {<sessionname> | <sessionID>} [/server:<servername>] [/v]
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-------|--------|
-|\<SessionName>|リセットするセッションの名前を指定します。 セッションの名前を確認するのには、使用、 **クエリ セッション** コマンドです。|
-|\<SessionID>|リセットするセッションの ID を指定します。|
-|/server:\<ServerName>|リセットするセッションに含まれる、ターミナル サーバーを指定します。 それ以外の場合は、現在の rd セッションホストサーバーが使用されます。|
-|/v|実行されているアクションに関する情報を表示します。|
-|/?|コマンド プロンプトにヘルプを表示します。|
+| パラメーター | 説明 |
+|--|--|
+| `<sessionname>` | リセットするセッションの名前を指定します。 セッションの名前を確認するには、 [query session コマンド](query-session.md)を使用します。 |
+| `<sessionID>` | リセットするセッションの ID を指定します。 |
+| /server:`<servername>` | リセットするセッションに含まれる、ターミナル サーバーを指定します。 それ以外の場合は、現在のリモートデスクトップセッションホストサーバーを使用します。 このパラメーターは、リモートサーバーからこのコマンドを使用する場合にのみ必要です。 |
+| /v | 実行されているアクションに関する情報を表示します。 |
+| /? | コマンド プロンプトにヘルプを表示します。 |
 
-## <a name="remarks"></a>Remarks
--   常に自身のセッションをリセットすることができますが、別のユーザーのセッションをリセットするフル コントロール アクセス許可を持つ必要があります。
--   セッションでデータが失われると、ユーザーに警告せずにユーザーのセッションをリセットすることができますを注意してください。
--   セッションをリセットする必要がありますのみが正しく動作しないか、または場合に、応答を停止しています。
--   **/Server** パラメーターは、使用する場合にのみ必要 **セッションをリセット** リモート サーバーからです。
+### <a name="remarks"></a>解説
+
+- いつでも独自のセッションをリセットできますが、別のユーザーのセッションをリセットするには、 **フルコントロール** アクセス許可が必要です。 セッションでデータが失われると、ユーザーに警告せずにユーザーのセッションをリセットすることができますを注意してください。
 
 ## <a name="examples"></a>例
-- Rdp-tcp 6 を指定されたセッションをリセットするには、次のように入力します。
-  ```
-  reset session rdp-tcp#6
-  ```
-- セッション ID が 3 を使用して、セッションをリセットするには、次のように入力します。
-  ```
-  reset session 3
-  ```
+
+指定した *rdp tcp # 6*セッションをリセットするには、次のように入力します。
+
+```
+reset session rdp-tcp#6
+```
+
+*セッション ID 3*を使用するセッションをリセットするには、次のように入力します。
+
+```
+reset session 3
+```
 
 ## <a name="additional-references"></a>その他の参照情報
-- [コマンドライン構文のキー](command-line-syntax-key.md) 
-[リモートデスクトップサービス (ターミナルサービス) のコマンドリファレンス](remote-desktop-services-terminal-services-command-reference.md)
+
+- [コマンド ライン構文の記号](command-line-syntax-key.md)
+
+- [リモートデスクトップサービスコマンドリファレンス](remote-desktop-services-terminal-services-command-reference.md)

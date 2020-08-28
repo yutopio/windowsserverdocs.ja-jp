@@ -1,18 +1,18 @@
 ---
 title: reg compare
 description: 指定されたレジストリサブキーまたはエントリを比較する reg compare コマンドの参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 177dc6a3-034e-4846-a394-330d03c14e0b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cac4b4f0e2e00cfc6d121ca27155b122291d0829
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 3541ac56a59725d966e726301796f4467044cf6b
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884196"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037060"
 ---
 # <a name="reg-compare"></a>reg compare
 
@@ -28,9 +28,9 @@ reg compare <keyname1> <keyname2> [{/v Valuename | /ve}] [{/oa | /od | /os | on}
 
 | パラメーター | 説明 |
 |--|--|
-| `<keyname1>` | サブキーまたは追加されるエントリの完全なパスを指定します。 リモートコンピューターを指定するには、コンピューター名 (形式) を `\\<computername>\` *keyname*の一部として含めます。 省略 `\\<computername>\` すると、操作は既定でローカルコンピューターに設定されます。 *Keyname*には、有効なルートキーを含める必要があります。 ローカルコンピューターの有効なルートキーは、 **HKLM**、 **HKCU**、 **HKCR**、 **HKU**、および**HKCC**です。 リモートコンピューターが指定されている場合、有効なルートキーは**HKLM**と**HKU**です。 レジストリキー名にスペースが含まれている場合は、キー名を引用符で囲みます。 |
-| `<keyname2>` | 比較する 2 つ目のサブキーの完全なパスを指定します。 リモートコンピューターを指定するには、コンピューター名 (形式) を `\\<computername>\` *keyname*の一部として含めます。 省略 `\\<computername>\` すると、操作は既定でローカルコンピューターに設定されます。 *Keyname2*にコンピューター名のみを指定すると、 *keyname1*で指定されたサブキーへのパスが操作によって使用されます。 *Keyname*には、有効なルートキーを含める必要があります。 ローカルコンピューターの有効なルートキーは、 **HKLM**、 **HKCU**、 **HKCR**、 **HKU**、および**HKCC**です。 リモートコンピューターが指定されている場合、有効なルートキーは**HKLM**と**HKU**です。 レジストリキー名にスペースが含まれている場合は、キー名を引用符で囲みます。 |
-| /v`<Valuename>` | サブキーの下を比較する値の名前を指定します。 |
+| `<keyname1>` | サブキーまたは追加されるエントリの完全なパスを指定します。 リモートコンピューターを指定するには、コンピューター名 (形式) を `\\<computername>\` *keyname*の一部として含めます。 省略 `\\<computername>\` すると、操作は既定でローカルコンピューターに設定されます。 *Keyname*には、有効なルートキーを含める必要があります。 ローカルコンピューターの有効なルートキーは、 **HKLM**、 **HKCU**、 **HKCR**、 **HKU**、および **HKCC**です。 リモートコンピューターが指定されている場合、有効なルートキーは **HKLM** と **HKU**です。 レジストリキー名にスペースが含まれている場合は、キー名を引用符で囲みます。 |
+| `<keyname2>` | 比較する 2 つ目のサブキーの完全なパスを指定します。 リモートコンピューターを指定するには、コンピューター名 (形式) を `\\<computername>\` *keyname*の一部として含めます。 省略 `\\<computername>\` すると、操作は既定でローカルコンピューターに設定されます。 *Keyname2*にコンピューター名のみを指定すると、 *keyname1*で指定されたサブキーへのパスが操作によって使用されます。 *Keyname*には、有効なルートキーを含める必要があります。 ローカルコンピューターの有効なルートキーは、 **HKLM**、 **HKCU**、 **HKCR**、 **HKU**、および **HKCC**です。 リモートコンピューターが指定されている場合、有効なルートキーは **HKLM** と **HKU**です。 レジストリキー名にスペースが含まれている場合は、キー名を引用符で囲みます。 |
+| /v `<Valuename>` | サブキーの下を比較する値の名前を指定します。 |
 | /ve | Null 値の名前を持つエントリのみを比較することを指定します。 |
 | /oa | すべての相違点との一致が表示されることを指定します。 既定では、差分のみが一覧表示します。 |
 | /od | 相違点だけが表示されることを指定します。 これは既定の動作です。 |
@@ -39,11 +39,11 @@ reg compare <keyname1> <keyname2> [{/v Valuename | /ve}] [{/oa | /od | /os | on}
 | /s | すべてのサブキーとエントリを再帰的を比較します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - **Reg compare**操作の戻り値は次のとおりです。
 
-    | 値 | 説明 |
+    | [値] | 説明 |
     |--|--|
     | 0 | 比較の結果が成功して、結果は変わりません。 |
     | 1 | 比較が失敗しました。 |
@@ -59,13 +59,13 @@ reg compare <keyname1> <keyname2> [{/v Valuename | /ve}] [{/oa | /od | /os | on}
 
 ### <a name="examples"></a>例
 
-キー **MyApp**の下にあるすべての値を、キー **Savemyapp**の下のすべての値と比較するには、次のように入力します。
+キー **MyApp** の下にあるすべての値を、キー **Savemyapp**の下のすべての値と比較するには、次のように入力します。
 
 ```
 reg compare HKLM\Software\MyCo\MyApp HKLM\Software\MyCo\SaveMyApp
 ```
 
-キー **MyCo**の下のバージョンの値と、 **MyCo1**キーの下のバージョンの値を比較するには、次のように入力します。
+キー **MyCo** の下のバージョンの値と、 **MyCo1**キーの下のバージョンの値を比較するには、次のように入力します。
 
 ```
 reg compare HKLM\Software\MyCo HKLM\Software\MyCo1 /v Version

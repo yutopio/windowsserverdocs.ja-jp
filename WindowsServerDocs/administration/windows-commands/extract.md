@@ -1,18 +1,18 @@
 ---
 title: extract
 description: 抽出コマンドの参照記事。ソースの場所からファイルを抽出します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 20dab03e-f6e1-4eb8-b8a1-fd6f1d97ee83
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 130f9ee22e0603deaa50dfde267df1c39342e38c
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 557ee765a40703d2781613549992c7668753f5a9
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87890374"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89036640"
 ---
 # <a name="extract"></a>extract
 
@@ -37,7 +37,7 @@ extract [/y] /c source destination
 | /a | すべてのキャビネットを処理します。 前述の最初のキャビネットで開始されるキャビネットチェーンに従います。 |
 | /c | ソースファイルをコピー先にコピーします (DMF ディスクからコピーする場合)。 |
 | /d | キャビネットディレクトリを表示します (抽出を避けるために、ファイル名を付けて使用します)。 |
-| /e | Extract (の代わりにを使用*します。* すべてのファイルを抽出する場合)。 |
+| /e | Extract (の代わりにを使用 *します。* すべてのファイルを抽出する場合)。 |
 | /l ディレクトリ | 抽出されたファイルを配置する場所 (既定は現在のディレクトリ)。 |
 | /y | 既存のファイルを上書きする前にメッセージを表示しません。 |
 

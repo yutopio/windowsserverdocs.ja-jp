@@ -1,18 +1,18 @@
 ---
 title: rename
 description: '[名前の変更] コマンドの参照記事。ファイルまたはディレクトリの名前を変更します。'
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7f2ea658-0fa9-4015-8031-22c2b0089231
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a2ab634be010f470314658b25daac92c00d4706c
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 51f509576abe7f035fa04318f77b802e3fdf1d93
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87883794"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89030060"
 ---
 # <a name="rename"></a>rename
 
@@ -33,17 +33,17 @@ rename [<drive>:][<path>]<filename1> <filename2>
 
 | パラメーター | 説明 |
 |--|--|
-| `[<drive>:][<path>]<filename1>` | 名前を変更するファイルまたはファイルのセットの場所と名前を指定します。 *Filename1*には、ワイルドカード文字 (**&#42;** と **?**) を含めることができます。 |
+| `[<drive>:][<path>]<filename1>` | 名前を変更するファイルまたはファイルのセットの場所と名前を指定します。 *Filename1* には、ワイルドカード文字 (**&#42;** と **?**) を含めることができます。 |
 | `<filename2>` | ファイルの新しい名前を指定します。 ワイルドカード文字を使用すると、複数のファイルに新しい名前を指定できます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - ファイルの名前を変更するときに、新しいドライブまたはパスを指定することはできません。 また、このコマンドを使用して、ドライブ間でファイルの名前を変更したり、ファイルを別のディレクトリに移動したりすることはできません。
 
 - *Filename2*のワイルドカード文字によって表される文字は、 *filename1*内の対応する文字と同じになります。
 
-- *Filename2*は一意のファイル名である必要があります。 *Filename2*が既存のファイル名と一致する場合、次のメッセージが表示され `Duplicate file name or file not found` ます。
+- *Filename2* は一意のファイル名である必要があります。 *Filename2*が既存のファイル名と一致する場合、次のメッセージが表示され `Duplicate file name or file not found` ます。
 
 ### <a name="examples"></a>例
 
@@ -53,7 +53,7 @@ rename [<drive>:][<path>]<filename1> <filename2>
 rename *.txt *.doc
 ```
 
-ディレクトリの名前を*Chap10*から*Part10*に変更するには、次のように入力します。
+ディレクトリの名前を *Chap10* から *Part10*に変更するには、次のように入力します。
 
 ```
 rename chap10 part10

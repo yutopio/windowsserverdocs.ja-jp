@@ -1,18 +1,18 @@
 ---
 title: bitsadmin setpeercachingflags
 description: Bitsadmin setpeercachingflags コマンドの参照記事。ジョブのファイルをキャッシュしてピアに提供できるかどうか、およびジョブがピアからコンテンツをダウンロードできるかどうかを決定するフラグを設定します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 3f54a127-fb68-49a5-b843-664ec833df67
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 73135ed6f08962cbe73aad4765dc4d3b4f7ff958
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 1305d8d865f51556f4b518c7972eaff4ca9ec3e5
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892977"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89026210"
 ---
 # <a name="bitsadmin-setpeercachingflags"></a>bitsadmin setpeercachingflags
 

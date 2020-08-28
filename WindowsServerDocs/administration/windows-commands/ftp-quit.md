@@ -1,18 +1,18 @@
 ---
 title: ftp quit
 description: リモートコンピューターとの ftp セッションを終了して終了する、ftp 終了コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: f5de9a79-5177-4e3a-80d9-df8f4d7660b7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8f69ad8cfcc94e1c9d9a146a2f7a81f41d3feb22
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: eb3c180c8da604541f15f7d7298ef91f080e4fc7
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87889091"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89025726"
 ---
 # <a name="ftp-quit"></a>ftp quit
 

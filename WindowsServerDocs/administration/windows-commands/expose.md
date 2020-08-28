@@ -1,18 +1,18 @@
 ---
 title: expose
 description: '[公開] コマンドの参照記事。ドライブ文字、共有、またはマウントポイントとして永続的なシャドウコピーを公開します。'
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9b0a21cf-3bef-4ade-b8f1-ac42f9203947
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b4b9e45013c928e2a65e86b21c37f2f10b215056
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 67e6b230b780e6ae84ea1ff30804c5722ca2337d
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87890407"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89036690"
 ---
 # <a name="expose"></a>expose
 
@@ -28,7 +28,7 @@ expose <shadowID> {<drive:> | <share> | <mountpoint>}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| shadowID | 公開するシャドウコピーのシャドウ ID を指定します。 *ShadowID*の代わりに、既存のエイリアスまたは環境変数を使用することもできます。 既存のエイリアスを表示するには、パラメーターを指定せずに**add**を使用します。 |
+| shadowID | 公開するシャドウコピーのシャドウ ID を指定します。 *ShadowID*の代わりに、既存のエイリアスまたは環境変数を使用することもできます。 既存のエイリアスを表示するには、パラメーターを指定せずに **add** を使用します。 |
 | `<drive:>` | 指定されたシャドウコピーをドライブ文字として公開します (たとえば、 `p:` )。 |
 | `<share>` | 指定されたシャドウコピーを共有に公開します (たとえば、 `\\machinename` )。   |
 | `<mountpoint>` | 指定されたシャドウコピーをマウントポイントに公開します (たとえば、 `C:\shadowcopy` )。 |

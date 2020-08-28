@@ -1,18 +1,18 @@
 ---
 title: manage-bde 変更キーを管理します。
 description: オペレーティングシステムドライブのスタートアップキーを変更する manage-bde 変更キーコマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 69463db9-7e03-47ff-b233-a95d5055725f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3b1ac3801fe78494d33ae57fd869986b55f886d0
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: cfef099e1f596428fdbf7fd4389f4bd44846efce
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886949"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89030120"
 ---
 # <a name="manage-bde-changekey"></a>manage-bde 変更キーを管理します。
 
@@ -29,7 +29,7 @@ manage-bde -changekey [<drive>] [<pathtoexternalkeydirectory>] [-computername <n
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `<drive>` | コロンの後にドライブ文字を表します。 |
-| -computername | manage-bde.exe が別のコンピューターの BitLocker 保護を変更するために使用されることを指定します。 また、このコマンドの省略版として **-cn**を使用することもできます。 |
+| -computername | manage-bde.exe が別のコンピューターの BitLocker 保護を変更するために使用されることを指定します。 また、このコマンドの省略版として **-cn** を使用することもできます。 |
 | `<name>` | BitLocker による保護を変更するコンピューターの名前を表します。 指定できる値には、コンピューターの NetBIOS 名とコンピューターの IP アドレスが含まれます。 |
 | -? または /? | コマンドプロンプトで簡単なヘルプを表示します。 |
 | -help または-h | 表示は、コマンド プロンプトでヘルプを完了します。 |

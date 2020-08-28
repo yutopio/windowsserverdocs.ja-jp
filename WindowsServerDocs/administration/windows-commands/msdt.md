@@ -1,18 +1,18 @@
 ---
 title: msdt
 description: Msdt コマンドの参照記事。コマンドラインでトラブルシューティングパックを起動するか、自動スクリプトの一部として、ユーザー入力なしで追加のオプションを有効にします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: ead1b672-a120-4e16-94aa-a8e13602c1d0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e8ef856cd54b93c77d4e260a5e433c67407d9611
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: fd61fd80f6b1a0249c506bcaa5ff2cda99c49820
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886199"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89030070"
 ---
 # <a name="msdt"></a>msdt
 
@@ -28,14 +28,14 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| /id`<packagename>` | 実行する診断パッケージを指定します。 利用可能なパッケージの一覧については、「[使用可能なトラブルシューティングパック](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs)」を参照してください。 |
-| /path`<directory|.diagpkg file|.diagcfg file>` | 診断パッケージへの完全パスを指定します。 ディレクトリを指定する場合は、ディレクトリに診断パッケージが含まれている必要があります。 * */Id * *、 **/dci**、/ **cab**の各パラメーターと共に、 **/path**パラメーターを使用することはできません。 |                                                                                   |
-| /dci`<passkey>` | パスキーフィールドをプリセットします。 このパラメーターは、サポートプロバイダーがパスキーを指定した場合にのみ使用されます。 |
-| /dt`<directory>` | 指定されたディレクトリのトラブルシューティングの履歴を表示します。 診断結果は、ユーザーの **%LOCALAPPDATA%\Diagnostics**または **%LOCALAPPDATA%\ElevatedDiagnostics**ディレクトリに格納されます。 |
-| /af`<answerfile>` | 1つ以上の診断対話に対する応答を含む応答ファイルを XML 形式で指定します。 |
-| /モーダル`<ownerHWND>` | 親コンソールウィンドウハンドル (HWND) によって指定された、10進数のウィンドウにトラブルシューティングパックをモーダルにします。 このパラメーターは、通常、トラブルシューティングパックを起動するアプリケーションによって使用されます。 コンソールウィンドウハンドルの取得の詳細については、「[コンソールウィンドウハンドルを取得する方法 (HWND)](https://support.microsoft.com/help/124103/how-to-obtain-a-console-window-handle-hwnd)」を参照してください。 |
-| その他のオプション`<true|false>` | ユーザーが追加のオプションを調査するかどうかを確認する最後のトラブルシューティング画面を有効 (true) または抑制 (false) します。 通常、このパラメーターは、オペレーティングシステムに含まれていないトラブルシューティングツールによってトラブルシューティングパックが起動されるときに使用されます。 |
-| /param returns`<parameters>` | 応答ファイルと同様に、コマンドラインでの相互作用応答のセットを指定します。 通常、このパラメーターは、TSP デザイナーで作成されたトラブルシューティングパックのコンテキスト内では使用されません。 カスタムパラメーターの開発の詳細については、「 [Windows トラブルシューティングプラットフォーム](/previous-versions/windows/desktop/wintt/windows-troubleshooting-toolkit-portal)」を参照してください。 |
+| /id `<packagename>` | 実行する診断パッケージを指定します。 利用可能なパッケージの一覧については、「 [使用可能なトラブルシューティングパック](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs)」を参照してください。 |
+| /path `<directory|.diagpkg file|.diagcfg file>` | 診断パッケージへの完全パスを指定します。 ディレクトリを指定する場合は、ディレクトリに診断パッケージが含まれている必要があります。 * */Id * *、 **/dci**、/ **cab**の各パラメーターと共に、 **/path**パラメーターを使用することはできません。 |                                                                                   |
+| /dci `<passkey>` | パスキーフィールドをプリセットします。 このパラメーターは、サポートプロバイダーがパスキーを指定した場合にのみ使用されます。 |
+| /dt `<directory>` | 指定されたディレクトリのトラブルシューティングの履歴を表示します。 診断結果は、ユーザーの **%LOCALAPPDATA%\Diagnostics** または **%LOCALAPPDATA%\ElevatedDiagnostics** ディレクトリに格納されます。 |
+| /af `<answerfile>` | 1つ以上の診断対話に対する応答を含む応答ファイルを XML 形式で指定します。 |
+| /モーダル `<ownerHWND>` | 親コンソールウィンドウハンドル (HWND) によって指定された、10進数のウィンドウにトラブルシューティングパックをモーダルにします。 このパラメーターは、通常、トラブルシューティングパックを起動するアプリケーションによって使用されます。 コンソールウィンドウハンドルの取得の詳細については、「 [コンソールウィンドウハンドルを取得する方法 (HWND)](https://support.microsoft.com/help/124103/how-to-obtain-a-console-window-handle-hwnd)」を参照してください。 |
+| その他のオプション `<true|false>` | ユーザーが追加のオプションを調査するかどうかを確認する最後のトラブルシューティング画面を有効 (true) または抑制 (false) します。 通常、このパラメーターは、オペレーティングシステムに含まれていないトラブルシューティングツールによってトラブルシューティングパックが起動されるときに使用されます。 |
+| /param returns `<parameters>` | 応答ファイルと同様に、コマンドラインでの相互作用応答のセットを指定します。 通常、このパラメーターは、TSP デザイナーで作成されたトラブルシューティングパックのコンテキスト内では使用されません。 カスタムパラメーターの開発の詳細については、「 [Windows トラブルシューティングプラットフォーム](/previous-versions/windows/desktop/wintt/windows-troubleshooting-toolkit-portal)」を参照してください。 |
 | /advanced | トラブルシューティングパックが開始されたときに、既定で [ようこそ] ページの [詳細設定] リンクを展開します。 |
 | /カスタム | ユーザーに対して、適用される可能性のある解決策を確認するように求めるメッセージを表示します。 |
 

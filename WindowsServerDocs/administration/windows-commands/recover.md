@@ -1,18 +1,18 @@
 ---
 title: recover
 description: 回復コマンドの参照記事。このコマンドは、不良ディスクまたは不良ディスクから読み取り可能な情報を回復します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: cf9be2e3-90c8-4773-a201-dc503b91948e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0c3d709d76743df4c1a653f0f0a19e8319b0e0f1
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ad9d2f665bccca1413830e29c082c05a37d93a26
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884314"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037140"
 ---
 # <a name="recover"></a>recover
 
@@ -30,12 +30,12 @@ recover [<drive>:][<path>]<filename>
 
 | パラメーター | 説明 |
 |--|--|
-| `[<drive>:][<path>]<filename>` | 回復するファイル名 (現在のディレクトリにない場合はファイルの場所) を指定します。 *ファイル名*が必要です。ワイルドカードはサポートされていません。 |
+| `[<drive>:][<path>]<filename>` | 回復するファイル名 (現在のディレクトリにない場合はファイルの場所) を指定します。 *ファイル名* が必要です。ワイルドカードはサポートされていません。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
 ### <a name="examples"></a>例
 
-ファイル*story.txt*を回復する*には、* 次のように入力します。
+ファイル *story.txt* を回復する *には、* 次のように入力します。
 
 ```
 recover d:\fiction\story.txt

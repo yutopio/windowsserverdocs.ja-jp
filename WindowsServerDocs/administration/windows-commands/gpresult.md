@@ -1,18 +1,18 @@
 ---
 title: gpresult
 description: リモートユーザーとコンピューターのポリシーの結果セット (RSoP) 情報を表示する、gpresult コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: dfaa3adf-2c83-486c-86d6-23f93c5c883c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5c65dd4799441dca44db24f532be66349b1249a5
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 5ef5de0c8e4e4c4f75d8ccd680e20b8cf00385f5
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888569"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89025676"
 ---
 # <a name="gpresult"></a>gpresult
 
@@ -33,11 +33,11 @@ gpresult [/s <system> [/u <username> [/p [<password>]]]] [/user [<targetdomain>\
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| /s`<system>` | 名前またはリモート コンピューターの IP アドレスを指定します。 バックスラッシュは使用しないでください。 既定値はローカル コンピューターです。 |
-| /u`<username>` | 指定されたユーザーの資格情報を使用してコマンドを実行します。 既定のユーザーは、コマンドを発行するコンピューターにログオンしているユーザーです。 |
-| /p`[<password>]` | **/U**パラメーターに指定されているユーザーアカウントのパスワードを指定します。 **/P**を省略した場合、 **gpresult**はパスワードの入力を求めます。 **/P**パラメーターは、 **/x**または **/h**と共に使用することはできません。 |
-| /user`[<targetdomain>\]<targetuser>]` | RSoP データを表示するリモートユーザーを指定します。 |
-| /scope`{user | computer}` | ユーザーまたはコンピューターの RSoP データを表示します。 **/Scope**を省略した場合、 **gpresult**はユーザーとコンピューターの両方の RSoP データを表示します。 |
+| /s `<system>` | 名前またはリモート コンピューターの IP アドレスを指定します。 バックスラッシュは使用しないでください。 既定値はローカル コンピューターです。 |
+| /u `<username>` | 指定されたユーザーの資格情報を使用してコマンドを実行します。 既定のユーザーは、コマンドを発行するコンピューターにログオンしているユーザーです。 |
+| /p `[<password>]` | **/U**パラメーターに指定されているユーザーアカウントのパスワードを指定します。 **/P**を省略した場合、 **gpresult**はパスワードの入力を求めます。 **/P**パラメーターは、 **/x**または **/h**と共に使用することはできません。 |
+| /user `[<targetdomain>\]<targetuser>]` | RSoP データを表示するリモートユーザーを指定します。 |
+| /scope `{user | computer}` | ユーザーまたはコンピューターの RSoP データを表示します。 **/Scope**を省略した場合、 **gpresult**はユーザーとコンピューターの両方の RSoP データを表示します。 |
 | `[/x | /h] <filename>` | は、 *filename*パラメーターで指定されたファイル名を使用して、レポートを XML (**/x**) 形式または HTML 形式 (**/h**) 形式で保存します。 **/U**、 **/p**、 **/r**、 **/v**、または **/z**と共に使用することはできません。 |
 | /f | **/X**または **/h**オプションで指定されたファイル名を強制的に**gpresult**に上書きします。 |
 | /r | RSoP の概要データを表示します。 |
@@ -45,7 +45,7 @@ gpresult [/s <system> [/u <username> [/p [<password>]]]] [/user [<targetdomain>\
 | /z | グループポリシーに関する利用可能なすべての情報を表示します。 これには、1以上の優先順位で適用された詳細設定が含まれます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - グループポリシーは、組織内のユーザーとコンピューターに対してプログラム、ネットワークリソース、およびオペレーティングシステムがどのように動作するかを定義および制御するための主要な管理ツールです。 Active directory 環境では、グループポリシーは、サイト、ドメイン、または組織単位のメンバーシップに基づいてユーザーまたはコンピューターに適用されます。
 
@@ -55,7 +55,7 @@ gpresult [/s <system> [/u <username> [/p [<password>]]]] [/user [<targetdomain>\
 
 ### <a name="examples"></a>例
 
-リモートユーザーのみの RSoP データを取得するには、 *maindom\hiropln* *p@ssW23* コンピューターの*srvmain*にあるパスワードを使用して、次のように入力します。
+リモートユーザーのみの RSoP データを取得するには、 *maindom\hiropln* *p@ssW23* コンピューターの *srvmain*にあるパスワードを使用して、次のように入力します。
 
 ```
 gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /scope user /r
@@ -67,7 +67,7 @@ gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /scope us
 gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /z > policy.txt
 ```
 
-ログオンしているユーザーの RSoP データを表示するには、 *maindom\hiropln* *p@ssW23* コンピューターの*srvmain*に、次のように入力します。
+ログオンしているユーザーの RSoP データを表示するには、 *maindom\hiropln* *p@ssW23* コンピューターの *srvmain*に、次のように入力します。
 
 ```
 gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r

@@ -1,18 +1,18 @@
 ---
 title: rd
 description: ディレクトリを削除する rd コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 42e672f6-5bc2-4c16-af25-18e7ed2dd555
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f1baacb12a0169d9915897a3d6672870c6a21927
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 360283cbc71e2d9e78acddb4e529c66535f8aa7d
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884356"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037190"
 ---
 # <a name="rd"></a>rd
 
@@ -38,7 +38,7 @@ rd [<drive>:]<path> [/s [/q]]
 | /q | クワイエット モードを指定します。 ディレクトリ ツリーを削除するときに、確認を表示しません。 **/Q**パラメーターは、 **/s**も指定されている場合にのみ機能します。<p>**注意:** Quiet モードで実行すると、ディレクトリツリー全体が確認なしで削除されます。 **/Q**コマンドラインオプションを使用する前に、重要なファイルが移動またはバックアップされていることを確認してください。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - 隠しファイルやシステムファイルなど、ファイルが格納されているディレクトリを削除することはできません。 これを行おうとすると、次のメッセージが表示されます。
 
@@ -60,7 +60,7 @@ rd [<drive>:]<path> [/s [/q]]
 cd ..
 ```
 
-現在のディレクトリから*test* (およびそのすべてのサブディレクトリとファイル) という名前のディレクトリを削除するには、次のように入力します。
+現在のディレクトリから *test* (およびそのすべてのサブディレクトリとファイル) という名前のディレクトリを削除するには、次のように入力します。
 
 ```
 rd /s test

@@ -1,18 +1,18 @@
 ---
 title: get DriverGroup
 description: サーバー上のドライバーグループに関する情報を表示する、get DriverGroup の参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7cfe10c3-a63f-48e7-bef9-f6b474b4ddbe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 95981c1821117f6a4a634df001b901ee76816b75
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 545bf634382e562221438295e5d015f7dbb97bf3
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896952"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029680"
 ---
 # <a name="get-drivergroup"></a>get DriverGroup
 

@@ -1,18 +1,18 @@
 ---
 title: bitsadmin setnotifycmdline
 description: Bitsadmin setnotifycmdline コマンドの参照記事。ジョブがデータの転送を終了したとき、またはジョブが状態に入ったときに実行されるコマンドラインコマンドを設定します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 415ae6ef-8549-48b2-9693-2368a6e24075
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a81b4521d8c765d85e6b4a92d0429b128f43198e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 7f486efcbaef5f68d6f8be7cab1caba204c77c7a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87893001"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89026230"
 ---
 # <a name="bitsadmin-setnotifycmdline"></a>bitsadmin setnotifycmdline
 
@@ -32,7 +32,7 @@ bitsadmin /setnotifycmdline <job> <program_name> [program_parameters]
 | パラメーター | 説明 |
 | --------- | ----------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
-| program_name | ジョブの完了時に実行するコマンドの名前。 この値は NULL として設定できますが、その場合は*program_parameters*も null に設定する必要があります。 |
+| program_name | ジョブの完了時に実行するコマンドの名前。 この値は NULL として設定できますが、その場合は *program_parameters* も null に設定する必要があります。 |
 | program_parameters | *Program_name*に渡すパラメーター。 この値は NULL として設定できます。 *Program_parameters*が NULL に設定されていない場合は、 *program_parameters*の最初のパラメーターが*program_name*と一致している必要があります。 |
 
 ## <a name="examples"></a>例

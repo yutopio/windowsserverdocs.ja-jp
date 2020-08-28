@@ -1,18 +1,18 @@
 ---
 title: get-デバイス
 description: 事前登録されたコンピューター (つまり、active directory ドメインサービスのコンピューターアカウントに適用された物理コンピューター) に関する Windows 展開サービス情報を取得する、デバイスの参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1da79286-7e1d-45f2-aea2-d446e16a6911
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7e50648a0a3e50542a7bb2ace4f887c08939ff7b
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 118e14f738920527c61c8da25d19ab98126fc004
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896969"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029700"
 ---
 # <a name="get-device"></a>get-デバイス
 

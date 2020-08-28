@@ -1,18 +1,18 @@
 ---
 title: manage-bde 自動ロック解除
 description: BitLocker で保護されたデータドライブの自動ロック解除を管理する manage-bde 自動ロック解除コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 063528bf-d235-4b44-887a-52a7d983e01a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 976f7f4034c9c373d6d5cd347b0807c7a82ea97f
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 35aadb406a2f5d9e10bd7b796dd07ae79a8286a7
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886960"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89036550"
 ---
 # <a name="manage-bde-autounlock"></a>manage-bde 自動ロック解除
 
@@ -32,7 +32,7 @@ manage-bde -autounlock [{-enable|-disable|-clearallkeys}] <drive> [-computername
 | -を無効にします。 | データ ドライブの自動ロック解除を無効にします。 |
 | -clearallkeys | オペレーティング システム ドライブに格納されているすべての外部キーを削除します。 |
 | `<drive>` | コロンの後にドライブ文字を表します。 |
-| -computername | manage-bde.exe が別のコンピューターの BitLocker 保護を変更するために使用されることを指定します。 また、このコマンドの省略版として **-cn**を使用することもできます。 |
+| -computername | manage-bde.exe が別のコンピューターの BitLocker 保護を変更するために使用されることを指定します。 また、このコマンドの省略版として **-cn** を使用することもできます。 |
 | `<name>` | BitLocker による保護を変更するコンピューターの名前を表します。 指定できる値には、コンピューターの NetBIOS 名とコンピューターの IP アドレスが含まれます。 |
 | -? または /? | コマンドプロンプトで簡単なヘルプを表示します。 |
 | -help または-h | 表示は、コマンド プロンプトでヘルプを完了します。 |

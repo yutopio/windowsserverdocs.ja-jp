@@ -4,13 +4,13 @@ description: ReFSUtil ツールの参照記事。大量の ReFS ボリューム�
 author: laknight5
 ms.author: laknight
 ms.date: 6/29/2020
-ms.topic: article
-ms.openlocfilehash: d40faa165666a5836dc6e87589d27f8eb643479e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.topic: reference
+ms.openlocfilehash: 8d72c025fcca7c7cb294b8a5053f8d77cc97d140
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884215"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037120"
 ---
 # <a name="refsutil"></a>ReFSUtil
 
@@ -25,11 +25,11 @@ ReFS salvage は ReFSUtil の主な機能であり、ディスク管理で RAW �
 | パラメーター | 説明 |
 |--|--|
 | `<source volume>` | 処理する ReFS ボリュームを指定します。 ドライブ文字は "L:" の形式にする必要があります。または、ボリュームマウントポイントへのパスを指定する必要があります。 |
-| `<working directory>` | 一時情報とログを格納する場所を指定します。 に配置さ**れていない**必要があり `<source volume>` ます。 |
-| `<target directory>` | 識別されたファイルのコピー先の場所を指定します。 に配置さ**れていない**必要があり `<source volume>` ます。 |
+| `<working directory>` | 一時情報とログを格納する場所を指定します。 に配置さ **れていない** 必要があり `<source volume>` ます。 |
+| `<target directory>` | 識別されたファイルのコピー先の場所を指定します。 に配置さ **れていない** 必要があり `<source volume>` ます。 |
 | \-m | 削除されたファイルも含めて、可能なすべてのファイルを回復します。<p>**警告:** このパラメーターによってプロセスの実行時間が長くなるだけでなく、予期しない結果が生じる可能性もあります。 |
 | \-画像 | 詳細モードを使用するように指定します。 |
-| \-閉じる | 必要に応じて、最初にボリュームを強制的にマウント解除します。 その後、ボリュームに対して開いているハンドルはすべて無効になります。 たとえば、`refsutil salvage -QA R: N:\WORKING N:\DATA -x` のようにします。 |
+| \-閉じる | 必要に応じて、最初にボリュームを強制的にマウント解除します。 その後、ボリュームに対して開いているハンドルはすべて無効になります。 たとえば、「 `refsutil salvage -QA R: N:\WORKING N:\DATA -x` 」のように入力します。 |
 
 ## <a name="usage-and-available-options"></a>使用法と使用可能なオプション
 
@@ -59,7 +59,7 @@ refsutil salvage -D <source volume> <working directory> <options>
 
 ### <a name="quick-scan-phase-command-line-usage"></a>クイックスキャンフェーズのコマンドラインの使用状況
 
-`<source volume>`回復可能なすべてのファイルについて、のクイックスキャンを実行します。 このモードは、ボリュームの一部の重要な構造が破損していないと想定しているため、短時間で実行されます。そのため、ボリューム全体をスキャンしてそれらを特定する必要はありません。 これにより、古いファイル/ディレクトリ/ボリュームの回復も軽減されます。 検出されたファイルは、にあるファイルに記録され `foundfiles.<volume signature>.txt` `<working directory>` ます。 スキャンフェーズが既に停止していた場合、 **-QS**フラグを指定して実行すると、中断した場所からスキャンが再開されます。
+`<source volume>`回復可能なすべてのファイルについて、のクイックスキャンを実行します。 このモードは、ボリュームの一部の重要な構造が破損していないと想定しているため、短時間で実行されます。そのため、ボリューム全体をスキャンしてそれらを特定する必要はありません。 これにより、古いファイル/ディレクトリ/ボリュームの回復も軽減されます。 検出されたファイルは、にあるファイルに記録され `foundfiles.<volume signature>.txt` `<working directory>` ます。 スキャンフェーズが既に停止していた場合、 **-QS** フラグを指定して実行すると、中断した場所からスキャンが再開されます。
 
 ```
 refsutil salvage -QS <source volume> <working directory> <options>
@@ -67,7 +67,7 @@ refsutil salvage -QS <source volume> <working directory> <options>
 
 ### <a name="full-scan-phase-command-line-usage"></a>フルスキャンフェーズのコマンドラインの使用
 
-すべて `<source volume>` の回復可能なファイルをスキャンします。 このモードでは、回復可能なファイルのボリューム全体がスキャンされるため、時間がかかることがあります。 検出されたファイルは、にあるファイルにログ記録され `foundfiles.<volume signature>.txt` `<working directory>` ます。 スキャンフェーズが既に停止していた場合、 **-FS**フラグを指定して実行すると、中断した場所からスキャンが再開されます。
+すべて `<source volume>` の回復可能なファイルをスキャンします。 このモードでは、回復可能なファイルのボリューム全体がスキャンされるため、時間がかかることがあります。 検出されたファイルは、にあるファイルにログ記録され `foundfiles.<volume signature>.txt` `<working directory>` ます。 スキャンフェーズが既に停止していた場合、 **-FS** フラグを指定して実行すると、中断した場所からスキャンが再開されます。
 
 ```
 refsutil salvage -FS <source volume> <working directory> <options>
@@ -83,7 +83,7 @@ refsutil salvage -C <source volume> <working directory> <target directory> <opti
 
 ### <a name="copy-phase-with-list-command-line-usage"></a>リストコマンドラインを使用したコピーフェーズ
 
-内のすべてのファイルを `<file list>` から `<source volume>` にコピーし `<target directory>` ます。 スキャンが `<file list>` 完了するまで実行されていない必要がある場合でも、のファイルは、最初にスキャンフェーズで識別されている必要があります。 を `<file list>` 生成するには、 `foundfiles.<volume signature>.txt` 新しいファイルにコピーして、復元する必要のないファイルを参照している行を削除し、復元する必要があるファイルを保持します。 PowerShell コマンドレットの**選択文字列**は、 `foundfiles.<volume signature>.txt` 目的のパス、拡張子、またはファイル名のみを含めるようにフィルター処理する場合に役立ちます。
+内のすべてのファイルを `<file list>` から `<source volume>` にコピーし `<target directory>` ます。 スキャンが `<file list>` 完了するまで実行されていない必要がある場合でも、のファイルは、最初にスキャンフェーズで識別されている必要があります。 を `<file list>` 生成するには、 `foundfiles.<volume signature>.txt` 新しいファイルにコピーして、復元する必要のないファイルを参照している行を削除し、復元する必要があるファイルを保持します。 PowerShell コマンドレットの **選択文字列** は、 `foundfiles.<volume signature>.txt` 目的のパス、拡張子、またはファイル名のみを含めるようにフィルター処理する場合に役立ちます。
 
 ```
 refsutil salvage -SL <source volume> <working directory> <target directory> <file list> <options>

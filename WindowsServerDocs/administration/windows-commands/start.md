@@ -1,18 +1,18 @@
 ---
 title: start
 description: 指定されたプログラムまたはコマンドを実行するための個別のコマンドプロンプトウィンドウを開始する、start の参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0173f9b3-5cd7-4edb-b01e-d02193b4fadc
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 54ec76cf6162cd887b21f99b6579fc123f4f614c
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 5f17b4093bbe82d869ad561dce45437389dc347e
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87882294"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89036930"
 ---
 # <a name="start"></a>start
 
@@ -31,12 +31,12 @@ start [<Title>] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 |パラメーター|説明|
 |---------|-----------|
 |\<Title>|コマンド プロンプト ウィンドウのタイトル バーに表示するタイトルを指定します。|
-|d\<Path>|スタートアップ ディレクトリを指定します。|
+|d \<Path>|スタートアップ ディレクトリを指定します。|
 |/i|Cmd.exe スタートアップ環境を新しいコマンド プロンプト ウィンドウに渡します。 場合 **/i** が指定されていない、現在の環境を使用します。|
 |/最小 \| /最大|最小化することを指定 (**/min**) または最大化 (**最大**) 新しいコマンド プロンプト ウィンドウです。|
 |/分離 \| /共有|別のメモリ領域で 16 ビット プログラムを起動 (**/separate**) または共有メモリの領域 (**/共有**)。 64 ビット プラットフォームでは、これらのオプションはサポートされていません。|
 |/低 \| /標準 \| /高/ \| リアルタイム \| /abovenormal \| /belownormal|指定した優先度クラスでは、アプリケーションを起動します。 有効な優先度クラスの値は **低/**, 、**通常/**, 、**/高**, 、**/realtime**, 、**/abovenormal**, と **/belownormal**します。|
-|/アフィニティ\<HexAffinity>|新しいアプリケーションを (16 進数として表されます)、指定されたプロセッサ関係マスクを適用します。|
+|/アフィニティ \<HexAffinity>|新しいアプリケーションを (16 進数として表されます)、指定されたプロセッサ関係マスクを適用します。|
 |/wait|アプリケーションを起動し、終了するまで待機します。|
 |/昇格|管理者としてアプリケーションを実行します。|
 |/b|新しいコマンド プロンプト ウィンドウを開くことがなく、アプリケーションを起動します。 CTRL キーを押しながら C キーの処理には、アプリケーションは CTRL + C 処理を有効にしない限りは無視されます。 アプリケーションを中断するのにには、CTRL キーを押しながら BREAK キーを使用します。|
@@ -44,7 +44,7 @@ start [<Title>] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 |\<Parameter>...|コマンドまたはプログラムに渡すパラメーターを指定します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 - コマンドとして、ファイルの名前を入力して、ファイルの関連付けを通じて非実行可能ファイルを実行できます。
 - 拡張子またはパスの修飾子のない最初のトークンとして文字列 CMD を含むコマンドを実行すると、CMD は COMSPEC 変数の値に置き換えられます。 これを取得できないように **cmd** 、現在のディレクトリからです。

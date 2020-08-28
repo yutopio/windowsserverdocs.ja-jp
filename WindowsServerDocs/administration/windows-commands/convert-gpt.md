@@ -1,18 +1,18 @@
 ---
 title: convert gpt
 description: Gpt の変換コマンドのリファレンス記事。マスターブートレコード (MBR) パーティションスタイルを持つ空のベーシックディスクを、GUID パーティションテーブル (GPT) パーティションスタイルを持つベーシックディスクに変換します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: b3b1b747-0a7a-4be2-8487-2c4be16ee190
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ec1066e0ac50536db915eed9df7a6076ba5f3879
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 04b1bacee89e7553aa4ed37337c4667bc93d5da3
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892572"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89025886"
 ---
 # <a name="convert-gpt"></a>convert gpt
 
@@ -22,7 +22,7 @@ ms.locfileid: "87892572"
 > ディスクをベーシック ディスクに変換するためには、そのディスクが空である必要があります。 ディスクを変換する前に、データのバックアップをとり、パーティションまたはボリュームをすべて削除してください。 GPT への変換に必要な最小ディスクサイズは 128 mb です。
 
 > [!NOTE]
-> このコマンドの使用方法については、「[マスターブートレコードディスクを GUID パーティションテーブルディスクに変更](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc725671(v=ws.11))する」を参照してください。
+> このコマンドの使用方法については、「 [マスターブートレコードディスクを GUID パーティションテーブルディスクに変更](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc725671(v=ws.11))する」を参照してください。
 
 ## <a name="syntax"></a>構文
 

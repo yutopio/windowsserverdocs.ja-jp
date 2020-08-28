@@ -1,18 +1,18 @@
 ---
 title: サブコマンドの設定-デバイス
 description: サブコマンドの set-Device の参照記事。事前設定されたコンピューターの属性を変更します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 401567f8-eaeb-4a2d-b811-140bb007028d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9593769d77d10eaff80b9d369e1f681f02c5d1fe
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 8d259a06918e5cf0f8983f84533a37d42f146ece
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87882278"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89036890"
 ---
 # <a name="subcommand-set-device"></a>サブコマンド: セット デバイス
 
@@ -34,7 +34,7 @@ wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [
 |[/BootProgram:<Relative path>]|RemoteInstall フォルダーから、指定したコンピューターが受信するネットワークブートプログラムへの相対パスを指定します。 例: **boot\x86\ pxeboot.com**|
 |[/WdsClientUnattend:<Relative path>]|Windows 展開サービスクライアントのインストール画面を自動化する無人セットアップファイルへの remoteInstall フォルダーからの相対パスを指定します。|
 |[/User: <Domain\User &#124; User@Domain>]|指定したユーザー、コンピューターをドメインに参加させるために必要な権限を与えるコンピューター アカウント オブジェクトのアクセス許可を設定します。|
-|[/JoinRights: {JoinOnly & #124 文字です。完全}]|ユーザーに割り当てられる権限の種類を指定します。<p>-   **Joinonly**では、ユーザーがコンピューターをドメインに参加させる前に、管理者がコンピューターアカウントをリセットする必要があります。<br />-   **Full**を使用すると、コンピューターをドメインに参加させる権限を含め、ユーザーにフルアクセスできます。|
+|[/JoinRights: {JoinOnly & #124 文字です。完全}]|ユーザーに割り当てられる権限の種類を指定します。<p>-   **Joinonly** では、ユーザーがコンピューターをドメインに参加させる前に、管理者がコンピューターアカウントをリセットする必要があります。<br />-   **Full** を使用すると、コンピューターをドメインに参加させる権限を含め、ユーザーにフルアクセスできます。|
 |[/JoinDomain: {[はい] (& a) #124 文字です。No}]|ドメインに、Windows 展開サービスのインストール中のこのコンピューター アカウントとコンピューターを参加する必要があるかどうかを指定します。 既定の設定は **[はい]** です。|
 |[/BootImagepath: <Relative path> ]|コンピューターが使用するブートイメージを remoteInstall フォルダーからの相対パスで指定します。|
 |[/ドメイン:<Domain>]|事前登録されたコンピューターを検索するドメインを指定します。 既定値は、ローカル ドメインです。|

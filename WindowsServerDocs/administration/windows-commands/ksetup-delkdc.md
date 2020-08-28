@@ -1,18 +1,18 @@
 ---
 title: ksetup delkdc
 description: Ksetup delkdc コマンドのリファレンス記事。 Kerberos 領域のキー配布センター (KDC) 名のインスタンスを削除します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7d6ec389-094c-4a7b-a78b-605497ddc289
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f57e409afc62b831590f371befee2775f5c9cce9
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 0ecc6048fb9c2b916603f2b30313dc21521fd821
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87887969"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89025606"
 ---
 # <a name="ksetup-delkdc"></a>ksetup delkdc
 
@@ -33,7 +33,7 @@ ksetup /delkdc <realmname> <KDCname>
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `<realmname>` | CORP など、大文字の DNS 名を指定します。CONTOSO.COM。 これは、 **ksetup**コマンドを実行したときに表示される既定の領域であり、KDC を削除する領域です。 |
+| `<realmname>` | CORP など、大文字の DNS 名を指定します。CONTOSO.COM。 これは、 **ksetup** コマンドを実行したときに表示される既定の領域であり、KDC を削除する領域です。 |
 | `<KDCname>` | 大文字と小文字が区別される完全修飾ドメイン名 (mitkdc.contoso.com など) を指定します。 |
 
 ### <a name="examples"></a>例

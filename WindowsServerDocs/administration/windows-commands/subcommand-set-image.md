@@ -1,18 +1,18 @@
 ---
 title: サブコマンドの設定-イメージ
 description: サブコマンドの参照記事。イメージの属性を変更します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 2ae03c86-7a13-4e38-9182-32e55fffd504
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 35fff7823b730c4b9cc98ed2daafd437f6eecc2e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ecb35deed9f938a7498aa282701034b5d9455233
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87882193"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89036820"
 ---
 # <a name="subcommand-set-image"></a>サブコマンド: セット イメージ
 
@@ -50,9 +50,9 @@ mediatype: {Boot &#124; Install}|画像の種類を指定します。|
 |/Description<Description>]|イメージの説明を設定します。|
 |[/有効: {Yes &#124; No}]|イメージを有効または無効にします。|
 |\mediaGroup:<Image group name>]|イメージを含むイメージ グループを指定します。 イメージ グループ名が指定されていないサーバーに 1 つだけのイメージ グループが存在する場合は、そのイメージ グループが使用されます。 サーバーに複数のイメージグループが存在する場合は、このオプションを使用してイメージグループを指定する必要があります。|
-|[/UserFilter: <SDDL> ]|イメージに対するユーザーフィルターを設定します。 フィルター文字列は SDDL (Security Descriptor Definition Language) 形式である必要があります。 イメージグループの**セキュリティ**オプションとは異なり、このオプションはイメージの定義を表示できるユーザーのみを制限し、実際のイメージファイルリソースは制限しないことに注意してください。 ファイルリソースへのアクセスを制限し、そのためにイメージグループ内のすべてのイメージにアクセスできるようにするには、イメージグループ自体にセキュリティを設定する必要があります。|
+|[/UserFilter: <SDDL> ]|イメージに対するユーザーフィルターを設定します。 フィルター文字列は SDDL (Security Descriptor Definition Language) 形式である必要があります。 イメージグループの **セキュリティ** オプションとは異なり、このオプションはイメージの定義を表示できるユーザーのみを制限し、実際のイメージファイルリソースは制限しないことに注意してください。 ファイルリソースへのアクセスを制限し、そのためにイメージグループ内のすべてのイメージにアクセスできるようにするには、イメージグループ自体にセキュリティを設定する必要があります。|
 |[/UnattendFile:<Unattend file path>]|イメージに関連付ける無人セットアップファイルへの完全パスを設定します。 例: **D:\Files\Unattend\Img1Unattend.xml**|
-|[/OverwriteUnattend: {Yes &#124; No}]|イメージに関連付けられている無人セットアップファイルが既に存在する場合は、 **/overwrite**を指定して無人セットアップファイルを上書きすることができます。 既定の設定は [**いいえ**] であることに注意してください。|
+|[/OverwriteUnattend: {Yes &#124; No}]|イメージに関連付けられている無人セットアップファイルが既に存在する場合は、 **/overwrite** を指定して無人セットアップファイルを上書きすることができます。 既定の設定は [ **いいえ**] であることに注意してください。|
 ## <a name="examples"></a>例
 ブートイメージの値を設定するには、次のいずれかを入力します。
 ```
