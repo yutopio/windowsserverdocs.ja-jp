@@ -1,18 +1,18 @@
 ---
 title: 詳細設定します。
 description: シャドウコピーの作成時に詳細出力を提供するかどうかを指定する、set verbose のリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 93cb93c9-666f-4c74-814b-1c404a949935
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1b3e406de89b392782fcf81d43b34046ca7f96bd
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 823c43e1ee6f42b36a922473b870c80d392e1f6c
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87882585"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89024906"
 ---
 # <a name="set-verbose"></a>詳細設定します。
 
@@ -30,7 +30,7 @@ set verbose {on | off}
 |-----------|-------------|
 |    {on    |    off}     |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 -   詳細出力モードがオンの場合 **設定** とメタデータの圧縮および抽出のライターの追加または除外の詳細を提供します。
 

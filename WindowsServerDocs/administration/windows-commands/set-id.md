@@ -1,18 +1,18 @@
 ---
 title: ID の設定
 description: Diskpart の Set ID の参照記事。フォーカスのあるパーティションの [パーティションの種類] フィールドを変更します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5793d7ad-827e-4285-b2c6-ae60eeb0e886
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: afcaa134cd9af11d37130e17012a7cf8a147afd4
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: e3b9ce5b885ca9c8277842b16c816274fff0ead8
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87882625"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89024956"
 ---
 # <a name="set-id"></a>ID の設定
 
@@ -21,7 +21,7 @@ ms.locfileid: "87882625"
 系列 ID の Diskpart コマンドでは、フォーカスのあるパーティションのパーティションの種類フィールドを変更します。
 
 > [!IMPORTANT]
-> このコマンドは、供給元で使用するため \(Oem\) のみです。 このパラメーターを持つパーティションの種類フィールドを変更すると、エラーが発生したり、起動できなくなる、コンピューターが発生する可能性があります。 OEM または gpt ディスクの使用経験がない場合は、このパラメーターを使用して、gpt ディスク上のパーティションの種類のフィールドを変更しないでください。 代わりに、常に[create partition efi](create-partition-efi.md)コマンドを使用して efi システムパーティションを作成し、 [create partition msr](create-partition-msr.md)コマンドを使用して Microsoft 予約パーティションを作成します。また、ID パラメーターを指定せずに create partition [primary](create-partition-primary.md)コマンドを実行して、gpt ディスク上にプライマリパーティションを作成します。
+> このコマンドは、供給元で使用するため \(Oem\) のみです。 このパラメーターを持つパーティションの種類フィールドを変更すると、エラーが発生したり、起動できなくなる、コンピューターが発生する可能性があります。 OEM または gpt ディスクの使用経験がない場合は、このパラメーターを使用して、gpt ディスク上のパーティションの種類のフィールドを変更しないでください。 代わりに、常に [create partition efi](create-partition-efi.md) コマンドを使用して efi システムパーティションを作成し、 [create partition msr](create-partition-msr.md) コマンドを使用して Microsoft 予約パーティションを作成します。また、ID パラメーターを指定せずに create partition [primary](create-partition-primary.md) コマンドを実行して、gpt ディスク上にプライマリパーティションを作成します。
 
 
 
@@ -40,7 +40,7 @@ set id={ <byte> | <GUID> } [override] [noerr]
 | override  |                                                                パーティションの種類を変更する前に、ボリューム上のファイルシステムのマウントを強制的に解除します。 実行すると、 **id** コマンドを DiskPart はロックし、ボリューム上のファイル システムをマウント解除を試みます。 場合 **オーバーライド** が指定されていないファイル システムをロックする呼び出しが失敗して \(などの開いているハンドルがあるため\), 、操作は失敗します。 **オーバーライド** が指定されている場合でも、ファイル システムのロックへの呼び出しが失敗すると、および、ボリュームに開いているハンドルが無効になり、DiskPart がマウントが解除を強制します。<p>このコマンドでは、Windows 7 および Windows Server 2008 R2 の使用のみです。                                                                 |
 |   noerr   |                                                                                                                                                                                                                                                                    スクリプト作成にのみ使用されます。 エラーが発生しても、エラーが発生しなかったかのように DiskPart はコマンドの処理を続けます。 このパラメーターは、エラー発生すると、DiskPart はエラー コードを生成して終了します。                                                                                                                                                                                                                                                                    |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 -   前述の制限、以外 DiskPart 調べませんを指定する値の有効性 \(することを確認バイトの 16 進形式または GUID を除く\)します。
 

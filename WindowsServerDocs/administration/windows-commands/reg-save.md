@@ -1,18 +1,18 @@
 ---
 title: reg save
 description: 指定したファイルにレジストリの指定したサブキー、エントリ、および値のコピーを保存する reg save コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: b326482b-c8af-467d-a20c-0481eeda3d5c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 187811b277ca109ac3f3e1517aeb169bd8baca15
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 17c1bd3439d98ee2e0aa64cb3000f94dfbab41f4
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87884016"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89025006"
 ---
 # <a name="reg-save"></a>reg save
 
@@ -28,18 +28,18 @@ reg save <keyname> <filename> [/y]
 
 | パラメーター | 説明 |
 |--|--|
-| `<keyname>` | サブキーの完全なパスを指定します。 リモートコンピューターを指定するには、コンピューター名 (形式) を `\\<computername>\` *keyname*の一部として含めます。 省略 `\\<computername>\` すると、操作は既定でローカルコンピューターに設定されます。 *Keyname*には、有効なルートキーを含める必要があります。 ローカルコンピューターの有効なルートキーは、 **HKLM**、 **HKCU**、 **HKCR**、 **HKU**、および**HKCC**です。 リモートコンピューターが指定されている場合、有効なルートキーは**HKLM**と**HKU**です。 レジストリキー名にスペースが含まれている場合は、キー名を引用符で囲みます。 |
+| `<keyname>` | サブキーの完全なパスを指定します。 リモートコンピューターを指定するには、コンピューター名 (形式) を `\\<computername>\` *keyname*の一部として含めます。 省略 `\\<computername>\` すると、操作は既定でローカルコンピューターに設定されます。 *Keyname*には、有効なルートキーを含める必要があります。 ローカルコンピューターの有効なルートキーは、 **HKLM**、 **HKCU**、 **HKCR**、 **HKU**、および **HKCC**です。 リモートコンピューターが指定されている場合、有効なルートキーは **HKLM** と **HKU**です。 レジストリキー名にスペースが含まれている場合は、キー名を引用符で囲みます。 |
 | `<filename>` | 作成されたファイルの名前とパスを指定します。 パスが指定されていない場合は、現在のパスが使用されます。 |
-| /y | 確認を求めるメッセージを表示せずに、既存のファイルを*filename*という名前で上書きします。 |
+| /y | 確認を求めるメッセージを表示せずに、既存のファイルを *filename* という名前で上書きします。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-- レジストリエントリを編集する前に、 **reg save**コマンドを使用して親サブキーを保存する必要があります。 編集に失敗した場合は、 **reg 復元**操作を使用して元のサブキーを復元できます。
+- レジストリエントリを編集する前に、 **reg save** コマンドを使用して親サブキーを保存する必要があります。 編集に失敗した場合は、 **reg 復元** 操作を使用して元のサブキーを復元できます。
 
 - **Reg 保存**操作の戻り値は次のとおりです。
 
-    | 値 | 説明 |
+    | [値] | 説明 |
     |--|--|
     | 0 | 成功 |
     | 1 | 障害 |

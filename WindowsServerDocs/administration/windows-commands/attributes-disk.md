@@ -1,25 +1,25 @@
 ---
 title: attributes disk
 description: ディスクの属性を表示、設定、または消去する disk コマンドの属性に関するリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: eed57071-c1c6-4394-9542-62b52a878c92
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d6ebdd831a9ddfe1224c641a979ed972672a3ba3
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 72b4a99c36085062441a7a8751a065dad1dd0c51
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895492"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029200"
 ---
 # <a name="attributes-disk"></a>attributes disk
 
 ディスクの属性を表示、設定、またはクリアします。 このコマンドを使用してディスクの現在の属性を表示する場合、スタートアップディスク属性は、コンピューターを起動するために使用されるディスクを表します。 ダイナミックミラーの場合は、ブートボリュームのブートプレックスを含むディスクが表示されます。
 
 > [!IMPORTANT]
-> [**ディスクの属性**] コマンドを正常に実行するには、ディスクを選択する必要があります。 使用して、 **select ディスク** コマンド ディスクを選択し、それにフォーカスをします。
+> [ **ディスクの属性** ] コマンドを正常に実行するには、ディスクを選択する必要があります。 使用して、 **select ディスク** コマンド ディスクを選択し、それにフォーカスをします。
 
 ## <a name="syntax"></a>構文
 

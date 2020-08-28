@@ -1,18 +1,18 @@
 ---
 title: mstsc
 description: Mstsc コマンドのリファレンス記事。リモートデスクトップセッションホストサーバーまたはその他のリモートコンピューターへの接続を作成し、既存のリモートデスクトップ接続 (.rdp) 構成ファイルを編集して、クライアント接続マネージャーで作成された従来の接続ファイルを新しい .rdp 接続ファイルに移行します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 59801227-1e7e-4dbd-96e6-f54102a3ce92
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: abf4824c50b931944c96307f6c9df42e6924b638
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 684ab29a9e1ded85443a2ec2d05ad4f55ec2cd5c
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886157"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89025216"
 ---
 # <a name="mstsc"></a>mstsc
 
@@ -40,15 +40,15 @@ mstsc.exe /migrate
 | /h`<height>` | リモート デスクトップ ウィンドウの高さを指定します。 |
 | /public | リモートデスクトップをパブリックモードで実行します。 パブリックモードでは、パスワードとビットマップはキャッシュされません。 |
 | /span | リモートデスクトップの幅と高さをローカル仮想デスクトップと照合し、必要に応じて複数のモニターにまたがっています。 |
-| /edit`<connectionfile>` | 指定した .rdp ファイルを編集用に開きます。 |
+| /edit `<connectionfile>` | 指定した .rdp ファイルを編集用に開きます。 |
 | /migrate | クライアント接続マネージャーで作成された従来の接続ファイルを新しい .rdp 接続ファイルに移行します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-- 既定の .rdp は、ユーザーごとに隠しファイルとしてユーザーの**Documents**フォルダーに格納されます。
+- 既定の .rdp は、ユーザーごとに隠しファイルとしてユーザーの **Documents** フォルダーに格納されます。
 
-- ユーザーが作成した .rdp ファイルは、既定ではユーザーの**Documents**フォルダーに保存されますが、どこにでも保存できます。
+- ユーザーが作成した .rdp ファイルは、既定ではユーザーの **Documents** フォルダーに保存されますが、どこにでも保存できます。
 
 - 複数のモニターにまたがる場合、モニターは同じ解像度を使用する必要があり、水平方向 (つまりサイドバイサイド) に調整する必要があります。 現在、クライアントシステム上で複数のモニターを垂直方向にまたがることはサポートされていません。
 
@@ -60,7 +60,7 @@ mstsc.exe /migrate
 mstsc /f
 ```
 
-編集するためにファイル*名 .rdp*という名前のファイルを開くには、次のように入力します。
+編集するためにファイル *名 .rdp* という名前のファイルを開くには、次のように入力します。
 
 ```
 mstsc /edit filename.rdp

@@ -1,18 +1,18 @@
 ---
 title: AllMulticastTransmissions
 description: サーバー上のすべてのマルチキャスト転送に関する情報を表示する AllMulticastTransmissions のリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 95b8fb79-7a8a-4f0c-88f4-92bc1111c67f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c732559e1f302278f21044884ef93f7efdf05ce7
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: c0c7c4e77c2ad23fab864839cde03ed4f4806c80
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879848"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89035960"
 ---
 # <a name="get-allmulticasttransmissions"></a>AllMulticastTransmissions
 
@@ -41,10 +41,10 @@ wdsutil /Get-AllMulticastTransmissions [/Server:<Server name>] [/Show:{Boot | In
 
 ## <a name="examples"></a>例
 すべての転送に関する情報を表示するには、次のように入力します。
-- Windows Server 2008:`wdsutil /Get-AllMulticastTransmissions`
+- Windows Server 2008: `wdsutil /Get-AllMulticastTransmissions`
 - Windows Server 2008 R2: `wdsutil /Get-AllMulticastTransmissions /Show:All` 表示するには非アクティブ化の転送を除くすべての転送に関する情報を入力します。
-- Windows Server 2008:`wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:Clients /ExcludedeletePending`
-- Windows Server 2008 R2:`wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:All /details:Clients /ExcludedeletePending`
+- Windows Server 2008: `wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:Clients /ExcludedeletePending`
+- Windows Server 2008 R2: `wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:All /details:Clients /ExcludedeletePending`
   ## <a name="additional-references"></a>その他の参照情報
   - [コマンドライン構文のキー](command-line-syntax-key.md) 
   [/Get-multicasttransmission コマンド](using-the-get-multicasttransmission-command.md) 

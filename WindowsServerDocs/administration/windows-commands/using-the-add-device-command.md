@@ -1,18 +1,18 @@
 ---
 title: デバイスの追加
 description: Active directory ドメインサービスでコンピューターを事前にステージングする追加デバイスのリファレンス記事です。 プレステージしたコンピューターは、既知のコンピューターとも呼ばれます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1e599cc4-464a-421b-b6bb-c101af154131
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d23e5a2bc69b782e635fa9a47158274796715edf
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 89713dbfa28e552fa78a619bc5f5337d65460f22
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87897020"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89024526"
 ---
 # <a name="add-device"></a>デバイスの追加
 
@@ -34,7 +34,7 @@ wdsutil /add-Device /Device:<Device name> /ID:<UUID | MAC address> [/ReferralSer
 |[/BootProgram:<Relative path>]|RemoteInstall フォルダからこのコンピュータが受信するネットワークブートプログラムへの相対パスを指定します。 例: boot\x86\ pxeboot.com|
 |[/WdsClientUnattend:<Relative path>]|Windows 展開サービスクライアントのインストール画面を自動化する無人インストールファイルへの remoteInstall フォルダーからの相対パスを指定します。|
 |[/User: <Domain\User &#124; User@Domain>]|指定したユーザー、コンピューターをドメインに参加させるために必要な権限を与えるコンピューター アカウント オブジェクトのアクセス許可を設定します。|
-|[/JoinRights: {JoinOnly & #124 文字です。完全}]|ユーザーに割り当てられる権限の種類を指定します。<p>-   **Joinonly**では、ユーザーがコンピューターをドメインに参加させる前に、管理者がコンピューターアカウントをリセットする必要があります。<br />-   **Full**を指定すると、コンピューターをドメインに参加させる権限を含む、ユーザーにフルアクセスできます。|
+|[/JoinRights: {JoinOnly & #124 文字です。完全}]|ユーザーに割り当てられる権限の種類を指定します。<p>-   **Joinonly** では、ユーザーがコンピューターをドメインに参加させる前に、管理者がコンピューターアカウントをリセットする必要があります。<br />-   **Full** を指定すると、コンピューターをドメインに参加させる権限を含む、ユーザーにフルアクセスできます。|
 |[/JoinDomain: {[はい] (& a) #124 文字です。No}]|ドメインに、オペレーティング システムのインストール中のこのコンピューター アカウントとコンピューターを参加する必要があるかどうかを指定します。 既定値は **[はい]** です。|
 |[/BootImagepath: <Relative path> ]|このコンピューターで使用するブートイメージを remoteInstall フォルダーからの相対パスで指定します。|
 |[/OU:<DN of OU>]|コンピューター アカウント オブジェクトを作成する必要が組織単位の識別名。 例: **OU = MyOU, CN テスト, DC = Domain, DC = com を =** です。 既定の場所は、既定のコンピュータのコンテナーです。|

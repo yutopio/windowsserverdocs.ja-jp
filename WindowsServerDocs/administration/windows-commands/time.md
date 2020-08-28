@@ -1,18 +1,18 @@
 ---
 title: time
 description: システム時刻を設定および表示する方法について説明します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1276a257-7283-41da-ae80-fb4cfb311f9d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1548952c7fcd6d3edcc2dcc0fb3459e27cd0efbb
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ca279bfacbc3fab3c1a4b56f33f5000fcab9d589
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87881428"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89024536"
 ---
 # <a name="time"></a>time
 
@@ -36,7 +36,7 @@ time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 |/t|ときに、新しいメッセージを表示せずには、現在の時刻を表示します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 -   現在の時刻を変更するには、管理者の資格情報が必要です。
 -   値を区切る必要があります *HH*, 、*MM*, 、および *SS* コロン (::)。 *SS* と *NN* ピリオド (.) で区切る必要があります。

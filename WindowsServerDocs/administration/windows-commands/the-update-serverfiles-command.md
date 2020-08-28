@@ -1,18 +1,18 @@
 ---
 title: 更新-ServerFiles
 description: 更新プログラム ServerFiles のリファレンス記事。サーバーの%Windir%\System32\RemInst フォルダーに格納されている最新のファイルを使用して、REMINST 共有フォルダー内のファイルを更新します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 23aa79df-38c6-401e-91bd-cd23811b30b4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f60e5b5c5208d5718a287fd2d012368d13fad9f9
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 4ba2ed4129f1575d5057d2fc88500c0c47e291fc
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87881462"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89036110"
 ---
 # <a name="update-serverfiles"></a>更新-ServerFiles
 

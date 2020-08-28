@@ -1,24 +1,24 @@
 ---
 title: atmadm
 description: 非同期転送モード (atM) ネットワーク上の atM コールマネージャーによって登録された接続とアドレスを監視する、atmadm コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 37156c2e-c4d4-4fd8-a03d-245fb60bf996
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 608783d393aa3df97d1c1a5f524c1e1e3ed1856e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: b79ecdad00872cb67beb38b7cfe35bbd2c45379e
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895521"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029270"
 ---
 # <a name="atmadm"></a>atmadm
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-AtM コールマネージャーによって非同期転送モード (atM) ネットワークに登録されている接続とアドレスを監視します。 **Atmadm**を使用して、atM アダプターでの着信および発信呼び出しの統計情報を表示できます。 パラメーターを指定せずに使用します。 **atmadm**には、アクティブな atM 接続の状態を監視するための統計情報が表示されます。
+AtM コールマネージャーによって非同期転送モード (atM) ネットワークに登録されている接続とアドレスを監視します。 **Atmadm**を使用して、atM アダプターでの着信および発信呼び出しの統計情報を表示できます。 パラメーターを指定せずに使用します。 **atmadm** には、アクティブな atM 接続の状態を監視するための統計情報が表示されます。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ atmadm [/c][/a][/s]
 | /s | アクティブな atM 接続の状態を監視するための統計情報を表示します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 - **Atmadm/c**コマンドを実行すると、次のような出力が生成されます。
 
@@ -70,11 +70,11 @@ atmadm [/c][/a][/s]
                               Rx:UBR,Peak 16953936,Avg 16953936,MaxSdu 9180
     ```
 
-    次の表に、 **atmadm/c**サンプル出力の各要素について説明します。
+    次の表に、 **atmadm/c** サンプル出力の各要素について説明します。
 
     | データの種類 | 画面表示 | 説明 |
     | -------- | --------- | -------- |
-    | 接続情報 | /アウトの選択 | 呼び出しの方向。 **の**は、別のデバイスからの atM ネットワークアダプターに対するものです。  これは、atM ネットワークアダプターから別のデバイスに**送信**されます。 |
+    | 接続情報 | /アウトの選択 | 呼び出しの方向。 **の** は、別のデバイスからの atM ネットワークアダプターに対するものです。  これは、atM ネットワークアダプターから別のデバイスに**送信**されます。 |
     | PMP | ポイント対 multipoint 呼び出し。 |
     | P-P | ポイントツーポイントの呼び出し。 |
     | SVC | スイッチの仮想回線上に接続しています。 |
@@ -108,7 +108,7 @@ atmadm [/c][/a][/s]
     Signaling and ILMI Packets Received        = 34989
     ```
 
-    次の表に、 **atmadm/s**サンプル出力の各要素について説明します。
+    次の表に、 **atmadm/s** サンプル出力の各要素について説明します。
 
     | コールマネージャーの統計情報 | 説明 |
     | ------------- | -------- |

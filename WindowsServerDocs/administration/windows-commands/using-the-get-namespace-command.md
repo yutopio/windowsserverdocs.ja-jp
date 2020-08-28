@@ -1,18 +1,18 @@
 ---
 title: get-名前空間
 description: 名前空間の参照記事。カスタム名前空間に関する情報を表示します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: ea641bab-e97b-4909-918e-447730027dc1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e998334b8297b06bf5eb23b9106acd3770504ffb
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 1fddc140936643b32bbb27ff82578a01b8b7c893
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896939"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029510"
 ---
 # <a name="get-namespace"></a>get-名前空間
 
@@ -43,8 +43,8 @@ wdsutil /Get-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/det
 wdsutil /Get-Namespace /Namespace:Custom Auto 1
 ```
 名前空間と接続されているクライアントに関する情報を表示するには、次のいずれかを入力します。
-- Windows Server 2008:`wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /Show:Clients`
-- Windows Server 2008 R2:`wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /details:Clients`
+- Windows Server 2008: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /Show:Clients`
+- Windows Server 2008 R2: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /details:Clients`
   ## <a name="additional-references"></a>その他の参照情報
   - [コマンドライン構文のキー](command-line-syntax-key.md) 
   [Get AllNamespaces コマンド](using-the-get-allnamespaces-command.md) 

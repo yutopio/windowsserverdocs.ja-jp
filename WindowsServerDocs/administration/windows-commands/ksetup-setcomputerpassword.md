@@ -1,25 +1,25 @@
 ---
 title: ksetup setcomputerpassword
 description: Ksetup setcomputerpassword コマンドの参照記事。ローカルコンピューターのパスワードを設定します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: e307d8f6-3b93-4c24-ac04-f31549f7dc7d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8d9dba34490616b07671ada16e0c76f0122c3d6a
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: bdddfa424b1f34e084c9e03cb441759a64b903c1
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87887769"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89025376"
 ---
 # <a name="ksetup-setcomputerpassword"></a>ksetup setcomputerpassword
 
 ローカルコンピューターのパスワードを設定します。 このコマンドはコンピューターアカウントのみに影響し、パスワードの変更を有効にするには再起動が必要です。
 
 > [!IMPORTANT]
-> コンピューターアカウントのパスワードは、レジストリまたは**ksetup**コマンドからの出力として表示されません。
+> コンピューターアカウントのパスワードは、レジストリまたは **ksetup** コマンドからの出力として表示されません。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ ksetup /setcomputerpassword <password>
 
 ### <a name="examples"></a>例
 
-ローカルコンピューターのコンピューターアカウントのパスワードを*IPops897*から*ipop $ 897!* に変更するには、次のように入力します。
+ローカルコンピューターのコンピューターアカウントのパスワードを *IPops897* から *ipop $ 897!* に変更するには、次のように入力します。
 
 ```
 ksetup /setcomputerpassword IPop$897!

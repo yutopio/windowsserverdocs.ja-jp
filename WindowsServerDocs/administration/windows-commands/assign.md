@@ -1,18 +1,18 @@
 ---
 title: assign
 description: Assign コマンドの参照記事。フォーカスのあるボリュームにドライブ文字またはマウントポイントを割り当てます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 57912b73-622e-489b-b053-a369021ba8e1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd0e03c0705a65ad03c3627222ae5b6003c1cdfa
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: a453790b3622804138794b9656b18ed160e6f676
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895556"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029320"
 ---
 # <a name="assign"></a>assign
 
@@ -36,7 +36,7 @@ assign [{letter=<d> | mount=<path>}] [noerr]
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `letter=<d>` | ボリュームに割り当てるドライブ文字です。 |
-| `mount=<path>` | ボリュームに割り当てるマウントポイントのパス。 このコマンドの使用方法については、「[ドライブにマウントポイントフォルダーパスを割り当てる](../../storage/disk-management/assign-a-mount-point-folder-path-to-a-drive.md)」を参照してください。 |
+| `mount=<path>` | ボリュームに割り当てるマウントポイントのパス。 このコマンドの使用方法については、「 [ドライブにマウントポイントフォルダーパスを割り当てる](../../storage/disk-management/assign-a-mount-point-folder-path-to-a-drive.md)」を参照してください。 |
 | noerr | スクリプト専用です。 エラーが発生しても、エラーが発生しなかったかのように DiskPart はコマンドの処理を続けます。 このパラメーターは、エラー発生すると、DiskPart はエラー コードを生成して終了します。 |
 
 ## <a name="examples"></a>例

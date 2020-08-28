@@ -1,18 +1,18 @@
 ---
 title: msinfo32
 description: Msinfo32 コマンドの参照記事。システム情報ツールを開き、ローカルコンピューター上のハードウェア、システムコンポーネント、およびソフトウェア環境の包括的なビューを表示します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: a38f31d7-1766-4103-becc-9d0b87c2826d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 29ad95b9772e7fbb738fb6d1f1eb3ff11de3b0c8
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 30a1cdc45ff9c6efad94f620148ffdf1bf00492d
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886164"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89025246"
 ---
 # <a name="msinfo32"></a>msinfo32
 
@@ -20,7 +20,7 @@ ms.locfileid: "87886164"
 
 システム情報ツールを開き、ローカルコンピューター上のハードウェア、システムコンポーネント、およびソフトウェア環境の包括的なビューを表示します。
 
-システム情報のカテゴリによっては、大量のデータが含まれている場合があります。 **Start/wait**コマンドを使用すると、これらのカテゴリのレポートパフォーマンスを最適化できます。 詳細については、「[システム情報](/previous-versions/windows/it-pro/windows-server-2003/cc783305(v=ws.10))」を参照してください。
+システム情報のカテゴリによっては、大量のデータが含まれている場合があります。 **Start/wait**コマンドを使用すると、これらのカテゴリのレポートパフォーマンスを最適化できます。 詳細については、「 [システム情報](/previous-versions/windows/it-pro/windows-server-2003/cc783305(v=ws.10))」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -32,16 +32,16 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computername>] [/show
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `<path>` | *C:\Folder1\File1.xxx*の形式で開くファイルを指定します。 *C*はドライブ文字、 *Folder1*はフォルダー、 *File1*はファイル名、 *xxx*はファイル名拡張子です。<p>このファイルには、 **.nfo**、 **.xml**、 **.txt**、または **.cab**ファイルを指定できます。 |
+| `<path>` | *C:\Folder1\File1.xxx*の形式で開くファイルを指定します。 *C*はドライブ文字、 *Folder1*はフォルダー、 *File1*はファイル名、 *xxx*はファイル名拡張子です。<p>このファイルには、 **.nfo**、 **.xml**、 **.txt**、または **.cab** ファイルを指定できます。 |
 | `<computername>` | ターゲットコンピューターまたはローカルコンピューターの名前を指定します。 UNC 名、IP アドレス、または完全なコンピューター名を指定できます。 |
 | `<categoryID>` | カテゴリ項目の ID を指定します。 **/Showcategories**を使用して、カテゴリ ID を取得できます。 |
 | /pch | システム情報ツールのシステム履歴ビューを表示します。 |
-| /nfo | エクスポートされたファイルを **.nfo**ファイルとして保存します。 *Path*に指定されているファイル名の末尾が **.nfo**でない場合、 **.nfo**拡張子はファイル名に自動的に追加されます。 |
-| /report」 | ファイルを*パス*にテキストファイルとして保存します。 ファイル名は*パス*に表示されているとおりに保存されます。 .Txt 拡張子は、path に指定されていない限り、ファイルに追加されません。 |
+| /nfo | エクスポートされたファイルを **.nfo** ファイルとして保存します。 *Path*に指定されているファイル名の末尾が **.nfo**でない場合、 **.nfo**拡張子はファイル名に自動的に追加されます。 |
+| /report」 | ファイルを *パス* にテキストファイルとして保存します。 ファイル名は *パス*に表示されているとおりに保存されます。 .Txt 拡張子は、path に指定されていない限り、ファイルに追加されません。 |
 | /コンピューター | 指定されたリモートコンピューターのシステム情報ツールを起動します。 リモートコンピューターにアクセスするには、適切なアクセス許可が必要です。 |
 | /showcategories | 表示またはローカライズされた名前を表示するのではなく、使用可能なすべてのカテゴリ Id を使用してシステム情報ツールを起動します。 たとえば、[ソフトウェア環境] カテゴリが [ **Swenv** ] カテゴリとして表示されます。 |
-| /category | 指定されたカテゴリでシステム情報を開始します。 使用可能なカテゴリ Id の一覧を表示するには、 **/showcategories**を使用します。 |
-| /カテゴリ | 指定されたカテゴリまたはカテゴリのみを含むシステム情報を開始します。 また、選択したカテゴリに出力を制限します。 使用可能なカテゴリ Id の一覧を表示するには、 **/showcategories**を使用します。 |
+| /category | 指定されたカテゴリでシステム情報を開始します。 使用可能なカテゴリ Id の一覧を表示するには、 **/showcategories** を使用します。 |
+| /カテゴリ | 指定されたカテゴリまたはカテゴリのみを含むシステム情報を開始します。 また、選択したカテゴリに出力を制限します。 使用可能なカテゴリ Id の一覧を表示するには、 **/showcategories** を使用します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
 ### <a name="examples"></a>例
@@ -64,7 +64,7 @@ msinfo32 /categories +all -loadedmodules
 msinfo32 /nfo syssum.nfo /categories +systemsummary
 ```
 
-リソースの競合情報を表示し、*リソースの競合*に関する情報が含まれている .nfo ファイルを作成するには、次のように入力します。
+リソースの競合情報を表示し、 *リソースの競合*に関する情報が含まれている .nfo ファイルを作成するには、次のように入力します。
 
 ```
 msinfo32 /nfo conflicts.nfo /categories +componentsproblemdevices+resourcesconflicts+resourcesforcedhardware

@@ -1,26 +1,26 @@
 ---
 title: add volume
 description: '[ボリュームの追加] コマンドの参照記事。シャドウコピーセットにボリュームを追加します。これはシャドウコピーするボリュームのセットです。'
-ms.topic: article
+ms.topic: reference
 ms.assetid: b7d4d35d-8bda-46d2-8df5-eb598cecaaba
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 374fec353397916fa76952401571dee92073dd59
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 4cf64e98c498f16032963f0b09a5aec4df162452
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895594"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89029440"
 ---
 # <a name="add-volume"></a>add volume
 
 シャドウコピーするボリュームのセットであるボリュームをシャドウコピーセットに追加します。 シャドウコピーが作成されると、環境変数によってエイリアスがシャドウ ID にリンクされるため、エイリアスをスクリプト作成に使用できます。
 
-ボリュームは一度に1つずつ追加されます。 ボリュームを追加するたびに、そのボリュームのシャドウコピーの作成を VSS がサポートしているかどうかがチェックされます。 このチェックは、後で**set コンテキスト**コマンドを使用することによって無効にすることができます。
+ボリュームは一度に1つずつ追加されます。 ボリュームを追加するたびに、そのボリュームのシャドウコピーの作成を VSS がサポートしているかどうかがチェックされます。 このチェックは、後で **set コンテキスト** コマンドを使用することによって無効にすることができます。
 
-このコマンドは、シャドウコピーを作成するために必要です。 パラメーターを指定せずに使用する場合は、[**ボリュームの追加**] コマンドプロンプトでヘルプを表示します。
+このコマンドは、シャドウコピーを作成するために必要です。 パラメーターを指定せずに使用する場合は、[ **ボリュームの追加** ] コマンドプロンプトでヘルプを表示します。
 
 ## <a name="syntax"></a>構文
 
