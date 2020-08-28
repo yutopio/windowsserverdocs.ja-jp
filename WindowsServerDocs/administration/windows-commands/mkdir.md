@@ -1,22 +1,22 @@
 ---
 title: mkdir
 description: ディレクトリまたはサブディレクトリを作成する mkdir コマンドの参照記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 033a57a2-5deb-4c98-aa78-61ce8df2a330
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: afff7a7985c5934a8566162da7307ad8676a50f9
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 3ded16e2befe952541dfaac754b0d10c7c128f0a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886456"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037840"
 ---
 # <a name="mkdir"></a>mkdir
 
-ディレクトリまたはサブディレクトリを作成します。 既定で有効になっているコマンド拡張機能では、単一の**mkdir**コマンドを使用して、指定されたパスに中間ディレクトリを作成することができます。
+ディレクトリまたはサブディレクトリを作成します。 既定で有効になっているコマンド拡張機能では、単一の **mkdir** コマンドを使用して、指定されたパスに中間ディレクトリを作成することができます。
 
 > [!NOTE]
 > このコマンドは、 [md コマンド](md.md)と同じです。
@@ -37,19 +37,19 @@ mkdir [<drive>:]<path>
 
 ### <a name="examples"></a>例
 
-現在のディレクトリ内に*Directory1*という名前のディレクトリを作成するには、次のように入力します。
+現在のディレクトリ内に *Directory1* という名前のディレクトリを作成するには、次のように入力します。
 
 ```
 mkdir Directory1
 ```
 
-ルートディレクトリ内に、コマンド拡張機能が有効になっているディレクトリツリー *Taxes\Property\Current*を作成するには、次のように入力します。
+ルートディレクトリ内に、コマンド拡張機能が有効になっているディレクトリツリー *Taxes\Property\Current* を作成するには、次のように入力します。
 
 ```
 mkdir \Taxes\Property\Current
 ```
 
-前の例と同じようにルートディレクトリ内にディレクトリツリー *Taxes\Property\Current*を作成するには、コマンド拡張機能を無効にして、次の一連のコマンドを入力します。
+前の例と同じようにルートディレクトリ内にディレクトリツリー *Taxes\Property\Current* を作成するには、コマンド拡張機能を無効にして、次の一連のコマンドを入力します。
 
 ```
 mkdir \Taxes

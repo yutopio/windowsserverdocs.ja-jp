@@ -1,18 +1,18 @@
 ---
 title: change user
 description: '[ユーザーの変更] コマンドの参照記事。リモートデスクトップセッションホストサーバーのインストールモードを変更します。'
-ms.topic: article
+ms.topic: reference
 ms.assetid: 6202f024-8cf5-411e-89b1-ee37ff46499d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca78126095b11ca7bf900d10c253cd7ad19fcc12
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 7c473349b75a5963cb66997ea568f5634eea194d
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87892896"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89031150"
 ---
 # <a name="change-user"></a>change user
 
@@ -21,7 +21,7 @@ ms.locfileid: "87892896"
 リモートデスクトップセッションホストサーバーのインストールモードを変更します。
 
 > [!NOTE]
-> Windows Server 2008 R2 で、「ターミナル サービス」は「リモート デスクトップ サービス」に名前変更されました。 最新バージョンの新機能については、「 [Windows Server でのリモートデスクトップサービスの新](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11))機能」を参照してください。
+> 最新バージョンの新機能については、「 [Windows Server でのリモートデスクトップサービスの新](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11))機能」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -38,17 +38,17 @@ change user {/execute | /install | /query}
 | /query | .Ini ファイルマッピングの現在の設定を表示します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-- アプリケーションをインストールする前に、 **change user/install**を使用して、アプリケーションの .ini ファイルをシステムディレクトリに作成します。 これらのファイルは、ユーザー固有の .ini ファイルが作成されるときにソースとして使用されます。 アプリケーションをインストールしたら、 **change user/execute**を使用して、標準 .ini ファイルマッピングに戻します。
+- アプリケーションをインストールする前に、 **change user/install** を使用して、アプリケーションの .ini ファイルをシステムディレクトリに作成します。 これらのファイルは、ユーザー固有の .ini ファイルが作成されるときにソースとして使用されます。 アプリケーションをインストールしたら、 **change user/execute** を使用して、標準 .ini ファイルマッピングに戻します。
 
 - アプリを初めて実行するときに、ホームディレクトリで .ini ファイルが検索されます。 .Ini ファイルがホームディレクトリに見つからず、system ディレクトリにある場合は、リモートデスクトップサービスによって、.ini ファイルがホームディレクトリにコピーされ、各ユーザーがアプリケーションの .ini ファイルのコピーを一意に持つことができます。 新しい .ini ファイルがホームディレクトリに作成されます。
 
 - 各ユーザーは、アプリケーションの .ini ファイルの一意のコピーを持っている必要があります。 これにより、異なるユーザーがアプリケーション構成に互換性のないインスタンスを持つ可能性があります (たとえば、既定のディレクトリや画面の解像度が異なる)。
 
-- システムで**change user/install**が実行されている場合、いくつかの処理が行われます。 作成されたすべてのレジストリエントリは、 **\Software\microsoft\windows NT\Currentversion\Terminal のインストール**で、 **\ software**サブキーまたは**\ MACHINE**サブキーの HKEY_LOCAL_MACHINE 下にシャドウされます。 **HKEY_CURRENT_USER**に追加されたサブキーは、 **\ software**サブキーの下にコピーされ、 **HKEY_LOCAL_MACHINE**に追加されたサブキーは**\ マシン**サブキーの下にコピーされます。 アプリケーションが GetWindowsdirectory などのシステムコールを使用して Windows ディレクトリに対してクエリを行う場合、rd セッションホストサーバーは systemroot ディレクトリを返します。 WritePrivateProfileString などのシステムコールを使用して .ini ファイルのエントリが追加された場合、そのエントリは、systemroot ディレクトリの .ini ファイルに追加されます。
+- システムで **change user/install**が実行されている場合、いくつかの処理が行われます。 作成されたすべてのレジストリエントリは、 **\Software\microsoft\windows NT\Currentversion\Terminal のインストール**で、 **\ software** サブキーまたは **\ MACHINE** サブキーの HKEY_LOCAL_MACHINE 下にシャドウされます。 **HKEY_CURRENT_USER**に追加されたサブキーは、 **\ software**サブキーの下にコピーされ、 **HKEY_LOCAL_MACHINE**に追加されたサブキーは**\ マシン**サブキーの下にコピーされます。 アプリケーションが GetWindowsdirectory などのシステムコールを使用して Windows ディレクトリに対してクエリを行う場合、rd セッションホストサーバーは systemroot ディレクトリを返します。 WritePrivateProfileString などのシステムコールを使用して .ini ファイルのエントリが追加された場合、そのエントリは、systemroot ディレクトリの .ini ファイルに追加されます。
 
-- システムがを返して**ユーザー/execute を変更**しようとしたときに、アプリケーションが存在しない**HKEY_CURRENT_USER**の下にあるレジストリエントリを読み取ろうとすると、リモートデスクトップサービスによって、 **\ Terminal \ インストール**サブキーの下にキーのコピーが存在するかどうかが確認されます。 その場合、サブキーは**HKEY_CURRENT_USER**の下の適切な場所にコピーされます。 アプリケーションが存在しない .ini ファイルから読み取ろうとした場合は、リモートデスクトップサービスシステムルートの下でその .ini ファイルを検索します。 .Ini ファイルがシステムルート内にある場合は、ユーザーのホームディレクトリの \Windows サブディレクトリにコピーされます。 アプリケーションが Windows ディレクトリに対してクエリを行う場合、rd セッションホストサーバーは、ユーザーのホームディレクトリの \Windows サブディレクトリを返します。
+- システムがを返して **ユーザー/execute を変更**しようとしたときに、アプリケーションが存在しない **HKEY_CURRENT_USER** の下にあるレジストリエントリを読み取ろうとすると、リモートデスクトップサービスによって、 **\ Terminal \ インストール** サブキーの下にキーのコピーが存在するかどうかが確認されます。 その場合、サブキーは **HKEY_CURRENT_USER**の下の適切な場所にコピーされます。 アプリケーションが存在しない .ini ファイルから読み取ろうとした場合は、リモートデスクトップサービスシステムルートの下でその .ini ファイルを検索します。 .Ini ファイルがシステムルート内にある場合は、ユーザーのホームディレクトリの \Windows サブディレクトリにコピーされます。 アプリケーションが Windows ディレクトリに対してクエリを行う場合、rd セッションホストサーバーは、ユーザーのホームディレクトリの \Windows サブディレクトリを返します。
 
 - ログオンすると、リモートデスクトップサービスによって、コンピューター上の .ini ファイルよりもシステムの .ini ファイルが新しいかどうかがチェックされます。 システムのバージョンが新しい場合は、.ini ファイルが置き換えられるか、新しいバージョンにマージされます。 これは、この .ini ファイルに INISYNC ビット0x40 が設定されているかどうかによって異なります。 以前のバージョンの .ini ファイルは、Inifile という名前に変更されています。 **\ Terminal \ インストール**サブキーの下にあるシステムレジストリ値が**HKEY_CURRENT_USER**の下のバージョンより新しい場合は、サブキーのバージョンが削除され、 **\ terminal \ インストール**の新しいサブキーに置き換えられます。
 

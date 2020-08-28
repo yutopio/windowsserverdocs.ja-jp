@@ -1,18 +1,18 @@
 ---
 title: 追加 AllDriverPackages サブコマンドを使用します。
 description: フォルダーに格納されているすべてのドライバーパッケージをサーバーに追加する追加 AllDriverPackages のリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: ba6641c1-d7e9-43a9-9819-702dad5484ed
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 301842cce5306c8f7922660f49c9475fbbf70cc3
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ccdd132687fdc65336aeb49d317f9ccf5fbcd968
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87897034"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89032187"
 ---
 # <a name="add-alldriverpackages"></a>追加-AllDriverPackages
 

@@ -1,25 +1,25 @@
 ---
 title: icacls
 description: Icacls コマンドの参照記事。指定されたファイルの随意アクセス制御リスト (DACL) を表示または変更し、格納されている Dacl を指定したディレクトリ内のファイルに適用します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 403edfcc-328a-479d-b641-80c290ccf73e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/21/2018
-ms.openlocfilehash: 5bb8842cdc91823a83d1b8ccfa305c6393433901
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 7b6d045b26adcbee31447e950533b1013288a910
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888404"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038020"
 ---
 # <a name="icacls"></a>icacls
 
 指定されたファイルの随意アクセス制御リスト (DACL) を表示または変更し、保存した DACL を指定したディレクトリ内のファイルに適用します。
 
 > [!NOTE]
-> このコマンドは、非推奨の[cacls コマンド](cacls.md)を置き換えます。
+> このコマンドは、非推奨の [cacls コマンド](cacls.md)を置き換えます。
 
 ## <a name="syntax"></a>構文
 
@@ -38,20 +38,20 @@ icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c
 | /c | ファイルエラーが発生しても操作を続行します。 エラーメッセージは引き続き表示されます。 |
 | /l | 変換先ではなく、シンボリックリンクに対して操作を実行します。 |
 | /q | 成功メッセージを表示しません。 |
-| [/保存 `<ACLfile>`/tスイッチ/l[/q]] | は、 **/restore**で後で使用するために、一致するすべてのファイルの Dacl を*aclfile*に格納します。 |
-| [/setowner `<username>`/tスイッチ/l[/q]] | 一致するすべてのファイルの所有者を、指定したユーザーに変更します。 |
-| [/findsid `<sid>`/tスイッチ/l[/q]] | 指定されたセキュリティ識別子 (SID) を明示的に示す DACL を含む、一致するすべてのファイルを検索します。 |
+| [/保存 `<ACLfile>` /tスイッチ/l[/q]] | は、 **/restore**で後で使用するために、一致するすべてのファイルの Dacl を*aclfile*に格納します。 |
+| [/setowner `<username>` /tスイッチ/l[/q]] | 一致するすべてのファイルの所有者を、指定したユーザーに変更します。 |
+| [/findsid `<sid>` /tスイッチ/l[/q]] | 指定されたセキュリティ識別子 (SID) を明示的に示す DACL を含む、一致するすべてのファイルを検索します。 |
 | [/verify [/t] [/c] [/l] [/q]] | Acl を持つすべてのファイルを検索します。これは、標準ではないか、または ACE (アクセス制御エントリ) のカウントと整合性がありません。 |
 | [/リセット [/t] [/c] [/l] [/q]] | 一致するすべてのファイルについて、Acl を既定の継承された Acl に置き換えます。 |
 | [/grant [: r] \<sid> : <perm> [...]] | 指定されたユーザーアクセス権を付与します。 権限は、以前に許可された明示的な権限に代わるものです。<p>**: R**を追加しない場合は、以前に許可した明示的なアクセス許可にアクセス許可が追加されることを意味します。 |
 | [/拒否 \<sid> : <perm> [...]] | 指定されたユーザーアクセス権を明示的に拒否します。 明示的な拒否 ACE は、指定された権限に対して追加され、明示的な許可では同じ権限が削除されます。 |
 | [/remove `[:g | :d]]` `<sid>`[...]/tスイッチ/l/q | 指定された SID のすべての出現箇所を DACL から削除します。 このコマンドでは、次のものも使用できます。<ul><li>**: g** -指定した SID に対して付与されているすべての権限を削除します。</li><li>**:d** -指定した SID に対するすべての拒否された権限を削除します。 |
 | [/setintegritylevel [(CI) (OI)] `<Level>:<Policy>`[...]] | 一致するすべてのファイルに整合性 ACE を明示的に追加します。 レベルは次のように指定できます。<ul><li>**l** -低</li><li>**m**-中</li><li>**h** -高</li></ul>整合性 ACE の継承オプションはレベルの前に配置でき、ディレクトリにのみ適用されます。 |
-| [/代替 `<sidold> <sidnew>`[...]] | 既存の SID (*sidold*) を新しい sid (*sidold*) に置き換えます。 パラメーターを指定してを使用する必要があり `<directory>` ます。 |
+| [/代替 `<sidold> <sidnew>` [...]] | 既存の SID (*sidold*) を新しい sid (*sidold*) に置き換えます。 パラメーターを指定してを使用する必要があり `<directory>` ます。 |
 | /restore `<ACLfile>` [/c] [/l] [/q] | 格納されている Dacl をから `<ACLfile>` 指定されたディレクトリ内のファイルに適用します。 パラメーターを指定してを使用する必要があり `<directory>` ます。 |
 | /inheritancelevel:`[e | d | r]` | 継承レベルを設定します。次のような場合があります。<ul><li>**e** -継承を有効にする</li><li>**d** -継承を無効にして ace をコピーする</li><li>**r** -継承されたすべての ace を削除します。</li></ul> |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 - Sid は、数字またはフレンドリ名の形式で指定できます。 数値形式を使用する場合は、 **&#42;** ワイルドカード文字を SID の先頭に接辞します。
 
@@ -91,7 +91,7 @@ icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c
 
       - **S** -同期
 
-      - **AS**アクセスシステムのセキュリティ
+      - **AS** アクセスシステムのセキュリティ
 
       - **MA** -最大許容
 
@@ -103,13 +103,13 @@ icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c
 
       - **GA** -汎用すべて
 
-      - **RD**読み取りデータ/リストディレクトリ
+      - **RD** 読み取りデータ/リストディレクトリ
 
       - **WD** -データの書き込み/ファイルの追加
 
       - **AD** -[データの追加]/[サブディレクトリの追加]
 
-      - **動詞**-拡張属性の読み取り
+      - **動詞** -拡張属性の読み取り
 
       - **Wea** -拡張属性の書き込み
 

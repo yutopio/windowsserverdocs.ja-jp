@@ -1,18 +1,18 @@
 ---
 title: tree
 description: ツリーの参照記事。パスのディレクトリ構造またはドライブ内のディスクをグラフィカルに表示します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 345d3192-401e-4a3b-a8ac-36a85c7be79d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 44e3e54f986cc4bd4459d4e007c5111b664a6a45
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: c164fe8999313ffd40ec12b29c7ad8cf2bd7c7a5
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87897099"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89026890"
 ---
 # <a name="tree"></a>tree
 
@@ -36,9 +36,9 @@ tree [<Drive>:][<Path>] [/f] [/a]
 |/a|**ツリー**で、サブディレクトリをリンクする行を表示するために、グラフィック文字の代わりにテキスト文字を使用することを指定します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**ツリー**によって表示される構造は、コマンドプロンプトで指定するパラメーターによって異なります。 ドライブまたはパスを指定しない場合は、現在のドライブの現在のディレクトリで始まるツリー構造が**ツリー**に表示されます。
+**ツリー**によって表示される構造は、コマンドプロンプトで指定するパラメーターによって異なります。 ドライブまたはパスを指定しない場合は、現在のドライブの現在のディレクトリで始まるツリー構造が **ツリー** に表示されます。
 
 ## <a name="examples"></a>例
 

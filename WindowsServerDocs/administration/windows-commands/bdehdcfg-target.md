@@ -1,18 +1,18 @@
 ---
 title: bdehdcfg target
 description: BitLocker と Windows 回復によってシステムドライブとして使用するパーティションを準備する bdehdcfg target コマンドのリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: f761d25d-8349-4ac7-ac46-6bb340a4348f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a4da764bf25a661c53c27b15cbbee8e4d4ec2981
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 173dfa5a8e873b76e512ce1d657eb1d51391640a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895040"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89031470"
 ---
 # <a name="bdehdcfg-target"></a>bdehdcfg: ターゲット
 
@@ -30,8 +30,8 @@ bdehdcfg -target {default|unallocated|<drive_letter> shrink|<drive_letter> merge
 | --------- | ----------- |
 | default | は、コマンドラインツールが BitLocker セットアップウィザードと同じプロセスに従うことを示します。 |
 | 未 | ディスク上の使用可能な未割り当て領域からシステムパーティションを作成します。 |
-| `<drive_letter>`伸縮 | アクティブなシステムパーティションを作成するのに必要な量だけドライブを減らします。 このコマンドを使用するには、指定されたドライブに少なくとも5% の空き領域が必要です。 |
-| `<drive_letter>`マージ | は、アクティブなシステムパーティションとして指定されたドライブを使用します。 オペレーティングシステムドライブをマージのターゲットにすることはできません。 |
+| `<drive_letter>` 伸縮 | アクティブなシステムパーティションを作成するのに必要な量だけドライブを減らします。 このコマンドを使用するには、指定されたドライブに少なくとも5% の空き領域が必要です。 |
+| `<drive_letter>` マージ | は、アクティブなシステムパーティションとして指定されたドライブを使用します。 オペレーティングシステムドライブをマージのターゲットにすることはできません。 |
 
 ## <a name="examples"></a>例
 

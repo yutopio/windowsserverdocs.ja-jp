@@ -1,23 +1,23 @@
 ---
 title: net print
 description: Net print コマンドの参照記事です。 このコマンドは非推奨とされており、Windows の将来のリリースでサポートされるとは限りません。
-ms.topic: article
+ms.topic: reference
 ms.assetid: f59b2015-4698-415d-9a74-09566c466f40
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 16e685c4fb616272baace3554e5ca96bd7a82617
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: a12f11f9552df417f792078d210655eb5893619a
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886076"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037790"
 ---
 # <a name="net-print"></a>net print
 
 > [!IMPORTANT]
-> このコマンドは非推奨とされました。 ただし、同じタスクの多くは、 [prnjobs.vbs コマンド](prnjobs.md)、 [Windows Management Instrumentation (WMI)](/windows/win32/wmisdk/wmi-start-page)、 [Powershell での PRINTMANAGEMENT](/powershell/module/printmanagement)、または[IT プロフェッショナル向けのスクリプトリソース](https://gallery.technet.microsoft.com/ScriptCenter/site/search?f%5B0%5D.Type=RootCategory&f%5B0%5D.Value=printing&f%5B0%5D.Text=Printing)を使用して実行できます。
+> このコマンドは非推奨とされました。 ただし、同じタスクの多くは、 [prnjobs.vbs コマンド](prnjobs.md)、 [Windows Management Instrumentation (WMI)](/windows/win32/wmisdk/wmi-start-page)、 [Powershell での PRINTMANAGEMENT](/powershell/module/printmanagement)、または [IT プロフェッショナル向けのスクリプトリソース](https://gallery.technet.microsoft.com/ScriptCenter/site/search?f%5B0%5D.Type=RootCategory&f%5B0%5D.Value=printing&f%5B0%5D.Text=Printing)を使用して実行できます。
 
 指定された印刷キュー、または指定した印刷ジョブに関する情報を表示または指定した印刷ジョブを制御します。
 
@@ -34,12 +34,12 @@ net print {\\<computername>\<sharename> | \\<computername> <jobnumber> [/hold | 
 | `\\<computername>\<sharename>` | 名前によって、情報を表示するコンピューターと印刷キューを指定します。 |
 | `\\<computername>` | (名前) を制御する印刷ジョブをホストするコンピューターを指定します。 コンピューターを指定しない場合、ローカル コンピューターが使用されます。 必要があります、 `<jobnumber>` パラメーター。 |
 | `<jobnumber>` | 制御する印刷ジョブの数を指定します。 この数は、印刷ジョブが送信された印刷キューをホストするコンピューターによって割り当てられます。 コンピューター後数がそのコンピュータがホストされている任意のキューにあるその他の印刷ジョブに割り当てられていないこと、印刷ジョブに番号を割り当てます。 使用する場合に必要な `\\<computername>` パラメーター。 |
-| `[/hold | /release | /delete]` | 印刷ジョブで実行するアクションを指定します。 ジョブ番号を指定しても、何も指定しない場合は、印刷ジョブに関する情報が表示されます。<ul><li>**/hold**は、ジョブを遅延させ、他の印刷ジョブが解放されるまでそのジョブをバイパスできるようにします。</li><li>**/release** -遅延された印刷ジョブを解放します。</li><li>**/delete** -印刷キューから印刷ジョブを削除します。</li></ul> |
+| `[/hold | /release | /delete]` | 印刷ジョブで実行するアクションを指定します。 ジョブ番号を指定しても、何も指定しない場合は、印刷ジョブに関する情報が表示されます。<ul><li>**/hold** は、ジョブを遅延させ、他の印刷ジョブが解放されるまでそのジョブをバイパスできるようにします。</li><li>**/release** -遅延された印刷ジョブを解放します。</li><li>**/delete** -印刷キューから印刷ジョブを削除します。</li></ul> |
 | help | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-- コマンドを実行すると、 `net print\\<computername>` 印刷ジョブに関する情報が共有プリンターキューに表示されます。 次に示すのは、*レーザー*という名前の共有プリンターのキューにあるすべての印刷ジョブのレポートの例です。
+- コマンドを実行すると、 `net print\\<computername>` 印刷ジョブに関する情報が共有プリンターキューに表示されます。 次に示すのは、 *レーザー*という名前の共有プリンターのキューにあるすべての印刷ジョブのレポートの例です。
 
     ```
     printers at \\PRODUCTION

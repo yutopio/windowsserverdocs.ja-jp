@@ -1,18 +1,18 @@
 ---
 title: if
 description: If コマンドのリファレンス記事。バッチプログラムで条件付き処理を実行します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 698b3fb9-532b-4c2b-af7f-179f8dc57131
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3644c64d4159d9232ec58e747efc542dd903791e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ea7b823c0060b1fb9ff474ae0330eb789a1da0d1
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888370"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038010"
 ---
 # <a name="if"></a>if
 
@@ -39,24 +39,24 @@ if defined <variable> <command> [else <expression>]
 | パラメーター | 説明 |
 | --------- |------------ |
 | not | 条件が false の場合にのみコマンドを実行するように指定します。 |
-| errorlevel`<number>` | Cmd.exe によって実行された前回のプログラムが、 *number*以上の終了コードを返した場合にのみ、true の条件を指定します。 |
+| errorlevel `<number>` | Cmd.exe によって実行された前回のプログラムが、 *number*以上の終了コードを返した場合にのみ、true の条件を指定します。 |
 | `<command>` | 前の条件が満たされた場合に実行するコマンドを指定します。 |
 | `<string1>==<string2>` | *String1*と*string2*が同じ場合にのみ true 条件を指定します。 これらの値には、リテラル文字列またはバッチ変数 (など) を指定でき `%1` ます。 リテラル文字列を引用符で囲む必要はありません。 |
-| まだ`<filename>` | 指定されたファイル名が存在する場合に true 条件を指定します。 |
-| `<compareop>` | 次のように、3文字の比較演算子を指定します。<ul><li>**等しい**-Equal to</li><li>**Neq** -等しくない</li><li>**Lss** -より小さい</li><li>**Leq** -以下</li><li>**Gtr** -より大きい</li><li>**Geq** -以上</li></ul> |
-| /i | 大文字小文字を無視するように文字列比較を強制します。 **/I**は、 `string1==string2` **if**の形式で使用できます。 これらの比較は一般に、 *string1*と*string2*の両方が数字のみで構成されている場合、文字列は数値に変換され、数値比較が実行されます。 |
-| cmdextversion`<number>` | Cmd.exe のコマンド拡張機能に関連付けられている内部バージョン番号が指定した数以上の場合にのみ、true 条件を指定します。 最初のバージョンは1です。 コマンド拡張機能に大幅な拡張が追加されると、1つずつ増加します。 コマンド拡張機能が無効になっている場合 (既定では、コマンド拡張機能が有効になっている場合)、 **cmdextversion**条件は満たされません。 |
+| まだ `<filename>` | 指定されたファイル名が存在する場合に true 条件を指定します。 |
+| `<compareop>` | 次のように、3文字の比較演算子を指定します。<ul><li>**等しい** -Equal to</li><li>**Neq** -等しくない</li><li>**Lss** -より小さい</li><li>**Leq** -以下</li><li>**Gtr** -より大きい</li><li>**Geq** -以上</li></ul> |
+| /i | 大文字小文字を無視するように文字列比較を強制します。 **/I**は、 `string1==string2` **if**の形式で使用できます。 これらの比較は一般に、 *string1* と *string2* の両方が数字のみで構成されている場合、文字列は数値に変換され、数値比較が実行されます。 |
+| cmdextversion `<number>` | Cmd.exe のコマンド拡張機能に関連付けられている内部バージョン番号が指定した数以上の場合にのみ、true 条件を指定します。 最初のバージョンは1です。 コマンド拡張機能に大幅な拡張が追加されると、1つずつ増加します。 コマンド拡張機能が無効になっている場合 (既定では、コマンド拡張機能が有効になっている場合)、 **cmdextversion** 条件は満たされません。 |
 | defined `<variable>` | *変数*が定義されている場合に true 条件を指定します。 |
-| `<expression>` | コマンドラインコマンドと、 **else**句でコマンドに渡すパラメーターを指定します。 |
+| `<expression>` | コマンドラインコマンドと、 **else** 句でコマンドに渡すパラメーターを指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - **If**句に指定された条件が true の場合、条件に従ったコマンドが実行されます。条件が false の場合、 **if**句のコマンドは無視され、コマンドは**else**句で指定されているすべてのコマンドを実行します。
 
-- プログラムが停止すると、終了コードが返されます。 終了コードを条件として使用するには、 **errorlevel**パラメーターを使用します。
+- プログラムが停止すると、終了コードが返されます。 終了コードを条件として使用するには、 **errorlevel** パラメーターを使用します。
 
-- を**定義**した場合、次の3つの変数が環境に追加されます: **% errorlevel%**、 **% cmdcmdline%**、および **% cmdextversion%**。
+- を **定義**した場合、次の3つの変数が環境に追加されます: **% errorlevel%**、 **% cmdcmdline%**、および **% cmdextversion%**。
 
   - **% errorlevel%**: errorlevel 環境変数の現在の値の文字列形式に展開されます。 この変数は、ERRORLEVEL という名前の既存の環境変数が存在しないことを前提としています。 存在する場合は、代わりに ERRORLEVEL 値を取得します。
 

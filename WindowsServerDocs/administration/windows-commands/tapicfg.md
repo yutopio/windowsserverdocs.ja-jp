@@ -1,24 +1,24 @@
 ---
 title: tapicfg
 description: TAPI アプリケーションディレクトリパーティションを管理する方法について説明します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: c0e642ce-5d98-4edb-9a65-1dff09aef4e1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: a7df53cc06581ad4014600c2ab7f402ff33530fd
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: a6f340713e0510b2766124c7a0106f5f9ff9aa8c
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87881848"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89027190"
 ---
 # <a name="tapicfg"></a>tapicfg
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-作成、削除、または TAPI アプリケーション ディレクトリ パーティションを表示または既定の TAPI アプリケーション ディレクトリ パーティションを設定します。 TAPI 3.1 クライアントは、このアプリケーションディレクトリパーティションの情報をディレクトリサービスロケーターサービスと共に使用して、TAPI ディレクトリを検索し、通信することができます。また、 **tapicfg**を使用してサービス接続ポイントを作成または削除することもできます。これにより、tapi クライアントがドメイン内の tapi アプリケーションディレクトリパーティションを効率的に検索できるようになります。 詳細については、「解説」を参照してください。 コマンドの構文を表示するには、コマンドをクリックします。
+作成、削除、または TAPI アプリケーション ディレクトリ パーティションを表示または既定の TAPI アプリケーション ディレクトリ パーティションを設定します。 TAPI 3.1 クライアントは、このアプリケーションディレクトリパーティションの情報をディレクトリサービスロケーターサービスと共に使用して、TAPI ディレクトリを検索し、通信することができます。また、 **tapicfg** を使用してサービス接続ポイントを作成または削除することもできます。これにより、tapi クライアントがドメイン内の tapi アプリケーションディレクトリパーティションを効率的に検索できるようになります。 詳細については、「解説」を参照してください。 コマンドの構文を表示するには、コマンドをクリックします。
 -   [tapicfg インストール](#BKMK_install)
 -   [tapicfg の削除](#BKMK_remove)
 -   [tapicfg publishscp](#BKMK_publishscp)
@@ -37,8 +37,8 @@ tapicfg install /directory:<PartitionName> [/server:<DCName>] [/forcedefault]
 |パラメーター|説明|
 |-------|--------|
 |インストールするディレクトリ (& i):\<PartitionName>|必須。 作成するには、TAPI アプリケーション ディレクトリ パーティションの DNS 名を指定します。 この名前は、完全修飾ドメイン名である必要があります。|
-|/server\<DCName>|TAPI アプリケーション ディレクトリ パーティションを作成するドメイン コント ローラーの DNS 名を指定します。 ドメイン コント ローラー名が指定されていないローカル コンピューターの名前が使用されます。|
-|/forcedefault|このディレクトリが既定の TAPI アプリケーション ディレクトリ パーティションがドメインであることを指定します。 ドメインに複数の TAPI アプリケーション ディレクトリ パーティションがあります。<p>このディレクトリがドメインで作成された最初の TAPI アプリケーションディレクトリパーティションの場合は、 **/forcedefault**オプションを使用するかどうかに関係なく、既定値として自動的に設定されます。|
+|/server \<DCName>|TAPI アプリケーション ディレクトリ パーティションを作成するドメイン コント ローラーの DNS 名を指定します。 ドメイン コント ローラー名が指定されていないローカル コンピューターの名前が使用されます。|
+|/forcedefault|このディレクトリが既定の TAPI アプリケーション ディレクトリ パーティションがドメインであることを指定します。 ドメインに複数の TAPI アプリケーション ディレクトリ パーティションがあります。<p>このディレクトリがドメインで作成された最初の TAPI アプリケーションディレクトリパーティションの場合は、 **/forcedefault** オプションを使用するかどうかに関係なく、既定値として自動的に設定されます。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
 ## <a name="tapicfg-remove"></a><a name="BKMK_remove"></a>tapicfg の削除
@@ -80,7 +80,7 @@ tapicfg removescp /directory:<PartitionName> [/domain:<DomainName>]
 |パラメーター|説明|
 |-------|--------|
 |removescp 思い出してください。\<PartitionName>|必須。 サービス接続ポイントを削除する TAPI アプリケーション ディレクトリ パーティションの DNS 名を指定します。|
-|/domain\<DomainName>|サービス接続ポイントを削除するドメインの DNS 名を指定します。 ドメイン名が指定されていない場合は、ローカル ドメイン名が使用されます。|
+|/domain \<DomainName>|サービス接続ポイントを削除するドメインの DNS 名を指定します。 ドメイン名が指定されていない場合は、ローカル ドメイン名が使用されます。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
 ## <a name="tapicfg-show"></a><a name="BKMK_show"></a>tapicfg ショー
@@ -94,7 +94,7 @@ tapicfg show [/defaultonly][ /domain:<DomainName>]
 |パラメーター|説明|
 |-------|--------|
 |/defaultonly|ドメインの名前と場所の既定 TAPI アプリケーション ディレクトリ パーティションのみが表示されます。|
-|/domain\<DomainName>|TAPI アプリケーション ディレクトリ パーティションが表示されているドメインの DNS 名を指定します。 ドメイン名が指定されていない場合は、ローカル ドメイン名が使用されます。|
+|/domain \<DomainName>|TAPI アプリケーション ディレクトリ パーティションが表示されているドメインの DNS 名を指定します。 ドメイン名が指定されていない場合は、ローカル ドメイン名が使用されます。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
 ## <a name="tapicfg-makedefault"></a><a name="BKMK_makedefault"></a>tapicfg makedefault
@@ -110,7 +110,7 @@ tapicfg makedefault /directory:<PartitionName> [/domain:<DomainName>]
 |makedefault 思い出してください。\<PartitionName>|必須。 ドメインの既定のパーティションとして設定 TAPI アプリケーション ディレクトリ パーティションの DNS 名を指定します。 この名前は完全修飾ドメイン名である必要がありますに注意してください。 TAPI アプリケーション ディレクトリ パーティションが既定値として設定されているドメインの DNS 名を指定します。 ドメイン名が指定されていない場合は、ローカル ドメイン名が使用されます。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 **Tapicfg インストール**(tapi アプリケーションディレクトリパーティションを作成) または**TAPICFG remove** (tapi アプリケーションディレクトリパーティションを削除するため) のいずれかを実行するには、Active directory の Enterprise Admins グループのメンバーである必要があります。
 
 このコマンド ライン ツールは、ドメインのメンバーである任意のコンピューターで実行できます。

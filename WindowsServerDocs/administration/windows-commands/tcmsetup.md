@@ -1,18 +1,18 @@
 ---
 title: tcmsetup
 description: TAPI クライアントを設定および無効にする方法について説明します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 15e0c10f-996f-4301-92e5-943f7ee8212d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e078439fcb9889f075efd364ea9530bdfb8db26a
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: b2d148a273aaf6de917cec546f487fab5e8ebea0
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87881799"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89027090"
 ---
 # <a name="tcmsetup"></a>tcmsetup
 
@@ -39,7 +39,7 @@ tcmsetup  [/q] /c /d
 |/d|リモート サーバーの一覧をクリアします。 リモート サーバー上にある TAPI サービス プロバイダーを使用できなくなり、TAPI クライアントを無効にします。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 -   この手順を実行するには、ローカル コンピューターの Administrators グループのメンバーであるか、適切な権限が委任されている必要があります。 コンピューターがドメインに追加されると、Domain Admins グループのメンバーは、この手順を実行できる場合があります。 セキュリティの点から、[**別のユーザーとして実行**] を使用してこの手順を実行することを検討してください。
 -   TAPI が正しく機能するためには、実行する必要があります **tcmsetup** TAPI クライアントによって使用されるリモート サーバーを指定します。

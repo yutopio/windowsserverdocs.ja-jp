@@ -1,18 +1,18 @@
 ---
 title: wbadmin start sysrecovery
 description: Wbadmin start sysrecovery の参照記事。指定したパラメーターを使用してシステム回復 (ベアメタル回復) を実行します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 95b8232f-7c42-452b-838e-15b0cf6faebe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 66f302d07a5776757d9094299c8961161f2d6a15
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: c108636533b333224b925f22854622fff023abba
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879685"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89031900"
 ---
 # <a name="wbadmin-start-sysrecovery"></a>wbadmin start sysrecovery
 
@@ -23,7 +23,7 @@ ms.locfileid: "87879685"
 > [!NOTE]
 > このサブコマンドは、Windows 回復環境からのみ実行でき、 **Wbadmin**の使用法テキストには既定では表示されません。 詳細については、「 [Windows 回復環境 (WINDOWS RE) の概要](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825173(v=win.10))」を参照してください。
 
-このサブコマンドを使用してシステムの回復を実行するには、 **Backup Operators**グループまたは**Administrators**グループのメンバーであるか、適切なアクセス許可が委任されている必要があります。
+このサブコマンドを使用してシステムの回復を実行するには、 **Backup Operators** グループまたは **Administrators** グループのメンバーであるか、適切なアクセス許可が委任されている必要があります。
 
 ## <a name="syntax"></a>構文
 
@@ -49,7 +49,7 @@ wbadmin start sysrecovery
 |-restoreAllVolumes|選択したバックアップからすべてのボリュームを回復します。 このパラメーターが指定されていない場合、重要なボリューム (システム状態およびオペレーティングシステムコンポーネントを含むボリューム) のみが回復されます。 このパラメーターは、システムの回復中に重要ではないボリュームを回復する必要がある場合に便利です。|
 |-recreateDisks|バックアップの作成時に存在していた状態にディスク構成を回復します。</br>警告: このパラメーターは、オペレーティングシステムコンポーネントをホストするボリューム上のすべてのデータを削除します。 データボリュームからデータを削除することもできます。|
 |-excludeDisks|**-Recreatedisks**パラメーターと共に指定する場合にのみ有効です。 **wbadmin get disks**の出力に示されているように、ディスク識別子のコンマ区切りリストとして入力する必要があります。 除外されたディスクはパーティション分割またはフォーマットされていません。 このパラメーターは、復旧操作中に変更したくないディスク上のデータを保持するのに役立ちます。|
-|-skipBadClusterCheck|回復ディスクの不適切なクラスター情報の確認をスキップします。 別のサーバーまたはハードウェアに復元する場合は、このパラメーターを使用しないことをお勧めします。 回復ディスクで**chkdsk/b**をいつでも手動で実行して、不良クラスターを確認し、それに応じてファイルシステム情報を更新することができます。</br>警告: 説明に従って**chkdsk**を実行するまで、回復したシステムで報告された不良クラスターが正確でない可能性があります。|
+|-skipBadClusterCheck|回復ディスクの不適切なクラスター情報の確認をスキップします。 別のサーバーまたはハードウェアに復元する場合は、このパラメーターを使用しないことをお勧めします。 回復ディスクで **chkdsk/b** をいつでも手動で実行して、不良クラスターを確認し、それに応じてファイルシステム情報を更新することができます。</br>警告: 説明に従って **chkdsk** を実行するまで、回復したシステムで報告された不良クラスターが正確でない可能性があります。|
 |-quiet|ユーザーにプロンプトを表示せずにコマンドを実行します。|
 
 ## <a name="examples"></a>例
@@ -67,4 +67,4 @@ wbadmin start sysrecovery -version:04/30/2013-09:00 -backupTarget:\\servername\s
 
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [WBBareMetalRecovery](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825173(v=win.10))コマンドレット
+-   [WBBareMetalRecovery](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825173(v=win.10)) コマンドレット

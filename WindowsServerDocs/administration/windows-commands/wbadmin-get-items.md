@@ -1,18 +1,18 @@
 ---
 title: wbadmin get items
 description: 特定のバックアップに含まれる項目を一覧表示する wbadmin get 項目の参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 27d08ce3-6e06-4260-b264-fc1bde132d09
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 36f3ca0d114cd31b8211e63d9d9dc9c415c5b216
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 7e82bfc6cee3a8ff6a4fd0165770870d09a0873e
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896323"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89032000"
 ---
 # <a name="wbadmin-get-items"></a>wbadmin get items
 
@@ -20,7 +20,7 @@ ms.locfileid: "87896323"
 
 特定のバックアップに含まれるアイテムを一覧表示します。
 
-このサブコマンドを使用するには、 **Backup Operators**グループまたは**Administrators**グループのメンバであるか、適切な権限が委任されている必要があります。 さらに、実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権でのコマンドプロンプトを開くには、[**コマンドプロンプト**] を右クリックし、[**管理者として実行**] をクリックします)。
+このサブコマンドを使用するには、 **Backup Operators** グループまたは **Administrators** グループのメンバであるか、適切な権限が委任されている必要があります。 さらに、実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権でのコマンドプロンプトを開くには、[ **コマンドプロンプト** ] を右クリックし、[ **管理者として実行**] をクリックします)。
 
 ## <a name="syntax"></a>構文
 
@@ -54,4 +54,4 @@ wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -ma
 
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [WBBackupSet](/powershell/module/windowserverbackup/?view=winserver2012r2-ps)コマンドレット
+-   [WBBackupSet](/powershell/module/windowserverbackup/?view=winserver2012r2-ps) コマンドレット

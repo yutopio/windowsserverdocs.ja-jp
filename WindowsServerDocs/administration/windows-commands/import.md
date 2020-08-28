@@ -1,24 +1,24 @@
 ---
 title: diskshadow のインポート
 description: Import コマンドの参照記事。読み込まれたメタデータファイルからシステムに転送可能なシャドウコピーをインポートします。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7bd78d76-0560-4d47-944c-fe960be2c10b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4d0d76c9565904d6e24c41f4c728bf43061f5040
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 96f55be187b540151c23c84ae414575f20dcbe8f
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888363"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038000"
 ---
 # <a name="import-diskshadow"></a>インポート (diskshadow)
 
 読み込まれたメタデータファイルからシステムに転送可能なシャドウコピーをインポートします。
 
-> :このコマンドを使用する前に、[[メタデータの読み込み] コマンド](load-metadata.md)を使用して、DiskShadow メタデータファイルを読み込む必要があります。
+> :このコマンドを使用する前に、[ [メタデータの読み込み] コマンド](load-metadata.md) を使用して、DiskShadow メタデータファイルを読み込む必要があります。
 
 ## <a name="syntax"></a>構文
 
@@ -26,9 +26,9 @@ ms.locfileid: "87888363"
 import
 ```
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-- 転送可能シャドウコピーは、システムにすぐには保存されません。 これらの詳細は、バックアップコンポーネントドキュメント XML ファイルに格納されます。この XML ファイルは、自動的に要求され、.cab メタデータファイルを作業ディレクトリに保存します。 この XML ファイルのパスと名前を変更するには、[[メタデータの設定] コマンド](set-metadata.md)を使用します。
+- 転送可能シャドウコピーは、システムにすぐには保存されません。 これらの詳細は、バックアップコンポーネントドキュメント XML ファイルに格納されます。この XML ファイルは、自動的に要求され、.cab メタデータファイルを作業ディレクトリに保存します。 この XML ファイルのパスと名前を変更するには、[ [メタデータの設定] コマンド](set-metadata.md) を使用します。
 
 ## <a name="examples"></a>例
 

@@ -1,18 +1,18 @@
 ---
 title: wbadmin start systemstaterecovery
 description: Wbadmin start systemstaterecovery の参照記事。指定した場所へのシステム状態の回復を実行します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 208b1be9-3452-4aba-bb49-46bc587fca96
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f77b3d91172ccf5c01abf18ac1beb5269933b27c
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: da4ed85bbeddc6434f5f5d9fbf0f078b70a13e2d
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879584"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89031840"
 ---
 # <a name="wbadmin-start-systemstaterecovery"></a>wbadmin start systemstaterecovery
 
@@ -23,7 +23,7 @@ ms.locfileid: "87879584"
 > [!NOTE]
 > Windows Server バックアップはバックアップまたはシステム状態のバックアップまたはシステム状態の回復の一部としてユーザーのレジストリ ハイブ (HKEY_CURRENT_USER) を回復します。
 
-このサブコマンドを使用してシステム状態の回復を実行するには、 **Backup Operators**グループまたは**Administrators**グループのメンバーであるか、適切なアクセス許可が委任されている必要があります。 さらに、実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権でのコマンドプロンプトを開くには、[**コマンドプロンプト**] を右クリックし、[**管理者として実行**] をクリックします)。
+このサブコマンドを使用してシステム状態の回復を実行するには、 **Backup Operators** グループまたは **Administrators** グループのメンバーであるか、適切なアクセス許可が委任されている必要があります。 さらに、実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権でのコマンドプロンプトを開くには、[ **コマンドプロンプト**] を右クリックし、[ **管理者として実行**] をクリックします)。
 
 
 
@@ -81,4 +81,4 @@ wbadmin start systemstaterecovery
 
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [WBSystemStateRecovery](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825173(v=win.10))コマンドレット
+-   [WBSystemStateRecovery](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825173(v=win.10)) コマンドレット

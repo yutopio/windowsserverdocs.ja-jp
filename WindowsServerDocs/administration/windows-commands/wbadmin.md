@@ -1,18 +1,18 @@
 ---
 title: wbadmin
 description: コマンドプロンプトからオペレーティングシステム、ボリューム、ファイル、フォルダー、およびアプリケーションをバックアップして復元できる wbadmin のリファレンス記事です。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4b0b3f32-d21f-4861-84bb-b2eadbf1e7b8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3739695a805534d47500380a76951405af7c7f1b
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 9eef9eb53c38d97f4ab69268632f642583aa8acf
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879544"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89031790"
 ---
 # <a name="wbadmin"></a>wbadmin
 
@@ -20,9 +20,9 @@ ms.locfileid: "87879544"
 
 では、コマンドプロンプトからオペレーティングシステム、ボリューム、ファイル、フォルダー、およびアプリケーションをバックアップおよび復元できます。
 
-定期的にスケジュールされたバックアップを構成するには、 **Administrators**グループのメンバーである必要があります。 このコマンドを使用して他のすべてのタスクを実行する、 **Backup Operators** または **管理者** グループ、またはをされている必要が適切なアクセス許可を委任します。
+定期的にスケジュールされたバックアップを構成するには、 **Administrators** グループのメンバーである必要があります。 このコマンドを使用して他のすべてのタスクを実行する、 **Backup Operators** または **管理者** グループ、またはをされている必要が適切なアクセス許可を委任します。
 
-実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権のコマンドプロンプトを開くには、[**コマンドプロンプト**] を右クリックし、[**管理者として実行**] をクリックします)。
+実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権のコマンドプロンプトを開くには、[ **コマンドプロンプト**] を右クリックし、[ **管理者として実行**] をクリックします)。
 
 ## <a name="subcommands"></a>サブコマンド
 

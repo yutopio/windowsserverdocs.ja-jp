@@ -1,22 +1,22 @@
 ---
 title: load metadata
 description: "\"メタデータの読み込み\" コマンドの参照記事。このコマンドは、転送可能なシャドウコピーをインポートする前にメタデータ .cab ファイルを読み込み、または復元の場合にライターメタデータを読み込みます。"
-ms.topic: article
+ms.topic: reference
 ms.assetid: 2c535487-668b-44fc-babb-ff59cf7d190e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4b0f5412ee189814fcdf1f020f238e19dc308b7d
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 9953b06b46b82466dbf4fcba97c2d902c88d301c
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87887481"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037890"
 ---
 # <a name="load-metadata"></a>メタデータの読み込み
 
-転送可能なシャドウコピーをインポートする前に、または復元の場合にライターメタデータを読み込む前に、メタデータ .cab ファイルを読み込みます。 パラメーターを指定せずに使用した場合、**メタデータの読み込み**コマンドプロンプトでヘルプが表示されます。
+転送可能なシャドウコピーをインポートする前に、または復元の場合にライターメタデータを読み込む前に、メタデータ .cab ファイルを読み込みます。 パラメーターを指定せずに使用した場合、 **メタデータの読み込み** コマンドプロンプトでヘルプが表示されます。
 
 ## <a name="syntax"></a>構文
 
@@ -31,11 +31,11 @@ load metadata [<drive>:][<path>]<metadata.cab>
 | `[<drive>:][<path>]` | メタデータファイルの場所を指定します。 |
 | metadata.cab | 読み込むメタデータ .cab ファイルを指定します。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 - **Import**コマンドを使用すると、**読み込みメタ**データによって指定されたメタデータに基づいて、転送可能なシャドウコピーをインポートできます。
 
-- 復元用に選択したライターとコンポーネントを読み込むには、[**復元の開始**] コマンドの前にこのコマンドを実行する必要があります。
+- 復元用に選択したライターとコンポーネントを読み込むには、[ **復元の開始** ] コマンドの前にこのコマンドを実行する必要があります。
 
 ## <a name="examples"></a>例
 

@@ -1,18 +1,18 @@
 ---
 title: lodctr
 description: Lodctr コマンドのリファレンス記事。これにより、パフォーマンスカウンターの名前とレジストリ設定をファイルに登録または保存し、信頼されたサービスを指定することができます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5a849abd-6b31-4833-bc8a-306c05eca29a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 428830b06796914e66434c90f7624cc7c64eec5b
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 61b449678fae62e0909d19b8cae8411102898bd8
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87887474"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037880"
 ---
 # <a name="lodctr"></a>lodctr
 
@@ -37,7 +37,7 @@ lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
 | /t: `<servicename>` | サービスが信頼されていることを示し `<servicename>` ます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - 入力した情報にスペースが含まれている場合は、テキストを引用符で囲みます ("ファイル名 1" など)。
 

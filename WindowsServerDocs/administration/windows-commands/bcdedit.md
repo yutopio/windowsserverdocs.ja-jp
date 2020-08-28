@@ -1,18 +1,18 @@
 ---
 title: bcdedit
 description: 新しいストアを作成し、既存のストアを変更して、ブートメニューパラメーターを追加する bcdedit コマンドの参照記事。
-ms.topic: article
+ms.topic: reference
 ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/27/2018
-ms.openlocfilehash: 0a24ce7f2503d06ce6c57270027328600d93e217
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 81ce7f6964b4ffebdc64056b1bb630bc3eb6d0f7
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895166"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89031610"
 ---
 # <a name="bcdedit"></a>bcdedit
 
@@ -43,7 +43,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 | オプション | 説明 |
 | ------ | ----------- |
-| /? | BCDEdit コマンドの一覧を表示します。 引数なしでこのコマンドを実行すると、使用可能なコマンドの概要が表示されます。 特定のコマンドの詳細なヘルプを表示するには、 **bcdedit/?** を実行します。 `<command>`。ここで、 `<command>` は、詳細情報を検索するコマンドの名前です。 たとえば、 **bcdedit/? createstore**では、createstore コマンドの詳細なヘルプが表示されます。 |
+| /? | BCDEdit コマンドの一覧を表示します。 引数なしでこのコマンドを実行すると、使用可能なコマンドの概要が表示されます。 特定のコマンドの詳細なヘルプを表示するには、 **bcdedit/?** を実行します。 `<command>`。ここで、 `<command>` は、詳細情報を検索するコマンドの名前です。 たとえば、 **bcdedit/? createstore** では、createstore コマンドの詳細なヘルプが表示されます。 |
 
 #### <a name="parameters-that-operate-on-a-store"></a>ストアで動作するパラメーター
 
@@ -59,7 +59,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 | パラメーター | 説明 |
 | ------ | ----------- |
 | /copy | 同じシステム ストア内で指定されたブート エントリのコピーを作成します。 |
-| 作成します | ブート構成データ ストア内に新しいエントリを作成します。 既知の識別子が指定されている場合、 **/application**、 **/inherit**、および **/device**パラメーターを指定することはできません。 識別子が指定されていないか、よく知られていない場合は、 **/application**、 **/inherit**、または **/device**オプションを指定する必要があります。 |
+| 作成します | ブート構成データ ストア内に新しいエントリを作成します。 既知の識別子が指定されている場合、 **/application**、 **/inherit**、および **/device** パラメーターを指定することはできません。 識別子が指定されていないか、よく知られていない場合は、 **/application**、 **/inherit**、または **/device** オプションを指定する必要があります。 |
 | /delete | 指定されたエントリから要素を削除します。 |
 
 #### <a name="parameters-that-operate-on-entry-options"></a>入力オプションで動作するパラメーター
@@ -80,11 +80,11 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 | パラメーター | 説明 |
 | ------ | ----------- |
-| /bootsequence | 次の起動時にのみ使用する、1 回限りの表示順序を指定します。 このコマンドは、次にコンピューターを起動するときにのみ使用される点を除いて、 **/displayorder**オプションに似ています。 このコマンドの実行後、コンピューターは元の表示順序に戻ります。 |
+| /bootsequence | 次の起動時にのみ使用する、1 回限りの表示順序を指定します。 このコマンドは、次にコンピューターを起動するときにのみ使用される点を除いて、 **/displayorder** オプションに似ています。 このコマンドの実行後、コンピューターは元の表示順序に戻ります。 |
 | /default | タイムアウトとなった場合に、ブート マネージャーが選択する既定のエントリを指定します。 |
 | /displayorder | ブートパラメーターをユーザーに表示するときにブートマネージャーが使用する表示順序を指定します。 |
 | /timeout | ブート マネージャーが既定のエントリを選択するまで、待機する時間を秒単位で指定します。 |
-| /toolsdisplayorder | [**ツール**] メニューを表示するときに使用するブートマネージャーの表示順序を指定します。 |
+| /toolsdisplayorder | [ **ツール** ] メニューを表示するときに使用するブートマネージャーの表示順序を指定します。 |
 
 #### <a name="parameters-that-control-emergency-management-services"></a>緊急管理サービスを制御するパラメーター
 
@@ -92,7 +92,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 | ------ | ----------- |
 | /bootems | 指定されたエントリの緊急管理サービス (EMS) を有効または無効にします。 |
 | /ems | 指定されたオペレーティング システムのブート エントリの EMS を有効または無効にします。 |
-| /emssettings | コンピューターのグローバル EMS 設定を設定します。 **/emssettings**では、特定のブートエントリの EMS を有効または無効にすることはできません。 |
+| /emssettings | コンピューターのグローバル EMS 設定を設定します。 **/emssettings** では、特定のブートエントリの EMS を有効または無効にすることはできません。 |
 
 #### <a name="parameters-that-control-debugging"></a>デバッグを制御するパラメーター
 
@@ -104,7 +104,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 ## <a name="additional-references"></a>その他の参照情報
 
-BCDEdit の使用方法の例については、 [Bcdedit オプションのリファレンス](/windows-hardware/drivers/devtest/bcd-boot-options-reference)記事を参照してください。
+BCDEdit の使用方法の例については、 [Bcdedit オプションのリファレンス](/windows-hardware/drivers/devtest/bcd-boot-options-reference) 記事を参照してください。
 
 ## <a name="additional-references"></a>その他の参照情報
 

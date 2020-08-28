@@ -1,24 +1,24 @@
 ---
 title: ksetup delenctypeattr
 description: Ksetup delenctypeattr の参照記事。ドメインの暗号化の種類の属性が削除されます。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4fc25ef3-e271-4229-a712-72c507df55aa
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7901cdb53c051885e5e4040cbc28b7cae0ed2a4d
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 8427d76170156ff2cd01047cc0732bfa6b385e30
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87888038"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037930"
 ---
 # <a name="ksetup-delenctypeattr"></a>ksetup delenctypeattr
 
 ドメインの暗号化の種類の属性を削除します。 正常に完了したか、完了しなかったときに、ステータスメッセージが表示されます。
 
-Kerberos チケット保証チケット (TGT) とセッションキーの暗号化の種類を表示するには、 **klist**コマンドを実行し、出力を表示します。 コマンドを実行して、に接続してを使用するようにドメインを設定でき `ksetup /domain <domainname>` ます。
+Kerberos チケット保証チケット (TGT) とセッションキーの暗号化の種類を表示するには、 **klist** コマンドを実行し、出力を表示します。 コマンドを実行して、に接続してを使用するようにドメインを設定でき `ksetup /domain <domainname>` ます。
 
 ## <a name="syntax"></a>構文
 

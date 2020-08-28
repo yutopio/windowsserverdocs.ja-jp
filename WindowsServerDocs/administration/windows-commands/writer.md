@@ -1,24 +1,24 @@
 ---
 title: ライター
 description: ライターの参照記事。ライターまたはコンポーネントが含まれていること、またはバックアップまたは復元の手順でライターまたはコンポーネントが含まれていることを確認します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7cf98295-411d-4705-8573-f898ff45c140
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9fbcca5f9bc15e77b812368fadfbc7af8f4fff96
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: db18b7f03bed4fc43da2ebee71c2e2a536d5e1d5
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896459"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89038080"
 ---
 # <a name="writer"></a>ライター
 
 
 
-ライターまたはコンポーネントが含まれていること、または backup または restore プロシージャからライターまたはコンポーネントが除外されていることを確認します。 パラメーターを指定せずに使用した場合、**ライター**はコマンドプロンプトでヘルプを表示します。
+ライターまたはコンポーネントが含まれていること、または backup または restore プロシージャからライターまたはコンポーネントが除外されていることを確認します。 パラメーターを指定せずに使用した場合、 **ライター** はコマンドプロンプトでヘルプを表示します。
 
 ## <a name="syntax"></a>構文
 

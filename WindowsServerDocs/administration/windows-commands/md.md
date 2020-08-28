@@ -1,18 +1,18 @@
 ---
 title: md
 description: Md コマンドの参照記事。ディレクトリまたはサブディレクトリを作成します。
-ms.topic: article
+ms.topic: reference
 ms.assetid: 82162d00-cc34-4776-9e55-4b4836dbd6a9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 94dd8f696b97d56fe082f73287a3d50dc7f70883
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: f3da07c6e9d2e6fd7499f74e8ef10fdf3ba85586
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87886517"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037850"
 ---
 # <a name="md"></a>md
 
@@ -37,19 +37,19 @@ md [<drive>:]<path>
 
 ### <a name="examples"></a>例
 
-現在のディレクトリ内に*Directory1*という名前のディレクトリを作成するには、次のように入力します。
+現在のディレクトリ内に *Directory1* という名前のディレクトリを作成するには、次のように入力します。
 
 ```
 md Directory1
 ```
 
-ルートディレクトリ内に、コマンド拡張機能が有効になっているディレクトリツリー *Taxes\Property\Current*を作成するには、次のように入力します。
+ルートディレクトリ内に、コマンド拡張機能が有効になっているディレクトリツリー *Taxes\Property\Current* を作成するには、次のように入力します。
 
 ```
 md \Taxes\Property\Current
 ```
 
-前の例と同じようにルートディレクトリ内にディレクトリツリー *Taxes\Property\Current*を作成するには、コマンド拡張機能を無効にして、次の一連のコマンドを入力します。
+前の例と同じようにルートディレクトリ内にディレクトリツリー *Taxes\Property\Current* を作成するには、コマンド拡張機能を無効にして、次の一連のコマンドを入力します。
 
 ```
 md \Taxes

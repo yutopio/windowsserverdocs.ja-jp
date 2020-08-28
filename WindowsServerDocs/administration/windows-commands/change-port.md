@@ -7,12 +7,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 64c0d012d8106d99f1d7a167dd8f2d1d9107150b
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 8014ba67b2c4383aa56a6fce5eb486bbccfba7e7
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87880268"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89031160"
 ---
 # <a name="change-port"></a>change port
 
@@ -21,7 +21,7 @@ ms.locfileid: "87880268"
 一覧表示したり、MS-DOS アプリケーションと互換性がある COM ポートのマッピングを変更します。
 
 > [!NOTE]
-> Windows Server 2008 R2 で、「ターミナル サービス」は「リモート デスクトップ サービス」に名前変更されました。 最新バージョンの新機能については、「 [Windows Server でのリモートデスクトップサービスの新](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11))機能」を参照してください。
+> 最新バージョンの新機能については、「 [Windows Server でのリモートデスクトップサービスの新](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11))機能」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -33,16 +33,16 @@ change port [<portX>=<portY| /d <portX | /query]
 
 | パラメーター | 説明 |
 |-----------------|----------------------------------------|
-| <portX>=<portY> | COM `<*portX*>` をにマップする`<*portY*>` |
-| d<portX> | COM のマッピングを削除します。`<*portX*>` |
+| <portX>=<portY> | COM `<*portX*>` をにマップする `<*portY*>` |
+| d <portX> | COM のマッピングを削除します。 `<*portX*>` |
 | /query | 現在のポートマッピングが表示されます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 - ほとんどの MS-DOS アプリケーションは、COM1 ~ COM4 のシリアルポートのみをサポートしています。 **ポートの変更**コマンドは、シリアルポートを別のポート番号にマップします。これにより、高番号の COM ポートをサポートしていないアプリがシリアルポートにアクセスできるようになります。 再マッピングは現在のセッションに対してのみ機能し、セッションからログオフして再度ログオンした場合は保持されません。
 
-- パラメーターを指定せずに**ポートを変更**して、使用可能な COM ポートとその現在のマッピングを表示します。
+- パラメーターを指定せずに **ポートを変更** して、使用可能な COM ポートとその現在のマッピングを表示します。
 
 ## <a name="examples"></a>例
 
