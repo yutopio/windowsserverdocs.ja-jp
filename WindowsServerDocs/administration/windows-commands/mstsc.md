@@ -7,12 +7,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 684ab29a9e1ded85443a2ec2d05ad4f55ec2cd5c
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 0a9c1eb46e2d6802c50dfc89e4a3085e6a6afca2
+ms.sourcegitcommit: fe356f95188b7ce8e719765f44c0789c065832fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89025216"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057564"
 ---
 # <a name="mstsc"></a>mstsc
 
@@ -44,7 +44,7 @@ mstsc.exe /migrate
 | /migrate | クライアント接続マネージャーで作成された従来の接続ファイルを新しい .rdp 接続ファイルに移行します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 既定の .rdp は、ユーザーごとに隠しファイルとしてユーザーの **Documents** フォルダーに格納されます。
 
@@ -59,7 +59,15 @@ mstsc.exe /migrate
 ```
 mstsc /f
 ```
+または
+```
+mstsc /v:computer1 /f
+```
+幅/高さを割り当てるには、次のように入力します。
 
+```
+mstsc /v:computer1 /w:1920 /h:1080
+```
 編集するためにファイル *名 .rdp* という名前のファイルを開くには、次のように入力します。
 
 ```

@@ -6,12 +6,12 @@ ms.author: nedpyle
 manager: tiaascs
 ms.date: 07/29/2020
 ms.topic: article
-ms.openlocfilehash: 0dc49603099427fb00507db021c391500a7c42f2
-ms.sourcegitcommit: 3d59c2aaebcd190b20d24bc8a449eee0681b6a3c
+ms.openlocfilehash: ea138d8bb0b804ae4d08ed6ffe330e9714af43f3
+ms.sourcegitcommit: 2b1a12c85acff137e5ac84cd0e62d8353fcdde31
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88583317"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89087485"
 ---
 # <a name="storage-migration-service-known-issues"></a>記憶域移行サービスの既知の問題
 
@@ -83,7 +83,7 @@ Transfer Log - Please check file sharing is allowed in your firewall. : This req
 
 3. Orchestrator コンピューターで、を起動し Regedit.exe
 
-4. 次のレジストリ サブキーを探してクリックします。
+4. まだ存在しない場合は、次のレジストリサブキーを作成します。
 
     `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
 
@@ -101,7 +101,7 @@ Transfer Log - Please check file sharing is allowed in your firewall. : This req
 
 11. エラーのみの CSV ファイルをもう一度ダウンロードします。
 
-この動作は、Windows Server 2019 の今後のリリースで変更される予定です。
+非常に大量のファイルを移行する場合は、このタイムアウト値を10分以上長くすることが必要になる場合があります。 
 
 ## <a name="validation-warnings-for-destination-proxy-and-credential-administrative-privileges"></a>宛先プロキシと資格情報の管理者特権の検証に関する警告
 

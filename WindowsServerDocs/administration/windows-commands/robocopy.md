@@ -7,18 +7,18 @@ author: jasongerend
 ms.author: jgerend
 manager: lizapo
 ms.date: 06/07/2020
-ms.openlocfilehash: b149294436c78c3c9c223973fb3e9b423ff3dfd0
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 48d9d564c7badf8ea34c77ce7004d0ce642b78cb
+ms.sourcegitcommit: fe356f95188b7ce8e719765f44c0789c065832fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036210"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057584"
 ---
 # <a name="robocopy"></a>robocopy
 
 ある場所から別の場所にファイルデータをコピーします。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 ```
 robocopy <source> <destination> [<file>[ ...]] [<options>]
@@ -44,7 +44,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | オプション | 説明 |
 |--|--|
 | /s | コピーのサブディレクトリです。 このオプションは、空のディレクトリを自動的に除外します。 |
-| /e | コピーのサブディレクトリです。 このオプションは、空のディレクトリを自動的に除外します。 |
+| /e | コピーのサブディレクトリです。 このオプションには、空のディレクトリが自動的に含まれます。 |
 | /lev:`<n>` | ソースディレクトリツリーの上位 *n* レベルのみをコピーします。 |
 | /z | 再開可能モードでファイルをコピーします。 |
 | /b | バックアップ モードでファイルをコピーします。 |
@@ -159,7 +159,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 
 ### <a name="exit-return-codes"></a>終了 (リターン) コード
 
-| [値] | 説明 |
+| 値 | 説明 |
 |--|--|
 | 0 | ファイルはコピーされませんでした。 エラーは発生しませんでした。 一致するファイルがありませんでした。 ファイルは、コピー先のディレクトリに既に存在します。そのため、コピー操作はスキップされました。 |
 | 1 | すべてのファイルが正常にコピーされました。 |
