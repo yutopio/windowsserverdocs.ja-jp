@@ -1,19 +1,19 @@
 ---
 ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Windows Server 2016 の機能レベル
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
-ms.date: 10/29/2018
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
+ms.date: 08/25/2020
 ms.topic: article
 ms.custom: it-pro
 ms.reviewer: maheshu
-ms.openlocfilehash: 75ba30502c7de1b0a88886f42c3a8ef9a84a7e18
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e82dccb79a4fc3452d528581beb43ef32d52ecfc
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938631"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88940942"
 ---
 # <a name="forest-and-domain-functional-levels"></a>フォレストとドメインの機能レベル
 
@@ -23,9 +23,9 @@ ms.locfileid: "87938631"
 
 AD DS を展開するときに、ドメインおよびフォレストの機能レベルを、環境でサポートできる最高値に設定します。 こうすることで、可能な限り多くの AD DS 機能を使用できます。 新しいフォレストを展開するときに、フォレストの機能レベルを設定するよう求められ、その次にドメインの機能レベルを設定するよう求められます。 ドメインの機能レベルをフォレストの機能レベルより高い値に設定することはできますが、ドメインの機能レベルをフォレストの機能レベルより低い値に設定することはできません。
 
-Windows 2003 の有効期間が終了したら、Windows 2003 のドメイン コントローラー (DC) を、Windows Server 2008、2008R2、2012、2012R2、2016、または 2019 に更新する必要があります。 その結果として、Windows Server 2003 を実行するすべてのドメイン コントローラーを、ドメインから削除する必要があります。
+Windows Server 2003、2008、および 2008 R2 の有効期間が終了したら、これらのドメイン コントローラー (DC) を、Windows Server 2012、2012 R2、2016、または 2019 に更新する必要があります。 その結果として、Windows Server 2008 R2 およびそれ以前を実行するすべてのドメイン コントローラーを、ドメインから削除する必要があります。
 
-Windows Server 2008 以上のドメイン機能レベルでは、分散ファイル サービス (DFS) レプリケーションを使用して、ドメイン コントローラー間で SYSVOL フォルダーの内容をレプリケートします。 Windows Server 2008 ドメイン機能レベル以上で新しいドメインを作成した場合、SYSVOL のレプリケートには DFS レプリケーションが自動的に使用されます。 それより低い低い機能レベルでドメイン作成した場合は、SYSVOL のレプリケーションを FRS から DFS に移行する必要があります。 移行手順については、[TechNet の手順](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md)に従うか、[ストレージ チームのファイル キャビネット ブログの合理化された一連の手順](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)を参照してください。
+Windows Server 2008 以上のドメイン機能レベルでは、分散ファイル サービス (DFS) レプリケーションを使用して、ドメイン コントローラー間で SYSVOL フォルダーの内容をレプリケートします。 Windows Server 2008 ドメイン機能レベル以上で新しいドメインを作成した場合、SYSVOL のレプリケートには DFS レプリケーションが自動的に使用されます。 それより低い低い機能レベルでドメイン作成した場合は、SYSVOL のレプリケーションを FRS から DFS に移行する必要があります。 移行手順については、[TechNet の手順](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx)に従うか、[ストレージ チームのファイル キャビネット ブログの合理化された一連の手順](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx)を参照してください。 Windows Server 2016 RS1 は、FRS を含む最新の Windows Server リリースです。
 
 ## <a name="windows-server-2019"></a>Windows Server 2019
 
@@ -162,6 +162,7 @@ Windows Server 2019 ドメイン コントローラーを追加する最小要�
 
 サポートされるドメイン コントローラーのオペレーティング システム:
 
+* Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
 * Windows Server 2008 R2

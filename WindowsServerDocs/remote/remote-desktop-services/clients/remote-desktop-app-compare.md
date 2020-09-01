@@ -6,14 +6,14 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/06/2020
+ms.date: 08/25/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 524b90965ca1dfca726294d4518fcefa4a470cf2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a44926d50fae9dea38e3f5c46db423991a414a87
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970109"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88941512"
 ---
 # <a name="compare-the-clients"></a>クライアントの比較
 
@@ -34,7 +34,7 @@ ms.locfileid: "87970109"
 | キーボード    | X                         | X                           | X             | X       | X   | X     | X             |
 | マウス       | X                         | X                           | X             | X       | X\* | X     | X             |
 | Touch       | X                         | X                           | X             | X       | X   |       | X (IE を除く) |
-| ペン         | X                         | X                           |               |         |     |       |               |
+| ペン         | X                         | X                           |               | X (タッチと同じ) |  X (タッチと同じ)  |       |               |
 
 *[リモート デスクトップ iOS クライアントでサポートされる入力デバイスの一覧](remote-desktop-ios.md#supported-input-devices)をご覧ください。
 
@@ -51,7 +51,7 @@ USB ポートのリダイレクトを有効にすると、USB ポートに接続
 
 | リダイレクト         | Windows 受信トレイ</br>(MSTSC) | Windows デスクトップ</br>(MSRDC) | Windows ストア | Android | iOS         | macOS                           | Web クライアント    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
-| カメラ             | X                         | X                           |               |         |   X         | X                               |               |
+| カメラ             | X                         | X                           |               |     X    |   X         | X                               |               |
 | クリップボード           | X                         | X                           | X             | テキスト    | テキスト、画像 | X                               | テキスト          |
 | ローカル ドライブ/ストレージ | X                         | X                           |               | X       |   X        | X                               |               |
 | インストール先            | X                         | X                           |               |         |             |                                 |               |

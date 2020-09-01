@@ -7,12 +7,12 @@ ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
 ms.date: 02/21/2020
-ms.openlocfilehash: c74c8a278612d2ca47346ad95105f1258761494a
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: f405486c5ea34b26f23a16552c24527939ca1fd4
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990474"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89024566"
 ---
 # <a name="how-to-use-windows-server-2008-and-2008-r2-extended-security-updates-esu"></a>Windows Server 2008 および 2008 R2 の拡張セキュリティ更新プログラム (ESU) を使用する方法
 
@@ -44,6 +44,9 @@ Windows Server の拡張セキュリティ更新プログラム (ESU) には、2
 ## <a name="how-to-use-extended-security-updates"></a>拡張セキュリティ更新プログラムの使用方法
 
 Windows Server 2008 または 2008 R2 の VM を Azure で実行すると、拡張セキュリティ更新プログラムがそれらの VM に対して自動的に有効になります。 Azure VM で拡張セキュリティ更新プログラムを使用するために何かを構成する必要はなく、追加料金も発生しません。 Azure VM が更新プログラムを受け取るように構成されている場合、拡張セキュリティ更新プログラムはそれらの VM に自動的に配信されます。
+
+> [!NOTE]
+> Microsoft.ClassicCompute VM では、拡張セキュリティ更新プログラムの適格性を特定する [Azure Instance Metadata Service](https://docs.microsoft.com/azure/virtual-machines/windows/instance-metadata-service) にアクセスできないため、拡張セキュリティ更新プログラムのデプロイ用に追加の構成が必要です。 詳しくは、[Microsoft サポート](https://support.microsoft.com/contactus?PID=17336)にお問い合わせください。
 
 オンプレミスの VM や物理サーバーなど、その他の環境では、拡張セキュリティ更新プログラムを手動で要求して構成する必要があります。 拡張セキュリティ更新プログラムは、Enterprise Agreement (EA)、Enterprise Agreement Subscription (EAS)、Enrollment for Education Solutions (EES)、Server and Cloud Enrollment (SCE) などのボリューム ライセンス プログラムを通じて入手できます。
 

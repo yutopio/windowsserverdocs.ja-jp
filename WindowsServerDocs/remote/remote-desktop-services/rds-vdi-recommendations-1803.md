@@ -6,12 +6,12 @@ ms.author: jaimeo, robsmi
 ms.topic: article
 author: jaimeo
 manager: dougkim
-ms.openlocfilehash: e7bd68264f60b61a5c1063a51217bedb0c6c80ec
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: eb222547518dc0ee13e2c7a47037ffae74fee1fa
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989836"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89036770"
 ---
 # <a name="optimizing-windows-10-version-1803-for-a-virtual-desktop-infrastructure-vdi-role"></a>仮想デスクトップ インフラストラクチャ (VDI) ロール用の Windows 10 バージョン 1803 の最適化
 
@@ -566,7 +566,7 @@ VDI の使用の無効を検討するシステム トレースは次のとおり
 Windows Defender の場合、非永続的 VDI でも更新プログラムを実行できるようにすることが最善であることがあります。 更新プログラムは、ほぼすべてのログオン セッションを適用しますが、更新プログラムは小さく、問題になることはありません。 さらに、使用できる最新の更新プログラムのみが適用されるので、VM は更新プログラムが遅れることはありません。 同じことが、Microsoft 以外の定義ファイルに当てはまることがあります。
 
 > [!NOTE]
-> Windows ストアからアプリ (UWP アプリ) の更新プログラムを格納します。 Office 365 などの最新バージョンの Office は、インターネットに直接接続しているときには独自のメカニズムを通じて、そうでないときには管理テクノロジを介して更新します。
+> Windows ストアからアプリ (UWP アプリ) の更新プログラムを格納します。 Microsoft 365 などの最新バージョンの Office は、インターネットに直接接続しているときには独自のメカニズムを通じて、そうでないときには管理テクノロジを介して更新されます。
 
 ### <a name="windows-defender-optimization-with-vdi"></a>VDI を使用した Windows Defender の最適化
 

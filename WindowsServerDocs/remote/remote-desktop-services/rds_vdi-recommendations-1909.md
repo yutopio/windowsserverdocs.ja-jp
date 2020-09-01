@@ -7,12 +7,12 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.date: 02/19/2020
-ms.openlocfilehash: 7b9500c11ca5dba7ed2f51d1d6b32b7cf689f070
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: eeadbdea10f08372cd927808b4b433d8ba7ee85f
+ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997128"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89037830"
 ---
 # <a name="optimizing-windows-10-version-1909-for-a-virtual-desktop-infrastructure-vdi-role"></a>仮想デスクトップ インフラストラクチャ (VDI) ロール用の Windows 10 バージョン 1909 の最適化
 
@@ -666,7 +666,7 @@ Microsoft Update からか、内部リソースからかにかかわらず、Win
 Windows Defender の場合、非永続的 VDI でも更新プログラムを実行できるようにすることが最善であることがあります。 更新プログラムは、ほぼすべてのログオン セッションを適用しますが、更新プログラムは小さく、問題になることはありません。 さらに、使用できる最新の更新プログラムのみが適用されるため、VM の更新が遅れることはありません。 同じことが、サードパーティの定義ファイルに当てはまることがあります。
 
 > [!NOTE]
-> Windows ストアからアプリ (UWP アプリ) の更新プログラムを格納します。 Office 365 などの最新バージョンの Office は、インターネットに直接接続しているときには独自のメカニズムを通じて、そうでないときには管理テクノロジを介して更新します。
+> Windows ストアからアプリ (UWP アプリ) の更新プログラムを格納します。 Microsoft 365 などの最新バージョンの Office は、インターネットに直接接続しているときには独自のメカニズムを通じて、そうでないときには管理テクノロジを介して更新されます。
 
 ### <a name="windows-system-startup-event-traces"></a>Windows システム スタートアップ イベント トレース
 

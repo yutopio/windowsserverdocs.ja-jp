@@ -5,22 +5,22 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/19/2020
+ms.date: 08/26/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: dbaaafe2c01d41a9786d6718bad850dc08deaa81
-ms.sourcegitcommit: 6d991b16a6d9129e1f5d1ca7d688bd621b72d586
+ms.openlocfilehash: 56e2a5f91983f8fe64382e162ecf18b30e75b41d
+ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88638879"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88938792"
 ---
 # <a name="whats-new-in-the-windows-store-client"></a>Microsoft Store クライアントの新機能
 
 [Windows ストア クライアント](windows.md)は定期的に更新され、新機能の追加と問題の修正が行われています。 ここでは、最新の更新プログラムを紹介します。
 
-## <a name="updates-for-version-1021519-insider"></a>バージョン 10.2.1519 の更新内容 (Insider)
+## <a name="updates-for-version-1021522"></a>バージョン 10.2.1522 の更新内容
 
-*公開日:2020 年 8 月 19 日*
+*公開日:2020 年 8 月 26 日*
 
 - iOS、macOS、Android クライアントと同じ基になる RDP コアエンジンを使用するようにクライアントを書き直しました。
 - Windows Virtual Desktop の Azure Resource Manager 統合バージョンのサポートを追加しました。
