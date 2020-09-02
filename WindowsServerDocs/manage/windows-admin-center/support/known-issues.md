@@ -6,12 +6,12 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.date: 06/07/2019
-ms.openlocfilehash: 91e14b5ac023f6726ffc508f945567b83311d7a4
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: b4d7d039c775b85321d168f8de7415de6b92e784
+ms.sourcegitcommit: 97a65d8f52514848963e8917021bd9a1f6ee3b19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997014"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89287824"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center の既知の問題
 
@@ -27,9 +27,9 @@ ms.locfileid: "87997014"
 
 ## <a name="general"></a>全般
 
-- Windows 管理センターの1910.2 リリースでは、特定のハードウェア上の Hyper-v サーバーに接続できない場合があります。 この問題でブロックされている場合は、[以前のビルドをダウンロードしてください](https://aka.ms/wacprevious)。
+- Windows 管理センターの1910.2 リリースでは、特定のハードウェア上の Hyper-v サーバーに接続できない場合があります。 この問題でブロックされている場合は、 [以前のビルドをダウンロードしてください](https://aka.ms/wacprevious)。
 
-- Windows **Server 2016**にゲートウェイとしてインストールされている Windows 管理センターを使用している場合、サービスがとを含むイベントログのエラーでクラッシュすることがあり ```Faulting application name: sme.exe``` ```Faulting module name: WsmSvc.dll``` ます。 これは、Windows Server 2019 で修正されたバグが原因です。 Windows Server 2016 の修正プログラムには、2019の累積的な更新プログラム[KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977)が含まれています。
+- Windows **Server 2016** にゲートウェイとしてインストールされている Windows 管理センターを使用している場合、サービスがとを含むイベントログのエラーでクラッシュすることがあり ```Faulting application name: sme.exe``` ```Faulting module name: WsmSvc.dll``` ます。 これは、Windows Server 2019 で修正されたバグが原因です。 Windows Server 2016 の修正プログラムには、2019の累積的な更新プログラム [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977)が含まれています。
 
 - Windows 管理センターがゲートウェイとしてインストールされていて、接続リストが破損していると思われる場合は、次の手順を実行します。
 
@@ -40,7 +40,7 @@ ms.locfileid: "87997014"
   2. **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft** にある **Server Management Experience** フォルダーを削除します
   3. Windows Admin Center を再インストールします
 
-- ツールを開いたまま長時間アイドル状態にすると、**Error: The runspace state is not valid for this operation** (エラー: この操作の実行空間の状態が有効ではありません) というエラーが何度か表示されることがあります。 この問題が発生した場合は、お使いのブラウザーを更新してください。 この問題が発生した場合は、[フィードバックをお送り](https://aka.ms/WACfeedback)ください。
+- ツールを開いたまま長時間アイドル状態にすると、**Error: The runspace state is not valid for this operation** (エラー: この操作の実行空間の状態が有効ではありません) というエラーが何度か表示されることがあります。 この問題が発生した場合は、お使いのブラウザーを更新してください。 この問題が発生した場合は、 [フィードバックをお送り](https://aka.ms/WACfeedback)ください。
 
 - Windows 管理センターのモジュールで実行されている OSS のバージョン番号と、サードパーティのソフトウェアに関する通知に記載されているものとの間には、若干の差異がある場合があります。
 
@@ -53,11 +53,11 @@ ms.locfileid: "87997014"
 
 ### <a name="microsoft-edge"></a>Microsoft Edge
 
-- Windows 管理センターがサービスとして展開されていて、ブラウザーとして Microsoft Edge を使用している場合は、新しいブラウザーウィンドウを起動した後にゲートウェイを Azure に接続できないことがあります。 この問題を回避するに https://login.microsoftonline.com は、 https://login.live.com ゲートウェイの URL を信頼済みサイトとして追加し、クライアント側ブラウザーでポップアップブロックの設定に許可されたサイトを追加します。 この問題を解決する方法については、[トラブルシューティングガイド](troubleshooting.md#azure-features-dont-work-properly-in-edge)を参照してください。 [17990376]
+- Windows 管理センターがサービスとして展開されていて、ブラウザーとして Microsoft Edge を使用している場合は、新しいブラウザーウィンドウを起動した後にゲートウェイを Azure に接続できないことがあります。 この問題を回避するに https://login.microsoftonline.com は、 https://login.live.com ゲートウェイの URL を信頼済みサイトとして追加し、クライアント側ブラウザーでポップアップブロックの設定に許可されたサイトを追加します。 この問題を解決する方法については、 [トラブルシューティングガイド](troubleshooting.md#azure-features-dont-work-properly-in-edge)を参照してください。 [17990376]
 
 ### <a name="google-chrome"></a>Google Chrome
 
-- バージョン70より前 (10 月、2018)、Chrome には websocket プロトコルと NTLM 認証に関する[バグ](https://bugs.chromium.org/p/chromium/issues/detail?id=423609)がありました。 これは、イベント、PowerShell、リモート デスクトップのツールに影響します。
+- バージョン70より前 (10 月、2018)、Chrome には websocket プロトコルと NTLM 認証に関する [バグ](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) がありました。 これは、イベント、PowerShell、リモート デスクトップのツールに影響します。
 
 - Chrome では、特に**ワークグループ** (非ドメイン) 環境での接続の追加エクスペリエンスの実行中に、複数の資格情報プロンプトが表示される場合があります。
 
@@ -102,9 +102,9 @@ PowerShell で `$PSVersiontable` を入力して、WMF がインストールさ�
 
 - 大きいログ ファイルをエクスポートするときに、“パケット サイズ” を参照するエラーが表示される場合があります。
 
-  - これを解決するには、ゲートウェイコンピューターで管理者特権のコマンドプロンプトで次のコマンドを使用します。```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
+  - これを解決するには、ゲートウェイコンピューターで管理者特権のコマンドプロンプトで次のコマンドを使用します。 ```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
 
-### <a name="files"></a>ファイル
+### <a name="files"></a>Files
 
 - 大きいファイルのアップロードまたはダウンロードはまだサポートされていません。 ( \~ 100mb の制限) [12524234]
 
@@ -132,7 +132,7 @@ PowerShell で `$PSVersiontable` を入力して、WMF がインストールさ�
 
 - 一部の構成では、Windows 管理センターのリモートデスクトップクライアントがグループポリシーでブロックされることがあります。 この問題が発生した場合は、 ```Allow users to connect remotely by using Remote Desktop Services``````Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
 
-- リモートデスクトップは websocket 互換性によって影響を受け[ます。](#websocket-compatibility-when-using-a-proxy-service)
+- リモートデスクトップは websocket 互換性によって影響を受け [ます。](#websocket-compatibility-when-using-a-proxy-service)
 
 - リモート デスクトップ ツールは現在、ローカル デスクトップとリモート セッションの間のテキスト、イメージ、またはファイルのコピー/貼り付けをサポートしていません。
 
@@ -152,7 +152,7 @@ PowerShell で `$PSVersiontable` を入力して、WMF がインストールさ�
 
 - 自動的に再起動するように選択した場合、状態が 100% に更新される前に、再起動が行われます。 [13098852]
 
-### <a name="storage"></a>記憶域
+### <a name="storage"></a>Storage
 
 - ダウンレベル: DVD/CD/フロッピー ドライブは、ダウンレベルのボリュームとして表示されません。
 
@@ -189,7 +189,7 @@ PowerShell で `$PSVersiontable` を入力して、WMF がインストールさ�
 
 - Microsoft アカウント ([MSA](https://account.microsoft.com/account/)) を使用する場合、または AZURE ACTIVE DIRECTORY (AAD) を使用して Windows 10 コンピューターにログオンする場合は、"manage-as" を使用してローカル管理者アカウントの資格情報を指定する必要があります [16568455]
 
-- ローカル ホストを管理しようとすると、ゲートウェイ プロセスを昇格するように求められます。 次のユーザーアカウント制御ポップアップで [**いいえ**] をクリックすると、接続試行を取り消してからやり直す必要があります。
+- ローカル ホストを管理しようとすると、ゲートウェイ プロセスを昇格するように求められます。 次のユーザーアカウント制御ポップアップで [ **いいえ** ] をクリックすると、接続試行を取り消してからやり直す必要があります。
 
 - 既定では、Windows 10 では WinRM と PowerShell のリモート処理が行われません。
 
@@ -210,7 +210,7 @@ Hyper-v は、Azure Stack HCI OS を実行する仮想マシンにインスト�
 Azure Stack HCI OS を実行している仮想マシンに Hyper-v をインストールするには、次のコマンドを実行します。
 
 ```PowerShell
-Enable-windowsoptionalfeature -online -featurename Microsoft-hyper-v
+Enable-WindowsOptionalFeature -Online -FeatureName 'Microsoft-Hyper-V'
 ```
 
 ### <a name="step-17"></a>手順1.7
@@ -222,7 +222,7 @@ Enable-windowsoptionalfeature -online -featurename Microsoft-hyper-v
 ストレッチクラスターを作成するときは、ドメインに参加しているサーバーを使用することをお勧めします。 WinRM の制限により、ストレッチクラスターの展開にワークグループコンピューターを使用しようとすると、ネットワークセグメント化の問題が発生します。
 
 ### <a name="undo-and-start-over"></a>元に戻すとやり直す
-クラスターのデプロイに同じマシンを繰り返し使用する場合、以前のクラスターエンティティのクリーンアップは、同じマシンセットでクラスターのデプロイを成功させるために重要です。 クラスターをクリーンアップする方法については、[ハイパー集約型インフラストラクチャの展開](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over)に関するページを参照してください。
+クラスターのデプロイに同じマシンを繰り返し使用する場合、以前のクラスターエンティティのクリーンアップは、同じマシンセットでクラスターのデプロイを成功させるために重要です。 クラスターをクリーンアップする方法については、 [ハイパー集約型インフラストラクチャの展開](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over) に関するページを参照してください。
 
 ### <a name="credssp"></a>CredSSP
 Windows 管理センターのクラスター展開ウィザードでは、いくつかの場所で CredSSP が使用されます。 ウィザードの実行中にこのエラーメッセージが表示されます (これは、クラスターの検証手順で最も頻繁に発生します)。
@@ -295,11 +295,11 @@ Azure File Sync には、Windows 管理センターがバージョン1910より�
 
 Azure Active Directory アプリを更新するには、次の2つのいずれかを実行します。
 1. [**設定**] [  >  **azure**の  >  **登録解除**] の順に選択し、もう一度 Windows 管理センターを Azure に登録して、新しい Azure Active Directory アプリケーションを作成することを確認します。
-2. Azure Active Directory アプリケーションにアクセスし、Windows 管理センターに登録されている既存の Azure Active Directory アプリに必要なアクセス許可を手動で追加します。 これを行うには、 **Settings**  >  **Azure**  >  **azure での azure ビューの**設定に関するページを参照してください。 Azure の [**アプリの登録**] ブレードで、[API の**アクセス許可**] にアクセスし、[**アクセス許可の追加**] を選択します。 下にスクロールして**Azure Active Directory グラフ**を選択し、[委任された**アクセス許可**]、[**ディレクトリ**] の順に展開して、[ **AccessAsUser**] を選択します。 [**アクセス許可の追加**] をクリックして、アプリに更新プログラムを保存します。
+2. Azure Active Directory アプリケーションにアクセスし、Windows 管理センターに登録されている既存の Azure Active Directory アプリに必要なアクセス許可を手動で追加します。 これを行うには、 **Settings**  >  **Azure**  >  **azure での azure ビューの**設定に関するページを参照してください。 Azure の [ **アプリの登録** ] ブレードで、[API の **アクセス許可**] にアクセスし、[ **アクセス許可の追加**] を選択します。 下にスクロールして **Azure Active Directory グラフ**を選択し、[委任された **アクセス許可**]、[ **ディレクトリ**] の順に展開して、[ **AccessAsUser**] を選択します。 [ **アクセス許可の追加** ] をクリックして、アプリに更新プログラムを保存します。
 
 ### <a name="options-for-setting-up-azure-management-services"></a>Azure 管理サービスを設定するためのオプション
 
 Azure Monitor、Azure Update Management、Azure Security Center を含む azure の管理サービスは、オンプレミスのサーバーと同じエージェントを使用します (Microsoft Monitoring Agent)。 Azure Update Management には、サポートされているリージョンのセットが制限されており、Log Analytics ワークスペースが Azure Automation アカウントにリンクされている必要があります。 この制限により、Windows 管理センターで複数のサービスをセットアップする場合は、まず Azure Update Management を設定してから、Azure Security Center または Azure Monitor する必要があります。 Microsoft Monitoring Agent を使用する Azure 管理サービスを構成した後、Windows 管理センターを使用して Azure Update Management を設定しようとすると、Windows 管理センターでは、Microsoft Monitoring Agent にリンクされている既存のリソースが Azure Update Management をサポートしている場合にのみ Azure Update Management を構成できます。 そうでない場合は、次の2つのオプションがあります。
 
-1. [コントロールパネル] > Microsoft Monitoring Agent を選択し[て、既存の Azure 管理ソリューション](/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics)(Azure Monitor や Azure Security Center など) からサーバーを切断します。 次に、Windows 管理センターで Azure Update Management を設定します。 その後、Windows 管理センターを使用して、問題なく他の Azure 管理ソリューションを設定することができます。
+1. [コントロールパネル] > Microsoft Monitoring Agent を選択し [て、既存の Azure 管理ソリューション](/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) (Azure Monitor や Azure Security Center など) からサーバーを切断します。 次に、Windows 管理センターで Azure Update Management を設定します。 その後、Windows 管理センターを使用して、問題なく他の Azure 管理ソリューションを設定することができます。
 2. [Azure Update Management に必要な azure リソースを手動で設定](/azure/automation/automation-update-management)し、Microsoft Monitoring Agent (Windows 管理センターの外部) を[手動で更新](/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace)して、使用する Update Management ソリューションに対応する新しいワークスペースを追加することができます。
