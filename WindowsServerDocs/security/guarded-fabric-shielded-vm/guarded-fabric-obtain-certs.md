@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: 995a115b9e611500732e4674880ee4ca4b204e14
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 0f9499402a5788cd3dc9ad9cd262d65636f9284c
+ms.sourcegitcommit: 076504a92cddbd4b84bfcd89da1bf1c8c9e79495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989115"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427494"
 ---
 # <a name="obtain-certificates-for-hgs"></a>HGS の証明書を取得する
 
@@ -33,11 +33,11 @@ HGS を展開するときに、シールドされた VM を起動するために
 
 証明書テンプレートのプロパティ | 必須値
 ------------------------------|----------------
-暗号化プロバイダー               | 任意のキー格納プロバイダー (KSP)。 従来の暗号化サービスプロバイダー (Csp) はサポートされて**いません**。
+暗号化プロバイダー               | 任意のキー格納プロバイダー (KSP)。 従来の暗号化サービスプロバイダー (Csp) はサポートされて **いません** 。
 キーアルゴリズム                 | RSA
 最小キー サイズ              | 2048 ビット
 署名アルゴリズム           | 推奨: SHA256
-キー使用法                     | デジタル署名*とデータの*暗号化
+キー使用法                     | デジタル署名 *とデータの* 暗号化
 拡張キー使用法            | サーバー認証
 キー更新ポリシー            | 同じキーで更新します。 異なるキーを使用して HGS 証明書を更新すると、シールドされた Vm を起動できなくなります。
 サブジェクト名                  | 推奨: 会社の名前または web アドレス。 この情報は、シールドデータファイルウィザードで VM の所有者に表示されます。
@@ -49,7 +49,7 @@ HSM ベンダーからのガイダンスに従って、上記の属性で証明�
 すべての HGS ノードは、同じ署名証明書と暗号化証明書にアクセスする必要があります。
 ソフトウェアベースの証明書を使用している場合は、パスワードを使用して証明書を PFX ファイルにエクスポートし、HGS で証明書を管理できるようにすることができます。
 また、各 HGS ノードのローカルコンピューターの証明書ストアに証明書をインストールし、HGS に拇印を指定することもできます。
-両方のオプションについては、「 [HGS クラスターの初期化](guarded-fabric-initialize-hgs.md)」を参照してください。
+両方のオプションについては、「 [HGS クラスターの初期化](guarded-fabric-initialize-hgs.md) 」を参照してください。
 
 ## <a name="create-self-signed-certificates-for-test-scenarios"></a>テストシナリオ用に自己署名証明書を作成する
 
@@ -61,11 +61,11 @@ HGS ラボ環境を作成していて、または証明機関を使用する必�
 ```powershell
 $certificatePassword = Read-Host -AsSecureString -Prompt "Enter a password for the PFX file"
 
-$signCert = New-SelfSignedCertificate -Subject "CN=HGS Signing Certificate"
+$signCert = New-SelfSignedCertificate -Subject "CN=HGS Signing Certificate" -KeyUsage DataEncipherment, DigitalSignature
 Export-PfxCertificate -FilePath .\signCert.pfx -Password $certificatePassword -Cert $signCert
 Remove-Item $signCert.PSPath
 
-$encCert = New-SelfSignedCertificate -Subject "CN=HGS Encryption Certificate"
+$encCert = New-SelfSignedCertificate -Subject "CN=HGS Encryption Certificate" -KeyUsage DataEncipherment, DigitalSignature
 Export-PfxCertificate -FilePath .\encCert.pfx -Password $certificatePassword -Cert $encCert
 Remove-Item $encCert.PSPath
 ```
@@ -82,8 +82,8 @@ SSL 証明書のプロパティ | 必須値
 サブジェクト名             | HGS クラスターの名前 (分散ネットワーク名または仮想コンピューターオブジェクトの FQDN と呼ばれます)。 これは、に指定された HGS サービス名と HGS ドメイン名を連結したものになり `Initialize-HgsServer` ます。
 サブジェクト代替名 | 別の DNS 名を使用して HGS クラスターに接続する場合は (たとえば、ロードバランサーの背後にある場合)、証明書要求の SAN フィールドにこれらの DNS 名を含めてください。
 
-HGS サーバーを初期化するときにこの証明書を指定するためのオプションについては、「[最初の hgs ノードの構成](guarded-fabric-initialize-hgs.md)」を対象としています。
-また、 [HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps)コマンドレットを使用して、後で SSL 証明書を追加または変更することもできます。
+HGS サーバーを初期化するときにこの証明書を指定するためのオプションについては、「 [最初の hgs ノードの構成](guarded-fabric-initialize-hgs.md)」を対象としています。
+また、 [HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps) コマンドレットを使用して、後で SSL 証明書を追加または変更することもできます。
 
 ## <a name="next-step"></a>次のステップ
 
