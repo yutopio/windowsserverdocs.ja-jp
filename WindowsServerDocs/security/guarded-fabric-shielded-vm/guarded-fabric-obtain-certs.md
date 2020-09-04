@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: 0f9499402a5788cd3dc9ad9cd262d65636f9284c
-ms.sourcegitcommit: 076504a92cddbd4b84bfcd89da1bf1c8c9e79495
+ms.openlocfilehash: 392065ac9fe9e32e84550e14cd9ef39349ac8d67
+ms.sourcegitcommit: 664ed9bb0bbac2c9c0727fc2416d8c437f2d5cbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427494"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89472022"
 ---
 # <a name="obtain-certificates-for-hgs"></a>HGS の証明書を取得する
 
@@ -59,15 +59,23 @@ HGS ラボ環境を作成していて、または証明機関を使用する必�
 自己署名証明書を作成して PFX ファイルにエクスポートするには、PowerShell で次のコマンドを実行します。
 
 ```powershell
-$certificatePassword = Read-Host -AsSecureString -Prompt "Enter a password for the PFX file"
+$certificatePassword = Read-Host -AsSecureString -Prompt 'Enter a password for the PFX file'
 
-$signCert = New-SelfSignedCertificate -Subject "CN=HGS Signing Certificate" -KeyUsage DataEncipherment, DigitalSignature
-Export-PfxCertificate -FilePath .\signCert.pfx -Password $certificatePassword -Cert $signCert
+$signCert = New-SelfSignedCertificate -Subject 'CN=HGS Signing Certificate' -KeyUsage DataEncipherment, DigitalSignature
+Export-PfxCertificate -FilePath '.\signCert.pfx' -Password $certificatePassword -Cert $signCert
+
+# Remove the certificate from "Personal" container
 Remove-Item $signCert.PSPath
+# Remove the certificate from "Intermediate certification authorities" container
+Remove-Item -Path "Cert:\LocalMachine\CA\$($signCert.Thumbprint)"
 
-$encCert = New-SelfSignedCertificate -Subject "CN=HGS Encryption Certificate" -KeyUsage DataEncipherment, DigitalSignature
-Export-PfxCertificate -FilePath .\encCert.pfx -Password $certificatePassword -Cert $encCert
+$encCert = New-SelfSignedCertificate -Subject 'CN=HGS Encryption Certificate' -KeyUsage DataEncipherment, DigitalSignature
+Export-PfxCertificate -FilePath '.\encCert.pfx' -Password $certificatePassword -Cert $encCert
+
+# Remove the certificate from "Personal" container
 Remove-Item $encCert.PSPath
+# Remove the certificate from "Intermediate certification authorities" container
+Remove-Item -Path "Cert:\LocalMachine\CA\$($encCert.Thumbprint)"
 ```
 
 ## <a name="request-an-ssl-certificate"></a>SSL 証明書を要求する
@@ -79,8 +87,8 @@ Hyper-v ホストと HGS ノードはどちらも、指定した SSL 証明書�
 
 SSL 証明書のプロパティ | 必須値
 -------------------------|---------------
-サブジェクト名             | HGS クラスターの名前 (分散ネットワーク名または仮想コンピューターオブジェクトの FQDN と呼ばれます)。 これは、に指定された HGS サービス名と HGS ドメイン名を連結したものになり `Initialize-HgsServer` ます。
-サブジェクト代替名 | 別の DNS 名を使用して HGS クラスターに接続する場合は (たとえば、ロードバランサーの背後にある場合)、証明書要求の SAN フィールドにこれらの DNS 名を含めてください。
+サブジェクト名             | Hgs クライアント (つまり、Guraded ホスト) が HGS サーバーへのアクセスに使用するアドレス。 これは通常、分散ネットワーク名または仮想コンピューターオブジェクト (VCO) と呼ばれる HGS クラスターの DNS アドレスです。 これは、に指定された HGS サービス名と HGS ドメイン名を連結したものになり `Initialize-HgsServer` ます。
+サブジェクト代替名 | 別の DNS 名を使用して HGS クラスターに接続する場合は (たとえば、ロードバランサーの背後にある場合や、複雑なトポロジ内のノードのサブセットに対して異なるアドレスを使用する場合)、証明書要求の SAN フィールドにこれらの DNS 名を含めてください。 SAN 拡張機能が設定されている場合、サブジェクト名は無視されるため、SAN には、通常はサブジェクト名に入力した値を含むすべての値を含める必要があることに注意してください。
 
 HGS サーバーを初期化するときにこの証明書を指定するためのオプションについては、「 [最初の hgs ノードの構成](guarded-fabric-initialize-hgs.md)」を対象としています。
 また、 [HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps) コマンドレットを使用して、後で SSL 証明書を追加または変更することもできます。
