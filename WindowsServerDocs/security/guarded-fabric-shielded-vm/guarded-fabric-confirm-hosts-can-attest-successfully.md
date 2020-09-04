@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: 8c3f28b544db7a41c15c4f12b58c58c1f750cb54
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: cda60c65772a41322a20b7277a7d7c80a4daf9e1
+ms.sourcegitcommit: a640c2d7f2d21d7cd10a9be4496e1574e5e955f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997505"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89446775"
 ---
 # <a name="confirm-guarded-hosts-can-attest"></a>保護されたホストが証明できることを確認する
 
@@ -29,18 +29,18 @@ ms.locfileid: "87997505"
 
 3. ホストのキーの保護と構成証明の Url を構成します。
 
-    - **Windows powershell を使用**する: 管理者特権の windows powershell コンソールで次のコマンドを実行して、キーの保護と構成証明の url を構成できます。 FQDN の場合 &lt; &gt; は、hgs クラスターの完全修飾ドメイン名 (fqdn) を使用します (たとえば、hgs サーバーで**HgsServer**コマンドレットを実行して、url を取得するように hgs 管理者に指示します)。
+    - **Windows powershell を使用**する: 管理者特権の windows powershell コンソールで次のコマンドを実行して、キーの保護と構成証明の url を構成できます。 FQDN の場合 &lt; &gt; は、hgs クラスターの完全修飾ドメイン名 (fqdn) を使用します (たとえば、hgs サーバーで **HgsServer** コマンドレットを実行して、url を取得するように hgs 管理者に指示します)。
 
         ```PowerShell
         Set-HgsClientConfiguration -AttestationServerUrl 'http://<FQDN>/Attestation' -KeyProtectionServerUrl 'http://<FQDN>/KeyProtection'
          ```
 
-        フォールバック HGS サーバーを構成するには、このコマンドを繰り返し、キーの保護と構成証明サービスのフォールバック Url を指定します。 詳細については、「[フォールバック構成](guarded-fabric-manage-branch-office.md#fallback-configuration)」を参照してください。
+        フォールバック HGS サーバーを構成するには、このコマンドを繰り返し、キーの保護と構成証明サービスのフォールバック Url を指定します。 詳細については、「 [フォールバック構成](guarded-fabric-manage-branch-office.md#fallback-configuration)」を参照してください。
 
-    - **Vmm から**: System Center 2016-VIRTUAL MACHINE MANAGER (vmm) を使用している場合は、vmm で構成証明とキー保護の url を構成できます。 詳細については、「 **VMM で保護**されたホストのプロビジョニング」の「[グローバル HGS 設定を構成する](/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#configure-global-hgs-settings)」を参照してください。
+    - **Vmm から**: SYSTEM CENTER VIRTUAL MACHINE MANAGER (vmm) を使用している場合は、vmm で構成証明とキー保護の url を構成できます。 詳細については、「 **VMM で保護**されたホストのプロビジョニング」の「[グローバル HGS 設定を構成する](/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#configure-global-hgs-settings)」を参照してください。
 
-    >**注**
-    > - Hgs 管理者が[hgs サーバーで HTTPS を有効](guarded-fabric-configure-hgs-https.md)にした場合は、で url を開始し `https://` ます。
+    >**メモ**
+    > - Hgs 管理者が [hgs サーバーで HTTPS を有効](guarded-fabric-configure-hgs-https.md)にした場合は、で url を開始し `https://` ます。
     > - Hgs 管理者が HGS サーバーで HTTPS を有効にし、自己署名証明書を使用している場合は、すべてのホストの信頼されたルート証明機関ストアに証明書をインポートする必要があります。 これを行うには、各ホストで次のコマンドを実行します。
        ```PowerShell
        Import-Certificate -FilePath "C:\temp\HttpsCertificate.cer" -CertStoreLocation Cert:\LocalMachine\Root
@@ -60,7 +60,7 @@ ms.locfileid: "87997505"
     ```
 
     > [!IMPORTANT]
-    > Windows Server 2019 または Windows 10 バージョン1809を使用していて、コード整合性ポリシーを使用している場合は、 `Get-HgsTrace` **コード整合性ポリシーのアクティブ**な診断の失敗を返します。
+    > Windows Server 2019 または Windows 10 バージョン1809以降を使用していて、コード整合性ポリシーを使用している場合は、 `Get-HgsTrace` **コード整合性ポリシーアクティブ** 診断の失敗を返します。
     > 失敗した診断が唯一の場合は、この結果を無視しても問題ありません。
 
 ## <a name="next-step"></a>次のステップ
