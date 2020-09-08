@@ -7,19 +7,19 @@ ms.assetid: 9bd191d6-ecc5-4230-a88e-f3fc281cb956
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c1d6d9b056c4ccc5b6961023e1f0c22034321960
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 807aacc5039bf90ea4dd7c7859c232d8c8b3011a
+ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181578"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554345"
 ---
 # <a name="add-microsoft-online-service-partner-agreement-partner-of-record-information"></a>Microsoft Online Service パートナー契約の登録パートナー情報の追加
 
 >適用対象: windows Server 2016 Essentials、Windows Server 2012 R2 Essentials、Windows Server 2012 Essentials
 
 ##  <a name="BKMK_3rdLevelDomanNames"></a>
- Office 365 の Microsoft Online Service パートナー契約 (MOSPA) パートナーの場合、サブスクリプション要求が Office 365 統合モジュールを介して Windows Server Essentials から送信されたときに正しく補正されるようにするには、レコード id (POR ID) を含むレジストリキーを作成する必要があります。 次の情報が読み取られ、Office 365 サインアップ URL 経由でサービス プロバイダーに渡されます。
+ Microsoft 365 の Microsoft Online Service パートナー契約 (MOSPA) パートナーは、Microsoft 365 統合モジュールを使用して Windows Server Essentials からサブスクリプション要求が発生したときに正しく補正されるようにするには、取引先レコード id (POR ID) を含むレジストリキーを作成する必要があります。 次の情報が読み取られ、Microsoft 365 のサインアップ Url を使用してサービスプロバイダーに渡されます。
 
 -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO
 

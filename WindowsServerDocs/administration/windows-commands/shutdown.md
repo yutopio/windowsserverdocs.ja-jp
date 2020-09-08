@@ -7,12 +7,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 44ee776ec2ec199fe39cfd17a05dfc3b8ba4502c
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: f83788b4d8e8f92ea1375b9a0f245f9bfa63bc85
+ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036450"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554385"
 ---
 # <a name="shutdown"></a>shutdown
 
@@ -23,7 +23,7 @@ ms.locfileid: "89036450"
 ## <a name="syntax"></a>構文
 
 ```
-shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t <XXX>] [/d [p|u:]<XX>:<YY> [/c comment]]
+shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t <XXX>] [/d [p|u:]<XX>:<YY> [/c "descriptive comment"]]
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -47,23 +47,23 @@ shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t 
 
 ## <a name="remarks"></a>解説
 
--   ユーザーを割り当てる必要がある、 **システムをシャット ダウン** シャット ダウン、ローカルまたはリモートにユーザー権限を使用しているコンピューターの管理、 **シャット ダウン** コマンドです。
--   ユーザーは、Administrators グループのメンバーは、ローカルまたはリモートで管理されるコンピューターの予期しないシャット ダウンに注釈を付けるである必要があります。 ターゲット コンピューターがドメインに参加している場合、Domain Admins グループのメンバーはこの手順を実行できる可能性があります。 詳細については、次を参照してください。
-    -   [既定のローカル グループ](/previous-versions/windows/it-pro/windows-server-2003/cc785098(v=ws.10))
-    -   [既定のグループ](/previous-versions/windows/it-pro/windows-server-2003/cc756898(v=ws.10))
--   一度に複数のコンピューターをシャットダウンする場合は、スクリプトを使用して各コンピューターの **shutdown** を呼び出すか、または **shutdown** **/i** を使用して [リモートシャットダウン] ダイアログボックスを表示することができます。
--   メジャーおよびマイナーの理由コードを指定する場合は、理由を使用する場合、各コンピューターでこれらの理由コードを定義する必要があります。 理由コードがターゲット コンピューターで定義されていない場合、シャット ダウン イベントの追跡ツールは、適切な理由のテキストをログオンできません。
--   使用して、シャット ダウンが予定されていることを示すために注意してください、 **p:** パラメーター。 省略すると **p:** 、シャット ダウンが計画的なであることを示します。 入力した場合 **p:** 計画外のシャット ダウンの理由コードを続けて、コマンドに含まれる、シャット ダウンします。 逆に、省略すると **p:** し、コマンドを予定されたシャット ダウンの理由コードの種類は、シャット ダウンを実行しません。
+- ユーザーを割り当てる必要がある、 **システムをシャット ダウン** シャット ダウン、ローカルまたはリモートにユーザー権限を使用しているコンピューターの管理、 **シャット ダウン** コマンドです。
+- ユーザーは、Administrators グループのメンバーは、ローカルまたはリモートで管理されるコンピューターの予期しないシャット ダウンに注釈を付けるである必要があります。 ターゲット コンピューターがドメインに参加している場合、Domain Admins グループのメンバーはこの手順を実行できる可能性があります。 詳細については次を参照してください:
+    - [既定のローカル グループ](/previous-versions/windows/it-pro/windows-server-2003/cc785098(v=ws.10))
+    - [既定のグループ](/previous-versions/windows/it-pro/windows-server-2003/cc756898(v=ws.10))
+- 一度に複数のコンピューターをシャットダウンする場合は、スクリプトを使用して各コンピューターの **shutdown** を呼び出すか、または **shutdown** **/i** を使用して [リモートシャットダウン] ダイアログボックスを表示することができます。
+- メジャーおよびマイナーの理由コードを指定する場合は、理由を使用する場合、各コンピューターでこれらの理由コードを定義する必要があります。 理由コードがターゲット コンピューターで定義されていない場合、シャット ダウン イベントの追跡ツールは、適切な理由のテキストをログオンできません。
+- 使用して、シャット ダウンが予定されていることを示すために注意してください、 **p:** パラメーター。 省略すると **p:** 、シャット ダウンが計画的なであることを示します。 入力した場合 **p:** 計画外のシャット ダウンの理由コードを続けて、コマンドに含まれる、シャット ダウンします。 逆に、省略すると **p:** し、コマンドを予定されたシャット ダウンの理由コードの種類は、シャット ダウンを実行しません。
 
 ## <a name="examples"></a>例
 
 アプリケーションを強制的に終了してローカルコンピューターを再起動することを強制するには、アプリケーション: メンテナンス (計画済み) とコメントを再構成 myapp.exe の種類:
 ```
-shutdown /r /t 60 /c Reconfiguring myapp.exe /f /d p:4:1
+shutdown /r /t 60 /c "Reconfiguring myapp.exe" /f /d p:4:1
 ```
 同じパラメーターを使用してリモートコンピューターの ServerName を再起動するには、次のように \\ \\ 入力します。
 ```
-shutdown /r /m \\servername /t 60 /c Reconfiguring myapp.exe /f /d p:4:1
+shutdown /r /m \\servername /t 60 /c "Reconfiguring myapp.exe" /f /d p:4:1
 ```
 
 ## <a name="additional-references"></a>その他の参照情報

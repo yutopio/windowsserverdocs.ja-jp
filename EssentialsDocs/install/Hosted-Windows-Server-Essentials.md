@@ -7,12 +7,12 @@ ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 73ac5bb39280277a50af84f489e3a9c5ccb0db05
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.openlocfilehash: 6fa3f4c013e91fdf9015d106575af832720c1db8
+ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838001"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554495"
 ---
 # <a name="hosted-windows-server-essentials"></a>ホスト型 Windows Server Essentials
 
@@ -29,7 +29,7 @@ ms.locfileid: "87838001"
 
  **Anywhere Access:** リモート Web アクセスにより、簡単なタッチ操作に適したブラウザーを使用し、インターネット接続を介して事実上どこからでもアプリケーションやデータにアクセスし、任意のデバイスを使用することができます。 また、Windows Server Essentials は、更新された Windows Phone アプリと Windows 8.1 クライアントコンピューター用の新しいアプリも提供します。これにより、ユーザーは直感的に接続して、サーバー上のファイルやフォルダーにアクセスして、検索することができます。 また、オフライン アクセスの場合、ファイルが自動的にキャッシュされ、サーバーへの接続が可能になったときに同期されます。 Windows Server Essentials を使用すると、仮想プライベートネットワーク (VPN) のセットアップが、わずか数回のクリックでウィザードを使用して簡単に実行できるようになり、ユーザーに対する VPN アクセスの管理が容易になります。 クライアント コンピューターは、VPN 接続を利用して Windows SBS 環境にリモートで参加できるため、オフィスに通う必要がなくなります。
 
- **ワークロードの柔軟性:** Windows Server Essentials は、オンプレミスで実行され、クラウドで実行されるアプリケーションとサービスを柔軟に選択できるように設計されています。 前のバージョンでは、Windows Small Business Server Standard に Exchange Server がコンポーネント製品として含まれており、クラウドベースのメッセージングおよびコラボレーション サービスを利用する顧客にとって、コスト高と複雑化の要因となっていました。 Windows Server Essentials では、オンプレミスの Exchange Server のコピーを実行するか、ホスト型 Exchange サービスをサブスクライブするか、Microsoft Office 365 にサブスクライブするかにかかわらず、お客様は同じ種類の統合管理エクスペリエンスを利用できます。
+ **ワークロードの柔軟性:** Windows Server Essentials は、オンプレミスで実行され、クラウドで実行されるアプリケーションとサービスを柔軟に選択できるように設計されています。 前のバージョンでは、Windows Small Business Server Standard に Exchange Server がコンポーネント製品として含まれており、クラウドベースのメッセージングおよびコラボレーション サービスを利用する顧客にとって、コスト高と複雑化の要因となっていました。 Windows Server Essentials では、オンプレミスの Exchange Server のコピーを実行するか、ホスト型 Exchange サービスにサブスクライブするか、Microsoft 365 をサブスクライブするかにかかわらず、お客様は同じ種類の統合管理エクスペリエンスを利用できます。
 
  **正常性の監視:** Windows Server Essentials は、独自の正常性状態と、Windows 8.1、Windows 7、Mac OS X バージョン10.5 以降を実行しているクライアントコンピューターの状態を監視します。 正常性状態では、コンピューターのバックアップ、サーバー記憶域、ディスク領域不足などに関連する案件または問題が通知されます。
 
@@ -52,7 +52,7 @@ ms.locfileid: "87838001"
 
    Virtual Machine Manager を使用している場合、実行中のインスタンスを使用してテンプレートを作成できます。 テンプレートを作成すると、インスタンスが sysprep され、サーバーがシャットダウンします。 ライブラリに格納した後、インスタンスをケースバイケースで起動できます。
 
-##  <a name="how-do-i-automate-the-deployment"></a><a name="BKMK_automatedeployment"></a>デプロイを自動化操作方法には
+##  <a name="how-do-i-automate-the-deployment"></a><a name="BKMK_automatedeployment"></a> デプロイを自動化操作方法には
  カスタマイズしたイメージを取得したら、独自のイメージを使ってデプロイメントを実行できます。 半無人インストールを実行するには、WinPE セットアップ用の unattend.xml を提供/展開する必要があります。 完全無人インストールを実行するには、Windows Server Essentials 初期構成の cfg.ini ファイルも指定する必要があります。
 
 1. 無人 WinPE セットアップのみを実行します。 これにより、WinPE セットアップのみが自動化されます。初期構成前にインストールを停止し、エンド ユーザーが RDP 後に自分で会社、ドメイン、管理者情報をサーバー セッションに提供できるようにします。 これを行うには、次の手順を実行します。
@@ -251,7 +251,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
  Windows Server Essentials はドメインコントローラーなので、標準の方法で2番目のサーバーをドメインに参加させることができます。
 
 ## <a name="which-email-solutions-can-be-integrated"></a>統合できる電子メール ソリューション
- Windows Server Essentials は、Office 365 とオンプレミス Exchange の2つの電子メールソリューションとの統合をサポートしています。 独自のホスト型電子メールソリューションを実行している場合は、Windows Server Essentials をホスト型電子メールソリューションと統合するためのアドインを開発する必要があります。
+ Windows Server Essentials では、Microsoft 365 とオンプレミスの Exchange の2つの電子メールソリューションとの統合がサポートされています。 独自のホスト型電子メールソリューションを実行している場合は、Windows Server Essentials をホスト型電子メールソリューションと統合するためのアドインを開発する必要があります。
 
 ## <a name="how-do-i-migrate-on-premises-windows-sbs-201120082003-to-the-hosted-windows-server-essentials"></a>オンプレミスの Windows SBS (2011/2008/2003) をホストされている Windows Server Essentials に移行操作方法ますか?
  移行ガイドは、オンプレミスの Windows Small Business Server (Windows SBS) から Windows Server Essentials への移行に使用できます。 ホスト環境に応じて、手順の一部が多少異なる場合があります。 ただし、一般的なタスクおよび移行するワークロードは同じはずです。 [移行ガイド](https://go.microsoft.com/fwlink/p/?LinkID=254292) を参照し、ホスト環境に基づいて必要なカスタマイズを行うことをお勧めします。
@@ -284,7 +284,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 
 1.  エージェントをインストールし、証明書信頼を使用して信頼を構成します。 Windows Server Essentials はドメインコントローラーとして事前に構成されており、他のドメインまたはフォレストとの信頼を持つことができないため、System Center Operation Manager エージェントを Windows Server Essentials にインストールし、証明書を使用して管理サーバーとの信頼を構成する必要があります。
 
-2.  管理パックをダウンロードします。 Operations Manager 2007 を使用して Windows Server Essentials を監視するには、まず、管理パックカタログから[Windows Server オペレーティングシステム管理パック](https://connect.microsoft.com/WindowsServer/Downloads/DownloadDetails.aspx?DownloadID=45010)をダウンロードする必要があります。
+2.  管理パックをダウンロードします。 Operations Manager 2007 を使用して Windows Server Essentials を監視するには、まず、管理パックカタログから [Windows Server オペレーティングシステム管理パック](https://connect.microsoft.com/WindowsServer/Downloads/DownloadDetails.aspx?DownloadID=45010) をダウンロードする必要があります。
 
 3.  管理パック ファイルをインポートします。 ローカライズ版の管理パックを使用している場合、メイン管理パック ファイルと言語パックの両方をインポートする必要があります。
 
@@ -319,7 +319,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 > [!NOTE]
 >  クライアントのバックアップは、VPN 経由でデータをクライアントからサーバーに転送する必要があるため、パフォーマンスに影響する可能性があります。
 
- **完全なクライアントバックアップ**は、Windows Server Essentials ネットワークに接続されているすべてのクライアントデバイスに対して、既定でに設定されています。 フル クライアント (システムとデータ) の増分バックアップを実行し、データの重複除去をサポートします。 バックアップデータは、Windows Server Essentials を実行しているサーバー上にあります。 障害が発生したクライアントは、前のバックアップ ポイントまでのデータを取り戻すことができます。 この機能をオフにするには、 [ADK ドキュメント](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200150(v=ws.11))の「Cfg.ini ファイルを作成する」セクションの手順に従ってください。
+ **完全なクライアントバックアップ** は、Windows Server Essentials ネットワークに接続されているすべてのクライアントデバイスに対して、既定でに設定されています。 フル クライアント (システムとデータ) の増分バックアップを実行し、データの重複除去をサポートします。 バックアップデータは、Windows Server Essentials を実行しているサーバー上にあります。 障害が発生したクライアントは、前のバックアップ ポイントまでのデータを取り戻すことができます。 この機能をオフにするには、 [ADK ドキュメント](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200150(v=ws.11))の「Cfg.ini ファイルを作成する」セクションの手順に従ってください。
 
  次に、フル クライアント バックアップの注意事項を示します。
 
@@ -333,9 +333,9 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 
 - クライアント ベア メタル回復: Windows プレインストール環境では VPN 接続をサポートしないため、クライアント ベア メタル回復はサポートされません。
 
-  **ファイル履歴**は、プロファイルデータ (ライブラリ、デスクトップ、連絡先、お気に入り) をネットワーク共有にバックアップするための Windows 8.1 の機能です。 Windows Server Essentials では、Windows Server Essentials に参加しているすべての Windows 8.1 クライアントのファイル履歴設定を一元的に管理できます。 バックアップ データは、Windows Server Essentials を実行しているサーバーに保存されます。 この機能をオフにするには、 [ADK ドキュメント](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200150(v=ws.11))の「Cfg.ini ファイルを作成する」セクションの手順に従ってください。
+  **ファイル履歴** は、プロファイルデータ (ライブラリ、デスクトップ、連絡先、お気に入り) をネットワーク共有にバックアップするための Windows 8.1 の機能です。 Windows Server Essentials では、Windows Server Essentials に参加しているすべての Windows 8.1 クライアントのファイル履歴設定を一元的に管理できます。 バックアップ データは、Windows Server Essentials を実行しているサーバーに保存されます。 この機能をオフにするには、 [ADK ドキュメント](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200150(v=ws.11))の「Cfg.ini ファイルを作成する」セクションの手順に従ってください。
 
-### <a name="storage-management"></a>記憶域の管理
+### <a name="storage-management"></a>ストレージ管理
  [新しい記憶域機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11)) により、異種ハード ドライブの物理記憶域容量の集計、ハード ドライブの動的な追加、復元レベルを指定したデータ ボリュームの作成が可能となりました。 また、Windows Server Essentials に iSCSI ディスクを接続して、記憶域を拡張することもできます。
 
 ## <a name="what-are-the-main-scenarios-i-should-test"></a>テストする必要があるメイン シナリオの詳細
@@ -363,7 +363,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 
 - (適用できる場合) 記憶域を構成し、管理します。
 
-- (適用できる場合) 電子メール ソリューション統合 (Office 365、ホスト型 Exchange など) を構成します。
+- (該当する場合)電子メールソリューション統合 (Microsoft 365、ホスト型 Exchange など) を構成します。
 
 - (適用できる場合) メディア サーバーを構成します。
 

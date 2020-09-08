@@ -7,12 +7,12 @@ ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: cef547570c58c405ac563a1c2215feda120350f4
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.openlocfilehash: 7975f70d75a33549d0a3c7616b5260064d5cb323
+ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87837881"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554425"
 ---
 # <a name="integrate-an-on-premises-exchange-server-with-windows-server-essentials"></a>社内 Exchange Server と Windows Server Essentials を統合する
 
@@ -34,10 +34,10 @@ ms.locfileid: "87837881"
 
 -   [インターネット ドメイン名を構成する](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_DomainNames)
 
-###  <a name="set-up-a-server-that-is-running-windows-server-essentials"></a><a name="BKMK_SetUpSBS8"></a>Windows Server Essentials を実行しているサーバーをセットアップする
+###  <a name="set-up-a-server-that-is-running-windows-server-essentials"></a><a name="BKMK_SetUpSBS8"></a> Windows Server Essentials を実行しているサーバーをセットアップする
  Windows Server Essentials を実行するサーバーが既にセットアップされている必要があります。 このサーバーは、Exchange Server を実行するサーバーに対するドメイン コントローラーになります。 Windows Server Essentials を設定する方法については、「[Windows Server Essentials のインストール](../install/Install-Windows-Server-Essentials.md)」を参照してください。
 
-###  <a name="prepare-a-second-server-on-which-to-install-exchange-server"></a><a name="BKMK_SecondServer"></a>Exchange Server をインストールする2台目のサーバーを準備する
+###  <a name="prepare-a-second-server-on-which-to-install-exchange-server"></a><a name="BKMK_SecondServer"></a> Exchange Server をインストールする2台目のサーバーを準備する
  Exchange Server 2010 または Exchange Server 2013 の実行が正式にサポートされているバージョンの Windows Server オペレーティング システムを実行する 2 台目のサーバーを用意し、Exchange Server をインストールする必要があります。 その後、2 台目のサーバーを Windows Server Essentials ドメインに参加させる必要があります。
 
  2台目のサーバーを Windows Server Essentials ドメインに参加させる方法については、「 [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)」の「2台目のサーバーをネットワークに参加させる」を参照してください。
@@ -45,7 +45,7 @@ ms.locfileid: "87837881"
 > [!NOTE]
 >  Microsoft では、Windows Server Essentials を実行しているサーバーへの Exchange Server のインストールはサポートしていません。
 
-###  <a name="configure-your-internet-domain-name"></a><a name="BKMK_DomainNames"></a>インターネットドメイン名を構成する
+###  <a name="configure-your-internet-domain-name"></a><a name="BKMK_DomainNames"></a> インターネットドメイン名を構成する
  Exchange Server が実行されている社内サーバーを Windows Server Essentials と統合するには、会社用の有効なインターネット ドメイン名 (*contoso.com* など) を登録済みであることが必要です。 また、ドメイン ネーム プロバイダーと連携して、Exchange Server で要求される DNS リソース レコードを作成する必要があります。
 
  たとえば、会社のインターネット ドメイン名が contoso.com の場合、Exchange Server を実行する社内サーバーを参照するために *mail.contoso.com* という完全修飾ドメイン名 (FQDN) を使用するには、ドメイン ネーム プロバイダーと連携して、次の表に示すような DNS リソース レコードを作成します。
@@ -283,7 +283,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
  ルーターでは、少なくとも次のポート設定を構成する必要があります。
 
-|ルーター ポート|宛先 IP|宛先ポート|メモ|
+|ルーター ポート|宛先 IP|宛先ポート|注意|
 |-----------------|--------------------|----------------------|----------|
 |25 (SMTP)|Exchange Server を実行している社内サーバーの内部 IP。|25||
 |80 (HTTP)|Windows Server Essentials を実行しているサーバーの内部 IP|80||
@@ -362,7 +362,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
       **Arrconfig config-** _証明書ファイルへの証明書パス_ **-** _Exchange Server のホスト名ホスト名_
 
      > [!NOTE]
-     >  たとえば、次のようになります。**Arrconfig config-cert** _c:\temp\certificate.pfx_ **-ホスト名** _mail.contoso.com_
+     >  たとえば、次のようになります。 **Arrconfig config-cert** _c:\temp\certificate.pfx_ **-ホスト名** _mail.contoso.com_
      >
      >  *mail.contoso.com* は、証明書によって保護されているドメイン名に置き換えてください。
 
@@ -370,7 +370,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
       **Arrconfig config-** _証明書ファイルへの証明書パス_ **-** targetserver _host names for exchange_ server **-** _exchange server のサーバー名_
 
-      たとえば、次のようになります。**Arrconfig config-cert** _c:\temp\certificate.pfx_ **-ホスト名** _mail.contoso.com_ **-targetserver** _exchangesvr」_
+      たとえば、次のようになります。 **Arrconfig config-cert** _c:\temp\certificate.pfx_ **-ホスト名** _mail.contoso.com_ **-targetserver** _exchangesvr」_
 
       *mail.contoso.com* は実際のドメイン名に、 *ExchangeSvr* は Exchange Server を実行しているサーバー名に置き換えてください。
 
@@ -426,9 +426,9 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
  社内の Exchange Server との統合を無効にすると、Windows Server Essentials ダッシュボードを使用して Exchange Server のメールボックスを表示、作成、または管理することはできなくなります。
 
 ### <a name="what-do-i-need-to-know-about-email-accounts"></a>電子メール アカウントについて知っておく必要があることは何ですか。
- サーバーにはホスト型の電子メール ソリューションが構成されています。 Microsoft Office 365 などのホスト型電子メールプロバイダーからのソリューションでは、ネットワークユーザー用に個別の電子メールアカウントを提供できます。 Windows Server Essentials でユーザー アカウントの追加ウィザードを実行してユーザー アカウントを作成するとき、ウィザードはユーザー アカウントを、使用可能なホスト型の電子メール ソリューションに追加しようとします。 同時に、ウィザードはユーザーに電子メール名 (エイリアス) を割り当て、メールボックスの最大サイズ (クォータ) を設定します。 メールボックスの最大サイズは、使用する電子メール プロバイダーによって異なります。 ユーザー アカウントを追加した後は、ユーザーのプロパティ ページからメールボックス エイリアスとクォータの情報の管理を続行することができます。 ユーザー アカウントとホスト型電子メール プロバイダーを完全に管理するには、ホスト型プロバイダーの管理コンソールを使用します。 プロバイダーによっては、Web ベースのポータルまたはサーバー ダッシュボードのタブのどちらからも管理コンソールにアクセスできます。
+ サーバーにはホスト型の電子メール ソリューションが構成されています。 Microsoft 365 などのホスト型電子メールプロバイダーからのソリューションでは、ネットワークユーザー用に個別の電子メールアカウントを提供できます。 Windows Server Essentials でユーザー アカウントの追加ウィザードを実行してユーザー アカウントを作成するとき、ウィザードはユーザー アカウントを、使用可能なホスト型の電子メール ソリューションに追加しようとします。 同時に、ウィザードはユーザーに電子メール名 (エイリアス) を割り当て、メールボックスの最大サイズ (クォータ) を設定します。 メールボックスの最大サイズは、使用する電子メール プロバイダーによって異なります。 ユーザー アカウントを追加した後は、ユーザーのプロパティ ページからメールボックス エイリアスとクォータの情報の管理を続行することができます。 ユーザー アカウントとホスト型電子メール プロバイダーを完全に管理するには、ホスト型プロバイダーの管理コンソールを使用します。 プロバイダーによっては、Web ベースのポータルまたはサーバー ダッシュボードのタブのどちらからも管理コンソールにアクセスできます。
 
- ユーザー アカウントの追加ウィザードの実行時に指定したエイリアスは、ユーザー エイリアスに推奨される名前としてホスト型電子メール プロバイダーに送信されます。 たとえば、ユーザーエイリアスが*FrankM*の場合、ユーザーの電子メールアドレスはになり <em>FrankM@Contoso.com</em> ます。
+ ユーザー アカウントの追加ウィザードの実行時に指定したエイリアスは、ユーザー エイリアスに推奨される名前としてホスト型電子メール プロバイダーに送信されます。 たとえば、ユーザーエイリアスが *FrankM*の場合、ユーザーの電子メールアドレスはになり <em>FrankM@Contoso.com</em> ます。
 
  さらに、ユーザー アカウントの追加ウィザードでユーザー用に設定したパスワードは、ホスト型電子メール ソリューションでユーザーの最初のパスワードになります。
 

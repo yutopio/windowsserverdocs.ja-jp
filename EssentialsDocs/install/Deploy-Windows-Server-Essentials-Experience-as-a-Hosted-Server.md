@@ -7,12 +7,12 @@ ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 7dd1aa46786a3768127ba7934c8a8767d40e6654
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.openlocfilehash: 0f47c3870ad8254fb1c8cf63fc8f4fd055235d50
+ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838021"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554505"
 ---
 # <a name="deploy-windows-server-essentials-experience-as-a-hosted-server"></a>Windows Server Essentials Experience をホストされたサーバーとして配置
 
@@ -46,25 +46,25 @@ ms.locfileid: "87838021"
 -   [サポート情報](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Support)
 
 
-##  <a name="windows-server-essentials-experience-overview"></a><a name="BKMK_WSEEOverview"></a>Windows Server Essentials エクスペリエンスの概要
+##  <a name="windows-server-essentials-experience-overview"></a><a name="BKMK_WSEEOverview"></a> Windows Server Essentials エクスペリエンスの概要
  Windows Server Essentials エクスペリエンスは、Windows Server 2012 R2 Standard および Windows Server 2012 R2 Datacenter で使用できるサーバーの役割です。 Windows server 2012 R2 を実行しているサーバーに Windows server Essentials Experience 役割がインストールされている場合は、windows server Essentials で使用できるすべての機能をロックや制限なしで利用できます。 Windows Server Essentials エクスペリエンスでは、小規模および中規模企業向けの次のクロスプレミスソリューションが有効になります。
 
--   **データの保存と保護**ネットワーク内のサーバーとクライアントコンピューター (75 未満) をバックアップすることで、顧客の "され s データを一元化された場所に保存し、サーバーとクライアントのデータを保護することができます。
+-   **データの保存と保護** ネットワーク内のサーバーとクライアントコンピューター (75 未満) をバックアップすることで、顧客の "され s データを一元化された場所に保存し、サーバーとクライアントのデータを保護することができます。
 
--   **ユーザー管理**: 簡素化されたサーバー ダッシュボードを使用して、ユーザーとグループを管理することができます。 さらに、Microsoft Azure Active Directory (Azure AD) との統合により、ユーザーのドメイン資格情報を使用して、Microsoft オンラインサービス (Office 365、Exchange Online、SharePoint Online など) へのデータアクセスを容易に行うことができます。
+-   **ユーザー管理**: 簡素化されたサーバー ダッシュボードを使用して、ユーザーとグループを管理することができます。 さらに、Microsoft Azure Active Directory (Azure AD) との統合により、ユーザーが自分のドメイン資格情報を使用して、Microsoft オンラインサービス (たとえば、Microsoft 365、Exchange Online、SharePoint Online) へのデータアクセスが簡単になります。
 
--   **サービスの統合**サーバーは、Microsoft オンラインサービス (Office 365、SharePoint Online、Microsoft Azure Backup など) と統合できます。 サーバーは、サード パーティ プロバイダーによって提供されるサービスと統合することもできます。
+-   **サービスの統合** サーバーは、Microsoft オンラインサービス (Microsoft 365、SharePoint Online、Microsoft Azure Backup など) と統合できます。 サーバーは、サード パーティ プロバイダーによって提供されるサービスと統合することもできます。
 
 -   **Anywhere Access**: ユーザーは、事実上インターネット接続のあるどこからでも、ほとんどすべてのデバイスを使用して、サーバー、ネットワーク コンピューター、およびデータにアクセスできます。 リモート Web アクセスにより、簡単なタッチ操作に適したブラウザーを使用して、アプリケーションやデータにアクセスできます。 My Server アプリを使用すると、Windows Phone または Microsoft Store アプリからのデータにアクセスできます。
 
--   **メディアストリーミング**Windows Server Essentials エクスペリエンスが有効になっているサーバーにメディアパッケージをインストールすると、エンドカスタマーは共有フォルダーに音楽、ビデオ、および写真を保存し、ネットワークに接続されたコンピューターまたはリモート Web アクセスからこれらのメディアファイルにアクセスできます。
+-   **メディアストリーミング** Windows Server Essentials エクスペリエンスが有効になっているサーバーにメディアパッケージをインストールすると、エンドカスタマーは共有フォルダーに音楽、ビデオ、および写真を保存し、ネットワークに接続されたコンピューターまたはリモート Web アクセスからこれらのメディアファイルにアクセスできます。
 
 -   **正常性の監視**: ネットワーク正常性を監視し、カスタマイズされた正常性レポートを取得することができます。
 
-##  <a name="benefits-of-hosting-windows-server-essentials-experience"></a><a name="BKMK_Benefits"></a>Windows Server Essentials エクスペリエンスをホストする利点
+##  <a name="benefits-of-hosting-windows-server-essentials-experience"></a><a name="BKMK_Benefits"></a> Windows Server Essentials エクスペリエンスをホストする利点
   Windows server Essentials エクスペリエンスは、windows server の役割であるため、windows server Essentials エクスペリエンスの役割を展開して構成するために、windows server の既存の展開および管理フレームワークを再利用できます。 Windows Server Essentials エクスペリエンスの役割をホストすると、次のような利点があります。
 
--   **展開の合理化**Windows Server Essentials エクスペリエンスの役割を有効にするだけで、最も一般的に使用されている役割と機能の一部がオンになり、小規模および中規模企業のベストプラクティスで構成されます。 Windows Server Essentials の機能をカスタマイズしたり、または一部のオンプレミスの機能を非表示にしたりすることができます。 Windows Azure Pack を使用する場合は、windows server 2012 R2 の Windows Server Essentials エクスペリエンスのギャラリーテンプレートをダウンロードできます。
+-   **展開の合理化** Windows Server Essentials エクスペリエンスの役割を有効にするだけで、最も一般的に使用されている役割と機能の一部がオンになり、小規模および中規模企業のベストプラクティスで構成されます。 Windows Server Essentials の機能をカスタマイズしたり、または一部のオンプレミスの機能を非表示にしたりすることができます。 Windows Azure Pack を使用する場合は、windows server 2012 R2 の Windows Server Essentials エクスペリエンスのギャラリーテンプレートをダウンロードできます。
 
 -   **簡素化されたダッシュボード**: Windows Server Essentials ダッシュボードにより、サーバー フォルダー、サーバー記憶域、バックアップと復元、ユーザーまたはグループ アカウント、デバイス、リモート アクセス、および電子メールの管理などの一般的なタスクが簡単になります。 小規模および中規模企業のお客様は、技術サポートのためにヘルプ デスクを呼び出すことなく、日常の管理タスクを実行できます。
 
@@ -72,7 +72,7 @@ ms.locfileid: "87838021"
 
 -   **監視**: Windows Server Essentials を実行している複数のサーバーの監視および管理に、System Center Monitoring Pack の新しいバージョンを使用できます。 管理パックをダウンロードするには、「 [Windows Server Essentials 用 System Center 管理パック](https://www.microsoft.com/download/details.aspx?id=40809)」を参照してください。
 
-##  <a name="supported-deployment-options"></a><a name="BKMK_SupportedDeployment"></a>サポートされている配置オプション
+##  <a name="supported-deployment-options"></a><a name="BKMK_SupportedDeployment"></a> サポートされている配置オプション
   Windows Server Essentials エクスペリエンスは、新しい Active Directory 環境にドメインコントローラーとして展開できます。または、既存の Active Directory 環境にドメインメンバーとしてデプロイすることもできます。
 
  最初に Windows Server 2012 R2 Standard または Windows Server 2012 R2 Datacenter をデプロイしてから、Windows Server Essentials Experience 役割をインストールすることをお勧めします。 この展開方法では、Windows Server Essentials エディションのすべての機能を利用できます。ロックと制限はありません。
@@ -82,7 +82,7 @@ ms.locfileid: "87838021"
 
 
 
-##  <a name="supported-network-topologies"></a><a name="BKMK_SupportedToplogy"></a>サポートされているネットワークトポロジ
+##  <a name="supported-network-topologies"></a><a name="BKMK_SupportedToplogy"></a> サポートされているネットワークトポロジ
  ローミングクライアントから Windows Server Essentials エクスペリエンスを使用するには、VPN を有効にする必要があります。 ローミング クライアントからサーバーへのリモート アクセスを有効にするには、サーバーのポート 443 とポート 80 を開く必要があります。
 
  ここでは、2 つの代表的なサーバー側のネットワーク トポロジと、VPN およびリモート Web アクセスの構成方法を示します。
@@ -139,7 +139,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
 > [!NOTE]
 >  お客様がサーバーの所有権を得る前に、VPN 接続を提供できない場合は、お客様がリモート デスクトップ プロトコルを使用して、サーバーに接続し、それを構成できるように、インターネット経由でサーバー ポート 3389 に到達できることを確認します。
 
-##  <a name="customize-the-image-of-windows-server-essentials-experience-role"></a><a name="BKMK_CustomizeImage"></a>Windows Server Essentials エクスペリエンス役割のイメージのカスタマイズ
+##  <a name="customize-the-image-of-windows-server-essentials-experience-role"></a><a name="BKMK_CustomizeImage"></a> Windows Server Essentials エクスペリエンス役割のイメージのカスタマイズ
  Windows Server Essentials エクスペリエンス役割を構成する前に、イメージをカスタマイズできます。 標準 Windows Server Sysprep プロセスについては、「 [Windows アセスメント &amp; デプロイメント キット](/previous-versions/windows/hh825420(v=win.10))」を参照してください。 Sysprep を使用してイメージを準備したら、それを使用したり、新しい展開用に Install.wim に再シールしたりすることができます。
 
  Virtual Machine Manager を使用している場合、実行中のインスタンスを使用してテンプレートを作成できます。 このプロセスでは Sysprep を使用して、インスタンスを準備しますが、それによって、コンピューターがシャットダウンします。 テンプレートをライブラリに保存したら、ケースバイケースでそれを使用できます。
@@ -162,7 +162,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
 
   示されている各機能の動作を制御したい場合は、それぞれの対応するレジストリ キーを設定できます。 レジストリ キーを設定する方法については、「 [Windows Server 2012 R2 での Windows Server Essentials のカスタマイズと展開](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10))」を参照してください。
 
-##  <a name="automate-the-deployment-of-windows-server-essentials-experience"></a><a name="BKMK_AutomateDeployment"></a>Windows Server Essentials エクスペリエンスの展開の自動化
+##  <a name="automate-the-deployment-of-windows-server-essentials-experience"></a><a name="BKMK_AutomateDeployment"></a> Windows Server Essentials エクスペリエンスの展開の自動化
  展開を自動化するには、まずオペレーティングシステムを展開してから、Windows Server Essentials Experience 役割をインストールする必要があります。
 
 -   Windows Server 2012 R2 Standard または Windows Server 2012 R2 Datacenter を自動的に展開するには、「 [Windows アセスメント & amp; デプロイメントキット](/previous-versions/windows/hh825420(v=win.10))」に記載されている手順に従ってください。
@@ -183,8 +183,8 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
  初期構成の開始後に、**Get-WssConfigurationStatus** を使用して、初期構成のステータスを確認することができ、ステータスが **PendingReboot** の場合に、サーバーを再起動することができます。
 
-##  <a name="migrate-data-from-windows-small-business-server-to-windows-server-essentials-experience"></a><a name="BKMK_Migrate"></a>Windows Small Business Server から Windows Server Essentials エクスペリエンスへのデータの移行
- Windows Small Business Server 2011、Windows Small Business Server 2008、Windows Small Business Server 2003、または Windows Server Essentials を実行しているサーバーから、Windows Server Essentials を実行しているサーバーにデータを移行することができます。 オンプレミスの2移行のための[Windows Server Essentials へ](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)の移行ガイドを確認し、ホスティング環境に基づいて必要なカスタマイズを行います。
+##  <a name="migrate-data-from-windows-small-business-server-to-windows-server-essentials-experience"></a><a name="BKMK_Migrate"></a> Windows Small Business Server から Windows Server Essentials エクスペリエンスへのデータの移行
+ Windows Small Business Server 2011、Windows Small Business Server 2008、Windows Small Business Server 2003、または Windows Server Essentials を実行しているサーバーから、Windows Server Essentials を実行しているサーバーにデータを移行することができます。 オンプレミスの2移行のための [Windows Server Essentials へ](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md) の移行ガイドを確認し、ホスティング環境に基づいて必要なカスタマイズを行います。
 
 > [!NOTE]
 >  移行元サーバーと移行先サーバーを同じサブネットに配置することをお勧めします。 それが無理な場合、次の点を確認する必要があります。
@@ -194,7 +194,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
  移行後、ライセンスをアップグレードして、ロックと制限を削除することができます。 詳細については、「 [Windows Server Essentials から Windows server 2012 Standard への移行」を](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj247582(v=ws.11))参照してください。
 
-##  <a name="perform-common-tasks-by-using-windows-powershell"></a><a name="BKMK_PowerShell"></a>Windows PowerShell を使用して一般的なタスクを実行する
+##  <a name="perform-common-tasks-by-using-windows-powershell"></a><a name="BKMK_PowerShell"></a> Windows PowerShell を使用して一般的なタスクを実行する
  ここでは、Windows PowerShell を使用して実行できる一般的ないくつかのタスクについて説明します。
 
 ### <a name="enable-remote-web-access"></a>リモート Web アクセスを有効にする
@@ -230,10 +230,10 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
  このコマンドを実行すると、指定した場所に MyTestFolder という名前のサーバーフォルダーが追加されます。
 
-##  <a name="email-integration-with-windows-server-essentials"></a><a name="BKMK_EmailIntegration"></a>Windows Server Essentials との電子メールの統合
- Windows Server Essentials エクスペリエンスを Office 365 またはホスト型 Exchange Server と統合できます。 お客様がホスト型電子メールを使用する場合は、Windows Server Essentials エクスペリエンスをホスト型電子メール ソリューションと統合するためのアドインを開発する必要があります。 詳細については、 [Windows Server Essentials SDK](/previous-versions/windows/server-essentials/gg513877(v=msdn.10))を参照してください。
+##  <a name="email-integration-with-windows-server-essentials"></a><a name="BKMK_EmailIntegration"></a> Windows Server Essentials との電子メールの統合
+ Windows Server Essentials エクスペリエンスを Microsoft 365 またはホスト型 Exchange Server と統合できます。 お客様がホスト型電子メールを使用する場合は、Windows Server Essentials エクスペリエンスをホスト型電子メール ソリューションと統合するためのアドインを開発する必要があります。 詳細については、 [Windows Server Essentials SDK](/previous-versions/windows/server-essentials/gg513877(v=msdn.10))を参照してください。
 
-##  <a name="monitor-and-manage-by-using-native-tools"></a><a name="BKMK_Monitoring"></a>ネイティブツールを使用した監視と管理
+##  <a name="monitor-and-manage-by-using-native-tools"></a><a name="BKMK_Monitoring"></a> ネイティブツールを使用した監視と管理
  このセクションでは、Windows Server 2012 R2 でサーバーを監視および管理するために使用できるネイティブツールについて説明します。
 
 ### <a name="group-policy"></a>グループ ポリシー
@@ -290,23 +290,23 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 ##### <a name="file-history"></a>ファイル履歴
  ファイル履歴は、プロファイル データ (ライブラリ、デスクトップ、連絡先、お気に入り) をネットワーク共有にバックアップするための Windows 8.1 および Windows 8 の機能です。 Windows Server Essentials ネットワークに参加している Windows 8.1 または Windows 8 を実行しているすべてのコンピューターのファイル履歴設定を一元的に管理できます。 バックアップ データは、Windows Server Essentials を実行しているサーバーに保存されます。 「 [Windows server 2012 R2 での Windows Server Essentials のカスタマイズと展開](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10))」の手順に従って、クライアント復元サービスタスクを非表示にする必要があります。
 
-### <a name="storage-management"></a>記憶域の管理
+### <a name="storage-management"></a>ストレージ管理
  記憶域により、異種ハード ドライブの物理記憶域容量の集計、ハード ドライブの動的な追加、復元レベルを指定したデータ ボリュームの作成が可能になります。 これは、ホストまたは仮想マシンで実行できます。 Windows Server Essentials を実行している仮想マシンでこの機能を非表示にする場合は「 [Windows Server 2012 R2 での Windows Server Essentials のカスタマイズと展開](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10))」の手順に従います。
 
-##  <a name="test-scenarios"></a><a name="BKMK_Scenarios"></a>テストシナリオ
+##  <a name="test-scenarios"></a><a name="BKMK_Scenarios"></a> テストシナリオ
  ホストのパースペクティブから、次のシナリオをテストすることをお勧めします。
 
 
 -   [サーバーの展開](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerDeploy)
 
--   [サーバー構成](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerConfig2)
+-   [サーバーの構成](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerConfig2)
 
 -   [サーバー管理](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ServerManage)
 
 -   [クライアント エクスペリエンス](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_ClientXP)
 
 
-###  <a name="server-deployment"></a><a name="BKMK_ServerDeploy"></a>サーバーの展開
+###  <a name="server-deployment"></a><a name="BKMK_ServerDeploy"></a> サーバーの展開
  次のサーバーの展開シナリオをテストすることができます。
 
 -   Windows Server 2012 R2 を実行しているサーバーをラボ環境のドメインコントローラーとして展開し、Windows Server Essentials Experience 役割をインストールします。
@@ -319,7 +319,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
 -   Windows Small Business Server を実行しているオンプレミス サーバーを Windows Server Essentials を実行しているホスト型サーバーに移行します。
 
-###  <a name="server-configuration"></a><a name="BKMK_ServerConfig2"></a>サーバーの構成
+###  <a name="server-configuration"></a><a name="BKMK_ServerConfig2"></a> サーバーの構成
  次のサーバー構成シナリオをテストすることができます。
 
 -   Anywhere Access (仮想プライベート ネットワーク、リモート Web アクセス、および DirectAccess) を構成します。
@@ -332,13 +332,13 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
 -   (適用できる場合) 記憶域を構成し、管理します。
 
--   (適用できる場合) 電子メール ソリューション統合 (Office 365 とホスト型 Exchange Server) を構成します。
+-   (該当する場合)電子メールソリューション統合 (Microsoft 365 とホスト型 Exchange Server) を構成します。
 
 -   (適用できる場合) その他の Microsoft オンライン サービスとの統合を構成します。
 
 -   (適用できる場合) メディア サーバーを構成します。
 
-###  <a name="server-management"></a><a name="BKMK_ServerManage"></a>サーバー管理
+###  <a name="server-management"></a><a name="BKMK_ServerManage"></a> サーバー管理
  次のサーバー管理のシナリオをテストすることができます。
 
 -   ユーザーおよびグループを管理します。
@@ -351,7 +351,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
 -   オペレーティング システムの破損が発生した場合に、サーバー回復を構成します。
 
-###  <a name="client-experience"></a><a name="BKMK_ClientXP"></a>クライアントエクスペリエンス
+###  <a name="client-experience"></a><a name="BKMK_ClientXP"></a> クライアントエクスペリエンス
  次のエンド ユーザー シナリオをテストすることができます。
 
 -   インターネット (PC または Mac オペレーティング システム) 経由でクライアントを展開します。
@@ -366,7 +366,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
 -   (適用できる場合) 電子メール統合エクスペリエンスを確認します。
 
-##  <a name="support-information"></a><a name="BKMK_Support"></a>サポート情報
+##  <a name="support-information"></a><a name="BKMK_Support"></a> サポート情報
  Windows Server Essentials Software Development Kit (SDK) と Windows Server Essentials アセスメント & amp; デプロイメントキット (ADK) をダウンロードできます。
 
 -   [Windows Server Essentials ソフトウェア開発キット](/previous-versions/windows/server-essentials/gg513877(v=msdn.10))』

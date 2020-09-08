@@ -7,12 +7,12 @@ ms.assetid: 07d0c4c6-3e92-4969-82b8-105e46ab8d97
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d98ab8b203bc73da4129d63b5a2b7518742a3667
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 9013d63d0fbedfd679b8d717b9501f4af567b6f5
+ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181648"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554415"
 ---
 # <a name="support-for-larger-deployments"></a>大規模展開のサポート
 
@@ -35,7 +35,7 @@ Windows server 2012 R2 Essentials では、サーバーごとに1つのドメイ
 
 ## <a name="support-for-multiple-domain-controllers"></a>複数のドメインコントローラーのサポート
 
- Windows Server Essentials 2012 R2 では、複数のドメインコントローラーが展開されている Office 365 など、Azure Active Directory を利用するすべてのサービスがブロックされます。 これは、ローカルドメインコントローラと Azure Active Directory 間のアカウントとパスワードの同期によって、同期されていないパスワードを使用してアカウントの資格情報が送信される可能性があるためです。この制限は、Windows Server 2016 Essentials では削除されています。
+ Windows Server Essentials 2012 R2 では、複数のドメインコントローラーが展開されている Microsoft 365 など、Azure Active Directory を利用するすべてのサービスがブロックされます。 これは、ローカルドメインコントローラと Azure Active Directory 間のアカウントとパスワードの同期によって、同期されていないパスワードを使用してアカウントの資格情報が送信される可能性があるためです。この制限は、Windows Server 2016 Essentials では削除されています。
 
 ## <a name="ability-to-specify-a-designated-domain-controller"></a>指定されたドメインコントローラーを指定する機能
 
@@ -50,7 +50,7 @@ Windows server 2012 R2 Essentials では、サーバーごとに1つのドメイ
 
 Windows Server 2012 R2 Essentials でサポートされているユーザーとデバイスの最大数は、それぞれ25と50です。 Windows Server Essentials Experience サーバーの役割の導入により、この制限は100ユーザーと200デバイスに増加しました。
 
-Windows Server 2016 Essentials では、500ユーザーと500デバイスがサポートされています。 これを可能にすることは、プロバイダーフレームワークおよびオブジェクトリストコントロールを更新することで、サイズの大きいユーザーおよびデバイスのオブジェクトリストをキャッシュし、すばやく表示できるようにすることです。 さらに、探しているユーザーまたはデバイスをすばやく検索するための検索とフィルター機能が追加されました (図5-2 を参照)。 検索機能とフィルター機能については、「 **Windows Server Essentials ダッシュボード**」、「**リモート Web アクセス**」、および「Windows と Windows Phone ストア**マイサーバー**アプリケーション」を参照してください。
+Windows Server 2016 Essentials では、500ユーザーと500デバイスがサポートされています。 これを可能にすることは、プロバイダーフレームワークおよびオブジェクトリストコントロールを更新することで、サイズの大きいユーザーおよびデバイスのオブジェクトリストをキャッシュし、すばやく表示できるようにすることです。 さらに、探しているユーザーまたはデバイスをすばやく検索するための検索とフィルター機能が追加されました (図5-2 を参照)。 検索機能とフィルター機能については、「 **Windows Server Essentials ダッシュボード**」、「 **リモート Web アクセス**」、および「Windows と Windows Phone ストア **マイサーバー** アプリケーション」を参照してください。
 
 !["D5c" という文字列を検索するための Windows Server Essentials ダッシュボードの検索機能の使用方法を示すスクリーンショット。 この検索の結果には、2つのファイルとフォルダー、および2人のユーザーが含まれます。](media/larger-deployments-2.PNG)
 
