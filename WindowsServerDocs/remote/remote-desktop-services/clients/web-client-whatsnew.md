@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/15/2019
+ms.date: 09/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 80663da151137d093634c36a25d4d061c8038e60
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 18142988108e1eafe59ca7fd83a29dd4dfb87720
+ms.sourcegitcommit: 664ed9bb0bbac2c9c0727fc2416d8c437f2d5cbe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961866"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89472032"
 ---
 # <a name="whats-new-in-the-web-client"></a>Web クライアントの新機能
 
@@ -20,6 +20,17 @@ ms.locfileid: "87961866"
 
 > [!NOTE]
 > Web クライアントのバージョン管理システムが変更されています。 バージョン 1.0.18.0 以降、すべての Web クライアントのリリース バージョンには ("W.X.Y.Z" 形式の) 数値が含まれます。 リモート デスクトップ Web クライアントのリリース番号は常に 0 で終わります (例: W.X.Y.0)。 Windows 仮想デスクトップ Web クライアントの各リリースでは、次のリモート デスクトップ Web クライアントがリリースされるまで、最後の桁が変更されます (例: 1.0.18.1)。
+
+## <a name="updates-for-10220"></a>1\.0.22.0 の更新内容
+*公開日:2020 年 9 月 2 日*
+
+- 最小化されたメニューをユーザーが移動できるようになりました。
+- 4K およびウルトラワイド モニターのサポートが強化され、大量のデータをコピーするとセッションがクラッシュする問題が修正されました。
+- リモート セッションで入力方式エディターを使用するサポートが強化されました。 Web クライアントで入力方式エディターを使用する方法の詳細については、「[Web クライアントを使用して Windows Virtual Desktop に接続する](/azure-docs/articles/virtual-desktop/connect-web.md)」をご覧ください。
+- **[すべてのリソース]** ページの UI が変更されました。
+- Web クライアントで*一般プロトコル エラー*が返される、いくつかの接続シーケンスのエラーが修正されました。
+- 特定のキー シーケンスが適切に処理されないというキーボード入力の問題が修正されました。
+- アクセシビリティが改善されました。
 
 ## <a name="updates-for-version-10210"></a>バージョン 1.0.21.0 の更新内容
 *公開日:2019 年 11 月 15 日*

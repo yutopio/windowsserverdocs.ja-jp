@@ -8,14 +8,14 @@ manager: dongill
 ms.author: elizapo
 ms.date: 06/01/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 05e32c05aaafb941958e025253e67c856d81257d
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: c28ccbe0cfd49f1cf774031b002bf7b6142d0a00
+ms.sourcegitcommit: 9a59e00db5e68b1a12769b5cd5523b8c501776ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990362"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282114"
 ---
-# <a name="get-started-with-the-windows-store-client"></a>Microsoft Store クライアントの概要
+# <a name="get-started-with-the-microsoft-store-client"></a>Microsoft Store クライアントの概要
 
 >適用先:Windows 10
 
@@ -24,7 +24,7 @@ Windows 用のリモート デスクトップ クライアントを使用して�
 作業を開始するには、次の情報を使用します。 質問がある場合は、必ず [FAQ](remote-desktop-client-faq.md) を確認してください。
 
 > [!NOTE]
-> - Windows ストア クライアントの新しいリリースについて興味がありますか。 「[Windows ストア クライアントの新機能](windows-whatsnew.md)」を参照してください
+> - Microsoft Store クライアントの新しいリリースについて興味がありますか。 「[Microsoft Store クライアントの新機能](windows-whatsnew.md)」をご覧ください
 > - クライアントは、サポートされている任意のバージョンの Windows 10 上で実行できます。
 
 ## <a name="get-the-rd-client-and-start-using-it"></a>RD クライアントを取得し、その使用を開始する
