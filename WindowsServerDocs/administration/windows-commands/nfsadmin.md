@@ -3,16 +3,16 @@ title: nfsadmin
 description: NFS サーバーと NFS クライアントの両方を管理する nfsadmin コマンドの参照記事。
 ms.topic: reference
 ms.assetid: 7375b2cf-c6b8-45b5-abf6-6c10e462defd
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: e7329b26b201bd99a71bb30f50e9f5ba95953846
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 2c5cb4ba3b90542688fd3a7ea894a2039a10cafd
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89023646"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89634113"
 ---
 # <a name="nfsadmin"></a>nfsadmin
 
@@ -20,7 +20,7 @@ ms.locfileid: "89023646"
 
 Nfs サーバーまたは nfs クライアントを、Microsoft Services for Network File System (NFS) を実行しているローカルコンピューターまたはリモートコンピューター上で管理するコマンドラインユーティリティ。 パラメーターを指定せずに使用します。 nfsadmin server には、NFS 構成設定の現在のサーバーが表示され、nfsadmin client には、NFS 構成設定の現在のクライアントが表示されます。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 ```
 nfsadmin server [computername] [-u Username [-p Password]] -l

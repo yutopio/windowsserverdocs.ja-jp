@@ -3,16 +3,16 @@ title: secedit
 description: 参照記事 * * * *-
 ms.topic: reference
 ms.assetid: 58ed57ed-08e3-403d-a363-0620b358637a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: a1eed3e5e4c1673f8b10d633323da1d74e6a2722
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 8a1e4e49c5fd9cef10f6b60d18511f3a38d0dea6
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027960"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89635500"
 ---
 # <a name="secedit"></a>secedit
 
@@ -43,7 +43,7 @@ secedit
 |[Secedit:import](secedit-import.md)|テンプレートで指定された設定をシステムに適用またはシステムに照らして分析できるように、データベースにセキュリティ テンプレートをインポートできます。|
 |[Secedit:validate](secedit-validate.md)|セキュリティ テンプレートの構文を検証できます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 すべてのファイル名のパスが指定されていない場合、現在のディレクトリが使用されます。
 

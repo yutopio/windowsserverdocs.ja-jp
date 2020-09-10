@@ -3,16 +3,16 @@ title: ftp mput
 description: Ftp mput コマンドの参照記事。現在のファイル転送の種類を使用してローカルファイルをリモートコンピューターにコピーします。
 ms.topic: reference
 ms.assetid: 980f15e7-7cf1-4813-9946-a8cc4edfb198
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f9b90cc6454e64e74684a44f3d69149886c6778a
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: cd799e713b71f23c7ce22a9ee81dc19cd78f8c31
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89032850"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89635312"
 ---
 # <a name="ftp-mput"></a>ftp mput
 

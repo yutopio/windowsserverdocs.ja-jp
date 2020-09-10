@@ -3,16 +3,16 @@ title: diskpart のスクリプトと例
 description: Diskpart スクリプトのリファレンス記事と、ディスク関連のタスク (ボリュームの作成やダイナミックディスクへのディスクの変換など) を自動化する方法の例を紹介します。
 ms.topic: reference
 ms.assetid: 319c0795-11df-47c8-b203-eadb0577ee0d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 94dbcba1ff88cc265e8006511bb3831ac7d12831
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 820b83ab9c6c70c24c10c16678da9bf90892135f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89028280"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89635145"
 ---
 # <a name="diskpart-scripts-and-examples"></a>diskpart のスクリプトと例
 
@@ -45,7 +45,7 @@ diskpart /s scriptname.txt
 diskpart /s scriptname.txt > logfile.txt
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 - **Diskpart**コマンドをスクリプトの一部として使用する場合は、すべての diskpart 操作を1つの diskpart スクリプトの一部として実行することをお勧めします。 連続した diskpart スクリプトを実行できますが、その後のスクリプトで **diskpart** コマンドを実行する前に、前回の実行を完全にシャットダウンするには、各スクリプトの間に少なくとも15秒かかることが必要です。 このようにしないと、以降のスクリプトが失敗することがあります。 `timeout /t 15`Diskpart スクリプトと共にコマンドをバッチファイルに追加することで、連続する diskpart スクリプトの間に一時停止を追加できます。
 

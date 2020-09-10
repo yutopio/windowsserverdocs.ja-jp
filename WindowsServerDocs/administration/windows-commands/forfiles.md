@@ -3,16 +3,16 @@ title: forfiles
 description: Forfiles コマンドのリファレンス記事。ファイルまたは一連のファイルでコマンドを選択して実行します。
 ms.topic: reference
 ms.assetid: 43f6b004-446d-4fdd-91c5-5653613524a4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 05/20/2020
-ms.openlocfilehash: c79aeddec4a2ea74eb79c7d807428b6bc5955ce2
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b5b2511e49c379be20c7be5abf08581a17f0a463
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027630"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89634797"
 ---
 # <a name="forfiles"></a>forfiles
 
@@ -35,7 +35,7 @@ forfiles [/P pathname] [/M searchmask] [/S] [/C command] [/D [+ | -] [{<date> | 
 | D `[{+\|-}][{<date> | <days>}]` | 指定された期間内に最後に変更された日付のファイルを選択します:<ul><li>日付 **+** **-** が MM/DD/YYYY の形式で指定された日付 () 以上 () またはそれより前*date* () であるファイルを選択します。</li><li>現在の日付に指定された日数を加算した日付、または現在の日付から指定した日数を引いた値 () までの最終更新日を含むファイルを選択 **+** **-** します。</li><li>*Days*の有効な値には、0 ~ 32768 の範囲の任意の数を指定します。 符号が指定されていない場合、 **+** 既定ではが使用されます。</li></ul> |
 | /? | コマンドウィンドウにヘルプテキストを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - `forfiles /S`コマンドはに似てい `dir /S` ます。
 

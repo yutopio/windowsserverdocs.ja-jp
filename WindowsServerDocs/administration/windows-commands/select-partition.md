@@ -3,16 +3,16 @@ title: select partition
 description: 参照記事 * * * *-
 ms.topic: reference
 ms.assetid: 25f70083-b8f7-4a8e-9b34-4b3ffbe06670
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 816a235f7ba83320828a5dc72c9f2558c27b2ed8
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ebed1eda02fa2f97516ccd81d89fcabfe21b430c
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027910"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89635484"
 ---
 # <a name="select-partition"></a>select partition
 
@@ -34,7 +34,7 @@ select partition=<n>
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | partition\=<n> | フォーカスを受け取るパーティションの数。 使用して現在選択されているディスク上のすべてのパーティションの番号を表示する、 **パーティションを一覧表示** diskpart コマンドです。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   使用して、ディスクを選択するパーティションを選択する前にまず必要があります、 **select ディスク** コマンドです。
 

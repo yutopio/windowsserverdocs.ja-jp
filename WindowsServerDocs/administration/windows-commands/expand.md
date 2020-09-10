@@ -3,16 +3,16 @@ title: expand
 description: 展開コマンドの参照記事。1つ以上の圧縮ファイルを展開します。
 ms.topic: reference
 ms.assetid: 66de0488-a0c4-40c2-9b03-e40c107ba343
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 53443eb5aa593c43345dee4014efac0bd2e7be4b
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b64303d2a7cd38c86d8f5c99d319e46f837f2970
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036710"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89635892"
 ---
 # <a name="expand"></a>expand
 
@@ -37,7 +37,7 @@ expand <source>.cab /f:<files> <destination>
 | パラメーター | 説明 |
 | --------- | ----------- |
 | /r | 展開されたファイルの名前を変更します。 |
-| source | 展開するファイルを指定します。 *ソース* は、ドライブ文字とコロン、ディレクトリ名、ファイル名、またはこれらの組み合わせで構成されます。 ワイルドカード (**&#42;** または **?**) を使用できます。 |
+| ソース | 展開するファイルを指定します。 *ソース* は、ドライブ文字とコロン、ディレクトリ名、ファイル名、またはこれらの組み合わせで構成されます。 ワイルドカード (**&#42;** または **?**) を使用できます。 |
 | destination | ファイルの展開先を指定します。<p>*ソース*が複数のファイルで構成されていて、 **/r**を指定していない場合、*コピー先*はディレクトリである必要があります。 *宛先* には、ドライブ文字とコロン、ディレクトリ名、ファイル名、またはこれらの組み合わせを使用できます。 宛先 `file | path` の指定。 |
 | /i | 展開されたファイルの名前を変更しますが、ディレクトリ構造は無視します。 |
 | /d | 展開元のファイル一覧を表示します。 はファイルを展開したり展開したりしません。 |

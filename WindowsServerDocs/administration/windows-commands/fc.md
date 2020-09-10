@@ -3,16 +3,16 @@ title: fc
 description: 2つのファイルまたはファイルのセットを比較し、それらの違いを表示する fc コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: 485fc3d8-b7c5-496d-87be-0011112f27d5
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: eb4bd745ec9c1a9dfe066fd5eeefdc2d5517d7cb
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 54a148ae7e722d891c3d8912c50c904839ddbf67
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036630"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89634931"
 ---
 # <a name="fc"></a>fc
 
@@ -44,7 +44,7 @@ fc /b [<drive1:>][<path1>]<filename1> [<drive2:>][<path2>]<filename2>
 | `[<drive2>:][<path2>]<filename2>` | 比較する2番目のファイルまたは一連のファイルの場所と名前を指定します。 *filename2* が必要です。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - このコマンドは c:\WINDOWS\fc.exe によって implemeted されます。 PowerShell でこのコマンドを使用することもできますが、完全な実行可能ファイル (fc.exe) は必ず指定してください。これは、' fc ' は、形式がカスタムのエイリアスでもあるためです。
 

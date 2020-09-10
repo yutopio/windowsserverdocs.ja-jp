@@ -3,16 +3,16 @@ title: diskcomp
 description: 2つのフロッピーディスクの内容を比較する、コマンドの参照記事。
 ms.topic: reference
 ms.assetid: 4f56f534-a356-4daa-8b4f-38e089341e42
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 058092595e106fdc60663ec81e68523c609d34c7
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 99cb90fd6932e097e88c106bf93bd66e68fef6f4
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89028320"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89634314"
 ---
 # <a name="diskcomp"></a>diskcomp
 
@@ -31,7 +31,7 @@ diskcomp [<drive1>: [<drive2>:]]
 | `<drive1>` | フロッピーディスクの1つを含むドライブを指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - この **コマンドは** 、フロッピーディスクでのみ機能します。 ハードディスクで **は使用でき** ません。 ドライブ1または*drive2*のハードディスクドライブを指定*すると、* **次のエラーメッセージが表示さ**れます。
 

@@ -3,16 +3,16 @@ title: netsh
 description: Netsh コマンドのリファレンス記事。これは、現在実行中のコンピューターのネットワーク構成をローカルまたはリモートで表示または変更できるコマンドラインスクリプトユーティリティです。
 ms.topic: reference
 ms.assetid: 96fc069d-53c0-4d0a-9f7f-f9f3d49a02bd carmonmills
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: fc8f6aff94494422150643fed6ce6681dfe54036
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: e848003ced9161f0ae07778a2a16d50b7e97d51c
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037780"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89635864"
 ---
 # <a name="netsh"></a>netsh
 
@@ -39,7 +39,7 @@ netsh [-a <Aliasfile>][-c <Context>][-r <Remotecomputer>][-u [<domainname>\<user
 | -f `<scriptfile>` | 指定したスクリプトファイルを実行した後に netsh コマンドを終了します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **-R**の後に別のコマンドを指定すると、netsh によってリモートコンピューターでコマンドが実行され、Cmd.exe コマンドプロンプトに戻ります。 別のコマンドを指定せず **に-r** を指定すると、netsh がリモートモードで開きます。 このプロセスは **set machine** を netsh コマンド プロンプトで使用するのと似ています。 **-R**を使用する場合は、netsh の現在のインスタンスに対してのみターゲットコンピューターを設定します。 netsh を終了して再入力すると、ターゲット コンピューターがローカル コンピューターとして再設定されます。 WINS に格納されているコンピューター名、UNC 名、DNS サーバーによって解決されるインターネット名、または IP アドレスを指定することにより、リモート コンピューター上で netsh コマンドを実行できます。
 

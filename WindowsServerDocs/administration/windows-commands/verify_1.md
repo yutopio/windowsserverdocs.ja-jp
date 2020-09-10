@@ -3,16 +3,16 @@ title: 確認
 description: 検証の参照記事。ファイルがディスクに正しく書き込まれたことを確認するかどうかを **cmd** に指示します。
 ms.topic: reference
 ms.assetid: dfe8bc91-d948-4e47-84ad-a79a60506ffa
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: b6d20cd114f523919dc3fadaf223ce9d93d0fdbd
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 7b9a5e67228fe90f54fd47204eee60f7f804d6c9
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89023026"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89634331"
 ---
 # <a name="verify"></a>確認
 

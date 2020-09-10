@@ -3,16 +3,16 @@ title: prnport
 description: Prnport.vbs コマンドの参照記事。ポート構成の表示と変更に加えて、標準の TCP/IP プリンターポートを作成、削除、および一覧表示します。
 ms.topic: reference
 ms.assetid: 6a0ec638-a21e-4a34-be5c-bd0f7ca89ffe
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 4723d266ed70c7e9bf56fd65216dcce0bab1188c
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 8535290d84566b5241e7f3279ce38029180b8432
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89033890"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89635136"
 ---
 # <a name="prnport"></a>prnport
 
@@ -48,7 +48,7 @@ cscript prnport {-a | -d | -l | -g | -t | -?} [-r <portname>] [-s <Servername>] 
 | -2`{e|-d}` | TCP lpr ポートに対して、二重スプール (respooling とも呼ばれます) を有効にするかどうかを指定します。 TCP lpr は、プリンターに送信されるコントロールファイルに正確なバイト数を含める必要がありますが、プロトコルはローカルの印刷プロバイダーからカウントを取得できないため、二重スプールが必要です。 このため、ファイルが TCP lpr 印刷キューにスプールされると、ファイルは system32 ディレクトリ内の一時ファイルとしてもスプールされます。 TCP lpr は、一時ファイルのサイズを決定し、そのサイズを LPD を実行しているサーバーに送信します。 パラメーター **e** 二重スプールを使用します。 パラメーター **d** 二重スプールを無効にします。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 入力した情報にスペースが含まれている場合は、テキストを引用符で囲みます (例、"コンピューター名")。
 

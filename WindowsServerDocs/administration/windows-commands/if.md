@@ -3,22 +3,22 @@ title: if
 description: If コマンドのリファレンス記事。バッチプログラムで条件付き処理を実行します。
 ms.topic: reference
 ms.assetid: 698b3fb9-532b-4c2b-af7f-179f8dc57131
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ea7b823c0060b1fb9ff474ae0330eb789a1da0d1
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 9bb3c29b7d77b6b1e07e647735701be3171cfb85
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038010"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89634573"
 ---
 # <a name="if"></a>if
 
 バッチプログラムで条件付き処理を実行します。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 ```
 if [not] ERRORLEVEL <number> <command> [else <expression>]
@@ -50,7 +50,7 @@ if defined <variable> <command> [else <expression>]
 | `<expression>` | コマンドラインコマンドと、 **else** 句でコマンドに渡すパラメーターを指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **If**句に指定された条件が true の場合、条件に従ったコマンドが実行されます。条件が false の場合、 **if**句のコマンドは無視され、コマンドは**else**句で指定されているすべてのコマンドを実行します。
 

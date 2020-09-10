@@ -3,16 +3,16 @@ title: ksetup setenctypeattr
 description: Ksetup setenctypeattr コマンドの参照記事。ドメインの暗号化の種類の属性を設定します。
 ms.topic: reference
 ms.assetid: 88fb913e-6b57-48d9-8c16-a035ab2977ac
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 99a05954a2682ff8cdc4f5bb66e49d68fdf132eb
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 9027197817b2fa738726fd0d0feeeeadc5aac0b2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037920"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89634128"
 ---
 # <a name="ksetup-setenctypeattr"></a>ksetup setenctypeattr
 
@@ -33,7 +33,7 @@ ksetup /setenctypeattr <domainname> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 | 
 | `<domainname>` | 接続を確立するドメインの名前。 完全修飾ドメイン名、または名前の単純な形式 (corp.contoso.com や contoso など) を使用します。 |
 | 暗号化の種類 | は、次のサポートされている暗号化の種類のいずれかである必要があります。<ul><li>DES-CBC-CRC</li><li>DES-CBC-MD5</li><li>RC4-HMAC-MD5</li><li>AES128---SHA1-96</li><li>AES256---SHA1-96</li></ul> |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - コマンド内の暗号化の種類をスペースで区切って、複数の暗号化の種類を設定または追加できます。 ただし、一度に1つのドメインに対してのみ実行できます。
 

@@ -3,16 +3,16 @@ title: Diskshadow (英語の可能性あり)
 description: ボリュームシャドウコピーサービス (VSS) によって提供される機能を公開するツールである、Diskshadow コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: e962537d-b759-4368-b6f1-e8391cf7b221
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: bf36485319a74694b08a094950d52d70f7cd213a
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 69a8eae18261085f697c92b138fce7ad3cff55ca
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030860"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89635380"
 ---
 # <a name="diskshadow"></a>Diskshadow (英語の可能性あり)
 
@@ -23,7 +23,7 @@ Diskshadow.exe は、ボリュームシャドウコピーサービス (VSS) に�
 > [!NOTE]
 > Diskshadow を実行するには、ローカルの Administrators グループのメンバーシップ、またはそれと同等のメンバーシップが最低限必要です。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 対話モードの場合は、コマンドプロンプトで次のように入力して、Diskshadow コマンドインタープリターを開始します。
 

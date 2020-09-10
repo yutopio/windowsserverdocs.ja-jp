@@ -3,16 +3,16 @@ title: start
 description: 指定されたプログラムまたはコマンドを実行するための個別のコマンドプロンプトウィンドウを開始する、start の参照記事。
 ms.topic: reference
 ms.assetid: 0173f9b3-5cd7-4edb-b01e-d02193b4fadc
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 5f17b4093bbe82d869ad561dce45437389dc347e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 3276374d13854e865755a7a87b9d35af2f4e6f46
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036930"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89634196"
 ---
 # <a name="start"></a>start
 
@@ -44,7 +44,7 @@ start [<Title>] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 |\<Parameter>...|コマンドまたはプログラムに渡すパラメーターを指定します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 - コマンドとして、ファイルの名前を入力して、ファイルの関連付けを通じて非実行可能ファイルを実行できます。
 - 拡張子またはパスの修飾子のない最初のトークンとして文字列 CMD を含むコマンドを実行すると、CMD は COMSPEC 変数の値に置き換えられます。 これを取得できないように **cmd** 、現在のディレクトリからです。

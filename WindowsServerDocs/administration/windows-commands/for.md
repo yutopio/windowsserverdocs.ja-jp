@@ -1,20 +1,20 @@
 ---
-title: for
+title: 対象
 description: ファイルのセット内で、各ファイルに対して指定されたコマンドを実行する for コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: e275726c-035f-4a74-8062-013c37f5ded1
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 7120ed613595b5b90334e49b0865c3e598f3cabb
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: a7cb7d2882a0af886ead2a74de5b56c00302e589
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027640"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89634835"
 ---
-# <a name="for"></a>for
+# <a name="for"></a>対象
 
 ファイルのセット内で、各ファイルに対して指定されたコマンドを実行します。
 
@@ -34,7 +34,7 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
 | `<commandlineoptions>` | 指定したコマンドで使用するコマンドラインオプションを指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - このコマンドは、バッチファイル内で使用することも、コマンドプロンプトから直接使用することもできます。
 
@@ -105,7 +105,7 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
 
     次の表は、 *parsingkeywords*に使用できる解析キーワードの一覧です。
 
-    | キーワード | 説明 |
+    | Keyword | 説明 |
     | ------- | ----------- |
     | eol =`<c>` | 行末の文字 (1 文字のみ) を指定します。 |
     | スキップ =`<n>` | ファイルの先頭でスキップする行数を指定します。 |

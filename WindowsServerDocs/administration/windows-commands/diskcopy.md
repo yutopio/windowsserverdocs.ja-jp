@@ -3,16 +3,16 @@ title: diskcopy
 description: Diskcopy コマンドの参照記事。コピー先ドライブのフォーマット済みまたは未フォーマットのフロッピーディスクに、ソースドライブのフロッピーディスクの内容をコピーします。
 ms.topic: reference
 ms.assetid: 5fd21efa-52cc-4e70-a7fe-35125a435106
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 05/07/2018
-ms.openlocfilehash: dd60148c798cd69e1f1e4aa2ce79d7acc0f16a84
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 5ed6c3eee6f096e6069e5752441229015db8ed86
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89025846"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89634955"
 ---
 # <a name="diskcopy"></a>diskcopy
 
@@ -32,7 +32,7 @@ diskcopy [<drive1>: [<drive2>:]] [/v]
 | /v | 情報が正しくコピーされていることを確認します。 このオプションを選択すると、コピー処理が遅くなります。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **Diskcopy** は、同じ種類である必要があるフロッピーディスクなどのリムーバブルディスクでのみ機能します。 ハードディスクでは、 **diskcopy** を使用できません。 *Drive1*または*drive2*のハードディスクドライブを指定すると、次のエラーメッセージ**が表示さ**れます。
 
