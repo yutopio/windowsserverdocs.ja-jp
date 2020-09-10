@@ -3,16 +3,16 @@ title: nslookup set search
 description: Nslookup set search コマンドのリファレンス記事。応答が受信されるまで、DNS ドメインの検索リストにドメインネームシステム (DNS) のドメイン名を追加します。
 ms.topic: reference
 ms.assetid: 064ac660-8b04-4af9-8b2c-e4e0549771b8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 17cee7cbc2112db346c91ab4a7b88264eff6a850
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 91efbb50ab54a920be4c2942db1ea8b9cea71fbe
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89025156"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637453"
 ---
 # <a name="nslookup-set-search"></a>nslookup set search
 
@@ -29,7 +29,7 @@ set [no]search
 | パラメーター | 説明 |
 | --------- | ----------- |
 | nosearch | 要求の DNS ドメイン検索一覧にドメインネームシステム (DNS) ドメイン名の追加を停止します。 |
-| 検索 | 応答が受信されるまで、要求の DNS ドメイン検索一覧にドメインネームシステム (DNS) のドメイン名を追加します。 これが既定値です。 |
+| search | 応答が受信されるまで、要求の DNS ドメイン検索一覧にドメインネームシステム (DNS) のドメイン名を追加します。 これが既定値です。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 | /help | コマンド プロンプトにヘルプを表示します。 |
 

@@ -3,16 +3,16 @@ title: echo
 description: Echo コマンドの参照記事。メッセージを表示したり、コマンドエコー機能をオンまたはオフにしたりします。
 ms.topic: reference
 ms.assetid: fb9fcd0f-5e73-4504-aa95-78204e1a79d3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: aca758e2eec979fa4b90a4de4f0fbb6119a3d74a
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 6adafeeca8284aa240a59db0eb6c64553203ca12
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030760"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636225"
 ---
 # <a name="echo"></a>echo
 
@@ -33,7 +33,7 @@ echo [on | off]
 | `<message>` | 画面に表示するテキストを指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - コマンドは、 `echo <message>` **echo** がオフになっている場合に特に便利です。 コマンドを何も表示せずに、数行のメッセージを表示するには、 `echo <message>` batch プログラムの **echo off** コマンドの後にいくつかのコマンドを含めることができます。
 

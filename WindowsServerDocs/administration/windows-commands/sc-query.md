@@ -3,16 +3,16 @@ title: Sc.exe クエリ
 description: sc.exe ユーティリティを使用して、サービス、ドライバー、サービスの種類、またはドライバーの種類に関する情報を取得する方法について説明します。
 ms.topic: reference
 ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 9b3d7967597724dfae4ab5a12ecee9698a43236f
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: e961badf867237c0725441e138bf4f0ea948155f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037530"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637041"
 ---
 # <a name="scexe-query"></a>Sc.exe クエリ
 
@@ -38,7 +38,7 @@ sc.exe [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [ty
 |  グループ = \<GroupName>   |                                                                             列挙するサービス グループを指定します。 既定では、すべてのグループが列挙されます (* * グループ = * *)。                                                                              |
 |           /?           |                                                                                                             コマンド プロンプトにヘルプを表示します。                                                                                                              |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 - パラメーターと値の間のスペースのない (つまり、 **型 = 独自**, ではなく、 **型 = 独自**)、操作は失敗します。
 - **クエリ** 操作には、サービスに関する次の情報が表示されます: WIN32_EXIT_B、SERVICE_EXIT_B、チェックポイント、および WAIT_HINT (状態は使用できない) と同様に状態 (サービスのレジストリ サブキーの名前)、サービス名を入力します。

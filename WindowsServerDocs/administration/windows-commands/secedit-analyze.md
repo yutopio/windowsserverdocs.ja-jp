@@ -3,16 +3,16 @@ title: 'secedit: 分析'
 description: 参照記事 * * * *-
 ms.topic: reference
 ms.assetid: 3430cf9d-1411-48b1-b5a9-2e47701dc87f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: b24a2a60163d7a7a368b18119fe2db199525b372
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 272a05b36ce998aaed9a3ee8bd8b9c273296c030
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037470"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636863"
 ---
 # <a name="seceditanalyze"></a>secedit: 分析
 
@@ -36,7 +36,7 @@ Secedit /analyze /db <database file name> [/cfg <configuration file name>] [/ove
 |log|省略可能。</br>プロセスで使用するログ ファイルのパスとファイル名を指定します。|
 |quiet|省略可能。</br>画面出力を抑制します。 できます分析結果を表示する、セキュリティの構成と分析スナップインを Microsoft 管理コンソール (MMC) を使用しています。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 分析結果は、データベースの独立した領域には保存され、セキュリティの構成と分析スナップインを MMC で表示できます。
 

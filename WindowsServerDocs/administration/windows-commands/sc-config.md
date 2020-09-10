@@ -3,16 +3,16 @@ title: Sc.exe 構成
 description: sc.exe ユーティリティを使用してサービス構成を変更する方法について説明します。
 ms.topic: reference
 ms.assetid: ad4d68a6-efe5-452b-8501-7f1f1c552a4a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 06/05/2018
-ms.openlocfilehash: f3522296c74b31ae89da25ec22b79523bb652148
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 55432910455896434a1857d17016519bedb51caf
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037560"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637135"
 ---
 # <a name="scexe-config"></a>Sc.exe 構成
 
@@ -42,7 +42,7 @@ sc.exe [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | file
 |パスワード = \<Password>|パスワードを指定します。 ローカル システム アカウント以外のアカウントを使用する場合に必要です。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   各コマンド ライン オプション (パラメーター) には、等号 (=) は、オプション名の一部です。
 -   スペースは、オプションとその値の間で必要な (たとえば、 **型 = 独自**します。 スペースを省略すると、操作は失敗します。

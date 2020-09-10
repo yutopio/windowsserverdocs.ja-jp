@@ -3,16 +3,16 @@ title: doskey
 description: 以前に入力したコマンドラインコマンドを再呼び出しし、コマンドラインを編集し、マクロを作成する、doskey コマンドと Doskey.exe のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 4874fd43-d5ea-45f3-ae24-388ae925ed76
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8cda337419253ebdb9a390e5d8ba3bfa07fd1a91
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ed732f7b90f66fa5c0df595480f34f028d912aa8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030790"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636239"
 ---
 # <a name="doskey"></a>doskey
 
@@ -41,7 +41,7 @@ doskey [/reinstall] [/listsize=<size>] [/macros:[all | <exename>] [/history] [/i
 | `<macroname>`=[`<text>`] | *テキスト*で指定されたコマンドを実行するマクロを作成します。 *MacroName* マクロに割り当てる名前を指定します。 *Text* 記録するコマンドを指定します。 *テキスト*を空白のままにした場合、割り当てられたコマンドの*MacroName*はクリアされます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - プログラムデバッガーやファイル転送プログラム (FTP) など、特定の文字ベースの対話型プログラムは、自動的に Doskey.exe を使用します。 Doskey.exe を使用するには、プログラムがコンソールプロセスであり、バッファーされた入力を使用する必要があります。 プログラムキーの割り当ては、 **doskey** キーの割り当てをオーバーライドします。 たとえば、プログラムが関数に対して F7 キーを使用している場合、ポップアップウィンドウで **doskey** コマンド履歴を取得することはできません。
 
@@ -68,7 +68,7 @@ doskey [/reinstall] [/listsize=<size>] [/macros:[all | <exename>] [/history] [/i
   | Ctrl + → | 挿入ポイントを1ワード前に移動します。 |
   | ホーム | カーソル位置を行の先頭に移動します。 |
   | End | カーソル位置を行の末尾に移動します。 |
-  | ESC | 表示からコマンドをクリアします。 |
+  | Esc | 表示からコマンドをクリアします。 |
   | F1 | テンプレート内の列の1文字を、コマンドプロンプトウィンドウの同じ列にコピーします。 (テンプレートは、入力した最後のコマンドが格納されているメモリバッファーです)。 |
   | F2 | F2 キーを押した後に入力する次のキーを、テンプレート内で前方に検索します。 Doskey.exe によって、指定した文字までのテンプレートからテキストが挿入されます。 |
   | F3 | テンプレートの残りの部分をコマンドラインにコピーします。 Doskey.exe は、コマンドラインでの挿入ポイントによって示される位置に対応するテンプレート内の位置から文字のコピーを開始します。 |

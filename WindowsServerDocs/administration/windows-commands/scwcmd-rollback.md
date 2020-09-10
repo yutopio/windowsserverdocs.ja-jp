@@ -3,16 +3,16 @@ title: Scwcmd ロールバック
 description: 参照記事 * * * *-
 ms.topic: reference
 ms.assetid: 4fd9f89b-0420-420a-ad20-4a328636b1e7
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 25c726b649028f66ca97ebc0280175d1713b7ef7
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 2db6e0aa85deb2ab999a50d1f2ed9cb311db9da0
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036180"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636980"
 ---
 # <a name="scwcmd-rollback"></a>Scwcmd: ロールバック
 
@@ -35,7 +35,7 @@ scwcmd rollback /m:<ComputerName> [/u:<UserName>] [/pw:<Password>]
 |pw\<Password>|リモートのロールバックを実行するときに使用する、代替のユーザー資格情報を指定します。 既定値は、ユーザーには、ログオンしています。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 Scwcmd.exe は Windows Server 2008 R2、Windows Server 2008 または Windows Server 2003 を実行するコンピューターにできるだけです。
 

@@ -3,16 +3,16 @@ title: endlocal
 description: Endlocal コマンドの参照記事。バッチファイルで環境の変更のローカライズを終了し、対応する setlocal コマンドが実行される前に環境変数を値に復元します。
 ms.topic: reference
 ms.assetid: 765fae3c-0c0a-4639-99a4-cf613489b949
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 82fa050ef9f2ed35368a6eaf356c6aa6f70e5465
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 4220d143be2e3af9378854aa1a649c2358b44560
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030700"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636109"
 ---
 # <a name="endlocal"></a>endlocal
 
@@ -30,7 +30,7 @@ endlocal
 | --------- | ----------- |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **Endlocal**コマンドは、スクリプトまたはバッチファイルの外部には影響しません。
 

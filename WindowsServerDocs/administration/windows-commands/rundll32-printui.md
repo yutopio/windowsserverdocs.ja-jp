@@ -3,16 +3,16 @@ title: rundll32 printui.dll、PrintUIEntry
 description: PrintUIEntry コマンドの参照 printui.dll 記事。これにより、多くのプリンター構成タスクが自動化されます。
 ms.topic: reference
 ms.assetid: 12fb48b6-5dd8-4cc0-8808-e6a681aceb84
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 05/25/2018
-ms.openlocfilehash: da714616783a66201a9b877d46e678d9c9d1f51e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 7dc6e383c065e5400ef0d5c75dac6d6136fa3dec
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037590"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637216"
 ---
 # <a name="rundll32-printuidllprintuientry"></a>rundll32 printui.dll、PrintUIEntry
 
@@ -20,7 +20,7 @@ ms.locfileid: "89037590"
 
 さまざまなプリンター構成タスクを自動化します。 printui.dll は、プリンターの構成ダイアログボックスによって使用される関数を含む実行可能ファイルです。 スクリプトまたはコマンドライン バッチ ファイル内でこれらの関数がから呼び出すこともできますか、コマンド プロンプトから対話的に実行できます。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 ```
 rundll32 printui.dll PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]
@@ -98,7 +98,7 @@ rundll32 printui,PrintUIEntry [BaseParameter] [ModificationParameter1] [Modifica
 |        /W [フラグ]        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  プリンターの追加ウィザード、プリンタードライバーの追加ウィザード、およびネットワークプリンターのインストールウィザードのパラメーターまたはオプションを指定します。<p>**r**: 最後のページから再起動するウィザードを使用します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |        /G [フラグ]        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              グローバル パラメーターを使用するオプションを指定します。<p>**w**: セットアップ ドライバーへのユーザーに警告を抑制します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 - **PrintUIEntry** キーワードは大文字と小文字を区別して正確な大文字と小文字のこのトピックの例に示すように、このコマンドの構文を入力する必要があります。
 - コマンド プロンプトで、他の例について: **rundll32 printui.dll,PrintUIEntry/でしょうか。**
   ## <a name="examples"></a>例

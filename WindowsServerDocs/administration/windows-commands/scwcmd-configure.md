@@ -3,16 +3,16 @@ title: Scwcmd の構成
 description: 参照記事 * * * *-
 ms.topic: reference
 ms.assetid: 6528b9dc-3d82-4228-b734-ed717458d74c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 54faae6fd24aac91a94ec9ab1f373737569dda78
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: eff97910907aca9db2f8e8f40c15058a21e2fac3
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036190"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637015"
 ---
 # <a name="scwcmd-configure"></a>Scwcmd: 構成
 
@@ -39,7 +39,7 @@ scwcmd configure [[[/m:<ComputerName> | /ou:<OuName>] /p:<Policy>] | /i:<Compute
 |/t: \<Threads>|構成処理中に保守する必要が未処理の構成の同時操作の数を指定します (既定値 = 40、MinValue = 1、最大値 = 1000)。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 Scwcmd.exe は Windows Server 2008 R2、Windows Server 2008 または Windows Server 2003 を実行するコンピューターにできるだけです。
 

@@ -3,16 +3,16 @@ title: ソフトウェアの制限のポリシーの許可/拒否リストおよ
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: 0abb73b6-b5d8-4505-8ab1-2f29e4bf0411
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 831508de2aae56aab53cbd1ff7820ea1af0da565
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9da7cc8490f5b660ed5ce327b4572dc968e10c48
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953039"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637865"
 ---
 # <a name="determine-allow-deny-list-and-application-inventory-for-software-restriction-policies"></a>ソフトウェアの制限のポリシーの許可/拒否リストおよびアプリケーション インベントリの決定
 
@@ -21,7 +21,7 @@ ms.locfileid: "87953039"
 IT プロフェッショナル向けのこのトピックでは、Windows Server 2008 および Windows Vista 以降のソフトウェア制限ポリシー (SRP) によって管理されるアプリケーションの許可リストと拒否リストを作成する方法について説明します。
 
 ## <a name="introduction"></a>はじめに
-ソフトウェアの制限のポリシー (SRP) はグループ ポリシー ベースの機能で、ドメイン内のコンピューターで実行されているソフトウェア プログラムを識別し、これらのプログラムを実行する機能を制御します。 ソフトウェアの制限のポリシーを使えば、コンピューターの構成に厳格な制限を加え、指定したアプリケーションに限って実行を許可することができます。 これらは Microsoft Active Directory Domain Services およびグループポリシーと統合されていますが、スタンドアロンコンピューターで構成することもできます。 SRP の開始点については、「[ソフトウェアの制限のポリシー](software-restriction-policies.md)」を参照してください。
+ソフトウェアの制限のポリシー (SRP) はグループ ポリシー ベースの機能で、ドメイン内のコンピューターで実行されているソフトウェア プログラムを識別し、これらのプログラムを実行する機能を制御します。 ソフトウェアの制限のポリシーを使えば、コンピューターの構成に厳格な制限を加え、指定したアプリケーションに限って実行を許可することができます。 これらは Microsoft Active Directory Domain Services およびグループポリシーと統合されていますが、スタンドアロンコンピューターで構成することもできます。 SRP の開始点については、「 [ソフトウェアの制限のポリシー](software-restriction-policies.md)」を参照してください。
 
 Windows Server 2008 R2 および Windows 7 以降では、アプリケーション制御戦略の一部として、または SRP と連携して Windows AppLocker を使用できます。
 
@@ -50,7 +50,7 @@ SRP を使用して特定のタスクを実行する方法については、以�
 
     文字列値: *LogFileName への LogFileName パス*
 
-    SRP では実行時にすべてのアプリケーションが評価されるため、アプリケーションが実行されるたびに、エントリがログファイルの*Namelogfile*に書き込まれます。
+    SRP では実行時にすべてのアプリケーションが評価されるため、アプリケーションが実行されるたびに、エントリがログファイルの *Namelogfile* に書き込まれます。
 
 3.  ログファイルを評価する
 
@@ -66,5 +66,5 @@ SRP を使用して特定のタスクを実行する方法については、以�
 
     ログファイルに書き込まれる出力の例を次に示します。
 
-**explorer.exe (PID = 4728) identifiedC:\Windows\system32\onenote.exe 無制限の方法でのパスルール、Guid = {320bd852-aa7c-4674-82c5-9a80321670a3}**   SRP によってチェックされブロックに設定されるすべてのアプリケーションと関連するコードは、ログファイルに記録されます。その後、許可リストについて考慮する必要がある実行可能ファイルを決定するために使用できます。
+**explorer.exe (PID = 4728) identifiedC:\Windows\system32\onenote.exe 無制限の方法でのパスルール、Guid = {320bd852-aa7c-4674-82c5-9a80321670a3}**    SRP によってチェックされブロックに設定されるすべてのアプリケーションと関連するコードは、ログファイルに記録されます。その後、許可リストについて考慮する必要がある実行可能ファイルを決定するために使用できます。
 

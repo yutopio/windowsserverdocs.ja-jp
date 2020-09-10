@@ -3,16 +3,16 @@ title: 'secedit: generaterollback'
 description: 参照記事 * * * *-
 ms.topic: reference
 ms.assetid: 385a6799-51a7-4fe3-bd73-10c7998b6680
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: e3ccbd0071b5975682a7c52fcbe7cf9b6300adf3
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 28b8fedf952bfa5466bc0a893a46f2e7f69165f6
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037440"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636797"
 ---
 # <a name="seceditgeneraterollback"></a>secedit: generaterollback
 
@@ -36,7 +36,7 @@ Secedit /generaterollback /db <database file name> /cfg <configuration file name
 |log|省略可能。</br>プロセスのログ ファイルのパスとファイル名を指定します。|
 |quiet|省略可能。</br>画面とログの出力を抑制します。 できます分析結果を表示する、セキュリティの構成と分析スナップインを Microsoft 管理コンソール (MMC) を使用しています。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 ログ ファイルのパスを指定しない場合、既定のログ ファイル (*systemroot*\Users \*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) を使用します。
 

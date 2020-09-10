@@ -3,16 +3,16 @@ title: /Get-multicasttransmission
 description: イメージのマルチキャスト転送を無効にする/Get-multicasttransmission のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 9a7f5c31-bfbf-425d-9129-a6f9173fe83d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: cfb3a83c975aa14752e2a9538079f67a5dd94b8e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 680894f9a8f5d73d4bc71511ce006f82f04d0b5c
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89023126"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636404"
 ---
 # <a name="using-the-remove-multicasttransmission-command"></a>/Remove-multicasttransmission コマンドを使用してください。
 
@@ -20,7 +20,7 @@ ms.locfileid: "89023126"
 
 イメージのマルチキャスト転送を無効にします。 **/Force**を指定しない限り、既存のクライアントはイメージの転送を完了しますが、新しいクライアントは参加できません。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 **Windows Server 2008**
 ```
 wdsutil /remove-MulticastTransmissiomedia:<Image name> [/Server:<Server name>mediatype:InstallmediaGroup:<Image Group>] [/Filename:<File name>] [/force]

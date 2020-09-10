@@ -3,16 +3,16 @@ title: driverquery
 description: Driverquery コマンドの参照記事。管理者は、インストールされているデバイスドライバーとそのプロパティの一覧を表示できます。
 ms.topic: reference
 ms.assetid: 92ca4b84-e4e2-405b-9f31-bf6db9f66839
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: dbd8ca2de7f15a5b5fb8682dae3a3aa2e105d7cd
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 1b8c0926f1d16ec1bf08b98229c5a40e4c0c7baa
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030800"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636231"
 ---
 # <a name="driverquery"></a>driverquery
 
@@ -31,7 +31,7 @@ driverquery [/s <system> [/u [<domain>\]<username> [/p <password>]]] [/fo {table
 | /s `<system>` | 名前またはリモート コンピューターの IP アドレスを指定します。 円記号を使用しないでください。 既定値はローカル コンピューターです。 |
 | /u `[<domain>]<username>` | *ユーザー*または*ドメイン \*ユーザーによって指定されたユーザーアカウントの資格情報でコマンドを実行します。 既定では、 */s* は、コマンドを発行しているコンピューターに現在ログオンしているユーザーの資格情報を使用します。 **/s**が指定されている場合を除き、 **/u**は使用できません。 |
 | /p `<password>` | 指定されているユーザー アカウントのパスワードを指定します、 **/u** パラメーター。 **/p** は、 **/u** が指定されている場合には使用できません。 |
-| /fo テーブル | 出力を表として書式設定します。 既定値です。 |
+| /fo テーブル | 出力を表として書式設定します。 これは既定です。 |
 | /fo リスト | 出力を一覧として書式設定します。 |
 | /fo csv | 出力にコンマ区切りの値を設定します。 |
 | /nh | 表示されているドライバー情報からヘッダー行を除外します。 **/Fo**パラメーターが**list**に設定されている場合は無効です。 |

@@ -3,16 +3,16 @@ title: イメージグループの削除
 description: サーバーからイメージグループを削除する、remove ImageGroup のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 5b2c9813-5df2-4272-8449-26f3bb16f82b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: d6ff54e3b595ac53109bd08701ec96bdb6b712c7
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 488f68173e5bed67f1bc484ef059b7a3ea849df1
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89023156"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636421"
 ---
 # <a name="using-the-remove-imagegroup-command"></a>削除 ImageGroup コマンドを使用してください。
 

@@ -3,16 +3,16 @@ title: findstr
 description: Findstr コマンドの参照記事。ファイル内のテキストのパターンを検索します。
 ms.topic: reference
 ms.assetid: c2d803fb-4cd2-46a1-a1b7-6f5e0249c418
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: bdd268c3b2ddde1b42527968252770e6903bacc4
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 65223132d4577a5e90929073cb964851f1ab67ce
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035130"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637558"
 ---
 # <a name="findstr"></a>findstr
 
@@ -50,7 +50,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<file>] 
 | `[\<drive>:][<path>]<filename>[ ...]` | 検索する場所とファイルを指定します。 少なくとも1つのファイル名が必要です。 |
 | /? | コマンド プロンプトでヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - すべての **findstr** コマンドラインオプションは、コマンド文字列の *文字列* と *ファイル名* の前に記述する必要があります。
 
@@ -62,7 +62,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<file>] 
 
     許容されるメタ文字は次のとおりです。
 
-    | メタ文字 | [値] |
+    | メタ文字 | 値 |
     | -------------- | ----- |
     | `.` | **ワイルドカード** -任意の文字 |
     | `*` | **繰り返し** -前の文字またはクラスを0回以上繰り返します。 |

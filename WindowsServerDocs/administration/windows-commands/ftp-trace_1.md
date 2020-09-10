@@ -3,16 +3,16 @@ title: ftp trace
 description: Ftp トレースコマンドの参照記事。パケットトレースを切り替えます。
 ms.topic: reference
 ms.assetid: 8740c1fb-a7bf-45c8-b2f9-61fae4f3506e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3b2059181097cedf481bb179dfd2b03e6afafaac
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: f11771c28284238712a6da30609e171d86451463
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035680"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636702"
 ---
 # <a name="ftp-trace"></a>ftp trace
 

@@ -3,16 +3,16 @@ title: ftype
 description: ファイル名拡張子の関連付けで使用されるファイルの種類を表示または変更する、ftype コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: 6fb53cee-9bed-44dd-af5d-bc7cec1dd114
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 76e85356d02c1b4b157608eaad6e05550adb3719
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: db5781eccb4fc54fea42586b5e7aab779509bffd
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035550"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636649"
 ---
 # <a name="ftype"></a>ftype
 
@@ -36,7 +36,7 @@ ftype [<filetype>[=[<opencommandstring>]]]
 | `<opencommandstring>` | 指定したファイルの種類のファイルを開くときに使用する開いているコマンド文字列を指定します。|
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 次の表方法 **ftype** [開く] コマンド文字列内の変数に置換します。
 

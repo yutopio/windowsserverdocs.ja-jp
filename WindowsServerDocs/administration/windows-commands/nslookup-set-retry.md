@@ -3,16 +3,16 @@ title: nslookup set retry
 description: Nslookup set retry コマンドの参照記事。指定されたサーバーから情報を取得する試行回数を設定します。
 ms.topic: reference
 ms.assetid: 615fdfa2-fa29-47a8-8c9e-a6c5b45b3b71
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 10f60b48485ae51d727f17a5cfcec8b2af61a743
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: fa8b588c49b61c2269325b1b9e67d350f837c5ad
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89025176"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637525"
 ---
 # <a name="nslookup-set-retry"></a>nslookup set retry
 

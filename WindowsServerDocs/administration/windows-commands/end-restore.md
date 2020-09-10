@@ -3,22 +3,22 @@ title: end restore
 description: 復元セッションを終了し、関連するライターに **postrestore** イベントを発行する、restore コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: 67ce83ec-a51e-4d1f-a182-d84ded999dc3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: cf4a90f33b7ae593f3cf50f0b24924583a2c9ded
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: d770dd15847f3e0c7d6df1c577d39a7285a8d5e9
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030710"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636130"
 ---
 # <a name="end-restore"></a>end restore
 
 復元セッションを終了し、関連するライターに **postrestore** イベントを発行します。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 ```
 end restore

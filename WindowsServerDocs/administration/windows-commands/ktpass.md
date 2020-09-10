@@ -3,16 +3,16 @@ title: ktpass
 description: Ktpass コマンドの参照記事。このコマンドは、AD DS でホストまたはサービスのサーバープリンシパル名を構成し、サービスの共有シークレットキーを含む... キーを生成します。
 ms.topic: reference
 ms.assetid: 47087676-311e-41f1-8414-199740d01444
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3ef7e2ba1aa84faa44cf4bf77e842e8d3bcdc235
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 65ec74f1e89cd20973d4418659eb3c8de6a5bf93
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89028240"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636601"
 ---
 # <a name="ktpass"></a>ktpass
 
@@ -47,7 +47,7 @@ ktpass
 | /out `<filename>` | 生成する Kerberos version 5. キータブファイルの名前を指定します。 **注:** これは、Windows オペレーティングシステムを実行していないコンピューターに転送する、キーが付けられたファイルです。その後、既存の.............. */Etc/Krb5.keytab*ファイルを置き換えます。 |
 | /princ `<principalname>` | の形式でプリンシパル名を指定し host/computer.contoso.com@CONTOSO.COM ます。 **警告:** このパラメーターでは、大文字と小文字が区別されます。 |
 | /mapuser `<useraccount>` | **Princ**パラメーターによって指定された Kerberos プリンシパルの名前を、指定されたドメインアカウントにマップします。 |
-| /mapop `{add|set}` | マッピング属性を設定する方法を指定します。<ul><li>**追加** -指定したローカルユーザー名の値を追加します。 既定値です。</li><li>**設定** -指定したローカルユーザー名のデータ暗号化標準 (DES) のみの暗号化の値を設定します。</li></ul> |
+| /mapop `{add|set}` | マッピング属性を設定する方法を指定します。<ul><li>**追加** -指定したローカルユーザー名の値を追加します。 これは既定です。</li><li>**設定** -指定したローカルユーザー名のデータ暗号化標準 (DES) のみの暗号化の値を設定します。</li></ul> |
 | `{-|+}`desonly | 既定では、DES のみの暗号化が設定されます。<ul><li>**+** DES のみの暗号化のアカウントを設定します。</li><li>**-** アカウントの制限を、DES のみの暗号化に対して解放します。 **重要:** Windows では既定で DES がサポートされていません。</li></ul> |
 | /in `<filename>` | Windows オペレーティングシステムを実行していないホストコンピューターから読み取るための、キーのキーファイルを指定します。 |
 | /pass `{password|*|{-|+}rndpass}` | **Princ**パラメーターで指定したプリンシパルユーザー名のパスワードを指定します。 `*`パスワードの入力を求めるには、を使用します。 |
@@ -59,13 +59,13 @@ ktpass
 | /kvno `<keyversionnum>` | キーのバージョン番号を指定します。 既定値は 1 です。 |
 | /answer `{-|+}` | バックグラウンド応答モードを設定します。<ul><li>**-** 回答を入力 **せず**にパスワードのプロンプトを自動的にリセットします。</li><li>**+****[Ok] をオン**にすると、パスワードの入力を自動的にリセットします。</li></ul> |
 | /target | 使用するドメインコントローラーを設定します。 既定では、プリンシパル名に基づいて、ドメインコントローラーが検出されます。 ドメインコントローラ名が解決されない場合は、有効なドメインコントローラの入力を求めるダイアログボックスが表示されます。 |
-| /rawsalt | キーの生成時に ktpass が rawsalt アルゴリズムを使用するように強制します。 このパラメーターは省略できます。 |
+| /rawsalt | キーの生成時に ktpass が rawsalt アルゴリズムを使用するように強制します。 このパラメーターは省略可能です。 |
 | `{-|+}dumpsalt` | このパラメーターの出力は、キーの生成に使用されている MIT salt アルゴリズムを示しています。 |
 | `{-|+}setupn` | サービスプリンシパル名 (SPN) に加えて、ユーザープリンシパル名 (UPN) を設定します。 既定では、キーセットファイルに両方を設定します。 |
 | `{-|+}setpass <password>` | 指定されたときにユーザーのパスワードを設定します。 Rndpass が使用されている場合は、ランダムなパスワードが代わりに生成されます。 |
 | /? | このコマンドのヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - Windows オペレーティングシステムを実行していないシステムで実行されているサービスは、AD DS のサービスインスタンスアカウントを使用して構成できます。 これにより、任意の Kerberos クライアントが windows Kdc を使用して、Windows オペレーティングシステムを実行していないサービスに対して認証を行うことができます。
 

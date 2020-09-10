@@ -3,16 +3,16 @@ title: Sc.exe 作成
 description: sc.exe ユーティリティを使用して Windows Service Manager に新しいサービスを登録する方法について説明します
 ms.topic: reference
 ms.assetid: 59416460-0661-4fef-85cc-73e9d8f4beb4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8a022e3b855496825207f4c94f63d20d4530e92b
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ede0c21bf2679925db71666631c8752e5c930afa
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037550"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637118"
 ---
 # <a name="scexe-create"></a>Sc.exe 作成
 
@@ -42,7 +42,7 @@ sc.exe [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | file
 |パスワード = \<Password>|パスワードを指定します。 LocalSystem 以外のアカウントを使用する場合に必要です。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   各コマンド ライン オプションは、等号 (=) は、オプション名の一部です。
 -   スペースは、オプションとその値の間で必要な (たとえば、 **型 = 独自**します。 スペースを省略した場合、操作は失敗します。

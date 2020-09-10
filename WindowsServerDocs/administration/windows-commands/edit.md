@@ -3,16 +3,16 @@ title: 編集
 description: '[編集] コマンドの参照記事。これにより、MS-DOS エディターが起動され、ASCII テキストファイルを作成および変更できるようになります。'
 ms.topic: reference
 ms.assetid: 4e0ff2e8-3518-47c1-8c69-5e93f895fa0e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 892eaa2751ba9374b375145c5e9a0dfc1c069d4f
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b3723c65456fd7e17395cd7a9bc931ddc56a09b3
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030739"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89636176"
 ---
 # <a name="edit"></a>編集
 
@@ -36,7 +36,7 @@ edit [/b] [/h] [/r] [/s] [/<nnn>] [[<drive>:][<path>]<filename> [<filename2> [..
 | `<nnn>` | バイナリファイルを読み込み、行を *nnn* 文字幅に折り返します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 追加のヘルプを表示するには、MS-DOS エディターを開き、F1 キーを押します。
 

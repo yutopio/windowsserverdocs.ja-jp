@@ -3,16 +3,16 @@ title: TLS/SSL の概要 (Schannel SSP)
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: 1b7b0432-1bef-4912-8c9a-8989d47a4da9
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 05/16/2018
-ms.openlocfilehash: 512dd20e658f610ac9de7247380eed5d2aed54f6
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 21ad7977039eda311dd6f093fc53c09c08cf0317
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989476"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637843"
 ---
 # <a name="tlsssl-overview-schannel-ssp"></a>TLS/SSL の概要 (Schannel SSP)
 
@@ -38,7 +38,7 @@ TLS バージョン1.0、1.1、1.2、SSL バージョン2.0 および3.0、デ�
 -   SQL アクセス
 -   電子メール
 
-## <a name="requirements"></a><a name="BKMK_SOFT"></a>要件
+## <a name="requirements"></a><a name="BKMK_SOFT"></a>必要条件
 TLS および SSL プロトコルは、クライアント/サーバーモデルを使用し、公開キー基盤を必要とする証明書認証に基づいています。
 
 ## <a name="server-manager-information"></a><a name="BKMK_INSTALL"></a>サーバー マネージャー情報
