@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ed062945-27e9-4572-b1bb-6c8cf1b9c2f4
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 031f407b392e02e9867640975520475acd5f8cbb
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 90f931c128d4e4eb9747203db7d097c68d451702
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180328"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625201"
 ---
 # <a name="troubleshoot-file-history-in-windows-server-essentials"></a>Windows Server Essentials のファイル履歴に関するトラブルシューティング
 
@@ -30,7 +30,7 @@ ms.locfileid: "87180328"
 
   この問題を解決するには、次の手順を実行してファイル履歴を手動で削除しなければなりません。
 
-####  <a name="to-manually-delete-file-history-backups-for-a-user-or-a-computer"></a><a name="BKMK_manuallyDelete"></a>ユーザーまたはコンピューターのファイル履歴のバックアップを手動で削除するには
+####  <a name="to-manually-delete-file-history-backups-for-a-user-or-a-computer"></a><a name="BKMK_manuallyDelete"></a> ユーザーまたはコンピューターのファイル履歴のバックアップを手動で削除するには
 
 1.  サーバーに管理者としてログオンします。
 
@@ -67,13 +67,13 @@ ms.locfileid: "87180328"
 
 4.  削除したユーザーのサブフォルダーの名前を変更します ( ** < *ユーザー名*>_Deleted**など)。 ユーザーのファイル履歴が不要な場合には、そのフォルダーを削除できます。
 
-5. これで、新しいユーザーを追加できます。 手順については、「ユーザーアカウントの追加」を参照してください。[[ユーザーアカウントの管理](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md)。
+5. これで、新しいユーザーを追加できます。 手順については、「ユーザーアカウントの追加」を参照してください。[ [ユーザーアカウントの管理](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md)。
 
 ### <a name="a-user-account-was-removed-but-the-users-file-history-remains"></a>ユーザー アカウントは削除したものの、ユーザーのファイル履歴が残っている
  ネットワーク管理者がサーバーからユーザーまたはコンピューターの削除を選択したものの、将来の使用に備えてファイル履歴のバックアップの保持を選択することがあります。 対象のファイル履歴が不要な場合には、対象ユーザーまたはコンピューターの File History Backups フォルダーを、サーバー上の共有フォルダーから削除します。 その方法については、「 [To manually delete File History backups for a user or a computer](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete)」をご覧ください。
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 -   [クライアント バックアップを管理する](../manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)
 

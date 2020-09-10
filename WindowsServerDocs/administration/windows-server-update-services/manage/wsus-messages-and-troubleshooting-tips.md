@@ -3,16 +3,16 @@ title: WSUS メッセージとトラブルシューティングのヒント
 description: Windows Server Update Service (WSUS) のトピック-WSUS メッセージを使用したトラブルシューティング
 ms.topic: article
 ms.assetid: 9f6317f7-bfe0-42d9-87ce-d8f038c728ca
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: cf3d0337dfa7360bdf8304c587c4ea31b7607e27
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 8abb77727139652f7d3d1ef2e4ce8dd8320db47a
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990956"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89624237"
 ---
 # <a name="wsus-messages-and-troubleshooting-tips"></a>WSUS メッセージとトラブルシューティングのヒント
 
@@ -69,11 +69,11 @@ WSUS セットアップでは、Microsoft SQL Server を使用してインスト
 
 ## <a name="some-services-are-not-running-check-the-following-services"></a>一部のサービスが実行されていません。 次のサービスを確認します。
 
-- **Selfupdate:** Selfupdate サービスのトラブルシューティングについては、「[自動更新を更新する必要があり](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708554(v=ws.10))ます」を参照してください。
+- **Selfupdate:** Selfupdate サービスのトラブルシューティングについては、「 [自動更新を更新する必要があり](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708554(v=ws.10)) ます」を参照してください。
 
-- **WSSUService.exe:** このサービスは同期を容易にします。 同期で問題が発生した場合は、[**スタート**] ボタンをクリックし、[**管理ツール**]、[**サービス**] の順にポイントし、サービスの一覧で [ **Windows Server Update Service** ] を見つけて、WSUSService.exe アクセスします。 次の操作を行います。
+- **WSSUService.exe:** このサービスは同期を容易にします。 同期で問題が発生した場合は、[ **スタート**] ボタンをクリックし、[ **管理ツール**]、[ **サービス**] の順にポイントし、サービスの一覧で [ **Windows Server Update Service** ] を見つけて、WSUSService.exe アクセスします。 次の手順を実行します。
 
-    -   このサービスが実行されていることを確認します。 停止している場合は [**開始**] をクリックし、サービスを更新する場合は [**再起動**] をクリックします。
+    -   このサービスが実行されていることを確認します。 停止している場合は [ **開始** ] をクリックし、サービスを更新する場合は [ **再起動** ] をクリックします。
 
     -   イベントビューアーを使用して**アプリケーション**を**確認し、****システム**イベントログを確認して、問題を示すイベントがあるかどうかを確認します。
 
@@ -81,10 +81,10 @@ WSUS セットアップでは、Microsoft SQL Server を使用してインスト
 
 - **Web servicesSQL サービス:** Web サービスは IIS でホストされます。 実行されていない場合は、IIS が実行されている (または開始されている) ことを確認します。 また、コマンドプロンプトで「 **iisreset** 」と入力して、Web サービスをリセットすることもできます。
 
-- **SQL サービス:** Selfupdate サービスを除くすべてのサービスでは、SQL サービスが実行されている必要があります。 SQL 接続の問題を示すログファイルがある場合は、まず SQL サービスを確認してください。 SQL サービスにアクセスするには、[**スタート**] をクリックし、[**管理ツール**] をポイントします。次に、[**サービス**] をクリックして、次のいずれかを探します。
+- **SQL サービス:** Selfupdate サービスを除くすべてのサービスでは、SQL サービスが実行されている必要があります。 SQL 接続の問題を示すログファイルがある場合は、まず SQL サービスを確認してください。 SQL サービスにアクセスするには、[ **スタート**] をクリックし、[ **管理ツール**] をポイントします。次に、[ **サービス**] をクリックして、次のいずれかを探します。
 
   - **MSSQLSERver** (WMSDE または MSDE を使用している場合、または SQL Server を使用していて、インスタンス名に既定のインスタンス名を使用している場合)
 
   - **MSSQL $ wsus** (SQL Server データベースを使用していて、データベースインスタンス WSUS という名前が付いている場合)
 
-    サービスを右クリックし、サービスが実行されていない場合は [**開始**] をクリックします。サービスが実行されている場合は、**再起動**してサービスを更新します。
+    サービスを右クリックし、サービスが実行されていない場合は [ **開始** ] をクリックします。サービスが実行されている場合は、 **再起動** してサービスを更新します。

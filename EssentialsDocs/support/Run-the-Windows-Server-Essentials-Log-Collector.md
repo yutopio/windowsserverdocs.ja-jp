@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 0d340223-fa24-4c75-ba8e-b654feb120ab
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 10871d4b0fef4e3d0271d0d94ef114cc5d882abf
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 34c853abb19424d94fa768c70fcb6c9d8d8feea8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180358"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625283"
 ---
 # <a name="run-the-windows-server-essentials-log-collector"></a>Windows Server Essentials Log Collector の実行
 Windows Server Essentials Log Collector は、サーバーまたはネットワーク上のコンピューターから実行できます。 サーバーから Log Collector を実行した場合、ログをサーバーからのみ収集できます。 ネットワーク コンピューターから Log Collector を実行した場合、そのコンピューターのログに加えて、サーバーから収集するログを選択できます。
@@ -21,10 +21,10 @@ Windows Server Essentials Log Collector は、サーバーまたはネットワ�
 
 #### <a name="to-run-the-log-collector-on-the-server-by-using-the-wizard"></a>ウィザードを使用してサーバーで Log Collector を実行するには
 
-1. サーバーの [**スタート**] ページで、[ **Windows Server Essentials Log Collector**] をクリックします。
+1. サーバーの [ **スタート** ] ページで、[ **Windows Server Essentials Log Collector**] をクリックします。
 
    > [!NOTE]
-   > - Log Collector プログラムが**スタート**ページに表示されない場合は、 **%system%\program files Files (X86) \Windows Server Essentials Log collector**に移動し、[ **logcollector**] をダブルクリックします。
+   > - Log Collector プログラムが **スタート** ページに表示されない場合は、 **%system%\program files Files (X86) \Windows Server Essentials Log collector**に移動し、[ **logcollector**] をダブルクリックします。
    >   -   サーバーに管理者権限でログオンしていない場合は、ログ コントローラーでは資格情報の入力を求めるダイアログが表示されます。
 
 2. 収集したログファイルを保存する場所の入力を求められたら、既定の場所を選択するか** \\ \\<ServerName \> \logs**を選択するか、別の場所を指定します。 既定の場所を承諾するには、[**次へ**] をクリックします。 場所を変更するには、[**参照**] をクリックし、ログ ファイルを保存するフォルダーに移動して、[**保存**] をクリックします。

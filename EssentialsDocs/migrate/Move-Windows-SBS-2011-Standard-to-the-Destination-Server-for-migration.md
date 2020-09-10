@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 16b24026-2fe3-4bd0-b82f-900e1564be99
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 1828eab791cb32a7af1aee62325a4270b1a2d983
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 6a961f8bb201f9746b4e212801576ff287dc43b2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180555"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625674"
 ---
 # <a name="move-windows-sbs-2011-standard-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Windows SBS 2011 Standard の設定とデータを Windows Server Essentials 移行の移行先サーバーに移動する
 
@@ -52,8 +52,8 @@ ms.locfileid: "87180555"
  この場合、
  - \<SourceServerName\> は移行元サーバーの名前です。
  - \<SharedSourceFolderName\> は、移行元サーバー上の共有フォルダーの名前です。
- - \<DestinationServerName\>は、移行先サーバーの名前です。
- - \<SharedDestinationFolderName\>データのコピー先となる転送先サーバー上の共有フォルダーを指定します。
+ - \<DestinationServerName\> は、移行先サーバーの名前です。
+ - \<SharedDestinationFolderName\> データのコピー先となる転送先サーバー上の共有フォルダーを指定します。
 
 3. 移行元サーバーから移行する共有フォルダーごとに前記の手順を繰り返します。
 
@@ -162,9 +162,9 @@ ms.locfileid: "87180555"
 
 5. [**Windows SBS クライアント**] を右クリックし、[**削除**] をクリックして、[**はい**] をクリックします。
 
-6. [ **WINDOWS SBS クライアント windows 7 および Windows Vista**] を右クリックし、[**削除**] をクリックして、[は**い]** をクリックします。
+6. [ **WINDOWS SBS クライアント windows 7 および Windows Vista**] を右クリックし、[ **削除**] をクリックして、[は **い]** をクリックします。
 
-7. [ **WINDOWS SBS クライアント WINDOWS XP**] を右クリックし、[**削除**] をクリックして、[は**い]** をクリックします。
+7. [ **WINDOWS SBS クライアント WINDOWS XP**] を右クリックし、[ **削除**] をクリックして、[は **い]** をクリックします。
 
 8. これら 3 つの WMI フィルターが削除されたことを確認します。
 

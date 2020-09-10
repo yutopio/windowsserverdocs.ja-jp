@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: e832957a5d44851131cb622e4c3bf9d99d4e4a7f
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 6314ef0baa92f6e6fe0d6a4bb2b49c3fcee6f893
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838271"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625069"
 ---
 # <a name="troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials"></a>Windows Server Essentials 内のサーバーにコンピューターを接続する場合のトラブルシューティング
 
@@ -26,30 +26,30 @@ ms.locfileid: "87838271"
  このトピックでは、次の問題に関する解決策を取り上げます。
 
 
--   問題 1:[問題 1](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)
+-   問題 1: [問題 1](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)
 
--   問題 2:[問題 2](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)
+-   問題 2: [問題 2](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)
 
--   問題 3:[問題 3](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2a)
+-   問題 3: [問題 3](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2a)
 
--   問題 4:[問題 4](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueNetFramework)
+-   問題 4: [問題 4](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueNetFramework)
 
--   問題 5:[問題 5](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_Time)
+-   問題 5: [問題 5](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_Time)
 
--   問題 6:[問題 6](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ServiceStopped)
+-   問題 6: [問題 6](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ServiceStopped)
 
--   問題 7:[問題 7](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueReconnect)
+-   問題 7: [問題 7](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueReconnect)
 
--   問題 8:[問題 8](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_JoinWin7)
+-   問題 8: [問題 8](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_JoinWin7)
 
--   問題 9:[問題 9](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueAutologon)
+-   問題 9: [問題 9](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueAutologon)
 
--   問題 10:[問題 10](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)
+-   問題 10: [問題 10](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)
 
--   問題 11:[問題 11](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)
+-   問題 11: [問題 11](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)
 
 
-##  <a name="issue-1"></a><a name="BMRK_Package"></a>問題1
+##  <a name="issue-1"></a><a name="BMRK_Package"></a> 問題1
  **問題点**
 
  パッケージのインストールが成功しませんでした。 Windows Server Essentials コネクターをもう一度インストールしてみてください。 問題が解決しない場合は、コンピューターをサーバーに接続するときに、ネットワーク管理者のエラーに問い合わせてください
@@ -58,11 +58,11 @@ ms.locfileid: "87838271"
 
  この問題は、Windows Server Essentials を実行しているサーバーにコンピューターを接続しているときに、他の Windows 更新プログラムまたはアプリケーションのインストールが保留中で、コネクタのインストールがキャンセルされた場合に発生する可能性があります。
 
- **ソリューション**
+ **解決方法**
 
  他のすべての更新プログラムまたはアプリケーション インストールを完了します。 ダイアログが表示されたら、コンピューターを再起動します。
 
-##  <a name="issue-2"></a><a name="BKMK_ConnectorIssue2"></a>問題2
+##  <a name="issue-2"></a><a name="BKMK_ConnectorIssue2"></a> 問題2
  **問題点**
 
  コンピューターを Windows Server Essentials に参加させることはできません
@@ -71,11 +71,11 @@ ms.locfileid: "87838271"
 
  コンピューター名に ASCII 以外の文字が含まれているコンピューターを Windows Server Essentials に参加させることはできません。 コンピューター名に ASCII 以外の文字が含まれている場合、「予期しないエラーが発生しました」というエラー メッセージが表示されます。
 
- **ソリューション**
+ **解決方法**
 
  クライアントコンピューターの名前を ASCII 文字のみが含まれる名前に変更してから、コンピューターを Windows Server Essentials にもう一度追加してみてください。
 
-##  <a name="issue-3"></a><a name="BKMK_ConnectorIssue2a"></a>問題3
+##  <a name="issue-3"></a><a name="BKMK_ConnectorIssue2a"></a> 問題3
  **問題点**
 
  コンピューターをサーバーに接続すると、コネクタソフトウェアのインストールがキャンセルされてエラーが発生する
@@ -84,7 +84,7 @@ ms.locfileid: "87838271"
 
  コンピューターをサーバーに接続できるようにするには、SYSTEM アカウントに、Windows Server Essentials ダッシュボードに表示されるサーバーフォルダーに対するフルコントロールのアクセス許可が必要です。 必要なアクセス許可が付与されていない場合、「コネクター ソフトウェアのインストールが取り消されます」というエラー メッセージが表示されます。
 
- **ソリューション**
+ **解決方法**
 
  SYSTEM アカウントに、各サーバー フォルダーに対する **[フル コントロール]** アクセス許可を付与します。
 
@@ -106,7 +106,7 @@ ms.locfileid: "87838271"
 
 8.  **[OK]** を 2 回クリックし、アクセス許可を更新して **[プロパティ]** を閉じます。
 
-##  <a name="issue-4"></a><a name="BKMK_ConnectorIssueNetFramework"></a>問題4
+##  <a name="issue-4"></a><a name="BKMK_ConnectorIssueNetFramework"></a> 問題4
  **問題点**
 
  このアプリケーションを実行するには、コンピューターをサーバーに接続するときに、次のいずれかのバージョンの .NET Framework: V 4.5.50709 "エラーをインストールする必要があります。
@@ -115,7 +115,7 @@ ms.locfileid: "87838271"
 
  Windows Server Essentials または Windows Server Essentials を実行しているサーバーにコンピューターを接続すると、ウィザードは .NET Framework バージョン4.5.50709 をコンピューターにインストールしようとします。 ただし、以前のリリースの .NET Framework バージョン4.5 が存在する場合、更新されたリリースをインストールすることはできません。また、このアプリケーションを実行するには、次のいずれかのバージョンの .NET Framework: V 4.5.50709 をインストールする必要があります。 適切なバージョンの .NET Framework を取得する方法については、割り当て発行者に問い合わせてください。
 
- **ソリューション**
+ **解決方法**
 
  .NET Framework 4.5 をコンピューターからアンインストールしてから、コンピューターをサーバーに接続します。
 
@@ -129,7 +129,7 @@ ms.locfileid: "87838271"
 
 4.  .NET Framework 4.5 のアンインストールが正常に実行された後、サーバーにコンピューターを接続します。 適切なリリースの .NET Framework 4.5 がコネクター ソフトウェアと一緒にインストールされます。
 
-##  <a name="issue-5"></a><a name="BKMK_Time"></a>問題5
+##  <a name="issue-5"></a><a name="BKMK_Time"></a> 問題5
  **問題点**
 
  サーバーを取得できません。 この問題を解決するには、ネットワークの担当者にお問い合わせください。 というエラー メッセージが表示される
@@ -142,7 +142,7 @@ ms.locfileid: "87838271"
 
  Windows Essentials Server に対する VPN 接続が既に確立されていて、ドメイン アドレスを使用して内部設置型のコネクター ソフトウェアを設定しようとすると発生する可能性があります。
 
- **ソリューション**
+ **解決方法**
 
 1.  クライアント コンピューターの日時をサーバー上の日時と同期します。 次に、サーバーとコンピューターを接続します。
 
@@ -181,7 +181,7 @@ ms.locfileid: "87838271"
 
 6.  クライアント コンピューターで、サーバーへの接続を再試行します。 手順については、「コンピューターをサーバーに接続する方法」を参照してください。
 
-##  <a name="issue-6"></a><a name="BKMK_ServiceStopped"></a>問題6
+##  <a name="issue-6"></a><a name="BKMK_ServiceStopped"></a> 問題6
  **問題点**
 
  予期しないエラーが発生しました。 この問題を解決するには、ネットワークの担当者にお問い合わせください。 というエラー メッセージが表示される
@@ -190,7 +190,7 @@ ms.locfileid: "87838271"
 
  このエラー メッセージが表示された場合は、WSS Certificate Web Service が実行されていない可能性があります。
 
- **ソリューション**
+ **解決方法**
 
  WSS Certificate Web Service を開始します。
 
@@ -204,7 +204,7 @@ ms.locfileid: "87838271"
 
 3.  **[操作]** ウィンドウで、**[開始]** をクリックします。
 
-##  <a name="issue-7"></a><a name="BKMK_ConnectorIssueReconnect"></a>問題7
+##  <a name="issue-7"></a><a name="BKMK_ConnectorIssueReconnect"></a> 問題7
  **問題点**
 
  接続の試行が失敗した後にコンピューターをサーバーに接続しようとすると、"この名前のコンピューターは既にサーバーに接続されています" という警告が表示されます。
@@ -215,7 +215,7 @@ ms.locfileid: "87838271"
 
  **解決策**: 同じ名前の他のコンピューターが対象のサーバーに接続されていないことが分かっている場合には、**[次へ]** をクリックして次の手順を実行して、**[コンピューターをサーバーに接続]** ウィザードを完了します。
 
-##  <a name="issue-8"></a><a name="BKMK_JoinWin7"></a>問題8
+##  <a name="issue-8"></a><a name="BKMK_JoinWin7"></a> 問題8
  **問題点**
 
  Windows 7 Home が実行されているクライアント コンピューターをサーバーに接続しようとすると、コネクター ソフトウェアを実行するための Web ページが開くものの、クライアント コンピューターがサーバーに接続できない
@@ -224,11 +224,11 @@ ms.locfileid: "87838271"
 
  ネットワーク上のルーターでマルチキャストが有効になっている場合、Windows 7 Home Basic または Windows 7 Home Premium が実行されているクライアント コンピューターとサーバー間の通信が正しく行えません。
 
- **ソリューション**
+ **解決方法**
 
  ルーターでマルチキャストを無効にします。 一部のルーターでは、RIP-2M ルーティング プロトコルの無効化もそれに含まれる場合があります。 詳細については、ルーターの製造元によって提供されているドキュメントを参照してください。
 
-##  <a name="issue-9"></a><a name="BKMK_ConnectorIssueAutologon"></a>問題9
+##  <a name="issue-9"></a><a name="BKMK_ConnectorIssueAutologon"></a> 問題9
  **問題点**
 
  サーバーにコンピューターを接続した後、自動ログオンが機能しなくなった
@@ -242,7 +242,7 @@ ms.locfileid: "87838271"
 > [!NOTE]
 >  Windows Server Essentials ドメインアカウントには、既定のパスワードポリシー要件を満たすパスワードが必要です。
 
-##  <a name="issue-10"></a><a name="BKMK_ConnectorIssueOldLogs"></a>問題10
+##  <a name="issue-10"></a><a name="BKMK_ConnectorIssueOldLogs"></a> 問題10
  **問題点**
 
  プレリリース版のコネクター ソフトウェアをアンインストールしても既存のログが削除されない
@@ -263,7 +263,7 @@ ms.locfileid: "87838271"
 
 3.  コンピューターを再度サーバーに接続します。 それにより、リリース版のコネクター ソフトウェアがインストールされ、新しい Logs フォルダーとログ ファイルが作成されます。
 
-##  <a name="issue-11"></a><a name="BKMK_UpgradeClientOS"></a>問題11
+##  <a name="issue-11"></a><a name="BKMK_UpgradeClientOS"></a> 問題11
  **問題点**
 
  クライアント コンピューター上でオペレーティング システムをアップグレードしたい
@@ -272,7 +272,7 @@ ms.locfileid: "87838271"
 
  コネクター ソフトウェアのインストール中に、クライアントのオペレーティング システムに対して、クライアントがコネクターの前提条件すべてを満たしていることを確認するための各種チェックが実行されます。 コネクター ソフトウェアのインストール後にクライアントのオペレーティング システムをアップグレードすると、一部の前提条件が満たされず、クライアント コネクターで障害が発生する可能性があります。
 
- **ソリューション**
+ **解決方法**
 
  クライアントのオペレーティング システムを別のバージョンにアップグレードするには (たとえば、Windows XP を Windows Vista へ、または Windows Vista を Windows 7 へアップグレードする場合)、コネクター ソフトウェアをアンインストールする必要があります。 [コントロール パネル] の **[プログラムの追加と削除]** を使用します。 クライアントのオペレーティングシステムのアップグレードが完了したら、クライアントコネクタを再インストールできます。そのためには、Web ブラウザーで http://<*server*> を開き、<*Server*> を Windows server Essentials サーバーの名前にします。
 

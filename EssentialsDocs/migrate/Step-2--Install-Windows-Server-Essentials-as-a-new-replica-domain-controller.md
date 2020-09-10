@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c7ccfc34-63fd-436b-a1cd-e05810f60bfe
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 6efaaf1e7c9bdc6cf4224700feeae463a1bb8883
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 9d70a4d5aae1269f10958f808692fffde9c83de8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180478"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625498"
 ---
 # <a name="step-2-install-windows-server-essentials-as-a-new-replica-domain-controller"></a>手順 2: Windows Server Essentials を新しいレプリカ ドメイン コントローラーとしてインストールする
 
@@ -93,8 +93,8 @@ ms.locfileid: "87180478"
 > [!NOTE]
 >  ネットワーク上の任意のサーバーから、操作マスターの役割が移行先サーバーに転送されたことを確認できます。 管理者としてコマンド プロンプト ウィンドウを開きます (詳細については、「 [管理者としてコマンド プロンプト ウィンドウを開くには](https://technet.microsoft.com/library/cc947813\(v=WS.10\).aspx)」を参照してください)。 「**netdom query fsmo**」と入力して Enter キーを押します。
 
-## <a name="next-steps"></a>次のステップ
- Windows Server Essentials を新しいレプリカドメインコントローラーとしてインストールしました。 ここで[、「手順 3: 新しい Windows Server Essentials サーバーにコンピューターを参加](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md)させる」に進みます。
+## <a name="next-steps"></a>次の手順
+ Windows Server Essentials を新しいレプリカドメインコントローラーとしてインストールしました。 ここで [、「手順 3: 新しい Windows Server Essentials サーバーにコンピューターを参加](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md)させる」に進みます。
 
 すべての手順を表示するには、「 [Windows Server Essentials への移行](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)」を参照してください。
 

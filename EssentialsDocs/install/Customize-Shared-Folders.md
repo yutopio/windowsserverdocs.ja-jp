@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47bc4986-14eb-4a29-9930-83a25704a3a0
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: f6b5de8ea45ea219f55b04ef675a3853b403fafb
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: c1a6276199964ac7fd2eb3953cb3fac828063dfc
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181318"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623675"
 ---
 # <a name="customize-shared-folders"></a>共有フォルダーのカスタマイズ
 
@@ -48,11 +48,11 @@ ms.locfileid: "87181318"
 
    パートナーは必要に応じてデータ フォルダーをドライブ C に残しておくことができます。これにより、エンド ユーザーまたは再販業者はデータ ドライブのデータ フォルダーのレイアウトを決定できるようになります。
 
-###  <a name="example-1-create-a-custom-folder-and-move-the-default-folders-to-a-new-location-from-posticcmd-by-using-windows-powershell"></a><a name="BKMK_Example1"></a>例 1: Windows PowerShell を使用してカスタムフォルダーを作成し、Postic.cmd から新しい場所に既定のフォルダーを移動する
+###  <a name="example-1-create-a-custom-folder-and-move-the-default-folders-to-a-new-location-from-posticcmd-by-using-windows-powershell"></a><a name="BKMK_Example1"></a> 例 1: Windows PowerShell を使用してカスタムフォルダーを作成し、Postic.cmd から新しい場所に既定のフォルダーを移動する
 
 1.  「[初期構成後のタスクを実行するための PostIC.cmd ファイルの作成](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md)」セクションで詳細に説明されているように、初期構成後のタスクを実行するための PostIC.cmd ファイルを作成します。
 
-2.  メモ帳を使用して、C:\Windows\Setup\Scripts フォルダーに**customizefolders.ps1**という名前のファイルを作成し、次の Windows PowerShell &reg; コマンドをファイルに貼り付けます (目的の動作に応じて適切な行のマークを解除します)。
+2.  メモ帳を使用して、C:\Windows\Setup\Scripts フォルダーに **customizefolders.ps1** という名前のファイルを作成し、次の Windows PowerShell &reg; コマンドをファイルに貼り付けます (目的の動作に応じて適切な行のマークを解除します)。
 
     ```
     # Move the Documents folder to D:\ServerFolders
@@ -94,7 +94,7 @@ ms.locfileid: "87181318"
     Set ERRORLEVEL=%error_level%
     ```
 
-###  <a name="example-2-create-a-custom-folder-and-move-an-existing-folder-by-using-the-windows-server-solutions-sdk"></a><a name="BKMK_Example2"></a>例 2: Windows Server Solutions SDK を使用してカスタムフォルダーを作成し、既存のフォルダーを移動する
+###  <a name="example-2-create-a-custom-folder-and-move-an-existing-folder-by-using-the-windows-server-solutions-sdk"></a><a name="BKMK_Example2"></a> 例 2: Windows Server Solutions SDK を使用してカスタムフォルダーを作成し、既存のフォルダーを移動する
  作成したコードは、実行可能ファイルとしてコンパイルし、PostIC.cmd ファイルから呼び出すか、インストール済みのアドインから直接呼び出すことができます。
 
 ```

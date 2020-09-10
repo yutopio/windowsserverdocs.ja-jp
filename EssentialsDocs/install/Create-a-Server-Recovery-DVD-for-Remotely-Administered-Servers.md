@@ -5,20 +5,20 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 6141fa69-5952-4e3c-a868-40ef3f4badd2
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 3f9bfeb2dbadd4d3d6cadd0200f05759d75f5519
-ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: fda6cf3ef25a2127aa0982674ff0f7d0960bfb08
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87409552"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623839"
 ---
 # <a name="create-a-server-recovery-dvd-for-remotely-administered-servers"></a>リモートで管理されるサーバー用のサーバー回復 DVD の作成
 
 >適用対象: windows Server 2016 Essentials、Windows Server 2012 R2 Essentials、Windows Server 2012 Essentials
 
-##  <a name="create-a-server-recovery-dvd-for-remotely-administered-servers"></a><a name="BKMK_HeadlessRecovery"></a>リモートで管理するサーバー用のサーバー回復 DVD を作成する
+##  <a name="create-a-server-recovery-dvd-for-remotely-administered-servers"></a><a name="BKMK_HeadlessRecovery"></a> リモートで管理するサーバー用のサーバー回復 DVD を作成する
  工場出荷時のリセットとサーバー回復には 2 つのモデルがあり、これらは顧客に納入したハードウェアによって異なります。
 
  **リモートで管理されるサーバー**
@@ -70,12 +70,12 @@ ms.locfileid: "87409552"
 
 6.  [回復 DVD のテスト](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md#BKMK_Testing)
 
-####  <a name="step-1-optional-update-winpe"></a><a name="BKMK_Updating"></a>手順 1: (省略可能) WinPE を更新する
+####  <a name="step-1-optional-update-winpe"></a><a name="BKMK_Updating"></a> 手順 1: (省略可能) WinPE を更新する
  ADK には、カスタマイズする Windows PE のコピーが含まれます。 このイメージを起動すると、クライアント回復アプリケーションが回復モードのサーバーに接続するために使用するビーコンが自動的に起動されます。
 
  Windows PE は、ネットワーク ドライバーやディスク コントローラー ドライバーなどのハードウェア固有のドライバーを追加して、さらにカスタマイズする必要があります。 WinPE からの起動後、システム上のハード ディスクが認識可能であって、ネットワークが動作している必要があります。
 
-####  <a name="step-2-collect-the-factory-reset-images-and-xml-files"></a><a name="BKMK_Collecting"></a>手順 2: 出荷時の設定にリセットされたイメージと XML ファイルを収集する
+####  <a name="step-2-collect-the-factory-reset-images-and-xml-files"></a><a name="BKMK_Collecting"></a> 手順 2: 出荷時の設定にリセットされたイメージと XML ファイルを収集する
  サーバーを工場出荷時の既定の設定にリセットするには、次の 2 つのイメージをキャプチャする必要があります。
 
 - システム ドライブ イメージ
@@ -91,7 +91,7 @@ ms.locfileid: "87409552"
     > [!NOTE]
     >  FAT32 の場合、1 ファイルのサイズが 4 GB 未満でなければならないため、システムの .wim ファイルが分割されます。 このプロセス中、.wim ファイルのキャプチャに使用されるターゲットの必要容量は、分割プロセスに対応できるように 8 GB より大きい必要があります。
 
-####  <a name="step-3-create-the-server-recovery-dvd"></a><a name="BKMK_Creating"></a>手順 3: サーバー回復 DVD の作成
+####  <a name="step-3-create-the-server-recovery-dvd"></a><a name="BKMK_Creating"></a> 手順 3: サーバー回復 DVD の作成
  工場から出荷された各サーバーには、サーバー回復 DVD が付属していなければなりません。 ADK ツール DVD には、DVD を作成するために必要なファイルが含まれます。
 
 ##### <a name="to-create-the-server-recovery-dvd"></a>サーバー回復 DVD を作成するには
@@ -106,7 +106,7 @@ ms.locfileid: "87409552"
 
 5.  フォルダーから GenDiskXML.exe を削除します。 このファイルは工場での作業にのみ使用され、顧客に出荷する DVD に含めるものではありません。
 
-####  <a name="step-4-customize-the-wizard"></a><a name="BKMK_Customizing"></a>手順 4: ウィザードをカスタマイズする
+####  <a name="step-4-customize-the-wizard"></a><a name="BKMK_Customizing"></a> 手順 4: ウィザードをカスタマイズする
  サーバー回復アプリケーションは、デバイスのイメージ、および特定のデバイスを回復モードで開始する方法を記述したテキストを使用して、カスタマイズする必要があります。 ファイルおよびフォルダーの復元ウィザードのこのページはハードウェア固有のため、サーバーを回復モードで開始する手順は異なります。
 
 > [!NOTE]
@@ -156,10 +156,10 @@ ms.locfileid: "87409552"
    - zh-HK
    - zh-TW
 
-####  <a name="step-5-create-the-iso-file"></a><a name="BKMK_CreatingISO"></a>手順 5: ISO ファイルを作成する
+####  <a name="step-5-create-the-iso-file"></a><a name="BKMK_CreatingISO"></a> 手順 5: ISO ファイルを作成する
  作成したフォルダーとすべての内容は、DVD に書き込むことができます。 これが新しいサーバーと共に顧客に提供される DVD となります。
 
-####  <a name="step-6-test-the-recovery-dvd"></a><a name="BKMK_Testing"></a>手順 6: 回復 DVD のテスト
+####  <a name="step-6-test-the-recovery-dvd"></a><a name="BKMK_Testing"></a> 手順 6: 回復 DVD のテスト
  サーバーのインストールが完了したら、サーバーのバックアップを構成および実行し、次に回復 DVD をテストします。
 
 ###### <a name="to-configure-and-run-a-server-backup"></a>サーバーのバックアップを構成および実行するには

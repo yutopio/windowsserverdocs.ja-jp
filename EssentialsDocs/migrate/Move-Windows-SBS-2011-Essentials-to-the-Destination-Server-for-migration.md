@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47548994-9fa0-42e0-afa4-c2ccbd063acb
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: a5f4aa55cb7c17568c97c933a9eed8f18ce03bd1
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 5ab8e54fe94fa2f733e28dd461b7d35988589864
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180568"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625690"
 ---
 # <a name="move-windows-sbs-2011-essentials-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Windows SBS 2011 Essentials の設定とデータを Windows Server Essentials 移行の移行先サーバーに移動する
 
@@ -29,7 +29,7 @@ ms.locfileid: "87180568"
 
 4.  [許可されたコンピューターをユーザー アカウントにマップする](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md#BKMK_MapPermittedComputers)
 
-##  <a name="copy-data-to-the-destination-server"></a><a name="BKMK_CopyData"></a>移行先サーバーにデータをコピーする
+##  <a name="copy-data-to-the-destination-server"></a><a name="BKMK_CopyData"></a> 移行先サーバーにデータをコピーする
  移行元サーバーから移行先サーバーにデータをコピーする前に、以下のタスクを実行します。
 
 -   移行元サーバーで共有フォルダーのリストを確認します。各フォルダーのアクセス許可も含まれます。 移行元サーバーから移行するフォルダー構造に合わせて、移行先サーバーのフォルダーを作成またはカスタマイズします。
@@ -49,12 +49,12 @@ ms.locfileid: "87180568"
      この場合、
      - \<SourceServerName\> は移行元サーバーの名前です。
      - \<SharedSourceFolderName\> は、移行元サーバー上の共有フォルダーの名前です。
-     - \<DestinationServerName\>は、移行先サーバーの名前です。
-     - \<SharedDestinationFolderName\>データのコピー先となる転送先サーバー上の共有フォルダーを指定します。
+     - \<DestinationServerName\> は、移行先サーバーの名前です。
+     - \<SharedDestinationFolderName\> データのコピー先となる転送先サーバー上の共有フォルダーを指定します。
 
 3.  移行元サーバーから移行する共有フォルダーごとに前記の手順を繰り返します。
 
-##  <a name="import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard-optional"></a><a name="BKMK_ImportADaccounts"></a>Windows Server Essentials ダッシュボードに Active Directory ユーザーアカウントをインポートする (省略可能)
+##  <a name="import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard-optional"></a><a name="BKMK_ImportADaccounts"></a> Windows Server Essentials ダッシュボードに Active Directory ユーザーアカウントをインポートする (省略可能)
  既定では、移行元サーバーで作成されたすべてのユーザーアカウントは、Windows Server Essentials のダッシュボードに自動的に移行されます。 ただし、すべてのプロパティが移行要件を満たしていない場合、Active Directory ユーザー アカウントの自動移行は失敗します。 次の Windows PowerShell コマンドレットを使用して、Active Directory ユーザーをインポートできます。
 
 #### <a name="to-import-an-active-directory-user-account-to-the-windows-server-essentials-dashboard"></a>Active Directory ユーザーアカウントを Windows Server Essentials ダッシュボードにインポートするには
@@ -67,7 +67,7 @@ ms.locfileid: "87180568"
 
      `Import-WssUser  SamAccountName [AD username]`
 
-##  <a name="configure-the-network"></a><a name="BKMK_Network"></a>ネットワークを構成する
+##  <a name="configure-the-network"></a><a name="BKMK_Network"></a> ネットワークを構成する
 
 #### <a name="to-configure-the-network"></a>ネットワークを構成するには
 
@@ -83,7 +83,7 @@ ms.locfileid: "87180568"
 
 -   ポート 443: HTTPS Web トラフィック
 
-##  <a name="map-permitted-computers-to-user-accounts"></a><a name="BKMK_MapPermittedComputers"></a>許可されたコンピューターをユーザーアカウントにマップする
+##  <a name="map-permitted-computers-to-user-accounts"></a><a name="BKMK_MapPermittedComputers"></a> 許可されたコンピューターをユーザーアカウントにマップする
  Windows Small Business Server 2011 Essentials から移行する各ユーザー アカウントを、1 つまたは複数のコンピューターにマップする必要があります。
 
 #### <a name="to-map-user-accounts-to-computers"></a>コンピューターにユーザー アカウントをマップするには

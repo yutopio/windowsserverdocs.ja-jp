@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d3925f80-552d-431f-b2a6-2af202e50ca4
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: d75a81460df90022dfec8195866599c159b78c63
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 2fa628429a692f77620116ed0db2ef052abc8a22
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180448"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625442"
 ---
 # <a name="step-5-enable-folder-redirection-on-the-destination-server-for-windows-server-essentials-migration"></a>手順 5: Windows Server Essentials への移行のために移行先サーバーのフォルダー リダイレクトを有効にする
 
@@ -48,8 +48,8 @@ ms.locfileid: "87180448"
 
    フォルダー リダイレクトの変更を適用するには、ネットワーク ユーザーがそれぞれのコンピューターからログオフして、ログオンし直す必要があります。 これにより、リダイレクトされるすべてのフォルダーが移行先サーバーに転送されます。
 
-## <a name="next-steps"></a>次のステップ
- 移行先サーバーでフォルダー リダイレクトを有効にしました。 ここで、「[手順 6: 降格し、移行元サーバーを新しい Windows Server Essentials ネットワークから削除](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md)する」に進みます。
+## <a name="next-steps"></a>次の手順
+ 移行先サーバーでフォルダー リダイレクトを有効にしました。 ここで、「 [手順 6: 降格し、移行元サーバーを新しい Windows Server Essentials ネットワークから削除](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md)する」に進みます。
 
 
 すべての手順を表示するには、「 [Windows Server Essentials への移行](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)」を参照してください。

@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 955da6c37bd57711529de02277d10f4627851715
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 6c4410cb94f79be291984a92a2b788e3ae984a4f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838341"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625426"
 ---
 # <a name="step-6-demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network"></a>手順 6: 移行元サーバーを降格して新しい Windows Server Essentials ネットワークから削除する
 
@@ -28,7 +28,7 @@ Windows Server Essentials のインストールが完了し、移行が完了し
 
 4.  [移行元サーバーを削除して用途変更する](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer)
 
-##  <a name="remove-active-directory-certificate-services"></a><a name="BKMK_ADCS"></a>Active Directory 証明書サービスの削除
+##  <a name="remove-active-directory-certificate-services"></a><a name="BKMK_ADCS"></a> Active Directory 証明書サービスの削除
  複数の Active Directory 証明書サービス (AD CS) の役割サービスが 1 台のサーバーにインストールされている場合、手順は若干異なります。 以下の手順を使用すると、1 つの AD CS 役割サービスをアンインストールし、他の AD CS 役割サービスは残しておくことができます。
 
  この手順を完了するには、証明機関 (CA) をインストールしたユーザーと同じアクセス許可でログオンする必要があります。 エンタープライズ CA をアンインストールする場合、この手順を実行するための最小要件は、Enterprise Admins のメンバーシップまたはそれと同等のものです。
@@ -60,10 +60,10 @@ Windows Server Essentials のインストールが完了し、移行が完了し
     > [!IMPORTANT]
     >  そうするように要求されない場合でも、サーバーを再起動します。
 
-##  <a name="disconnect-printers-that-are-directly-connected-to-the-source-server"></a><a name="BKMK_PhysicallyDisconnect"></a>移行元サーバーに直接接続されているプリンターを切断する
+##  <a name="disconnect-printers-that-are-directly-connected-to-the-source-server"></a><a name="BKMK_PhysicallyDisconnect"></a> 移行元サーバーに直接接続されているプリンターを切断する
  移行元サーバーを降格する前に、移行元サーバーに直接接続されていて、移行元サーバーを通して共有されているすべてのプリンターを、物理的に切断します。 移行元サーバーに直接接続されていたプリンターの Active Directory オブジェクトが残っていないことを確認します。 その後、プリンターを移行先サーバーに直接接続し、Windows Server Essentials から共有することができます。
 
-##  <a name="demote-the-source-server"></a><a name="BKMK_DemoteTheSourceServer"></a>移行元サーバーを降格する
+##  <a name="demote-the-source-server"></a><a name="BKMK_DemoteTheSourceServer"></a> 移行元サーバーを降格する
  移行元サーバーを AD DS ドメイン コントローラーの役割からドメイン メンバー サーバーの役割に降格する前に、以下の手順で説明されているように、グループ ポリシーの設定がすべてのクライアント コンピューターに適用されていることを確認します。
 
 > [!IMPORTANT]
@@ -77,7 +77,7 @@ Windows Server Essentials のインストールが完了し、移行が完了し
 
 3. コマンド プロンプトで、「**gpupdate /force**」と入力して Enter キーを押します。
 
-4. 処理を終了するには、いったんログオフしてログオンし直すことが必要な場合があります。 [**はい**] をクリックして確認します。
+4. 処理を終了するには、いったんログオフしてログオンし直すことが必要な場合があります。 **[はい]** をクリックして操作を確定します。
 
    Windows Server Essentials またはそれ以前のバージョンから移行する場合、サーバーを降格するには、「 [Active Directory Domain Services の削除](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472163(v=ws.11))」を参照してください。 移行元サーバーをワークグループのメンバーとして追加し、ネットワークから切断した後、移行先サーバーで AD DS から移行元サーバーを削除する必要があります。
 
@@ -93,7 +93,7 @@ Windows Server Essentials のインストールが完了し、移行が完了し
 
 4.  移行元サーバーが一覧に表示されないことを確認した後、[**Active Directory ユーザーとコンピューター**] を閉じます。
 
-##  <a name="remove-and-repurpose-the-source-server"></a><a name="BKMK_RemoveTheSourceServer"></a>移行元サーバーの削除と転用
+##  <a name="remove-and-repurpose-the-source-server"></a><a name="BKMK_RemoveTheSourceServer"></a> 移行元サーバーの削除と転用
  移行元サーバーの電源を切り、ネットワークから切断します。 必要なデータを移行先サーバーに確実に移行するため、少なくとも 1 週間は移行元サーバーを再フォーマットしないことをお勧めします。 データがすべて移行されたことを確認した後、必要に応じて、他のタスク用のセカンダリ サーバーとしてこのサーバーをネットワークに再インストールできます。
 
 > [!NOTE]
@@ -101,7 +101,7 @@ Windows Server Essentials のインストールが完了し、移行が完了し
 
  降格した後の移行元サーバーは、正常な状態ではありません。 移行元サーバーの用途を変更する最も簡単な方法は、再フォーマットし、サーバー オペレーティング システムをインストールした後、追加サーバーとして使用するように設定することです。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
  新しい Windows Server Essentials ネットワークから移行元サーバーを降格し、削除しました。 [次に、「手順 7: Windows Server Essentials への移行のために移行後のタスクを実行](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md)する」に進みます。
 
 

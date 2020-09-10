@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c0a8f10d-fd85-4c8d-b9bb-176cb1db1f46
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: fe7bcc54ab342ae1df4299db9585e0656a7ba5c8
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: b8abf96a5d07d3bcda3cfc43c4e0e960a38e465b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181598"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89624083"
 ---
 # <a name="add-entries-to-setup-add-ins-quick-status-and-help-links"></a>セットアップ リンク、アドイン リンク、簡単な状態リンク、ヘルプ リンクへのエントリの追加
 
@@ -196,7 +196,7 @@ ms.locfileid: "87181598"
 
 5.  OEMHomePageContent.home.resx ファイルを保存し、ソリューションをビルドします。
 
-#####  <a name="sign-the-assembly-with-an-authenticode-signature"></a><a name="BKMK_SignAssembly"></a>Authenticode 署名を使用してアセンブリに署名する
+#####  <a name="sign-the-assembly-with-an-authenticode-signature"></a><a name="BKMK_SignAssembly"></a> Authenticode 署名を使用してアセンブリに署名する
  オペレーティング システムで使用するために、アセンブリを Authenticode で署名する必要があります。 アセンブリの署名の詳細については、「 [Authenticode によるコードの署名と確認 (英語の場合があります)](https://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode)」を参照してください。
 
 ##### <a name="install-the-task-files"></a>タスクのファイルのインストール

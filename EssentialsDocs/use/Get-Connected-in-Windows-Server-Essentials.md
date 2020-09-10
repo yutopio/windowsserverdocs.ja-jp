@@ -5,14 +5,14 @@ ms.date: 05/07/2016
 ms.topic: article
 ms.assetid: 149a5d34-43b7-4b9e-99e7-9f2294ab9ddb
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: c1dafb9fb89109a16f2f28662464494691a2f2f0
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: ef0cdcffb90ba14eca6ccff50e4a297662bd61c6
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87179948"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89624978"
 ---
 # <a name="get-connected-in-windows-server-essentials"></a>Windows Server Essentials の接続
 
@@ -36,7 +36,7 @@ ms.locfileid: "87179948"
 -   [スタート パッドの使用](Get-Connected-in-Windows-Server-Essentials.md#BKMK_C)
 
 
-##  <a name="prepare-to-connect-computers-to-the-server"></a><a name="BKMK_A"></a>コンピューターをサーバーに接続するための準備
+##  <a name="prepare-to-connect-computers-to-the-server"></a><a name="BKMK_A"></a> コンピューターをサーバーに接続するための準備
  このセクションでは、コネクタ ソフトウェア、Windows Server Essentials がサポートするオペレーティング システム、コンピューターをサーバーに接続する前に完了する必要がある前提条件となるタスク、コネクタ ソフトウェアを実行するときに、コンピューターに対してサーバーが実行する変更について説明します。
 
 
@@ -56,7 +56,7 @@ ms.locfileid: "87179948"
 
 -   [Windows ドメインからのコンピューターの削除](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)
 
-###  <a name="connector-software-overview"></a><a name="BKMK_1"></a>コネクタソフトウェアの概要
+###  <a name="connector-software-overview"></a><a name="BKMK_1"></a> コネクタソフトウェアの概要
  Windows Server Essentials オペレーティング システム用のコネクタ ソフトウェアは、Windows Server Essentials サーバーをネットワーク内のコンピューターに接続します。 コンピューターをサーバーに接続すると、コネクタ ソフトウェアは自動的にコンピューターをバックアップし、正常性の監視を有効にします。 またコネクタ ソフトウェアにより、Windows Server Essentials サーバーの構成とリモート管理も可能になります。 クライアント コンピューターをサーバーに接続すると、コネクタ ソフトウェアがインストールされます。 クライアント コンピューターを Windows Server Essentials サーバーに接続する詳細な手順については、このトピックで後述する「[コンピューターのサーバーへの接続](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)」を参照してください。
 
 -   [コネクタ ソフトウェアの概要](Get-Connected-in-Windows-Server-Essentials.md#BKMK_1)
@@ -75,11 +75,11 @@ ms.locfileid: "87179948"
 
 -   [Windows ドメインからのコンピューターの削除](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)
 
-###  <a name="connector-software-overview"></a><a name="BKMK_1"></a>コネクタソフトウェアの概要
+###  <a name="connector-software-overview"></a><a name="BKMK_1"></a> コネクタソフトウェアの概要
  Windows Server Essentials オペレーティング システム用のコネクタ ソフトウェアは、Windows Server Essentials サーバーをネットワーク内のコンピューターに接続します。 コンピューターをサーバーに接続すると、コネクタ ソフトウェアは自動的にコンピューターをバックアップし、正常性の監視を有効にします。 またコネクタ ソフトウェアにより、Windows Server Essentials サーバーの構成とリモート管理も可能になります。 クライアント コンピューターをサーバーに接続すると、コネクタ ソフトウェアがインストールされます。 クライアント コンピューターを Windows Server Essentials サーバーに接続する詳細な手順については、このトピックで後述する「[コンピューターのサーバーへの接続](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)」を参照してください。
 
 
-###  <a name="prerequisites-for-connecting-a-computer-to-the-server"></a><a name="BKMK_2"></a>コンピューターをサーバーに接続するための前提条件
+###  <a name="prerequisites-for-connecting-a-computer-to-the-server"></a><a name="BKMK_2"></a> コンピューターをサーバーに接続するための前提条件
  コンピューターをネットワークに接続する前に、次の要件を満たす必要があります。
 
 -   Windows Server Essentials のインストールが完了し、サーバーが実行されている。 コネクタ ソフトウェアは、サーバーと通信することができない場合、インストールを終了します。
@@ -125,7 +125,7 @@ ms.locfileid: "87179948"
  Windows Server Essentials を実行しているサーバーにコンピューターを接続する詳細な手順については、「[コンピューターをサーバーに接続](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)」を参照してください。
 
 
-###  <a name="prerequisites-for-connecting-a-mac-computer-to-the-network"></a><a name="BKMK_3"></a>Mac コンピューターをネットワークに接続するための前提条件
+###  <a name="prerequisites-for-connecting-a-mac-computer-to-the-network"></a><a name="BKMK_3"></a> Mac コンピューターをネットワークに接続するための前提条件
  Mac コンピューターをネットワークに接続する前に、次の要件を満たす必要があります。
 
 -   サーバーのオペレーティング システムのインストールが完了し、サーバーが実行されている。 コネクタ ソフトウェアがサーバーと通信できない場合、インストールは実行されません。
@@ -146,7 +146,7 @@ ms.locfileid: "87179948"
 
 -   クライアント コンピューターが特定の時点で接続できるサーバーは 1 台だけである。
 
-###  <a name="supported-operating-systems-for-client-computers"></a><a name="BKMK_4"></a>クライアントコンピューターでサポートされているオペレーティングシステム
+###  <a name="supported-operating-systems-for-client-computers"></a><a name="BKMK_4"></a> クライアントコンピューターでサポートされているオペレーティングシステム
  Windows Server Essentials は、すべてのサポートされているクライアント コンピューターに同じ機能セットを提供します。 これらの機能には、ドメインへの参加、スタート パッド、およびクライアント側の正常性通知が含まれます。
 
 > [!IMPORTANT]
@@ -254,7 +254,7 @@ ms.locfileid: "87179948"
 > [!NOTE]
 >  Mac コンピューターの正常性とバックアップの状態は、Windows Server Essentials ダッシュボードから確認できます。 ただし、ダッシュボードからコンピューター バックアップを構成したり、バックアップを開始したりすることはできません。 さらに、リモート Web アクセスを使って Mac コンピューターに接続することはできません。
 
-###  <a name="changes-the-server-makes-to-a-client-computer"></a><a name="BKMK_5"></a>サーバーがクライアントコンピューターに対して行う変更
+###  <a name="changes-the-server-makes-to-a-client-computer"></a><a name="BKMK_5"></a> サーバーがクライアントコンピューターに対して行う変更
  コンピューターをサーバーに接続する場合、コンピューターとサーバーが連携できるように、Windows Server Essentials ソフトウェアにより、コンピューターに多数の変更が実行されます。
 
  このソフトウェアは以下の処理を実行します。
@@ -292,16 +292,16 @@ ms.locfileid: "87179948"
 
  コンピューターをサーバーに接続するための詳細については、「[コンピューターをサーバーに接続](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)」を参照してください。
 
-###  <a name="network-user-name-and-password-information"></a><a name="BKMK_6"></a>ネットワークユーザー名とパスワードの情報
+###  <a name="network-user-name-and-password-information"></a><a name="BKMK_6"></a> ネットワークユーザー名とパスワードの情報
  サーバーの管理担当者から、ネットワーク ユーザー名とパスワード情報を入手できます。 これらの資格情報を使用すると、コンピューターをサーバーに接続し、サーバーからの情報にアクセスすることができます。
 
-###  <a name="network-user-name-and-password-information"></a><a name="BKMK_6"></a>ネットワークユーザー名とパスワードの情報
+###  <a name="network-user-name-and-password-information"></a><a name="BKMK_6"></a> ネットワークユーザー名とパスワードの情報
  サーバーの管理担当者から、ネットワーク ユーザー名とパスワード情報を入手できます。 これらの資格情報を使用すると、コンピューターをサーバーに接続し、サーバーからの情報にアクセスすることができます。
 
 
  サーバー管理者は、ダッシュボードの [**ユーザー**] タブからユーザー アカウントを追加することで、ネットワーク資格情報を作成できます。 ユーザー アカウントの詳細については、「[ダッシュボードを使用したユーザー アカウントの管理](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8)」を参照してください。
 
-###  <a name="server-administrators-account"></a><a name="BKMK_7"></a>サーバー管理者のアカウント
+###  <a name="server-administrators-account"></a><a name="BKMK_7"></a> サーバー管理者のアカウント
  コネクタ ソフトウェアをインストールするには、ネットワーク管理者アカウントの名前とパスワードを入力する必要があります。 ネットワーク管理者アカウントを使用すると、組織のローカル エリア ネットワークを管理し、スイッチやルーターなどのネットワーク デバイスの管理と保守を行うことができます。
 
  ネットワーク管理者アカウントを使用して実行できるタスクには、以下のタスクがあります。
@@ -318,7 +318,7 @@ ms.locfileid: "87179948"
 
   Windows server essentials、Windows Server Essentials、windows server 2012 R2 で Windows Server Essentials Experience 役割がインストールされている場合は、任意のユーザーアカウントにネットワーク管理者のアクセスレベルを割り当てることができます。 これにより、ネットワーク管理者タスクを実行するために必要なアクセス許可が与えられます。 ユーザーにネットワーク管理者のアクセス レベルが割り当てられると、管理者のアクセス許可が必要なタスクに対して、[**ユーザーアクセス制御**] プロンプトが開きます。
 
-###  <a name="remove-a-computer-from-a-windows-domain"></a><a name="BKMK_8"></a>Windows ドメインからコンピューターを削除する
+###  <a name="remove-a-computer-from-a-windows-domain"></a><a name="BKMK_8"></a> Windows ドメインからコンピューターを削除する
  ドメインからコンピューターを削除するには、ドメイン アカウントのユーザー名とパスワードの入力が必要です。
 
 ##### <a name="to-remove-a-computer-from-a-windows-domain"></a>Windows ドメインからコンピューターを削除するには
@@ -341,7 +341,7 @@ ms.locfileid: "87179948"
         > [!NOTE]
         >  コンピューターがドメインから削除され、そのドメインのコンピューター アカウントが無効になります。
 
-##  <a name="connect-computers-to-the-server-by-using-the-connector-software"></a><a name="BKMK_B"></a>コネクタソフトウェアを使用してコンピューターをサーバーに接続する
+##  <a name="connect-computers-to-the-server-by-using-the-connector-software"></a><a name="BKMK_B"></a> コネクタソフトウェアを使用してコンピューターをサーバーに接続する
  ここでは、コネクタ ソフトウェアのインストール、サーバーへのコンピューターの接続、およびコンピューターをサーバーに接続する際のトラブルシューティングに役に立つ手順と情報へのアクセスを提供します。
 
 
@@ -362,7 +362,7 @@ ms.locfileid: "87179948"
 -   [スリープ モードと休止モードでのバックアップの動作方法](Get-Connected-in-Windows-Server-Essentials.md#BKMK_Sleep)
 
 
-###  <a name="connect-computers-to-the-server"></a><a name="BKMK_9"></a>コンピューターをサーバーに接続する
+###  <a name="connect-computers-to-the-server"></a><a name="BKMK_9"></a> コンピューターをサーバーに接続する
  Windows server essentials エクスペリエンスの役割がインストールされている windows Server Essentials または Windows Server 2012 R2 を実行しているサーバーにコンピューターを接続する場合は、クライアントコンピューターがインターネットに対して有効な接続を使用していることを確認します。
 
  クライアント コンピューターをサーバーに接続するため、次の手順をすべてのクライアント コンピューターで完了します。
@@ -435,7 +435,7 @@ ms.locfileid: "87179948"
 
     -   [**ダッシュボード**] リンクから、サーバーを管理することができます。
 
-###  <a name="connect-computers-to-a-windows-server-essentials-server-without-joining-the-domain"></a><a name="BKMK_10"></a>ドメインに参加せずにコンピューターを Windows Server Essentials サーバーに接続する
+###  <a name="connect-computers-to-a-windows-server-essentials-server-without-joining-the-domain"></a><a name="BKMK_10"></a> ドメインに参加せずにコンピューターを Windows Server Essentials サーバーに接続する
  このトピックでは、オンプレミスクライアント展開でコンピューターを Windows Server Essentials ドメインに参加させずに、windows 7、Windows 8、Windows 8.1、または Windows 10 のコンピューターを Windows Server Essentials ネットワークに追加する方法について説明します。 この接続方法は、Windows Server Essentials と Windows Server Essentials でサポートされています。
 
  これは、通常の方法に置き換わる方法で、コンピューターを Windows Server Essentials ドメインに参加させる必要があります。 この方法を使うと、コンピューターが別のドメインにある場合、コンピューターを Windows Server Essentials ドメインに追加する前に、そのドメインからコンピューターを削除する必要があります。
@@ -484,9 +484,9 @@ ms.locfileid: "87179948"
 
     -   Windows 10 では、[**スタート**] ボタンをクリックし、[**すべてのアプリ**] [  ->  **Windows システムツール**] [コマンドプロンプト] の順に選択し、[  ->  **Command Prompt**コマンドプロンプト] を右クリックして、[**管理者として実行**] をクリックします。
 
-    -   Windows 8 の**スタート**ページで、「 **command** 」と入力し、enter キーを押します。 結果で [**コマンド プロンプト**] を右クリックし、[**管理者として実行**] をクリックします。
+    -   Windows 8 の **スタート** ページで、「 **command** 」と入力し、enter キーを押します。 結果で [**コマンド プロンプト**] を右クリックし、[**管理者として実行**] をクリックします。
 
-    -   Windows 7 では、[**スタート**] メニューの [検索] ボックスに「 **command** 」と入力し、[**コマンドプロンプト**] を右クリックして、[**管理者として実行**] をクリックします。
+    -   Windows 7 では、[ **スタート** ] メニューの [検索] ボックスに「 **command** 」と入力し、[ **コマンドプロンプト**] を右クリックして、[ **管理者として実行**] をクリックします。
 
 3.  コマンド プロンプトで、次のコマンドを入力して Enter キーを押します。
 
@@ -498,7 +498,7 @@ ms.locfileid: "87179948"
 4.  「[コンピューターをサーバーに接続](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)」の手順を完了します。
 
 
-####  <a name="join-a-second-server-to-the-network"></a><a name="BKMK_SecondServer"></a>2台目のサーバーをネットワークに参加させる
+####  <a name="join-a-second-server-to-the-network"></a><a name="BKMK_SecondServer"></a> 2台目のサーバーをネットワークに参加させる
 
 ###### <a name="to-join-a-second-server-to-the-network"></a>2 番目のサーバーをネットワークに参加させるには
 
@@ -516,7 +516,7 @@ ms.locfileid: "87179948"
 
         2.  [**セキュリティ**] タブをクリックし、[**信頼済みサイト**] をクリックします。
 
-        3.  [**サイト**] をクリックします。
+        3.  **[サイト]** をクリックします。
 
         4.  Web サイトが [**この Web サイトをゾーンに追加する**] フィールドに表示されます。 **[追加]** をクリックします。
 
@@ -554,13 +554,13 @@ ms.locfileid: "87179948"
 
 - 2 番目のサーバーではクライアント コンピューターのバックアップがサポートされていないため、バックアップの状態が [**サポートされていません**] と表示されます。 さらに、2 番目のサーバーを選択して右クリックすると、2 番目のサーバーに対してバックアップおよび復元関連のタスクは表示されません。
 
-- 2番目のサーバーを選択し、[**サーバーのプロパティの表示**] タスクをクリックすると、サーバーのプロパティページに [**バックアップ**] タブが表示されません。
+- 2番目のサーバーを選択し、[ **サーバーのプロパティの表示** ] タスクをクリックすると、サーバーのプロパティページに [ **バックアップ** ] タブが表示されません。
 
-- Windows Server オペレーティングシステムには Security Center がないため、2番目のサーバーのセキュリティ状態は [**該当なし**] と表示されます。
+- Windows Server オペレーティングシステムには Security Center がないため、2番目のサーバーのセキュリティ状態は [ **該当なし**] と表示されます。
 
-- 2番目のサーバーのグループポリシーの状態は [**該当なし**」と表示されます。
+- 2番目のサーバーのグループポリシーの状態は [ **該当なし**」と表示されます。
 
-###  <a name="install-the-connector-software"></a><a name="BKMK_11"></a>コネクタソフトウェアのインストール
+###  <a name="install-the-connector-software"></a><a name="BKMK_11"></a> コネクタソフトウェアのインストール
  コンピューターをサーバーに接続ウィザードを使用してコンピューターをサーバーに接続したときに、コネクタ ソフトウェアがインストールされます。 このウィザードを起動するには、web ブラウザーのアドレスバーに「 **http://<servername \> /connect** 」と入力します ( *<servername \> *はサーバーの名前です)。
 
 > [!NOTE]
@@ -580,17 +580,17 @@ ms.locfileid: "87179948"
  コンピューターを Windows Server Essentials サーバーに接続するための詳細な手順については、「[コンピューターをサーバーに接続](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)」を参照してください。
 
 
-###  <a name="move-computer-data-and-settings-manually"></a><a name="BKMK_12"></a>コンピューターのデータと設定を手動で移動する
+###  <a name="move-computer-data-and-settings-manually"></a><a name="BKMK_12"></a> コンピューターのデータと設定を手動で移動する
   Windows Server Essentials と Windows Server Essentials は、Windows 7 オペレーティングシステムを実行しているクライアントコンピューターに対してのみユーザープロファイルの移行をサポートします。 Windows 7 ベースのコンピューターをサーバーに接続すると、コンピューターをサーバーに接続ウィザードにより、ユーザー プロファイルを自動的に移行できます。
 
  Windows 8、Windows 8.1、または Windows 10 のコンピューターをサーバーに接続するときに、ユーザープロファイルを自動的に転送することはできません。 ただし Windows 8 コンピューターでは、Windows Easy Transfer を使用して、元のローカル ユーザーからドメインに参加しているコンピューターに、データと設定を転送することができます。 そのためには、Windows 8 の移行元コンピューターと、Windows 8 の移行先コンピューターの両方で、自分が管理者である必要があります。 Windows Easy Transfer を使用してファイルと設定を転送する方法の詳細については、Microsoft サポート技術情報の [記事 2735227](https://support.microsoft.com/kb/2735227) を参照してください。
 
-###  <a name="transfer-multiple-user-profiles-during-computer-deployment"></a><a name="BKMK_Transfer"></a>コンピューターの展開時に複数のユーザープロファイルを転送する
+###  <a name="transfer-multiple-user-profiles-during-computer-deployment"></a><a name="BKMK_Transfer"></a> コンピューターの展開時に複数のユーザープロファイルを転送する
  Windows 7 または Windows 7 SP1 オペレーティング システムを実行しているコンピューターを Windows Server Essentials に接続する前に、複数のローカル ユーザー プロファイルを転送するためには、まずサーバー上で対応するネットワーク ユーザー アカウントを作成する必要があります。 ネットワーク ユーザー アカウントの作成に関する詳細については、「[ユーザー アカウントの追加](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1)」を参照してください。
 
  ユーザープロファイルの移行は、Windows 7 (windows Server Essentials の場合) または Windows 7 SP1 (Windows Server Essentials の場合) を実行しているコンピューターでのみサポートされます。 コンピューターをサーバーに接続ウィザードを使用して、コンピューターを Windows Server Essentials サーバーに接続するときに、古いユーザー ローカル アカウントのユーザー データと設定を、新しいネットワーク ユーザー アカウントに移動するオプションが提供されます。 そのためには、ウィザードの [**既存のユーザー データと設定を移動**] ページで、ネットワーク ユーザー アカウントを、コンピューター上に存在するローカル ユーザー アカウントにマッピングして、クライアント コンピューターに格納されている複数のユーザー プロファイルを転送します。
 
-###  <a name="uninstall-the-connector-software"></a><a name="BKMK_13"></a>コネクタソフトウェアのアンインストール
+###  <a name="uninstall-the-connector-software"></a><a name="BKMK_13"></a> コネクタソフトウェアのアンインストール
  コントロール パネルを使用して、コンピューターからコネクタ ソフトウェアをアンインストールします。 これは通常、コネクタ ソフトウェアに問題がある場合、またはコネクタ ソフトウェアの新しいバージョンをインストールする必要がある場合に実行します。 この手順を完了するには、管理者としてコンピューターにログオンする必要があります。
 
 > [!IMPORTANT]
@@ -617,7 +617,7 @@ ms.locfileid: "87179948"
 > -   コネクタ ソフトウェアをアンインストールしても、コンピューターが元のドメインから参加解除されることはありません。 コンピューターをドメインから手動で参加解除する必要があります。 手順については、「[Windows ドメインからコンピューターを削除](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)」を参照してください。
 
 
-###  <a name="disconnect-your-computer-from-or-reconnect-your-computer-to-the-server"></a><a name="BKMK_14"></a>コンピューターの接続を解除するか、コンピューターをサーバーに再接続します。
+###  <a name="disconnect-your-computer-from-or-reconnect-your-computer-to-the-server"></a><a name="BKMK_14"></a> コンピューターの接続を解除するか、コンピューターをサーバーに再接続します。
  サーバーからコンピューターを切断するには、次の手順を行う必要があります。
 
 
@@ -637,17 +637,17 @@ ms.locfileid: "87179948"
 
 6. コンピューターをサーバーに接続ウィザードを使用して、コンピューターをサーバーに接続します。 詳細な手順については、「[コンピューターをサーバーに接続](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)」を参照してください。
 
-###  <a name="how-backup-works-with-sleep-and-hibernate-modes"></a><a name="BKMK_Sleep"></a>スリープモードと休止モードでのバックアップのしくみ
- コンピューターをサーバーに接続した際に [**バックアップのためにこのコンピューターのスリープを解除する**] オプションを選択すると、バックアップ スケジュールの指定に従って、毎日スリープ モードまたは休止モードから自動的にウェイクアップして、バックアップを実行します。 バックアップが完了したら、コンピューターは電源管理設定に基づいて、スリープまたは休止モードに戻ります。 このオプションを選択しないと、コンピューターがスリープまたは休止状態の場合、サーバーはコンピューターをバックアップしません。 詳細については、「[クライアントバックアップの管理](../manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)」を参照してください。
+###  <a name="how-backup-works-with-sleep-and-hibernate-modes"></a><a name="BKMK_Sleep"></a> スリープモードと休止モードでのバックアップのしくみ
+ コンピューターをサーバーに接続した際に [**バックアップのためにこのコンピューターのスリープを解除する**] オプションを選択すると、バックアップ スケジュールの指定に従って、毎日スリープ モードまたは休止モードから自動的にウェイクアップして、バックアップを実行します。 バックアップが完了したら、コンピューターは電源管理設定に基づいて、スリープまたは休止モードに戻ります。 このオプションを選択しないと、コンピューターがスリープまたは休止状態の場合、サーバーはコンピューターをバックアップしません。 詳細については、「 [クライアントバックアップの管理](../manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)」を参照してください。
 
-##  <a name="use-the-launchpad"></a><a name="BKMK_C"></a>スタートパッドを使用する
+##  <a name="use-the-launchpad"></a><a name="BKMK_C"></a> スタートパッドを使用する
  スタート パッドを使用すると、Windows Server Essentials サーバーから共有リソースへのアクセス、コンピューターのバックアップの実行、およびシステム正常性アラートへの応答を実行することができます。
 
 -   [スタート パッドの概要](../manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md)
 
 -   [Mac コンピューターでのスタート パッドの使用](../manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [サーバーにコンピューターを接続する場合のトラブルシューティング](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md)
 

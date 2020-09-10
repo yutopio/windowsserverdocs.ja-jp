@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 3ff7d040-ebd1-421c-80db-765deacedd4c
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 99c7eb77c0bd768cb8e74d476bd2ffcf6b468a53
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: c2426e535ff67b1e76668e5fd2abefbd3f5569bb
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180553"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625668"
 ---
 # <a name="move-windows-server-2008-foundation-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Windows Server 2008 Foundation の設定とデータを Windows Server Essentials 移行の移行先サーバーに移動する
 
@@ -50,8 +50,8 @@ ms.locfileid: "87180553"
      この場合、
      - \<SourceServerName\> は移行元サーバーの名前です。
      - \<SharedSourceFolderName\> は、移行元サーバー上の共有フォルダーの名前です。
-     - \<DestinationServerName\>は、移行先サーバーの名前です。
-     - \<SharedDestinationFolderName\>データのコピー先となる転送先サーバー上の共有フォルダーを指定します。
+     - \<DestinationServerName\> は、移行先サーバーの名前です。
+     - \<SharedDestinationFolderName\> データのコピー先となる転送先サーバー上の共有フォルダーを指定します。
 
 3.  移行元サーバーから移行する共有フォルダーごとに前記の手順を繰り返します。
 

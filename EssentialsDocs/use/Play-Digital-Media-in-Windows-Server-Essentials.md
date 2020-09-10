@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 1ce7359929cb1658cc84418231fb7d65efce8692
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 77246642e7f011768742a30ed517d63b12c47ee4
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838221"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89624948"
 ---
 # <a name="play-digital-media-in-windows-server-essentials"></a>Windows Server Essentials でのデジタル メディアの再生
 
@@ -38,7 +38,7 @@ ms.locfileid: "87838221"
 -   [共有デジタル メディアを表示し、閲覧する](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_7)
 
 
-##  <a name="digital-media-overview"></a><a name="BKMK_1"></a>デジタルメディアの概要
+##  <a name="digital-media-overview"></a><a name="BKMK_1"></a> デジタルメディアの概要
  デジタル メディアとは、コード化されている (デジタル圧縮されている) オーディオ、動画、写真コンテンツを指します。 コンテンツをコード化すると、オーディオや動画の入力が Windows Media ファイルなどのデジタル メディアに変換されます。 コード化したデジタル メディアはコンピューターで簡単に操作、配信、再生できます。コンピューター ネットワークで簡単に転送できます。
 
  デジタル メディアの種類の例:Windows Media Audio (WMA)、Windows Media Video (WMV)、MP3、JPEG、AVI Windows Media Player でサポートされるデジタル メディアに関する詳細については、「 [Windows Media Player でサポートされるファイルの種類](https://support.microsoft.com/kb/316992)」を参照してください。
@@ -57,7 +57,7 @@ ms.locfileid: "87838221"
 
  コピー防止機能が付いたメディアは、その購入に利用したコンピューターまたはデバイスでのみ再生できます。 コピー防止機能は、複数のコンピューターまたはデバイスでメディアを再生する行為を防ぐものです。メディアをサーバーにコピーし、そこから再生する場合も同様です。 ただし、コピーによって保護されたメディアを Windows Server Essentials に保存し、そのメディアの購入に使用したコンピューターまたはデバイスでメディアを再生し続けることができます。
 
-##  <a name="play-and-share-digital-media"></a><a name="BKMK_2"></a>デジタルメディアを再生して共有する
+##  <a name="play-and-share-digital-media"></a><a name="BKMK_2"></a> デジタルメディアを再生して共有する
  ネットワークを設定し、コンピューターとメディア デバイスをサーバー ネットワークに接続すると、サーバーに保存し、共有しているデジタル メディア ファイルを検索できます。
 
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "87838221"
 -   [Windows Server Essentials のメディアファイルを Windows Media Player、Xbox 360、またはネットワーク内のネットワークに接続されたデジタルメディアプレーヤーに送信する](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SendToDevice)
 
 
-###  <a name="search-for-and-play-media-files-on-windows-server-essentials-from-a-computer-or-digital-media-player-on-the-network"></a><a name="BKMK_2.1"></a>ネットワーク上のコンピューターまたはデジタルメディアプレーヤーから Windows Server Essentials 上のメディアファイルを検索して再生する
+###  <a name="search-for-and-play-media-files-on-windows-server-essentials-from-a-computer-or-digital-media-player-on-the-network"></a><a name="BKMK_2.1"></a> ネットワーク上のコンピューターまたはデジタルメディアプレーヤーから Windows Server Essentials 上のメディアファイルを検索して再生する
  デバイスが Windows Server Essentials ネットワークに参加している場合は、次のいずれかの方法でデジタルメディアファイルを検索して再生できます。
 
 
@@ -87,7 +87,7 @@ ms.locfileid: "87838221"
 -   [リモート Web アクセスを利用し、共有メディアを検索し、再生する](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)
 
 
-####  <a name="search-for-and-play-media-files-from-a-computer-that-is-running-windows-media-center"></a><a name="BKMK_WMC"></a>Windows Media Center を実行しているコンピューターからメディアファイルを検索して再生する
+####  <a name="search-for-and-play-media-files-from-a-computer-that-is-running-windows-media-center"></a><a name="BKMK_WMC"></a> Windows Media Center を実行しているコンピューターからメディアファイルを検索して再生する
 
 1.  [**スタート**] をクリックし、[**すべてのプログラム**] をクリックし、[**Windows Media Center**] をクリックします。
 
@@ -97,18 +97,18 @@ ms.locfileid: "87838221"
 
 4.  ファイルを表示または再生するにはメディア ファイルのイメージをクリックします。
 
-####  <a name="search-for-and-play-media-files-from-a-computer-that-is-running-windows-by-using-windows-media-player"></a><a name="BKMK_MWP"></a>Windows Media Player を使用して Windows を実行しているコンピューターからメディアファイルを検索して再生する
+####  <a name="search-for-and-play-media-files-from-a-computer-that-is-running-windows-by-using-windows-media-player"></a><a name="BKMK_MWP"></a> Windows Media Player を使用して Windows を実行しているコンピューターからメディアファイルを検索して再生する
 
 -   コンピューターまたはメディア デバイスから、**Windows Media Player** を開き、メディア ライブラリを検索します。
 
     > [!NOTE]
     >  検索手順は、使用している Windows Media Player のバージョンによって異なります。 詳細については、お使いのバージョンのヘルプをご覧ください。
 
-####  <a name="search-for-and-play-media-files-by-using-xbox-360"></a><a name="BKMK_Xbox"></a>Xbox 360 を使用してメディアファイルを検索し、再生する
+####  <a name="search-for-and-play-media-files-by-using-xbox-360"></a><a name="BKMK_Xbox"></a> Xbox 360 を使用してメディアファイルを検索し、再生する
 
 1.  有線または無線接続で、ホーム ネットワークに Xbox 360 コンソールを接続します。
 
-2.  Windows Server Essentials を実行しているコンピューターで、メディア共有をオンにします。 詳細については、「[メディアストリーミングを有効または無効にする](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4)」を参照してください。
+2.  Windows Server Essentials を実行しているコンピューターで、メディア共有をオンにします。 詳細については、「 [メディアストリーミングを有効または無効にする](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4)」を参照してください。
 
 3.  Xbox 360 コンソールを利用してデジタル メディア ファイルを再生するには
 
@@ -121,13 +121,13 @@ ms.locfileid: "87838221"
 
     3.  ファイル一覧を閲覧し、再生する項目を選択します。
 
-####  <a name="search-for-and-play-media-files-by-using-other-digital-media-players-or-receivers-that-are-compatible-with-windows-server-essentials"></a><a name="BKMK_Other"></a>Windows Server Essentials と互換性のある他のデジタルメディアプレーヤーまたはレシーバーを使用して、メディアファイルを検索して再生する
+####  <a name="search-for-and-play-media-files-by-using-other-digital-media-players-or-receivers-that-are-compatible-with-windows-server-essentials"></a><a name="BKMK_Other"></a> Windows Server Essentials と互換性のある他のデジタルメディアプレーヤーまたはレシーバーを使用して、メディアファイルを検索して再生する
 
 1.  [Windows 互換性センター](https://www.microsoft.com/windows/compatibility/CompatCenter/Home) にアクセスし、お使いのデジタル メディア プレーヤーまたはレシーバーが互換性のあるデバイスの一覧にあることを確認します。
 
 2.  検索手順はデジタル メディア プレーヤーによって異なるため、詳しい指示についてはお使いのデバイスのヘルプをご覧ください。
 
-####  <a name="search-for-and-play-media-files-by-using-the-shared-folders-feature-of-the-launchpad"></a><a name="BKMK_SharedFolders"></a>スタートパッドの共有フォルダー機能を使用してメディアファイルを検索し、再生する
+####  <a name="search-for-and-play-media-files-by-using-the-shared-folders-feature-of-the-launchpad"></a><a name="BKMK_SharedFolders"></a> スタートパッドの共有フォルダー機能を使用してメディアファイルを検索し、再生する
 
 1.  Windows Server Essentials スタートパッドにサインインします。
 
@@ -138,7 +138,7 @@ ms.locfileid: "87838221"
     > [!NOTE]
     >  あるいは、共有フォルダーをダブルクリックしてフォルダーの内容を閲覧できます。
 
-####  <a name="search-for-and-play-shared-media-by-using-remote-web-access"></a><a name="BKMK_RWA2"></a>リモート Web アクセスを使用して共有メディアを検索し、再生する
+####  <a name="search-for-and-play-shared-media-by-using-remote-web-access"></a><a name="BKMK_RWA2"></a> リモート Web アクセスを使用して共有メディアを検索し、再生する
 
 1.  リモート Web アクセスにログオンします。
 
@@ -146,10 +146,10 @@ ms.locfileid: "87838221"
 
 3.  フォルダーをダブルクリックし、フォルダーの内容を表示します。
 
-###  <a name="send-media-files-on-windows-server-essentials-to-windows-media-player-xbox-360-or-to-a-networked-digital-media-player-in-the-network"></a><a name="BKMK_SendToDevice"></a>Windows Server Essentials のメディアファイルを Windows Media Player、Xbox 360、またはネットワーク内のネットワークに接続されたデジタルメディアプレーヤーに送信する
+###  <a name="send-media-files-on-windows-server-essentials-to-windows-media-player-xbox-360-or-to-a-networked-digital-media-player-in-the-network"></a><a name="BKMK_SendToDevice"></a> Windows Server Essentials のメディアファイルを Windows Media Player、Xbox 360、またはネットワーク内のネットワークに接続されたデジタルメディアプレーヤーに送信する
  **Windows Media Player** を利用し、必要なメディア ファイルを検索します。 メディア ファイルを右クリックし、[**再生するコンピューター**] をクリックし、ネットワークに接続されているメディア デバイスにメディア ファイルを送信します。
 
-##  <a name="play-shared-digital-media-files-from-a-remote-location"></a><a name="BKMK_3"></a>リモートの場所から共有デジタルメディアファイルを再生する
+##  <a name="play-shared-digital-media-files-from-a-remote-location"></a><a name="BKMK_3"></a> リモートの場所から共有デジタルメディアファイルを再生する
  リモート Web アクセスを使用すると、Windows Server Essentials ネットワークから離れているときに、メディアファイルを再生できます。 携帯電話、リモート コントローラー、デジタル メディア プレーヤーを利用し、サーバーに保存されている共有メディア ファイルを検索し、再生できます。
 
 #### <a name="to-play-shared-media-files-when-you-are-away-from-the-network"></a>ネットワークから離れた場所にいるときに共有メディア ファイルを再生するには
@@ -167,18 +167,18 @@ ms.locfileid: "87838221"
 
    > [!NOTE]
    >
-   >  さまざまな検索方法の詳細については、「[ネットワーク上のコンピューターまたはデジタルメディアプレーヤーから Windows Server Essentials 上のメディアファイルを検索して再生](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)する」を参照してください。
+   >  さまざまな検索方法の詳細については、「 [ネットワーク上のコンピューターまたはデジタルメディアプレーヤーから Windows Server Essentials 上のメディアファイルを検索して再生](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)する」を参照してください。
    >
-   >  さまざまな検索方法の詳細については、「[ネットワーク上のコンピューターまたはデジタルメディアプレーヤーから Windows Server Essentials 上のメディアファイルを検索して再生](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)する」を参照してください。
+   >  さまざまな検索方法の詳細については、「 [ネットワーク上のコンピューターまたはデジタルメディアプレーヤーから Windows Server Essentials 上のメディアファイルを検索して再生](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)する」を参照してください。
 
 
 5. メディア ファイル名が表示されたら、ファイル名をクリックし、メディアを再生します。
 
-##  <a name="add-digital-media-files-to-the-server"></a><a name="BKMK_4"></a>デジタルメディアファイルをサーバーに追加する
+##  <a name="add-digital-media-files-to-the-server"></a><a name="BKMK_4"></a> デジタルメディアファイルをサーバーに追加する
 
- サーバー管理者は、サーバーに直接アクセスするか、リモートの Web アクセスサイトを使用してダッシュボードにサインインすることにより、メディアライブラリの共有フォルダーにデジタルメディアを追加できます。 他のユーザーは、スタートパッドの [**共有フォルダー** ] 接続を使用するか、リモート Web アクセスサイトを使用するか、Windows Phone 用の My server アプリを使用して、サーバーにメディアファイルを追加できます。 メディアを再生する方法に関する詳細については、「[デジタル メディアを再生し、共有する](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2)」を参照してください。
+ サーバー管理者は、サーバーに直接アクセスするか、リモートの Web アクセスサイトを使用してダッシュボードにサインインすることにより、メディアライブラリの共有フォルダーにデジタルメディアを追加できます。 他のユーザーは、スタートパッドの [ **共有フォルダー** ] 接続を使用するか、リモート Web アクセスサイトを使用するか、Windows Phone 用の My server アプリを使用して、サーバーにメディアファイルを追加できます。 メディアを再生する方法に関する詳細については、「[デジタル メディアを再生し、共有する](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2)」を参照してください。
 
- サーバー管理者は、サーバーに直接アクセスするか、リモートの Web アクセスサイトを使用してダッシュボードにサインインすることにより、メディアライブラリの共有フォルダーにデジタルメディアを追加できます。 他のユーザーは、スタートパッドの [**共有フォルダー** ] 接続を使用するか、リモート Web アクセスサイトを使用するか、Windows Phone 用の My server アプリを使用して、サーバーにメディアファイルを追加できます。 メディアを再生する方法に関する詳細については、「[デジタル メディアを再生し、共有する](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2)」を参照してください。
+ サーバー管理者は、サーバーに直接アクセスするか、リモートの Web アクセスサイトを使用してダッシュボードにサインインすることにより、メディアライブラリの共有フォルダーにデジタルメディアを追加できます。 他のユーザーは、スタートパッドの [ **共有フォルダー** ] 接続を使用するか、リモート Web アクセスサイトを使用するか、Windows Phone 用の My server アプリを使用して、サーバーにメディアファイルを追加できます。 メディアを再生する方法に関する詳細については、「[デジタル メディアを再生し、共有する](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2)」を参照してください。
 
 
 > [!NOTE]
@@ -189,18 +189,18 @@ ms.locfileid: "87838221"
 1.  次の方法のいずれかを利用してサーバーにサインインします。
 
 
-    1.  リモート Web アクセスにログオンする方法の詳細については、「[リモート Web アクセスの使用](Use-Remote-Web-Access-in-Windows-Server-Essentials.md)」を参照してください。
+    1.  リモート Web アクセスにログオンする方法の詳細については、「 [リモート Web アクセスの使用](Use-Remote-Web-Access-in-Windows-Server-Essentials.md)」を参照してください。
 
-    1.  リモート Web アクセスにログオンする方法の詳細については、「[リモート Web アクセスの使用](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)」を参照してください。
+    1.  リモート Web アクセスにログオンする方法の詳細については、「 [リモート Web アクセスの使用](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)」を参照してください。
 
 
-    2.  スタートパッドを使用したサインインの詳細については、「[スタートパッドの概要](../manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md)」を参照してください。
+    2.  スタートパッドを使用したサインインの詳細については、「 [スタートパッドの概要](../manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md)」を参照してください。
 
 2.  追加するメディアのフォルダーを検索し、クリックします。
 
 3.  追加するメディア ファイルをサーバー上の共有フォルダーにコピーして貼り付けるか、ドラッグアンドドロップします。
 
-##  <a name="download-format-options"></a><a name="BKMK_5"></a>ダウンロード形式のオプション
+##  <a name="download-format-options"></a><a name="BKMK_5"></a> ダウンロード形式のオプション
  ファイルは 2 つの方法でダウンロードできます。 これらのオプションは、Windows ベースのコンピューターに複数のファイルまたはフォルダーをダウンロードする場合にのみ利用できます。
 
  実行するダウンロードに合わせて次のオプションを選択します。
@@ -221,10 +221,10 @@ ms.locfileid: "87838221"
 
   実際のダウンロードが始まる前に、exe または zip ファイルが作成されます。 ダウンロードするファイルの数や合計サイズによっては、数分かかる場合があります。 ダウンロード ファイルが作成されると、バックグラウンドでファイルのダウンロードが始まります。 ダウンロードが完了するまで、作業を続けられます。
 
-##  <a name="easy-file-upload-tool"></a><a name="BKMK_6"></a>ファイルの簡単アップロードツール
+##  <a name="easy-file-upload-tool"></a><a name="BKMK_6"></a> ファイルの簡単アップロードツール
  ファイルの簡単アップロードツールを使用すると、Windows Server Essentials サーバーにファイルをアップロードするプロセスを効率化できます。 ファイルの簡単アップロードツールに任意の数のファイルを追加し、それを1つのバッチ内の Windows Server Essentials サーバー上の共有フォルダーにアップロードすることができます。 詳細については、ブログ投稿の「 [リモート Web アクセス ファイル共有に関する理解](/archive/blogs/sbs/understanding-remote-web-access-file-sharing)」を参照してください。
 
-##  <a name="view-and-browse-shared-digital-media"></a><a name="BKMK_7"></a>共有デジタルメディアの表示と参照
+##  <a name="view-and-browse-shared-digital-media"></a><a name="BKMK_7"></a> 共有デジタルメディアの表示と参照
  ダッシュボード、スタート パッド、リモート Web アクセスの Web サイト、Windows Phone の My Server のいずれかを利用し、リソースを表示または閲覧できます。
 
 #### <a name="to-view-and-browse-shared-media-from-the-dashboard"></a>ダッシュボードから共有メディアを表示または閲覧するには
@@ -233,7 +233,7 @@ ms.locfileid: "87838221"
 
 2.  メイン ナビゲーション バーで、[**記憶域**] をクリックします。
 
-3.  [**サーバーフォルダー** ] タブをクリックします。サーバーフォルダーの一覧が表示されます。
+3.  [ **サーバーフォルダー** ] タブをクリックします。サーバーフォルダーの一覧が表示されます。
 
 4.  フォルダーをダブルクリックし、フォルダーの内容を表示します。
 

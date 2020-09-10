@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: a14689e3-2310-4229-bd3e-dafc0e739e02
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: a460bfa4f802160be4e4842c91793c8568ed0272
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: a60ffd7593da8e8275e36e9aec2cf6e25fbe23db
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180378"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625308"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-r2-standard"></a>Windows Server Essentials から Windows Server 2012 R2 Standard への移行
 
@@ -49,7 +49,7 @@ Windows Server 2016 は、現在のワークロードをサポートするクラ
 
 1. Windows Server 2012 R2 Standard のライセンスと、環境に合わせて適切な数のユーザーまたはデバイスクライアントアクセスライセンスを購入します。
 
-    Windows Server 2012 R2 Standard のライセンスは、小売店、ディストリビューター、または[Microsoft パートナー](https://pinpoint.microsoft.com/SelectCulture.aspx)の支援を通じて購入できます。
+    Windows Server 2012 R2 Standard のライセンスは、小売店、ディストリビューター、または [Microsoft パートナー](https://pinpoint.microsoft.com/SelectCulture.aspx)の支援を通じて購入できます。
 
    > [!NOTE]
    >  Windows Server 2012 R2 Standard を最初に購入し、2つの仮想インスタンスのいずれかを Windows Server Essentials としてインストールするためにダウングレード権を行使した場合は、何も追加購入する必要はありません。
@@ -60,13 +60,13 @@ Windows Server 2016 は、現在のワークロードをサポートするクラ
 
 2. 管理者として Windows PowerShell を開き、次のコマンドを実行します。
 
-    **dism/online/set-edition: ServerStandard/accepteula/productkey:** *Product Key* ( *Product key*は、Windows Server 2012 R2 Standard のコピーのプロダクトキーです)。
+    **dism/online/set-edition: ServerStandard/accepteula/productkey:** *Product Key* ( *Product key* は、Windows Server 2012 R2 Standard のコピーのプロダクトキーです)。
 
     サーバーが再起動すると、移行プロセスが完了します。
 
    移行後、Windows Server Essentials の機能はサーバーに残り、最大100ユーザーおよび200デバイスでサポートされています。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 
 -   [サーバー データの Windows Server Essentials への移行](Migrate-Server-Data-to-Windows-Server-Essentials.md)

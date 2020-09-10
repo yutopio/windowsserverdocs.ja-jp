@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 00addf78-8999-4c8e-8ac4-4ebdde00c5a3
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 542523745cae4dc278bab8ae9528624002993121
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: fdd0dd56c763453c1d14175a5d52845ba3e28ad4
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180498"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625522"
 ---
 # <a name="run-the-windows-server-essentials-best-practices-analyzer6"></a>Windows Server Essentials ベストプラクティス Analyzer6 を実行します。
 
@@ -26,6 +26,6 @@ ms.locfileid: "87180498"
 
 2.  ダッシュボードで [**デバイス**] タブをクリックします。
 
-3.  [*サーバー] *** [タスク] * ウィンドウで、[**ベストプラクティスアナライザー**] をクリックします。
+3.  [ *サーバー] *** [タスク] * ウィンドウで、[ **ベストプラクティスアナライザー**] をクリックします。
 
 4.  BPA の各メッセージを確認し、必要な場合は指示に従って問題を解決します。

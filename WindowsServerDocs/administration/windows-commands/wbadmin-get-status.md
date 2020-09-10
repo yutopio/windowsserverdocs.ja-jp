@@ -3,16 +3,16 @@ title: wbadmin get status
 description: 現在実行中のバックアップまたは回復操作の状態を報告する wbadmin get status の参照記事。
 ms.topic: reference
 ms.assetid: 2911b944-7b95-46aa-8c1e-1d55a2fcc94c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3245a6c92bf8a3ebde070f2f85e484dc9a317ce1
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 7dcb1b59de6827500311cfd55245ac6c94a171b0
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031990"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89624595"
 ---
 # <a name="wbadmin-get-status"></a>wbadmin get status
 
@@ -32,7 +32,7 @@ wbadmin get status
 
 このサブコマンドにはパラメーターがありません。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   このサブコマンドは、現在のバックアップまたは回復操作が完了するまで停止しません。コマンドウィンドウを閉じた場合でも、サブコマンドは引き続き実行されます。
 -   現在のバックアップまたは回復操作を停止する場合は、 **wbadmin stop job** サブコマンドを使用します。

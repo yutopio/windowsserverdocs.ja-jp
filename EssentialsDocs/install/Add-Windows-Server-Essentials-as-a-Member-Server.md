@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: aef9b8ca8e96b9d5c7a6670301a70e35fc72dfb9
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 3325799dc8fb81ab15f8cb03102b9c6248526b74
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181548"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89624005"
 ---
 # <a name="add-windows-server-essentials-as-a-member-server"></a>Windows Server Essentials をメンバー サーバーとして追加
 
@@ -52,7 +52,7 @@ ms.locfileid: "87181548"
 
 4. [**コンピューター名**] の [**ドメイン**] セクションで [**変更**] をクリックします。
 
-5. [**コンピューター名/ドメイン**名の変更] の [**メンバー** ] セクションで、Windows server Essentials を実行しているサーバーを**ワークグループ**または**ドメイン**のどちらに参加させるかを選択します。
+5. [ **コンピューター名/ドメイン**名の変更] の [ **メンバー** ] セクションで、Windows server Essentials を実行しているサーバーを **ワークグループ** または **ドメイン**のどちらに参加させるかを選択します。
 
    -   サーバーをワークグループに追加するには、「**workgroup**」と入力し、[**OK**] をクリックします。
 
@@ -81,7 +81,7 @@ ms.locfileid: "87181548"
 
 7.  デスクトップで、ダッシュボード アイコンをクリックし、サーバーを起動します。 ホーム ページで、[**セットアップ**] タブに示されている [**作業の開始**] タスクを実行します。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 
 -   [Windows Server Essentials のインストール](Install-Windows-Server-Essentials.md)

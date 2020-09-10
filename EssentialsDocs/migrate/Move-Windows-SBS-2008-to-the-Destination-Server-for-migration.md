@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 4950469d-d800-430d-8d10-53bafc4a9932
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 5f9d240bb7467c0248b69bc65d7f26a66ecec038
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: a05a91fa6ad3ed2ac15daaff204990fdad688284
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180578"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625704"
 ---
 # <a name="move-windows-sbs-2008-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Windows SBS 2008 の設定とデータを Windows Server Essentials 移行の移行先サーバーに移動する
 
@@ -52,8 +52,8 @@ ms.locfileid: "87180578"
  この場合、
  - \<SourceServerName\> は移行元サーバーの名前です。
  - \<SharedSourceFolderName\> は、移行元サーバー上の共有フォルダーの名前です。
- - \<DestinationServerName\>は、移行先サーバーの名前です。
- - \<SharedDestinationFolderName\>データのコピー先となる転送先サーバー上の共有フォルダーを指定します。
+ - \<DestinationServerName\> は、移行先サーバーの名前です。
+ - \<SharedDestinationFolderName\> データのコピー先となる転送先サーバー上の共有フォルダーを指定します。
 
 3. 移行元サーバーから移行する共有フォルダーごとに前記の手順を繰り返します。
 

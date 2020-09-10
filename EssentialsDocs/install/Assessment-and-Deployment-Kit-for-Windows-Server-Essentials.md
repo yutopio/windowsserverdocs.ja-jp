@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ef3a7934-e36f-40d8-9e0b-7ed59089f85e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 2ac063330cc1ae99bfd7d0d65950ba17ad815c87
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 6198e8d8e06a76b9768f5c1166b438639d2ffca2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181518"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623973"
 ---
 # <a name="assessment-and-deployment-kit-for-windows-server-essentials"></a>Windows Server Essentials 用のアセスメント & デプロイメント キット
 
@@ -71,7 +71,7 @@ Windows Server &reg; 2012 Essentials アセスメント & amp; デプロイメ�
 
     -   [Microsoft Online Service パートナー契約の登録パートナー情報の追加](Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)
 
-    -   [Microsoft Online Service リセラー契約に基づく O365 統合モジュールの購入/試用版エンドポイントの URL の置換](Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
+    -   [Microsoft 365 統合モジュールの購入-エンドポイントの URL を Microsoft Online Service リセラー契約のサポートに置き換える](Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
 
     -   [リモートで管理されるサーバー用のサーバー回復 DVD の作成](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)
 
@@ -83,8 +83,8 @@ Windows Server &reg; 2012 Essentials アセスメント & amp; デプロイメ�
 
 
 ## <a name="copyright-information"></a>著作権情報
- このドキュメントは、現状のままで提供されています。 このドキュメントに記載されている情報および見解 (URL 等のインターネット Web サイトに関する情報を含む) は、将来予告なしに変更されることがあります。 ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。 実在のものとの関連性または関係性は一切ありません。 このドキュメントは、マイクロソフト製品に含まれる知的財産に対していかなる法的権利も付与しません。 お客様は、内部的な参照目的に限り、このドキュメントを複製して使用することができます。
+ このドキュメントは、現状のままで提供されています。 このドキュメントに記載されている情報および見解 (URL 等のインターネット Web サイトに関する情報を含む) は、将来予告なしに変更されることがあります。 ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。 実在のものとの関連性または関係性は一切ありません。 このドキュメントは、Microsoft 製品の知的財産権に関する法的な権利をお客様に許諾するものではありません。 内部的な参照目的に限り、このドキュメントを複製して使用することができます。
 
  Active Directory、Microsoft、Windows Live、Windows PowerShell、Windows、および Windows Server は、米国 Microsoft Corporation および/またはその関連会社の商標です。 記載されている会社名、製品名には、各社の商標のものもあります。
 
- &copy;2012 Microsoft。 All rights reserved.
+ &copy; 2012 Microsoft。 All rights reserved.

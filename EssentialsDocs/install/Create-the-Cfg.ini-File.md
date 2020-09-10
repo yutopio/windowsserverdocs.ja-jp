@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 93a73556-22ef-402d-b8d4-582b74c22bcf
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: d6294fd14c395be2b25f4b9bb46c93ecf7721928
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 597f6349d96d29f06f06034504d5800e7e207eae
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181378"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623788"
 ---
 # <a name="create-the-cfgini-file"></a>Cfg.ini ファイルの作成
 
@@ -22,7 +22,7 @@ ms.locfileid: "87181378"
 
 -   ターゲット コンピューターのプレインストールされたイメージでエンド ユーザーのエクスペリエンスをテストする場合、初期構成セクションを使用して有人モードまたは無人モードでインストールをウォークスルーします。 これを行うには、「[初期構成セクションの作成](Create-the-Cfg.ini-File.md#BKMK_CreateInit2)」を参照してください。
 
-##  <a name="create-the-initial-configuration-section"></a><a name="BKMK_CreateInit2"></a>初期構成セクションを作成する
+##  <a name="create-the-initial-configuration-section"></a><a name="BKMK_CreateInit2"></a> 初期構成セクションを作成する
  cfg.ini ファイルの初期構成セクションを使用して、有人モードまたは無人モードでインストールをウォークスルーします。
 
 #### <a name="to-define-the-initial-configuration-section"></a>初期構成セクションを定義するには
@@ -106,7 +106,7 @@ ms.locfileid: "87181378"
     |*NetbiosName*|NetBIOS 名は、サーバー上で実行されているリソースを識別するために使用されます。 15 文字まで使用できます。 例: Contoso。|
     |*Language*|(省略可能) 表示言語を指定します。 インストールされている言語のうちの 1 言語のみを指定できます。 例: 米国で使用されている英語の場合、en-us。|
     |*ロケール*|(省略可能) *LocaleID* 形式を使用して、時刻と通貨の形式を指定します。 例: en-us の場合、英語で表示され、米国で使用されている標準に従って形式化される通貨と時刻です。|
-    |*[キーボード]*|キーボードには次の 2 つの形式を使用できます。<br /><br /> - **入力言語: キーボードレイアウト。** たとえば、0409:00000409 の場合、**:** の前の 0409 は入力言語で、**00000409** はキーボード レイアウトです。 キーボード レイアウトの一覧は、レジストリ キー **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Keyboard Layouts** の下で確認できます。<br /><br /> - **入力言語: IME 識別子。** 以下に IME 識別子の完全な一覧を示します。<br /><br /> -{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1} {8F96574E-C86C-4bd6-9666-3F7327D4CBE8} アムハラ語 Input メソッド<br /><br /> -{81d4e9c9-1d3b-41bc-9e6c-4b40bf79e35e} {FA550B04-5AD7-411F-A5AC-CA038EC515D7} Microsoft Pinyin-Simple Fast (簡体字中国語)<br /><br /> -{531FDEBF-9B4C-4A43-A2AA-960E8FCDC732} {B2F9C502-1742-11D4-9790-0080C882687E} 中国語 (繁体字)-新しい発音<br /><br /> -{531FDEBF-9B4C-4A43-A2AA-960E8FCDC732} {4BDF9F03-C7D3-11D4-B2AB-0080C882687E} 中国語 (繁体字)-ChangJie<br /><br /> -{531FDEBF-9B4C-4A43-A2AA-960E8FCDC732} {6024B45F-5C54-11D4B921-0080c882687 e} 中国語 (繁体字)-クイック<br /><br /> -{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1} {D38EFF65-AA46-4FD5-91A7-67845FB02F5B} 繁体字中国語配列<br /><br /> -{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1} {037B2C25-480C-4D7F-B027-D6CA6B69788A} 繁体字中国語 (繁体字)<br /><br /> -{03B5835F-F03C-411B-9CE2-AA23E1171E36} {A76C93D9-5523-4E90-AAFA-4DB112F9AC76} Microsoft IME (日本語)<br /><br /> -{A028AE76-01B1-46C2-99C4-ACD9858AE02F} {B5FE1F02-D5F2-4445-9C03-C568F23C99A1} Microsoft IME (韓国語)<br /><br /> -{A1E2B86B-924A-4D43-80F6-8A820DF7190F} {B60AF051-257A-46BC-B9D3-84DAD819BAFB} 古いハングル IME (韓国語)<br /><br /> -{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1} {409C8376-007B-4357-AE8E-26316EE3FB0D} イ語入力メソッド<br /><br /> -{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1} {3cab88 B7-CC3E47 6A6-9765-b772ad7761ff} ティグリニア語 Input メソッド|
+    |*キーボード*|キーボードには次の 2 つの形式を使用できます。<br /><br /> - **入力言語: キーボードレイアウト。** たとえば、0409:00000409 の場合、**:** の前の 0409 は入力言語で、**00000409** はキーボード レイアウトです。 キーボード レイアウトの一覧は、レジストリ キー **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Keyboard Layouts** の下で確認できます。<br /><br /> - **入力言語: IME 識別子。** 以下に IME 識別子の完全な一覧を示します。<br /><br /> -{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1} {8F96574E-C86C-4bd6-9666-3F7327D4CBE8} アムハラ語 Input メソッド<br /><br /> -{81d4e9c9-1d3b-41bc-9e6c-4b40bf79e35e} {FA550B04-5AD7-411F-A5AC-CA038EC515D7} Microsoft Pinyin-Simple Fast (簡体字中国語)<br /><br /> -{531FDEBF-9B4C-4A43-A2AA-960E8FCDC732} {B2F9C502-1742-11D4-9790-0080C882687E} 中国語 (繁体字)-新しい発音<br /><br /> -{531FDEBF-9B4C-4A43-A2AA-960E8FCDC732} {4BDF9F03-C7D3-11D4-B2AB-0080C882687E} 中国語 (繁体字)-ChangJie<br /><br /> -{531FDEBF-9B4C-4A43-A2AA-960E8FCDC732} {6024B45F-5C54-11D4B921-0080c882687 e} 中国語 (繁体字)-クイック<br /><br /> -{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1} {D38EFF65-AA46-4FD5-91A7-67845FB02F5B} 繁体字中国語配列<br /><br /> -{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1} {037B2C25-480C-4D7F-B027-D6CA6B69788A} 繁体字中国語 (繁体字)<br /><br /> -{03B5835F-F03C-411B-9CE2-AA23E1171E36} {A76C93D9-5523-4E90-AAFA-4DB112F9AC76} Microsoft IME (日本語)<br /><br /> -{A028AE76-01B1-46C2-99C4-ACD9858AE02F} {B5FE1F02-D5F2-4445-9C03-C568F23C99A1} Microsoft IME (韓国語)<br /><br /> -{A1E2B86B-924A-4D43-80F6-8A820DF7190F} {B60AF051-257A-46BC-B9D3-84DAD819BAFB} 古いハングル IME (韓国語)<br /><br /> -{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1} {409C8376-007B-4357-AE8E-26316EE3FB0D} イ語入力メソッド<br /><br /> -{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1} {3cab88 B7-CC3E47 6A6-9765-b772ad7761ff} ティグリニア語 Input メソッド|
     |*設定*|更新に関するユーザーの選択を設定します。 次のいずれかの値を使用します。<br /><br /> **-All は、** 推奨設定を使用します。<br /><br /> **-更新プログラムは、** 重要な更新プログラムのインストールに相当します。 のみ<br /><br /> **-None は、** 更新プログラムをチェックしません。|
     |*UserName*|-セットアップ中に作成された新しい管理者アカウントの名前。 管理者アカウント名と標準のユーザー アカウント名は、次の条件を満たしている必要があります。<br /><br /> -最大19文字まで指定できます。<br /><br /> -/\ []  &#124; < > + =; を含めることはできません。, ? *<br /><br /> -先頭または末尾にピリオドを使用することはできません。<br /><br /> -2 つの連続するピリオドを含めることはできません。<br /><br /> -サーバー名または内部ドメイン名と同じにすることはできません。<br /><br /> -管理者やゲストなど、定義済みのユーザー名と同じにすることはできません。|
     |*PlainTextPassword*|これは、セットアップ中に作成された新しい管理者アカウントのパスワードです。<br /><br /> -少なくとも8文字以上である必要があります。<br /><br /> -次の4つのカテゴリのうち少なくとも3つが含まれている必要があります。<br /><br /> 大文字。<br /><br /> -小文字。<br /><br /> 乱数.<br /><br /> 文字.|

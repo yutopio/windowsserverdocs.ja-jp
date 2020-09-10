@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 341a7dd217045150e1f637d23378e49a86bb5fbf
-ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 25b3bf64672356027742858399d1e2cbc7037194
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87409482"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89624902"
 ---
 # <a name="use-remote-web-access-in-windows-server-essentials"></a>Windows Server Essentials でのリモート Web アクセスの使用
 
@@ -30,7 +30,7 @@ ms.locfileid: "87409482"
 
 -   [モバイル デバイスから接続する](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)
 
-##  <a name="connect-to-remote-web-access"></a><a name="BKMK_Connect"></a>リモート Web アクセスに接続する
+##  <a name="connect-to-remote-web-access"></a><a name="BKMK_Connect"></a> リモート Web アクセスに接続する
 
 -   [リモート Web アクセスにログオンします。](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)
 
@@ -42,14 +42,14 @@ ms.locfileid: "87409482"
 
 -   [モバイル デバイスから接続する](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)
 
-##  <a name="connect-to-remote-web-access"></a><a name="BKMK_Connect"></a>リモート Web アクセスに接続する
+##  <a name="connect-to-remote-web-access"></a><a name="BKMK_Connect"></a> リモート Web アクセスに接続する
 
 -   [リモート Web アクセスにログオンします。](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)
 
 -   [コンピューターにリモート アクセスする](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1.5)
 
 
-###  <a name="log-on-to-remote-web-access"></a><a name="BKMK_1"></a>リモート Web アクセスにログオンします。
+###  <a name="log-on-to-remote-web-access"></a><a name="BKMK_1"></a> リモート Web アクセスにログオンします。
  ローカルコンピューターまたはリモートコンピューターからリモート Web アクセスにログオンすると、Windows Server Essentials を実行しているサーバー上のリソースとネットワーク上のコンピューターのリソースにアクセスできます。
 
 ##### <a name="to-log-on-to-remote-web-access-from-a-network-computer"></a>ネットワーク コンピューターからリモート Web アクセスにログオンするには
@@ -70,7 +70,7 @@ ms.locfileid: "87409482"
 
 2.  [リモート Web アクセスログオン] ページで、テキストボックスにユーザー名とパスワードを入力し、矢印をクリックします。
 
-###  <a name="remotely-access-your-computer"></a><a name="BKMK_1.5"></a>コンピューターへのリモートアクセス
+###  <a name="remotely-access-your-computer"></a><a name="BKMK_1.5"></a> コンピューターへのリモートアクセス
  オフィスから離れた場所にいる場合は、Web ブラウザーを使用してリモートの Web アクセスサイトにログオンし、ネットワーク上の Windows Server Essentials ダッシュボード、共有フォルダー、およびコンピューターにリモートでアクセスすることができます。
 
  ダッシュボードに接続すると、オフィスにいるのと同様に Windows Server Essentials を管理できます。 ユーザー アカウントの追加、共有フォルダーの追加、共有フォルダー アクセスの設定など、普段の管理タスクをすべて実行できます。 ネットワークにあるコンピューターに接続すると、オフィスでコンピューターの前に座っているかのようにデスクトップにアクセスできます。
@@ -99,7 +99,7 @@ ms.locfileid: "87409482"
 #### <a name="to-connect-to-the-server-dashboard"></a>サーバーのダッシュボードに接続するには
  [**デバイス**] タブで、サーバーの名前をクリックします。 状態が [**利用可能**] のコンピューターのみを選択できます。 ダッシュボードを使用するには、管理者ユーザー アカウントとパスワードをサーバーに入力できなければなりません。
 
-##  <a name="share-files-and-folders"></a><a name="BKMK_SharedFolders"></a>ファイルとフォルダーを共有する
+##  <a name="share-files-and-folders"></a><a name="BKMK_SharedFolders"></a> ファイルとフォルダーを共有する
 
 
 -   [リモート Web アクセスでのファイルのアップロードとダウンロード](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UploadRWA)
@@ -107,7 +107,7 @@ ms.locfileid: "87409482"
 -   [リモート Web アクセスでのファイルとフォルダーの作成、名前の変更、移動、削除、またはコピー](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)
 
 
-###  <a name="upload-and-download-files-in-remote-web-access"></a><a name="BKMK_UploadRWA"></a>リモート Web アクセスでのファイルのアップロードとダウンロード
+###  <a name="upload-and-download-files-in-remote-web-access"></a><a name="BKMK_UploadRWA"></a> リモート Web アクセスでのファイルのアップロードとダウンロード
  リモート Web アクセスの [**共有フォルダー**] タブで、次を実行できます。
 
 -   コンピューターから Windows Server Essentials にファイルをアップロードします (送信します)。
@@ -120,12 +120,12 @@ ms.locfileid: "87409482"
 -   Windows Server Essentials の共有フォルダー内にフォルダーを作成します。
 
 
--   Windows Server Essentials のファイルとフォルダーを移動、削除、名前変更します。 詳細については、「[リモート Web アクセスでのファイルとフォルダーの作成、名前の変更、移動、削除、またはコピー](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)」を参照してください。
+-   Windows Server Essentials のファイルとフォルダーを移動、削除、名前変更します。 詳細については、「 [リモート Web アクセスでのファイルとフォルダーの作成、名前の変更、移動、削除、またはコピー](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)」を参照してください。
 
--   Windows Server Essentials のファイルとフォルダーを移動、削除、名前変更します。 詳細については、「[リモート Web アクセスでのファイルとフォルダーの作成、名前の変更、移動、削除、またはコピー](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)」を参照してください。
+-   Windows Server Essentials のファイルとフォルダーを移動、削除、名前変更します。 詳細については、「 [リモート Web アクセスでのファイルとフォルダーの作成、名前の変更、移動、削除、またはコピー](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)」を参照してください。
 
 
-#### <a name="upload-files"></a>ファイルをアップロードする
+#### <a name="upload-files"></a>ファイルのアップロード
 
 ##### <a name="to-upload-files"></a>ファイルをアップロードするには
 
@@ -238,7 +238,7 @@ ms.locfileid: "87409482"
     > [!NOTE]
     >  サードパーティ製のファイル圧縮プログラムを使用する場合、そのプログラムの手順に従います。
 
-###  <a name="create-rename-move-delete-or-copy-files-and-folders-in-remote-web-access"></a><a name="BKMK_2"></a>リモート Web アクセスでのファイルとフォルダーの作成、名前の変更、移動、削除、またはコピー
+###  <a name="create-rename-move-delete-or-copy-files-and-folders-in-remote-web-access"></a><a name="BKMK_2"></a> リモート Web アクセスでのファイルとフォルダーの作成、名前の変更、移動、削除、またはコピー
  リモート Web アクセスを利用し、既存の共有フォルダーに新しいフォルダーを作成したり、ファイルとフォルダーの名前を変更したり、ファイルとフォルダーを移動またはコピーしたり、サーバーのファイルとフォルダーを削除したりできます。
 
 > [!NOTE]
@@ -284,7 +284,7 @@ ms.locfileid: "87409482"
 
 3.  ファイルまたはフォルダーのコピー先にするフォルダーを右クリックし、[**貼り付け**] をクリックします。
 
-##  <a name="connect-from-a-mobile-device"></a><a name="BKMK_ConnectMobile"></a>モバイルデバイスから接続する
+##  <a name="connect-from-a-mobile-device"></a><a name="BKMK_ConnectMobile"></a> モバイルデバイスから接続する
 
 
 -   [モバイル デバイスからリモート Web アクセスを使用する](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)
@@ -296,7 +296,7 @@ ms.locfileid: "87409482"
 -   [モバイル デバイスでサポートされる Web ブラウザー](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)
 
 
-###  <a name="use-remote-web-access-from-a-mobile-device"></a><a name="BKMK_8"></a>モバイルデバイスからリモート Web アクセスを使用する
+###  <a name="use-remote-web-access-from-a-mobile-device"></a><a name="BKMK_8"></a> モバイルデバイスからリモート Web アクセスを使用する
  スマートフォンからリモート Web アクセスにログオンし、サーバーの共有フォルダーのファイルとフォルダーを閲覧できます。
 
 > [!NOTE]
@@ -312,7 +312,7 @@ ms.locfileid: "87409482"
 
 1.  Web ブラウザーを開き、アドレスバーに「 **https://** _<\> _**」と**入力します。  を https に含めるようにしてください。
 
-2.  [リモート Web アクセスログオン] ページで、テキストボックスにユーザー名とパスワードを入力し、[**デスクトップバージョンの表示**] をクリックして、矢印をクリックします。 リモート Web アクセスのデスクトップ バージョンにログオンされます。
+2.  [リモート Web アクセスログオン] ページで、テキストボックスにユーザー名とパスワードを入力し、[ **デスクトップバージョンの表示**] をクリックして、矢印をクリックします。 リモート Web アクセスのデスクトップ バージョンにログオンされます。
 
 ##### <a name="to-return-to-the-mobile-version-of-remote-web-access"></a>リモート Web アクセスのモバイル バージョンに戻るには
 
@@ -324,7 +324,7 @@ ms.locfileid: "87409482"
 
    サーバーの共有フォルダーのファイルとフォルダーを検索できます。
 
-###  <a name="supported-web-browsers-for-mobile-devices"></a><a name="BKMK_9"></a>モバイルデバイスでサポートされている Web ブラウザー
+###  <a name="supported-web-browsers-for-mobile-devices"></a><a name="BKMK_9"></a> モバイルデバイスでサポートされている Web ブラウザー
  サポートされるモバイル デバイス用 Web ブラウザー:
 
 -   Internet Explorer Mobile 6.0 以降
@@ -341,7 +341,7 @@ ms.locfileid: "87409482"
 
 -   Firefox
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [リモート Web アクセスの管理](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)
 

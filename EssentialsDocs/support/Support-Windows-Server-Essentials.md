@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: d09b5a6425c2921bf2ad3cae57aecad9e4f35098
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 45a81150168e0b1f21a39b8d773872a1d5daef6b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838331"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625275"
 ---
 # <a name="support-windows-server-essentials"></a>Windows Server Essentials のサポート
 
@@ -24,7 +24,7 @@ ms.locfileid: "87838331"
 
 - [Windows Server 2012 R2 および Windows Server 2012 向けの上位のサポート ソリューション](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831490(v=ws.11))
 
-- [Windows Server Essentials 移行準備ツール](https://support.microsoft.com/kb/2908176)(2013 年12月) の更新プログラム
+- [Windows Server Essentials 移行準備ツール](https://support.microsoft.com/kb/2908176) (2013 年12月) の更新プログラム
 
 - [Windows Server Essentials の更新プログラムのロールアップ 1](https://support.microsoft.com/kb/2887595) (2013 年11月)
 
@@ -34,7 +34,7 @@ ms.locfileid: "87838331"
 
 - [Windows Server Essentials の更新プログラムのロールアップ 1](https://support.microsoft.com/kb/2781267) (2013 年2月)
 
-- [修正プログラム: Windows Server Essentials で Windows Server Update Services ロールを有効にすることはできません](https://support.microsoft.com/kb/2762663)(2013 年2月)
+- [修正プログラム: Windows Server Essentials で Windows Server Update Services ロールを有効にすることはできません](https://support.microsoft.com/kb/2762663) (2013 年2月)
 
 ## <a name="troubleshoot"></a>トラブルシューティング
 

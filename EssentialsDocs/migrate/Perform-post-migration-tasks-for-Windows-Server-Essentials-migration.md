@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f2d236a4-0d62-4961-9d1f-332054e06f6d
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 3fda095624260c1f44a5a46887c1e8e1cbdcdca7
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: abd092b3e6b4176c83b51995f140aad0dafc6e0f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180528"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625635"
 ---
 # <a name="perform-post-migration-tasks-for-windows-server-essentials-migration1"></a>Windows Server Essentials migration1 の移行後のタスクを実行する
 
@@ -30,7 +30,7 @@ ms.locfileid: "87180528"
 -   [組み込み Administrators グループにバッチ ジョブとしてログオンする権利を付与する](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)
 
 
-##  <a name="delete-dns-entries-of-the-source-server"></a><a name="BKMK_DeleteDNSEntries"></a>移行元サーバーの DNS エントリを削除する
+##  <a name="delete-dns-entries-of-the-source-server"></a><a name="BKMK_DeleteDNSEntries"></a> 移行元サーバーの DNS エントリを削除する
  移行元サーバーを使用停止した後、ドメイン ネーム サービス (DNS) サーバーに移行元サーバーを参照しているエントリがまだ含まれる場合があります。 そのような DNS エントリを削除します。
 
 #### <a name="to-delete-dns-entries-that-point-to-the-source-server"></a>移行元サーバーを指定する DNS エントリを削除するには
@@ -55,12 +55,12 @@ ms.locfileid: "87180528"
 
 10. 手順 6 ～ 9 を繰り返して、移行元サーバーを指定する逆引き参照ゾーンをすべて削除します。
 
-##  <a name="share-line-of-business-and-other-application-data-folders"></a><a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a>基幹業務およびその他のアプリケーションデータフォルダーの共有
- 基幹業務アプリケーションなどのアプリケーションのデータ フォルダーを移行先サーバーにコピーした後で、そのフォルダーに共有フォルダーのアクセス許可と NTFS アクセス許可を設定する必要があります。 アクセス許可を設定すると、Windows Server Essentials ダッシュボードの [**記憶域**] セクションに共有フォルダーが表示されます。
+##  <a name="share-line-of-business-and-other-application-data-folders"></a><a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a> 基幹業務およびその他のアプリケーションデータフォルダーの共有
+ 基幹業務アプリケーションなどのアプリケーションのデータ フォルダーを移行先サーバーにコピーした後で、そのフォルダーに共有フォルダーのアクセス許可と NTFS アクセス許可を設定する必要があります。 アクセス許可を設定すると、Windows Server Essentials ダッシュボードの [ **記憶域** ] セクションに共有フォルダーが表示されます。
 
  ログオン スクリプトを使用してドライブを共有フォルダーに割り当てている場合、移行先サーバー上のドライブに割り当てを行うためのスクリプトを更新する必要があります。
 
-##  <a name="fix-client-computer-issues-after-migrating"></a><a name="BKMK_FixClientComputerIssuesAfterMigrating"></a>移行後にクライアントコンピューターの問題を修正する
+##  <a name="fix-client-computer-issues-after-migrating"></a><a name="BKMK_FixClientComputerIssuesAfterMigrating"></a> 移行後にクライアントコンピューターの問題を修正する
  Microsoft Internet Security and セラレーション (ISA) Server がインストールされている Windows Small Business Server 2003 Premium Edition から Windows Server Essentials に移行する場合、ネットワーク上のクライアントコンピューターには、プロキシサーバーを使用するように構成された Microsoft ファイアウォールクライアントと Internet Explorer が引き続き存在します。
 
  プロキシ サーバーは存在しなくなったので、これはクライアント コンピューターでの接続の問題の原因になります。 別のプロキシ サーバーが構成されている場合、クライアント コンピューターは引き続き Windows SBS 2003 を実行するサーバーをプロキシ サーバーに使用します。 この問題を修正するには、プロキシ サーバーを使用しないように、または新しいプロキシ サーバーを使用するように、Internet Explorer を構成する必要があります。
@@ -87,7 +87,7 @@ ms.locfileid: "87180528"
 
 4.  Web サイトにアクセスして、接続の設定が正しいことを確認します。
 
-##  <a name="give-the-built-in-administrators-group-the-right-to-log-on-as-a-batch-job"></a><a name="BKMK_AdminGroup"></a>組み込みの Administrators グループにバッチジョブとしてログオンする権限を付与する
+##  <a name="give-the-built-in-administrators-group-the-right-to-log-on-as-a-batch-job"></a><a name="BKMK_AdminGroup"></a> 組み込みの Administrators グループにバッチジョブとしてログオンする権限を付与する
  既存の Windows Small Business Server 2003 ドメインを Windows Server Essentials に移行した後、組み込みの Administrators グループにバッチジョブとしてログオンする権限を付与する必要があります。 組み込み Administrators グループに移行先サーバーにバッチ ジョブとしてログオンするための権利がまだあることを確認します。 移行先サーバーにログオンしないでアラートを実行するために、Administrators にはこの権利が必要です。
 
 #### <a name="to-give-the-built-in-administrators-group-the-right-to-log-on-as-a-batch-job"></a>組み込み Administrators グループにバッチ ジョブとしてログオンする権利を付与するには
@@ -114,7 +114,7 @@ ms.locfileid: "87180528"
 
 11. [**名前の確認**] をクリックして組み込み Administrators グループが表示されることを確認した後、[**OK**] を 3 回クリックして設定を保存します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 
 -   [Windows SBS 2003 からの移行](Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)

@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ecf19216-7aac-4aca-839a-342ac28f5329
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 4afba33d105f0348aaf7c130ccbe5a3b87fc1cb2
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: d46e760fd168d44cb8f036d6b1b28180db2ffce2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838311"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625117"
 ---
 # <a name="troubleshoot-windows-server-essentials-installation"></a>Windows Server Essentials のインストールに関するトラブルシューティング
 
@@ -33,7 +33,7 @@ ms.locfileid: "87838311"
 > [!NOTE]
 >  Windows Server Essentials コミュニティの最新のトラブルシューティング情報については、 [Windows Server Essentials フォーラム](/answers/topics/windows-server-essentials.html/threads)を参照することをお勧めします。 Windows Server Essentials フォーラムは、ヘルプを検索したり、質問したりするために最適な場所です。
 
-##  <a name="general-troubleshooting-steps"></a><a name="BKMK_GeneralTroubleshootingSteps"></a>一般的なトラブルシューティング手順
+##  <a name="general-troubleshooting-steps"></a><a name="BKMK_GeneralTroubleshootingSteps"></a> 一般的なトラブルシューティング手順
  Windows Server Essentials のインストールに失敗した場合は、次の手順を実行して、エラーの原因となった問題を特定してください。
 
 > [!IMPORTANT]
@@ -43,7 +43,7 @@ ms.locfileid: "87838311"
 
 1.  サーバー ハードウェアが最小ハードウェア要件を満たしていることを確認します。 ハードウェア要件の詳細については、「 [Windows Server Essentials のシステム要件](../get-started/system-requirements.md)」を参照してください。
 
-2.  MSDN から Windows Server Essentials インストール DVD を受け取った場合は、SHA1 の合計を確認して、DVD が有効であることを確認します。 詳細については、「[ファイルチェックサム整合性検証ユーティリティの可用性と説明](https://go.microsoft.com/fwlink/?LinkId=220495)」 (「」を参照してください https://go.microsoft.com/fwlink/?LinkId=220495) 。
+2.  MSDN から Windows Server Essentials インストール DVD を受け取った場合は、SHA1 の合計を確認して、DVD が有効であることを確認します。 詳細については、「 [ファイルチェックサム整合性検証ユーティリティの可用性と説明](https://go.microsoft.com/fwlink/?LinkId=220495) 」 (「」を参照してください https://go.microsoft.com/fwlink/?LinkId=220495) 。
 
 3.  サーバーのネットワーク アダプターが、ネットワーク ケーブルでルーターに接続されていることを確認します。
 
@@ -56,12 +56,12 @@ ms.locfileid: "87838311"
 
 6.  インストール中にサーバーのセットアップ中にエラーが発生した場合は、サーバー回復 DVD とハードウェアの製造元から提供されている指示に従って、サーバーを工場出荷時の既定の設定に戻します。
 
-##  <a name="troubleshoot-driver-issues"></a><a name="BKMK_TroubleshootDrivers"></a>ドライバーに関する問題のトラブルシューティング
+##  <a name="troubleshoot-driver-issues"></a><a name="BKMK_TroubleshootDrivers"></a> ドライバーに関する問題のトラブルシューティング
  Windows Server Essentials をインストールするときの最も一般的な問題は、ドライバーを手動でインストールする必要がある記憶域コントローラーです。 Windows には多くの記憶域コントローラー用ドライバーが含まれていますが、特定のハードウェアのドライバーに関しては含まれていない場合があります。
 
  また、特定のハードウェアに関して、ネットワーク カード ドライバーを手動でインストールしなければならないこともあります。
 
-###  <a name="adding-drivers-for-storage-controllers"></a><a name="BKMK_StorageDrivers"></a>記憶域コントローラーのドライバーを追加しています
+###  <a name="adding-drivers-for-storage-controllers"></a><a name="BKMK_StorageDrivers"></a> 記憶域コントローラーのドライバーを追加しています
  ハードウェアに Windows Server Essentials に含まれていない記憶域ドライバーが必要な場合は、次の情報を使用してセットアップを完了します。
 
  セットアップ中に次のメッセージが表示される場合、記憶域コントローラー用ドライバーを手動で追加する必要があります。
@@ -84,7 +84,7 @@ ms.locfileid: "87838311"
 
     いずれかの記憶域コントローラードライバーが見つからない場合は、[Windows Server Essentials セットアップエラー] ダイアログボックスが表示されます。
 
-5. [Windows Server Essentials セットアップエラー] ダイアログボックスで、[**はい**] をクリックして追加の記憶域ドライバーを読み込みます。
+5. [Windows Server Essentials セットアップエラー] ダイアログボックスで、[ **はい** ] をクリックして追加の記憶域ドライバーを読み込みます。
 
 6. **[ドライバーの inf ファイルを選択してください]** というプロンプトで、プロッピー ディスクまたは USB フラッシュ ドライブの DRIVERS フォルダーにある .inf ファイルにナビゲートし、そのファイル名を右クリックして、**[開く]** をクリックします。 対象のドライバーがロードされます。
 
@@ -95,7 +95,7 @@ ms.locfileid: "87838311"
 
    セットアップを引き続き続行します。
 
-###  <a name="adding-drivers-for-network-adapters"></a><a name="BKMK_AddingNICdrivers"></a>ネットワークアダプターのドライバーを追加しています
+###  <a name="adding-drivers-for-network-adapters"></a><a name="BKMK_AddingNICdrivers"></a> ネットワークアダプターのドライバーを追加しています
  コンピューター上のネットワークアダプターが Windows Server Essentials でサポートされていない場合、セットアップの完了後にサーバーがネットワークに接続できなくなり、コンピューターをサーバーに接続できなくなります。
 
  Windows Server Essentials のインストールが終了すると、ネットワークアダプタードライバーが自動的にインストールされなかったかどうかが通知されます。 [コントロール パネル] の **[ネットワーク接続]** を使用して、不足しているネットワーク アダプター ドライバーがあるかどうかを確認することもできます。 サーバー上で対象のネットワーク アダプターに関連したネットワーク接続が表示されない場合、ドライバーをインストールする必要があります。

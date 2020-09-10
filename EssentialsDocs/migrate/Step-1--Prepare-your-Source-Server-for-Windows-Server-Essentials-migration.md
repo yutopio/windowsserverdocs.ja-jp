@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 244c8a06-04c6-4863-8b52-974786455373
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: c2007160c294074287437bedb7e94b318432a9b4
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 2be09665c0a2361938226b10be0ef058b8aa0ee6
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838351"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625503"
 ---
 # <a name="step-1-prepare-your-source-server-for-windows-server-essentials-migration"></a>手順 1: Windows Server Essentials への移行に向けて移行元サーバーを準備する
 
@@ -33,7 +33,7 @@ ms.locfileid: "87838351"
 
 5.  [基幹業務アプリケーションの移行計画の作成](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MigrateLOB)
 
-###  <a name="back-up-your-source-server"></a><a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a>移行元サーバーのバックアップ
+###  <a name="back-up-your-source-server"></a><a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> 移行元サーバーのバックアップ
  移行プロセスを開始する前に、移行元サーバーをバックアップします。 バックアップを作成すると、移行中に回復不可能なエラーが発生した場合に、データが不用意に失われることを防ぐことができます。
 
 ##### <a name="to-back-up-the-source-server"></a>移行元サーバーをバックアップするには
@@ -42,7 +42,7 @@ ms.locfileid: "87838351"
 
 2. バックアップが正常に実行されたことを確認します。 バックアップの整合性をテストするには、バックアップからランダムにファイルを選択し、それらのファイルを別の場所に復元して、復元されたファイルが元のファイルと同じことを確認します。
 
-   |Product|リソース|
+   |製品|リソース|
    |---|---|
    |Windows Small Business Server 2003|[Windows Small Business Server 2003 のバックアップと復元](/previous-versions/tn-archive/cc875809(v=technet.10))
    |Windows Small Business Server 2008|[Windows Small Business Server 2008 のデータのバックアップと復元](https://technet.microsoft.com/library/cc527505\(WS.10\).aspx)
@@ -51,10 +51,10 @@ ms.locfileid: "87838351"
    |Windows Small Business Server 2011 Standard|[サーバー バックアップの管理](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc527488(v=ws.11))
    |Windows Server Essentials|[Windows Server Essentials でのバックアップと復元の管理](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10))
 
-###  <a name="install-the-most-recent-service-packs"></a><a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a>最新のサービスパックをインストールする
+###  <a name="install-the-most-recent-service-packs"></a><a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a> 最新のサービスパックをインストールする
  移行前に、最新の更新プログラムとサービス パックを移行元サーバーにインストールする必要があります。
 
-###  <a name="delete-the-log-on-as-a-service-account-setting"></a><a name="BKMK_DeleteSvcAcctSetting"></a>[サービスとしてログオン] アカウント設定を削除します。
+###  <a name="delete-the-log-on-as-a-service-account-setting"></a><a name="BKMK_DeleteSvcAcctSetting"></a> [サービスとしてログオン] アカウント設定を削除します。
  Windows Small Business Server 2003 または Windows Server 2003 から移行する場合、グループ ポリシーから [**サービスとしてログオン**] アカウント設定を削除します。
 
 ##### <a name="to-delete-the-log-on-as-a-service-account-setting"></a>[サービスとしてログオン] アカウント設定を削除するには
@@ -71,7 +71,7 @@ ms.locfileid: "87838351"
 
 6.  \\\Localhost\SYSVOL \\<domainname \>\scripts\SBS_LOGIN_SCRIPT.bat を削除します。
 
-###  <a name="evaluate-the-health-of-the-source-server"></a><a name="BKMK_EvaluateHealth"></a>移行元サーバーの正常性を評価する
+###  <a name="evaluate-the-health-of-the-source-server"></a><a name="BKMK_EvaluateHealth"></a> 移行元サーバーの正常性を評価する
  移行を開始する前に、移行元サーバーの正常性を評価することが重要です。 以下の手順を使用して、更新プログラムが最新であることを確認し、システム正常性レポートを生成し、Windows Server Solutions ベスト プラクティス アナライザー (BPA) を実行します。
 
 #### <a name="download-and-install-critical-and-security-updates"></a>重要な更新プログラムとセキュリティ更新プログラムをダウンロードしてインストールする
@@ -128,14 +128,14 @@ ms.locfileid: "87838351"
 
    BPA ツールはサーバーの構成に関する情報を収集した後に、情報が正しいことを検証し、重大度で並べ替えた情報と問題の一覧を管理者に提示します。 一覧では各問題の説明と推奨事項または可能な解決策が提供されます。 レポートの種類には次の 3 種類があります。
 
-|レポートの種類|説明
+|レポートの種類|Description
 |-----------------|-----------------
 |リスト レポート|レポートを 1 次元のリストで表示します。
 |ツリー レポート|レポートを階層リストで表示します。
 
 問題の説明と解決策を確認するには、レポート内の問題をクリックします。 BPA ツールで報告された問題のすべてが移行に影響するとは限りませんが、移行が正常に行われるようにするには、できるだけ多くの問題を解決する必要があります。
 
-####  <a name="synchronize-the-source-server-time-with-an-external-time-source"></a><a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a>移行元サーバーの時刻を外部タイムソースと同期する
+####  <a name="synchronize-the-source-server-time-with-an-external-time-source"></a><a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a> 移行元サーバーの時刻を外部タイムソースと同期する
  移行元サーバーの時刻は、移行先サーバーの時刻の 5 分以内の誤差に設定し、日付とタイム ゾーンが両サーバー上で一致する必要があります。 移行元サーバーが仮想マシン上で実行されている場合、ホスト サーバーの日付、時刻、およびタイム ゾーンが、移行元サーバー、および移行先サーバーと一致する必要があります。 Windows Server Essentials が正常にインストールされていることを確認するには、移行元サーバーの時刻をインターネット上のネットワークタイムプロトコル (NTP) サーバーと同期する必要があります。
 
 ###### <a name="to-synchronize-the-source-server-time-with-the-ntp-server"></a>移行元サーバーの時刻を NTP サーバーと同期するには
@@ -153,7 +153,7 @@ ms.locfileid: "87838351"
 > [!IMPORTANT]
 >  Windows Server Essentials のインストール中に、移行先サーバーの時刻を確認し、必要に応じて変更することができます。 この時刻と、移行元サーバーに設定されている時刻との差が、5 分以内であることを確認してください。 インストールが完了すると、移行先サーバーが NTP と同期されます。 ドメインに参加しているすべてのコンピューターは、移行元サーバーも含めて移行先サーバーと同期されます。これには、プライマリ ドメイン コントローラー (PDC) エミュレーター マスターの役割が必要です。
 
-###  <a name="create-a-plan-to-migrate-line-of-business-applications"></a><a name="BKMK_MigrateLOB"></a>基幹業務アプリケーションを移行するための計画を作成する
+###  <a name="create-a-plan-to-migrate-line-of-business-applications"></a><a name="BKMK_MigrateLOB"></a> 基幹業務アプリケーションを移行するための計画を作成する
  基幹業務 (LOB) アプリケーションは、業務の遂行に欠かせない重要なコンピューター アプリケーションです。 LOB アプリケーションには、会計や、サプライチェーン管理、リソース計画アプリケーションなどがあります。
 
  LOB アプリケーションの移行を計画する際は、LOB アプリケーションのプロバイダーに相談し、アプリケーションの適切な移行方法を決定してください。 また、移行先サーバーで LOB アプリケーションをインストールする際に使用するメディアも選択する必要があります。
@@ -168,21 +168,21 @@ ms.locfileid: "87838351"
 > [!NOTE]
 >  移行元サーバーを更新し、移行の準備が完了したら、移行プロセスを続行する前に、更新したサーバーのバックアップを作成することをお勧めします。
 
-#### <a name="migrate-email-to-microsoft-office-365"></a>電子メールを Microsoft Office 365 に移行する
- ドメインの電子メール ソリューションとして Microsoft Office 365 を利用することにした場合は、「 [Exchange のカットオーバー移行によるすべてのメールボックスのクラウドへの移行](https://help.outlook.com/140/ms.exch.ecp.emailmigrationwizardexchangelearnmore.aspx) 」に記載されているガイダンスに従って、Office 365 への電子メールの移行を開始します。 Windows Server Essentials をインストールする前に、電子メールの移行を完了することをお勧めします。
+#### <a name="migrate-email-to-microsoft-365"></a>Microsoft 365 に電子メールを移行する
+ ドメインの電子メールソリューションとして Microsoft 365 を使用することを選択した場合は、「 [Exchange の移行を切り替えてすべてのメールボックスをクラウドに移行](https://help.outlook.com/140/ms.exch.ecp.emailmigrationwizardexchangelearnmore.aspx) する」のガイダンスに従って、Microsoft 365 への電子メールの移行を開始します。 Windows Server Essentials をインストールする前に、電子メールの移行を完了することをお勧めします。
 
 > [!NOTE]
->  Windows Server Essentials と Office 365 を統合する場合は、移行元サーバーでオンプレミスの Exchange Server を削除する手順は必須です。 Office 365 に Exchange Server パブリック フォルダーを移行する方法については、ブログの投稿「 [Office 365 用 Microsoft Exchange 2013 パブリック フォルダー移行スクリプト](/archive/blogs/fmustafa/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365)」を参照してください。
+>  Windows Server Essentials を Microsoft 365 と統合する場合は、移行元サーバーでオンプレミスの Exchange Server を削除する手順は必須です。 Microsoft 365 に Exchange Server パブリックフォルダーを移行する方法の詳細については、ブログ記事「 [Microsoft 365 用の Microsoft Exchange 2013 パブリックフォルダー移行スクリプト](/archive/blogs/fmustafa/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365)」を参照してください。
 >
->  インストールが完了したら、 **Microsoft Office 365 との統合**タスクを実行して、Windows Server Essentials の Office 365 統合機能を有効にする必要があります。
+>  インストールが完了したら、[ **Microsoft 365 との統合** ] タスクを実行して、Windows Server Essentials の Microsoft 365 統合機能を有効にする必要があります。
 
 > [!IMPORTANT]
->  Office 365 移行ツールが移行元サーバーで実行している Exchange Server に接続できるようにするには、移行元サーバーで RPC over HTTP を有効にする必要があります。 RPC over HTTP を有効にする方法の詳細については、「 [Small Business Server 2003 に RPC over HTTP を初めて展開する方法 (標準またはプレミアム)](/previous-versions/tn-archive/bb123622(v=exchg.65))」を参照してください。 RPC over HTTP を有効にした後で Office 365 移行ツールを正常に実行できない場合は、レジストリの HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\RpcProxy にある [ **ValidPorts** ] の設定を表示し、移行元サーバーの完全修飾ドメイン名 (FQDN) が含まれていることを確認してください。 FQDN が表示されていない場合は、次の例に従って手動で追加します。
+>  移行元サーバーで実行されている Exchange Server に Microsoft 365 移行ツールが接続できるようにするには、移行元サーバーで RPC over HTTP を有効にする必要があります。 RPC over HTTP を有効にする方法の詳細については、「 [Small Business Server 2003 に RPC over HTTP を初めて展開する方法 (標準またはプレミアム)](/previous-versions/tn-archive/bb123622(v=exchg.65))」を参照してください。 RPC over HTTP を有効にした後に Microsoft 365 移行ツールを正常に実行できない場合は HKEY_LOCAL_MACHINE \Software\Microsoft\Rpc\RpcProxy のレジストリで **ValidPorts** 設定を確認し、移行元サーバーの完全修飾ドメイン名 (FQDN) が表示されていることを確認します。 FQDN が表示されていない場合は、次の例に従って手動で追加します。
 >
 >  remote. *contoso*.com:6001-6002;remote. *contoso*.com:6004 (*contoso* は実際のドメイン名で置き換えてください)。
 
 #### <a name="migrate-email-to-another-on-premises-exchange-server"></a>電子メールをオンプレミスの別の Exchange Server に移行する
- 電子メールを別のオンプレミスの Exchange Server に移行する方法については、「[オンプレミスの Exchange server と Windows Server Essentials の統合](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200172(v=ws.11))」を参照してください。 Windows Server Essentials をインストールした後で、新しいオンプレミスの Exchange Server をセットアップし、移行元サーバーを降格する前に電子メールの移行を完了することをお勧めします。
+ 電子メールを別のオンプレミスの Exchange Server に移行する方法については、「 [オンプレミスの Exchange server と Windows Server Essentials の統合](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200172(v=ws.11))」を参照してください。 Windows Server Essentials をインストールした後で、新しいオンプレミスの Exchange Server をセットアップし、移行元サーバーを降格する前に電子メールの移行を完了することをお勧めします。
 
 > [!NOTE]
 >  Windows Small Business Server POP3 コネクタは、Exchange Server には含まれていません。 電子メール データを別の Exchange Server に移行すると、POP3 コネクタの機能は使用できなくなります。
@@ -190,7 +190,7 @@ ms.locfileid: "87838351"
 > [!NOTE]
 >  移行元サーバーを更新し、移行の準備が完了したら、移行プロセスを続行する前に、更新したサーバーのバックアップを作成してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
  Windows Server Essentials への移行のために移行元サーバーを準備しました。  [次に、「手順 2: Windows Server Essentials を新しいレプリカドメインコントローラーとしてインストール](Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md)する」に進みます。
 
 すべての手順を表示するには、「 [Windows Server Essentials への移行](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)」を参照してください。

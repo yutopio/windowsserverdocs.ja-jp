@@ -3,16 +3,16 @@ title: tscon
 description: リモートデスクトップセッションホスト (rd セッションホスト) サーバー上の別のセッションに接続する tscon のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 315a9793-cd10-4987-bb68-89a9d13f7fce
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: d0acb75411cae8c4d844e8ff2b113c6a9c638a9b
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 2ba6df3a8878c42ac8ce8ac88671bb645bfedf86
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89026880"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89624602"
 ---
 # <a name="tscon"></a>tscon
 
@@ -31,7 +31,7 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
 ```
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |\<SessionID>|接続先のセッションの ID を指定します。 省略可能な **/dest:** < *SessionName*> パラメーターを使用すると、これは接続先のセッションの ID になります。|
 |\<SessionName>|接続先のセッションの名前を指定します。|
@@ -41,7 +41,7 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
 |/v|実行されているアクションに関する情報を表示します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 -   別のセッションに接続するには、フルコントロールアクセス許可を持っているか、特殊なアクセス許可を接続している必要があります。
 -   **/Dest:** < *SessionName*の> パラメーターを使用すると、別のユーザーのセッションを別のセッションに接続できます。
 -   <*password*> パラメーターにパスワードを指定せず、ターゲットセッションが現在のセッション以外のユーザーに属している場合、 **tscon** は失敗します。

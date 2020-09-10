@@ -5,21 +5,21 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 2fdbc016-d464-43cb-bd75-8a63e61588a2
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 4057e0d6805c7633bf07960d06d97b2eab15f28a
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 8440fe0a32128182b86d26190c9b0448c64807d8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838091"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623918"
 ---
 # <a name="build-multi-language-client-restore-media"></a>複数言語のクライアント復元メディアの作成
 
 >適用対象: windows Server 2016 Essentials、Windows Server 2012 R2 Essentials、Windows Server 2012 Essentials
 
 > [!NOTE]
->  まず、「[チュートリアル:](/previous-versions/windows/it-pro/windows-8.1-and-8/jj126995(v=win.10)) Windows Server Essentials install.wim pack をインストールする前に、多言語 windows イメージの作成」の説明に従って、多言語の windows イメージを作成する必要があります。
+>  まず、「 [チュートリアル:](/previous-versions/windows/it-pro/windows-8.1-and-8/jj126995(v=win.10)) Windows Server Essentials install.wim pack をインストールする前に、多言語 windows イメージの作成」の説明に従って、多言語の windows イメージを作成する必要があります。
 
  複数言語のサーバー インストール DVD を作成すると、サーバーの install.wim に言語パックがインストールされます。 言語パックの一部として、復元ウィザードのローカライズされたリソースがインストールされます。
 

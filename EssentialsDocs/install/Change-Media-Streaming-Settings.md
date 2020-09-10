@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: dec690d2-f80c-4b09-99d6-3bba41331972
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 5001d16a3bcdfbb02e7578c61298108ef84c8536
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 041a7f53b02d9b6b6368bd2b2f4ac991a14a61fa
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181478"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623888"
 ---
 # <a name="change-media-streaming-settings"></a>メディア ストリーミング設定の変更
 
@@ -28,7 +28,7 @@ ms.locfileid: "87181478"
 
 -   [プログラムによってメディア ストリーミングを有効または無効にする](Change-Media-Streaming-Settings.md#BKMK_Program)
 
-##  <a name="hide-remote-media-streaming-add-in"></a><a name="BKMK_DisableRemote"></a>リモートメディアストリーミングアドインを非表示にする
+##  <a name="hide-remote-media-streaming-add-in"></a><a name="BKMK_DisableRemote"></a> リモートメディアストリーミングアドインを非表示にする
  リモート メディア ストリーミング アドインを非表示にするには、レジストリのエントリを追加します。
 
 #### <a name="to-hide-the-remote-media-streaming-add-in"></a>リモート メディア ストリーミング アドインを非表示にするには
@@ -49,7 +49,7 @@ ms.locfileid: "87181478"
 
 7.  値データに「**1**」と入力し、[**OK**] をクリックします。
 
-##  <a name="set-the-media-library-name"></a><a name="BKMK_LibraryName"></a>メディアライブラリ名を設定する
+##  <a name="set-the-media-library-name"></a><a name="BKMK_LibraryName"></a> メディアライブラリ名を設定する
  Windows Server Solutions SDK のクラスを使用して、メディア ライブラリ名を設定できます。 メディア ライブラリ名を設定するには、**Microsoft.WindowsServerSolutions.MediaStreaming** 名前空間の **MediaStreamingManager** クラスの **SetMediaLibraryName** メソッドを使用します。 次の例では、メディア ライブラリ名を設定する方法を示します。
 
 ```c#
@@ -62,10 +62,10 @@ mediaStreamingManager.SetMediaLibraryName(mediaLibraryName);
 
  詳細については、 [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648)を参照してください。
 
-##  <a name="set-video-streaming-quality"></a><a name="BKMK_StreamingQuality"></a>ビデオストリーミングの品質を設定する
+##  <a name="set-video-streaming-quality"></a><a name="BKMK_StreamingQuality"></a> ビデオストリーミングの品質を設定する
  ビデオ ストリーミングの品質を設定するには、WinSAT CPU スコアを取得し、WinSAT スコア情報を含む .xml ファイルを作成およびインストールします。 初期構成を実行する前に WinSAT スコア情報を含む .xml ファイルをインストールすると、ビデオ品質の設定のためのユーザー インターフェイスがお客様の画面に表示されなくなります。 詳細については、「[サーバーでの WinSAT スコアの設定](Set-the-WinSAT-Score-on-the-Server.md)」を参照してください。
 
-##  <a name="programmatically-enable-or-disable-media-streaming"></a><a name="BKMK_Program"></a>プログラムによってメディアストリーミングを有効または無効にする
+##  <a name="programmatically-enable-or-disable-media-streaming"></a><a name="BKMK_Program"></a> プログラムによってメディアストリーミングを有効または無効にする
  Windows Server Solutions SDK のクラスを使用して、プログラムによってメディア ストリーミングを有効または無効にできます。 メディア ストリーミングを有効または無効にするには、**Microsoft.WindowsServerSolutions.MediaStreaming** 名前空間の **MediaStreamingManager** クラスの **SetMediaStreamingEnabled** メソッドを使用します。 次のコード例は、メディア ストリーミングを有効にする方法を示します。
 
 ```c#

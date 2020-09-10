@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: aac6b7f3-9020-46c3-a83f-b81542300385
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: d974f4dc53b9ce389254b162a3305b277181ceed
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 17f2d7c8a409ed49ea0f9bfa50952467e4694243
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181538"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623993"
 ---
 # <a name="add-a-tab-to-settings"></a>[設定] へのタブの追加
 
@@ -29,7 +29,7 @@ ms.locfileid: "87181538"
 
 -   [アセンブリの参照コンピューターへのインストール](Add-a-Tab-to-Settings.md#BKMK_InstallAssembly)。
 
-###  <a name="add-an-implementation-of-the-isettingsdata-interface-to-the-assembly"></a><a name="BKMK_ISettingsData"></a>ISettingsData インターフェイスの実装をアセンブリに追加します。
+###  <a name="add-an-implementation-of-the-isettingsdata-interface-to-the-assembly"></a><a name="BKMK_ISettingsData"></a> ISettingsData インターフェイスの実装をアセンブリに追加します。
  ISettingsData インターフェイスは、\Program Files\Windows Server\Bin にある AdminCommon.dll アセンブリの Microsoft.WindowsServerSolutions.Settings 名前空間に含まれています。
 
 ##### <a name="to-add-the-isettingsdata-code-to-the-assembly"></a>ISettingsData コードをアセンブリに追加するには
@@ -144,10 +144,10 @@ ms.locfileid: "87181538"
 
 16. 保存し、ソリューションをビルドします。
 
-###  <a name="sign-the-assembly-with-an-authenticode-signature"></a><a name="BKMK_SignAssembly"></a>Authenticode 署名を使用してアセンブリに署名する
+###  <a name="sign-the-assembly-with-an-authenticode-signature"></a><a name="BKMK_SignAssembly"></a> Authenticode 署名を使用してアセンブリに署名する
  オペレーティング システムで使用するために、アセンブリを Authenticode で署名する必要があります。 アセンブリの署名の詳細については、「 [Authenticode によるコードの署名と確認 (英語の場合があります)](https://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode)」を参照してください。
 
-###  <a name="install-the-assembly-on-the-reference-computer"></a><a name="BKMK_InstallAssembly"></a>参照コンピューターにアセンブリをインストールする
+###  <a name="install-the-assembly-on-the-reference-computer"></a><a name="BKMK_InstallAssembly"></a> 参照コンピューターにアセンブリをインストールする
  ソリューションを正常にビルドした後、DashboardSettingsPage.dll ファイルのコピーを参照コンピューターの次のフォルダーに配置します。
 
  **%Programfiles%\Windows Server\Bin\OEM**

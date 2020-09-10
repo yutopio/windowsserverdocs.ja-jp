@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 2b882e87-347a-4010-b7fd-9599d61198dd
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: a3e80eb391f913b4d62d8224afb7745eb2671289
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 4a37d8e39dde95a143c15a5573be0deb0291d827
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180538"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625649"
 ---
 # <a name="move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Windows Server Essentials への移行のために設定とデータを移行先サーバーに移動する
 
@@ -46,8 +46,8 @@ ms.locfileid: "87180538"
  この場合、
  - \<SourceServerName\> は移行元サーバーの名前です。
  - \<SharedSourceFolderName\> は、移行元サーバー上の共有フォルダーの名前です。
- - \<DestinationServerName\>は、移行先サーバーの名前です。
- - \<SharedDestinationFolderName\>データのコピー先となる転送先サーバー上の共有フォルダーを指定します。
+ - \<DestinationServerName\> は、移行先サーバーの名前です。
+ - \<SharedDestinationFolderName\> データのコピー先となる転送先サーバー上の共有フォルダーを指定します。
 
 3. 移行元サーバーから移行する共有フォルダーごとに前記の手順を繰り返します。
 

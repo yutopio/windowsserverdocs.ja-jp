@@ -4,15 +4,15 @@ description: Microsoft ハイブリッドクラウド印刷をセットアップ
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247c5e9
 ms.topic: how-to
 author: msjimwu
-ms.author: coreyp
-manager: dongill
+ms.author: jimwu
+manager: mtillman
 ms.date: 3/15/2018
-ms.openlocfilehash: 253cf78e39809473fc865de90915b6a9f870d098
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 769e9db9be5121b47c72b076bba3a78be841c5de
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992767"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625160"
 ---
 # <a name="deploy-windows-server-hybrid-cloud-print"></a>Windows Server のハイブリッド クラウド印刷をデプロイする
 
@@ -26,7 +26,7 @@ ms.locfileid: "87992767"
 
 - Premium サブスクリプションを Azure AD します。
 
-  Azure の試用版サブスクリプションについては[、「azure サブスクリプションの概要](https://azure.microsoft.com/trial/get-started-active-directory/)」を参照してください。
+  Azure の試用版サブスクリプションについては [、「azure サブスクリプションの概要](https://azure.microsoft.com/trial/get-started-active-directory/) 」を参照してください。
 
 - MDM サービス (Intune など)。
 
@@ -34,13 +34,13 @@ ms.locfileid: "87992767"
 
 - Active Directory を実行している Windows Server 2016 以降のコンピューター。
 
-  Active Directory を設定する方法については、「ステップバイ[ステップ: Windows Server 2016 での Active Directory](/archive/blogs/canitpro/step-by-step-setting-up-active-directory-in-windows-server-2016)のセットアップ」を参照してください。
+  Active Directory を設定する方法については、「ステップバイ [ステップ: Windows Server 2016 での Active Directory](/archive/blogs/canitpro/step-by-step-setting-up-active-directory-in-windows-server-2016) のセットアップ」を参照してください。
 
 - プリントサーバーとして実行されている、ドメインに参加している専用の Windows Server 2016 以降のコンピューター。
 
 - コネクタサーバーとして実行されている、ドメインに参加している専用の Windows Server 2016 以降のコンピューター。
 
-  詳細については、「 [Azure AD アプリケーションプロキシコネクタ](/azure/active-directory/manage-apps/application-proxy-connectors)について」を参照してください。
+  詳細については、「 [Azure AD アプリケーションプロキシコネクタ](/azure/active-directory/manage-apps/application-proxy-connectors) について」を参照してください。
 
 - プリンターを公開するための Windows 10 の Creator Creator 更新プログラムまたはそれ以降のコンピューター。
 
@@ -48,19 +48,19 @@ ms.locfileid: "87992767"
 
   Azure によって作成されたドメイン*名 (onmicrosoft.com*) を使用することも、独自のドメイン名を購入することもできます。 「 [Azure Active Directory ポータルを使用したカスタムドメイン名の追加」を](/azure/active-directory/fundamentals/add-custom-domain)参照してください。
 
-## <a name="deployment-steps"></a>デプロイメントの手順
+## <a name="deployment-steps"></a>展開の手順
 
 次の手順は、一般的なハイブリッドクラウドの印刷展開用です。
 
 ### <a name="step-1---install-azure-ad-connect"></a>手順 1-Azure AD Connect をインストールする
 
-1. Azure AD 接続は Azure AD をオンプレミスの AD に同期します。 Active Directory がインストールされている Windows Server コンピューターで、簡易設定を使用して Azure AD Connect ソフトウェアをダウンロードしてインストールします。 「[簡易設定を使用した Azure AD Connect の概要」を](/azure/active-directory/hybrid/how-to-connect-install-express)参照してください。
+1. Azure AD 接続は Azure AD をオンプレミスの AD に同期します。 Active Directory がインストールされている Windows Server コンピューターで、簡易設定を使用して Azure AD Connect ソフトウェアをダウンロードしてインストールします。 「 [簡易設定を使用した Azure AD Connect の概要」を](/azure/active-directory/hybrid/how-to-connect-install-express)参照してください。
 
 ### <a name="step-2---install-application-proxy"></a>手順 2-アプリケーションプロキシをインストールする
 
 1. アプリケーションプロキシを使用すると、組織のユーザーはクラウドからオンプレミスのアプリケーションにアクセスできます。 コネクタサーバーにアプリケーションプロキシをインストールします。
     - インストール手順については、 [Azure Active Directory の「チュートリアル: アプリケーションプロキシを使用したリモートアクセスのためのオンプレミスアプリケーションの追加](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application)」を参照してください。
-    - 組織に複雑なネットワークトポロジがある場合は、専用のコネクタグループをお勧めします。 「[コネクタグループを使用して別のネットワークや場所にアプリケーションを発行する](/azure/active-directory/manage-apps/application-proxy-connector-groups)」を参照してください。
+    - 組織に複雑なネットワークトポロジがある場合は、専用のコネクタグループをお勧めします。 「 [コネクタグループを使用して別のネットワークや場所にアプリケーションを発行する](/azure/active-directory/manage-apps/application-proxy-connector-groups)」を参照してください。
 
 ### <a name="step-3---register-and-configure-applications"></a>手順 3-アプリケーションを登録して構成する
 
@@ -71,30 +71,30 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 
     ![AAD アプリの登録1](../media/hybrid-cloud-print/AAD-AppRegistration.png)
 
-    - アプリ名を入力します。 [**登録**] をクリックして完了します。
+    - アプリ名を入力します。 [ **登録** ] をクリックして完了します。
 
     ![AAD アプリの登録2](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria.png)
 
     - Enterprise Cloud Print service についても同じ手順を繰り返します。
     - ネイティブアプリについても同じ手順を繰り返します。
-    - 3つのアプリケーションが [**アプリの登録**] の下に表示されます。
+    - 3つのアプリケーションが [ **アプリの登録**] の下に表示されます。
 
     ![AAD アプリの登録3](../media/hybrid-cloud-print/AAD-AppRegistration-AllApps.png)
 
 2. 2つの Web アプリケーションの API を公開します。
-    - [**アプリの登録**] ブレードのままの状態で、探索サービスアプリをクリックし、[ **API の公開**] を選択します。次に、[アプリケーション ID URI] の横にある [**設定**] をクリックします。
+    - [ **アプリの登録** ] ブレードのままの状態で、探索サービスアプリをクリックし、[ **API の公開**] を選択します。次に、[アプリケーション ID URI] の横にある [ **設定** ] をクリックします。
 
     ![AAD は API 1 を公開します](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI.png)
 
-    - [アプリケーション ID URI] の既定値を変更せずに [**保存**] をクリックします。 この値はすぐに設定する必要があり、後で変更されます。
+    - [アプリケーション ID URI] の既定値を変更せずに [ **保存** ] をクリックします。 この値はすぐに設定する必要があり、後で変更されます。
 
     ![AAD は API 2 を公開します](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI-Save.png)
 
-    - [**スコープの追加**] をクリックします。
+    - [ **スコープの追加**] をクリックします。
 
     ![AAD は API 3 を公開します](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI-AddScope.png)
 
-    - [スコープ名] を指定し、管理者とユーザーの両方に同意を許可して同意の説明を入力し、[**スコープの追加**] をクリックして終了します。
+    - [スコープ名] を指定し、管理者とユーザーの両方に同意を許可して同意の説明を入力し、[ **スコープの追加** ] をクリックして終了します。
 
     ![AAD は API 4 を公開します](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI-ScopeName.png)
 
@@ -107,11 +107,11 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 
     ![AAD API アクセス許可1](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission.png)
 
-    - 組織が**使用**している api に切り替え、検索ボックスを使用して、前に追加した探索サービスを検索します。 検索結果からサービスをクリックします。
+    - 組織が **使用**している api に切り替え、検索ボックスを使用して、前に追加した探索サービスを検索します。 検索結果からサービスをクリックします。
 
     ![AAD API アクセス許可2](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-Mopria.png)
 
-    - [**委任**された権限] を選択します。 API のスコープの横にあるチェックボックスをオンにします。 [**アクセス許可の追加**] をクリックします。
+    - [ **委任**された権限] を選択します。 API のスコープの横にあるチェックボックスをオンにします。 [ **アクセス許可の追加**] をクリックします。
 
     ![AAD API アクセス許可3](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-Mopria-Add.png)
 
@@ -119,11 +119,11 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 
     ![AAD API アクセス許可4](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-ECP-Add.png)
 
-    - [API のアクセス許可] ブレードに戻ったら、10秒待ってから、[**全体管理者の同意**] をクリックします。
+    - [API のアクセス許可] ブレードに戻ったら、10秒待ってから、[ **全体管理者の同意**] をクリックします。
 
     ![AAD API アクセス許可5](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-GrantConsent.png)
 
-    - プロンプトが表示されたら、[**はい]** をクリックします。
+    - プロンプトが表示されたら、[ **はい]** をクリックします。
 
     ![AAD API アクセス許可6](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-GrantConsent-Yes.png)
 
@@ -136,7 +136,7 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 
     ![AAD アプリプロキシ1](../media/hybrid-cloud-print/AAD-EnterpriseApp-AllApps.png)
 
-    - [**アプリケーションプロキシ**] をクリックします。 形式を使用して内部 Url を入力し `https://<fully qualified domain name of the Print Server>/mcs/` ます。 [**保存**] をクリックして完了します。
+    - [ **アプリケーションプロキシ**] をクリックします。 形式を使用して内部 Url を入力し `https://<fully qualified domain name of the Print Server>/mcs/` ます。 [ **保存** ] をクリックして完了します。
 
     ![AAD アプリプロキシ2](../media/hybrid-cloud-print/AAD-EnterpriseApp-Mopria-AppProxy.png)
 
@@ -144,7 +144,7 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 
     ![AAD アプリプロキシ3](../media/hybrid-cloud-print/AAD-EnterpriseApp-ECP-AppProxy.png)
 
-    - **[Azure Active Directory]**  >  **[アプリの登録]** に移動します。 [検出サービス] をクリックします。 [**概要**] で、アプリケーション ID URI が既定から [**アプリケーションプロキシ**] の下の外部 URL に変更されていることを確認します。 この URI は、プリントサーバーのセットアップ、クライアント MDM ポリシー、およびプリンタの発行時に使用されます。
+    - **[Azure Active Directory]**  >  **[アプリの登録]** に移動します。 [検出サービス] をクリックします。 [ **概要**] で、アプリケーション ID URI が既定から [ **アプリケーションプロキシ**] の下の外部 URL に変更されていることを確認します。 この URI は、プリントサーバーのセットアップ、クライアント MDM ポリシー、およびプリンタの発行時に使用されます。
 
     ![AAD アプリプロキシ4](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-Overview.png)
 
@@ -154,11 +154,11 @@ HCP サービスとの認証された通信を有効にするには、3つのア
     - Enterprise Cloud Print service についても同じ手順を繰り返します。
 
 6. ネイティブアプリでリダイレクト URI を構成する
-    - **[Azure Active Directory]**  >  **[アプリの登録]** に移動します。 ネイティブアプリをクリックします。 [**概要**] にアクセスし、**アプリケーション (クライアント) ID**をコピーします。
+    - **[Azure Active Directory]**  >  **[アプリの登録]** に移動します。 ネイティブアプリをクリックします。 [ **概要** ] にアクセスし、 **アプリケーション (クライアント) ID**をコピーします。
 
     ![AAD リダイレクト URI 1](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Overview.png)
 
-    - [**認証**] にアクセスします。 [**種類**] ドロップダウンボックスをに変更 `Public...` し、次の形式を使用して2つのリダイレクト uri を入力します。ここで、 `<NativeClientAppID>` は前の手順です。
+    - [ **認証**] にアクセスします。 [ **種類** ] ドロップダウンボックスをに変更 `Public...` し、次の形式を使用して2つのリダイレクト uri を入力します。ここで、 `<NativeClientAppID>` は前の手順です。
 
         `ms-appx-web://Microsoft.AAD.BrokerPlugin/<NativeClientAppID>`
 
@@ -166,7 +166,7 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 
     ![AAD リダイレクト URI 2](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Authentication.png)
 
-    - [**保存**] をクリックして終了します。
+    - [ **保存** ] をクリックして終了します。
 
 ### <a name="step-4---setup-the-print-server"></a>手順 4-プリントサーバーをセットアップする
 
@@ -174,14 +174,14 @@ HCP サービスとの認証された通信を有効にするには、3つのア
     - 次のサーバーの役割をインストールします。
         - プリントサーバーの役割
         - インターネット インフォメーション サービス (IIS)
-    - サーバーの役割のインストール方法の詳細について[は、「役割と機能の追加ウィザードを使用して役割、役割サービス、および機能をインストール](../server-manager/install-or-uninstall-roles-role-services-or-features.md#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard)する」を参照してください。
+    - サーバーの役割のインストール方法の詳細について [は、「役割と機能の追加ウィザードを使用して役割、役割サービス、および機能をインストール](../server-manager/install-or-uninstall-roles-role-services-or-features.md#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard) する」を参照してください。
 
     ![プリントサーバーの役割](../media/hybrid-cloud-print/PrintServer-Roles.png)
 
 2. ハイブリッドクラウド印刷の PowerShell モジュールをインストールします。
     - 管理者特権の PowerShell コマンドプロンプトから次のコマンドを実行します。
 
-        `find-module -Name PublishCloudPrinter`コンピューターが PowerShell ギャラリーに接続できることを確認するには (PSGallery)
+        `find-module -Name PublishCloudPrinter` コンピューターが PowerShell ギャラリーに接続できることを確認するには (PSGallery)
 
         `install-module -Name PublishCloudPrinter`
 
@@ -210,9 +210,9 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 
     ![プリントサーバークラウドの印刷配置](../media/hybrid-cloud-print/PrintServer-CloudPrintDeploy.png)
 
-    - ログファイルを調べて、エラーが発生していないかどうかを確認します。`C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0\CloudPrintDeploy.log`
+    - ログファイルを調べて、エラーが発生していないかどうかを確認します。 `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0\CloudPrintDeploy.log`
 
-4. 管理者特権のコマンドプロンプトで**Regitedit**を実行します。 コンピューター \ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\EnterpriseCloudPrintService. にアクセス
+4. 管理者特権のコマンドプロンプトで **Regitedit** を実行します。 コンピューター \ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\EnterpriseCloudPrintService. にアクセス
     - AzureAudience がエンタープライズクラウド印刷アプリのアプリケーション ID URI に設定されていることを確認してください。
     - AzureTenant が Azure AD ドメイン名に設定されていることを確認します。
 
@@ -225,12 +225,12 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 
     ![プリントサーバーのレジストリキー](../media/hybrid-cloud-print/PrintServer-RegEdit-Mopria.png)
 
-6. Powershell の昇格コマンドプロンプトで**iisreset**を実行します。 これにより、前の手順で行われたレジストリの変更が有効になります。
+6. Powershell の昇格コマンドプロンプトで **iisreset** を実行します。 これにより、前の手順で行われたレジストリの変更が有効になります。
 
 7. SSL をサポートするように IIS エンドポイントを構成します。
     - SSL 証明書には、自己署名証明書、または信頼された証明機関 (CA) から発行された証明書を使用できます。
-    - 自己署名証明書を使用する場合は、**証明書がクライアントコンピューターにインポートされていることを確認**します。
-    - サードパーティプロバイダーにドメインを登録する場合は、SSL 証明書を使用して IIS エンドポイントを構成する必要があります。 詳細については、この[ガイド](https://www.sslsupportdesk.com/microsoft-server-2016-iis-10-10-5-ssl-installation/)を参照してください。
+    - 自己署名証明書を使用する場合は、 **証明書がクライアントコンピューターにインポートされていることを確認**します。
+    - サードパーティプロバイダーにドメインを登録する場合は、SSL 証明書を使用して IIS エンドポイントを構成する必要があります。 詳細については、この [ガイド](https://www.sslsupportdesk.com/microsoft-server-2016-iis-10-10-5-ssl-installation/) を参照してください。
 
 8. SQLite パッケージをインストールします。
    - 管理者特権の PowerShell コマンド プロンプトを開きます。
@@ -297,7 +297,7 @@ HCP サービスとの認証された通信を有効にするには、3つのア
         `sqlite3.exe MopriaDeviceDb.db .read MopriaSQLiteDb.sql`
 
     - ファイルエクスプローラーで、Mo先読み Adevicedb. db ファイルのプロパティを開き、[セキュリティ] タブで Mo先読みデータベースへの発行が許可されているユーザーまたはグループを追加します。ユーザーまたはグループは、オンプレミスの Active Directory に存在し、Azure AD と同期されている必要があります。
-    - ソリューションがルーティング不可能なドメイン (例: *mydomain*) にデプロイされている場合は、Azure AD ドメイン (例: onmicrosoft.com、またはサードパーティベンダーから*購入した*ドメイン) を、オンプレミスの Active Directory に UPN サフィックスとして追加する必要があります。 これは、プリンターを発行するのとまったく同じユーザー (例 admin@: onmicrosoft.com) をデータベースファイルのセキュリティ設定に追加できるようにする*ためです。* 「[ディレクトリ同期のためにルーティング不可能なドメインを準備する」を](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization)参照してください。
+    - ソリューションがルーティング不可能なドメイン (例: *mydomain*) にデプロイされている場合は、Azure AD ドメイン (例: onmicrosoft.com、またはサードパーティベンダーから *購入した*ドメイン) を、オンプレミスの Active Directory に UPN サフィックスとして追加する必要があります。 これは、プリンターを発行するのとまったく同じユーザー (例 admin@: onmicrosoft.com) をデータベースファイルのセキュリティ設定に追加できるようにする*ためです。* 「 [ディレクトリ同期のためにルーティング不可能なドメインを準備する」を](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization)参照してください。
 
     ![プリントサーバーのレジストリキー](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
 
@@ -307,7 +307,7 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 
 2. オンプレミスの Active Directory を構成します。
     - Active Directory マシンでサーバーマネージャーを開き、[ **ツール**] [  >  **ユーザーとコンピューター] Active Directory**にアクセスします。
-    - [**コンピューター** ] ノードに移動し、コネクタサーバーを選択します。
+    - [ **コンピューター** ] ノードに移動し、コネクタサーバーを選択します。
     - を右クリックし、[ **プロパティ**] [  ->  **委任**   ] タブを選択します。
     - [ **指定されたサービスへの委任でのみこのコンピューターを信頼する**] を選択します。
     - [ **任意の認証プロトコルを使用する**] を選択します。
@@ -319,17 +319,17 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 3. IIS で Windows 認証が有効になっていることを確認します。
     - プリントサーバーでサーバーマネージャー > ツール > インターネットインフォメーションサービス (IIS) マネージャーを開きます。
     - サイトに移動します。
-    - [**認証**] をダブルクリックします。
+    - [ **認証**] をダブルクリックします。
     - [ **Windows 認証**] をクリックし、[**アクション**] で [**有効**] をクリックします。
     ![プリントサーバー IIS 認証](../media/hybrid-cloud-print/PrintServer-IIS-Authentication.png)
 
 4. シングルサインオンを構成します。
     - Azure portal で、[ **Azure Active Directory**  >  **エンタープライズアプリケーション**] [すべてのアプリケーション] にアクセス  >  **All applications**します。
     - [Mo先読み Adiscoveryservice アプリ] を選択します。
-    - **アプリケーションプロキシ**にアクセスします。 事前認証方法を**Azure Active Directory**に変更します。
+    - **アプリケーションプロキシ**にアクセスします。 事前認証方法を **Azure Active Directory**に変更します。
     - **[Single sign-on]\(シングル サインオン\)** に移動します。 シングルサインオン方法として [統合 Windows 認証] を選択します。
     - **内部アプリケーション spn**をプリントサーバーコンピューターの spn に設定します。
-    - 委任された**ログイン id**をユーザープリンシパル名に設定します。
+    - 委任された **ログイン id** をユーザープリンシパル名に設定します。
     - EntperiseCloudPrint アプリに対して繰り返します。
     ![AAD シングルサインオン (IWA)](../media/hybrid-cloud-print/AAD-SingleSignOn-IWA.png)
 
@@ -357,13 +357,13 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 |プリンター検出サービスのリソース URI  |Mo先読み Adiscoveryresourceid      |
 
 > [!NOTE]
-> クラウド印刷ポリシーグループが使用できないが、MDM プロバイダーが OMA-URI 設定をサポートしている場合は、同じポリシーを設定できます。  詳細については、[こちらを参照](/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority)してください。
+> クラウド印刷ポリシーグループが使用できないが、MDM プロバイダーが OMA-URI 設定をサポートしている場合は、同じポリシーを設定できます。  詳細については、 [こちらを参照](/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority) してください。
 
 - OMA-URI の値
   - CloudPrintOAuthAuthority =./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority
-    - 値 =`https://login.microsoftonline.com/<Azure AD Directory ID>`
+    - 値 = `https://login.microsoftonline.com/<Azure AD Directory ID>`
   - CloudPrintOAuthClientId =./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId
-    - 値 =`<Azure AD Native App's Application ID>`
+    - 値 = `<Azure AD Native App's Application ID>`
   - Cloudプリンター Discoveryendpoint =./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint
     - 値 = 探索サービスアプリの外部 URL (完全に一致している必要がありますが、末尾が一致していない必要があります `/` )
   - Mo/Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId Adiscoveryresourceid =.
@@ -382,13 +382,13 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 5. Windows 10 フォール Creator 更新プログラムまたはそれ以降のコンピューターを準備します。 コンピューターを Azure AD に参加させ、オンプレミスの Active Directory と同期しているユーザーとしてログインします。また、Mo先読み Adevicedb. db ファイルに対する適切なアクセス許可が付与されています。
 6. Windows 10 コンピューターから、管理者特権で Windows PowerShell コマンドプロンプトを開きます。
     - 次のコマンドを実行します。
-        - `find-module -Name PublishCloudPrinter`コンピューターが PowerShell ギャラリーに接続できることを確認するには (PSGallery)
+        - `find-module -Name PublishCloudPrinter` コンピューターが PowerShell ギャラリーに接続できることを確認するには (PSGallery)
         - `install-module -Name PublishCloudPrinter`
 
             > 注: "PSGallery" が信頼されていないリポジトリであることを示すメッセージが表示される場合があります。  インストールを続行するには、「y」と入力します。
 
         - `Publish-CloudPrinter`
-        - Printer = 共有プリンターの名前。 この名前は、プリントサーバーで開かれている、プリンターのプロパティの [**共有**] タブに表示されている共有名と正確に一致する必要があります。
+        - Printer = 共有プリンターの名前。 この名前は、プリントサーバーで開かれている、プリンターのプロパティの [ **共有** ] タブに表示されている共有名と正確に一致する必要があります。
 
         ![プリントサーバープリンターのプロパティ](../media/hybrid-cloud-print/PrintServer-PrinterProperties.png)
 
@@ -400,14 +400,14 @@ HCP サービスとの認証された通信を有効にするには、3つのア
 
         - Sddl = プリンターのアクセス許可を表す SDDL 文字列。
             - プリントサーバーに管理者としてログオンし、発行するプリンターに対して次の PowerShell コマンドを実行 `(Get-Printer PrinterName -full).PermissionSDDL` します。
-            - 上記のコマンドの結果に、プレフィックスとして**O: BA**を追加します。 例: 前のコマンドによって返された文字列が G: DUD: (A; OICI; FA;;;WD)、SDDL = O: BAG: DUD: (A; O:BAG; FA;;;WD)。
+            - 上記のコマンドの結果に、プレフィックスとして **O: BA** を追加します。 例: 前のコマンドによって返された文字列が G: DUD: (A; OICI; FA;;;WD)、SDDL = O: BAG: DUD: (A; O:BAG; FA;;;WD)。
         - DiscoveryEndpoint = Azure portal にログインしてから、エンタープライズアプリケーション > 検索サービスアプリ > アプリケーションプロキシ > 外部 URL の文字列を取得します。 末尾の/を省略します。
         - PrintServerEndpoint = Azure portal にログインし、エンタープライズアプリケーション > エンタープライズクラウド印刷アプリ > アプリケーションプロキシ > 外部 URL の文字列を取得します。 末尾の/を省略します。
         - AzureClientId = 登録されているネイティブアプリケーションのアプリケーション ID。
         - AzureTenantGuid = Azure AD テナントのディレクトリ ID。
         - DiscoveryResourceId = アプリケーション ID URI は、検出サービスアプリケーションの URI です。
 
-    - 必要なすべてのパラメーター値をコマンドラインに入力することもできます。 構文は次のとおりです。
+    - 必要なすべてのパラメーター値をコマンドラインに入力することもできます。 の構文は次のとおりです。
 
         `Publish-CloudPrinter -Printer <string> -Manufacturer <string> -Model <string> -OrgLocation <string> -Sddl <string> -DiscoveryEndpoint <string> -PrintServerEndpoint <string> -AzureClientId <string> -AzureTenantGuid <string> -DiscoveryResourceId <string>`
 
@@ -429,13 +429,13 @@ MDM ポリシーが構成されている Azure AD 参加済みデバイスの場
 - Web ブラウザーを開き、msappproxy.net/mcs/services にアクセスし https://mopriadiscoveryservice- *tenant-name*ます。
 - このエンドポイントの一連の機能を説明する JSON テキストが表示されます。
 - [**設定**] [デバイス] [プリンター] [スキャナー] の & にアクセスし  >  **Devices**  >  **Printers & scanners**ます。
-    - [**プリンターまたはスキャナーの追加**] をクリックします。
+    - [ **プリンターまたはスキャナーの追加**] をクリックします。
     - クラウドプリンターの検索が表示されます (または、[組織内のプリンターを新しい Windows 10 コンピューターで検索する])。
     - リンクをクリックします。
     - [検索場所を選択してください] リンクをクリックします。
         - デバイスの場所の階層が表示されます。
-    - 場所を選択して [ **OK** ] をクリックし、[**検索**] ボタンをクリックしてプリンターを検索します。
-    - [プリンター] を選択し、[**デバイスの追加**] ボタンをクリックします。
+    - 場所を選択して [ **OK** ] をクリックし、[ **検索** ] ボタンをクリックしてプリンターを検索します。
+    - [プリンター] を選択し、[ **デバイスの追加** ] ボタンをクリックします。
     - プリンターが正常にインストールされたら、お気に入りのアプリからプリンターに印刷します。
 
 > 注: EcpPrintTest プリンターを使用している場合は、印刷サーバーコンピューターの C: \\ ecpprinttest \\ ecpprinttest. xps の場所に出力ファイルがあります。
@@ -448,13 +448,13 @@ HCP の展開時に発生する一般的な問題を以下に示します。
 |------|------|
 |CloudPrintDeploy PowerShell スクリプトが失敗しました | <ul><li>Windows Server に最新の更新プログラムがあることを確認します。</li><li>Windows Server Update Services (WSUS) を使用する場合は、 [wsus/SCCM を使用しているときに、オンデマンド機能と言語パックを使用できるようにする方法に関する説明](/windows/deployment/update/fod-and-lang-packs)を参照してください。</li></ul> |
 |SQLite のインストールが失敗しました。メッセージ: パッケージ ' system.string ' の依存関係ループが検出されました | Install-Package system.string-providername-providername の依存関係<br>EF6-providername の依存関係をインストールします。<br>パッケージのインストール-providername-providername nuget-SkipDependencies<br><br>パッケージが正常にダウンロードされたら、すべてのバージョンが同じであることを確認します。 指定されていない場合は、上記のコマンドに-requiredversion パラメーターを追加し、それらを同じバージョンに設定します。 |
-|プリンタの発行に失敗しました | <ul><li>パススルー事前認証の場合、プリンターを公開するユーザーに、パブリッシングデータベースに対する適切なアクセス許可が付与されていることを確認します。</li><li>事前認証を Azure AD には、IIS で Windows 認証が有効になっていることを確認します。 手順5.3 を参照してください。 また、まずパススルー認証を試してください。 パススルー事前認証が機能する場合、問題はアプリケーションプロキシに関連している可能性があります。 「[アプリケーションプロキシの問題とエラーメッセージのトラブルシューティング」を](/azure/active-directory/manage-apps/application-proxy-troubleshoot)参照してください。 パススルーに切り替えると、シングルサインオンの設定がリセットされることに注意してください。手順5を再実行して、事前認証 Azure AD をセットアップします。</li></ul> |
+|プリンタの発行に失敗しました | <ul><li>パススルー事前認証の場合、プリンターを公開するユーザーに、パブリッシングデータベースに対する適切なアクセス許可が付与されていることを確認します。</li><li>事前認証を Azure AD には、IIS で Windows 認証が有効になっていることを確認します。 手順5.3 を参照してください。 また、まずパススルー認証を試してください。 パススルー事前認証が機能する場合、問題はアプリケーションプロキシに関連している可能性があります。 「 [アプリケーションプロキシの問題とエラーメッセージのトラブルシューティング」を](/azure/active-directory/manage-apps/application-proxy-troubleshoot)参照してください。 パススルーに切り替えると、シングルサインオンの設定がリセットされることに注意してください。手順5を再実行して、事前認証 Azure AD をセットアップします。</li></ul> |
 |印刷ジョブは、プリンターの状態に送信されたままになります。 | <ul><li>コネクタサーバーで TLS 1.2 が有効になっていることを確認します。 手順2.1 のリンク先の記事を参照してください。</li><li>コネクタサーバーで HTTP2 が無効になっていることを確認します。 手順2.1 のリンク先の記事を参照してください。</li></ul> |
 
 トラブルシューティングに役立つログの場所を以下に示します。
 
 |コンポーネント |ログの場所 |
 |------|------|
-|Windows 10 クライアント | <ul><li>Azure AD 操作のログを表示するには、イベントビューアーを使用します。 [**スタート**] をクリックし、「イベントビューアー」と入力します。 Microsoft > Windows > AAD > 操作 > [アプリケーションとサービスログ] に移動します。</li><li>フィードバックハブを使用してログを収集します。 [フィードバックハブアプリを使用して Microsoft にフィードバックを送信する](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)</li></ul> |
-|コネクタサーバー | アプリケーションプロキシのログを表示するには、イベントビューアーを使用します。 [**スタート**] をクリックし、「イベントビューアー」と入力します。 [アプリケーションとサービスログ] > Microsoft > AadApplicationProxy > Connector > Admin] に移動します。 |
+|Windows 10 クライアント | <ul><li>Azure AD 操作のログを表示するには、イベントビューアーを使用します。 [ **スタート** ] をクリックし、「イベントビューアー」と入力します。 Microsoft > Windows > AAD > 操作 > [アプリケーションとサービスログ] に移動します。</li><li>フィードバックハブを使用してログを収集します。 [フィードバックハブアプリを使用して Microsoft にフィードバックを送信する](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)</li></ul> |
+|コネクタサーバー | アプリケーションプロキシのログを表示するには、イベントビューアーを使用します。 [ **スタート** ] をクリックし、「イベントビューアー」と入力します。 [アプリケーションとサービスログ] > Microsoft > AadApplicationProxy > Connector > Admin] に移動します。 |
 |プリント サーバー | 探索サービスアプリとエンタープライズクラウド印刷アプリのログは、C:\inetpub\logs\LogFiles\W3SVC1. にあります。 |

@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 73a2d714b80a414fbe6c3716d8e73393877a7aa4
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 888ecc5c5ab8fd609264f0f184686a144e2f8ce8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180458"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625469"
 ---
 # <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>手順 4: Windows Server Essentials への移行のために設定とデータを移行先サーバーに移動する
 
@@ -26,7 +26,7 @@ ms.locfileid: "87180458"
 
 -   [許可されたコンピューターをユーザー アカウントにマップする](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)
 
-##  <a name="copy-data-to-the-destination-server"></a><a name="BKMK_CopyData"></a>移行先サーバーにデータをコピーする
+##  <a name="copy-data-to-the-destination-server"></a><a name="BKMK_CopyData"></a> 移行先サーバーにデータをコピーする
  移行元サーバーから移行先サーバーにデータをコピーする前に、以下のタスクを実行します。
 
 -   移行元サーバーで共有フォルダーのリストを確認します。各フォルダーのアクセス許可も含まれます。 移行元サーバーから移行するフォルダー構造に合わせて、移行先サーバーのフォルダーを作成またはカスタマイズします。
@@ -37,7 +37,7 @@ ms.locfileid: "87180458"
 
 -   [**クライアント コンピューターのバックアップ**] フォルダーは移行先サーバーに移行できません。 サーバーの移行の前に、すべてのクライアント コンピューターが正常な状態であることを確認します。 サーバーの移行後に、すべての重要なクライアント コンピューターのデータがバックアップされるように、クライアント コンピューターのバックアップを構成して、起動することをお勧めします。
 
--   Windows Server Essentials でのフォルダー構造とバックアップメタデータの変更により、**ファイル履歴のバックアップ**フォルダーを移行先サーバーに直接移行することはできません。 ただし、特定のコンピューター上の特定のユーザーの [**ファイル履歴のバックアップ**] フォルダーを移行することは可能です。 そうするには、[**ファイル履歴のバックアップ**] フォルダーで、そのユーザーとコンピューターの [**データ**] フォルダーを見つけて、その [**データ**] フォルダーを移行先サーバーの [**ファイル履歴のバックアップ**] フォルダーにコピーします。
+-   Windows Server Essentials でのフォルダー構造とバックアップメタデータの変更により、 **ファイル履歴のバックアップ** フォルダーを移行先サーバーに直接移行することはできません。 ただし、特定のコンピューター上の特定のユーザーの [**ファイル履歴のバックアップ**] フォルダーを移行することは可能です。 そうするには、[**ファイル履歴のバックアップ**] フォルダーで、そのユーザーとコンピューターの [**データ**] フォルダーを見つけて、その [**データ**] フォルダーを移行先サーバーの [**ファイル履歴のバックアップ**] フォルダーにコピーします。
 
 #### <a name="to-copy-data-from-the-source-server-to-the-destination-server"></a>移行元サーバーから移行先サーバーにデータをコピーするには
 
@@ -47,13 +47,13 @@ ms.locfileid: "87180458"
 
    `robocopy \\<SourceServerName>\<SharedSourceFolderName> "<PathOfTheDestination>\<SharedDestinationFolderName>" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
 
-    各値の説明:
+    この場合、
 
    - \<SourceServerName\> は移行元サーバーの名前です。
 
    - \<SharedSourceFolderName\> は、移行元サーバー上の共有フォルダーの名前です。
 
-   - \<PathOfTheDestination\>フォルダーを移動する場所の絶対パスを指定します。
+   - \<PathOfTheDestination\> フォルダーを移動する場所の絶対パスを指定します。
 
    - \<SharedDestinationFolderName\> はデータのコピー先となる移行先サーバー上のフォルダーです。
 
@@ -65,7 +65,7 @@ ms.locfileid: "87180458"
 
 4. 移行元サーバーから移行する共有フォルダーごとに、このプロセスを繰り返します。
 
-##  <a name="configure-the-network"></a><a name="BKMK_Network"></a>ネットワークを構成する
+##  <a name="configure-the-network"></a><a name="BKMK_Network"></a> ネットワークを構成する
 
 #### <a name="to-configure-the-network"></a>ネットワークを構成するには
 
@@ -84,7 +84,7 @@ ms.locfileid: "87180458"
 > [!NOTE]
 >  移行先サーバーで、パブリック ドメイン名を構成する場合は、移行元サーバーから、ドメイン名を解放し、動的 DNS 更新の競合を回避する必要があります。
 
-##  <a name="map-permitted-computers-to-user-accounts"></a><a name="BKMK_MapPermittedComputers"></a>許可されたコンピューターをユーザーアカウントにマップする
+##  <a name="map-permitted-computers-to-user-accounts"></a><a name="BKMK_MapPermittedComputers"></a> 許可されたコンピューターをユーザーアカウントにマップする
  以前のバージョンの Windows Small Business Server または Windows Server Essentials から移行される各ユーザー アカウントを、1 台または複数のコンピューターにマップする必要があります。
 
 #### <a name="to-map-user-accounts-to-computers"></a>コンピューターにユーザー アカウントをマップするには
@@ -109,7 +109,7 @@ ms.locfileid: "87180458"
 > [!NOTE]
 >  移行を完了した後、移行先サーバーで最初の新しいユーザー アカウントを作成するときに問題が発生する場合は、追加したユーザー アカウントを削除し、再度作成してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
  設定とデータを移行先サーバーに移動しました。 [次に、「手順 5: Windows Server Essentials への移行のために移行先サーバーでフォルダーリダイレクトを有効](Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md)にする」に進みます。
 
 

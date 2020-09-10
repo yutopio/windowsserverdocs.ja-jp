@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 4cc616c0e23c58ab1298526784574f6bc8f65f23
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 3a73b744ca0b28802617881cbb64420f9f033dab
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180388"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625315"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-standard"></a>Windows Server Essentials から Windows Server 2012 Standard への移行
 
@@ -50,7 +50,7 @@ ms.locfileid: "87180388"
 
 1. Windows Server 2012 Standard のライセンスと、環境に合わせて適切な数のユーザーまたはデバイスクライアントアクセスライセンスを購入します。
 
-    Windows Server 2012 Standard のライセンスは、小売店、ディストリビューター、または[Microsoft パートナー](https://pinpoint.microsoft.com/SelectCulture.aspx)の支援から購入できます。
+    Windows Server 2012 Standard のライセンスは、小売店、ディストリビューター、または [Microsoft パートナー](https://pinpoint.microsoft.com/SelectCulture.aspx)の支援から購入できます。
 
    > [!NOTE]
    >  Windows Server 2012 Standard を最初に購入し、2つの仮想インスタンスのいずれかを Windows Server Essentials としてインストールするためにダウングレード権を行使した場合は、追加購入する必要はありません。
@@ -63,7 +63,7 @@ ms.locfileid: "87180388"
 
     **dism /online /set-edition:ServerStandard /accepteula /productkey:** *プロダクト キー*
 
-    ここで、*プロダクトキー*は、Windows Server 2012 Standard のコピーのプロダクトキーです。
+    ここで、 *プロダクトキー* は、Windows Server 2012 Standard のコピーのプロダクトキーです。
 
     サーバーが再起動すると、移行プロセスが完了します。
 
@@ -82,7 +82,7 @@ ms.locfileid: "87180388"
 
 - Windows Server Essentials の機能を無効にした後で、クライアントコンピューターのバックアップファイルを保持するかどうかを選択できます。
 
- ダッシュボードから**Windows Server Essentials 機能**の無効化ウィザードを実行するには、次の2つの方法があります。
+ ダッシュボードから **Windows Server Essentials 機能** の無効化ウィザードを実行するには、次の2つの方法があります。
 
 #### <a name="from-the-alert"></a>アラートからの操作
 
@@ -102,7 +102,7 @@ ms.locfileid: "87180388"
 
    **%systemdrive%\Program Files\Windows Server\Bin\TurnOffFeaturesWizard.exe**
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 
 -   [Windows Server 2012 R2 Standard への移行](Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)
