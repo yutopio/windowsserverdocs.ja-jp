@@ -3,16 +3,16 @@ title: choice
 description: 選択コマンドの参照記事。バッチプログラムで1つの項目を選択して、選択した項目のインデックスを返すようにユーザーに要求します。
 ms.topic: reference
 ms.assetid: c65a9119-410b-4dcf-9fa7-4e07d2a7238b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 367f52ee41e72fe1c4c94c37a07e3a4227dec8a7
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 382e3618e66f56e05ebd0a7d6b6034e6d7543d64
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89026046"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629684"
 ---
 # <a name="choice"></a>choice
 
@@ -36,7 +36,7 @@ choice [/c [<choice1><choice2><…>]] [/n] [/cs] [/t <timeout> /d <choice>] [/m 
 | /m `<text>` | 選択肢の一覧の前に表示するメッセージを指定します。 **/M**が指定されていない場合は、choice プロンプトだけが表示されます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 - **ERRORLEVEL**環境変数は、ユーザーが選択肢の一覧から選択するキーのインデックスに設定されます。 リスト内の最初の選択肢は、値、 `1` 2 番目の値、 `2` などを返します。 ユーザーが無効なキーを押すと、警告ビープ音が **鳴ります** 。
 

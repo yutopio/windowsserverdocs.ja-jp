@@ -3,16 +3,16 @@ title: date
 description: システム日付を表示または設定する date コマンドの参照記事です。 パラメーターを指定せずに使用する場合は、
 ms.topic: reference
 ms.assetid: ce6700fb-32f9-4350-a1af-5aee61d4448c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 78c8ca51882b2559e78cc457d1fd7fa5ec8e87b8
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ca9e8b9305132e9af03308d2e0ca0cc20ed89469
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89033040"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628978"
 ---
 # <a name="date"></a>date
 
@@ -29,7 +29,7 @@ date [/t | <month-day-year>]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<month-day-year>` | 指定された日付を設定します。 *month* は月 (1 ~ 12 の値を含む1桁または2桁の数字)、 *day* は日 (1 ~ 31 の値を含む1桁または2桁)、 *年* は年 (00 ~ 99 または 1980 ~ 2099 の値を含む2桁または4桁) です。 *月*、*日*、および*年*の値は、ピリオド (.)、ハイフン (-)、またはスラッシュ (/) で区切る必要があります。<p>**注:** 年を表すために2桁を使用する場合、値80-99 は1980から1999に対応します。 |
 | /t | 新しい日付を求めるメッセージを表示せずに現在の日付を表示します。 |

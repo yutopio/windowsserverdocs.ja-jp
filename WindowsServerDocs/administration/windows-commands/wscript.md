@@ -3,16 +3,16 @@ title: wscript
 description: Wscript のリファレンス記事。ユーザーは、さまざまなオブジェクトモデルを使用してタスクを実行するさまざまな言語でスクリプトを実行できる環境を提供します。
 ms.topic: reference
 ms.assetid: 2fbaf193-cdbd-414c-84c9-bb5720f84c29
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 08/21/2018
-ms.openlocfilehash: 689775951f1c97b7cc704801cd39691033005afe
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: af39abab4d493e0bd4a5ed9227c68e2e2e34dc2b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038070"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628463"
 ---
 # <a name="wscript"></a>wscript
 
@@ -28,7 +28,7 @@ wscript [<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/
 
 #### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------|-----------|
 |スクリプト名|スクリプトファイルのパスとファイル名を指定します。|
 |/b|アラート、スクリプトエラー、入力プロンプトを表示しないバッチモードを指定します。 これは **/i**とは逆です。|
@@ -46,7 +46,7 @@ wscript [<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/
 |ScriptArguments|スクリプトに渡される引数を指定します。 各スクリプト引数の前にはスラッシュ (/) を付ける必要があります。|
 |/?|コマンド プロンプトでヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   このタスクを実行するときは、管理資格情報は必要ありません。 そのため、セキュリティ対策として、このタスクは管理資格情報のないユーザーとして実行することを検討してください。
 -   コマンド プロンプトを開くには、**スタート**画面で、「**cmd**」と入力し、**[コマンド プロンプト]** をクリックします。

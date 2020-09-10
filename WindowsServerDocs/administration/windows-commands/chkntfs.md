@@ -3,16 +3,16 @@ title: chkntfs
 description: Chkntfs コマンドの参照記事。コンピューターの起動時に自動ディスクチェックを表示または変更します。
 ms.topic: reference
 ms.assetid: 93eca810-8699-4716-8e9d-aecd54f704be
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: d60707f01fb72e9ceede68df7a33e488b6196f4c
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 202594ebef8f65ae8c508fa8a00e83314dbdb38b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89026056"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629693"
 ---
 # <a name="chkntfs"></a>chkntfs
 
@@ -33,7 +33,7 @@ chkntfs [/c <volume> [...]]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<volume>` [...] | コンピューターの起動時に確認する1つ以上のボリュームを指定します。 有効なボリュームには、ドライブ文字 (その後にコロンが続く)、マウントポイント、またはボリューム名が含まれます。 |
 | /d | 自動ファイルチェックのカウントダウン時間を除く、 **chkntfs** の既定の設定をすべて復元します。 既定では、コンピューターの起動時にすべてのボリュームがチェックされ、ダーティであるボリュームで **chkdsk** が実行されます。 |

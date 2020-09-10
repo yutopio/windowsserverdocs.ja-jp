@@ -3,16 +3,16 @@ title: clip
 description: コマンドの出力をコマンドラインから Windows クリップボードにリダイレクトする、clip コマンドの参照記事。
 ms.topic: reference
 ms.assetid: 85322d85-3376-4806-845b-93ac77fe27bf
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: a94003a700f3dc08d97a78911f844adcbbfe646a
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 9f6820d60a8c94ed07bbb23bbbd86be3f1f289b7
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89025966"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629628"
 ---
 # <a name="clip"></a>clip
 
@@ -27,7 +27,7 @@ clip < <filename>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<command>` | 出力を Windows クリップボードに送信するコマンドを指定します。 |
 | `<filename>` | Windows クリップボードに送信する内容を含むファイルを指定します。 |

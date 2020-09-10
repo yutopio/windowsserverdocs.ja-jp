@@ -3,16 +3,16 @@ title: chcp
 description: アクティブなコンソールのコードページを変更する chcp コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: dc7b1c71-7b80-443d-9cf1-9bcf305aa1fd
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e725bb3220546864642b2e6a39ddcc0163b1b98
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ef70d73253782528bcd54f7cfd6f98de9d941702
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031090"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629836"
 ---
 # <a name="chcp"></a>chcp
 
@@ -26,7 +26,7 @@ chcp [<nnn>]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<nnn>` | コードページを指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
@@ -35,7 +35,7 @@ chcp [<nnn>]
 
 | コード ページ | 国/地域または言語 |
 | --------- | -------------------------- |
-| 437 | United States |
+| 437 | アメリカ合衆国 |
 | 850 | 多言語 (ラテン I) |
 | 852 | スラブ語 (ラテン II) |
 | 855 | キリル語 (ロシア) |
@@ -48,7 +48,7 @@ chcp [<nnn>]
 | 869 | モダンギリシャ語 |
 | 936 | 中国語 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - Windows と共にインストールされる相手先ブランド供給 (OEM) コードページのみが、ラスターフォントを使用するコマンドプロンプトウィンドウに正しく表示されます。 他のコードページは、全画面表示モードまたは TrueType フォントを使用するコマンドプロンプトウィンドウで正しく表示されます。
 

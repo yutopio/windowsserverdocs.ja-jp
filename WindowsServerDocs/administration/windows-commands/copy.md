@@ -3,16 +3,16 @@ title: copy
 description: コピーコマンドの参照記事。1つ以上のファイルを別の場所にコピーします。
 ms.topic: reference
 ms.assetid: 9624d4a1-349a-4693-ad00-1d1d4e59e9ac
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 993fedf3b088ee5d06967c767c00aa9e11165cc3
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 129a6e4575be47ab876ef6943aeca803269ac529
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030280"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629234"
 ---
 # <a name="copy"></a>copy
 
@@ -43,7 +43,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <source> [/a | /b] [+<source> [/a 
 | `<destination>` | 必須。 ファイルまたはファイルのセットをコピーする場所を指定します。 *宛先* には、ドライブ文字とコロン、ディレクトリ名、ファイル名、またはこれらの組み合わせを使用できます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - ファイルの終端文字 (CTRL + Z) を使用する ASCII テキストファイルをコピーして、ファイルの末尾を示すことができます。
 

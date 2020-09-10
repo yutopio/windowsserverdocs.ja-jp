@@ -3,16 +3,16 @@ title: compact
 description: Compact コマンドの参照記事。 NTFS パーティション上のファイルまたはディレクトリの圧縮を表示または変更します。
 ms.topic: reference
 ms.assetid: 429b3752-df0a-43a4-a210-df2f3ad03c3b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 210aaf8c20741659bb29d4855ae39099c964a400
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: a0d43fce44b7de6ecc5b435b7ed5f2de88ed0b9f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89025946"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629380"
 ---
 # <a name="compact"></a>compact
 
@@ -26,7 +26,7 @@ compact [/c | /u] [/s[:<dir>]] [/a] [/i] [/f] [/q] [<filename>[...]]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | /c | 指定したディレクトリまたはファイルを圧縮します。 |
 | /U | 指定したディレクトリまたはファイルの圧縮を解除します。 |
@@ -38,7 +38,7 @@ compact [/c | /u] [/s[:<dir>]] [/a] [/i] [/f] [/q] [<filename>[...]]
 | `<filename>` | ファイルまたはディレクトリを指定します。 複数のファイル名を使用できます。また、 **&#42;** と **?** ワイルドカード文字。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - このコマンドは、NTFS ファイルシステムの圧縮機能のコマンドラインバージョンです。 ディレクトリの圧縮状態は、ファイルがディレクトリに追加されたときに自動的に圧縮されるかどうかを示します。 ディレクトリの圧縮状態を設定しても、必ずしもディレクトリに既に存在するファイルの圧縮状態が変更されるわけではありません。
 

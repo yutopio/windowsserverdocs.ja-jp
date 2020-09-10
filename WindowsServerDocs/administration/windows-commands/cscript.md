@@ -3,16 +3,16 @@ title: cscript
 description: Cscript コマンドのリファレンス記事。コマンドライン環境で実行されるようにスクリプトを開始します。
 ms.topic: reference
 ms.assetid: fba3cbca-594e-4663-bb22-4ee0f63a1ac6
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 6b5c711d59f69267f8e2de51f34cb1c450e95fab
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 2e35efeccc219a7e678e2eccab74de5d0c4d6837
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89033030"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628990"
 ---
 # <a name="cscript"></a>cscript
 
@@ -31,14 +31,14 @@ cscript <scriptname.extension> [/b] [/d] [/e:<engine>] [{/h:cscript | /h:wscript
 
 #### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | scriptname | オプションのファイル名拡張子を持つスクリプトファイルのパスとファイル名を指定します。 |
 | /b | アラート、スクリプトエラー、入力プロンプトを表示しないバッチモードを指定します。 |
 | /d | デバッガーを起動します。 |
 | /e:`<engine>` | スクリプトの実行に使用するエンジンを指定します。 |
 | /h: cscript | スクリプトを実行するための既定のスクリプトホストとして cscript.exe を登録します。 |
-| /h: wscript | スクリプトを実行するための既定のスクリプトホストとして wscript.exe を登録します。 既定値です。 |
+| /h: wscript | スクリプトを実行するための既定のスクリプトホストとして wscript.exe を登録します。 これは既定です。 |
 | /i | アラート、スクリプトエラー、および入力プロンプトを表示する対話モードを指定します。 これは既定値であり、の逆 `/b` です。 |
 | /ジョブ (<identifier> | Wsf スクリプトファイル内の *識別子* によって識別されるジョブを実行します。 |
 | /ロゴ | スクリプトを実行する前に、Windows スクリプトホストバナーをコンソールに表示することを指定します。 これは既定値であり、の逆 `/nologo` です。 |
@@ -50,7 +50,7 @@ cscript <scriptname.extension> [/b] [/d] [/e:<engine>] [{/h:cscript | /h:wscript
 | /? | 使用可能なコマンドパラメーターを表示し、それらを使用するためのヘルプを提供します。 これは、パラメーターを指定せずに **cscript.exe** を入力する場合と同じですが、スクリプトはありません。 |
 | scriptarguments | スクリプトに渡される引数を指定します。 各スクリプト引数の前にはスラッシュ () を付ける必要があり **/** ます。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 各パラメーターは省略可能です。ただし、スクリプトを指定せずにスクリプトの引数を指定することはできません。 スクリプトまたはスクリプトの引数を指定しない場合は、cscript.exe の構文と有効なホストオプションが cscript.exe 表示されます。
 

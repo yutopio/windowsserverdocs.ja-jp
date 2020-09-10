@@ -3,16 +3,16 @@ title: pathping
 description: Pathping コマンドの参照記事。これは、ソースと宛先の間の中間ホップでのネットワーク待機時間とネットワーク損失に関する情報を取得します。
 ms.topic: reference
 ms.assetid: ec430125-b1dc-4aad-a7c9-b70f486d9e3c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
-ms.openlocfilehash: 3ae867d0b4ea53aaa807fb461f7a32726efefc2e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ed63467c8eba2d65a6408e08762357275dfef7f8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89032489"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628633"
 ---
 # <a name="pathping"></a>pathping
 
@@ -33,7 +33,7 @@ pathping [/n] [/h <maximumhops>] [/g <hostlist>] [/p <Period>] [/q <numqueries> 
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 |--|--|
 | /n | により、 **pathping** から中間ルーターの IP アドレスを解決するには、名前にしようとしています。 表示の時間を短縮これが **pathping** 結果。 |
 | /h `<maximumhops>` | ターゲット (宛先) を検索するパスの最大ホップ数を指定します。 既定値は、30 ホップです。 |
@@ -47,7 +47,7 @@ pathping [/n] [/h <maximumhops>] [/g <hostlist>] [/p <Period>] [/q <numqueries> 
 | `<targetname>` | エクスポート先を指定する IP アドレスまたはホスト名で識別されます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - すべてのパラメーターでは大文字と小文字が区別されます。
 

@@ -3,16 +3,16 @@ title: cmd
 description: コマンドインタープリターの新しいインスタンスを開始する cmd コマンドの参照記事 Cmd.exe。
 ms.topic: reference
 ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: b782a93d4c61f43bbe45497871fe66f29ef972a4
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 96af9d997d9163631f3da364d960a83edb7bfe5a
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030980"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629593"
 ---
 # <a name="cmd"></a>cmd
 
@@ -26,7 +26,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<b><f> | <f>}] [/e:{on | off}] [/f:{on |
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | /c | *文字列*で指定されたコマンドを実行してから停止します。 |
 | /k | *文字列*で指定されたコマンドを実行し、続行します。 |
@@ -47,7 +47,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<b><f> | <f>}] [/e:{on | off}] [/f:{on |
 
 次の表に、およびの値として使用できる有効な16進数の数字を示し `<b>` `<f>` ます。
 
-| [値] | 色 |
+| 値 | Color |
 | ----- | ----- |
 | 0 | Black |
 | 1 | 青 |
@@ -66,7 +66,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<b><f> | <f>}] [/e:{on | off}] [/f:{on |
 | e | 薄い黄色 |
 | f | 明るい白 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 - に複数のコマンドを使用するには、コマンド区切り記号で区切り、それらを `<string>` **&&** 引用符で囲みます。 次に例を示します。
 

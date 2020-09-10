@@ -4,21 +4,21 @@ description: ソフトウェアインベントリログのインストールと�
 ms.topic: article
 ms.assetid: ed51c13c-7cbf-4144-a675-011fd29379d4
 author: brentfor
-ms.author: coreyp
-manager: dongill
+ms.author: brentf
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: a8584b5e2cf1048e0bba5c217aa3e6031600839a
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 76a8f0c55a604fd3f17963ec18df31ed6faf340a
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993049"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628271"
 ---
 # <a name="get-started-with-software-inventory-logging"></a>ソフトウェアインベントリログを使ってみる
 
 >適用先:Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
- ソフトウェアインベントリログは、サーバーごとに Microsoft ソフトウェアインベントリデータを収集します。 Windows Server 2012 R2 でソフトウェアインベントリログを使用する前に、インベントリされる各システムに Windows Update [kb 3000850](https://support.microsoft.com/kb/3000850)と[kb 3060681](https://support.microsoft.com/kb/3060681)がインストールされていることを確認してください。 Windows Server 2016 には Windows Update は必要ありません。 また、SIL の機能を使用して集計サーバーにデータを転送する場合は、ネットワークに対して SSL 証明書が有効になっていることを確認してください。
+ ソフトウェアインベントリログは、サーバーごとに Microsoft ソフトウェアインベントリデータを収集します。 Windows Server 2012 R2 でソフトウェアインベントリログを使用する前に、インベントリされる各システムに Windows Update [kb 3000850](https://support.microsoft.com/kb/3000850) と [kb 3060681](https://support.microsoft.com/kb/3060681) がインストールされていることを確認してください。 Windows Server 2016 には Windows Update は必要ありません。 また、SIL の機能を使用して集計サーバーにデータを転送する場合は、ネットワークに対して SSL 証明書が有効になっていることを確認してください。
 
 ## <a name="feature-description"></a><a name="BKMK_OVER"></a>機能の説明
 Windows Server のソフトウェア インベントリ ログは、簡単な PowerShell コマンドレットのセットを使用して、サーバー管理者がサーバーにインストールされた Microsoft ソフトウェアの一覧を取得できる機能です。 また、HTTPS プロトコルを使用して、このデータをネットワーク経由で定期的に収集し、集計のためにターゲット Web サーバーへと転送することもできます。 この機能の管理には、PowerShell コマンドも使用できます (主に毎時の収集と転送のため)。

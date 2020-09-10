@@ -3,16 +3,16 @@ title: defrag
 description: デフラグコマンドの参照記事。ローカルボリューム上の断片化されたファイルを特定して統合し、システムのパフォーマンスを向上させます。
 ms.topic: reference
 ms.assetid: aaf1d1ac-996a-4282-9b4d-1e8245ff162c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 45bf8f07a44432eac45f4a5ccaf43697c5de17fe
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 81f6aba6dce5bce28311a789f803ac2c7117fd0f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89024236"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628903"
 ---
 # <a name="defrag"></a>defrag
 
@@ -33,7 +33,7 @@ defrag <volume> [<parameters>]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<volume>` | 最適化または分析するボリュームのドライブ文字またはマウントポイントパスを指定します。 |
 | /a | 指定されたボリュームで分析を実行します。 |
@@ -53,7 +53,7 @@ defrag <volume> [<parameters>]
 | /x | 指定されたボリュームで空き領域の統合を実行します。 |
 | /? | このヘルプ情報を表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 次のような特定のファイルシステムのボリュームまたはドライブを最適化することはできません。
 

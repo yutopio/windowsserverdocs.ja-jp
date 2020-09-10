@@ -3,16 +3,16 @@ title: del
 description: Del コマンドの参照記事。1つ以上のファイルを削除します。
 ms.topic: reference
 ms.assetid: 346eede2-2085-44f5-9936-6877b5d5a833
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 9d7b5c3dd59da3bd15341b985476a88c8d828cfd
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: bb7c060dbcfe4d08018b5616e5227b64a0434e28
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89024226"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628889"
 ---
 # <a name="del"></a>del
 
@@ -32,7 +32,7 @@ erase [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<names>` | 1つ以上のファイルまたはディレクトリのリストを指定します。 複数のファイルを削除するには、ワイルドカードを使用できます。 ディレクトリを指定すると、ディレクトリ内のすべてのファイルが削除されます。 |
 | /p | 指定されたファイルを削除する前に確認メッセージを表示します。 |
@@ -42,7 +42,7 @@ erase [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 | /a [:]`<attributes>` | 次のファイル属性に基づいてファイルを削除します。<ul><li>**r** 読み取り専用ファイル</li><li>**h** 隠しファイル</li><li>コンテンツにインデックスが**設定され**ていないファイル</li><li>**s** システムファイル</li><li>アーカイブの準備**が**できているファイル</li><li>**左** 再解析ポイント</li><li>**-** ' Not ' を意味するプレフィックスとして使用されます。</li></ul>. |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - コマンドを使用すると、 `del /p` 次のメッセージが表示されます。
 

@@ -3,16 +3,16 @@ title: color
 description: 現在のセッションのコマンドプロンプトウィンドウで、前景色と背景色を変更する color コマンドの参照記事。
 ms.topic: reference
 ms.assetid: f5b67131-d196-45ec-a3f9-b5d9f091fd86
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3ce7aa8e927e3796917d2720495f394636d9c240
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: feb4d4a2de9491636a1c96b7a16c80e2e18f5865
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89028460"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629504"
 ---
 # <a name="color"></a>color
 
@@ -26,17 +26,17 @@ color [[<b>]<f>]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<b>` | 背景色を指定します。 |
 | `<f>` | 前景色を指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-各値の説明:
+この場合、
 
 次の表に、およびの値として使用できる有効な16進数の数字を示し `<b>` `<f>` ます。
 
-| [値] | 色 |
+| 値 | Color |
 | ----- | ----- |
 | 0 | Black |
 | 1 | 青 |
@@ -55,7 +55,7 @@ color [[<b>]<f>]
 | e | 薄い黄色 |
 | f | 明るい白 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - との間には空白文字を使用しないで `<b>` `<f>` ください。
 

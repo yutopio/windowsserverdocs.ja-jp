@@ -3,16 +3,16 @@ title: get-サーバー
 description: 指定された Windows 展開サービスサーバーから情報を取得する、get Server のリファレンス記事です。
 ms.topic: reference
 ms.assetid: bef60db4-d58d-4304-ab4b-be53dd3271c3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 13bceebfb619fc93cbab7b2b45d3dd34838760ed
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: fe55e707dda58e65d2b86fe553910d010f8b2586
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029500"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628501"
 ---
 # <a name="get-server"></a>get-サーバー
 

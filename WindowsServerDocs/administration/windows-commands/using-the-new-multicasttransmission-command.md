@@ -3,23 +3,23 @@ title: /Get-multicasttransmission
 description: /Get-multicasttransmission のリファレンス記事。イメージの新しいマルチキャスト転送を作成します。
 ms.topic: reference
 ms.assetid: c1f1dc46-dd50-4eb9-9f72-cf0e5d71bd3d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 30988ad23151f12533b75323f9376859a4c5d2a5
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ae5c3056fb6a5d2259a630c114ec7a24fc8d0b71
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038150"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627931"
 ---
 # <a name="new-multicasttransmission"></a>/Get-multicasttransmission
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
 イメージのマルチキャスト転送を新しいを作成します。 このコマンドは、Windows 展開サービス mmc スナップインを使用して転送を作成することと同じです ([ **マルチキャスト転送** ] ノードを右クリックし、[ **マルチキャスト転送**] をクリックします)。 展開サーバーの役割サービスと、トランスポート サーバー役割サービスがインストールされる既定のインストール) の両方がある場合は、このコマンドを使用する必要があります。 トランスポート サーバーの役割サービスのみがインストールされていれば、使用 [新しい名前空間のコマンドを使用して](using-the-new-namespace-command.md)します。
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 インストールイメージの転送:
 ```
 wdsutil [Options] /New-MulticastTransmissiomedia:<Image name>
@@ -47,7 +47,7 @@ wdsutil [Options] /New-MulticastTransmissiomedia:<Image name>
         [/Filename:<File name>]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 用紙<Image name>|マルチキャストを使用して転送するイメージの名前を指定します。|
 |[/Server:<Server name>]|サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) を指定できます。 サーバー名が指定されていない場合は、ローカルのサーバーが使用されます。|

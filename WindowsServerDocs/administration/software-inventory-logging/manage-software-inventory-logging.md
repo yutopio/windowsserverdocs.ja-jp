@@ -4,21 +4,21 @@ description: ソフトウェアインベントリログの管理方法につい�
 ms.topic: article
 ms.assetid: 812173d1-2904-42f4-a9e2-de19effec201
 author: brentfor
-ms.author: coreyp
-manager: dongill
+ms.author: brentf
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 548158fd1df4ee4fbd8d6f1bcee28693961c8d79
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: dba46b75da685f5b2cb74e8e08c53db9aa643aba
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991860"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628263"
 ---
 # <a name="manage-software-inventory-logging"></a>ソフトウェア インベントリ ログの管理
 
 >適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2
 
-このドキュメントでは、データセンターの管理者が Microsoft ソフトウェア資産管理データを時間の経過と共に簡単にログに記録できるようにする機能であるソフトウェアインベントリログを管理する方法について説明します。 このドキュメントでは、ソフトウェア インベントリ ログを管理する方法について説明します。 Windows Server 2012 R2 でソフトウェアインベントリログを使用する前に、インベントリが必要な各システムに Windows Update [kb 3000850](https://support.microsoft.com/kb/3000850)と[kb 3060681](https://support.microsoft.com/kb/3060681)がインストールされていることを確認してください。 Windows Server 2016 には Windows 更新プログラムは必要ありません。 この機能は、インベントリされる各サーバーでローカルに実行されます。 リモート サーバーのデータは収集しません。
+このドキュメントでは、データセンターの管理者が Microsoft ソフトウェア資産管理データを時間の経過と共に簡単にログに記録できるようにする機能であるソフトウェアインベントリログを管理する方法について説明します。 このドキュメントでは、ソフトウェア インベントリ ログを管理する方法について説明します。 Windows Server 2012 R2 でソフトウェアインベントリログを使用する前に、インベントリが必要な各システムに Windows Update [kb 3000850](https://support.microsoft.com/kb/3000850) と [kb 3060681](https://support.microsoft.com/kb/3060681) がインストールされていることを確認してください。 Windows Server 2016 には Windows 更新プログラムは必要ありません。 この機能は、インベントリされる各サーバーでローカルに実行されます。 リモート サーバーのデータは収集しません。
 
 ソフトウェア インベントリ ログ機能は、 Windows Server 2012 R2以前の 2 つのバージョンの Windows Server にも追加できます。 ソフトウェア インベントリ ログ機能を追加するために、以下の更新プログラムを Windows Server 2012 と Windows Server 2008 R2 SP1にインストールできます。
 
@@ -231,7 +231,7 @@ Windows Server 上にローカルに保存されているすべてのデータ (
 
 -   [Set-SilLogging](/previous-versions/windows/powershell-scripting/dn283387(v=wps.630)) -TimeOfDay を使用して SIL ログ記録の実行時刻を設定する場合は、日付と時刻を指定する必要があります。カレンダーの日付が設定され、ローカル システム時刻でその日付に到達するまでログ記録は実行されません。
 
--   取得した[ソフトウェア](/previous-versions/windows/powershell-scripting/dn283397(v=wps.630))または[get-silwindowsupdate](/previous-versions/windows/powershell-scripting/dn283393(v=wps.630))を使用する場合、"installdate" は常に 12:00: 00am (意味のない値) を示します。
+-   取得した [ソフトウェア](/previous-versions/windows/powershell-scripting/dn283397(v=wps.630))または [get-silwindowsupdate](/previous-versions/windows/powershell-scripting/dn283393(v=wps.630))を使用する場合、"installdate" は常に 12:00: 00am (意味のない値) を示します。
 
 -   [Get/Alaccess](/previous-versions/windows/powershell-scripting/dn283389(v=wps.630))を使用する場合、"sampledate" は常に 11:59: 00pm (意味のない値) を示します。日付は、これらのコマンドレットのクエリの関連データです。
 
@@ -240,7 +240,7 @@ Windows Server 上にローカルに保存されているすべてのデータ (
 
 これらの用途をサポートするため、ソフトウェア インベントリ ログにはそれぞれの構成オプションに関連したレジストリ エントリがあります。  これらのレジストリ値は、\ HKEY_LOCAL_MACHINE SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. にあります。 \\
 
-| 機能 | 値名 | Data | 対応するコマンドレット (実行中の OS でのみ使用可能) |
+| 関数 | 値の名前 | Data | 対応するコマンドレット (実行中の OS でのみ使用可能) |
 | --- | --- | --- | --- |
 |機能の開始と停止|CollectionState|1 または 0|[Start-SilLogging](/previous-versions/windows/powershell-scripting/dn283391(v=wps.630))、 [Stop-SilLogging](/previous-versions/windows/powershell-scripting/dn283394(v=wps.630))|
 |ネットワーク上のターゲット集計ポイントの指定|TargetUri|string|[Set-SilLogging](/previous-versions/windows/powershell-scripting/dn283387(v=wps.630)) -TargetURI|

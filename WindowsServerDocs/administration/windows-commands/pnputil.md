@@ -3,16 +3,16 @@ title: pnputil
 description: pnputil.exe ユーティリティを使用して、ドライバーパッケージの追加、ドライバーパッケージの削除、およびドライバーストア内のドライバーパッケージの一覧表示を行う、pnputil コマンドの参照記事。
 ms.topic: reference
 ms.assetid: fab686b8-09d3-4f6c-afa2-630e6036f44c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
-ms.openlocfilehash: adc465cfd2d94c2959b38af32104c7f829067cb8
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: d88d48fe1fc5aa838bbe04f320ea4cac55e09eaa
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035240"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628622"
 ---
 # <a name="pnputil"></a>pnputil
 
@@ -26,7 +26,7 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 |--|--|
 | -a | 識別された INF ファイルを追加することを指定します。 |
 | -d | 特定された INF ファイルを削除することを指定します。 |

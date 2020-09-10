@@ -3,16 +3,16 @@ title: ベスト プラクティス アナライザー スキャンの実行お�
 description: サーバー マネージャー
 ms.topic: article
 ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f8c0440da49e6e78afece1af3ee8357ddf846e7e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 8b8ef48e81daa9c673f42d43b2f95abadec619a8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895736"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627806"
 ---
 # <a name="run-best-practices-analyzer-scans-and-manage-scan-results"></a>ベスト プラクティス アナライザー スキャンの実行とスキャン結果の管理
 
@@ -55,7 +55,7 @@ BPA は、有効性、信頼性、および信頼性の 8 つのカテゴリで�
 |パフォーマンス|要求を処理し、ロールのワークロードを指定された予定期間内で、企業内、指定された処理を実行する役割の能力を測定するパフォーマンス ルールが適用されます。|
 |構成|構成規則は、役割が最適に実行されるために変更が必要と思われる役割設定を特定するために適用します。 構成規則によって、エラー メッセージが表示される、または役割が企業での所定の作業を実行できなくなる可能性がある設定の競合を回避することができます。|
 |ポリシー|ポリシー規則は、役割が最適かつ安全に動作するために変更を必要とするグループポリシーまたは Windows レジストリ設定を特定するために適用されます。|
-|操作|操作規則は、企業で所定のタスクを実行する際に発生する可能性がある役割のエラーを特定するために適用します。|
+|Operation|操作規則は、企業で所定のタスクを実行する際に発生する可能性がある役割のエラーを特定するために適用します。|
 |展開前|展開前規則は、インストールされた役割を企業で展開する前に適用します。 管理者は、役割を運用環境で使う前に、ベスト プラクティスを満たしているかどうかを評価できます。|
 |展開後|展開後規則は、すべての必要なサービスが役割で開始され、役割が企業で実行された後に適用します。|
 |前提条件|前提条件規則は、BPA で他のカテゴリの特定の規則を適用するために、役割に必要な構成設定、ポリシー設定、機能について説明します。 スキャン結果の前提条件は、間違った設定、不足しているプログラム、誤って有効または無効にされたポリシー、レジストリ キー設定、またはその他の構成により、スキャン中に BPA で 1 つ以上の規則が適用できなかったことを示しています。 前提条件の結果は、対応または非対応を示すものではありません。 規則を適用できなかったため、スキャン結果に規則が含まれていないことを示すものです。|
@@ -94,7 +94,7 @@ BPA GUI を使用して 1 つまたは複数の役割をスキャンするには
 Windows PowerShell コマンドレットを使用して 1 つまたは複数の役割をスキャンするのにには、次の手順を使用します。
 
 > [!NOTE]
-> ここに示す手順では、BPA のコマンドレットとパラメーターをすべて表示していません。 Windows PowerShell での BPA 操作の詳細については、Windows PowerShell セッションで「 **Get-help***bpacmdlet***-full**」と入力してください。 *bpacmdlet*には、次のいずれかの値を指定できます。 BPA コマンドレットのヘルプトピックは、 [Windows Server TechCenter](https://go.microsoft.com/fwlink/p/?LinkId=240177)でも確認できます。
+> ここに示す手順では、BPA のコマンドレットとパラメーターをすべて表示していません。 Windows PowerShell での BPA 操作の詳細については、Windows PowerShell セッションで「 **Get-help***bpacmdlet***-full**」と入力してください。 *bpacmdlet* には、次のいずれかの値を指定できます。 BPA コマンドレットのヘルプトピックは、 [Windows Server TechCenter](https://go.microsoft.com/fwlink/p/?LinkId=240177)でも確認できます。
 
 -   **Invoke-bpamodel**
 
@@ -114,7 +114,7 @@ Windows PowerShell コマンドレットを使用して 1 つまたは複数の�
 
 2.  Windows PowerShell 3.0 以降では、コマンドレットモジュールは、モジュールのコマンドレットが初めて使用されるときに、Windows PowerShell セッションに自動的にインポートされます。 BPA コマンドレット モジュールをインポートまたは読み込む必要はありません。
 
-3.  次の例に示すように、 **invoke-bpamodel**コマンドレットを入力して、BPA スキャンを実行できるすべてのロールのモデル id を検索します。
+3.  次の例に示すように、 **invoke-bpamodel** コマンドレットを入力して、BPA スキャンを実行できるすべてのロールのモデル id を検索します。
 
     `Get-Bpamodel`
 
@@ -197,7 +197,7 @@ bpa スキャンで頻繁に発生し、解決する必要がない結果など�
 
     `Get-BPAResult -modelId <model ID> | Where { $_.<Field Name> -eq Value} | Set-BPAResult -Exclude $true`
 
-    上記のコマンドは、*モデル id*によって表されるモデル ID の BPA スキャン結果項目を取得します。
+    上記のコマンドは、 *モデル id*によって表されるモデル ID の BPA スキャン結果項目を取得します。
 
     コマンドの 2 番目の部分では、`Get-BPAResult` コマンドレットの結果をフィルター処理し、*Field Name* によって示される結果フィールドの値が引用符内のテキストに一致するスキャン結果だけを取得します。
 
@@ -224,9 +224,9 @@ bpa スキャンで頻繁に発生し、解決する必要がない結果など�
 
     `Get-BPAResult -modelId <model Id> | Where { $_.<Field Name> -eq Value } | Set-BPAResult -Exclude $false`
 
-    上記のコマンドは、*モデル Id*によって表されるモデルの BPA スキャン結果項目を取得します。
+    上記のコマンドは、 *モデル Id*によって表されるモデルの BPA スキャン結果項目を取得します。
 
-    コマンドの2番目の部分では、最初のパイプ文字 () の後に、 **|** **Get BPAResult**コマンドレットの結果をフィルター処理して、*フィールド名*で表される結果フィールドの値が引用符内のテキストに一致するスキャン結果だけを取得します。
+    コマンドの2番目の部分では、最初のパイプ文字 () の後に、 **|** **Get BPAResult** コマンドレットの結果をフィルター処理して、 *フィールド名*で表される結果フィールドの値が引用符内のテキストに一致するスキャン結果だけを取得します。
 
     コマンドレットの最後の部分 (2 つ目のパイプ文字の後) では、**-Exclude** パラメーターを **false** に設定することによってコマンドレットの 2 番目の部分でフィルター処理された結果を組み込みます。
 
@@ -239,7 +239,7 @@ bpa スキャンで頻繁に発生し、解決する必要がない結果など�
 
 1.  管理者特権で Windows PowerShell セッションを開きます。
 
-2.  特定のモデル ID の最新のスキャン結果を取得します。 次のように入力します。モデルは*モデル ID*で表され **、enter キー**を押します。 モデル ID をコンマで区切ると、複数のモデル ID の結果を取得できます。
+2.  特定のモデル ID の最新のスキャン結果を取得します。 次のように入力します。モデルは *モデル ID*で表され **、enter キー**を押します。 モデル ID をコンマで区切ると、複数のモデル ID の結果を取得できます。
 
     `Get-BPAResult <model ID>`
 
@@ -286,13 +286,13 @@ bpa スキャンで頻繁に発生し、解決する必要がない結果など�
 
         `Get-BPAResult <model ID> | OGV`
 
-    -   アーカイブまたは電子メール受信者に送信できる HTML ファイルに BPA 結果をエクスポートするには、次のコマンドレットを実行します。ここで、 *path*は、html 結果を保存するパスとファイル名を表します。
+    -   アーカイブまたは電子メール受信者に送信できる HTML ファイルに BPA 結果をエクスポートするには、次のコマンドレットを実行します。ここで、 *path* は、html 結果を保存するパスとファイル名を表します。
 
         `Get-BPAResult <model ID> | convertTo-Html | Set-Content <path>`
 
         **例:** `Get-BPAResult Microsoft/Windows/FileServices | convertTo-Html | Set-Content C:\BPAResults\FileServices.htm`
 
-    -   BPA 結果をコンマ区切り値 (CSV) テキストファイルにエクスポートするには、次のコマンドレットを実行します。 *path*は、csv 結果の保存先のパスとテキストファイル名を表します。 CSV 結果は、スプレッドシートまたはグリッドにデータを表示するその他のプログラムと Microsoft Excel にインポートすることができます。
+    -   BPA 結果をコンマ区切り値 (CSV) テキストファイルにエクスポートするには、次のコマンドレットを実行します。 *path* は、csv 結果の保存先のパスとテキストファイル名を表します。 CSV 結果は、スプレッドシートまたはグリッドにデータを表示するその他のプログラムと Microsoft Excel にインポートすることができます。
 
         `Get-BPAResult <model ID> | Export-CSV <path>`
 

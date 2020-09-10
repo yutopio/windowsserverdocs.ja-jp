@@ -4,15 +4,15 @@ desctription: Describes the User Access Logging feature and how to start using i
 ms.topic: article
 ms.assetid: 5c395b8b-3b35-4042-b9cc-07e438f86d50
 author: brentfor
-ms.author: coreyp
-manager: dongill
+ms.author: brentf
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: da8bb60ea455578eff96aed6173e4662fffd6ade
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 24471aca151a59306e8bf51119232f08dacdc606
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991757"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628150"
 ---
 # <a name="get-started-with-user-access-logging"></a>ユーザーアクセスログを使ってみる
 
@@ -104,7 +104,7 @@ UAL では次のユーザー関連データが記録されます。
 |**ActivityCount**|特定のユーザーが役割またはサービスにアクセスした回数。|
 |**FirstSeen**|ユーザーが役割またはサービスに最初にアクセスした日時。|
 |**LastSeen**|ユーザーが役割またはサービスに最後にアクセスした日時。|
-|**同様**|UAL データを提供しているソフトウェアの親製品 (Windows など) の名前。|
+|**ProductName**|UAL データを提供しているソフトウェアの親製品 (Windows など) の名前。|
 |**RoleGUID**|サーバーの役割またはインストールされている製品を表す UAL 割り当てまたは登録 GUID。|
 |**RoleName**|UAL データを提供している役割、コンポーネント、またはサブ製品の名前。 これは ProductName および RoleGUID と関連付けられてもいます。|
 |**TenantIdentifier**|UAL データを伴う、インストールされている役割または製品のテナント クライアントの一意の GUID (該当する場合)。|
@@ -117,7 +117,7 @@ UAL では次のデバイス関連データが記録されます。
 |**ActivityCount**|特定のデバイスが役割またはサービスにアクセスした回数。|
 |**FirstSeen**|役割またはサービスにアクセスするために IP アドレスが初めて使用された日時。|
 |**LastSeen**|役割またはサービスにアクセスするために IP アドレスが最後に使用された日時。|
-|**同様**|UAL データを提供しているソフトウェアの親製品 (Windows など) の名前。|
+|**ProductName**|UAL データを提供しているソフトウェアの親製品 (Windows など) の名前。|
 |**RoleGUID**|サーバーの役割またはインストールされている製品を表す UAL 割り当てまたは登録 GUID。|
 |**RoleName**|UAL データを提供している役割、コンポーネント、またはサブ製品の名前。 これは ProductName および RoleGUID と関連付けられてもいます。|
 |**TenantIdentifier**|UAL データを伴う、インストールされている役割または製品のテナント クライアントの一意の GUID (該当する場合)。|

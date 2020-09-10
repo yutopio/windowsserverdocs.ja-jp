@@ -3,16 +3,16 @@ title: cipher
 description: Cipher コマンドの参照記事。 NTFS ボリューム上のディレクトリとファイルの暗号化を表示または変更します。
 ms.topic: reference
 ms.assetid: 78ef795e-0f87-4acd-8d15-192c972c0f41
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 28d4342a43b3b66c2dd40f9041dbb72e97ec234b
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ff3c98a3533b77f257c2f1bd4d7102ccd0eed1f7
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89026006"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629672"
 ---
 # <a name="cipher"></a>cipher
 
@@ -54,7 +54,7 @@ cipher /rekey [pathname [...]]
 | /removeuser/certhash:`<hash>` | 指定されたファイルからユーザーを削除します。 **/Certhash**に指定する*ハッシュ*は、削除する証明書の SHA1 ハッシュである必要があります。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 - 親ディレクトリが暗号化されていない場合、暗号化されたファイルは、変更されると復号化される可能性があります。 したがって、ファイルを暗号化する場合は、親ディレクトリも暗号化する必要があります。
 

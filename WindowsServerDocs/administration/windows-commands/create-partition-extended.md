@@ -3,16 +3,16 @@ title: create partition extended
 description: パーティションの拡張コマンドの参照記事。フォーカスがあるディスクに拡張パーティションを作成します。
 ms.topic: reference
 ms.assetid: 4ad7cb66-9c66-4153-b94e-1030a7225070
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 0d60438d634309d93a2d8446e4d86ff909db27e4
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b04e9ad75161dbde02046ad0a0c5392b19473fa9
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030220"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629193"
 ---
 # <a name="create-partition-extended"></a>create partition extended
 
@@ -33,7 +33,7 @@ create partition extended [size=<n>] [offset=<n>] [align=<n>] [noerr]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | サイズ =`<n>` | パーティションのサイズ (MB 単位) を指定します。 サイズが指定されていない場合、パーティションは拡張パーティションの空き領域がなくなるまで続行されます。 |
 | オフセット =`<n>` | パーティションが作成されるオフセットをキロバイト (KB) 単位で指定します。 オフセットが指定されていない場合、パーティションは、新しいパーティションを保持するのに十分な大きさのディスクの空き領域の先頭から開始されます。 |

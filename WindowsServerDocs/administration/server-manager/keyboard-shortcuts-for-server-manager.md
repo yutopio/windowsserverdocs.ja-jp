@@ -3,16 +3,16 @@ title: サーバー マネージャーのキーボード ショートカット
 description: サーバー マネージャー
 ms.topic: article
 ms.assetid: 96a2a8be-cbeb-4799-9034-284ea057915c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 182a99ff3c20ff8a62b36714967b25603ff055b3
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: d2848398fa232d45f4229238d641db7b858f3032
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895768"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627839"
 ---
 # <a name="keyboard-shortcuts-for-server-manager"></a>サーバー マネージャーのキーボード ショートカット
 
@@ -49,7 +49,7 @@ ms.locfileid: "87895768"
 |更新|**F5**|
 |[通知] 領域で、[タスクの詳細] ダイアログボックスを開く|**Alt + N**|
 |[管理] メニュー|**Alt + M**|
-|[表示] メニュー|**Alt + V**|
+|[View] メニュー|**Alt + V**|
 |[ヘルプ] メニュー|**Alt + H**|
 |サーバーマネージャーヘルプを開く|**F1**|
 |拡大します|**Ctrl + 正符号 (+) キー**|

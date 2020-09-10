@@ -4,15 +4,15 @@ description: ソフトウェアインベントリログアグリゲーターの�
 ms.topic: article
 ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
 author: brentfor
-ms.author: coreyp
-manager: dongill
+ms.author: brentf
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 4f8e7743e51a5316df474ad97768cf01292db668
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: d533480c18919933d3581901dd8377556c6571c7
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991913"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628220"
 ---
 # <a name="software-inventory-logging-aggregator"></a>ソフトウェア インベントリ ログ アグリゲーター
 
@@ -65,7 +65,7 @@ SILA は Windows Server 上にインストールされるソフトウェアで�
 
 -   **Cio および Finance コントローラー**。組織の IT 展開における Microsoft エンタープライズソフトウェアの使用状況を報告する必要があります。
 
-## <a name="getting-started"></a>はじめに
+## <a name="getting-started"></a>作業の開始
 **前提条件**
 
 集計またはレポートの対象となる少なくとも 1 つのサーバー上の VM または物理ハードウェアにソフトウェア インベントリ ログ アグリゲーター (SIL アグリゲーター) が存在する
@@ -127,7 +127,7 @@ SIL アグリゲーターによるポーリングをセットアップする Win
 
 11. **root \cimv2** ウィンドウの [セキュリティ] に戻り、**[リモート管理ユーザー]** を選択します。
 
-12. 下部にある [アクセス許可] セクションで、[**リモートの有効化**] がオンになっていることを確認します。
+12. 下部にある [アクセス許可] セクションで、[ **リモートの有効化** ] がオンになっていることを確認します。
 
 13. **[適用]** をクリックし、**[OK]** をクリックします。
 
@@ -158,7 +158,7 @@ SIL アグリゲーターを Windows Server にインストールする前に次
 
 -   Windows 認証が必要な場合、**SQL Server に対して sysadmin 特権を有するアカウントでサーバーにログオンしています**。
 
-    または
+    OR
 
     SQL 認証が必要な場合、**SQL 管理者特権を有するアカウントに対するパスワードがあります**。
 
@@ -217,7 +217,7 @@ SIL アグリゲーターを Windows Server にインストールする前に次
 #### <a name="introduction-to-sil-aggregator-powershell-cmdlets"></a>SIL アグリゲーターの PowerShell コマンドレットの概要
 次のコマンドは、Windows PowerShell コンソールから管理者として実行できます。
 
-|Windows PowerShell コマンドレット|機能|
+|Windows PowerShell コマンドレット|関数|
 |-----------------------------|------------|
 |`Start-SilAggregator`|ソフトウェア インベントリ ログ アグリゲーターのすべてのサービスとタスクを開始します。 アグリゲーターが、SIL ログが開始されたサーバーから HTTPS 経由でデータを受信するために必要です。|
 |`Stop-SilAggregator`|ソフトウェア インベントリ ログ アグリゲーターのすべてのサービスとタスクを停止します。 タスクまたはサービスが操作途中である場合は、このコマンドの完了に遅延が生じる可能性があります。|
@@ -233,11 +233,11 @@ SIL アグリゲーターを Windows Server にインストールする前に次
 
 -   SIL アグリゲーター上で以下の操作を行います。
 
-    -   `Start-SilAggregator` を実行する
+    -   `Start-SilAggregator` を実行します。
 
         この操作は、インベントリされるようにセットアップした (またはセットアップする) サーバーから HTTPS 経由でアグリゲーターに転送されるデータをアグリゲーターがアクティブに受信するために必要です。 このアグリゲーターに転送するサーバーを最初に有効にしたとしても、問題ありません。それらのサーバーはデータ ペイロードを最大で 30 日間、ローカルにキャッシュするからです。 アグリゲーターが "targeturi" を実行すると、キャッシュされたすべてのデータが一度にアグリゲーターに転送され、すべてのデータが処理されます。
 
-    -   `Add-SilVMHost` を実行する
+    -   `Add-SilVMHost` を実行します。
 
         例: `add-silvmhost –vmhostname contoso1 –hostcredential get-credential`
 
@@ -253,7 +253,7 @@ SIL アグリゲーターを Windows Server にインストールする前に次
 
 -   インベントリされる Windows Server 上で、管理者として PowerShell を開き、次のコマンドを実行します。
 
-    -   `Set-SilLogging –TargetUri "https://contososilaggregator" –CertificateThumbprint "your client certificate's thumbprint"` を実行する
+    -   `Set-SilLogging –TargetUri "https://contososilaggregator" –CertificateThumbprint "your client certificate's thumbprint"` を実行します。
 
         -   これにより、インベントリ データを送信する場所と認証で使用する証明書が Windows Server 内の SIL に指示されます。
 
@@ -265,11 +265,11 @@ SIL アグリゲーターを Windows Server にインストールする前に次
             > [!IMPORTANT]
             > これらの値が正しくない場合、または証明書が適切なストアにインストールされていない (または有効でない) 場合は、SIL ログを開始しても、ターゲットへの転送は失敗します。 データは、最大で 30 日間、ローカルにキャッシュされます。
 
-    -   `Start-SilLogging` を実行する
+    -   `Start-SilLogging` を実行します。
 
         これにより、SIL ログが開始します。 1 時間ごとに、時間内のランダムなポイントで、SIL は `–targeturi` パラメーターにより指定されたアグリゲーターにインベントリ データを転送します。 最初の転送は、完全なデータ セットになります。 後続の各転送は、何も変更されていないデータだけを識別する "ハートビート" になります。 データ セットに何らかの変更が加えられている場合は、別の完全なデータ セットが転送されます。
 
-    -   `Publish-SilData` を実行する
+    -   `Publish-SilData` を実行します。
 
         -   SIL でログを初めて有効にするとき、この手順は省略できます。
 
@@ -308,7 +308,7 @@ Windows Server がインストールされている各実行中の VM、また�
 
 -   `New-PSDrive -Name $firstAvailableDriveLetter -PSProvider filesystem -root`** < \\ pfx 証明書ファイルが格納されている共有のディレクトリ名>**`-credential $mycreds`
 
--   `Copy-Item ${firstAvailableDriveLetter}:\`**新しいドライブのディレクトリ> c: では、次のように<します。\<location of your choice>**
+-   `Copy-Item ${firstAvailableDriveLetter}:\`** 新しいドライブのディレクトリ> c: では、次のように<します。\<location of your choice>**
 
 -   `Remove-PSDrive –Name $firstAvailableDriveLetter`
 
@@ -319,7 +319,7 @@ Windows Server がインストールされている各実行中の VM、また�
 -   `Set-sillogging –targeturi "https://`**<machinename of your SIL Aggregator>** `–certificatethumbprint`
 
 > [!NOTE]
-> クライアントの pfx ファイルから証明書の拇印を使用し、**セット**を使用して Sil アグリゲーターに追加します。
+> クライアントの pfx ファイルから証明書の拇印を使用し、 **セット** を使用して Sil アグリゲーターに追加します。
 
 -   `Start-sillogging`
 
@@ -376,9 +376,9 @@ SIL インベントリ データは、SIL アグリゲーターに到達でき�
 -   **[ダッシュ ボード]** タブの **[Windows Server]** セクションにある **[その他のハイパーバイザー ホスト]** と **[ハイパーバイザー ホストの合計]** の行には、Hyper-V を実行している場合もあれば、そうでない場合もある Windows Server 物理ホストが含まれます。
 
 ### <a name="column-descriptions"></a>列の説明
-SIL アグリゲーターで作成される Excel ベースのレポートの **[Windows Server の詳細]** タブにある各列について以下に説明します。 その他のデータ タブは、前述の列と同じになるか、またはそれらの列のサブセットとなります。 1つの例外は、[SQL Server] タブの "インストール数" です (「**ハイウォーターマーク**」セクションを参照してください)。
+SIL アグリゲーターで作成される Excel ベースのレポートの **[Windows Server の詳細]** タブにある各列について以下に説明します。 その他のデータ タブは、前述の列と同じになるか、またはそれらの列のサブセットとなります。 1つの例外は、[SQL Server] タブの "インストール数" です (「 **ハイウォーターマーク** 」セクションを参照してください)。
 
-|列ヘッダー|説明|
+|列ヘッダー|Description|
 |-----------------|---------------|
 |カレンダー月|レポート内のデータは月別にまとめられ、最も新しいものが最初にきます。 月内のデータは、特定の順序で一覧表示されません。|
 |ホスト名|SIL アグリゲーターが正常にポーリングしている物理ホストのネットワーク名または FQDN です。<p>Get SilVMHost コマンドレットを使用すると、追加済みであるがポーリングが正常に行われていない、または正常に行われなくなったホストを検索できます。 最後に成功したポーリングが表示されます。|
@@ -502,7 +502,7 @@ Copyright (c) 2010, RENCI</pre>
 
     -   **targeturi** のエントリに **https://** が含まれていることを確認してください。
 
-    -   Windows Server 用の必須の更新プログラムがすべてインストールされていることを確認してください (「SIL の前提条件」を参照)。  確認する簡単な方法は、次のコマンドレットを使用してこれらを検索することです。`Get-SilWindowsUpdate *3060*, *3000*`
+    -   Windows Server 用の必須の更新プログラムがすべてインストールされていることを確認してください (「SIL の前提条件」を参照)。  確認する簡単な方法は、次のコマンドレットを使用してこれらを検索することです。   `Get-SilWindowsUpdate *3060*, *3000*`
 
     -   アグリゲーターでの認証に使用される証明書が、SilLogging でインベントリされるローカル サーバー上の適切なストアにインストールされていることを確認します (「はじめに」セクションを参照)。
 
@@ -573,9 +573,9 @@ SIL アグリゲーターのアンインストールおよび再インストー�
 
     3.  選択ツリーから SoftwareInventoryLogging データベース、[テーブル] の順に展開します。
 
-    4.  [Dbo] を右クリックし**ます。Dbo.sqlserveredition**をクリックし、[**上位200行の編集**] を選択します。
+    4.  [Dbo] を右クリックし **ます。Dbo.sqlserveredition**をクリックし、[**上位200行の編集**] を選択します。
 
-    5.  "Standard Edition" の横にある PropertyNumValue を**2760240536** (-1534726760) に変更します。
+    5.  "Standard Edition" の横にある PropertyNumValue を **2760240536** (-1534726760) に変更します。
 
     6.  クエリを閉じ、変更を保存します。
 
@@ -583,7 +583,7 @@ SIL アグリゲーターのアンインストールおよび再インストー�
 
 -   物理サーバーでハイパー スレッディングが有効になっている場合、SIL で生成されるレポートでは、すべてのプロセッサ コア カウントにスレッド数も含められます。  ハイパースレッディングが有効になっているサーバー上の実際の物理コアの数を取得するには、これらのカウント数を半分に減らす必要があります。
 
--   Windows Server と System Center の両方について、"**同時に実行されている**..." というラベルの付いた行 ([**ダッシュボード**] タブ) と列 ([概要] タブと [**詳細**] タブ) の合計は、2つの場所で完全に一致しません。 [**ダッシュボード**] タブで、[**Windows Server デバイス (既知の vm を使用していません**)] の値を [**同時に実行して**います...] に追加する必要があります。[概要] タブと [**詳細**] タブで、この数値に等しい値を指定します。
+-   Windows Server と System Center の両方について、"**同時に実行されている**..." というラベルの付いた行 ([**ダッシュボード**] タブ) と列 ([概要] タブと [**詳細**] タブ) の合計は、2つの場所で完全に一致しません。 [ **ダッシュボード** ] タブで、[**Windows Server デバイス (既知の vm を使用していません**)] の値を [**同時に実行して**います...] に追加する必要があります。[概要] タブと [ **詳細** ] タブで、この数値に等しい値を指定します。
 
 -   このドキュメントの「**時間の経過と共に SIL を管理する**」セクションで、証明書を変更または更新する場合は、「**データ損失を回避するための重要な手順**」を参照してください。
 

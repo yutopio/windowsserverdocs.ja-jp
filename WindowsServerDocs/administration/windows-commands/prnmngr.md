@@ -3,16 +3,16 @@ title: prnmngr
 description: 既定のプリンターの設定と表示に加えて、プリンターまたはプリンターの接続を追加、削除、および一覧表示する prnmngr コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: 39eee1a8-4b41-4c9f-941e-486495135eb8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
-ms.openlocfilehash: 27196fcea2694b1f49bcd6f9ee74b88f16a853d8
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: cfbba48747dfca7230f0ef397201cea610fdc3dd
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038420"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628055"
 ---
 # <a name="prnmngr"></a>prnmngr
 
@@ -29,7 +29,7 @@ cscript prnmngr {-a | -d | -x | -g | -t | -l | -?}[c] [-s <Servername>] [-p <Pri
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 |--|--|
 | -a | ローカル プリンター接続を追加します。 |
 | -d | プリンター接続を削除します。 |
@@ -45,7 +45,7 @@ cscript prnmngr {-a | -d | -x | -g | -t | -l | -?}[c] [-s <Servername>] [-p <Pri
 | -u `<Username>` -w `<password>` | 管理するプリンターをホストするコンピューターに接続するアクセス許可を持つアカウントを指定します。 ターゲット コンピューターのローカル Administrators グループのすべてのメンバーはこれらのアクセス許可を持っていますが、アクセス許可を他のユーザーに与えることもできます。 アカウントを指定しない場合は、コマンドが機能するように、これらのアクセス許可を持つアカウントでログオンする必要があります。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 入力した情報にスペースが含まれている場合は、テキストを引用符で囲みます (例、"コンピューター名")。
 
