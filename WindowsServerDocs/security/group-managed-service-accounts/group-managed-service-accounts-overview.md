@@ -3,16 +3,16 @@ title: Group Managed Service Accounts Overview
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: cef0693c-f861-48a7-a1c0-8d1bc06143ce
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 09405b940e9fd862372fe80c4a5194caa205e5ea
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: ce51e1f1dab3940154ecee6b2743c39e2ff654b5
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991497"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638043"
 ---
 # <a name="group-managed-service-accounts-overview"></a>Group Managed Service Accounts Overview
 
@@ -55,7 +55,7 @@ gMSAs は、windows Server 2012 より前の Windows オペレーティングシ
 |コンテンツ タイプ|参考資料|
 |--------|-------|
 |**製品評価**|[What's New for Managed Service Accounts](what-s-new-for-managed-service-accounts.md)<p>[Windows 7 および Windows Server 2008 R2 向けの管理されたサービス アカウントのドキュメント](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641731(v=ws.10))<p>[サービスアカウントのステップ \- バイ \- ステップガイド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd548356(v=ws.10))|
-|**計画**|まだ使用できません|
+|**Planning**|まだ使用できません|
 |**デプロイ**|まだ使用できません|
 |**操作**|[Active Directory における管理されたサービス アカウントに関するページ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378925(v=ws.10))|
 |**トラブルシューティング**|まだ使用できません|

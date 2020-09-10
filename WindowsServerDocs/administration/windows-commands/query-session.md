@@ -3,16 +3,16 @@ title: query session
 description: クエリセッションコマンドの参照記事。リモートデスクトップセッションホストサーバー上のセッションに関する情報を表示します。
 ms.topic: reference
 ms.assetid: abc0ace8-0b74-4b6e-a937-a78bb4b61a1f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 55f0269c57b70944befa4483cdeab96ec89b2bd9
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 2842aa9b0a38438a92ee2b7072b1a1054642fd62
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038410"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639888"
 ---
 # <a name="query-session"></a>query session
 
@@ -43,7 +43,7 @@ query session [<sessionname> | <username> | <sessionID>] [/server:<servername>] 
 | /counter | 作成、切断、再接続されたセッションの合計数など、現在のカウンター情報が表示されます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - ユーザーは、ユーザーが現在ログオンしているセッションに対していつでもクエリを実行できます。 他のセッションを照会するには、ユーザーに特別なアクセス許可が必要です。
 

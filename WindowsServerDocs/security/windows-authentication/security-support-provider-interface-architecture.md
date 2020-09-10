@@ -3,16 +3,16 @@ title: セキュリティ サポート プロバイダー インターフェイ�
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: de09e099-5711-48f8-adbd-e7b8093a0336
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 636723dafc6ddc8e346a7272978a1abf9338baad
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: aec55bca0be096a3866cc49e718743a9c32d8f6b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991464"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638750"
 ---
 # <a name="security-support-provider-interface-architecture"></a>セキュリティ サポート プロバイダー インターフェイスのアーキテクチャ
 
@@ -77,7 +77,7 @@ Kerberos プロトコルは Windows 2000 以降の既定の認証プロトコル
 
 場所:% windir% \Windows\System32\kerberos.dll
 
-このプロバイダーは、このトピックの冒頭にある「**適用対象**」の一覧に記載されているバージョンと、windows Server 2003 および windows XP に既定で含まれています。
+このプロバイダーは、このトピックの冒頭にある「 **適用対象** 」の一覧に記載されているバージョンと、windows Server 2003 および windows XP に既定で含まれています。
 
 **Kerberos プロトコルと Kerberos SSP に関するその他のリソース**
 
@@ -110,7 +110,7 @@ Ntlm セキュリティサポートプロバイダー (NTLM SSP) は、NTLM チ�
 
 場所:% windir% \Windows\System32\msv1_0.dll
 
-このプロバイダーは、このトピックの冒頭にある「**適用対象**」の一覧に記載されているバージョンと、windows Server 2003 および windows XP に既定で含まれています。
+このプロバイダーは、このトピックの冒頭にある「 **適用対象** 」の一覧に記載されているバージョンと、windows Server 2003 および windows XP に既定で含まれています。
 
 **NTLM プロトコルと NTLM SSP に関するその他のリソース**
 
@@ -133,7 +133,7 @@ Ntlm セキュリティサポートプロバイダー (NTLM SSP) は、NTLM チ�
 
 場所:% windir% \Windows\System32\Digest.dll
 
-このプロバイダーは、このトピックの冒頭にある「**適用対象**」の一覧に記載されているバージョンと、windows Server 2003 および windows XP に既定で含まれています。
+このプロバイダーは、このトピックの冒頭にある「 **適用対象** 」の一覧に記載されているバージョンと、windows Server 2003 および windows XP に既定で含まれています。
 
 **ダイジェストプロトコルとダイジェスト SSP に関するその他のリソース**
 
@@ -158,7 +158,7 @@ TLS プロトコル、SSL プロトコル、プライベート通信テクノロ
 
 -   プライベート通信テクノロジ (PCT)
 
-    **メモ**既定では、PCT は無効になっています。
+    **メモ** 既定では、PCT は無効になっています。
 
 選択されたプロトコルは、クライアントとサーバーがサポートできる優先認証プロトコルです。 たとえば、サーバーがすべての Schannel プロトコルをサポートし、クライアントが SSL 3.0 と SSL 2.0 のみをサポートしている場合、認証プロセスでは SSL 3.0 が使用されます。
 
@@ -166,7 +166,7 @@ DTLS は、アプリケーションによって明示的に呼び出されたと
 
 場所:% windir% \Windows\System32\Schannel.dll
 
-このプロバイダーは、このトピックの冒頭にある「**適用対象**」の一覧に記載されているバージョンと、windows Server 2003 および windows XP に既定で含まれています。
+このプロバイダーは、このトピックの冒頭にある「 **適用対象** 」の一覧に記載されているバージョンと、windows Server 2003 および windows XP に既定で含まれています。
 
 > [!NOTE]
 > TLS 1.2 は、Windows Server 2008 R2 および Windows 7 のこのプロバイダーで導入されました。 DTLS は、Windows Server 2012 および Windows 8 のこのプロバイダーで導入されました。
@@ -188,7 +188,7 @@ SPNEGO は、RFC 2478 で指定されています。
 
 場所:% windir% \Windows\System32\lsasrv.dll
 
-このプロバイダーは、このトピックの冒頭にある「**適用対象**」の一覧に記載されているバージョンと、windows Server 2003 および windows XP に既定で含まれています。
+このプロバイダーは、このトピックの冒頭にある「 **適用対象** 」の一覧に記載されているバージョンと、windows Server 2003 および windows XP に既定で含まれています。
 
 **Negotiate SSP に関するその他のリソース**
 
@@ -203,7 +203,7 @@ Credential Security Service Provider (CredSSP) は、新しいターミナルサ
 
 場所:% windir% \Windows\System32\credssp.dll
 
-このプロバイダーは、このトピックの冒頭にある「**適用対象**」の一覧に指定されているバージョンに既定で含まれています。
+このプロバイダーは、このトピックの冒頭にある「 **適用対象** 」の一覧に指定されているバージョンに既定で含まれています。
 
 **資格情報 SSP に関するその他のリソース**
 
@@ -230,14 +230,14 @@ NegoExts でサポートされている Ssp は、Kerberos や NTLM などのス
 
 場所:% windir% \Windows\System32\negoexts.dll
 
-このプロバイダーは、このトピックの冒頭にある「**適用対象**」の一覧に記載されているバージョンに既定で含まれています (windows Server 2008 と windows Vista は除く)。
+このプロバイダーは、このトピックの冒頭にある「 **適用対象** 」の一覧に記載されているバージョンに既定で含まれています (windows Server 2008 と windows Vista は除く)。
 
 ### <a name="pku2u-security-support-provider"></a><a name="BKMK_PKU2USSP"></a>PKU2U セキュリティサポートプロバイダ
 PKU2U プロトコルは、Windows 7 および Windows Server 2008 R2 の SSP として導入され、実装されています。 この SSP は、特に Windows 7 で導入されたホームグループと呼ばれるメディアおよびファイル共有機能を通じて、ピアツーピア認証を有効にします。 この機能は、ドメインのメンバーではないコンピューター間での共有を許可します。
 
 場所:% windir% \Windows\System32\pku2u.dll
 
-このプロバイダーは、このトピックの冒頭にある「**適用対象**」の一覧に記載されているバージョンに既定で含まれています (windows Server 2008 と windows Vista は除く)。
+このプロバイダーは、このトピックの冒頭にある「 **適用対象** 」の一覧に記載されているバージョンに既定で含まれています (windows Server 2008 と windows Vista は除く)。
 
 **PKU2U プロトコルと PKU2U SSP に関するその他のリソース**
 
@@ -246,7 +246,7 @@ PKU2U プロトコルは、Windows 7 および Windows Server 2008 R2 の SSP �
 ## <a name="security-support-provider-selection"></a><a name="BKMK_SecuritySupportProviderSelection"></a>セキュリティサポートプロバイダーの選択
 Windows SSPI では、インストールされているセキュリティサポートプロバイダーでサポートされているプロトコルのいずれかを使用できます。 ただし、すべてのオペレーティングシステムが Windows Server を実行している特定のコンピューターと同じ SSP パッケージをサポートしているわけではないため、クライアントとサーバーは両方がサポートしているプロトコルを使用するためにネゴシエーションを行う必要があります。 Windows Server では、可能な場合、クライアントコンピューターとアプリケーションは、強力な標準ベースのプロトコルである Kerberos プロトコルを使用することを推奨しますが、オペレーティングシステムは、Kerberos プロトコルをサポートしていないクライアントコンピューターとクライアントアプリケーションの認証を引き続き許可します。
 
-認証を行う前に、2つの通信コンピューターが両方のプロトコルでサポートできるプロトコルに同意する必要があります。 SSPI を介して任意のプロトコルを使用できるようにするには、各コンピューターに適切な SSP が必要です。 たとえば、クライアントコンピューターとサーバーが Kerberos 認証プロトコルを使用するには、Kerberos v5 がサポートされている必要があります。 Windows Server では、関数**EnumerateSecurityPackages**を使用して、コンピューターでサポートされている ssp と、それらの ssp の機能を識別します。
+認証を行う前に、2つの通信コンピューターが両方のプロトコルでサポートできるプロトコルに同意する必要があります。 SSPI を介して任意のプロトコルを使用できるようにするには、各コンピューターに適切な SSP が必要です。 たとえば、クライアントコンピューターとサーバーが Kerberos 認証プロトコルを使用するには、Kerberos v5 がサポートされている必要があります。 Windows Server では、関数 **EnumerateSecurityPackages** を使用して、コンピューターでサポートされている ssp と、それらの ssp の機能を識別します。
 
 認証プロトコルの選択は、次の2つの方法のいずれかで処理できます。
 

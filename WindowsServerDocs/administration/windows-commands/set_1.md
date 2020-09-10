@@ -3,16 +3,16 @@ title: set
 description: cmd.exe 環境変数の表示、設定、または削除を行う set のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 5fdd60d6-addf-4574-8c92-8aa53fa73d76
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 30240d4ae286c472cfbce932201435097df33ddb
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 70ce8bf85bbafc68e4ffe09170d9e21738315560
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89023436"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639481"
 ---
 # <a name="set"></a>set
 
@@ -38,7 +38,7 @@ set /a <Variable>=<Expression>
 |\<Expression>|数値式を指定します。 使用できる有効な演算子の「解説」を参照してください *式*します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 - 使用して **設定** コマンド拡張機能を有効になっています。
 

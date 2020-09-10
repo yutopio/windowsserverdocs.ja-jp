@@ -3,16 +3,16 @@ title: prncnfg
 description: Prncnfg.vbs コマンドの参照記事。プリンターに関する構成情報を構成または表示します。
 ms.topic: reference
 ms.assetid: 38a4e8fa-3122-495b-a125-35b926bc6415
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
-ms.openlocfilehash: ba5d465a46a23261942428761d11ef279b78a62e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 2b72f453b016428537800997fc0a7056c211a3b2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038723"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638368"
 ---
 # <a name="prncnfg"></a>prncnfg
 
@@ -50,7 +50,7 @@ cscript prncnfg {-g | -t | -x | -?} [-S <Servername>] [-P <Printername>] [-z <ne
 | `{+|-}`共用 | ネットワークでこのプリンターを共有するかどうかを指定します。 |
 | `{+|-}`接続 | ドキュメントをスプールせず、プリンターに直接送信する必要があるかどうかを指定します。 |
 | `{+|-}`投稿 | このプリンタを active directory に発行するかどうかを指定します。 プリンタを公開する場合は、他のユーザーが場所や (印刷とホチキス止めの色) などの機能に基づいて検索できます。 |
-| `{+|-}`表示 | 予約済みの関数です。 |
+| `{+|-}`hidden | 予約済みの関数です。 |
 | `{+|-}`rawonly | 生データの印刷ジョブのみをこのキューにスプールできるかどうかを指定します。 |
 | `{+|-}`} キューに登録済み | プリンターを開始してから、ドキュメントの最後のページがスプールされた印刷ことを指定します。 印刷中のプログラムは、ドキュメントの印刷が完了するまでは使用できません。 ただし、このパラメーターを使用すると、ドキュメント全体を確実にプリンターに送信します。 |
 | `{+|-}`keepprintedjobs | スプーラが印刷後ドキュメントを保持するかどうかを指定します。 このオプションを有効にすると、プリンターに印刷中のプログラムからの代わりに、印刷キューからドキュメントを再送信するユーザーができます。 |

@@ -3,16 +3,16 @@ title: msiexec
 description: Msiexec コマンドのリファレンス記事。コマンドラインから Windows インストーラーのインストール、変更、操作を実行するための手段を提供します。
 ms.topic: reference
 ms.assetid: 122eb0ce-ecbc-4909-a52a-15c3413619af
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 1255cf26ac4dd3f9c28189ce7df76d63c875ee64
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 93ce1de1f75ff03bc7bb5f79d2046502c2d81bc4
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89025286"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639617"
 ---
 # <a name="msiexec"></a>msiexec
 
@@ -73,7 +73,7 @@ msiexec.exe /i <path_to_package> [/quiet][/passive][/q{n|b|r|f}]
 | /qr | インストールプロセス中の UI エクスペリエンスの縮小を指定します。 |
 | /qf | インストールプロセス中の完全な UI エクスペリエンスを指定します。 |
 
-##### <a name="remarks"></a>解説
+##### <a name="remarks"></a>注釈
 
 - インストールがユーザーによって取り消された場合、モーダルボックスは表示されません。 **Qb +!** または、 **[キャンセル**] ボタンを非表示**にします**。
 

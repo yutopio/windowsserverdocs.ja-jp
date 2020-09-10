@@ -3,16 +3,16 @@ title: query process
 description: クエリ処理コマンドの参照記事。リモートデスクトップセッションホストサーバーで実行されているプロセスに関する情報を表示します。
 ms.topic: reference
 ms.assetid: 36ce3ffc-0092-4eb1-a374-28e6616ca946
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: c0cf1952be3e7885c4631c229061b4630ef4598c
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: eb2deaeac012eba4dad06ae6084474942536adfd
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037230"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639891"
 ---
 # <a name="query-process"></a>query process
 
@@ -52,7 +52,7 @@ query process [*|<processID>|<username>|<sessionname>|/id:<nn>|<programname>] [/
 | /server:`<servername>` | プロセスを一覧表示するリモートデスクトップセッションホストサーバーを指定します。 指定しない場合は、現在ログオンしているサーバーが使用されます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 管理者は、すべての **クエリ処理** 機能にフルアクセスできます。
 

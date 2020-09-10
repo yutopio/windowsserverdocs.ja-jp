@@ -3,16 +3,16 @@ title: ksetup addrealmflags
 description: Ksetup addrealmflags コマンドの参照記事。指定された領域に領域フラグを追加します。
 ms.topic: reference
 ms.assetid: 80ca1e16-8871-494b-b9be-6bc9d63de860
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 34f9067e95a0632fd1f22de604545fe2a5417727
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 44d03abea67011e7ef5544def8cb26655b4b41d1
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037960"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639722"
 ---
 # <a name="ksetup-addrealmflags"></a>ksetup addrealmflags
 
@@ -30,13 +30,13 @@ ksetup /addrealmflags <realmname> [sendaddress] [tcpsupported] [delegate] [ncsup
 | --------- | ----------- |
 | `<realmname>` | CORP など、大文字の DNS 名を指定します。CONTOSO.COM。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 領域フラグは、Windows Server オペレーティングシステムに基づいていない Kerberos 領域の追加機能を指定します。 Windows Server を実行しているコンピューターは、kerberos サーバーを使用して、Windows Server オペレーティングシステムを実行しているドメインを使用するのではなく、kerberos 領域で認証を管理できます。 このエントリにより、領域の機能が確立され、次のようになります。
 
-| [値] | 領域フラグ | 説明 |
+| 値 | 領域フラグ | 説明 |
 | ----- | ---------- | ----------- |
-| 0xF | All | すべての領域フラグが設定されます。 |
+| 0xF | すべて | すべての領域フラグが設定されます。 |
 | 0x00 | なし | 領域フラグが設定されておらず、追加の機能は有効になっていません。 |
 | 0x01 | sendaddress | この IP アドレスは、チケット保証チケット内に含まれます。 |
 | 0x02 | tcpsupported | この領域では、伝送制御プロトコル (TCP) とユーザーデータグラムプロトコル (UDP) の両方がサポートされています。 |

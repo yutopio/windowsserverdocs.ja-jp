@@ -1,16 +1,16 @@
 ---
 title: 保護されるアカウントの構成方法
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 319f6b167ff16ea53250c549bd6f8d94b5c8f37b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: f50e5494210c349a1438570140d6733dce17dcb9
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991830"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639039"
 ---
 # <a name="how-to-configure-protected-accounts"></a>保護されるアカウントの構成方法
 
@@ -55,7 +55,7 @@ Protected Users は、新しいユーザーや既存のユーザーを追加で�
 
 -   最初の 4 時間の有効期間後のユーザー チケット (TGT) の更新
 
-グループにユーザーを追加するには、Active Directory 管理センター (ADAC)、Active Directory ユーザーとコンピューターなどの[UI ツール](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753515(v=ws.11))、または[Dsmod group](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732423(v=ws.11))などのコマンドラインツール、または Windows PowerShell [add-adgroupmember](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617210(v=technet.10))コマンドレットを使用できます。 サービスとコンピューターのアカウントは、Protected Users グループのメンバーに*しないでください*。 これらのアカウントのメンバーシップでは、パスワードまたは証明書が常にホストで利用できるため、ローカル保護が提供されません。
+グループにユーザーを追加するには、Active Directory 管理センター (ADAC)、Active Directory ユーザーとコンピューターなどの [UI ツール](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753515(v=ws.11)) 、または [Dsmod group](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732423(v=ws.11))などのコマンドラインツール、または Windows PowerShell [add-adgroupmember](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617210(v=technet.10)) コマンドレットを使用できます。 サービスとコンピューターのアカウントは、Protected Users グループのメンバーに*しないでください*。 これらのアカウントのメンバーシップでは、パスワードまたは証明書が常にホストで利用できるため、ローカル保護が提供されません。
 
 > [!WARNING]
 > 認証の制限には回避策はありません。つまり、Enterprise Admins グループや Domain Admins グループのように高い権限を持つグループのメンバーであっても、Protected Users グループの他のメンバーと同じ制限が適用されます。 このようなグループのすべてのメンバーが Protected Users グループに追加されると、それらのすべてのアカウントがロックアウトされる可能性があります。潜在的な影響を十分にテストするまでは、高い特権を持つアカウントを Protected Users グループに追加しないでください。
@@ -125,9 +125,9 @@ Protected Users に関連するイベントのトラブルシューティング�
 
 Windows Server 2012 では、ダイナミック アクセス制御には、組織全体でファイル サーバーを構成する簡単な方法を提供する集約型アクセス ポリシーと呼ばれる Active Directory フォレスト スコープ オブジェクトのクラスが導入されました。 Windows Server 2012 r2、Windows Server 2012 R2 のドメイン内のアカウント クラスに認証の構成を適用する認証ポリシー (objectClass Msds-authnpolicies) と呼ばれる新しいオブジェクト クラスを使用できます。 次の Active Directory アカウント クラスがあります。
 
--   User
+-   ユーザー
 
--   Computer
+-   コンピューター
 
 -   管理されたサービス アカウントおよびグループの管理されたサービス アカウント (GMSA)
 
@@ -167,7 +167,7 @@ AP 交換は通常、アプリケーション プロトコル内部のデータ�
 
 ### <a name="requirements-for-using-authentication-policies"></a>認証ポリシーを使用するための要件
 
-|ポリシー|要件|
+|ポリシー|必要条件|
 |-----|--------|
 |TGT の有効期間のカスタマイズ| Windows Server 2012 R2 のドメイン機能レベルのアカウント ドメイン|
 |ユーザー サインオンの制限|-ダイナミック アクセス制御のサポート Windows Server 2012 R2 のドメイン機能レベルのアカウント ドメイン<br />-動的 Access Control サポートを備えた windows 8、Windows 8.1、Windows Server 2012、または Windows Server 2012 R2 のデバイス|
@@ -217,9 +217,9 @@ AP 交換は通常、アプリケーション プロトコル内部のデータ�
 
     認証ポリシーは、Active Directory のアカウントの種類に基づいて適用されます。 それぞれの種類に対する設定を構成することで、1 つのポリシーを 3 つのアカウントの種類すべてに適用できます。 次のアカウントの種類があります。
 
-    -   User
+    -   ユーザー
 
-    -   Computer
+    -   コンピューター
 
     -   管理されたサービス アカウントおよびグループの管理されたサービス アカウント
 
@@ -293,7 +293,7 @@ AP 交換は通常、アプリケーション プロトコル内部のデータ�
 ##### <a name="troubleshoot-missing-computer-claims"></a>コンピューターの要求が見つからない場合のトラブルシューティング
 プロビジョニング済みの要求を使用できない場合、**[コンピューター]** クラスに対してのみ構成されている可能性があります。
 
-コンピューターの組織単位 (OU) に基づいて認証を制限するとします。これは既に構成されていますが、**コンピューター**クラスに対してのみ使用できます。
+コンピューターの組織単位 (OU) に基づいて認証を制限するとします。これは既に構成されていますが、 **コンピューター** クラスに対してのみ使用できます。
 
 ![コンピューターの組織単位 (OU) に基づいて認証を制限する方法を示すスクリーンショット](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictComputers.gif)
 

@@ -3,16 +3,16 @@ title: 取得-ImageGroup
 description: イメージグループとその中のイメージに関する情報を取得する、get ImageGroup の参照記事。
 ms.topic: reference
 ms.assetid: 0fc25aca-a529-44ee-bc8e-96bc8affb458
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 4ebf7ba1e207fddcef61952158d770fcfbd6df66
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: c135072be3ff8ccf0993ed72ddf8f079f1d88c05
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029600"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638095"
 ---
 # <a name="get-imagegroup"></a>取得-ImageGroup
 

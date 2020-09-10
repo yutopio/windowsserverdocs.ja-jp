@@ -3,16 +3,16 @@ title: prndrvr
 description: Prndrvr.vbs コマンドの参照記事。プリンタードライバーを追加、削除、および一覧表示します。
 ms.topic: reference
 ms.assetid: 82b09e3e-bd38-4df1-9953-b0e9ee2565a3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 36ad4a4206e26065dfad9ff2d970da11e4efaa66
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 6fd276adb02281ab488c31db75563552f8495008
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038703"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638355"
 ---
 # <a name="prndrvr"></a>prndrvr
 
@@ -45,7 +45,7 @@ cscript prndrvr {-a | -d | -l | -x | -?} [-m <model>] [-v {0|1|2|3}] [-e <enviro
 | -i `<filename.inf>` | インストールするドライバーの完全なパスとファイル名を指定します。 ファイル名を指定しない場合、スクリプトでは、Windows ディレクトリの inf サブディレクトリにある受信トレイの .inf ファイルの1つを使用します。<p>ドライバーパスが指定されていない場合、スクリプトは driver.cab ファイル内のドライバーファイルを検索します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 入力した情報にスペースが含まれている場合は、テキストを引用符で囲みます (例、"コンピューター名")。
 

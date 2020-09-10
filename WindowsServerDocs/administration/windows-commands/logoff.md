@@ -3,16 +3,16 @@ title: ログオフ
 description: ログオフコマンドの参照記事。リモートデスクトップセッションホストサーバー上のセッションからユーザーをログオフし、セッションを削除します。
 ms.topic: reference
 ms.assetid: 939f09cc-de8c-436c-a05d-aca5f2a06371
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 249b63e5b98d17b67c6d00fe6d2f8a634d67de6f
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b7a211f1b4bcb76ea63d79ae38d1cf78c757d6e0
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030530"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639315"
 ---
 # <a name="logoff"></a>ログオフ
 
@@ -35,7 +35,7 @@ logoff [<sessionname> | <sessionID>] [/server:<servername>] [/v]
 | /v | 実行されているアクションに関する情報を表示します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 現在ログオンしているセッションから、いつでも自分でログオフできます。 ただし、他のセッションからユーザーをログオフするには、 **フルコントロール** アクセス許可を持っている必要があります。
 

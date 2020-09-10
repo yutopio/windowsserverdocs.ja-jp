@@ -3,16 +3,16 @@ title: reg query
 description: Reg query コマンドの参照記事。レジストリ内の指定されたサブキーの下にあるサブキーとエントリの次のレベルの一覧を返します。
 ms.topic: reference
 ms.assetid: 0e6a0d7c-ed9b-4318-833d-33f265a81f39
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 633928d89059e1b9a9677141011b391ee0d34757
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: d004c42e4561cd96502e8dedc9ee472df964b5b8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89025086"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639866"
 ---
 # <a name="reg-query"></a>reg query
 
@@ -42,11 +42,11 @@ reg query <keyname> [{/v <Valuename> | /ve}] [/s] [/se <separator>] [/f <data>] 
 | /z | レジストリの型に対応する数値を検索結果に含めるように指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **Reg クエリ**操作の戻り値は次のとおりです。
 
-    | [値] | 説明 |
+    | 値 | 説明 |
     |--|--|
     | 0 | 成功 |
     | 1 | 障害 |

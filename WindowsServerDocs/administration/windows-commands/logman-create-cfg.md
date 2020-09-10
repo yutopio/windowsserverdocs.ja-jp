@@ -3,16 +3,16 @@ title: logman create cfg
 description: 構成データコレクターを作成する logman create cfg コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: bfc87093-3ff5-4e19-aa93-d185fb8e2239
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: fcdd724896b48c40d88c79b5f2081cadf05acf80
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b102866fce3f529ac6a409d41e88c0c38569405f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034990"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639522"
 ---
 # <a name="logman-create-cfg"></a>logman create cfg
 
@@ -54,7 +54,7 @@ logman create cfg <[-n] <name>> [options]
 | -ftc `<path [path [...]]>` | 収集するファイルの完全パスを指定します。 |
 | /? | 状況依存のヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - [-] が一覧表示されている場合は、余分なハイフン (-) を追加すると、オプションが無効になります。
 

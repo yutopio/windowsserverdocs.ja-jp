@@ -3,16 +3,16 @@ title: pushd
 description: Pushd コマンドの参照記事。 popd コマンドで使用する現在のディレクトリを格納し、指定されたディレクトリに変更します。
 ms.topic: reference
 ms.assetid: 396bc545-0f41-473e-b0ac-76fbbb74d390
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 383f3f6da4fc171629350eaa9257ffe9759cca8e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 06a12b598472fa23ee0a211e7f42c33a47a3d64c
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89033800"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639610"
 ---
 # <a name="pushd"></a>pushd
 
@@ -35,7 +35,7 @@ pushd [<path>]
 | `<path>` | 現在のディレクトリを作成するディレクトリを指定します。 このコマンドは、相対パスをサポートしています。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - コマンド拡張機能が有効になっている場合、 **pushd** コマンドはネットワークパスまたはローカルドライブ文字とパスのいずれかを受け取ります。
 

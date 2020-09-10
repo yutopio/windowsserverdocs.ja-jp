@@ -3,16 +3,16 @@ title: Protected Users セキュリティ グループ
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: fb8fef4b954416e7ed284db9cf57b77f5a84c594
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: ba53c87119e798c3d3346b8fc245ffcc4e092a4d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995807"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639801"
 ---
 # <a name="protected-users-security-group"></a>Protected Users セキュリティ グループ
 
@@ -29,7 +29,7 @@ ms.locfileid: "87995807"
 
 このドメイン関連のグローバルグループは、windows server 2012 R2 を実行しているプライマリドメインコントローラーを持つドメイン内のユーザーに対して、Windows Server 2012 R2 以降を実行 Windows 8.1 しているデバイスとホストコンピューターで、構成可能ではない保護をトリガーします。 これにより、ユーザーがこれらの保護を使用してコンピューターにサインインするときに、資格情報の既定のメモリフットプリントが大幅に削減されます。
 
-詳細については、このトピックの「 [Protected Users グループのしくみ](#BKMK_HowItWorks)」を参照してください。
+詳細については、このトピックの「 [Protected Users グループのしくみ](#BKMK_HowItWorks) 」を参照してください。
 
 
 ## <a name="protected-users-group-requirements"></a><a name="BKMK_Requirements"></a>Protected Users グループの要件
@@ -37,7 +37,7 @@ Protected Users グループのメンバーにデバイスの保護を提供す�
 
 - Protected Users グローバル セキュリティ グループは、アカウント ドメインのすべてのドメイン コントローラーにレプリケートされている。
 
-- Windows 8.1 と Windows Server 2012 R2 では、既定でサポートが追加されています。 [Microsoft セキュリティアドバイザリ 2871997](/security-updates/SecurityAdvisories/2016/2871997)では、windows 7、windows Server 2008 R2、および windows server 2012 のサポートが追加されています。
+- Windows 8.1 と Windows Server 2012 R2 では、既定でサポートが追加されています。 [Microsoft セキュリティアドバイザリ 2871997](/security-updates/SecurityAdvisories/2016/2871997) では、windows 7、windows Server 2008 R2、および windows server 2012 のサポートが追加されています。
 
 Protected Users グループのメンバーにドメイン コントローラーの保護機能を提供するには、次の要件があります。
 
@@ -50,7 +50,7 @@ Windows Server 2012 R2 より前のオペレーティングシステムを実行
 > [!Note]
 > ドメインコントローラーは、ドメインの保護をサポートしていません。
 
-Protected Users グループを作成するには、Windows Server 2012 R2 を実行するドメインコントローラーに[プライマリドメインコントローラー (PDC) エミュレーターの役割を転送](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10))します。 そのグループのオブジェクトが他のドメイン コントローラーにレプリケートされた後に、以前のバージョンの Windows Server が実行されているドメイン コントローラーで PDC エミュレーターの役割をホストできます。
+Protected Users グループを作成するには、Windows Server 2012 R2 を実行するドメインコントローラーに [プライマリドメインコントローラー (PDC) エミュレーターの役割を転送](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10)) します。 そのグループのオブジェクトが他のドメイン コントローラーにレプリケートされた後に、以前のバージョンの Windows Server が実行されているドメイン コントローラーで PDC エミュレーターの役割をホストできます。
 
 ### <a name="protected-users-group-ad-properties"></a><a name="BKMK_ADgroup"></a>Protected Users グループの AD プロパティ
 
@@ -61,8 +61,8 @@ Protected Users グループを作成するには、Windows Server 2012 R2 を�
 |既知の SID/RID|S-1-5-21-<domain>-525|
 |種類|ドメイン グローバル|
 |既定のコンテナー|CN=Users、DC=<domain>、DC=|
-|既定メンバー|None|
-|～の既定のメンバー|None|
+|既定メンバー|なし|
+|～の既定のメンバー|なし|
 |ADMINSDHOLDER で保護されているか|いいえ|
 |既定のコンテナーから移動することができるか|はい|
 |このグループの管理をサービス管理者以外に委任することができるか|いいえ|
@@ -78,12 +78,12 @@ Protected Users グループを作成するには、Windows Server 2012 R2 を�
 ### <a name="device-protections-for-signed-in-protected-users"></a>署名済みの保護されたユーザーに対するデバイスの保護
 サインインしているユーザーが Protected Users グループのメンバーである場合は、次の保護が適用されます。
 
-- [**既定の資格情報の委任を許可**する] グループポリシー設定が有効になっている場合でも、資格情報の委任 (CredSSP) では、ユーザーのプレーンテキストの資格情報はキャッシュされません。
+- [ **既定の資格情報の委任を許可** する] グループポリシー設定が有効になっている場合でも、資格情報の委任 (CredSSP) では、ユーザーのプレーンテキストの資格情報はキャッシュされません。
 
 - Windows 8.1 と Windows Server 2012 R2 以降では、windows digest が有効になっている場合でも、ユーザーのプレーンテキストの資格情報はキャッシュされません。
 
 > [!Note]
-> [Microsoft セキュリティアドバイザリ 2871997](/security-updates/SecurityAdvisories/2016/2871997)をインストールした後、レジストリキーが構成されるまで、Windows ダイジェストは引き続き資格情報をキャッシュします。 詳細については[、「マイクロソフトセキュリティアドバイザリ: 資格情報の保護と管理を向上させるための更新プログラム: 2014 年5月 13](https://support.microsoft.com/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a)日」を参照してください。
+> [Microsoft セキュリティアドバイザリ 2871997](/security-updates/SecurityAdvisories/2016/2871997)をインストールした後、レジストリキーが構成されるまで、Windows ダイジェストは引き続き資格情報をキャッシュします。 詳細については [、「マイクロソフトセキュリティアドバイザリ: 資格情報の保護と管理を向上させるための更新プログラム: 2014 年5月 13](https://support.microsoft.com/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) 日」を参照してください。
 
 - NTLM では、ユーザーのプレーンテキストの資格情報または NT の一方向の機能 (NTOWF) はキャッシュされません。
 
@@ -109,7 +109,7 @@ Protected Users グループのアカウントごとに、TGT の期限切れに
 詳細については、「[保護されるアカウントの構成方法](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md)」をご覧ください。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
-2 つの運用管理ログを使用して、Protected Users に関連するイベントを解決することができます。 これらの新しいログはイベントビューアーにあり、既定で無効になっており、[**アプリケーションとサービス] Logs\Microsoft\Windows\Authentication**にあります。
+2 つの運用管理ログを使用して、Protected Users に関連するイベントを解決することができます。 これらの新しいログはイベントビューアーにあり、既定で無効になっており、[ **アプリケーションとサービス] Logs\Microsoft\Windows\Authentication**にあります。
 
 |イベント ID とログ|説明|
 |----------|--------|

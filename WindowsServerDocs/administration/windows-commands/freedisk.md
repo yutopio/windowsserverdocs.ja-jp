@@ -3,16 +3,16 @@ title: freedisk
 description: Freedisk コマンドの参照記事。インストールプロセスを続行する前に、指定された容量のディスク容量が使用可能かどうかを確認します。
 ms.topic: reference
 ms.assetid: 91c15166-5baa-4b80-9e0c-4cd815d00530
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 6a3f8543e6fd2cff9a4e086068155d84526d9377
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ad9c7faf65ffe8d4547f6a6de88e299b76ac05b2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027610"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638016"
 ---
 # <a name="freedisk"></a>freedisk
 
@@ -36,7 +36,7 @@ freedisk [/s <computer> [/u [<domain>\]<user> [/p [<password>]]]] [/d <drive>] [
 | d `<drive>` | 空き領域の可用性を確認するドライブを指定します。 リモートコンピューターの場合は、を指定する必要があり `<drive>` ます。 |
 | `<value>` | 特定の空きディスク領域があるかどうかを確認します。 `<value>`には、bytes、KB、MB、GB、TB、PB、EB、ZB、または YB を指定できます。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **/S、** **/u**、および **/p**コマンドラインオプションは、 **/s**を使用する場合にのみ使用できます。 ユーザーのパスワードを指定するには、 **/u**で **/p**を使用する必要があります。
 

@@ -3,16 +3,16 @@ title: ftp
 description: Ftp コマンドのリファレンス記事です。このコマンドは、ファイル転送プロトコル (ftp) サーバーサービスを実行しているコンピューターとの間でファイルを転送します。
 ms.topic: reference
 ms.assetid: 758335e1-fd8d-448c-a654-993126239dd9
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 9f5cb70e6b42e390f8e279152e736b0226e74f9d
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 65d7ff4ef7202406541ec767920cb75526500567
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038903"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638424"
 ---
 # <a name="ftp"></a>ftp
 
@@ -37,7 +37,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<filename>] [-a] [-A] [-x:<sendbuffer>] [-r:<re
 | -g | ファイル名グロビングを無効にします。  **Glob** ローカル ファイルとパス名にワイルドカード文字としてアスタリスク (*) と疑問符 (?) の使用を許可します。 |
 | 2$s`<filename>` | 含むテキスト ファイルを指定 **ftp** コマンドです。 これらのコマンドを実行した後に自動的に **ftp** を開始します。 このパラメーターには、スペースは許可されません。 リダイレクトではなく、このパラメーターを使用して (`<`)。 **注:** Windows 8 および Windows Server 2012 以降のオペレーティング システムでは、utf-8 でテキスト ファイルが書き込まれる必要があります。 |
 | -a | Ftp データ接続をバインドするときに、任意のローカルインターフェイスを使用できることを指定します。 |
-| -A | Ftp サーバーに匿名でログオンします。 |
+| 。 | Ftp サーバーに匿名でログオンします。 |
 | 閉じる`<sendbuffer> `| 8192 の既定の SO_SNDBUF サイズをオーバーライドします。 |
 | \r\n\r\n`<recvbuffer>` | 8192 の既定の SO_RCVBUF サイズをオーバーライドします。 |
 | b`<asyncbuffers>` | 3 の既定の非同期バッファー数をオーバーライドします。 |
@@ -45,7 +45,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<filename>] [-a] [-A] [-x:<sendbuffer>] [-r:<re
 | `<host>` | 接続先の ftp サーバーのコンピューター名、IP アドレス、または IPv6 アドレスを指定します。 ホスト名またはアドレスを指定した場合は、行の最後のパラメーターになる可能性があります。 |
 | -? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **Ftp**のコマンドラインパラメーターでは、大文字と小文字が区別されます。
 

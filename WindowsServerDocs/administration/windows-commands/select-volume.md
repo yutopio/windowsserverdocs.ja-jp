@@ -3,16 +3,16 @@ title: select volume
 description: 参照記事 * * * *-
 ms.topic: reference
 ms.assetid: 5d70d776-80ad-4f20-8288-a7997fb1df28
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: d2737a25eb9095b70fd6939a4f38b751868323f3
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 14162cc594011352ea43c6732bdb3365ea6c5fa4
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89024986"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639011"
 ---
 # <a name="select-volume"></a>select volume
 
@@ -35,7 +35,7 @@ select volume={<n>|<d>}
 |    <n>    | フォーカスを受け取るボリュームの数。 使用して現在選択されているディスク上のすべてのボリュームの番号を表示する、 **ボリュームを一覧表示** diskpart コマンドです。 |
 |    <d>    |                                                 フォーカスを受け取るボリュームのドライブ文字またはマウント ポイントのパス。                                                 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   ボリュームが指定されていない場合、このコマンドは、選択したディスクに現在フォーカスがあるボリュームを表示します。
 

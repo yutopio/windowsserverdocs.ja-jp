@@ -3,16 +3,16 @@ title: route
 description: ルートコマンドの参照記事。ローカル IP ルーティングテーブルのエントリを変更して表示します。
 ms.topic: reference
 ms.assetid: afcd666c-0cef-47c2-9bcc-02d202b983b3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
-ms.openlocfilehash: a15e9190ac135a49cfacfd259a7058765cafa8a4
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 3c38c1946c49318fc9aae901758eef412a8a586a
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89033760"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639838"
 ---
 # <a name="route"></a>route
 
@@ -43,7 +43,7 @@ route [/f] [/p] [<command> [<destination>] [mask <netmask>] [<gateway>] [metric 
 | もし `<interface>` | 先に到達できるインターフェイスのインターフェイス インデックスを指定します。 インターフェイスとそれに対応するインターフェイス インデックスの一覧は、route print コマンドの表示を使用します。 10 進数または 16 進数の値は、インターフェイス インデックスを使用することができます。 16 進値は、0 x で 16 進数より優先されます。 ときに、ゲートウェイのアドレスからインターフェイスを決定するパラメーターを省略するとします。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 大きな値で、 **メトリック** ルーティング テーブルの列は、IP アドレス、サブネット マスク、および各 LAN インターフェイスのデフォルト ゲートウェイの構成に基づいたルーティング テーブル内のルートのメトリックを自動的に決定できるようにする結果。 既定では、有効になっている、インターフェイス メトリックの自動決定は、各インターフェイスの速度を決定し、最速のインターフェイス メトリックが最も低いルートが作成されるように、各インターフェイスのルートのメトリックを調整します。 大規模なメトリックを削除するには、各 LAN 接続の TCP/IP プロトコルの詳細プロパティから、インターフェイス メトリックの自動決定を無効にします。
 

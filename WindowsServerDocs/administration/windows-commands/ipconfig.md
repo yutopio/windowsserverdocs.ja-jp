@@ -3,16 +3,16 @@ title: ipconfig
 description: Ipconfig コマンドの参照記事。現在のすべての TCP/IP ネットワーク構成値を表示し、動的ホスト構成プロトコル (DHCP) とドメインネームシステム (DNS) の設定を更新します。
 ms.topic: reference
 ms.assetid: 15071c2c-4815-4893-93b2-ab30232e312e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: d683053c1a696ec2aa0f0f2441fdde22eccb479d
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 20005fff04df421e5f3699600278d51b8711337d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035450"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639588"
 ---
 # <a name="ipconfig"></a>ipconfig
 
@@ -40,7 +40,7 @@ ipconfig [/allcompartments] [/all] [/renew [<adapter>]] [/release [<adapter>]] [
 | /showclassid `<adapter>` | 指定したアダプターの DHCP クラス ID を表示します。 すべてのアダプターの DHCP クラス ID を表示するには、*アダプター*の代わりにアスタリスク (**&#42;**) ワイルドカード文字を使用します。 このパラメーターは、IP アドレスを自動的に取得するように構成されているアダプターがあるコンピューターでのみ使用できます。 |
 | /? | コマンド プロンプトでヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - このコマンドは、IP アドレスを自動的に取得するように構成されているコンピューターで最も役立ちます。 これにより、DHCP、自動プライベート IP アドレス指定 (APIPA)、または代替の構成によって構成された TCP/IP 構成値をユーザーが判断できるようになります。
 

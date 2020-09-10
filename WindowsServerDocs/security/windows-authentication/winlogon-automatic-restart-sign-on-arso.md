@@ -2,16 +2,16 @@
 title: Winlogon 自動再起動サインオン (ARSO)
 ms.topic: article
 ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: ee6e5817564389c1870e72543a0c073dd40df4db
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 450c57fae13dc4a970c047cceb356a8fab227066
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989059"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638740"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>Winlogon 自動再起動サインオン (ARSO)
 
@@ -53,7 +53,7 @@ Windows 8 では、ロック画面アプリが導入されました。  これ�
 
     -   Server Sku で既定で無効になっています。
 
--   なぜですか?
+-   なぜでしょうか?
 
     -   戻り、ユーザーがログオンするまで、一部の更新プログラムを終了できません。
 
@@ -86,13 +86,13 @@ Windows 8.1/Windows Server 2012 R2、Windows Update 再起動した後に、ロ�
 
 **レジストリエディター**
 
-|値名|種類|データ|
+|値の名前|種類|データ|
 |-------|----|----|
 |DisableAutomaticRestartSignOn|DWORD|0<p>**例:**<p>0 (有効)。<p>1 (無効)|
 
 **ポリシーのレジストリの場所:** HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
 
-**型:** DWORD
+**種類:** プロシージャ
 
 **レジストリの名前:** DisableAutomaticRestartSignOn
 
@@ -135,7 +135,7 @@ WinLogon が自動的にロックしたときに WinLogon の状態のトレー�
 ### <a name="logon-hours-and-parental-controls"></a>ログオン時間、保護者による制限
 保護者による制限とログオン時間は、作成すると、新しいユーザー セッションを禁止できます。  再起動がこの期間中に発生した場合、ユーザーはログインを許可されません。  ロックするか、対応するアクションとしてログアウトを原因となるその他のポリシーがあります。  特に、メンテナンス期間がこの期間中に一般がある場合はベッドの時間とウェイク アップのアカウントのロックダウンが発生する、多くの子の例では問題にできます。
 
-## <a name="additional-resources"></a>その他の情報
+## <a name="additional-resources"></a>その他のリソース
 **テーブル SEQ テーブル \\ \* アラビア語 3: Arso 用語集**
 
 |期間|定義|

@@ -3,16 +3,16 @@ title: list
 description: List コマンドの参照記事。ディスクの一覧、ディスク内のパーティション、ディスク内のボリューム、またはバーチャルハードディスク (Vhd) の一覧が表示されます。
 ms.topic: reference
 ms.assetid: 69b105a1-9710-4a06-8102-38cc9e475ca5
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 30b5efc309e5da9aac6817c9eef8dd74f6f1df71
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 75ff0e4d335cf9a5ec16fb529540c85d540a2ae8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037900"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639548"
 ---
 # <a name="list"></a>list
 
@@ -33,7 +33,7 @@ list { disk | partition | volume | vdisk }
 | ボリューム | すべてのディスク上のベーシック ボリュームとダイナミック ボリュームの一覧を表示します。 |
 | vdisk | アタッチされている、または選択されている Vhd の一覧を表示します。 このコマンドは、デタッチされている Vhd を一覧表示します (現在選択されている場合)。ただし、VHD が接続されるまで、ディスクの種類は [不明] に設定されます。 アスタリスク (*) でマークされた VHD にフォーカスがあります。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - ダイナミックディスク上のパーティションを一覧表示する場合、パーティションはディスク上のダイナミックボリュームに対応していない可能性があります。 この不一致が発生するのは、ダイナミック ディスクにシステム ボリュームまたはブート ボリュームが存在する場合、それらのエントリがパーティション テーブル内に格納されるためです。 また、ダイナミックボリュームで使用する領域を確保するために、ディスクの残りの部分を占有するパーティションも含まれています。
 

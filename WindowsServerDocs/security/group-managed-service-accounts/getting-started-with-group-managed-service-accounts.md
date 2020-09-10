@@ -3,16 +3,16 @@ title: Getting Started with Group Managed Service Accounts
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 979a6cf1e0b5e2d68c05f6285a9d745eabe41fa4
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 19da2b6ec2a7a3ca31c479388c087850c77d9c23
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991515"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638054"
 ---
 # <a name="getting-started-with-group-managed-service-accounts"></a>Getting Started with Group Managed Service Accounts
 
@@ -53,10 +53,10 @@ ms.locfileid: "87991515"
 |プリンシパル|Scope|サポートされるサービス|パスワード管理|
 |-------|-----|-----------|------------|
 |Windows システムのコンピューター アカウント|Domain|ドメインに参加している 1 つのサーバーに限定|コンピューターによる管理|
-|Windows システムなしのコンピューター アカウント|Domain|ドメインに参加している任意のサーバー|None|
+|Windows システムなしのコンピューター アカウント|Domain|ドメインに参加している任意のサーバー|なし|
 |仮想アカウント|ローカル|1 つのサーバーに限定|コンピューターによる管理|
 |Windows 7 スタンドアロンの管理されたサービス アカウント|Domain|ドメインに参加している 1 つのサーバーに限定|コンピューターによる管理|
-|ユーザー アカウント|Domain|ドメインに参加している任意のサーバー|None|
+|ユーザー アカウント|Domain|ドメインに参加している任意のサーバー|なし|
 |グループの管理されたサービス アカウント|Domain|任意の Windows Server 2012 ドメインに参加しているサーバー|ドメイン コントローラーによる管理、ホストによる取得|
 
 Windows コンピューター アカウント、Windows 7 スタンドアロンの管理されたサービス アカウント (sMSA)、または仮想アカウントを複数のシステムで共有することはできません。 1 つのアカウントをサーバー ファームのサービスで共有するように構成する場合は、Windows システムとは別にユーザー アカウントまたはコンピューター アカウントを選択する必要があります。 いずれにしても、これらのアカウントには、シングルポイントコントロールでパスワードを管理する機能はありません。 このため問題が生じます。各組織は Active Directory のサービスのキーを更新してそのキーを該当するすべてのサービスのインスタンスに配布するために、コストの高いソリューションを作成する必要があります。
@@ -76,7 +76,7 @@ Windows Server 2012 では、サービスまたはサービス管理者は、グ
 
 グループの管理されたサービス アカウントを管理するために使用する Windows PowerShell コマンドレットを実行するには 64 ビット アーキテクチャが必要です。
 
-**オペレーティングシステムの要件**
+**オペレーティング システムの要件**
 
 |要素|要件|オペレーティング システム|
 |------|--------|----------|
@@ -210,7 +210,7 @@ Windows Server 2012 でサービスを構成するには、次の機能に関す
 
     詳細については、「 [サービス](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772408(v=ws.11))」を参照してください。
 
--   [タスク]
+-   タスク
 
     詳細については、「 [タスク スケジューラの概要](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc721871(v=ws.11))」を参照してください。
 

@@ -3,16 +3,16 @@ title: nbtstat
 description: Nbtstat コマンドのリファレンス記事。 NetBIOS over TCP/IP (NetBT) プロトコルの統計情報、ローカルコンピューターとリモートコンピューターの両方の NetBIOS 名テーブル、および NetBIOS 名のキャッシュを表示します。
 ms.topic: reference
 ms.assetid: 1d2ea99e-72f1-471f-9525-d2c49bf3be82
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 273aaadcf537864512d6dc7aedff0c9872c3cd05
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: f56068baab8832cb25f62e43f550fdcf7c4e1092
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037800"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89637976"
 ---
 # <a name="nbtstat"></a>nbtstat
 
@@ -44,7 +44,7 @@ nbtstat [/a <remotename>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 | `<interval>` | 選択された統計情報を表示し、各ディスプレイの *間隔* に指定された秒数を一時停止します。 CTRL + C キーを押して、統計の表示を停止します。 このパラメーターを省略すると、 **nbtstat** 、現在の構成情報を 1 回だけ印刷します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **Nbtstat**コマンドラインパラメーターでは、大文字と小文字が区別されます。
 
@@ -53,14 +53,14 @@ nbtstat [/a <remotename>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
     | [Heading] (方向) | 説明 |
     | ------- | ----------- |
     | 入力 | 受信されたバイト数。 |
-    | Output | 送信されたバイト数。 |
+    | 出力 | 送信されたバイト数。 |
     | /アウトの選択 | 接続は、(送信) のコンピューターまたはローカル コンピューターに別のコンピューターからかどうか (受信) します。 |
     | 有効期間 | 削除される前に、名前のテーブルのキャッシュ エントリが配置される残り時間です。 |
     | ローカル名 | 接続に関連付けられているローカルの NetBIOS 名。 |
     | リモート ホスト | 名前または IP アドレスが、リモート コンピューターに関連付けられています。 |
     | `<03>` | NetBIOS 名の最後のバイトは、16 進数に変換されます。 すべての NetBIOS 名には、16 文字です。 この最後のバイトは、同じ名前が何回かコンピューターでは、最後のバイトのみが異なって表示されているために多くの場合、特別な意味を持ちます。 たとえば、 `<20>` は ASCII テキストのスペースです。 |
     | type | 名前の型です。 名前は一意の名前またはグループ名にするかできます。 |
-    | 状態 | リモートコンピューター上の NetBIOS サービスが実行中 (登録済み) であるか、または重複するコンピューター名によって同じサービス (競合) が登録されているかどうか。 |
+    | Status | リモートコンピューター上の NetBIOS サービスが実行中 (登録済み) であるか、または重複するコンピューター名によって同じサービス (競合) が登録されているかどうか。 |
     | State | NetBIOS の接続の状態。 |
 
 - 使用可能な NetBIOS 接続の状態は次のとおりです。
@@ -74,7 +74,7 @@ nbtstat [/a <remotename>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
     | 受け入れ | 受信セッションは受け入れられている現在し、後で接続されています。 |
     | 再接続します。 | セッションが再接続 (最初の試行で接続に失敗しました) しようとしています。 |
     | 送信 | セッションが接続の段階であると、TCP 接続は現在作成中です。 |
-    | 着信 | 受信セッションは接続の段階です。 |
+    | 受信 | 受信セッションは接続の段階です。 |
     | 切断します。 | セッションでは、接続を切断中です。 |
     | [Disconnected]\(切断済み\) | ローカル コンピューターが接続が切断を実行し、リモート システムから送信される確認を待っています。 |
 

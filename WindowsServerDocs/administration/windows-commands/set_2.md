@@ -3,22 +3,22 @@ title: set_2
 description: シャドウコピーの作成に使用するコンテキスト、オプション、詳細モード、およびメタデータファイルを設定する set_2 の参照記事です。
 ms.topic: reference
 ms.assetid: acf24663-1a50-4321-b48d-1717655e9476
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 5b2751b7fd5d550f9499f12acde6f5f7e993d095
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 685f66692e324b29bb0a33aaaefaec44b52b218d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89023416"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639476"
 ---
 # <a name="set_2"></a>set_2
 
 コンテキスト、オプション、詳細出力モード、およびシャドウ コピーの作成のメタデータ ファイルを設定します。 パラメーターを指定せずに使用する場合 **設定** すべて現在の設定を一覧表示します。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 ```
 set

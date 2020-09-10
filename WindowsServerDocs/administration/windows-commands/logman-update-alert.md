@@ -3,16 +3,16 @@ title: logman update alert
 description: 既存のアラートデータコレクターのプロパティを更新する logman 更新アラートコマンドの参照記事です。
 ms.topic: reference
 ms.assetid: ede94a76-931c-40ed-9fda-6766bed8ff72
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ba0e94579e7b61992bd81f91ed0906d2472cb226
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 9c870ba5699ec0c804d387f1d1c723032a6ac335
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035350"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639953"
 ---
 # <a name="logman-update-alert"></a>logman update alert
 
@@ -56,7 +56,7 @@ logman update alert <[-n] <name>> [options]
 | -[-] targ `<argument>` | -Tn を使用して指定されたタスクで使用されるタスク引数を指定します。 |
 | /? | 状況依存のヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - [-] が一覧表示されている場合は、余分なハイフン (-) を追加すると、オプションが無効になります。
 

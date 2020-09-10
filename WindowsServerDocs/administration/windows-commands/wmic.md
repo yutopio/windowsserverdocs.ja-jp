@@ -3,16 +3,16 @@ title: wmic
 description: 対話型コマンドシェル内に WMI 情報を表示する wmic のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 76397c72-d06f-4cea-88cf-c7603315a983
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 6396f3e6ebc39722c3f1a79d32d629b206cceba2
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: d79f00798b3901d1b8cc44d313824130b1c8fb62
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038090"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638867"
 ---
 # <a name="wmic"></a>wmic
 
@@ -22,7 +22,7 @@ ms.locfileid: "89038090"
 
 
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 ```
 wmic </parameter>

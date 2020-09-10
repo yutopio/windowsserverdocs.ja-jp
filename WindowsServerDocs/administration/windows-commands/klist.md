@@ -3,16 +3,16 @@ title: klist
 description: Klist コマンドの参照記事。現在キャッシュされている Kerberos チケットの一覧を表示します。
 ms.topic: reference
 ms.assetid: 4689b4a9-1740-47dd-9240-02105efca428
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: d5284feae5da9c8c7fcdab90dd34ce7855128d5f
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: abb088230e37eb2806380ec65e12bd3b5017e5a2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037720"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639777"
 ---
 # <a name="klist"></a>klist
 
@@ -33,7 +33,7 @@ klist [-lh <logonID.highpart>] [-li <logonID.lowpart>] tickets | tgt | purge | s
 | --------- | ----------- |
 | -lh | ユーザーのローカル一意識別子 (LUID) の大部分を16進数で表したものを示します。 **– Lh**も **– li**も存在しない場合、コマンドの既定値は、現在サインインしているユーザーの LUID です。 |
 | -li | ユーザーのローカル一意識別子 (LUID) の下位部分 (16 進数で表される) を表します。 **– Lh**も **– li**も存在しない場合、コマンドの既定値は、現在サインインしているユーザーの LUID です。 |
-| チケット | 現在キャッシュされているチケット付与チケット (Tgt)、および指定したログオンセッションのサービスチケットが一覧表示されます。 既定のオプションです。 |
+| チケット | 現在キャッシュされているチケット付与チケット (Tgt)、および指定したログオンセッションのサービスチケットが一覧表示されます。 これは既定のオプションです |
 | tgt | 最初の Kerberos TGT を表示します。 |
 | 削除 | 指定されたログオンセッションのすべてのチケットを削除できます。 |
 | セッション | このコンピューターのログオンセッションの一覧を表示します。 |
@@ -45,7 +45,7 @@ klist [-lh <logonID.highpart>] [-li <logonID.lowpart>] tickets | tgt | purge | s
 | kdcoptions | RFC 4120 で指定されているキー配布センター (KDC) オプションを表示します。 |
 | /? | このコマンドのヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - パラメーターが指定されていない場合、 **klist** は、現在ログオンしているユーザーのすべてのチケットを取得します。
 

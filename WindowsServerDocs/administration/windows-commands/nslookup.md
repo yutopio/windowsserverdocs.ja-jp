@@ -3,16 +3,16 @@ title: nslookup
 description: Nslookup コマンドの参照記事。ドメインネームシステム (DNS) インフラストラクチャの診断に使用できる情報が表示されます。
 ms.topic: reference
 ms.assetid: 41516932-7833-434a-aa92-b4cf0f9a7ef7
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: c06121384ec18a879eaccbb34c926ce68cff9f49
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: a8132bfb01bf05b1a92042ea804c2206f009c2fd
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89032780"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89639271"
 ---
 # <a name="nslookup"></a>nslookup
 
@@ -67,7 +67,7 @@ nslookup [exit | finger | help | ls | lserver | root | server | set | view] [opt
 | [nslookup set vc](nslookup-set-vc.md) | サーバーに要求を送信するときに、仮想回線を使用するかどうかを指定します。 |
 | [nslookup view](nslookup-view.md) | 前の **ls** サブコマンドの出力を並べ替えて一覧表示します。 |
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 - *ComputerTofind*が IP アドレスであり、クエリが**A**または**PTR**リソースレコードの種類の場合は、コンピューターの名前が返されます。
 

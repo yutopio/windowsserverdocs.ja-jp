@@ -3,16 +3,16 @@ title: tracert
 description: Tracert の参照記事。この記事では、インターネット制御メッセージプロトコル (ICMP) のエコー要求または ICMPv6 メッセージを宛先に送信して、時間をライブ (TTL) フィールドの値を段階的に増加させることで、宛先へのパスを決定します。
 ms.topic: reference
 ms.assetid: 9032a032-2e5e-49d4-9e86-f821600e4ba6
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 7316daf691ff6f95ca4eb1608caea382885024ce
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: c5a3cce92d5745ac3ef8dcb50d49012f5909a537
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89026900"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89638338"
 ---
 # <a name="tracert"></a>tracert
 
@@ -42,7 +42,7 @@ tracert [/d] [/h <MaximumHops>] [/j <Hostlist>] [/w <timeout>] [/R] [/S <Srcaddr
 |\<TargetName>|宛先を指定します。 IP アドレスまたはホスト名で識別されます。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 - この診断ツールは、有効期間 (TTL) の値が異なる ICMP エコー要求メッセージを宛先に送信することによって、宛先へのパスを決定します。 パス上の各ルーターは、転送する前に、IP パケットの TTL を少なくとも1に減らす必要があります。 実質的に、TTL は最大リンクカウンターです。 パケットの TTL が0になると、ルーターは ICMP 時間超過メッセージをソースコンピュータに返すことが期待されます。 tracert は、TTL が1の最初のエコー要求メッセージを送信して、ターゲットが応答するまで、または最大ホップ数に到達するまで、後続の各送信で TTL を1増やして、パスを決定します。 既定では、最大ホップ数は30です。これは、 **/h** パラメーターを使用して指定できます。 このパスは、中間ルーターによって返された ICMP 時間超過メッセージと、送信先から返されたエコー応答メッセージを調べることによって決定されます。 ただし、一部のルーターでは、TTL 値が期限切れになったパケットの時間超過メッセージは返されず、tracert コマンドには表示されません。 この場合、そのホップに対してアスタリスク (*) の行が表示されます。
 - パスをトレースし、パス内の各ルーターおよびリンクのネットワーク待機時間とパケット損失を提供するには、 [**pathping**](pathping.md) コマンドを使用します。
