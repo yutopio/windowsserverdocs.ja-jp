@@ -3,16 +3,16 @@ title: telnet unset
 description: 以前に設定したオプションをオフにする telnet 設定の参照記事。
 ms.topic: reference
 ms.assetid: da9a0d99-1930-4858-93c7-0e9c3797ee09
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e6e15e3f4b5a74c77f4a184c6641d0c14a18662
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 96b8126d758d5277129f88f193cfea4b25e80584
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038299"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640821"
 ---
 # <a name="telnet-unset"></a>telnet: 未設定
 
@@ -32,7 +32,7 @@ u[nset] {bsasdel | crlf | delasbs | escape | localecho | logging | ntlm} [?]
 |delasbs|Delete **を** **delete**として送信します。|
 |エスケープ|エスケープ文字の設定を削除します。|
 |localecho|Localecho オフにします。|
-|ログ|ログ記録をオフにします。|
+|logging|ログ記録をオフにします。|
 |ntlm|NTLM 認証をオフにします。|
 |?|このコマンドのヘルプを表示します。|
 ## <a name="examples"></a>例

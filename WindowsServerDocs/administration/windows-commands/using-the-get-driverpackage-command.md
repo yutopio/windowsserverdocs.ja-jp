@@ -3,16 +3,16 @@ title: get DriverPackage
 description: サーバー上のドライバーパッケージに関する情報を表示する、get DriverPackage のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 94d231e4-ff01-48e7-9bc8-7b0d97a4339e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 914effe6e2776f3bc66537beff5ea9e4bed65f3e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: aa8ce1a8a989dd5e3551a3beccd11944f237c6b5
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029670"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640100"
 ---
 # <a name="get-driverpackage"></a>get DriverPackage
 
@@ -31,7 +31,7 @@ WDSUTIL /Get-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name
 | [/Server:\<Server name>] |              サーバーの名前を指定します。 これには、NetBIOS 名または FQDN を指定できます。 サーバー名が指定されていない場合は、ローカル サーバーが使用されます。               |
 | [/DriverPackage:\<Name>] |                                                        表示するドライバー パッケージの名前を指定します。                                                         |
 |    [/パッケージ Id:\<ID>]    | 表示するドライバー パッケージの Windows 展開サービス ID を指定します。 ドライバー パッケージを名前によって一意に識別できない場合は、ID を指定する必要があります。 |
-|     [/Show: {Drivers     |                                                                              ファイル                                                                               |
+|     [/Show: {Drivers     |                                                                              Files                                                                               |
 
 ## <a name="examples"></a>例
 

@@ -3,22 +3,22 @@ title: tpmvscmgr
 description: Tpmvscmgr のリファレンス記事。管理者の資格情報を持つユーザーがコンピューターで TPM 仮想スマートカードを作成および削除できるようにするコマンドラインツールです。
 ms.topic: reference
 ms.assetid: 8b2c8ff4-5c5d-446d-99e7-4daa1b36a163
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 298962ba0796d80328f8ea4209f79b9149553940
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: d5957ff63d7adca1c3800f806b838686cd8aa38f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89026980"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640405"
 ---
 # <a name="tpmvscmgr"></a>tpmvscmgr
 
 Tpmvscmgr コマンドラインツールを使用すると、管理者の資格情報を持つユーザーは、コンピューター上で TPM 仮想スマートカードを作成および削除できます。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 ```
 Tpmvscmgr create [/name] [/AdminKey DEFAULT | PROMPT | RANDOM] [/PIN DEFAULT | PROMPT] [/PUK DEFAULT | PROMPT] [/generate] [/machine] [/?]
@@ -53,7 +53,7 @@ Create コマンドは、ユーザーのシステムに新しい仮想スマー�
 |/instance|削除する仮想スマートカードのインスタンス ID を指定します。 InstanceID は、カードが作成されたときに Tpmvscmgr.exe によって出力として生成されました。 /インスタンスパラメーターは、Destroy コマンドの必須フィールドです。|
 |/?|このコマンドのヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 このコマンドのすべてのパラメーターを実行するには、ターゲットコンピューター上の **Administrators** グループ (またはそれと同等) のメンバーシップが最低限必要です。
 

@@ -3,16 +3,16 @@ title: reg save
 description: 指定したファイルにレジストリの指定したサブキー、エントリ、および値のコピーを保存する reg save コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: b326482b-c8af-467d-a20c-0481eeda3d5c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 17c1bd3439d98ee2e0aa64cb3000f94dfbab41f4
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: f75aedc391eec495a82fe2ea674164552ef66e80
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89025006"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640317"
 ---
 # <a name="reg-save"></a>reg save
 
@@ -33,13 +33,13 @@ reg save <keyname> <filename> [/y]
 | /y | 確認を求めるメッセージを表示せずに、既存のファイルを *filename* という名前で上書きします。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - レジストリエントリを編集する前に、 **reg save** コマンドを使用して親サブキーを保存する必要があります。 編集に失敗した場合は、 **reg 復元** 操作を使用して元のサブキーを復元できます。
 
 - **Reg 保存**操作の戻り値は次のとおりです。
 
-    | [値] | 説明 |
+    | 値 | 説明 |
     |--|--|
     | 0 | 成功 |
     | 1 | 障害 |

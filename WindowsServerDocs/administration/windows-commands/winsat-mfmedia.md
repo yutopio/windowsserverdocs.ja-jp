@@ -3,16 +3,16 @@ title: winsat mfmedia
 description: Winsat のリファレンス。メディアファンデーション framework を使用したビデオデコード (再生) のパフォーマンスを測定します。
 ms.topic: reference
 ms.assetid: 09a3b3dd-f746-4e6e-b684-76a9bde0c78d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 889ef018e5803f9905100b5ae0b65f1bc0c4093e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: fca6bbce2bca22f4fcb7907fff2a4818fd0a5fb9
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038100"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641097"
 ---
 # <a name="winsat-mfmedia"></a>winsat mfmedia
 
@@ -53,7 +53,7 @@ winsat mfmedia <parameters>
   winsat mfmedia -input c:\windows\performance\winsat\winsat.wmv -nopmp
   ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   **Winsat**を使用するには、ローカルの Administrators グループのメンバーシップ、またはそれと同等のメンバーシップが最低限必要です。 コマンドは、管理者特権でのコマンドプロンプトウィンドウから実行する必要があります。
 -   管理者特権でのコマンドプロンプトウィンドウを開くには、[ **スタート**]、[ **アクセサリ**] の順にクリックし、[ **コマンドプロンプト**] を右クリックして、[ **管理者として実行**] をクリックします。

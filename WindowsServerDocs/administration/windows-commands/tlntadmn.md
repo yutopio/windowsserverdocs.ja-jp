@@ -3,16 +3,16 @@ title: tlntadmn
 description: ローカルコンピューターまたはリモートコンピューターを管理し、telnet サーバーサービスを実行している tlntの管理に関する参照記事。
 ms.topic: reference
 ms.assetid: 78b61e8d-b953-44bb-8d57-f3b42da9e7a8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 2293db2da93dfbac301cac516cd03a882e112a4a
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: d7cadac684b8cba2ea0120946f174d2cba0342f7
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027020"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640416"
 ---
 # <a name="tlntadmn"></a>tlntadmn
 
@@ -48,7 +48,7 @@ tlntadmn [<computerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause
 |     config モード = {console &#124; stream}      |                                                                                                                                             操作のモードを指定します。                                                                                                                                             |
 |                       -?                       |                                                                                                                                           コマンド プロンプトにヘルプを表示します。                                                                                                                                           |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 -   サーバーの設定を表示するには、パラメーターを指定せずに「 **tlntを** 使用します。
 -   **Tlntて n**コマンドを使用するには、管理者の資格情報を使用してローカルコンピューターにログオンする必要があります。 リモートコンピューターを管理するには、リモートコンピューターの管理者資格情報も指定する必要があります。 これを行うには、ローカルコンピューターとリモートコンピューターの両方の管理者資格情報を持つアカウントを使用してローカルコンピューターにログオンします。 この方法を使用できない場合は、 **-u** パラメーターと **-p** パラメーターを使用して、リモートコンピューターの管理者資格情報を指定できます。
 

@@ -3,16 +3,16 @@ title: prnjobs
 description: 印刷ジョブを一時停止、再開、キャンセル、および一覧表示する prnjobs.vbs コマンドの参照記事。
 ms.topic: reference
 ms.assetid: 5ad34199-7a5a-40c1-8053-bccd5929df43
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
-ms.openlocfilehash: d25a6d5e6163465cf20304b0651e842afb77458f
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 884b8befadf599f1e3e3641dac6bbd384adab16b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038713"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640782"
 ---
 # <a name="prnjobs"></a>prnjobs
 
@@ -40,7 +40,7 @@ cscript prnjobs {-z | -m | -x | -l | -?} [-s <Servername>] [-p <Printername>] [-
 | -u `<Username>` -w `<password>` | 管理するプリンターをホストするコンピューターに接続するアクセス許可を持つアカウントを指定します。 ターゲット コンピューターのローカル Administrators グループのすべてのメンバーはこれらのアクセス許可を持っていますが、アクセス許可を他のユーザーに与えることもできます。 アカウントを指定しない場合は、コマンドが機能するように、これらのアクセス許可を持つアカウントでログオンする必要があります。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 入力した情報にスペースが含まれている場合は、テキストを引用符で囲みます (例、"コンピューター名")。
 

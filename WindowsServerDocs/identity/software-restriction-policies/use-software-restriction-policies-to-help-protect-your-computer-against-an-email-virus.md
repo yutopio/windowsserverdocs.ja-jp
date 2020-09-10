@@ -3,16 +3,16 @@ title: ソフトウェアの制限のポリシーを使用した電子メール 
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: 02f23979-f832-4e46-bdea-21fd77db35b2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: de636bf4e1783d1d6aaf1b78a45442c80e0a6d27
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 502d9a097928c6a9b828ebc3b9d5b3544d456388
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952999"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640223"
 ---
 # <a name="use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus"></a>ソフトウェアの制限のポリシーを使用した電子メール ウイルスからのコンピューターの保護
 
@@ -21,7 +21,7 @@ ms.locfileid: "87952999"
 このトピックでは、ソフトウェアの制限のポリシー (SRP) を使用してアプリケーション制御ポリシーを設定する方法について説明します。これは、Windows Server 2008 および Windows Vista 以降では、電子メールのウイルスからコンピューターを保護するのに役立ちます。
 
 ## <a name="introduction"></a>はじめに
-ソフトウェアの制限のポリシー (SRP) はグループ ポリシー ベースの機能で、ドメイン内のコンピューターで実行されているソフトウェア プログラムを識別し、これらのプログラムを実行する機能を制御します。 ソフトウェアの制限のポリシーを使えば、コンピューターの構成に厳格な制限を加え、指定したアプリケーションに限って実行を許可することができます。 これらは Microsoft Active Directory Domain Services およびグループポリシーと統合されていますが、スタンドアロンコンピューターで構成することもできます。 SRP の開始点については、「[ソフトウェアの制限のポリシー](software-restriction-policies.md)」を参照してください。
+ソフトウェアの制限のポリシー (SRP) はグループ ポリシー ベースの機能で、ドメイン内のコンピューターで実行されているソフトウェア プログラムを識別し、これらのプログラムを実行する機能を制御します。 ソフトウェアの制限のポリシーを使えば、コンピューターの構成に厳格な制限を加え、指定したアプリケーションに限って実行を許可することができます。 これらは Microsoft Active Directory Domain Services およびグループポリシーと統合されていますが、スタンドアロンコンピューターで構成することもできます。 SRP の開始点については、「 [ソフトウェアの制限のポリシー](software-restriction-policies.md)」を参照してください。
 
 Windows Server 2008 R2 および Windows 7 以降では、アプリケーション制御戦略の一部として、または SRP と連携して Windows AppLocker を使用できます。
 
@@ -43,7 +43,7 @@ Windows Server 2008 R2 および Windows 7 以降では、アプリケーショ�
 
     -   [ソフトウェアの制限のポリシーを新規作成するには](administer-software-restriction-policies.md#BKMK_Create_SRP)
 
-4.  電子メールプログラムが電子メールの添付ファイルを実行するために使用するフォルダーのパスの規則を作成し、セキュリティレベルを [**許可**しない] に設定します。
+4.  電子メールプログラムが電子メールの添付ファイルを実行するために使用するフォルダーのパスの規則を作成し、セキュリティレベルを [ **許可**しない] に設定します。
 
     -   [パスの規則の操作](work-with-software-restriction-policies-rules.md#BKMK_Path_Rules)
 

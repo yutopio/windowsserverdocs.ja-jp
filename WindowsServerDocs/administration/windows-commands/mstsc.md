@@ -3,16 +3,16 @@ title: mstsc
 description: Mstsc コマンドのリファレンス記事。リモートデスクトップセッションホストサーバーまたはその他のリモートコンピューターへの接続を作成し、既存のリモートデスクトップ接続 (.rdp) 構成ファイルを編集して、クライアント接続マネージャーで作成された従来の接続ファイルを新しい .rdp 接続ファイルに移行します。
 ms.topic: reference
 ms.assetid: 59801227-1e7e-4dbd-96e6-f54102a3ce92
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 0a9c1eb46e2d6802c50dfc89e4a3085e6a6afca2
-ms.sourcegitcommit: fe356f95188b7ce8e719765f44c0789c065832fb
+ms.openlocfilehash: f47a8ad0db569c82d64e74b10c30bec9aca958ab
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057564"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640546"
 ---
 # <a name="mstsc"></a>mstsc
 
@@ -59,7 +59,7 @@ mstsc.exe /migrate
 ```
 mstsc /f
 ```
-または
+or
 ```
 mstsc /v:computer1 /f
 ```

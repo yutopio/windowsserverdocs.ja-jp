@@ -3,16 +3,16 @@ title: winnt32
 description: Windows Server 2003 で製品のインストールまたはアップグレードを実行する winnt32 のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 5a0a6fb3-ba4e-4ace-8984-7f6d3875560e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 5c74f0645ccbe4745b155eb8b687d4c8ea5ff159
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: e941dbbf1bc0a26092fa6616d58c4186bfbaf42a
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89022696"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641127"
 ---
 # <a name="winnt32"></a>winnt32
 
@@ -59,7 +59,7 @@ winnt32 [/checkupgradeonly] [/cmd: <CommandLine>] [/cmdcons] [/copydir:{i386|ia6
 |   \<AnswerFile>   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         セットアップに、独自の仕様は、します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |        /?         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              コマンド プロンプトにヘルプを表示します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 クライアントコンピューターに Windows XP を展開する場合は、Windows XP に付属しているバージョンの winnt32.exe を使用できます。 Windows XP を展開するもう1つの方法として、winnt32.msi を使用します。これは、IntelliMirror のテクノロジセットの一部である Windows インストーラーを通じて機能します。 クライアントの展開の詳細については、「Windows Server 2003 導入ガイドを参照してください。 [Windows 導入ガイドとリソース キットを使用して](/previous-versions/windows/it-pro/windows-server-2003/cc779317(v=ws.10))します。
 
 Itanium ベースのコンピューターの場合は、 **winnt32** から拡張ファームウェア インターフェイス (EFI) または Windows Server 2003 Enterprise、Windows Server 2003 R2 Enterprise、Windows Server 2003 R2 Datacenter、または Windows Server 2003 Datacenter から実行できます。 Itanium アーキテクチャ ベースのコンピューターにも、 **/cmdcons** と **/syspart** が表示されていないとアップグレードに関連するオプションは使用できません。

@@ -3,16 +3,16 @@ title: winrs
 description: プログラムをリモートで管理および実行できるようにする、winrs のリファレンス記事です。
 ms.topic: reference
 ms.assetid: c370de31-5651-400a-872d-ef229aae2309
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 2cf659e06f43a26ae95e4ff218758c21d3cf78e9
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: a2a92a20a924e36686fb555b90da4fa7d6ef67fd
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89022636"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641114"
 ---
 # <a name="winrs"></a>winrs
 
@@ -41,7 +41,7 @@ winrs [/<parameter>[:<value>]] <command>
 |            /usessl             |                                                                                                               リモートエンドポイントを使用する場合は、SSL 接続を使用します。  トランスポート **https** の代わりにこの値を指定すると、既定の **WinRM** 既定ポートが使用されます。                                                                                                                |
 |               /?               |                                                                                                                                                                        コマンド プロンプトにヘルプを表示します。                                                                                                                                                                        |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 -   すべてのコマンドラインオプションでは、短い形式または長い形式のいずれかを使用できます。 たとえば、 **/r** と//は両方 **とも有効** です。
 -   このコマンドを終了するには、ユーザーが**Ctrl + C**キーまたは**Ctrl + break キー**を押して、リモートシェルに**送信します**。 2番目の **Ctrl + C キー** を押すと、 **winrs.exe**が強制的に終了します。
 -   アクティブなリモートシェルまたは winrs 構成を管理するには、WinRM ツールを使用します。  アクティブシェルを管理するための URI エイリアスは、 **shell/cmd**です。  Winrs 構成の URI エイリアスは、 **winrm/config/winrs**です。

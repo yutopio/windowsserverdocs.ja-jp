@@ -3,16 +3,16 @@ title: wbadmin get items
 description: 特定のバックアップに含まれる項目を一覧表示する wbadmin get 項目の参照記事。
 ms.topic: reference
 ms.assetid: 27d08ce3-6e06-4260-b264-fc1bde132d09
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 7e82bfc6cee3a8ff6a4fd0165770870d09a0873e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 95c3c81534c3ccce87e6404409081c47121f3c2d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89032000"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640725"
 ---
 # <a name="wbadmin-get-items"></a>wbadmin get items
 

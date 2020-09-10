@@ -3,16 +3,16 @@ title: ren
 description: ファイルまたはディレクトリの名前を変更する ren コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: 60398e12-a05d-4524-a73a-0a925943e21d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
-ms.openlocfilehash: 0254eca7d68f653f8f8a8ab9099f535c4635f8a4
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 751fa94d760d5fe1f49ceedb3ddeeac2656e4487
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027300"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641030"
 ---
 # <a name="ren"></a>ren
 
@@ -37,7 +37,7 @@ ren [<drive>:][<path>]<filename1> <filename2>
 | `<filename2>` | ファイルの新しい名前を指定します。 ワイルドカード文字を使用すると、複数のファイルに新しい名前を指定できます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - ファイルの名前を変更するときに、新しいドライブまたはパスを指定することはできません。 また、このコマンドを使用して、ドライブ間でファイルの名前を変更したり、ファイルを別のディレクトリに移動したりすることはできません。
 

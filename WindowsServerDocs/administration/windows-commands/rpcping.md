@@ -3,16 +3,16 @@ title: rpcping
 description: Rpcping コマンドの参照記事。 Microsoft Exchange Server を実行しているコンピューターと、ネットワーク上でサポートされている Microsoft Exchange クライアントワークステーションの間の RPC 接続を確認します。
 ms.topic: reference
 ms.assetid: 7382aa0d-90fc-47c0-84b3-15f52dd656d0
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 380c52f9e567b5f185160e8b6ab068fc791d1029
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 7351195d8206cb13b334ca3e06ffb794e4a13461
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030520"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641178"
 ---
 # <a name="rpcping"></a>rpcping
 
@@ -47,7 +47,7 @@ rpcping [/t <protseq>] [/s <server_addr>] [/e <endpoint>
 | /O `<object UUID>` | インターフェイスには、1 つが登録されている場合は、オブジェクトの UUID を指定します。 |
 | /i `<#_iterations>` | 呼び出しの数を指定します。 既定値は 1 です。 このオプションは、複数のイテレーションが指定されている場合は、接続の待機時間を測定するために便利です。 |
 | /u `<security_package_id>` | セキュリティ パッケージ (セキュリティ プロバイダー) を指定の呼び出しに RPC を使用します。 セキュリティ パッケージは、数値または名として識別されます。 数値を使用する場合、RpcBindingSetAuthInfoEx API と同様に同じ数とは。 このオプションを指定する場合は、 *[なし*] 以外の認証レベルを指定する必要があります。 このオプションには既定値はありません。 指定されていない場合、RPC は ping にセキュリティを使用しません。 次の一覧は、名前と番号を表示します。 名前は大文字小文字が区別されません。<ul><li>Negotiate/9 またはネゴシエーション、snego、negotiate のいずれか</li><li>NTLM/10 または NTLM</li><li>SChannel/14 または SChannel</li><li>Kerberos/16 または Kerberos</li><li>カーネル/20 またはカーネル</li></ul> |
-| /a `<authn_level>` | 使用する認証レベルを指定します。 このオプションを指定する場合は、セキュリティパッケージ ID (**/u**) も指定する必要があります。 このオプションが指定されていない場合、RPC では ping にセキュリティが使用されません。 このオプションには既定値はありません。 次のいずれかの値になります。<ul><li>接続する</li><li>call</li><li>pkt</li><li>整合性 (integrity)</li><li>privacy</li></ul> |
+| /a `<authn_level>` | 使用する認証レベルを指定します。 このオプションを指定する場合は、セキュリティパッケージ ID (**/u**) も指定する必要があります。 このオプションが指定されていない場合、RPC では ping にセキュリティが使用されません。 このオプションには既定値はありません。 設定可能な値は、次のとおりです。<ul><li>接続する</li><li>call</li><li>pkt</li><li>整合性 (integrity)</li><li>privacy</li></ul> |
 | Ms-dos `<server_princ_name>` | サーバー プリンシパル名を指定します。<p>このフィールドはのみに使用できる認証レベルとセキュリティ パッケージが選択されている場合。 |
 | /I `<auth_identity>` | サーバーに接続する別の id を指定できます。 Id は、フォームのユーザー、ドメイン、パスワードは。 ユーザー名、ドメイン、またはパスワードには、シェルによって解釈できる特殊文字がある場合は、id を二重引用符で囲みます。 指定できます `\*` パスワードと RPC ではなくするように求められます画面にエコーせず、パスワードを入力します。 このフィールドが指定されていない場合、ログオン ユーザーの id が使用されます。<p>このフィールドはのみに使用できる認証レベルとセキュリティ パッケージが選択されている場合。 |
 | スイッチ `<capabilities>` | フラグの 16 進数のビットマスクを指定します。 このフィールドはのみに使用できる認証レベルとセキュリティ パッケージが選択されている場合。 |

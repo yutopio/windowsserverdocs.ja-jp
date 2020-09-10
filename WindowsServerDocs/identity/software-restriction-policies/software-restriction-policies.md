@@ -3,16 +3,16 @@ title: ソフトウェア制限ポリシー
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: 5c0befad-07c3-4262-b418-372d01850305
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 44f917beaa7b1e13171d2c8ade6f0172b450350d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f4019902622b667267562a8490b6540a6c27d1e4
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953019"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640238"
 ---
 # <a name="software-restriction-policies"></a>ソフトウェア制限ポリシー
 
@@ -20,7 +20,7 @@ ms.locfileid: "87953019"
 
 IT 担当者向けのこのトピックでは、windows Server 2012 および Windows 8 でのソフトウェアの制限のポリシー (SRP) について説明し、Windows Server 2003 以降の SRP に関する技術情報へのリンクを示します。
 
-手順とトラブルシューティングのヒントについては、「[ソフトウェア制限ポリシーの管理](administer-software-restriction-policies.md)」および「[ソフトウェアの制限のポリシーのトラブルシューティング](troubleshoot-software-restriction-policies.md)」を参照してください。
+手順とトラブルシューティングのヒントについては、「 [ソフトウェア制限ポリシーの管理](administer-software-restriction-policies.md) 」および「 [ソフトウェアの制限のポリシーのトラブルシューティング](troubleshoot-software-restriction-policies.md)」を参照してください。
 
 ## <a name="software-restriction-policies-description"></a><a name="BKMK_OVER"></a>ソフトウェアの制限のポリシーの説明
 ソフトウェアの制限のポリシー (SRP) はグループ ポリシー ベースの機能で、ドメイン内のコンピューターで実行されているソフトウェア プログラムを識別し、これらのプログラムを実行する機能を制御します。 ソフトウェアの制限のポリシーは、マイクロソフトのセキュリティと管理に関する戦略の一環として、企業のコンピューターの信頼性、整合性、および管理容易性の向上に寄与します。
@@ -84,10 +84,10 @@ SRP に関する情報と使用方法についてのリソースへのリンク�
 |コンテンツ タイプ|参考資料|
 |--------|-------|
 |**製品評価**|[ソフトウェアの制限のポリシーによるアプリケーションのロックダウン](/previous-versions/technet-magazine/cc510322(v=msdn.10)?pr=blog)|
-|**計画**|[ソフトウェアの制限のポリシーの技術概要](software-restriction-policies-technical-overview.md)(Windows Server 2012)<p>[ソフトウェアの制限のポリシーのテクニカル リファレンス](/previous-versions/windows/it-pro/windows-server-2003/cc728085(v=ws.10)) (Windows Server 2003)|
+|**Planning**|[ソフトウェアの制限のポリシーの技術概要](software-restriction-policies-technical-overview.md) (Windows Server 2012)<p>[ソフトウェアの制限のポリシーのテクニカル リファレンス](/previous-versions/windows/it-pro/windows-server-2003/cc728085(v=ws.10)) (Windows Server 2003)|
 |**デプロイ**|リソースはありません。|
-|**操作**|[ソフトウェアの制限のポリシーの管理](administer-software-restriction-policies.md)(Windows Server 2012)<p>[ソフトウェアの制限のポリシーの製品ヘルプ](/previous-versions/windows/it-pro/windows-server-2003/cc779607(v=ws.10))(Windows Server 2003)|
-|**トラブルシューティング**|[ソフトウェアの制限のポリシーのトラブルシューティング](troubleshoot-software-restriction-policies.md)(Windows Server 2012)<p>[ソフトウェアの制限のポリシーのトラブルシューティング](/previous-versions/windows/it-pro/windows-server-2003/cc737011(v=ws.10)) (Windows Server 2003)|
+|**操作**|[ソフトウェアの制限のポリシーの管理](administer-software-restriction-policies.md) (Windows Server 2012)<p>[ソフトウェアの制限のポリシーの製品ヘルプ](/previous-versions/windows/it-pro/windows-server-2003/cc779607(v=ws.10)) (Windows Server 2003)|
+|**トラブルシューティング**|[ソフトウェアの制限のポリシーのトラブルシューティング](troubleshoot-software-restriction-policies.md) (Windows Server 2012)<p>[ソフトウェアの制限のポリシーのトラブルシューティング](/previous-versions/windows/it-pro/windows-server-2003/cc737011(v=ws.10)) (Windows Server 2003)|
 |**Security**|[ソフトウェアの制限のポリシーに関する脅威と対策](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349795(v=ws.10)) (Windows Server 2008)<p>[ソフトウェアの制限のポリシーに関する脅威と対策](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125926(v=ws.10)) (Windows Server 2008 R2)|
-|**ツールと設定**|[ソフトウェアの制限のポリシーのツールと設定](/previous-versions/windows/it-pro/windows-server-2003/cc782454(v=ws.10))(Windows Server 2003)|
+|**ツールと設定**|[ソフトウェアの制限のポリシーのツールと設定](/previous-versions/windows/it-pro/windows-server-2003/cc782454(v=ws.10)) (Windows Server 2003)|
 |**コミュニティ リソース**|[ソフトウェアの制限のポリシーによるアプリケーションのロックダウン](/previous-versions/technet-magazine/cc510322(v=msdn.10)?pr=blog)|

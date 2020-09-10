@@ -3,16 +3,16 @@ title: サブコマンドの設定-イメージ
 description: サブコマンドの参照記事。イメージの属性を変更します。
 ms.topic: reference
 ms.assetid: 2ae03c86-7a13-4e38-9182-32e55fffd504
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ecb35deed9f938a7498aa282701034b5d9455233
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 3b0df9dd062c537bbfcdb0436fcf8dafe0ce3905
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036820"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640868"
 ---
 # <a name="subcommand-set-image"></a>サブコマンド: セット イメージ
 
@@ -20,7 +20,7 @@ ms.locfileid: "89036820"
 
 イメージの属性を変更します。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 ブートイメージの場合:
 ```
 wdsutil /Set-Imagmedia:<Image name> [/Server:<Server name>mediatype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<File name>] [/Name:<Name>]

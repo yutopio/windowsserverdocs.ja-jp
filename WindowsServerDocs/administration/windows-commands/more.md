@@ -3,16 +3,16 @@ title: その他
 description: '[その他] コマンドのリファレンス記事。一度に1つの出力画面が表示されます。'
 ms.topic: reference
 ms.assetid: ded14f6a-d82f-4aeb-a2d8-7ec1c94dfb8f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/26/2019
-ms.openlocfilehash: 2c8d7a21220701bf46685d4c87ca02a4810aff1b
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 18e40ff1f3281967e05b47e41f3de405d7009691
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038843"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640153"
 ---
 # <a name="more"></a>その他
 
@@ -43,7 +43,7 @@ more [/c] [/p] [/s] [/t<n>] [+<n>] [<files>]
 | `<files>` | 表示するファイルの一覧を指定します。 ファイルは、スペースを使用して区切る必要があります。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 次のサブコマンドは、 **より多く** のプロンプト () で受け入れられ `-- More --` ます。
 

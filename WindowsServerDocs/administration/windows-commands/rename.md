@@ -3,16 +3,16 @@ title: rename
 description: '[名前の変更] コマンドの参照記事。ファイルまたはディレクトリの名前を変更します。'
 ms.topic: reference
 ms.assetid: 7f2ea658-0fa9-4015-8031-22c2b0089231
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 51f509576abe7f035fa04318f77b802e3fdf1d93
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 24c63a275073217a4212f465a268d517d07cc0e6
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030060"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641018"
 ---
 # <a name="rename"></a>rename
 
@@ -37,7 +37,7 @@ rename [<drive>:][<path>]<filename1> <filename2>
 | `<filename2>` | ファイルの新しい名前を指定します。 ワイルドカード文字を使用すると、複数のファイルに新しい名前を指定できます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - ファイルの名前を変更するときに、新しいドライブまたはパスを指定することはできません。 また、このコマンドを使用して、ドライブ間でファイルの名前を変更したり、ファイルを別のディレクトリに移動したりすることはできません。
 

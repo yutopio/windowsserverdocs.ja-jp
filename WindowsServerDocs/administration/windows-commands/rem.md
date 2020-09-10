@@ -3,16 +3,16 @@ title: rem
 description: Rem コマンドの参照記事。スクリプト、バッチ、または config.sys ファイルにコメントを記録します。
 ms.topic: reference
 ms.assetid: 1a45b585-a83c-4ff6-badd-ff40f34cec23
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 741b3e8930188957fde0efc66b7d5584233f6877
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: c56595a45eba3fd841f1f455c189164b240191e8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027410"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640647"
 ---
 # <a name="rem"></a>rem
 
@@ -31,7 +31,7 @@ rem [<comment>]
 | `<comment>` | コメントとして追加する文字の文字列を指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **Rem**コマンドを実行しても、画面にコメントは表示されません。 画面にコメントを表示するには、ファイルに **echo on** コマンドを含める必要があります。
 

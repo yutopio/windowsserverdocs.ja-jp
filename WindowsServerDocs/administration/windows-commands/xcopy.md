@@ -3,16 +3,16 @@ title: xcopy
 description: ファイルとディレクトリ (サブディレクトリを含む) をコピーする xcopy のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 01/05/2019
-ms.openlocfilehash: 05bc7b2d146a9c0d7e981d3e5bee13e60ffb57b5
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: a3925843b80c60c689050c9a28236903e1912b3a
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038040"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640677"
 ---
 # <a name="xcopy"></a>xcopy
 
@@ -62,7 +62,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/j|バッファリングせずにファイルをコピーします。 非常に大きなファイルに推奨されます。 このパラメーターは、Windows Server 2008 R2 で追加されました。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 - **/Z**の使用
 

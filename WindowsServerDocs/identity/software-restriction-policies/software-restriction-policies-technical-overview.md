@@ -3,16 +3,16 @@ title: ソフトウェアの制限のポリシーの技術概要
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: dc7013b0-0efd-40fd-bd6d-75128adbd0b8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: f98075cd8e662b3344f426bd8d69181994096a5f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 49d0f32d1634a37f5ddda71f8147017e9863b1e6
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953051"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640241"
 ---
 # <a name="software-restriction-policies-technical-overview"></a>ソフトウェアの制限のポリシーの技術概要
 
@@ -121,7 +121,7 @@ Windows Server 2012 および Windows 8 では、SRP の機能に変更はあり
 
 -   ポリシーの結果セット (RSoP)。クライアントに適用される有効なポリシーの診断に役立ちます。
 
-SRP アーキテクチャの詳細、SRP がルール、プロセス、および相互作用を管理する方法の詳細については、Windows Server 2003 テクニカルライブラリの「[ソフトウェアの制限のポリシーのしくみ](/previous-versions/windows/it-pro/windows-server-2003/cc786941(v=ws.10))」を参照してください。
+SRP アーキテクチャの詳細、SRP がルール、プロセス、および相互作用を管理する方法の詳細については、Windows Server 2003 テクニカルライブラリの「 [ソフトウェアの制限のポリシーのしくみ](/previous-versions/windows/it-pro/windows-server-2003/cc786941(v=ws.10)) 」を参照してください。
 
 ## <a name="best-practices"></a><a name="BKMK_Best_Practices"></a>ベスト プラクティス
 
@@ -139,9 +139,9 @@ SRP アーキテクチャの詳細、SRP がルール、プロセス、および
 
 ### <a name="use-caution-when-defining-a-default-setting-of-disallowed"></a>既定の設定の "許可しない" を定義する場合は注意してください。
 
--   [**許可**しない] の既定の設定を定義すると、明示的に許可されているソフトウェアを除き、すべてのソフトウェアが許可されません。 開くファイルには、開くことができるソフトウェアの制限のポリシー規則が必要です。
+-   [ **許可**しない] の既定の設定を定義すると、明示的に許可されているソフトウェアを除き、すべてのソフトウェアが許可されません。 開くファイルには、開くことができるソフトウェアの制限のポリシー規則が必要です。
 
--   システムから管理者がロックされるのを防ぐために、既定のセキュリティレベルを [**許可**しない] に設定すると、4つのレジストリパスの規則が自動的に作成されます。 これらのレジストリパスの規則を削除または変更できます。ただし、これは推奨されません。
+-   システムから管理者がロックされるのを防ぐために、既定のセキュリティレベルを [ **許可**しない] に設定すると、4つのレジストリパスの規則が自動的に作成されます。 これらのレジストリパスの規則を削除または変更できます。ただし、これは推奨されません。
 
 ### <a name="for-best-security-use-access-control-lists-in-conjunction-with-software-restriction-policies"></a>セキュリティを最大限に高めるには、アクセス制御リストをソフトウェアの制限のポリシーと組み合わせて使用します。
 
@@ -153,7 +153,7 @@ SRP アーキテクチャの詳細、SRP がルール、プロセス、および
 
 -   新しいポリシー設定をテストするために、組織のドメインとは別にテストドメインをセットアップすることができます。 テスト GPO を作成してテスト組織単位にリンクすることによって、ポリシー設定をテストすることもできます。 テストユーザーがポリシー設定を十分にテストしたら、テスト GPO をドメインにリンクすることができます。
 
--   [テストなしでプログラムまたはファイルを**許可**しない] に設定して、影響を確認することはできません。 特定のファイルに対する制限は、コンピューターまたはネットワークの操作に重大な影響を与える可能性があります。
+-   [テストなしでプログラムまたはファイルを **許可** しない] に設定して、影響を確認することはできません。 特定のファイルに対する制限は、コンピューターまたはネットワークの操作に重大な影響を与える可能性があります。
 
 -   間違って入力された情報や入力の誤りが原因で、予期したとおりに動作しないポリシー設定が発生する可能性があります。 新しいポリシー設定を適用する前にテストすると、予期しない動作を防ぐことができます。
 
@@ -171,7 +171,7 @@ SRP アーキテクチャの詳細、SRP がルール、プロセス、および
 
 |コンテンツ タイプ|参考資料|
 |--------|-------|
-|**計画**|[ソフトウェアの制限のポリシーのテクニカル リファレンス](/previous-versions/windows/it-pro/windows-server-2003/cc728085(v=ws.10))|
+|**Planning**|[ソフトウェアの制限のポリシーのテクニカル リファレンス](/previous-versions/windows/it-pro/windows-server-2003/cc728085(v=ws.10))|
 |**操作**|[ソフトウェア制限ポリシーの管理](administer-software-restriction-policies.md)|
 |**トラブルシューティング**|[ソフトウェアの制限のポリシーのトラブルシューティング (2003)](/previous-versions/windows/it-pro/windows-server-2003/cc737011(v=ws.10))|
 |**Security**|[ソフトウェアの制限のポリシーに関する脅威と対策 (2008)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349795(v=ws.10))<p>[ソフトウェアの制限のポリシーに関する脅威と対策 (2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125926(v=ws.10))|

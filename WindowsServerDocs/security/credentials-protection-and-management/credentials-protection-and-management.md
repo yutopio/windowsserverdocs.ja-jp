@@ -3,16 +3,16 @@ title: 資格情報の保護と管理
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: e457229c-0126-40fe-948c-101c943e1b57
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: be120eda25b4d01da60faa2af241cd3ce243abfc
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 37fbec56a855a4d875680a8c1e2c9e0055ed9f12
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995828"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641190"
 ---
 # <a name="credentials-protection-and-management"></a>資格情報の保護と管理
 
@@ -54,9 +54,9 @@ Protected Users グループのメンバーは、以下の認証方法によっ�
 
 新しい Active Directory オブジェクトクラスである認証ポリシーを使用すると、Windows Server 2012 R2 ドメインの機能レベルを持つドメイン内のアカウントクラスに認証構成を適用できます。 認証ポリシーは、Kerberos AS または TGS の交換時に適用されます。 次の Active Directory アカウント クラスがあります。
 
--   User
+-   ユーザー
 
--   Computer
+-   コンピューター
 
 -   管理されたサービス アカウント
 

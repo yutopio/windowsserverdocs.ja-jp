@@ -3,16 +3,16 @@ title: wevtutil
 description: Wevtutil のリファレンス記事。イベントログとパブリッシャーに関する情報を取得できます。
 ms.topic: reference
 ms.assetid: d4c791e0-7e59-45c5-aa55-0223b77a4822
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8b36619def02434a253f0e6e97ef47cb78190b8a
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 4679c8b8245b0db2e4dff7cf179e198201d4910d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031730"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641242"
 ---
 # <a name="wevtutil"></a>wevtutil
 
@@ -51,7 +51,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 |{al \| アーカイブ-ログ} \<Logpath> [/l: \<Locale> ]|指定されたログファイルを自己完結型の形式でアーカイブします。 ロケールの名前を持つサブディレクトリが作成され、ロケール固有のすべての情報がそのサブディレクトリに保存されます。 **Wevtutil al**を実行してディレクトリとログファイルを作成した後は、パブリッシャーがインストールされているかどうかにかかわらず、ファイル内のイベントを読み取ることができます。|
 |{cl \| 消去ログ} \<Logname> [/bu: \<Backup> ]|指定したイベント ログのイベントを消去します。 **/Bu**オプションを使用すると、消去されたイベントをバックアップできます。|
 
-## <a name="options"></a>オプション
+## <a name="options"></a>Options
 
 |       オプション       |                                                                                                                                                                                                                                                                 説明                                                                                                                                                                                                                                                                  |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -85,7 +85,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 |     /a\<Auth>     |                                                                                                                                                                                             リモートコンピューターに接続するための認証の種類を定義します。 \<Auth> 既定値、Negotiate、Kerberos、NTLM のいずれかを指定できます。 既定値は Negotiate です。                                                                                                                                                                                              |
 |  方向\<Unicode>   |                                                                                                                                                                                                             Unicode で出力を表示します。 \<Unicode> true または false を指定できます。 <Unicode>が true の場合、出力は Unicode になります。                                                                                                                                                                                                             |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   構成ファイルを sl パラメーターと共に使用する
 

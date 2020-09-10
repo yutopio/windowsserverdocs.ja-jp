@@ -3,16 +3,16 @@ title: 初期化解除-サーバー
 description: 初期サーバー構成中にサーバーに加えられた変更を元に戻すサーバーの初期化解除に関するリファレンス記事です。
 ms.topic: reference
 ms.assetid: 015efb04-fe84-469f-bd81-49d0046296b2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 4ce98df7fa7c094970474432dd8fdedc56e302c6
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: da747dd06ca9621e4261edc436eea48fb2a3917f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029980"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640476"
 ---
 # <a name="uninitialize-server"></a>初期化解除-サーバー
 

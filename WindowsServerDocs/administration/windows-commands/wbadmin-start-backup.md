@@ -3,16 +3,16 @@ title: wbadmin start backup
 description: 指定されたパラメーターを使用してバックアップを作成する wbadmin start backup のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 56f3e752-d99a-4c3d-8e97-10303c37dd78
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 4ee8b52ef7a84b53f07e6ff9ada6e49addbebdf9
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: cc59c24e84d7dd5eb4455df656ee1bb3193c6af5
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031920"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640262"
 ---
 # <a name="wbadmin-start-backup"></a>wbadmin start backup
 
@@ -20,7 +20,7 @@ ms.locfileid: "89031920"
 
 このサブコマンドを使用して1回限りのバックアップを作成するには、 **Backup Operators** グループまたは **Administrators** グループのメンバーであるか、適切な権限が委任されている必要があります。 さらに、実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権でのコマンドプロンプトを開くには、[ **コマンドプロンプト** ] を右クリックし、[ **管理者として実行**] をクリックします)。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 Windows Vista および Windows Server 2008 の構文:
 ```

@@ -3,16 +3,16 @@ title: rmdir
 description: ディレクトリを削除する rmdir コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: e4d7162b-7132-413c-a416-6eb3dc032a26
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: d67c0bb16ad47457cfb6eb927ba9dc5cf167b20c
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 524ca632c11c7d861ed431c4bc86dbdb2b35abc8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036240"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640282"
 ---
 # <a name="rmdir"></a>rmdir
 
@@ -38,7 +38,7 @@ rmdir [<drive>:]<path> [/s [/q]]
 | /q | クワイエット モードを指定します。 ディレクトリ ツリーを削除するときに、確認を表示しません。 **/Q**パラメーターは、 **/s**も指定されている場合にのみ機能します。<p>**注意:** Quiet モードで実行すると、ディレクトリツリー全体が確認なしで削除されます。 **/Q**コマンドラインオプションを使用する前に、重要なファイルが移動またはバックアップされていることを確認してください。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 隠しファイルやシステムファイルなど、ファイルが格納されているディレクトリを削除することはできません。 これを行おうとすると、次のメッセージが表示されます。
 

@@ -3,16 +3,16 @@ title: wbadmin start recovery
 description: 指定したパラメーターに基づいて回復操作を実行する wbadmin start recovery のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 52381316-a0fa-459f-b6a6-01e31fb21612
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: bf0afcd4999bb74efd2ce4e2ec3e146cbbe2141c
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 96c38a74f0a7f10e761ce1478e207666741eecc9
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031910"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640257"
 ---
 # <a name="wbadmin-start-recovery"></a>wbadmin start recovery
 
@@ -58,7 +58,7 @@ wbadmin start recovery
 | -noRollForward | アプリケーションを回復する場合にのみ有効です。 バックアップからの最新バージョンが選択されている場合に、アプリケーションの以前の特定の時点への復旧を許可します。 最新ではないその他のバージョンのアプリケーションでは、以前の特定の時点への復旧が既定値として行われます。 |
 | -quiet | ユーザーにプロンプトを表示せずにサブコマンドを実行します。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   特定のバックアップバージョンから回復可能な項目の一覧を表示するには、 **wbadmin get items**を使用します。 バックアップ時にボリュームにマウントポイントまたはドライブ文字がない場合、このサブコマンドは、ボリュームの回復に使用する GUID ベースのボリューム名を返します。
 -   **-Itemtype**が**App**の場合は、値を使用して、[メディア**からのインストール**]**操作を実行し、** Active Directory Domain Services に必要なすべての関連データを回復することができます。 次に、Active Directory データベース、レジストリ、および SYSVOL の状態のコピー**を作成し**、この情報を **-recoverytarget**で指定した場所に保存します。 このパラメーターは **、-recoverytarget** が指定されている場合にのみ使用してください。

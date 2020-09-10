@@ -3,16 +3,16 @@ title: path
 description: PATH 環境変数でコマンドパスを設定するための参照記事。実行可能ファイル (.exe) を検索するために使用されるディレクトリのセットを指定します。
 ms.topic: reference
 ms.assetid: 1bfa1349-e79a-472b-a9e6-d7a91149ae8f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: fe60518a70f4fdc9992f70b3b561b067404a31f1
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: a6eeeba05b69530091525c65c49606902ca8c165
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89032509"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640662"
 ---
 # <a name="path"></a>path
 
@@ -34,7 +34,7 @@ path ;
 | `%PATH%` | コマンド パスを PATH 環境変数で指定されているディレクトリの既存のセットに追加します。 このパラメーターを指定すると、Cmd.exe によって PATH 環境変数内のコマンドパス値に置き換えられ、コマンドプロンプトでこれらの値を手動で入力する必要がなくなります。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 
 - Windows オペレーティングシステムでは、既定のファイル名拡張子を使用して、.exe、.com、.bat、.cmd の順に検索します。 つまり、acct.bat という名前のバッチファイルを探していても、同じディレクトリ内に acct.exe という名前のアプリがある場合は、コマンドプロンプトで .bat 拡張子を含める必要があります。

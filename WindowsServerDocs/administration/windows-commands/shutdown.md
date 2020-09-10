@@ -3,16 +3,16 @@ title: shutdown
 description: シャットダウンの参照記事。ローカルコンピューターまたはリモートコンピューターを1つずつシャットダウンまたは再起動することができます。
 ms.topic: reference
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f83788b4d8e8f92ea1375b9a0f245f9bfa63bc85
-ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
+ms.openlocfilehash: 362bec4106fadc0f68973bec9a128313b0039b43
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554385"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640939"
 ---
 # <a name="shutdown"></a>shutdown
 
@@ -45,10 +45,10 @@ shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t 
 |スイッチ \<Comment>|シャットダウンの理由について詳しいコメントを付けることができます。 使用して最初の理由を提供する必要があります、 **/d** オプション。 コメントは引用符で囲む必要があります。 文字数の上限は 511 文字です。|
 |/?|ローカル コンピューターで定義されているメジャーおよびマイナーな理由の一覧を含むコマンド プロンプトでヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 - ユーザーを割り当てる必要がある、 **システムをシャット ダウン** シャット ダウン、ローカルまたはリモートにユーザー権限を使用しているコンピューターの管理、 **シャット ダウン** コマンドです。
-- ユーザーは、Administrators グループのメンバーは、ローカルまたはリモートで管理されるコンピューターの予期しないシャット ダウンに注釈を付けるである必要があります。 ターゲット コンピューターがドメインに参加している場合、Domain Admins グループのメンバーはこの手順を実行できる可能性があります。 詳細については次を参照してください:
+- ユーザーは、Administrators グループのメンバーは、ローカルまたはリモートで管理されるコンピューターの予期しないシャット ダウンに注釈を付けるである必要があります。 ターゲット コンピューターがドメインに参加している場合、Domain Admins グループのメンバーはこの手順を実行できる可能性があります。 詳細については、次を参照してください。
     - [既定のローカル グループ](/previous-versions/windows/it-pro/windows-server-2003/cc785098(v=ws.10))
     - [既定のグループ](/previous-versions/windows/it-pro/windows-server-2003/cc756898(v=ws.10))
 - 一度に複数のコンピューターをシャットダウンする場合は、スクリプトを使用して各コンピューターの **shutdown** を呼び出すか、または **shutdown** **/i** を使用して [リモートシャットダウン] ダイアログボックスを表示することができます。

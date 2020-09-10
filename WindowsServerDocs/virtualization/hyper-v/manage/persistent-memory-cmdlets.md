@@ -3,14 +3,15 @@ title: Hyper-v Vm 用の永続メモリデバイスを構成するためのコ�
 description: Hyper-v Vm の永続メモリデバイスを構成する方法
 ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc08039ba1d
-author: coreyp-at-msft
-ms.author: coreyp
-ms.openlocfilehash: 471dd9a7c3feb148b9ce27ec7ac4d714be0e86af
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.author: lizross
+author: eross-msft
+manager: mtillman
+ms.openlocfilehash: 68f4d4121513973e97a28ad26cea7856a842b302
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996702"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640196"
 ---
 # <a name="cmdlets-for-configuring-persistent-memory-devices-for-hyper-v-vms"></a>Hyper-v Vm 用の永続メモリデバイスを構成するためのコマンドレット
 
@@ -20,13 +21,13 @@ ms.locfileid: "87996702"
 
 ## <a name="create-a-persistent-memory-device-for-a-vm"></a>VM の永続メモリデバイスを作成する
 
-VM の永続メモリデバイスを作成するには、**[新しい VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps)** コマンドレットを使用します。 デバイスは、既存の NTFS DAX ボリューム上に作成する必要があります。  新しいファイル名拡張子 (. vhdpmem) は、デバイスが永続的なメモリデバイスであることを指定するために使用されます。 固定の VHD ファイル形式のみがサポートされています。
+VM の永続メモリデバイスを作成するには、 **[新しい VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps)** コマンドレットを使用します。 デバイスは、既存の NTFS DAX ボリューム上に作成する必要があります。  新しいファイル名拡張子 (. vhdpmem) は、デバイスが永続的なメモリデバイスであることを指定するために使用されます。 固定の VHD ファイル形式のみがサポートされています。
 
 **例:** `New-VHD d:\VMPMEMDevice1.vhdpmem -Fixed -SizeBytes 4GB`
 
 ## <a name="create-a-vm-with-a-persistent-memory-controller"></a>永続的なメモリコントローラーを備えた VM を作成する
 
-**新しい vm コマンドレット**を使用して、指定されたメモリサイズと VHDX イメージへのパスを持つ第2世代 vm を作成します。 次に、 **VMPmemController**を使用して、永続的なメモリコントローラーを VM に追加します。
+**新しい vm コマンドレット**を使用して、指定されたメモリサイズと VHDX イメージへのパスを持つ第2世代 vm を作成します。 次に、 **VMPmemController** を使用して、永続的なメモリコントローラーを VM に追加します。
 
 **例:**
 

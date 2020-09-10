@@ -3,16 +3,16 @@ title: logman update counter
 description: 既存のカウンターデータコレクターのプロパティを更新する logman update カウンターコマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: 607df6d5-876c-428d-a0b3-f59cb244e2ce
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 9bf7563e0f6dd225057fe0db909bbde99e951554
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: c164fdaf8e9a22b6072555a893fb6c41c69f177b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035010"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640361"
 ---
 # <a name="logman-update-counter"></a>logman update counter
 
@@ -55,7 +55,7 @@ logman update counter <[-n] <name>> [options]
 | -sc `<value>` | パフォーマンスカウンターデータコレクターを使用して収集するサンプルの最大数を指定します。 |
 | /? | 状況依存のヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - [-] が一覧表示されている場合は、余分なハイフン (-) を追加すると、オプションが無効になります。
 

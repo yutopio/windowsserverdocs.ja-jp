@@ -3,16 +3,16 @@ title: shadow
 description: Shadow の参照記事。リモートデスクトップセッションホストサーバー上の別のユーザーのアクティブなセッションをリモートで制御できます。
 ms.topic: reference
 ms.assetid: f81d9717-6883-4e14-9508-4b2a87e48ea7 Lizap
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 0db1150ac8e0b6382e07e032f780a9cab28bf870
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: de11fe6b6db44d21bd289f7158f7cdacc6bc9706
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89024866"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640984"
 ---
 # <a name="shadow"></a>shadow
 
@@ -36,7 +36,7 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 |/v|実行されているアクションに関する情報を表示します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 -   表示するか、セッションをアクティブに制御します。 ユーザーのセッションをアクティブに制御を選択した場合は、キーボード入力やマウスの操作をセッションにことができます。
 -   (現在のセッションを除く) いつでも独自のセッションをリモートで制御できますが、別のセッションをリモートで制御するには、フルコントロールアクセス許可またはリモートコントロールの特別なアクセス許可が必要です。
 -   リモート デスクトップ サービス マネージャーを使用して、リモート_コントロールを開始することもできます。

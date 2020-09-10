@@ -3,16 +3,16 @@ title: wbadmin enable backup
 description: Wbadmin enable backup のリファレンス記事。毎日のバックアップスケジュールを作成して有効にするか、既存のバックアップスケジュールを変更します。
 ms.topic: reference
 ms.assetid: c0e57f8a-70fa-4c60-9754-e762e8ad8772
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 6be32f6134bacf698d6e28998cbed76e8b50155f
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: bcca3c46b4e1314e89626e2ed9c333a2945927bd
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89032070"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640743"
 ---
 # <a name="wbadmin-enable-backup"></a>wbadmin enable backup
 
@@ -22,7 +22,7 @@ ms.locfileid: "89032070"
 
 毎日のバックアップスケジュールを構成または変更するには、 **Administrators** グループまたは **backup Operators** グループのメンバーである必要があります。 さらに、実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権でのコマンドプロンプトを開くには、[ **コマンドプロンプト** ] を右クリックし、[ **管理者として実行**] をクリックします)。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 Windows Server 2008 の構文:
 ```
@@ -91,7 +91,7 @@ wbadmin enable backup
 |-quiet|ユーザーにプロンプトを表示せずにサブコマンドを実行します。|
 |-allowDeleteOldBackups|コンピューターをアップグレードする前に行われたすべてのバックアップを上書きします。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 ディスクのディスク id 値を表示するには、「 **wbadmin get disks**」と入力します。
 

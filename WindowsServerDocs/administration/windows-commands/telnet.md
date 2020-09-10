@@ -3,16 +3,16 @@ title: telnet
 description: Telnet サーバーサービスを実行しているコンピューターと通信する telnet のリファレンス記事です。
 ms.topic: reference
 ms.assetid: b70a6156-9413-4300-84ce-a34c467e2b4e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: fdf379a8d827ced295f1c36ac6c44ab5e167e66f
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 9110bd2f3d4c701e46c8a52af48773f7d5a1026b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038291"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640803"
 ---
 # <a name="telnet"></a>telnet
 
@@ -35,7 +35,7 @@ telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 
 |\<Host> [\<Port>]|ホスト名またはリモートのコンピューターに、接続して、必要に応じて使用する TCP ポートの IP アドレスを指定します (既定では TCP ポート 23)。|
 |/?|コマンド プロンプトにヘルプを表示します。 または、/h を入力することができます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 -   このコマンドを実行する前に、telnet クライアントソフトウェアをインストールする必要があります。 詳細については、「 [telnet のインストール](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293(v=ws.10))」を参照してください。
 -   Telnet プロンプト (**Microsoft telnet>**) によって示される telnet コンテキストを入力するために、パラメーターを指定せずに telnet を実行できます。 Telnet プロンプトから telnet コマンドを使用して、telnet クライアントを実行しているコンピューターを管理できます。
 

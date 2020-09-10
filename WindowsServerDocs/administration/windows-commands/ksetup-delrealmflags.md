@@ -3,16 +3,16 @@ title: ksetup delrealmflags
 description: Ksetup delrealmflags コマンドの参照記事。指定された領域から領域フラグを削除します。
 ms.topic: reference
 ms.assetid: 22053041-1eb4-47f5-bed9-3d5681bcde7d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 9c82007f841c61cfeae90c1ebaceac5eca6dc7eb
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 90ebf697ae19cd31b45dc7744ba29f5dc0b9f597
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89025546"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89640058"
 ---
 # <a name="ksetup-delrealmflags"></a>ksetup delrealmflags
 
@@ -30,13 +30,13 @@ ksetup /delrealmflags <realmname> [sendaddress] [tcpsupported] [delegate] [ncsup
 | --------- | ----------- |
 | `<realmname>` | CORP など、大文字の DNS 名を指定します。CONTOSO.COM は、 **ksetup**の実行時に既定の領域または**領域 =** として表示されます。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 領域フラグは、Windows Server オペレーティングシステムに基づいていない Kerberos 領域の追加機能を指定します。 Windows Server を実行しているコンピューターは、kerberos サーバーを使用して、Windows Server オペレーティングシステムを実行しているドメインを使用するのではなく、kerberos 領域で認証を管理できます。 このエントリにより、領域の機能が確立され、次のようになります。
 
-| [値] | 領域フラグ | 説明 |
+| 値 | 領域フラグ | 説明 |
 | ----- | ---------- | ----------- |
-| 0xF | All | すべての領域フラグが設定されます。 |
+| 0xF | すべて | すべての領域フラグが設定されます。 |
 | 0x00 | なし | 領域フラグが設定されておらず、追加の機能は有効になっていません。 |
 | 0x01 | sendaddress | この IP アドレスは、チケット保証チケット内に含まれます。 |
 | 0x02 | tcpsupported | この領域では、伝送制御プロトコル (TCP) とユーザーデータグラムプロトコル (UDP) の両方がサポートされています。 |
