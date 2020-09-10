@@ -3,16 +3,16 @@ title: change logon
 description: '[ログオンの変更] コマンドの参照記事。クライアントセッションからのログオンを有効または無効にしたり、現在のログオンステータスを表示したりします。'
 ms.topic: reference
 ms.assetid: 41466260-aee9-4333-bcb6-178112c22afd
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 67f6a5b93fbe5ec16c4cece1c5c8429de06ce494
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 55732dc5803f4ac783828293f5da839cca364b40
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031170"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629905"
 ---
 # <a name="change-logon"></a>change logon
 
@@ -31,7 +31,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | /query | 有効または無効になっているかどうかについて、現在のログオン状態を表示します。 |
 | /enable | コンソールからではなく、クライアントセッションからのログオンを有効にします。 |
@@ -40,7 +40,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
 | 再起動する (& a) | コンピューターが再起動されるまで新しいクライアントセッションからのログオンを無効にしますが、既存のセッションへの再実行を許可します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - システムを再起動すると、ログオンが再度有効になります。
 

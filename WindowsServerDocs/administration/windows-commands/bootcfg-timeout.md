@@ -3,16 +3,16 @@ title: bootcfg timeout
 description: オペレーティングシステムのタイムアウト値を変更する、bootcfg timeout コマンドの参照記事。
 ms.topic: reference
 ms.assetid: aa858eac-2bb7-4a27-a9bc-3e4a6eb8b2c6
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ed3e94447dba6cb09be986c2c482a42e9d83fe22
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 520889fce38eb48fe56b9b4c0a38277b5c7f8c8c
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034350"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89630115"
 ---
 # <a name="bootcfg-timeout"></a>bootcfg timeout
 
@@ -28,7 +28,7 @@ bootcfg /timeout <timeoutvalue> [/s <computer> [/u <domain>\<user> /p <password>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `/timeout <timeoutvalue>` | [ブートローダー] セクションのタイムアウト値を指定します。 は、 `<timeoutvalue>` NTLDR が既定値を読み込む前に、ユーザーがブートローダー画面からオペレーティングシステムを選択する必要がある秒数です。 の有効な範囲 `<timeoutvalue>` は0-999 です。 値が0の場合、NTLDR はブートローダー画面を表示せずに、既定のオペレーティングシステムを直ちに開始します。 |
 | `/s <computer>` | リモートコンピューターの名前または IP アドレスを指定します (円記号は使用しないでください)。 既定値はローカル コンピューターです。 |

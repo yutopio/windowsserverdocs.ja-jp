@@ -3,16 +3,16 @@ title: cd
 description: Cd コマンドの参照記事。現在のディレクトリの名前を表示するか、現在のディレクトリを変更します。
 ms.topic: reference
 ms.assetid: 932d9cc1-3dff-40da-835c-1cb0894874f1
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ef5f6f247702c96b3dcca0bda7596ae43867d9e7
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 27c7f9c60bafb8edf78a156c5d763d3bffc295c3
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034200"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629975"
 ---
 # <a name="cd"></a>cd
 
@@ -34,7 +34,7 @@ chdir [..]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | /d | 現在のドライブおよびドライブの現在のディレクトリを変更します。 |
 | `<drive>:` | 表示または変更するドライブを指定します (現在のドライブと異なる場合)。 |
@@ -42,7 +42,7 @@ chdir [..]
 | [..] | 親フォルダーに変更することを指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 コマンド拡張機能が有効になっている場合、 **cd** コマンドには次の条件が適用されます。
 

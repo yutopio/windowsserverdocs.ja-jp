@@ -3,16 +3,16 @@ title: bitsadmin info
 description: Bitsadmin info コマンドの参照記事。指定されたジョブに関する概要情報が表示されます。
 ms.topic: reference
 ms.assetid: 5c306677-0d64-41c0-8276-5bba7750cecb
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: a909655215d73b1fd197155810b980d5aaa04eab
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 815fdc719d584f7d25f88705056e4d5c0c3405aa
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89028570"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89631530"
 ---
 # <a name="bitsadmin-info"></a>bitsadmin info
 
@@ -26,7 +26,7 @@ bitsadmin /info <job> [/verbose]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | -------------- | -------------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
 | /verbose | 省略可能。 各ジョブの詳細情報を提供します。 |

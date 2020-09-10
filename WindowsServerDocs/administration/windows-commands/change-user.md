@@ -3,16 +3,16 @@ title: change user
 description: '[ユーザーの変更] コマンドの参照記事。リモートデスクトップセッションホストサーバーのインストールモードを変更します。'
 ms.topic: reference
 ms.assetid: 6202f024-8cf5-411e-89b1-ee37ff46499d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c473349b75a5963cb66997ea568f5634eea194d
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 59e290b3c80bfb85e5cef9ae3cffb20c121f71b6
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031150"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629851"
 ---
 # <a name="change-user"></a>change user
 
@@ -31,14 +31,14 @@ change user {/execute | /install | /query}
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | /execute | .Ini ファイルをホームディレクトリにマッピングできるようにします。 これが既定の設定です。 |
 | /install | .Ini ファイルのホームディレクトリへのマッピングを無効にします。 すべての .ini ファイルが読み取られ、システムディレクトリに書き込まれます。 リモートデスクトップセッションホストサーバーにアプリケーションをインストールする場合は、.ini ファイルマッピングを無効にする必要があります。 |
 | /query | .Ini ファイルマッピングの現在の設定を表示します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - アプリケーションをインストールする前に、 **change user/install** を使用して、アプリケーションの .ini ファイルをシステムディレクトリに作成します。 これらのファイルは、ユーザー固有の .ini ファイルが作成されるときにソースとして使用されます。 アプリケーションをインストールしたら、 **change user/execute** を使用して、標準 .ini ファイルマッピングに戻します。
 

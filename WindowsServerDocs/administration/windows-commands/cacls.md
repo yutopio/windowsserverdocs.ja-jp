@@ -3,16 +3,16 @@ title: cacls
 description: Cacls コマンドの参照記事です。 このコマンドは非推奨とされており、Windows の将来のリリースでサポートされるとは限りません。
 ms.topic: reference
 ms.assetid: b5bdbaaa-4557-48b8-80df-e75ee0d2f27d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8261e9711cee85ad1d59ff71f9cd8ac55e63fab8
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 32be46658f47b534c80a9d9a712914aa6d878792
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034280"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89630022"
 ---
 # <a name="cacls"></a>cacls
 
@@ -46,7 +46,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 
 #### <a name="sample-output"></a>サンプル出力
 
-| Output | アクセス制御エントリ (ACE) はに適用されます |
+| 出力 | アクセス制御エントリ (ACE) はに適用されます |
 -------- | ------------------------------------- |
 | OI | オブジェクト継承。 このフォルダーとファイル。 |
 | CI | コンテナーの継承。 このフォルダーとサブフォルダー。 |
@@ -57,7 +57,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 | 項目IO | サブフォルダーのみです。 |
 | OIIO | ファイルのみ。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - ワイルドカード (**?** と **&#42;**) を指定して、複数のファイルを指定します。
 

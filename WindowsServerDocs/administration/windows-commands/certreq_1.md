@@ -3,16 +3,16 @@ title: certreq
 description: Certreq コマンドの参照記事。証明機関 (CA) から証明書を要求し、CA からの以前の要求への応答を取得し、.inf ファイルから新しい要求を作成し、要求に対する応答を受け入れてインストールし、既存の CA 証明書または要求からのクロス証明または限定従属の要求を作成し、クロス証明または限定従属の要求
 ms.topic: reference
 ms.assetid: 7a04e51f-f395-4bff-b57a-0e9efcadf973
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: eb910415c46a57353eeffe7168ce71c055d82eca
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 1f2cdc1123595dae9c0c72bcdc77c2f55382c760
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031250"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629948"
 ---
 # <a name="certreq"></a>certreq
 
@@ -40,7 +40,7 @@ certreq –enroll –cert certId [options] renew [reusekeys]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | -------- | ----------- |
 | -submit | 証明機関に要求を送信します。 |
 | -取得 `<requestid>` | 証明機関からの前の要求に対する応答を取得します。 |
@@ -63,7 +63,7 @@ certreq –enroll –cert certId [options] renew [reusekeys]
 certreq –submit certrequest.req certnew.cer certnew.pfx
 ```
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - これは、既定の certreq.exe パラメーターです。 コマンドラインプロンプトでオプションが指定されていない場合、certreq.exe は証明機関に証明書要求を送信しようとします。 **– Submit**オプションを使用する場合は、証明書の要求ファイルを指定する必要があります。 このパラメーターを省略すると、一般的な [ **ファイルを開く** ] ウィンドウが表示され、適切な証明書要求ファイルを選択できます。
 
@@ -77,7 +77,7 @@ certreq –submit certrequest.req certnew.cer certnew.pfx
 certreq -retrieve 20 MyCertificate.cer
 ```
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - 証明機関によって発行された証明書を取得するには、certreq- *requestid* を使用します。 *Requestid* pkc は、0x プレフィックスを持つ10進数または16進数にすることができ、プレフィックスなしの証明書のシリアル番号にすることができます。 また、証明書の要求が保留中であるかどうかにかかわらず、証明機関によって発行された証明書 (失効または期限切れの証明書を含む) を取得するために使用することもできます。
 
@@ -99,9 +99,9 @@ subject = CN=W2K8-BO-DC.contoso2.com
 
 INF ファイルのこの領域は、新しい証明書要求テンプレートでは必須です。値を持つパラメーターを少なくとも1つ含める必要があります。
 
-| キー<sup>1</sup> | 説明 | 値<sup>2</sup> | 例 |
+| キー<sup>1</sup> | Description | 値<sup>2</sup> | 例 |
 | --- | ---------- | ----- | ------- |
-| Subject | いくつかのアプリは、証明書のサブジェクト情報に依存しています。 このキーの値を指定することをお勧めします。 サブジェクトがここで設定されていない場合は、サブジェクトの別名証明書の拡張機能の一部としてサブジェクト名を含めることをお勧めします。 | 相対識別名の文字列値 | Subject = CN = computer1 Subject = CN = John Smith, CN = Users, DC = Contoso, DC = com |
+| サブジェクト | いくつかのアプリは、証明書のサブジェクト情報に依存しています。 このキーの値を指定することをお勧めします。 サブジェクトがここで設定されていない場合は、サブジェクトの別名証明書の拡張機能の一部としてサブジェクト名を含めることをお勧めします。 | 相対識別名の文字列値 | Subject = CN = computer1 Subject = CN = John Smith, CN = Users, DC = Contoso, DC = com |
 | Exportable | TRUE に設定すると、秘密キーを証明書と共にエクスポートできます。 高いレベルのセキュリティを確保するため、秘密キーをエクスポートすることはできません。ただし、場合によっては、複数のコンピューターまたはユーザーが同じ秘密キーを共有する必要がある場合に必要になることがあります。 | `true | false` | `Exportable = TRUE`. CNG キーは、この形式のエクスポート可能なプレーンテキストを区別できます。 CAPI1 キーを使うことはできません。 |
 | ExportableEncrypted | 秘密キーをエクスポート可能にするように設定する必要があるかどうかを指定します。 | `true | false` | `ExportableEncrypted = true`<p>**ヒント:** すべての公開キーのサイズとアルゴリズムがすべてのハッシュアルゴリズムで動作するわけではありません。 指定された CSP は、指定されたハッシュアルゴリズムもサポートする必要があります。 サポートされているハッシュアルゴリズムの一覧を表示するには、次のコマンドを実行します。 `certutil -oid 1 | findstr pwszCNGAlgid | findstr /v CryptOIDInfo` |
 | HashAlgorithm | この要求に使用するハッシュアルゴリズム。 | `Sha256, sha384, sha512, sha1, md5, md4, md2` | `HashAlgorithm = sha1`. サポートされているハッシュアルゴリズムの一覧については、「certutil-oid 1」を参照してください。 | findstr pwszCNGAlgid | findstr/v CryptOIDInfo|
@@ -129,7 +129,7 @@ INF ファイルのこの領域は、新しい証明書要求テンプレート�
 | UseExistingKeySet | このパラメーターは、既存のキーペアを証明書要求の作成に使用することを指定するために使用されます。 このキーが TRUE に設定されている場合は、RenewalCert キーまたは KeyContainer 名の値も指定する必要があります。 既存のキーのプロパティを変更することはできないため、エクスポート可能なキーは設定しないでください。 この場合、証明書の要求の作成時にキーマテリアルは生成されません。 | `true | false` | `UseExistingKeySet = true` |
 | KeyProtection | 秘密キーを使用する前に保護する方法を示す値を指定します。 | <ul><li>`XCN_NCRYPT_UI_NO_PROTCTION_FLAG -- 0`</li><li>`XCN_NCRYPT_UI_PROTECT_KEY_FLAG -- 1`</li><li>`XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG -- 2`</li></ul> | `KeyProtection = NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG` |
 | SuppressDefaults | 既定の拡張機能と属性が要求に含まれるかどうかを示すブール値を指定します。 既定値は、オブジェクト識別子 (Oid) によって表されます。 | `true | false` | `SuppressDefaults = true` |
-| FriendlyName | 新しい証明書のフレンドリ名。 | テキスト | `FriendlyName = Server1` |
+| FriendlyName | 新しい証明書のフレンドリ名。 | Text | `FriendlyName = Server1` |
 | ValidityPeriodUnits | ValidityPeriod で使用する単位の数を指定します。 注: これは、がの場合にのみ使用され `request type=cert` ます。 | 数値 | `ValidityPeriodUnits = 3` |
 | ValidityPeriod | ValidityPeriod は米国英語の複数形の期間である必要があります。 注: これは、要求の種類が cert の場合にのみ使用されます。 | `Years |  Months | Weeks | Days | Hours | Minutes | Seconds` | `ValidityPeriod = Years` |
 
@@ -258,7 +258,7 @@ certreq -sign myrequest.req myrequest.req
 certreq -submit myrequest_sign.req myrequest_cert.cer
 ```
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - パラメーターを追加せずにを使用すると、 `certreq -sign` ダイアログウィンドウが開き、要求されたファイル (req、cmc、txt、der、cer、または crt) を選択できます。
 
@@ -317,7 +317,7 @@ certreq –enroll -machine –cert 61 2d 3c fe 00 00 00 00 00 05 renew
 
 ## <a name="formats"></a>形式
 
-| 形式 | 説明 |
+| 形式 | Description |
 | ------- | ----------- |
 | requestfilein | Base64 でエンコードされたまたはバイナリ入力ファイル名: PKCS #10 証明書の要求、CMS 証明書の要求、PKCS #7 証明書の更新要求、x.509 証明書をクロス認定にする、または Ssh-keygen タグ形式の証明書要求。 |
 | requestfileout | Base64 でエンコードされた出力ファイル名。 |

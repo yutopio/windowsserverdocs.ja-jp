@@ -3,16 +3,16 @@ title: bootcfg ems
 description: Bootcfg ems コマンドの参照記事。これにより、ユーザーは、緊急管理サービスコンソールをリモートコンピューターにリダイレクトするための設定を追加または変更できます。
 ms.topic: reference
 ms.assetid: 57abdc50-c64a-45f1-8470-3f8c3a51f743
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: da374cc5b901be72c8ef3fed2a16d7d56c5d53fe
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: f88e4c6efd887a0c4b657a04dc977599689a6655
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034460"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89630203"
 ---
 # <a name="bootcfg-ems"></a>bootcfg ems
 
@@ -28,7 +28,7 @@ bootcfg /ems {on | off | edit}[/s <computer> [/u <domain>\<user> /p <password>]]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `{on | off | edit}` | 次のような緊急管理サービスのリダイレクトの値を指定します。<ul><li>**代わっ.** 指定したのリモート出力を有効に `<osentrylinenum>` します。 また、指定したに/リダイレクトオプションを追加し、 <osentrylinenum> `redirect=com<X>` [ブートローダー] セクションに設定を追加します。 の値 `com<X>` は、 **/port** パラメーターによって設定されます。</li><li>**オート.** リモートコンピューターへの出力を無効にします。 また、指定した <osentrylinenum> および `redirect=com<X>` [ブートローダー] セクションからの設定に対して、/リダイレクトオプションを削除します。</li><li>**編集.** [ブートローダー] セクションの設定を変更することにより、ポート設定を変更でき `redirect=com<X>` ます。 の値 `com<X>` は、 **/port** パラメーターによって設定されます。</li></ul> |
 | `/s <computer>` | リモートコンピューターの名前または IP アドレスを指定します (円記号は使用しないでください)。 既定値はローカル コンピューターです。 |

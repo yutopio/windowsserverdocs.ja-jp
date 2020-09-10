@@ -3,16 +3,16 @@ title: bootcfg debug
 description: 指定されたオペレーティングシステムエントリのデバッグ設定を追加または変更する、bootcfg debug コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: 28afa5fb-a236-46e2-b1a4-a3c43a49c437
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: afeb4f0f522c7c8bea2cf29bd0987622b4bb2e94
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 385bdd6ebadb4cb3eb9b48e1b920325db996dc38
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034520"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89630245"
 ---
 # <a name="bootcfg-debug"></a>bootcfg debug
 

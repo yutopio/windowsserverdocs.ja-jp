@@ -3,16 +3,16 @@ title: bitsadmin getstate
 description: Bitsadmin getstate コマンドの参照記事。指定されたジョブの状態を取得します。
 ms.topic: reference
 ms.assetid: 1252d6cf-14ca-44df-beb2-930ff011f297
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 7267afde1062c1b8d3383ea92f02d18728650136
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 2faf05bd245f0b59eb9f10d0d46d96e8e1d3e11c
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034820"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89631655"
 ---
 # <a name="bitsadmin-getstate"></a>bitsadmin getstate
 
@@ -26,15 +26,15 @@ bitsadmin /getstate <job>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | -------------- | -------------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
 
-#### <a name="output"></a>Output
+#### <a name="output"></a>出力
 
 返される出力値は次のようになります。
 
-| State | 説明 |
+| State | Description |
 | --------------- | ----------- |
 | キューに登録済み | ジョブは実行を待機しています。 |
 | 接続 | BITS はサーバーに接続しています。 |

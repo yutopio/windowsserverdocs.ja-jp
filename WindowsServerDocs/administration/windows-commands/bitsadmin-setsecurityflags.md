@@ -3,16 +3,16 @@ title: bitsadmin setsecurityflags
 description: Bitsadmin setsecurityflags コマンドの参照記事。 HTTP のセキュリティフラグを設定して、BITS が証明書失効リストを確認し、特定の証明書エラーを無視し、サーバーが HTTP 要求をリダイレクトするときに使用するポリシーを定義するかどうかを決定します。
 ms.topic: reference
 ms.assetid: 0da5cbf5-5f7f-4833-bbbe-c4e8379a78ab
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 56f1888eef89a0d6ef6dbe70ea08e99503e0d8b6
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 771ff8ba34f82e942877158d351ed8ff760bda9d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034740"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89630635"
 ---
 # <a name="bitsadmin-setsecurityflags"></a>bitsadmin setsecurityflags
 
@@ -26,10 +26,10 @@ bitsadmin /setsecurityflags <job> <value>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | -------------- | -------------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
-| value | には、次のような通知フラグを1つ以上含めることができます。<ul><li>CRL チェックを有効にするには、最下位ビットを設定します。</li><li>サーバー証明書の不適切な共通名を無視するには、右側の2番目のビットを設定します。</li><li>サーバー証明書の誤った日付を無視するには、右側の3番目のビットを設定します。</li><li>サーバー証明書の正しくない証明機関を無視するには、右側の4番目のビットを設定します。</li><li>サーバー証明書の不適切な使用を無視するには、右側の5番目のビットを設定します。</li><li>指定したリダイレクトポリシーを実装するには、次のように、右側の11番目のビットを使用します。<ul><li>**0、0、0。** リダイレクトは自動的に許可されます。</li><li>**0、0、1。** **IBackgroundCopyFile**インターフェイスのリモート名は、リダイレクトが発生した場合に更新されます。</li><li>**0、1、0。** リダイレクトが発生した場合、BITS はジョブを失敗させる。</li></ul></li><li>HTTPS から HTTP へのリダイレクトを許可するには、右側の12番目のビットを設定します。</li></ul> |
+| 値 | には、次のような通知フラグを1つ以上含めることができます。<ul><li>CRL チェックを有効にするには、最下位ビットを設定します。</li><li>サーバー証明書の不適切な共通名を無視するには、右側の2番目のビットを設定します。</li><li>サーバー証明書の誤った日付を無視するには、右側の3番目のビットを設定します。</li><li>サーバー証明書の正しくない証明機関を無視するには、右側の4番目のビットを設定します。</li><li>サーバー証明書の不適切な使用を無視するには、右側の5番目のビットを設定します。</li><li>指定したリダイレクトポリシーを実装するには、次のように、右側の11番目のビットを使用します。<ul><li>**0、0、0。** リダイレクトは自動的に許可されます。</li><li>**0、0、1。** **IBackgroundCopyFile**インターフェイスのリモート名は、リダイレクトが発生した場合に更新されます。</li><li>**0、1、0。** リダイレクトが発生した場合、BITS はジョブを失敗させる。</li></ul></li><li>HTTPS から HTTP へのリダイレクトを許可するには、右側の12番目のビットを設定します。</li></ul> |
 
 ## <a name="examples"></a>例
 

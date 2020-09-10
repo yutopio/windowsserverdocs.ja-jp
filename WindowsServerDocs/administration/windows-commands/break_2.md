@@ -3,16 +3,16 @@ title: 中断 (シャドウコピーボリューム)
 description: 中断コマンドの参照記事。 VSS からシャドウコピーボリュームの関連付けを解除し、通常のボリュームとしてアクセスできるようにします。
 ms.topic: reference
 ms.assetid: de2b6c95-1c2e-4a43-bec5-341a9014371b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: d94275b83ad65f70db4bd1850f55ea527292d1bc
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: fa698a91ec7ddcabba7bcaaa6a80dac0831312af
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034310"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89630031"
 ---
 # <a name="break-shadow-copy-volume"></a>中断 (シャドウコピーボリューム)
 
@@ -31,7 +31,7 @@ break [writable] <setid>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | 書き込み可能 | ボリュームの読み取り/書き込みアクセスを有効にします。 |
 | \<setid> | シャドウコピーセットの ID を指定します。 **Load metadata**コマンドによって環境変数として格納されているシャドウコピー ID のエイリアスは、 *SetID*パラメーターで使用できます。 |

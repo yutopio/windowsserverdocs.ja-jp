@@ -3,16 +3,16 @@ title: change port
 description: ポートの変更コマンドの参照記事。 MS-DOS アプリケーションと互換性のある COM ポートマッピングを一覧表示または変更します。
 ms.topic: article
 ms.assetid: 3d772c90-e849-4e74-b9ec-b6cae1159336 Lizap
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8014ba67b2c4383aa56a6fce5eb486bbccfba7e7
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: a38f4f4885ac13c40a7e2a340bf94623bcbdd77d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031160"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89629889"
 ---
 # <a name="change-port"></a>change port
 
@@ -31,14 +31,14 @@ change port [<portX>=<portY| /d <portX | /query]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 |-----------------|----------------------------------------|
 | <portX>=<portY> | COM `<*portX*>` をにマップする `<*portY*>` |
 | d <portX> | COM のマッピングを削除します。 `<*portX*>` |
 | /query | 現在のポートマッピングが表示されます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - ほとんどの MS-DOS アプリケーションは、COM1 ~ COM4 のシリアルポートのみをサポートしています。 **ポートの変更**コマンドは、シリアルポートを別のポート番号にマップします。これにより、高番号の COM ポートをサポートしていないアプリがシリアルポートにアクセスできるようになります。 再マッピングは現在のセッションに対してのみ機能し、セッションからログオフして再度ログオンした場合は保持されません。
 

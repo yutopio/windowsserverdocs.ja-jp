@@ -3,16 +3,16 @@ title: bootcfg dbg1394
 description: 指定されたオペレーティングシステムエントリに対して1394ポートのデバッグを構成する、bootcfg dbg1394 コマンドの参照記事
 ms.topic: reference
 ms.assetid: 35724697-90dd-4dbe-85b0-337fbd369dcc
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f24561751d3a41bf1bf12148dc550f0a56c159c6
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 56d91256a74bc247749956bc8948245636b085d1
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034530"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89630275"
 ---
 # <a name="bootcfg-dbg1394"></a>bootcfg dbg1394
 
@@ -28,7 +28,7 @@ bootcfg /dbg1394 {on | off}[/s <computer> [/u <domain>\<user> /p <password>]] [/
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `{on | off}` | 次のような1394ポートデバッグの値を指定します。<ul><li>**代わっ.** 指定されたに/dbg1394 オプションを追加することにより、リモートデバッグのサポートを有効にし `<osentrylinenum>` ます。</li><li>**オート.** 指定されたから/dbg1394 オプションを削除することで、リモートデバッグのサポートを無効にし <osentrylinenum> ます。</li></ul> |
 | `/s <computer>` | リモートコンピューターの名前または IP アドレスを指定します (円記号は使用しないでください)。 既定値はローカル コンピューターです。 |

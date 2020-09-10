@@ -3,16 +3,16 @@ title: bootcfg query
 description: Boot.ini からブートローダーとオペレーティングシステムのセクションエントリを照会して表示する、bootcfg query コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: a4cacfd1-10a6-4a11-b0c5-f8abde72bfc8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 9e6b5a34a0af467c12549f4921d8d5c99e79aaa9
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 8debee9f799a89f80c82b25242127c42fd00189f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034440"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89630193"
 ---
 # <a name="bootcfg-query"></a>bootcfg query
 
@@ -28,7 +28,7 @@ bootcfg /query [/s <computer> [/u <domain>\<user> /p <password>]]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `/s <computer>` | リモートコンピューターの名前または IP アドレスを指定します (円記号は使用しないでください)。 既定値はローカル コンピューターです。 |
 | `/u <domain>\<user>`  | またはによって指定されたユーザーのアカウントアクセス許可を使用してコマンドを実行し `<user>` `<domain>\<user>` ます。 既定値は、コマンドを実行しているコンピューターの現在のログオンユーザーのアクセス許可です。 |

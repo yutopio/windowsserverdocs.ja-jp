@@ -3,16 +3,16 @@ title: bitsadmin util および getieproxy
 description: 指定されたサービスアカウントのプロキシの使用状況を取得する bitsadmin util と getieproxy コマンドの参照記事。
 ms.topic: reference
 ms.assetid: 6d50c7e3-f4eb-4ca5-9f0c-4ed396087db6
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 87a67dbdf1495b3cb8398fdbc0cc3cfed1c4e577
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: c10fa442f19ff7d5de44e12986b8af4be3f39e19
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89033260"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89630494"
 ---
 # <a name="bitsadmin-util-and-getieproxy"></a>bitsadmin util および getieproxy
 
@@ -28,9 +28,9 @@ bitsadmin /util /getieproxy <account> [/conn <connectionname>]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ---------- |
-| account | プロキシ設定を取得するサービスアカウントを指定します。 指定できる値は、次のとおりです。<ul><li>LOCALSYSTEM</li><li>   NETWORKSERVICE</li><li>LOCALSERVICE.</li></ul> |
+| account | プロキシ設定を取得するサービスアカウントを指定します。 次の値を指定できます。<ul><li>LOCALSYSTEM</li><li>   NETWORKSERVICE</li><li>LOCALSERVICE.</li></ul> |
 | connectionname | 省略可能。 **/Conn**パラメーターと共に使用して、使用するモデム接続を指定します。 **/Conn**パラメーターを指定しない場合、BITS は LAN 接続を使用します。 |
 
 ## <a name="examples"></a>例

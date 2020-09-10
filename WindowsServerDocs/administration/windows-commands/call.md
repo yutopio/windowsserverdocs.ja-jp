@@ -3,16 +3,16 @@ title: call
 description: 呼び出しコマンドの参照記事。親バッチプログラムを停止せずに、別のバッチプログラムから1つのバッチプログラムを呼び出します。
 ms.topic: reference
 ms.assetid: d34a41dc-e6c7-4467-bf6a-15cec704833e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 06/05/2018
-ms.openlocfilehash: 749f073fa3f96f51aec5bf47e4e09ce7263d3205
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ff00048be6cc44b91d2a2a67bd186a39b13e2ac7
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89034260"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89630017"
 ---
 # <a name="call"></a>call
 
@@ -29,7 +29,7 @@ call [drive:][path]<filename> [<batchparameters>] [:<label> [<arguments>]]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `[<drive>:][<path>]<filename>` | 呼び出すバッチプログラムの場所と名前を指定します。 `<filename>`パラメーターは必須であり、.bat または .cmd 拡張子を持つ必要があります。 |
 | `<batchparameters>` | バッチプログラムに必要なコマンドライン情報を指定します。 |
@@ -45,7 +45,7 @@ call [drive:][path]<filename> [<batchparameters>] [:<label> [<arguments>]]
 
 バッチパラメーター (**% n**) の代替として、次のオプションの構文を使用できます。
 
-| バッチパラメーター | 説明 |
+| バッチパラメーター | Description |
 | --------------- | ----------- |
 | % ~ 1 | **%1**を展開し、囲まれた引用符を削除します。 |
 | % ~ f1 | **%1**を完全修飾パスに展開します。 |
@@ -61,7 +61,7 @@ call [drive:][path]<filename> [<batchparameters>] [:<label> [<arguments>]]
 
 次の表は、修飾子と、複合結果のバッチパラメーターを組み合わせる方法を示しています。
 
-| 修飾子を使用したバッチパラメーター | 説明 |
+| 修飾子を使用したバッチパラメーター | Description |
 | ----------------------------- | ----------- |
 | % ~ sjc-dp1 | **%1**をドライブ文字とパスのみに拡張します。 |
 | % ~ nx1 | **%1**をファイル名と拡張子のみに拡張します。 |
@@ -70,7 +70,7 @@ call [drive:][path]<filename> [<batchparameters>] [:<label> [<arguments>]]
 
 上記の例では、 **%1** と PATH を他の有効な値に置き換えることができます。 **%~** 構文が有効な引数番号で終了しています。 **%~** 修飾子を **% &#42;** と共に使用することはできません。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 - バッチパラメーターの使用:
 
