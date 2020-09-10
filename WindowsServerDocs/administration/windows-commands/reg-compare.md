@@ -3,16 +3,16 @@ title: reg compare
 description: 指定されたレジストリサブキーまたはエントリを比較する reg compare コマンドの参照記事。
 ms.topic: reference
 ms.assetid: 177dc6a3-034e-4846-a394-330d03c14e0b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3541ac56a59725d966e726301796f4467044cf6b
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 51c385b9a051574602c2508b8efd8f657c62ec7c
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037060"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627097"
 ---
 # <a name="reg-compare"></a>reg compare
 
@@ -39,11 +39,11 @@ reg compare <keyname1> <keyname2> [{/v Valuename | /ve}] [{/oa | /od | /os | on}
 | /s | すべてのサブキーとエントリを再帰的を比較します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **Reg compare**操作の戻り値は次のとおりです。
 
-    | [値] | 説明 |
+    | 値 | 説明 |
     |--|--|
     | 0 | 比較の結果が成功して、結果は変わりません。 |
     | 1 | 比較が失敗しました。 |
@@ -51,7 +51,7 @@ reg compare <keyname1> <keyname2> [{/v Valuename | /ve}] [{/oa | /od | /os | on}
 
 - 結果に表示されるシンボルは次のとおりです。
 
-    | Symbol | 説明 |
+    | シンボル | 説明 |
     |--|--|
     | = | *KeyName1* データに等しい *KeyName2* データ。 |
     | < | *KeyName1* データより小さい *KeyName2* データ。 |

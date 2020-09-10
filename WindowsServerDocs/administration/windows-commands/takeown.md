@@ -3,16 +3,16 @@ title: takeown
 description: ファイルの所有者になることによってファイルにアクセスする方法について説明します。
 ms.topic: reference
 ms.assetid: 0683cd65-a6db-4cab-962b-45a0ff61f43c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: b87f773f1b42291a679a642793f2b534982164d2
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 93b8f58106b6e827254b3ab91f859767da9dae7c
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027200"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626733"
 ---
 # <a name="takeown"></a>takeown
 
@@ -28,7 +28,7 @@ takeown [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <File n
 
 #### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------|-----------|
 |/s \<Computer>|名前またはリモート コンピューターの IP アドレスを指定します (円記号を使用しない)。 既定値はローカル コンピューターです。 このパラメーターは、すべてのファイルと、コマンドで指定されたフォルダーに適用されます。|
 |u\<Domain>\]<User name>|指定したユーザー アカウントのアクセス許可を持つ、スクリプトを実行します。 既定値は、システムのアクセス許可です。|
@@ -39,7 +39,7 @@ takeown [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <File n
 |/d {Y \| N}|現在のユーザーが指定したディレクトリに対するフォルダー一覧表示"アクセス許可がないし、指定された既定値を代わりに使用するときに表示される確認のプロンプトを表示しません。 有効な値、 **/d** オプションは次のようにします。</br>に「y」は、ディレクトリ所有権を取得します。</br>ディレクトリをスキップします。</br>と共にこのオプションを使用する必要がありますに注意してください、 **/r** オプション。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   このコマンドは通常、バッチ ファイルで使用されます。
 -   場合、 **/a** パラメーターが指定されていない、現在コンピューターにログオンしているユーザーにファイルの所有権が与えられます。

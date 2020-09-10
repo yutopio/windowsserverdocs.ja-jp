@@ -3,16 +3,16 @@ title: AllMulticastTransmissions
 description: サーバー上のすべてのマルチキャスト転送に関する情報を表示する AllMulticastTransmissions のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 95b8fb79-7a8a-4f0c-88f4-92bc1111c67f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: c0c7c4e77c2ad23fab864839cde03ed4f4806c80
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 6bae5e1487c78091149b04fd2f8a67de9e8bbd93
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035960"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626390"
 ---
 # <a name="get-allmulticasttransmissions"></a>AllMulticastTransmissions
 
@@ -20,7 +20,7 @@ ms.locfileid: "89035960"
 
 サーバー上のすべてのマルチキャスト転送に関する情報を表示します。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 Windows Server 2008 の場合:
 ```
 wdsutil /Get-AllMulticastTransmissions [/Server:<Server name>] [/Show:Clients] [/ExcludedeletePending]

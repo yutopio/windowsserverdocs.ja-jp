@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 0d115697-532b-48c2-a659-9f889e235326
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 60b37cb2945ca12f03b27a4367edff6eb0fe4746
-ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: e45ca557db8a72c927eec56bed4f578f19f799b2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554485"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626021"
 ---
 # <a name="manage-user-accounts-in-windows-server-essentials"></a>Windows Server Essentials でのユーザー アカウントの管理
 
@@ -233,7 +233,7 @@ Windows Server Essentials ダッシュボードの [ユーザー] ページで�
 
 ### <a name="user-account-tasks-in-the-dashboard"></a>ダッシュボードでのユーザー アカウント タスク
 
-|タスク名|説明|
+|タスク名|Description|
 |---------------|-----------------|
 |[アカウント プロパティの表示]|選択したユーザー アカウントのプロパティの表示と変更、およびアカウントのフォルダーのアクセス許可の指定を実行できます。|
 |[ユーザー アカウントを無効にする]|無効化されたユーザー アカウントは、ネットワークにログオンしたり、共有フォルダーやプリンターなどのネットワーク リソースにアクセスできません。|

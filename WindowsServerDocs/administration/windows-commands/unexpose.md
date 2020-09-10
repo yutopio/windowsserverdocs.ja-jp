@@ -3,16 +3,16 @@ title: unexpose
 description: '[公開] コマンドを使用して公開されたシャドウコピーを公開しない、非公開の参照記事。'
 ms.topic: reference
 ms.assetid: 58dc7d0f-52e9-4587-9487-d3b4c3e52640
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 13e14941e2c67aa0361dcc0af2cdb1a36bf7e651
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 76e1666bd87a3304dcbe8de3025a0ec790cf83d7
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036410"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626583"
 ---
 # <a name="unexpose"></a>unexpose
 
@@ -28,14 +28,14 @@ unexpose {<ShadowID> | <Drive:> | <Share> | <MountPoint>}
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------|-----------|
 |\<ShadowID>|指定したシャドウ ID によって指定されたシャドウコピーを非公開にします。|
 |\<Drive:>|指定したドライブ文字 (ドライブ P など) に関連付けられているシャドウコピーを非公開にします。|
 |\<Share>|指定した共有に関連付けられているシャドウコピーを非表示に \\ \\ します ( *MachineName*など) \) 。|
 |\<MountPoint>|指定されたマウントポイントに関連付けられているシャドウコピーを非公開にします (例、C:\ シャドウコピー \) 。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   *ShadowID*の代わりに、既存のエイリアスまたは環境変数を使用できます。 既存のエイリアスを表示するには、パラメーターを指定せずに **add** を使用します。
 

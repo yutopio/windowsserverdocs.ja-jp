@@ -3,16 +3,16 @@ title: reset
 description: Reset コマンドの参照記事。 DiskShadow.exe を既定の状態にリセットします。
 ms.topic: reference
 ms.assetid: afbdab44-199c-4e11-884f-e96804965c21
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 9ca1b0574fae1e0d00bc1f2cbec17ff9572ed253
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 84f4aedee746e642e59a09055c3994160f503afa
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038340"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626881"
 ---
 # <a name="reset"></a>reset
 
@@ -20,7 +20,7 @@ DiskShadow.exe を既定の状態にリセットします。 このコマンド�
 
 > [!重要このコマンドを実行すると、 **追加**、 **設定**、 **読み込み**、 **ライター**などのコマンドからの状態情報が失われます。 このコマンドでは、IVssBackupComponent インターフェイスも解放され、非永続的なシャドウコピーは失われます。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 ```
 reset

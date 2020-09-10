@@ -3,16 +3,16 @@ title: 取得-AutoaddDevices
 description: Get AutoaddDevices の参照記事。 Windows 展開サービスサーバー上の自動追加データベースにあるすべてのコンピューターが表示されます。
 ms.topic: reference
 ms.assetid: 24b4b688-55b0-4bd9-a2f5-7ef4b3dfe2f2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f449ddb58bb4e5f28a3cee02e9c769d363baf3b7
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: f186d36fbdc4ccfac26eae9092c8bb89973d8835
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035900"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626344"
 ---
 # <a name="get-autoadddevices"></a>取得-AutoaddDevices
 
@@ -25,7 +25,7 @@ Windows 展開サービスサーバー上の自動追加データベースにあ
 wdsutil [Options] /Get-AutoaddDevices [/Server:<Server name>] /Devicetype:{PendingDevices | RejectedDevices | ApprovedDevices}
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |[/Server:<Server name>]|サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 サーバー名が指定されていない場合は、ローカルのサーバーが使用されます。|
 |/Devicetype: {PendingDevices &#124; RejectedDevices &#124; ApprovedDevices}|コンピューターに戻すの種類を指定します。<p>-   **Pendingdevices** は、状態が [保留中] になっているデータベース内のすべてのコンピューターを返します。<br />-   **RejectedDevices** は、データベース内の、状態が拒否のすべてのコンピューターを返します。<br />-   **ApprovedDevices** は、状態が承認済みのデータベース内のすべてのコンピューターを返します。|

@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 51076946-ea9b-4ac7-9a6e-d6023816b97d
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 7de65cdbed7fc1995f6729a49e9398ce948a63c6
-ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: f4603adb7da1df0853b4c816254241d21b969fc5
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87409532"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625927"
 ---
 # <a name="remote-desktop-options"></a>リモート デスクトップのオプション
 
@@ -22,11 +22,11 @@ ms.locfileid: "87409532"
 | デスクトップオプション | 低速モデム (28.8 Kbps) | 高速モデム (56 Kbps) (既定) | ブロードバンド (128 Kbps ～ 1.5 Mbps) | ローカル エリア ネットワーク (1.5 Mbps 以上) |
 |--|--|--|--|--|
 | フォント スムージング | いいえ | いいえ | いいえ | はい |
-| デスクトップ コンポジション | いいえ | いいえ | はい | ○ |
-| ドラッグ中にウィンドウの内容を表示する | いいえ | いいえ | はい | ○ |
-| メニューとウィンドウのアニメーション | いいえ | いいえ | はい | ○ |
-| テーマ | いいえ | はい | ○ | ○ |
-| ビットマップのキャッシュ | ○ | ○ | ○ | ○ |
+| デスクトップ コンポジション | いいえ | いいえ | はい | はい |
+| ドラッグ中にウィンドウの内容を表示する | いいえ | いいえ | はい | はい |
+| メニューとウィンドウのアニメーション | いいえ | いいえ | はい | はい |
+| テーマ | いいえ | はい | はい | はい |
+| ビットマップのキャッシュ | はい | はい | はい | はい |
 
 ## <a name="screen-size"></a>画面のサイズ
  このオプションは、リモート アクセス Web サイトからリモート コンピューターに接続するときに、ローカル コンピューターで開かれるウィンドウのサイズを決定します。 ウィンドウのサイズはピクセルで表されます。
@@ -56,7 +56,7 @@ ms.locfileid: "87409532"
 ## <a name="enable-the-remote-computer-to-access-drives-on-my-local-computer"></a>リモート コンピューターからローカル コンピューターのドライブにアクセスできるようにする
  既定では有効になっていません。 このオプションでは、ローカル コンピューターに接続されているハード ディスク ドライブ上のファイルやフォルダーに、リモート コンピューターからアクセスすることができます。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [リモート Web アクセスの管理](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)
 

@@ -5,14 +5,14 @@ ms.date: 06/17/2013
 ms.topic: article
 ms.assetid: e95cf219-46a4-4041-bd81-0c4c2a0622cf
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: ce8f1dda49144a817f405d04f17046f701230446
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: c6fe658db8756856a65bb5284731b949d8edbd31
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181178"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626229"
 ---
 # <a name="install-and-configure-windows-server-essentials"></a>Windows Server Essentials のインストールと構成
 
@@ -27,10 +27,10 @@ ms.locfileid: "87181178"
  Windows Server Essentials をインストールして構成するには、次の2つの手順を実行します。
 
 
-###  <a name="step-1-install-the-windows-server-essentials-operating-system"></a><a name="BKMK_ManualInstallation"></a>手順 1: Windows Server Essentials オペレーティングシステムをインストールする
+###  <a name="step-1-install-the-windows-server-essentials-operating-system"></a><a name="BKMK_ManualInstallation"></a> 手順 1: Windows Server Essentials オペレーティングシステムをインストールする
 
 > [!IMPORTANT]
->  オペレーティングシステムがインストールされたら、「[手順 2: Windows Server Essentials オペレーティングシステムを構成](#BKMK_Step2Configure)する」を完了するまでサーバーをカスタマイズしないでください。
+>  オペレーティングシステムがインストールされたら、「 [手順 2: Windows Server Essentials オペレーティングシステムを構成](#BKMK_Step2Configure)する」を完了するまでサーバーをカスタマイズしないでください。
 
  **推定完了時間:** 約30分。
 
@@ -90,7 +90,7 @@ ms.locfileid: "87181178"
 
    インストール中、一時ファイルがインストール フォルダーにコピーされます。これには約 30 分かかります。 Windows Server Essentials オペレーティングシステムがインストールされると、コンピューターが再起動します。 これで、Windows Server Essentials オペレーティングシステムを構成する準備ができました。
 
-###  <a name="step-2-configure-the-windows-server-essentials-operating-system"></a><a name="BKMK_Step2Configure"></a>手順 2: Windows Server Essentials オペレーティングシステムを構成する
+###  <a name="step-2-configure-the-windows-server-essentials-operating-system"></a><a name="BKMK_Step2Configure"></a> 手順 2: Windows Server Essentials オペレーティングシステムを構成する
 
 > [!IMPORTANT]
 >  以前のバージョンの Windows Small Business Server から Windows Server Essentials に移行する場合は、別のプロセスに従う必要があります。 移行インストールの詳細については、次を参照してください。
@@ -114,9 +114,9 @@ ms.locfileid: "87181178"
 
 2.  [**サーバーのインストール モードの選択**] ページで、次のいずれかを実行します。
 
-    1.  [**クリーンインストール**] を選択して、Windows Server Essentials サーバーソフトウェアの完全な新規インストールをセットアップします。
+    1.  [ **クリーンインストール** ] を選択して、Windows Server Essentials サーバーソフトウェアの完全な新規インストールをセットアップします。
 
-    2.  [**サーバーの移行**] を選択して Windows Server Essentials をインストールし、このサーバーを既存の windows ドメインに参加させます。
+    2.  [ **サーバーの移行** ] を選択して Windows Server Essentials をインストールし、このサーバーを既存の windows ドメインに参加させます。
 
 3.  [**サーバーをカスタマイズします**] ページで、組織の名前、内部ドメイン名、サーバー名を入力します。
 
@@ -146,9 +146,9 @@ ms.locfileid: "87181178"
  新しくインストールしたサーバーは、プロダクトキーを入力せずに、一定の期間 (評価期間と呼ばれます) で使用できます。 評価期間後、プロダクト キーを入力してサーバーをアクティブにするか、評価期間を延長します。 評価期間は、2 回まで延長できます。 評価期間として許可された最大日数に達すると、サーバーをプロダクト キーでアクティブにする必要があります。
 
 ### <a name="customize-windows-server-essentials"></a>Windows Server Essentials のカスタマイズ
- Windows Server Essentials ダッシュボードの**ホーム**ページは、サーバーのインストール直後に完了する必要がある**セットアップ**タスクにリンクしています。 これらのタスクを実行することで、サーバーに格納されている情報を保護し、Windows Server Essentials で利用できる機能を有効にすることができます。
+ Windows Server Essentials ダッシュボードの **ホーム** ページは、サーバーのインストール直後に完了する必要がある **セットアップ** タスクにリンクしています。 これらのタスクを実行することで、サーバーに格納されている情報を保護し、Windows Server Essentials で利用できる機能を有効にすることができます。
 
- タスクの実行を選択しないと、ユーザーが一部のネットワーク機能にアクセスできない可能性があります。 後でこれらのタスクに戻るには、Windows Server Essentials ダッシュボードの**ホーム**ページに戻ります。
+ タスクの実行を選択しないと、ユーザーが一部のネットワーク機能にアクセスできない可能性があります。 後でこれらのタスクに戻るには、Windows Server Essentials ダッシュボードの **ホーム** ページに戻ります。
 
  次の表は、セットアップ タスクのリストに表示される可能性がある項目を定義しています。
 
@@ -160,10 +160,10 @@ ms.locfileid: "87181178"
 |サーバー バックアップのセットアップ|このタスクをクリックすると、サーバー バックアップを使用したデータの保護に関する簡単な情報が表示されます。 **サーバー バックアップのセットアップ ウィザード** を実行するためのリンクがあります。 詳細については、「[サーバー バックアップのセットアップまたはカスタマイズ](../manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1)」を参照してください。
 |Anywhere Access のセットアップ|このタスクをクリックすると、Windows Server Essentials の Anywhere Access 機能に関する簡単な情報が表示されます。 [**Anywhere Access の設定**] ページへのリンクがあります。 詳細については、「 [Anywhere Access の管理](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)」を参照してください。
 |電子メール アラート通知のセットアップ|このタスクをクリックすると、電子メール アラート通知に関する簡単な情報が表示されます。 [**アラートの電子メール通知のセットアップ**] ツールを実行するためのリンクがあります。 詳細については、「[アラートの電子メール通知のセットアップ](../manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)」を参照してください。
-|メディア サーバーのセットアップ|このタスクをクリックすると、メディア サーバーを使用した音楽、ビデオ、イメージ ファイルの共有に関する簡単な情報が表示されます。 **[メディア設定]** ページへのリンクがあります。 メディア サーバーの詳細に関するオンライン ヘルプ トピックへのリンクも提供されています。 詳細については、「[デジタルメディアの管理](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md)」を参照してください。
+|メディア サーバーのセットアップ|このタスクをクリックすると、メディア サーバーを使用した音楽、ビデオ、イメージ ファイルの共有に関する簡単な情報が表示されます。 **[メディア設定]** ページへのリンクがあります。 メディア サーバーの詳細に関するオンライン ヘルプ トピックへのリンクも提供されています。 詳細については、「 [デジタルメディアの管理](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md)」を参照してください。
 |コンピューターの接続|このタスクをクリックすると、ネットワーク コンピューターをサーバーに接続する方法に関する簡単な情報が表示されます。 詳細については、「[コンピューターをサーバーに接続する方法](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)」を参照してください。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [Windows Server Essentials のインストール](Install-Windows-Server-Essentials.md)
 

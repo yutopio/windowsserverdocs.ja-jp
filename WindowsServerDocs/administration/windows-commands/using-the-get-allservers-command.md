@@ -3,16 +3,16 @@ title: 取得-AllServers
 description: すべての Windows 展開サービスサーバーに関する情報を取得する get AllServers のリファレンス記事です。
 ms.topic: reference
 ms.assetid: fe2e3c69-8f2e-457d-af55-d249ebf70f53
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3cd70245754ff544524ed9511f1b6cc5c9574e2f
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b60fb7710699c4fff6656a0e2a34684a538b116d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035890"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626354"
 ---
 # <a name="get-allservers"></a>取得-AllServers
 
@@ -29,7 +29,7 @@ WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Fo
 
 ### <a name="parameters"></a>パラメーター
 
-|   パラメーター   |                                                                                                                 説明                                                                                                                  |
+|   パラメーター   |                                                                                                                 Description                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | /Show: {Config |                                                                                                                    イメージ                                                                                                                    |
 |  [/詳細]  | 組み合わせて使用すると、 **/Show:Images** または **/Show:All**, 、すべてのイメージの各イメージからメタデータを返します。 場合、 **詳細/** オプションを指定しない場合、既定の動作は、イメージの名前、説明、およびファイル名を返す。 |

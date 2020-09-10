@@ -3,16 +3,16 @@ title: ksetup
 description: Kerberos プロトコルとキー配布センター (KDC) を設定および管理して Kerberos 領域をサポートするためのタスクを実行する、ksetup コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: 4e046f8a-811b-48dc-9a69-18d8e097f353
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8745b095b097935661bd5d45190c4060d75261ce
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: cb748e841854a096a0c0622658e781fd545f6c15
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037700"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627609"
 ---
 # <a name="ksetup"></a>ksetup
 
@@ -54,7 +54,7 @@ ksetup
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | [ksetup setrealm](ksetup-setrealm.md) | このコンピューターを Kerberos 領域のメンバーにします。 |
 | [ksetup addkdc](ksetup-addkdc.md) | 指定された領域の KDC エントリを定義します。 |

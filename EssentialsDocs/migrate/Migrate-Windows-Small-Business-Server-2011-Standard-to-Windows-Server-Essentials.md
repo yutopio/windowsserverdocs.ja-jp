@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c8325f87-fd79-471b-bf70-3f052692c383
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 6dbc809ebba6da361923136f6b74351baba06728
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 799b4f2cd5b48dcc7754059498684af4a11764ad
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838371"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625770"
 ---
 # <a name="migrate-windows-small-business-server-2011-standard-to-windows-server-essentials"></a>Windows Small Business Server 2011 Standard から Windows Server Essentials への移行
 
@@ -58,7 +58,7 @@ ms.locfileid: "87838371"
 
  いくつかの移行手順では、管理者としてコマンド プロンプト ウィンドウを開く必要があります。
 
-###  <a name="to-open-a-command-prompt-window-on-the-source-server-as-an-administrator"></a><a name="BKMK_OpenACommandPromptAsAdmin"></a>移行元サーバーで管理者としてコマンドプロンプトウィンドウを開くには
+###  <a name="to-open-a-command-prompt-window-on-the-source-server-as-an-administrator"></a><a name="BKMK_OpenACommandPromptAsAdmin"></a> 移行元サーバーで管理者としてコマンドプロンプトウィンドウを開くには
 
 1.  **[開始]** をクリックします。
 

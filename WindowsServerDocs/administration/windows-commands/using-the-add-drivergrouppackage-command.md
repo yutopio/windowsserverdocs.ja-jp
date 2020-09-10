@@ -3,16 +3,16 @@ title: 追加 DriverGroupPackage
 description: ドライバーパッケージをドライバーグループに追加する追加 DriverGroupPackage のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 7cd323ae-9049-448e-a460-6c7d6462d4c8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8a6507e4367b64439dbef57327e71b9bd6c14fde
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 7560fd3eb2ea05e74f6c16bdde94b03dad03a967
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029880"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626495"
 ---
 # <a name="add-drivergrouppackage"></a>追加 DriverGroupPackage
 
@@ -26,7 +26,7 @@ wdsutil /add-DriverGroupPackage /DriverGroup:<Group Name> [/Server:<Server Name>
 ```
 ### <a name="parameters"></a>パラメーター
 
-|         パラメーター         |                                                                                                                                               説明                                                                                                                                               |
+|         パラメーター         |                                                                                                                                               Description                                                                                                                                               |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DriverGroup<Group Name> |                                                                                                                                 ドライバー グループの名前を指定します。                                                                                                                                 |
 |   Server<Server name>   |                                                                                  サーバーの名前を指定します。 これには、NetBIOS 名または FQDN を指定できます。 サーバー名が指定されていない場合は、ローカル サーバーが使用されます。                                                                                  |

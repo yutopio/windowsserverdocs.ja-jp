@@ -3,16 +3,16 @@ title: tsecimp
 description: 拡張マークアップ言語 (XML) ファイルから TAPI サーバーセキュリティファイル (Tsec.ini) に割り当て情報をインポートする tsecimp のリファレンス記事です。
 ms.topic: reference
 ms.assetid: d7488ec6-0eff-45ff-89ee-9cbe752416bf
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f8ad2f4f29537c2f575ba96d172c9405d9680187
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 3ddc56b959f716840d033508ea253efbc446d74f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89026870"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626702"
 ---
 # <a name="tsecimp"></a>tsecimp
 
@@ -27,7 +27,7 @@ tsecimp /d
 
 #### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------|-----------|
 |/f \<Filename>|必須。 インポートする割り当て情報を含んだ XML ファイルの名前を指定します。|
 |/v|Tsec.ini ファイルに情報をインポートせず、XML ファイルの構造を検証します。|
@@ -35,7 +35,7 @@ tsecimp /d
 |/d|インストールされているテレフォニー プロバイダーの一覧を表示します。 テレフォニー プロバイダーごとに、関連付けられた回線デバイスと、各回線デバイスに関連付けられたアドレスおよびユーザーが表示されます。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 -   割り当て情報のインポート元となる XML ファイルは、次に説明する構造に従っている必要があります。
     -   **UserList** 要素

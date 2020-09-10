@@ -3,16 +3,16 @@ title: 追加 AllDriverPackages サブコマンドを使用します。
 description: フォルダーに格納されているすべてのドライバーパッケージをサーバーに追加する追加 AllDriverPackages のリファレンス記事です。
 ms.topic: reference
 ms.assetid: ba6641c1-d7e9-43a9-9819-702dad5484ed
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ccdd132687fdc65336aeb49d317f9ccf5fbcd968
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 71b081f8d0617aaa91e75e73705d53ab20661076
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89032187"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626545"
 ---
 # <a name="add-alldriverpackages"></a>追加-AllDriverPackages
 
@@ -26,7 +26,7 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 
 ### <a name="parameters"></a>パラメーター
 
-|          パラメーター           |                                                              説明                                                              |
+|          パラメーター           |                                                              Description                                                              |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 |  FolderPath\<Folder Path>  |                      ドライバ パッケージの .inf ファイルを含むフォルダーへの完全パスを指定します。                      |
 |   [/Server:\<Server name>]   | サーバーの名前を指定します。 これには、NetBIOS 名または FQDN を指定できます。 サーバー名が指定されていない場合は、ローカル サーバーが使用されます。 |

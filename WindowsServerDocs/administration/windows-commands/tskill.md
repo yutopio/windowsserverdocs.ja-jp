@@ -3,16 +3,16 @@ title: tskill
 description: リモートデスクトップセッションホストサーバー上のセッションで実行されているプロセスを終了する tskill のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 08986e6a-6900-4ece-85a1-8f73b14db1b3 Lizap
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 357523ce9806910bfddc8ed8992a7ac7be388d3f
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 24785d10cc09d494850bad5442f72111260dd261
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89026810"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626714"
 ---
 # <a name="tskill"></a>tskill
 
@@ -31,7 +31,7 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |\<ProcessID>|終了するプロセスの ID を指定します。|
 |\<ProcessName>|終了するプロセスの名前を指定します。 このパラメーターには、ワイルドカード文字を含めることができます。|
@@ -41,7 +41,7 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 |/v|実行されているアクションに関する情報を表示します。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 - **Tskill**を使用すると、管理者でない限り、自分に属しているプロセスのみを終了できます。 管理者は、すべての **tskill** 関数にフルアクセスでき、他のユーザーセッションで実行されているプロセスを終了できます。
 - セッション内で動作しているすべてのプロセスが終了すると、セッションも終了します。
 - *ProcessName*パラメーターと **/server:**<em>ServerName</em>パラメーターを使用する場合は、 **/id:**<em>SessionID</em>または **/a**パラメーターも指定する必要があります。

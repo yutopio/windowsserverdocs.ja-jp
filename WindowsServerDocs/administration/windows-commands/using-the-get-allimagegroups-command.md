@@ -3,16 +3,16 @@ title: get-AllImageGroups
 description: Get AllImageGroups のリファレンス記事。サーバー上のすべてのイメージグループとそれらのイメージグループ内のすべてのイメージに関する情報を取得します。
 ms.topic: reference
 ms.assetid: 2ca06533-bcf5-4590-ac8e-263d6c9874f8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f472a1907e07e08ae646d9c454125dfb64ff54df
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b69375cff867d317c3ac6c83ec1c75358455ac03
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036010"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626423"
 ---
 # <a name="get-allimagegroups"></a>get-AllImageGroups
 
@@ -25,7 +25,7 @@ ms.locfileid: "89036010"
 wdsutil [Options] /Get-AllImageGroups [/Server:<Server name>] [/detailed]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |[/Server:<Server name>]|サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 サーバー名が指定されていない場合は、ローカルのサーバーが使用されます。|
 |詳細/|各イメージからイメージのメタデータを返します。 このパラメーターを使用しない場合、既定の動作は、イメージの名前、説明、および各イメージのファイル名のみを返すには。|

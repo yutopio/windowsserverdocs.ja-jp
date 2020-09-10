@@ -3,16 +3,16 @@ title: get-AllImages
 description: サーバー上のすべてのイメージに関する情報を取得する get-AllImages のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 19de3720-4315-415a-8dc6-486caa0b2100
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: c4ebc0b36d832b6ce35168f6160b36c1c2ff896e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 79b28d3649e18b192504bf6eb012984cb43218e2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035990"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626385"
 ---
 # <a name="get-allimages"></a>get-AllImages
 
@@ -25,7 +25,7 @@ ms.locfileid: "89035990"
 wdsutil /Get-AllImages [/Server:<Server name>] /Show:{Boot | Install | LegacyRis | All} [/detailed]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |[/Server:<Server name>]|サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 サーバー名が指定されていない場合は、ローカルのサーバーが使用されます。|
 |/表示: {ブートと #124 文字です。インストールと #124 文字です。LegacyRis & #124 文字です。すべて}|-   **ブート** では、ブートイメージのみが返されます。<br />-   **インストール** では、インストールイメージと、そのイメージを含むイメージグループに関する情報が返されます。<br />-   **LegacyRis** は、リモートインストールサービス (RIS) のイメージのみを返します。<br />-   **すべて** のブートイメージ情報、インストールイメージ情報 (イメージグループに関する情報を含む)、および RIS イメージ情報が返されます。|

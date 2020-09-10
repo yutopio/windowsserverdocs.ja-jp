@@ -3,16 +3,16 @@ title: unlodctr
 description: Unlodctr の参照記事。サービスまたはデバイスドライバーのパフォーマンスカウンター名と説明テキストをシステムレジストリから削除します。
 ms.topic: reference
 ms.assetid: fc8aa6f0-c1d9-47ea-937a-28152148e774
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 732f64d97b55084153cbb16840f53498a50ebae4
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: e0494d0b4509c4b75af9ca8473e3ae65353e02c1
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029930"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626563"
 ---
 # <a name="unlodctr"></a>unlodctr
 
@@ -25,12 +25,12 @@ ms.locfileid: "89029930"
 Unlodctr <DriverName>
 ```
 #### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |\<DriverName>|Windows Server 2003 レジストリから、ドライバーまたはサービスのパフォーマンスカウンターの名前の設定と説明のテキストを削除し <DriverName> ます。|
 |/?|コマンド プロンプトにヘルプを表示します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 > [!WARNING]
 > レジストリを正しく編集しないと、システムが正常に動作しなくなる場合があります。 レジストリを変更する前に、コンピューター上の重要なデータのバックアップを作成する必要があります。
 

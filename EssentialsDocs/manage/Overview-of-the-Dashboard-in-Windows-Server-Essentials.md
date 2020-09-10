@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f70a79de-9c56-4496-89b5-20a1bff2293e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: f1d9beed01d17abfd88a135fb5ade48d0b6178ab
-ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 50f610bec8573916edffd3efb5e551a45fc6e72a
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554515"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625955"
 ---
 # <a name="overview-of-the-dashboard-in-windows-server-essentials"></a>Windows Server Essentials のダッシュボードの概要
 
@@ -59,7 +59,7 @@ ms.locfileid: "89554515"
 
 
 
-|アイテム|ダッシュボードの機能|説明|
+|Item|ダッシュボードの機能|説明|
 |----------|-----------------------|-----------------|
 |1|ナビゲーション バー|セクションに関連付けられている情報とタスクにアクセスするには、ナビゲーション バーのセクションをクリックします。 既定ではダッシュボードを開くたびに、[**ホーム**] ページが表示されます。|
 |2|サブセクション タブ|サブセクション タブでは、Windows Server Essentials の管理タスクの第 2 レイヤーにアクセスできます。|
@@ -73,7 +73,7 @@ ms.locfileid: "89554515"
 ##  <a name="features-of-the-dashboard-home-page"></a><a name="BKMK_Home"></a> ダッシュボードのホームページの機能
  ダッシュボードを開くと、既定では [**ホーム**] ページが表示され、[**セットアップ**] カテゴリが表示されます。 Windows Server Essentials ダッシュボードの [**ホーム**] ページでは、サーバーのカスタマイズと主要機能の構成に役立つタスクと情報へのクイック アクセスを提供します。 [ホーム] ページは 4 つの領域から構成され、選択したオプションの情報と構成タスクを表示します。 次の表では、の機能について説明します。
 
-|アイテム|特徴量|説明|
+|Item|特徴量|説明|
 |----------|-------------|-----------------|
 |1|ナビゲーション バー|セクションに関連付けられている情報とタスクにアクセスするには、ナビゲーション バーのセクションをクリックします。 既定ではダッシュボードを開くたびに、**[ホーム]** ページが表示されます。|
 |2|カテゴリ ウィンドウ|このウィンドウは、サーバーのセットアップやカスタマイズに役立つ情報と構成ツールへのクイック アクセスを提供します。 カテゴリをクリックし、そのカテゴリに関連付けられたタスクとリソースを表示します。|
@@ -92,9 +92,9 @@ ms.locfileid: "89554515"
 |ユーザー グループ|**注:** この機能は、windows server essentials エクスペリエンスの役割が有効になっている windows Server Essentials および Windows Server 2012 R2 Standard でのみ使用できます。<br /><br /> このページで実行できるタスクは、次のとおりです。<br /><br /> -ユーザーグループの一覧を表示します。<br /><br /> -ユーザーグループを表示および管理します。<br /><br /> -ユーザーグループを追加または削除します。|
 |配布グループ|**注:** この機能は、windows server essentials エクスペリエンスの役割が有効になっている windows Server Essentials および Windows Server 2012 R2 Standard でのみ使用できます。 このタブは、Windows Server Essentials が Microsoft 365 に統合されている場合にのみ表示されます。<br /><br /> このページで実行できるタスクは、次のとおりです。<br /><br /> -配布グループの一覧を表示します。<br /><br /> -配布グループを追加または削除します。|
 |デバイス|コンピューターを Windows Server Essentials ネットワークに接続すると、ダッシュボードの [**デバイス**] ページからコンピューターを管理できます。 このページで実行できるタスクは、次のとおりです。<br /><br /> -ネットワークに参加しているコンピューターの一覧を表示します。<br /><br /> -Microsoft 365 モバイルデバイス管理機能を活用して、モバイルデバイスを管理します。<br /><br /> **注:** この機能は、windows server essentials エクスペリエンスの役割が有効になっている windows server Essentials および Windows Server 2012 R2 Standard でのみ使用できます。<br /><br /> -各コンピューターのコンピューターのプロパティと正常性アラートを表示します。<br /><br /> -コンピューターのバックアップを設定および管理します。<br /><br /> -ファイルとフォルダーをコンピューターに復元します。<br /><br /> -コンピューターへのリモートデスクトップ接続を確立します。<br /><br /> -コンピューターバックアップとファイル履歴の設定をカスタマイズする<br /><br /> コンピューターとバックアップの管理の詳細については、「 [デバイスの管理](Manage-Devices-in-Windows-Server-Essentials.md)」を参照してください。|
-|記憶域|実行している Windows Server Essentials のバージョンに応じて、既定ではダッシュボードの [**記憶域**] セクションに次のセクションが含まれます。<br /><br /> -[ **サーバーフォルダー** ] サブセクションには、サーバーフォルダーのプロパティを表示および管理するためのタスクが含まれています。 ページにはサーバー フォルダーを開いたり、追加するタスクも含まれます。<br /><br /> -[ **ハードドライブ** ] ページには、サーバーに接続されているドライブの正常性を表示および確認するためのタスクが含まれています。<br /><br /> -Windows server essentials エクスペリエンスの役割が有効になっている windows server Essentials および Windows Server 2012 R2 Standard では、 **Sharepoint ライブラリ** のページに Microsoft 365 サービスで sharepoint ライブラリを管理するのに役立つタスクが含まれています。<br /><br /> サーバーフォルダーの管理の詳細については、「 [Manage Server folders](Manage-Server-Folders-in-Windows-Server-Essentials.md)」を参照してください。<br /><br /> ハードドライブの管理については、「 [Manage Server Storage](Manage-Server-Storage-in-Windows-Server-Essentials.md)」を参照してください。|
+|Storage|実行している Windows Server Essentials のバージョンに応じて、既定ではダッシュボードの [**記憶域**] セクションに次のセクションが含まれます。<br /><br /> -[ **サーバーフォルダー** ] サブセクションには、サーバーフォルダーのプロパティを表示および管理するためのタスクが含まれています。 ページにはサーバー フォルダーを開いたり、追加するタスクも含まれます。<br /><br /> -[ **ハードドライブ** ] ページには、サーバーに接続されているドライブの正常性を表示および確認するためのタスクが含まれています。<br /><br /> -Windows server essentials エクスペリエンスの役割が有効になっている windows server Essentials および Windows Server 2012 R2 Standard では、 **Sharepoint ライブラリ** のページに Microsoft 365 サービスで sharepoint ライブラリを管理するのに役立つタスクが含まれています。<br /><br /> サーバーフォルダーの管理の詳細については、「 [Manage Server folders](Manage-Server-Folders-in-Windows-Server-Essentials.md)」を参照してください。<br /><br /> ハードドライブの管理については、「 [Manage Server Storage](Manage-Server-Storage-in-Windows-Server-Essentials.md)」を参照してください。|
 |アプリケーション|-Windows Server Essentials ダッシュボードの [ **アプリケーション** ] セクションには、既定で2つのサブセクションがあります。<br /><br /> アドインアプリケーションの管理の詳細については、「 [アプリケーションの管理](Manage-Applications-in-Windows-Server-Essentials.md)」を参照してください。<br /><br /> -[ **アドイン** ] サブセクションには、インストールされているアドインの一覧が表示され、アドインを削除したり、選択したアドインに関する追加情報にアクセスしたりできるようにするためのタスクが用意されています。<br /><br /> - **Microsoft pinpoint** サブセクションには、microsoft pinpoint から入手できるアプリケーションの一覧が表示されます。|
-|Office 365|[ **Office 365** ] タブは、Windows Server Essentials が Microsoft 365 と統合されている場合にのみ表示されます。 このセクションには、Office 365 サブスクリプションと管理者アカウント情報が含まれます。|
+|Microsoft 365|[ **Microsoft 365** ] タブは、Windows Server Essentials が Microsoft 365 と統合されている場合にのみ表示されます。 このセクションには、Microsoft 365 サブスクリプションと管理者アカウントの情報が含まれています。|
 
 > [!NOTE]
 >  Windows Server Essentials ダッシュボードのアドインをインストールする場合、アドインは追加の管理用セクションが作成されることがあります。 これらのセクションは、メインのナビゲーション バーまたはサブスクリプション タブに表示される場合があります。

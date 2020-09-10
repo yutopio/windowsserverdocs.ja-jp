@@ -3,16 +3,16 @@ title: サブコマンドの停止-サーバー
 description: サブコマンドの参照記事。 Windows 展開サービスサーバー上のすべてのサービスを停止します。
 ms.topic: reference
 ms.assetid: 09f411c0-099f-4591-95fd-b77b3fd9118a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 1fd4a2e249b5bbf52cce9d35fcb07821b793fb23
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: c84b95607b4cf0fb69765dbc941d7e984e43d7cf
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89024666"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626843"
 ---
 # <a name="subcommand-stop-server"></a>サブコマンド: 停止サーバー
 
@@ -25,7 +25,7 @@ Windows 展開サービス サーバー上のすべてのサービスを停止�
 wdsutil [Options] /Stop-Server [/Server:<Server name>]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |[/Server:<Server name>]|サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 サーバー名が指定されていない場合は、ローカルのサーバーが使用されます。|
 ## <a name="examples"></a>例

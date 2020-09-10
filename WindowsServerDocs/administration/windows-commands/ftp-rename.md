@@ -3,16 +3,16 @@ title: ftp rename
 description: リモートファイルの名前を変更する ftp rename コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: 977b7c95-6428-4980-80ec-79c3ae7e8c4d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: a722605e451fff3ea8d4a758434a7509deaf355c
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ea7862a759779a5f767b8e18cdd5a0b36db2a6a1
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035740"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627630"
 ---
 # <a name="ftp-rename"></a>ftp rename
 
@@ -28,7 +28,7 @@ rename <filename> <newfilename>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<filename>` | 名前を変更するファイルを指定します。 |
 | `<newfilename>` | 新しいファイル名を指定します。 |

@@ -2,17 +2,17 @@
 title: Microsoft Server Performance Advisor
 description: Microsoft Server Performance Advisor
 ms.assetid: 468ebcb3-9eaf-477c-ab10-e3f1b3ce63dc
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ms.topic: article
-ms.openlocfilehash: 4ec0190c97c5afc761c27c7c3156380441951544
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: bd359e71cfb48ecd8aab24a8538369622dd1d271
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895688"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627706"
 ---
 # <a name="microsoft-server-performance-advisor"></a>Microsoft Server Performance Advisor
 
@@ -46,7 +46,7 @@ SPA Advisor パックとは、一連のメタデータとの SQL スクリプト
 
 -   HYPER-V Advisor パックは、HYPER-V サーバー ロールの全般的なパフォーマンスを分析します。
 
-    **メモ**Hyper-v Advisor パックは、ゲストオペレーティングシステムを分析しません。
+    **メモ** Hyper-v Advisor パックは、ゲストオペレーティングシステムを分析しません。
 
 
 
@@ -54,7 +54,7 @@ SPA Advisor パックとは、一連のメタデータとの SQL スクリプト
 
 SPA は、Microsoft 以外の開発者のニーズに合わせて advisor パックを作成するには拡張可能なモデルも提供されます。
 
-**メモ**SPA は、すべてのハードウェアおよびユーザーシナリオコンテキストを理解できません。 意思決定をサーバーに加えられたすべての潜在的な変更の結果を理解するのに役立つツールが用意されている推奨事項を使用する必要があります。
+**メモ** SPA は、すべてのハードウェアおよびユーザーシナリオコンテキストを理解できません。 意思決定をサーバーに加えられたすべての潜在的な変更の結果を理解するのに役立つツールが用意されている推奨事項を使用する必要があります。
 
 
 
@@ -69,11 +69,11 @@ SPA は、Microsoft 以外の開発者のニーズに合わせて advisor パッ
 
 次のコマンドを使用して、CAB ファイル内のファイルを抽出できます。
 
--   x86 バージョンの場合:`extrac32.exe /e /a /l  d:\SPA   d:\SPA\SPAPlus\_x86.cab`
+-   x86 バージョンの場合: `extrac32.exe /e /a /l  d:\SPA   d:\SPA\SPAPlus\_x86.cab`
 
--   x64 バージョンの場合:`extrac32.exe /e /a /l  d:\SPA   d:\SPA\SPAPlus\_amd64.cab`
+-   x64 バージョンの場合: `extrac32.exe /e /a /l  d:\SPA   d:\SPA\SPAPlus\_amd64.cab`
 
-**注意**.Cab ファイルを抽出すると、SPA は階層ディレクトリ構造を維持して正常に機能する必要があります。 サーバーにインストールされている CAB ツールによって非運用時のディレクトリ構造抽出可能性があります。 階層的なディレクトリ構造を保持するためには、ファイルのディレクトリ構造を抽出する CAB 抽出ユーティリティ ツールを使用することができます。
+**注意** .Cab ファイルを抽出すると、SPA は階層ディレクトリ構造を維持して正常に機能する必要があります。 サーバーにインストールされている CAB ツールによって非運用時のディレクトリ構造抽出可能性があります。 階層的なディレクトリ構造を保持するためには、ファイルのディレクトリ構造を抽出する CAB 抽出ユーティリティ ツールを使用することができます。
 
 CAB の展開ツールは、ファイルを正しく展開、サブフォルダーは抽出先フォルダーに自動的に表示されます。
 

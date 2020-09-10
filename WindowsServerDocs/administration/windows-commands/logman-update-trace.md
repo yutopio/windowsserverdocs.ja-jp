@@ -3,16 +3,16 @@ title: logman update trace
 description: 既存のイベントトレースデータコレクターのプロパティを更新する logman update トレースコマンドの参照記事です。
 ms.topic: reference
 ms.assetid: b7111f7f-4162-4d1a-8e53-d766db0ede1f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 17a63116408458edaf11c2ff44ccf2c1a978cea0
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: cb17630384e4daf2371a6f67ea20fc2b25ef61ec
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036350"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627543"
 ---
 # <a name="logman-update-trace"></a>logman update trace
 
@@ -28,7 +28,7 @@ logman update trace <[-n] <name>> [options]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | -s `<computer name>` | 指定されたリモートコンピューターでコマンドを実行します。 |
 | -config `<value>` | コマンドオプションを含む設定ファイルを指定します。 |
@@ -61,7 +61,7 @@ logman update trace <[-n] <name>> [options]
 | -モード `<globalsequence|localsequence|pagedmemory>` | イベントトレースセッションロガーモードを次のように指定します。<ul><li>**Globalsequence** -イベントトレーサーは、イベントを受信したトレースセッションに関係なく、受信したすべてのイベントにシーケンス番号を追加します。</li><li>**Localsequence** -イベントトレーサーが特定のトレースセッションで受信したイベントのシーケンス番号を追加することを指定します。 このオプションを使用すると、すべてのセッションで重複するシーケンス番号が存在する可能性がありますが、各トレースセッション内で一意になります。</li><li>**Pagedmemory** -イベントトレーサーが、既定の非ページメモリプールではなく、ページングされたメモリを内部バッファー割り当てに使用することを指定します。</li></ul> |
 | /? | 状況依存のヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - [-] が一覧表示されている場合は、余分なハイフン (-) を追加すると、オプションが無効になります。
 

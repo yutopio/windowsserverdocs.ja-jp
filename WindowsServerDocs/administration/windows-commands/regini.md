@@ -3,16 +3,16 @@ title: regini
 description: Regini.exe コマンドの参照記事。コマンドラインまたはスクリプトからレジストリを変更し、1つまたは複数のテキストファイルで事前設定された変更を適用します。
 ms.topic: reference
 ms.assetid: 5ff18dc3-5bd8-400a-b311-fd73a3267e8c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
-ms.openlocfilehash: a779c41dba46e86f862982de0b203a09dd6c8384
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 78c56a68392d066047123dc77bafc3d1b01de127
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027440"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627475"
 ---
 # <a name="regini"></a>regini
 
@@ -28,7 +28,7 @@ regini [-m \\machinename | -h hivefile hiveroot][-i n] [-o outputwidth][-b] text
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 |--|--|
 | -m `<\\computername>` | レジストリを変更すると、リモート コンピューターの名前を指定します。 ** \\ ComputerName**という形式を使用します。 |
 | -h `<hivefile hiveroot>` | 変更をローカル レジストリ ハイブを指定します。 形式でハイブ ファイルの名前と、hive のルートを指定する必要があります **hivefile hiveroot**します。 |
@@ -37,7 +37,7 @@ regini [-m \\machinename | -h hivefile hiveroot][-i n] [-o outputwidth][-b] text
 | -b | **regini.exe**の出力が以前のバージョンの**regini.exe**と下位互換性があることを指定します。 |
 | textfiles | レジストリ データを含む 1 つ以上のテキスト ファイルの名前を指定します。 ANSI または Unicode テキスト ファイルの任意の数を指定できます。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 次のガイドラインは、主に、 **regini.exe**を使用して適用するレジストリデータを含むテキストファイルの内容に適用されます。
 

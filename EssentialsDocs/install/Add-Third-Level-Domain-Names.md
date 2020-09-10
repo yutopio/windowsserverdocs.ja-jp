@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: e5b4a362-1881-4024-ae4e-cc3b05e50103
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 48bfc36ba6f3fa369b694b2e160a5ee1282517f2
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: dd68308646eba5fba2f79593cba82de467c1888b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181568"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626363"
 ---
 # <a name="add-third-level-domain-names"></a>第 3 レベル ドメイン名の追加
 
@@ -33,7 +33,7 @@ ms.locfileid: "87181568"
 
 -   [Windows Server Domain Name Management サービスの再起動](Add-Third-Level-Domain-Names.md#BKMK_RestartService)
 
-###  <a name="add-an-implementation-of-the-idomainsignupprovider-interface-to-the-assembly"></a><a name="BKMK_DomainSignup"></a>IDomainSignupProvider インターフェイスの実装をアセンブリに追加します。
+###  <a name="add-an-implementation-of-the-idomainsignupprovider-interface-to-the-assembly"></a><a name="BKMK_DomainSignup"></a> IDomainSignupProvider インターフェイスの実装をアセンブリに追加します。
  ドメイン サービスをウィザードに追加するには、IDomainSignupProvider インターフェイスが使用されます。
 
 ##### <a name="to-add-the-idomainsignupprovider-code-to-the-assembly"></a>IDomainSignupProvider コードをアセンブリに追加するには
@@ -273,7 +273,7 @@ ms.locfileid: "87181568"
 
 21. プロジェクトを保存したら、次の手順でプロジェクトへの追加を行うため、プロジェクトを閉じないでください。 次の手順を完了するまでプロジェクトをビルドすることはできません。
 
-###  <a name="add-an-implementation-of-the-idomainmaintenanceprovider-interface-to-the-assembly"></a><a name="BKMK_DomainMaintenance"></a>IDomainMaintenanceProvider インターフェイスの実装をアセンブリに追加します。
+###  <a name="add-an-implementation-of-the-idomainmaintenanceprovider-interface-to-the-assembly"></a><a name="BKMK_DomainMaintenance"></a> IDomainMaintenanceProvider インターフェイスの実装をアセンブリに追加します。
  作成した後にドメインを維持するには、IDomainMaintenanceProvider が使用されます。
 
 ##### <a name="to-add-the-idomainmaintenanceprovider-code-to-the-assembly"></a>IDomainMaintenanceProvider コードをアセンブリに追加するには
@@ -512,10 +512,10 @@ ms.locfileid: "87181568"
 
 14. 保存し、ソリューションをビルドします。
 
-###  <a name="sign-the-assembly-with-an-authenticode-signature"></a><a name="BKMK_SignAssembly"></a>Authenticode 署名を使用してアセンブリに署名する
+###  <a name="sign-the-assembly-with-an-authenticode-signature"></a><a name="BKMK_SignAssembly"></a> Authenticode 署名を使用してアセンブリに署名する
  オペレーティング システムで使用するために、アセンブリを Authenticode で署名する必要があります。 アセンブリの署名の詳細については、「 [Authenticode によるコードの署名と確認 (英語の場合があります)](https://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode)」を参照してください。
 
-###  <a name="install-the-assembly-on-the-reference-computer"></a><a name="BKMK_InstallAssembly"></a>参照コンピューターにアセンブリをインストールする
+###  <a name="install-the-assembly-on-the-reference-computer"></a><a name="BKMK_InstallAssembly"></a> 参照コンピューターにアセンブリをインストールする
  アセンブリを参照コンピューターのフォルダーに配置します。 次の手順でレジストリに入力するため、フォルダーのパスをメモしておきます。
 
 ### <a name="add-a-key-to-the-registry"></a>キーのレジストリへの追加
@@ -555,7 +555,7 @@ ms.locfileid: "87181568"
 
 16. アセンブリで定義されたプロバイダーの完全なクラス名を入力し、[**OK**] をクリックします。
 
-###  <a name="restart-the-windows-server-domain-name-management-service"></a><a name="BKMK_RestartService"></a>Windows Server ドメインネーム管理サービスを再起動する
+###  <a name="restart-the-windows-server-domain-name-management-service"></a><a name="BKMK_RestartService"></a> Windows Server ドメインネーム管理サービスを再起動する
  プロバイダーがオペレーティング システムに対して使用できるようになるには、Windows Server Domain Management サービスを再起動する必要があります。
 
 ##### <a name="restart-the-service"></a>サービスを再起動します。

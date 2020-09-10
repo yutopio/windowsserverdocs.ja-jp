@@ -3,16 +3,16 @@ title: Diskraid
 description: Diskraid コマンドラインツールのリファレンス記事。独立した (または安価な) ディスク (RAID) 記憶域サブシステムの冗長配列を構成および管理できます。
 ms.topic: reference
 ms.assetid: 20aef1e5-7641-47cf-b4eb-cda117f65b6e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: b153d0ab1ec52f023c12b240518c6304d76e9093
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 49d190f257c93a026f29188fa26af7409c611f44
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030920"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627159"
 ---
 # <a name="diskraid"></a>Diskraid
 
@@ -44,7 +44,7 @@ add tpgroup tportal=n [noerr]
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | プレックス lun =`<n>` | 現在選択されている LUN にプレックスとして追加する LUN 番号を指定します。 注意: プレックスとして追加されている LUN 上のすべてのデータが削除されます。 |
 | tpgroup tportal =`<n>` | 現在選択されている iSCSI ターゲットポータルグループに追加する iSCSI ターゲットポータルの番号を指定します。 |
@@ -64,7 +64,7 @@ associate targets [add] <n>[,<n> [,…]]
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | コントローラー | 現在選択されている LUN に関連付けられているコントローラーの一覧を追加または置き換えます。 VDS 1.0 プロバイダーでのみ使用します。 |
 | ports | 現在選択されている LUN に関連付けられているコントローラーポートの一覧を追加または置換します。 VDS 1.1 プロバイダーでのみ使用します。 |
@@ -102,7 +102,7 @@ automagic {set | clear | apply} all <flag=value> [<flag=value> [...]]
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | set | 指定したフラグを指定した値に設定します。 |
 | オフ | 指定したフラグをクリアします。 **All**キーワードは、すべての automagic フラグをクリアします。 |
@@ -124,7 +124,7 @@ break plex=<plex_number> [noerr]
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | p | 削除するプレックスの番号を指定します。 プレックスとそれに含まれるデータは保持されず、このプレックスによって使用されるリソースは回収されます。 LUN に含まれるデータの整合性は保証されていません。 このプレックスを保持する場合は、ボリュームシャドウコピーサービス (VSS) を使用します。 |
 | noerr | スクリプト専用です。 エラーが発生すると、エラーが発生しなかったかのように、Diskraid はコマンドの処理を続行します。 |
@@ -144,7 +144,7 @@ chap target remember secret=[<secret>] initiator=<initiatorname>
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | イニシエーターセット | イニシエーターがターゲットを認証するときに、相互 CHAP 認証に使用されるローカル iSCSI イニシエーターサービスの共有シークレットを設定します。 |
 | イニシエーターの記憶 | は、iSCSI ターゲットの CHAP シークレットをローカル iSCSI イニシエーターサービスに伝えます。これにより、イニシエーターサービスは、CHAP 認証時にターゲットに対して自身を認証するためにシークレットを使用できるようになります。 |
@@ -172,7 +172,7 @@ create tpgroup [noerr]
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | simple | 単純な LUN を作成します。 |
 | ストライプ (stripe) | ストライプ LUN を作成します。 |
@@ -202,7 +202,7 @@ delete tpgroup [noerr]
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | lun | 現在選択されている LUN とすべてのデータを削除します。 |
 | uninstall | Lun が削除される前に、LUN に関連付けられているローカルシステム上のディスクをクリーンアップすることを指定します。 |
@@ -222,7 +222,7 @@ detail {hbaport | iadapter | iportal | provider | subsystem | controller | port 
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | hbaport | 現在選択されているホストバスアダプター (HBA) ポートに関する詳細情報を一覧表示します。 |
 | iadapter | 現在選択されている iSCSI イニシエーターアダプターに関する詳細情報を一覧表示します。 |
@@ -242,7 +242,7 @@ detail {hbaport | iadapter | iportal | provider | subsystem | controller | port 
 
 現在選択されている LUN に対して、指定されたコントローラーポートの一覧を非アクティブとして設定します (他のコントローラーポートは影響を受けません)。または、現在選択されている LUN の iSCSI ターゲットの指定リストを解除します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 dissociate controllers <n> [,<n> [,...]]
@@ -252,7 +252,7 @@ dissociate targets <n> [,<n> [,…]]
 
 ##### <a name="parameter"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | controllers | 現在選択されている LUN に関連付けられているコントローラーの一覧からコントローラーを削除します。 VDS 1.0 プロバイダーでのみ使用します。 |
 | ports | 現在選択されている LUN に関連付けられているコントローラーポートの一覧からコントローラーポートを削除します。 VDS 1.1 プロバイダーでのみ使用します。 |
@@ -283,7 +283,7 @@ Controller port associations changed.
 
 Diskraid を終了します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 exit
@@ -301,9 +301,9 @@ extend lun [size=<LUN_size>] [drives=<drive_number>, [<drive_number>, ...]] [noe
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
-| size | LUN を拡張するメガバイト単位のサイズを指定します。 *サイズ*またはパラメーターのいずれかを `<drive>` 指定する必要があります。 同時に使用することもできます。 **Size =** パラメーターが指定されていない場合、LUN は、指定されたすべてのドライブで許可される最大サイズによって拡張されます。 **Size =** パラメーターが指定されている場合、プロバイダーは、 **drives =** パラメーターによって指定された一覧からドライブを選択して LUN を作成します。 他の単位を使用してサイズを指定するには、サイズの直後に次のいずれかのサフィックスを使用します。<ul><li>**B** バイト</li><li>**Kb kb**</li><li>**Mb** -メガバイト</li><li>**Gb** -ギガバイト</li><li>**Tb** -テラバイト</li><li>**Pb** ~ ペタバイト。</li></ul> |
+| サイズ | LUN を拡張するメガバイト単位のサイズを指定します。 *サイズ*またはパラメーターのいずれかを `<drive>` 指定する必要があります。 同時に使用することもできます。 **Size =** パラメーターが指定されていない場合、LUN は、指定されたすべてのドライブで許可される最大サイズによって拡張されます。 **Size =** パラメーターが指定されている場合、プロバイダーは、 **drives =** パラメーターによって指定された一覧からドライブを選択して LUN を作成します。 他の単位を使用してサイズを指定するには、サイズの直後に次のいずれかのサフィックスを使用します。<ul><li>**B** バイト</li><li>**Kb kb**</li><li>**Mb** -メガバイト</li><li>**Gb** -ギガバイト</li><li>**Tb** -テラバイト</li><li>**Pb** ~ ペタバイト。</li></ul> |
 | ドライブ = | `<drive_number>`LUN を作成するときに使用するドライブのを指定します。 *サイズ*またはパラメーターのいずれかを `<drive>` 指定する必要があります。 同時に使用することもできます。 **Size =** パラメーターが指定されていない場合、作成される LUN は、指定されたすべてのドライブで許可される最大サイズになります。 プロバイダーは、可能であれば指定された順序でドライブを使用します。 |
 | noerr | スクリプト専用です。 エラーが発生すると、エラーが発生しなかったかのように、Diskraid はコマンドの処理を続行します。 |
 
@@ -311,7 +311,7 @@ extend lun [size=<LUN_size>] [drives=<drive_number>, [<drive_number>, ...]] [noe
 
 現在選択されているコントローラーのキャッシュを消去します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 flushcache controller
@@ -321,7 +321,7 @@ flushcache controller
 
 すべての Diskraid コマンドの一覧を表示します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 help
@@ -331,7 +331,7 @@ help
 
 現在選択されているサブシステムに対して設定されている現在のボリュームシャドウコピーサービス (VSS) インポートターゲットを取得または設定します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 importtarget subsystem [set target]
@@ -339,7 +339,7 @@ importtarget subsystem [set target]
 
 ##### <a name="parameter"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | ターゲットの設定 | 指定した場合、現在選択されているターゲットを、現在選択されているサブシステムの VSS インポートターゲットに設定します。 指定しない場合、コマンドは現在選択されているサブシステムに対して設定されている現在の VSS インポートターゲットを取得します。 |
 
@@ -347,7 +347,7 @@ importtarget subsystem [set target]
 
 ローカル iSCSI イニシエーターに関する情報を取得します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 initiator
@@ -357,7 +357,7 @@ initiator
 
 現在選択されているコントローラーのキャッシュを無効にします。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 invalidatecache controller
@@ -393,7 +393,7 @@ list {hbaports | iadapters | iportals | providers | subsystems | controllers | p
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | hbaports | VDS に認識されているすべての HBA ポートに関する概要情報を一覧表示します。 現在選択されている HBA ポートは、アスタリスク (*) でマークされています。 |
 | iadapters | VDS に認識されているすべての iSCSI イニシエーターアダプターに関する概要情報を一覧表示します。 現在選択されているイニシエーターアダプターは、アスタリスク (*) でマークされます。 |
@@ -442,7 +442,7 @@ logout target iadapter= <iadapter>
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | iadapter | ログアウトするログインセッションがあるイニシエーターアダプターを指定します。 |
 
@@ -458,7 +458,7 @@ maintenance <object operation> [count=<iteration>]
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<object>` | 操作を実行するオブジェクトの種類を指定します。 *オブジェクト*の種類には、**サブシステム**、**コントローラー**、**ポート、ドライブ、** または**LUN**を指定できます。 |
 | `<operation>` | 実行するメンテナンス操作を指定します。 *操作*の種類には、 **spinup**、 **spindown**、**点滅**、**ビープ音**、または**ping**を使用できます。 *操作*を指定してください。 |
@@ -468,7 +468,7 @@ maintenance <object operation> [count=<iteration>]
 
 現在選択されているサブシステム、LUN、または iSCSI ターゲットのフレンドリ名を指定した名前に設定します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 name {subsystem | lun | target} [<name>]
@@ -476,7 +476,7 @@ name {subsystem | lun | target} [<name>]
 
 ##### <a name="parameter"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<name>` | サブシステム、LUN、またはターゲットの名前を指定します。 名前の長さは64文字未満でなければなりません。 名前が指定されていない場合は、既存の名前 (存在する場合) が削除されます。 |
 
@@ -484,7 +484,7 @@ name {subsystem | lun | target} [<name>]
 
 指定された種類の現在選択されているオブジェクトの状態を **オフライン**に設定します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 offline <object>
@@ -492,7 +492,7 @@ offline <object>
 
 ##### <a name="parameter"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<object>` | この操作を実行するオブジェクトの種類を指定します。 種類は、 **サブシステム**、 **コントローラー**、 **ドライブ**、 **LUN**、または **portal 新規**です。 |
 
@@ -500,7 +500,7 @@ offline <object>
 
 指定された種類の選択されたオブジェクトの状態を **オンライン**に設定します。 オブジェクトが **hbaport**の場合、は、現在選択されている HBA ポートへのパスの状態を **オンライン**に変更します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 online <object>
@@ -508,7 +508,7 @@ online <object>
 
 ##### <a name="parameter"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<object>` | この操作を実行するオブジェクトの種類を指定します。 種類は、 **hbaport**、 **subsystem**、 **controller**、 **drive**、 **LUN**、または **portal 新規**です。 |
 
@@ -516,7 +516,7 @@ online <object>
 
 現在選択されているフォールトトレラント LUN を修復するために必要な操作 (再同期やホットスペア処理など) を実行します。 たとえば、回復によって、障害が発生したディスクまたはその他のディスクエクステントの再割り当てがある RAID セットにホットスペアがバインドされる場合があります。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 recover <lun>
@@ -534,7 +534,7 @@ reenumerate {subsystems | drives}
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | システム | プロバイダーに対してクエリを行って、現在選択されているプロバイダーに追加された新しいサブシステムを検出します。 |
 | ドライブ | は、現在選択されているサブシステムに追加された新しいドライブを検出するために、内部 i/o バスに対してクエリを行います。 |
@@ -543,7 +543,7 @@ reenumerate {subsystems | drives}
 
 現在選択されているプロバイダーの内部データを更新します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 refresh provider
@@ -553,7 +553,7 @@ refresh provider
 
 スクリプトのコメント化に使用します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 Rem <comment>
@@ -563,7 +563,7 @@ Rem <comment>
 
 現在選択されているターゲットポータルグループから、指定された iSCSI ターゲットポータルを削除します。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 remove tpgroup tportal=<tportal> [noerr]
@@ -571,7 +571,7 @@ remove tpgroup tportal=<tportal> [noerr]
 
 ##### <a name="parameter"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | tpgroup tportal =`<tportal>` | 削除する iSCSI ターゲットポータルを指定します。 |
 | noerr | スクリプト専用です。 エラーが発生すると、エラーが発生しなかったかのように、Diskraid はコマンドの処理を続行します。 |
@@ -580,7 +580,7 @@ remove tpgroup tportal=<tportal> [noerr]
 
 指定されたドライブを現在選択されているドライブに置き換えます。 指定されたドライブは、現在選択されているドライブではない可能性があります。
 
-#### <a name="syntax"></a>構文
+#### <a name="syntax"></a>Syntax
 
 ```
 replace drive=<drive_number>
@@ -588,7 +588,7 @@ replace drive=<drive_number>
 
 ##### <a name="parameter"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | ドライブ = | 置き換えるドライブのを指定し `<drive_number>` ます。 |
 
@@ -604,7 +604,7 @@ reset {controller | port}
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | コントローラー | コントローラーをリセットします。 |
 | port | ポートをリセットします。 |
@@ -667,9 +667,9 @@ shrink lun size=<n> [noerr]
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
-| size | LUN のサイズを小さくするために必要な領域の容量をメガバイト (MB) 単位で指定します。 他の単位を使用してサイズを指定するには、サイズの直後に次のいずれかのサフィックスを使用します。<ul><li>**B** バイト</li><li>**Kb kb**</li><li>**Mb** -メガバイト</li><li>**Gb** -ギガバイト</li><li>**Tb** -テラバイト</li><li>**Pb** ~ ペタバイト。 |
+| サイズ | LUN のサイズを小さくするために必要な領域の容量をメガバイト (MB) 単位で指定します。 他の単位を使用してサイズを指定するには、サイズの直後に次のいずれかのサフィックスを使用します。<ul><li>**B** バイト</li><li>**Kb kb**</li><li>**Mb** -メガバイト</li><li>**Gb** -ギガバイト</li><li>**Tb** -テラバイト</li><li>**Pb** ~ ペタバイト。 |
 | noerr | スクリプト専用です。 エラーが発生すると、エラーが発生しなかったかのように、Diskraid はコマンドの処理を続行します。 |
 
 ### <a name="standby"></a>スタンバイ
@@ -684,7 +684,7 @@ standby hbaport
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | hbaport | 現在選択されているホストバスアダプター (HBA) ポートへのパスの状態をスタンバイに変更します。 |
 
@@ -700,7 +700,7 @@ unmask lun {all | none | [add] wwn=<hexadecimal_number> [;<hexadecimal_number> [
 
 ##### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | all | すべてのホストから LUN にアクセスできるようにすることを指定します。 ただし、iSCSI サブシステム内のすべてのターゲットに対して LUN のマスクを解除することはできません。<P>コマンドを実行する前に、ターゲットのログアウトを行う必要があり `unmask lun all` ます。 |
 | なし | どのホストからも LUN にアクセスできないように指定します。<P>コマンドを実行する前に、ターゲットのログアウトを行う必要があり `unmask lun none` ます。 |

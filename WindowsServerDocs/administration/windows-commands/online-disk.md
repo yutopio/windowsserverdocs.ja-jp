@@ -3,16 +3,16 @@ title: online disk
 description: オンラインディスクコマンドの参照記事。オフラインディスクがオンライン状態になります。
 ms.topic: reference
 ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 934e6bb1d7d5b52b00ac7eadea35e6f022906e5b
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: a2c33a85a8217963a220495e75efebf0c6999309
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89032700"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627323"
 ---
 # <a name="online-disk"></a>online disk
 
@@ -36,7 +36,7 @@ online disk [noerr]
 
 このコマンドの使用方法について [は、「不足またはオフラインのダイナミックディスクを再アクティブ化する](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732026(v=ws.11))」を参照してください。
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 |--|--|
 | noerr | スクリプト専用です。 エラーが発生しても、エラーが発生しなかったかのように DiskPart はコマンドの処理を続けます。 このパラメーターは、エラー発生すると、DiskPart はエラー コードを生成して終了します。 |
 

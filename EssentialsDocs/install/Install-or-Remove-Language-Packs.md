@@ -5,21 +5,21 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 98f13f63-4480-40ba-a7ef-d1d9b7582e5f
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 9999b78b1b0a4b1823162158b95d175f9c159091
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 50fd17a057e15661ed6c3440bdea8f22bea1bada
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87837931"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626206"
 ---
 # <a name="install-or-remove-language-packs"></a>言語パックのインストールまたは削除
 
 >適用対象: windows Server 2016 Essentials、Windows Server 2012 R2 Essentials、Windows Server 2012 Essentials
 
 > [!NOTE]
->  まず、「[言語パックと展開](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824829(v=win.10))」で説明されているように、Windows Server Essentials 言語パックを追加する前に、多言語の Windows イメージを作成する必要があります。
+>  まず、「 [言語パックと展開](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824829(v=win.10)) 」で説明されているように、Windows Server Essentials 言語パックを追加する前に、多言語の Windows イメージを作成する必要があります。
 
  言語パックは、多言語イメージを作成する場合にのみ使用できます。 このセクションの情報は、Windows Server Essentials での言語パックのインストールまたは削除に固有のものです。
 

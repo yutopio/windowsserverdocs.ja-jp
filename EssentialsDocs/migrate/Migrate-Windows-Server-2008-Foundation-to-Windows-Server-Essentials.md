@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f22fc0a4-cb82-4e60-afe6-2d03145745e7
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 74b79e3306ee34708b079b09f445a00ddfc15fdb
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 7ccb0e79094c5d3393b9548fc733224fd8fa9cbf
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838381"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89625874"
 ---
 # <a name="migrate-windows-server-2008-foundation-to-windows-server-essentials"></a>Windows Server 2008 Foundation から Windows Server Essentials への移行
 
@@ -52,7 +52,7 @@ ms.locfileid: "87838381"
 
  いくつかの移行手順では、管理者としてコマンド プロンプト ウィンドウを開く必要があります。
 
-###  <a name="to-open-a-command-prompt-window-on-the-source-server-as-an-administrator"></a><a name="BKMK_OpenACommandPromptAsAdmin"></a>移行元サーバーで管理者としてコマンドプロンプトウィンドウを開くには
+###  <a name="to-open-a-command-prompt-window-on-the-source-server-as-an-administrator"></a><a name="BKMK_OpenACommandPromptAsAdmin"></a> 移行元サーバーで管理者としてコマンドプロンプトウィンドウを開くには
 
 1.  **[開始]** をクリックします。
 

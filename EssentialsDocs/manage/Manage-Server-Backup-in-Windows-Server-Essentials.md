@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 0302d070-c58a-40f2-b56d-7e7842813d02
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 611f3824493acd6047c55f83cf17ba81daf8c923
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: f2b1e0205578cbf629418a2b78d6b27199cf694a
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180928"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89626149"
 ---
 # <a name="manage-server-backup-in-windows-server-essentials"></a>Windows Server Essentials でのサーバー バックアップの管理
 
@@ -36,7 +36,7 @@ ms.locfileid: "87180928"
 
 -   [サーバーバックアップからのファイルとフォルダーの復元](Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_7)
 
-##  <a name="which-backup-should-i-choose"></a><a name="BKMK_WhichBackup"></a>どのバックアップを選択すればよいですか?
+##  <a name="which-backup-should-i-choose"></a><a name="BKMK_WhichBackup"></a> どのバックアップを選択すればよいですか?
  ごく最近の正しいバックアップがあり、そのバックアップに重要なデータがすべて格納されていることがわかっている場合は、バックアップの選択は簡単です。 古いバックアップから、サーバーまたはコンピューターへの復元を実行する際にバックアップの復元先を選ぶ場合、調査や場合によって何らかの妥協が必要になることがあります。
 
 #### <a name="to-choose-a-backup"></a>バックアップを選択するには
@@ -49,10 +49,10 @@ ms.locfileid: "87180928"
 
 4.  ベスト プラクティスとして、ファイルやフォルダーを別の場所に復元し、ファイルやフォルダーの所有者に指示して、必要なファイルやフォルダーを元の場所に移すことができます。 移動後は、別の場所に残っているファイルやフォルダーは削除できます。
 
-##  <a name="set-up-or-customize-server-backup"></a><a name="BKMK_1"></a>サーバーバックアップのセットアップまたはカスタマイズ
+##  <a name="set-up-or-customize-server-backup"></a><a name="BKMK_1"></a> サーバーバックアップのセットアップまたはカスタマイズ
  サーバーのバックアップがインストール時に自動的に構成されることはありません。 日次バックアップのスケジュールを設定して、サーバーとサーバー上のデータを自動的に保護する必要があります。 ほとんどの組織は数日間作成されたデータを失う余裕はないため、毎日のバックアップ計画を維持することをお勧めします。 詳細については、「[サーバー バックアップのセットアップまたはカスタマイズ](Set-up-or-customize-server-backup.md)」を参照してください。
 
-##  <a name="stop-server-backup-in-progress"></a><a name="BKMK_2"></a>サーバーバックアップの停止中
+##  <a name="stop-server-backup-in-progress"></a><a name="BKMK_2"></a> サーバーバックアップの停止中
  サーバー バックアップがスケジュール設定した時刻に自動的に起動した場合でも、手動で開始した場合でも、進行中のバックアップを停止することができます。
 
 #### <a name="to-stop-a-backup-in-progress"></a>進行中のバックアップを停止するには
@@ -65,7 +65,7 @@ ms.locfileid: "87180928"
 
 4.  [**はい**] をクリックして、操作を確定します。
 
-##  <a name="remotely-manage-your-backups"></a><a name="BKMK_3"></a>バックアップのリモート管理
+##  <a name="remotely-manage-your-backups"></a><a name="BKMK_3"></a> バックアップのリモート管理
  オフィスを離れている間に、Windows Server Essentials のリモート Web アクセスを使って、Windows Server Essentials ダッシュボードにアクセスして、サーバーを管理することができます。
 
 #### <a name="to-use-remote-web-access-to-manage-your-server"></a>リモート Web アクセスを使用して、サーバーを管理するには
@@ -82,7 +82,7 @@ ms.locfileid: "87180928"
 
    リモート Web アクセスの詳細については、「 [remote Web アクセスの概要](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview)」を参照してください。
 
-##  <a name="disable-server-backup"></a><a name="BKMK_4"></a>サーバーバックアップを無効にする
+##  <a name="disable-server-backup"></a><a name="BKMK_4"></a> サーバーバックアップを無効にする
  日次バックアップのスケジュールを設定して、サーバーとサーバー上のデータを自動的に保護する必要があります。 ほとんどの組織は数日間作成されたデータを失う余裕はないため、毎日のバックアップ計画を維持することをお勧めします。
 
  既にサーバー バックアップを構成していて、後になってサード パーティ製アプリケーションを使ってサーバーをバックアップする場合は、Windows Server Essentials のサーバー バックアップを無効にできます。
@@ -102,13 +102,13 @@ ms.locfileid: "87180928"
 
 5.  [**構成オプション**] ページで、[**サーバー バックアップを無効にする**] をクリックします。 ウィザードの指示に従います。
 
-##  <a name="learn-more-about-setting-up-server-backup"></a><a name="BKMK_5"></a>サーバーバックアップのセットアップに関する詳細情報
+##  <a name="learn-more-about-setting-up-server-backup"></a><a name="BKMK_5"></a> サーバーバックアップのセットアップに関する詳細情報
  サーバーのセットアップ中は、サーバー バックアップは有効になりません。
 
 > [!NOTE]
 >  サーバーのバックアップを構成するときに、そのバックアップ先のハード ドライブとして使用するサーバーに、少なくとも 1 つの外部のハード ディスク ドライブを接続してください。
 
-###  <a name="backup-destination-drive"></a><a name="BKMK_Target"></a>バックアップ先ドライブ
+###  <a name="backup-destination-drive"></a><a name="BKMK_Target"></a> バックアップ先ドライブ
  複数の外部記憶域ドライブをバックアップに使用し、オンサイトとオフサイトの記憶域場所をローテーションすることができます。 これにより、オンサイトのハードウェアで物理的破損が発生しても、データの回復がサポートされるため、障害対策計画を向上させることができます。
 
  サーバー バックアップ用にストレージ ドライブを選択した場合、以下の点を考慮してください。
@@ -154,7 +154,7 @@ ms.locfileid: "87180928"
 
  たとえば大量のハード ドライブ容量を使用する、テレビ番組の録画が記録されているフォルダーがあるとします。 通常、これらのファイルは見終わった後に削除するため、これらのファイルをバックアップしないことを選択できます。 または、保持することを目的としない一時ファイルが含まれているフォルダーが存在している場合もあります。
 
-##  <a name="repartition-a-hard-drive-on-the-server"></a><a name="BKMK_6"></a>サーバーのハードドライブのパーティションを再分割する
+##  <a name="repartition-a-hard-drive-on-the-server"></a><a name="BKMK_6"></a> サーバーのハードドライブのパーティションを再分割する
  フォーマットされていない内部ハード ディスク ドライブが、Windows Server Essentials サーバーで検出された場合、新しいハード ドライブの追加ウィザードへのリンクが含まれている正常性アラートが生成されます。 新しいハード ドライブの追加ウィザードでは、ハード ドライブをフォーマットするためのさまざまなオプションを使用する手順が表示されます。 ウィザードが終了すると、ドライブのサイズに応じて、ハードドライブ上にフォーマット済みの論理ハード ドライブが 1 つまたは複数作成され、NTFS としてフォーマットされます。
 
  ハード ディスク ドライブ パーティションの再作成が必要な場合、以下の手順に従ってください。
@@ -177,7 +177,7 @@ ms.locfileid: "87180928"
     > [!NOTE]
     >  ハード ディスク ドライブ上のすべての未割り当ての領域に対して、この手順を繰り返します。
 
-##  <a name="restore-files-and-folders-from-a-server-backup"></a><a name="BKMK_7"></a>サーバーバックアップからのファイルとフォルダーの復元
+##  <a name="restore-files-and-folders-from-a-server-backup"></a><a name="BKMK_7"></a> サーバーバックアップからのファイルとフォルダーの復元
  サーバー バックアップから個々 のファイルとフォルダーを参照して復元できます。
 
 #### <a name="to-restore-files-and-folders-from-a-server-backup"></a>ファイルとフォルダーをサーバーのバックアップから復元するには
@@ -188,7 +188,7 @@ ms.locfileid: "87180928"
 
 3.  ファイルまたはフォルダーの復元ウィザードが開きます。 ウィザードの指示に従って、ファイルまたはフォルダーを復元します。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [バックアップと復元の管理](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)
 

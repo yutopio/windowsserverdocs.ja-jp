@@ -1,16 +1,16 @@
 ---
 title: サーバー パフォーマンス アドバイザー パック開発ガイド
 description: サーバー パフォーマンス アドバイザー パック開発ガイド
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 46daa58e6a13f0cf0f71131b05def481f42a594c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 7f3174e203aca130b06b410066ec714254a7f125
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993099"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89627743"
 ---
 # <a name="server-performance-advisor-pack-development-guide"></a>サーバー パフォーマンス アドバイザー パック開発ガイド
 
@@ -51,7 +51,7 @@ Advisor パックには、次の要素が含まれています。
 
     * ストアド プロシージャおよびユーザー定義関数などの SQL オブジェクト
 
-* **ETW スキーマファイル**(schema. man) これは省略可能です。
+* **ETW スキーマファイル** (schema. man) これは省略可能です。
 
 ### <a name="advisor-pack-workflow"></a>Advisor パックのワークフロー
 
@@ -141,7 +141,7 @@ reportScript="ReportScript">
 
 ### <a name="advisor-pack-version"></a>Advisor パックのバージョン
 
-属性名:**バージョン**
+属性名: **バージョン**
 
 Advisor パック開発者は、advisor パックのメジャーおよびマイナーのバージョンを定義できます。
 
@@ -149,7 +149,7 @@ Advisor パック開発者は、advisor パックのメジャーおよびマイ�
 
 * SPA によりデータの非互換性の問題はなくマイナー変更のみがある場合に、マイナー バージョン アップグレードできます。
 
-バージョン管理の詳細については、「[高度なトピック](#bkmk-advancedtopics)」を参照してください。
+バージョン管理の詳細については、「 [高度なトピック](#bkmk-advancedtopics)」を参照してください。
 
 ### <a name="script-entry-point"></a>スクリプトのエントリ ポイント
 
@@ -163,7 +163,7 @@ Advisor パックを識別するために使用できるその他のいくつか
 
 * 表示名: **displayName**
 
-* 説明:**説明**
+* 説明: **説明**
 
 * 執筆者: **作成者**
 
@@ -269,7 +269,7 @@ HKEY_LOCAL_MACHINE。 ..\PowerSchemes | 1 | db310065-829b-4671-9647-2261c00e86ef
 
 **#RegistryKeys**テーブルのスキーマは、次のようになります。
 
-列名 | SQL データ型 | 説明
+列名 | SQL データ型 | Description
 -------- | -------- | --------
 キー名 | NULL でない Nvarchar(300) | レジストリ キーの完全なパス名
 KeytypeId | NULL でない Smallint | 内部型 Id
@@ -277,7 +277,7 @@ KeytypeId | NULL でない Smallint | 内部型 Id
 
 **Keytypeid**列には、次のいずれかの型を使用できます。
 
-id | 種類
+ID | Type
 --- | ---
 1 | String
 2 | expandString
@@ -301,7 +301,7 @@ id | 種類
 
 上記の例では、クエリには、1 つのレコードが返されます。
 
-Caption | 名前 | PeakUsage
+Caption | Name | PeakUsage
 ----- | ----- | -----
 C:\pagefile.sys | C:\pagefile.sys | 215
 
@@ -315,19 +315,19 @@ SequenceID | 名前空間 | ClassName | Relativepath | WmiqueryID
 
 **\#WmiObjectsProperties テーブル**
 
-id | query
+ID | query
 --- | ---
 1 | Root\Cimv2: select * FROM Win32_PageFileUsage
 
 **\#WmiQueries テーブル**
 
-id | query
+ID | query
 --- | ---
 1 | Root\Cimv2: select * FROM Win32_PageFileUsage
 
 **\#WmiObjects テーブル スキーマ**
 
-列名 | SQL データ型 | 説明
+列名 | SQL データ型 | Description
 --- | --- | ---
 SequenceId | Int 型の NULL でないです。 | 行とそのプロパティを関連付ける
 名前空間 | NULL でない nvarchar (200) | WMI 名前空間
@@ -337,10 +337,10 @@ WmiqueryId | Int 型の NULL でないです。 | #WmiQueries のキーを関連
 
 **\#WmiObjectProperties テーブル スキーマ**
 
-列名 | SQL データ型 | 説明
+列名 | SQL データ型 | Description
 --- | --- | ---
 SequenceId | Int 型の NULL でないです。 | 行とそのプロパティを関連付ける
-名前 | NULL でない nvarchar (1000) | プロパティ名
+Name | NULL でない nvarchar (1000) | プロパティ名
 値 | Nvarchar (4000) NULL | 現在のプロパティの値
 
 **\#WmiQueries テーブル スキーマ**
@@ -414,19 +414,19 @@ CounterdisplayName | NULL でない nvarchar (200) | ローカライズされた
 
 結果は、 ** \# ファイル**という名前のテーブルにあります。たとえば、次のようになります。
 
-querypath | Fullpath | Parentpath | FileName | コンテンツ
+querypath | Fullpath | Parentpath | FileName | Content
 ----- | ----- | ----- | ----- | -----
 %windir%\..\applicationHost.config |C:\Windows<br>\...\applicationHost.config | C:\Windows<br>\...\config | 構成する | 0x3C3F78
 
 **\#ファイル テーブルのスキーマ**
 
-列名 | SQL データ型 | 説明
+列名 | SQL データ型 | Description
 ---- | ---- | ----
 querypath | NULL でない Nvarchar(300) | 元のクエリ ステートメント
 Fullpath | NULL でない Nvarchar(300) | 絶対ファイル パスとファイル名
 Parentpath | NULL でない Nvarchar(300) | [ファイル パス]
 FileName | NULL でない Nvarchar(300) | ファイル名
-コンテンツ | Varbinary (max) NULL | バイナリ ファイルの内容
+Content | Varbinary (max) NULL | バイナリ ファイルの内容
 
 ### <a name="defining-rules"></a>ルールを定義します。
 
@@ -516,7 +516,7 @@ Install OS on larger disk.</advice>
 
 先ほどの前の例と、ユーザーは、システム ドライブに十分な空きディスク領域があるかどうかを認識します。 ユーザーは、空き領域の実際のサイズにも利用可能性があります。 1 つの値グループを使用して、保存してそのような結果を表示します。 複数の単一の値をグループ化され SPA コンソールでの表に示すことができます。 テーブルでは、次のように名前と値を 2 つの列があります。
 
-名前 | 値
+Name | 値
 ---- | ----
 システム ドライブ (GB) の空きディスク サイズ | 100
 インストールされているディスクの合計サイズ (GB) | 500 
@@ -649,7 +649,7 @@ UI 要素を示す例を次に示します。
 
 * varchar
 
-これらの SQL データ型の詳細については、「[データ型 (transact-sql)](/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15)」を参照してください。
+これらの SQL データ型の詳細については、「 [データ型 (transact-sql)](/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15)」を参照してください。
 
 ### <a name="single-value-groups"></a><a href="" id="bkmk-ui-svg"></a>1 つの値のグループ
 
@@ -663,9 +663,9 @@ UI 要素を示す例を次に示します。
 </singleValue>
 ```
 
-前の例では、1 つの値のグループを定義しました。 これは、セクション**System概要セクション**の子ノードです。 このグループには、1つの値 ( **OsName**、 **Osversion**、および**oslocation**) があります。
+前の例では、1 つの値のグループを定義しました。 これは、セクション **System概要セクション**の子ノードです。 このグループには、1つの値 ( **OsName**、 **Osversion**、および **oslocation**) があります。
 
-1 つの値は、グローバル一意の名前属性が必要です。 この例では、グローバルな一意の名前属性は**Systemoverview**です。 一意の名前はカスタム レポートの対応するビューの生成に適用されます。 各ビューには、vwSystemoverview などのプレフィックス**vw**が含まれています。
+1 つの値は、グローバル一意の名前属性が必要です。 この例では、グローバルな一意の名前属性は **Systemoverview**です。 一意の名前はカスタム レポートの対応するビューの生成に適用されます。 各ビューには、vwSystemoverview などのプレフィックス **vw**が含まれています。
 
 複数の単一の値のグループを定義できますが、別のグループにある場合でも、しない 2 つの単一の値名前が同じを指定できます。 SQL スクリプトのレポートは、単一の値の名前を使用して、値を適宜設定します。
 
@@ -673,7 +673,7 @@ UI 要素を示す例を次に示します。
 
 **ファクト**
 
-名前 | 値
+Name | 値
 --- | ---
 オペレーティング システム | &lt;_値はレポートスクリプトによって設定されます_&gt;
 OS バージョン | &lt;_値はレポートスクリプトによって設定されます_&gt;
@@ -703,7 +703,7 @@ OS の場所 | &lt;_値はレポートスクリプトによって設定されま
 
 **物理ネットワーク アダプター情報**
 
-id | 名前 | 種類 | (Mbps) の速度 | MAC アドレス
+ID | 名前 | Type | (Mbps) の速度 | MAC アドレス
 --- | --- | --- | --- | ---
  | <br> | | |
  | | | |
@@ -741,7 +741,7 @@ SPA は、静的な統計情報と動的な統計情報をサポートするた�
 
 動的な統計のキーは、使用可能な値の数が不明なため、デザイン時に認識されません。 ただし、複数の行では、リストの値が格納されている、ためになりますを簡単に動的な統計情報を格納するリストの値のテーブルを使用します。
 
-たとえば、さまざまなコアの平均 CPU 使用率のグラフを表示する必要がある場合は、 **CpuId**と**AverageCpuUsage**の列を含むテーブルを定義できます。
+たとえば、さまざまなコアの平均 CPU 使用率のグラフを表示する必要がある場合は、 **CpuId** と **AverageCpuUsage**の列を含むテーブルを定義できます。
 
 ``` syntax
 <listValue name="CpuPerformance">
@@ -750,7 +750,7 @@ SPA は、静的な統計情報と動的な統計情報をサポートするた�
 </listValue>
 ```
 
-もう1つの属性である**columntype**には、**キー**、**値**、または**情報**を指定できます。 データ型、 **キー** 列を二重にする必要がありますまたは double に変換できます。 **キー** ] 列をテーブルに同じキーを挿入することはできません。 **値** または **情報** 列には、この制限はありません。
+もう1つの属性である **columntype**には、 **キー**、 **値**、または **情報**を指定できます。 データ型、 **キー** 列を二重にする必要がありますまたは double に変換できます。 **キー** ] 列をテーブルに同じキーを挿入することはできません。 **値** または **情報** 列には、この制限はありません。
 
 統計の値が格納されている **値** 列です。
 
@@ -767,7 +767,7 @@ CpuId | AverageCpuUsage
 
 複数の次の例に示す **値** 複数列 **キー** 列をサポートします。
 
-CounterName | InstanceName | 平均 | SUM
+CounterName | InstanceName | Average | SUM
 --- | :---: | :---: | :---:
 % Processor time | _Total | 10 | 20
 % Processor time | CPU0 | 20 | 30 
@@ -866,11 +866,11 @@ create PROCEDURE [Microsoft.ServerPerformanceAdvisor.CoreOS.V2].[ReportScript] A
 
 * ファイル
 
-    * \#ファイル
+    * \#Files
 
 * ETW
 
-    * \#記録
+    * \#イベント
 
     * \#EventProperties
 
@@ -878,9 +878,9 @@ create PROCEDURE [Microsoft.ServerPerformanceAdvisor.CoreOS.V2].[ReportScript] A
 
 \[Dbo\].\[SetNotification\] API のセット、ルールのステータスを表示できるように、 **成功** または **警告** UI のアイコン。
 
-* @ruleNamenvarchar (50)
+* @ruleName nvarchar (50)
 
-* @adviceNamenvarchar (50)
+* @adviceName nvarchar (50)
 
 アラートおよび推奨されるメッセージは、プロビジョニングのメタデータ XML ファイルに格納されます。 これにより、レポートのスクリプトの管理が容易にします。
 
@@ -912,9 +912,9 @@ END
 
 \[Dbo\].\[GetThreshold\] API がしきい値を取得します。
 
-* @keynvarchar (50)
+* @key nvarchar (50)
 
-* @value浮動小数点出力
+* @value 浮動小数点出力
 
 > [!NOTE]
 > しきい値は、名前と値のペアと、それらはすべてのルールで参照することができます。 システム管理者は、SPA コンソールを使用して、しきい値を調整します。
@@ -949,9 +949,9 @@ if (@freediskSizeInGB < @freediskSize)
 
 \[Dbo\].\[SetSingleValue\] API が 1 つの値を設定します。
 
-* @keynvarchar (50)
+* @key nvarchar (50)
 
-* @valuesql \_ variant
+* @value sql \_ variant
 
 この値は、1 つの値の同じキーの複数回を実行できます。 最後の値が保存されます。
 
@@ -975,7 +975,7 @@ exec dbo.SetSingleValue N OsLocation ,  c:\
 
 まれに、dbo を使用して以前に設定した結果を削除することが必要になる場合があり \[ \] ます。 \[removeSingleValue \] API。
 
-* @keynvarchar (50)
+* @key nvarchar (50)
 
 次のスクリプトを使用するには、以前に設定を削除する値。
 
@@ -987,7 +987,7 @@ exec dbo.removeSingleValue N Osversion
 
 \[Dbo\].\[GetDuration\] API は、データ収集の秒単位の期間を指定されたユーザーを取得します。
 
-* @durationint 出力
+* @duration int 出力
 
 レポートスクリプトの例を次に示します。
 
@@ -998,7 +998,7 @@ exec dbo.GetDuration @duration output
 
 \[Dbo\].\[GetInternal\] API は、パフォーマンス カウンターの間隔を取得します。 現在のレポートにはパフォーマンス カウンター情報がない場合は、NULL を返すことでした。
 
-* @intervalint 出力
+* @interval int 出力
 
 レポートスクリプトの例を次に示します。
 
@@ -1090,7 +1090,7 @@ SPA コンソールを実行できる 2 つのモードでデバッグやリリ�
     exec dbo.DebugReportScript 12
     ```
 
-    **メモ**F11 キーを押して、前のステートメントにステップインし、デバッグすることもできます。
+    **メモ** F11 キーを押して、前のステートメントにステップインし、デバッグすることもできます。
 
 
 
@@ -1189,7 +1189,7 @@ SPA プロビジョニング メタデータには、前の手順を変換する
 </managementpaths>
 ```
 
-この例では、まず managementpaths の下に WMI クエリを追加し、キー名**ネットワークアダプター**を定義します。 レジストリ キーを追加しを参照してください **ネットワーク アダプター** 構文を使って **$(NetworkAdapter.PNPDeviceID)** します。
+この例では、まず managementpaths の下に WMI クエリを追加し、キー名 **ネットワークアダプター**を定義します。 レジストリ キーを追加しを参照してください **ネットワーク アダプター** 構文を使って **$(NetworkAdapter.PNPDeviceID)** します。
 
 次の表では、SPA 内のデータ コレクターには、動的なデータと他のデータ コレクターによって参照されるかどうかがサポートされている場合を定義します。
 
@@ -1230,7 +1230,7 @@ SPA は、ターゲット サーバーからデータを収集するとき、次
 <file>$(wmi.FileName)</file>
 ```
 
-**メモ**SPA は、無制限の参照をサポートしますが、レベルが多すぎる場合は、パフォーマンスのオーバーヘッドに注意してください。 循環参照がないか、自己参照サポートされていないことを確認してください。
+**メモ** SPA は、無制限の参照をサポートしますが、レベルが多すぎる場合は、パフォーマンスのオーバーヘッドに注意してください。 循環参照がないか、自己参照サポートされていないことを確認してください。
 
 ### <a name="versioning-limitations"></a>バージョン管理の制限事項
 
@@ -1238,7 +1238,7 @@ SPA は、リセットとマイナー バージョン更新プログラムをサ
 
 この機能は、主に小規模な更新です。 UI の表示要素を大幅に変更できません。 大幅に変更する場合は、別の advisor パックを作成する必要です。 Advisor パック名では、メジャー バージョンを含める必要があります。
 
-マイナーバージョンの変更**には、次のような**制限があります。
+マイナーバージョンの変更 **には、次のような** 制限があります。
 
 * スキーマ名を変更する
 
@@ -1312,14 +1312,14 @@ DECLARE @filesIO TABLE (
 
 ETW を収集するために使用する次のプロバイダーの属性を紹介します。
 
-属性 | Type | 説明
+属性 | Type | Description
 --- | --- | ---
 guid | GUID | プロバイダーの GUID
 session | string | ETW セッション名 (省略可能のカーネル イベント用にのみ必要)
 keywordsany | Hex | 任意のキーワード (省略可能、0 x プレフィックスなし)
 keywordsAll | Hex | すべてのキーワード (省略可能)
 properties | Hex | (省略可能) のプロパティ
-level | Hex | (省略可能) レベル
+レベル | Hex | (省略可能) レベル
 bufferSize | int | バッファーのサイズ (省略可能)
 flushtime | int | (省略可能) 時間をフラッシュします。
 maxBuffer | int | 最大バッファー (省略可能)
@@ -1329,7 +1329,7 @@ minBuffer | int | 最小バッファー (省略可能)
 
 **\#イベントのテーブル スキーマ**
 
-列名 | SQL データ型 | 説明
+列名 | SQL データ型 | Description
 --- | --- | ---
 SequenceID | Int 型の NULL でないです。 | 相関関係のシーケンス ID
 EventtypeId | Int 型の NULL でないです。 | イベントの種類 ID ([dbo] を参照してください。 [Eventtypes])
@@ -1341,10 +1341,10 @@ Usertime | BigInt NOT NULL | ユーザー時間
 
 **\#EventProperties テーブル スキーマ**
 
-列名 | SQL データ型 | 説明
+列名 | SQL データ型 | Description
 --- | --- | ---
 SequenceID | Int 型の NULL でないです。 | 相関関係のシーケンス ID
-名前 | Nvarchar (100) | プロパティ名
+Name | Nvarchar (100) | プロパティ名
 値 | Nvarchar (4000) | 値
 
 ### <a name="etw-schema"></a>ETW スキーマ
