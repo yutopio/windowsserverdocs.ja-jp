@@ -7,15 +7,15 @@ metadata:
   description: ソフトウェア定義コンピューティング、ストレージ、およびネットワークを 1 つのクラスターに統合して、パフォーマンスが高くコスト効率に優れ、簡単に拡張できる仮想化を実現します。
   ms.service: help
   ms.topic: hub-page
-  author: coreyp-at-msft
-  ms.author: coreyp
+  author: eross-msft
+  ms.author: lizross
   ms.date: 06/10/2020
-  ms.openlocfilehash: da06358fad02f7ca2f7088bae1a82a2b21786bda
-  ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+  ms.openlocfilehash: 34faa74941b798a9c0eddb05fb01cae349824b51
+  ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/07/2020
-  ms.locfileid: "87993881"
+  ms.lasthandoff: 09/10/2020
+  ms.locfileid: "89639388"
 productDirectory:
   items:
   - title: Hyper-V
