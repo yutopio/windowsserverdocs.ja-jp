@@ -3,16 +3,16 @@ title: 検索
 description: 検索コマンドの参照記事。ファイル内のテキスト文字列を検索し、指定された文字列をファイルに表示します。
 ms.topic: reference
 ms.assetid: 2ca66b22-3b7c-4166-8503-eb75fc53ab46
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 34eb1f1cf3071147878f421307a91de921678cfc
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b0317e856153c014df2656f0a98452b0c6428e82
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89036539"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622369"
 ---
 # <a name="find"></a>検索
 
@@ -26,7 +26,7 @@ find [/v] [/c] [/n] [/i] [/off[line]] <string> [[<drive>:][<path>]<filename>[...
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | /v | 指定したを含まないすべての行を表示 `<string>` します。 |
 | /c | 指定したを含む行をカウントし、 `<string>` 合計を表示します。 |
@@ -37,7 +37,7 @@ find [/v] [/c] [/n] [/i] [/off[line]] <string> [[<drive>:][<path>]<filename>[...
 | `[<drive>:][<path>]<filename>` | 指定した文字列を検索するファイルの場所と名前を指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - **/I**を使用しない場合、このコマンドは*文字列*として指定した内容を検索します。 たとえば、このコマンドでは、との文字を別々に扱い `a` `A` ます。 ただし、 **/i**を使用した場合、検索は大文字と小文字が区別されないようになり、 `a` と `A` は同じ文字として扱われます。
 

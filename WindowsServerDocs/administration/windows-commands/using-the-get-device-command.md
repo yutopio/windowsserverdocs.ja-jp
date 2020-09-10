@@ -3,16 +3,16 @@ title: get-デバイス
 description: 事前登録されたコンピューター (つまり、active directory ドメインサービスのコンピューターアカウントに適用された物理コンピューター) に関する Windows 展開サービス情報を取得する、デバイスの参照記事。
 ms.topic: reference
 ms.assetid: 1da79286-7e1d-45f2-aea2-d446e16a6911
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 118e14f738920527c61c8da25d19ab98126fc004
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 4fdbdfa843376b328cac0fe06e68a5a215ddd915
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029700"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622593"
 ---
 # <a name="get-device"></a>get-デバイス
 
@@ -25,7 +25,7 @@ ms.locfileid: "89029700"
 wdsutil /Get-Device {/Device:<Device name> | /ID:<MAC or UUID>} [/Domain:<Domain>] [/forest:{Yes | No}]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |ドライブ<Device name>|コンピューター (SAMAccountName) の名前を指定します。|
 |番号<MAC or UUID>|次の例に示すように、MAC アドレスまたはコンピューターの UUID (GUID) のいずれかを指定します。 有効な GUID は、バイナリ文字列または GUID 文字列の2つの形式のいずれかにする必要があります。<p>-   **バイナリ文字列**:/ID: ACEFA3E81F20694E953EB2DAA1E8B1B6<br />-   **MAC アドレス**: 00B056882FDC (ダッシュなし) または 00-B0-56-88-2F-DC (ダッシュ付き)<br />-   **GUID 文字列**:/ID: E8A3EFAC-4E69-953-B2DAA1E8B1B6|

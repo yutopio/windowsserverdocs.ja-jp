@@ -1,29 +1,29 @@
 ---
-title: Microsoft Online Service リセラー契約に基づく O365 統合モジュールの購入/試用版エンドポイントの URL の置換
+title: Microsoft 365 統合モジュールの購入-エンドポイントの URL を Microsoft Online Service リセラー契約のサポートに置き換える
 description: Windows Server Essentials の使用方法について説明します。
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9860a6b9-baea-4bf0-9a9f-6f1a288f996e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 12f4013f84c9fbfe8fc9529ea90b62f5fc5416d5
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: a8a5cf91c6de2971bc8270cc3c7ea92327b71224
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181128"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623371"
 ---
-# <a name="replace-o365-integration-module-buy-try-endpoint-url-in-support-of-microsoft-online-service-reseller-agreement"></a>Microsoft Online Service リセラー契約に基づく O365 統合モジュールの購入/試用版エンドポイントの URL の置換
+# <a name="replace-microsoft-365-integration-module-buy-try-endpoint-url-in-support-of-microsoft-online-service-reseller-agreement"></a>Microsoft 365 統合モジュールの購入-エンドポイントの URL を Microsoft Online Service リセラー契約のサポートに置き換える
 
 >適用対象: windows Server 2016 Essentials、Windows Server 2012 R2 Essentials、Windows Server 2012 Essentials
 
 ##  <a name="BKMK_O365"></a>
- Microsoft Online Service リセラー契約 (MOSRA) パートナーの場合は、顧客のサインアップトランザクションがポータルを通じて処理されるように、Windows Server Essentials Office 365 統合モジュールで使用されるエンドポイント Url を置き換える必要があります。
+ Microsoft Online Service リセラー契約 (MOSRA) パートナーの場合は、顧客のサインアップトランザクションがポータルを使用して処理されるように、Windows Server Essentials Microsoft 365 統合モジュールで使用されるエンドポイント Url を置き換える必要があります。
 
  統合モジュールは、次の 4 つのエンドポイントの URL を使用します。
 
-1.  Office 365 Enterprise サブスクリプション購入エンドポイント。
+1.  Microsoft 365 Enterprise サブスクリプションの購入エンドポイント。
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -31,9 +31,9 @@ ms.locfileid: "87181128"
 
     -   キー名 = MOSRASTDBUY
 
-    -   値 = *xxxxx*、この場合 xxxxx は自分の会社のサブスクリプション購入 URL です。 たとえば、値 =http://syndicatepartner.office365.com/enterprisebuy.html
+    -   値 = *xxxxx*、この場合 xxxxx は自分の会社のサブスクリプション購入 URL です。 たとえば、値 = http://syndicatepartner.office365.com/enterprisebuy.html
 
-2.  Office 365 Enterprise サブスクリプション試用版エンドポイント。
+2.  Microsoft 365 Enterprise サブスクリプション試用版エンドポイント。
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -41,9 +41,9 @@ ms.locfileid: "87181128"
 
     -   キー名 = MOSRASTDTRY
 
-    -   値 = *xxxxx*、この場合 xxxxx は自分の会社のサブスクリプション購入 URL です。 たとえば、値 =http://syndicatepartner.office365.com/enterprisetry.html
+    -   値 = *xxxxx*、この場合 xxxxx は自分の会社のサブスクリプション購入 URL です。 たとえば、値 = http://syndicatepartner.office365.com/enterprisetry.html
 
-3.  Office 365 Small Business Premium サブスクリプションの購入エンドポイント。
+3.  Microsoft 365 Small Business Premium サブスクリプションの購入エンドポイント。
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -51,9 +51,9 @@ ms.locfileid: "87181128"
 
     -   キー名 = MOSRALITEBUY
 
-    -   値 = *xxxxx*、この場合 xxxxx は自分の会社のサブスクリプション購入 URL です。 たとえば、値 =http://syndicatepartner.office365.com/smallbizbuy.html
+    -   値 = *xxxxx*、この場合 xxxxx は自分の会社のサブスクリプション購入 URL です。 たとえば、値 = http://syndicatepartner.office365.com/smallbizbuy.html
 
-4.  Office 365 Small Business Premium サブスクリプション試用版エンドポイント。
+4.  Microsoft 365 Small Business Premium サブスクリプション試用版エンドポイント。
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -61,7 +61,7 @@ ms.locfileid: "87181128"
 
     -   キー名 = MOSRALITETRY
 
-    -   値 = *xxxxx*、この場合 xxxxx は自分の会社のサブスクリプション購入 URL です。 たとえば、値 =http://syndicatepartner.office365.com/smallbiztry.html
+    -   値 = *xxxxx*、この場合 xxxxx は自分の会社のサブスクリプション購入 URL です。 たとえば、値 = http://syndicatepartner.office365.com/smallbiztry.html
 
 #### <a name="to-add-an-endpoint-url-key-to-the-registry"></a>エンドポイントの URL キーをレジストリに追加するには
 

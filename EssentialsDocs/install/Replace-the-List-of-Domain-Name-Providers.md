@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 104d0412-2d77-4cd4-99f7-65a885522850
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 736d7c2271752c79678c2d332ed450e6ba35b299
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 74509a7d64e718fe1d2b62f806306235e7d827e4
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181108"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623368"
 ---
 # <a name="replace-the-list-of-domain-name-providers"></a>ドメイン名プロバイダーの一覧の置換
 
@@ -30,7 +30,7 @@ ms.locfileid: "87181108"
 -   [参照コンピューターのレジストリへのエントリの追加](../install/Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)
 
 
-###  <a name="create-the-referral-service-files"></a><a name="BKMK_ReferralFiles"></a>紹介サービスファイルの作成
+###  <a name="create-the-referral-service-files"></a><a name="BKMK_ReferralFiles"></a> 紹介サービスファイルの作成
  紹介サービス管理ツールは、ドメイン名のセットアップ ウィザードに表示されるドメイン名プロバイダーの一覧の定義に使用する、ファイル セットを作成します。 各ワールドワイド地域に対して XML 形式のファイルが作成され、ファイルには、ツールで指定するドメイン名プロバイダーの情報が含まれます。 ツールによって作成されたファイルは、インターネット上で管理するセキュリティで保護されたリンク (HTTPS) 経由でアクセス可能なフォルダーに配置する必要があります。
 
 ##### <a name="to-create-the-referral-files"></a>紹介ファイルを作成するには
@@ -57,7 +57,7 @@ ms.locfileid: "87181108"
 
 11. [**ファイル システムへのファイルの生成**] をクリックします。
 
-###  <a name="add-an-entry-to-the-registry-on-the-reference-computer"></a><a name="BKMK_AddRegistry"></a>参照コンピューターのレジストリにエントリを追加する
+###  <a name="add-an-entry-to-the-registry-on-the-reference-computer"></a><a name="BKMK_AddRegistry"></a> 参照コンピューターのレジストリにエントリを追加する
  レジストリ エントリを追加して、オペレーティング システムが紹介サービス ファイルを検出できる場所を指定する必要があります。
 
 ##### <a name="to-add-a-key-to-the-registry"></a>キーをレジストリに追加するには
@@ -83,12 +83,12 @@ ms.locfileid: "87181108"
 >  A slash (/) is required at the end of the URL.
 ~~~
 
-###  <a name="domain-name-status-issues"></a><a name="BKMK_ReplaceDomainNameProviders"></a>ドメイン名の状態の問題
+###  <a name="domain-name-status-issues"></a><a name="BKMK_ReplaceDomainNameProviders"></a> ドメイン名の状態の問題
  パートナーがドメイン名プロバイダーを追加し、Windows Server Essentials SDK のアプリケーションプログラミングインターフェイス (API) を使用して、証明書の Unknown、Failed、および CertificateRequestNotSubmitted 状態を設定すると、誤ったメッセージと構成の結果が返されます。 これは、このようなケースでは、状態が返されずに例外によって処理されるからです。
 
  次のドメインの状態は失敗であるため、エラーとして報告される必要があります。
 
-- 失敗
+- Failed
 
 - PendingCustomerInterventionRequired
 
@@ -104,7 +104,7 @@ ms.locfileid: "87181108"
 
 - Ready
 
-- 保留中
+- Pending
 
 - InRenewal
 

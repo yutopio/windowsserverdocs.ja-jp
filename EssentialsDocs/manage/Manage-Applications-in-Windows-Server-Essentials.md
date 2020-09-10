@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ae89c46a-0afd-4858-9150-ec97650f45a4
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 7f83d595b56c1c6e2ae0e2565dd607a403b429b0
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 30b8dfa2087e76cc80011eb359715c95564ec1b6
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181048"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623271"
 ---
 # <a name="manage-applications-in-windows-server-essentials"></a>Windows Server Essentials でのアプリケーションの管理
 
@@ -24,7 +24,7 @@ ms.locfileid: "87181048"
 
 -   [ダッシュボードを使用したアドインのインストールまたは削除](Manage-Applications-in-Windows-Server-Essentials.md#BKMK_2)
 
-##  <a name="application-management-tasks-in-the-dashboard"></a><a name="BKMK_1"></a>ダッシュボードでのアプリケーション管理タスク
+##  <a name="application-management-tasks-in-the-dashboard"></a><a name="BKMK_1"></a> ダッシュボードでのアプリケーション管理タスク
  ダッシュボードの **[アプリケーション]** 管理ページには、次の項目が表示されます。
 
 - 次の情報を含む、インストールされているアドインの一覧
@@ -43,7 +43,7 @@ ms.locfileid: "87181048"
 
   次の表は、サーバー ダッシュボードで利用できるさまざまなアドインの管理タスクについて説明しています。 一部のタスクはアドインに固有であり、一覧からアドインを選択した場合にのみ表示されます。
 
-|タスク名|説明|
+|タスク名|Description|
 |---------------|-----------------|
 |アドインの削除|サーバーおよびネットワーク上の他のすべてのコンピューターから、選択したアドインを削除します。|
 |ネットワーク上のコンピューターへのアドインのインストール|ネットワーク上の他のすべてのコンピューターへの選択したアドインのインストールをスケジュールできます。|
@@ -53,14 +53,14 @@ ms.locfileid: "87181048"
 |アドインのプライバシーに関する声明の確認|インターネット ブラウザーから Web サイトを開いて、プライバシーに関する声明を確認できます。|
 |アドインのインストールまたは削除方法|インターネット ブラウザーから Web ページを開いて、該当するヘルプ トピックを表示します。|
 
-##  <a name="install-or-remove-add-ins-using-the-dashboard"></a><a name="BKMK_2"></a>ダッシュボードを使用したアドインのインストールまたは削除
+##  <a name="install-or-remove-add-ins-using-the-dashboard"></a><a name="BKMK_2"></a> ダッシュボードを使用したアドインのインストールまたは削除
  アドインは、サーバーに追加機能を提供するソフトウェア アプリケーションです。 Microsoft および他の独立系ソフトウェア ベンダー (ISV) から多数のアドインを利用できます。
 
  アドインが提供する拡張機能を活用するには、サーバー上にアドインをインストールする必要があります。
 
 #### <a name="to-install-an-add-in-from-microsoft-pinpoint"></a>Microsoft Pinpoint からアドインをインストールするには
 
-1.  サーバーダッシュボードで、[**アプリケーション**] をクリックし、[ **Microsoft Pinpoint** ] タブをクリックします。 使用可能なアドインの一覧が表示されます。
+1.  サーバーダッシュボードで、[ **アプリケーション**] をクリックし、[ **Microsoft Pinpoint** ] タブをクリックします。 使用可能なアドインの一覧が表示されます。
 
 2.  インストールするアドインをクリックします。 アドインの情報ページが表示されます。
 
@@ -93,7 +93,7 @@ ms.locfileid: "87181048"
     > [!NOTE]
     >  アドインを完全に削除するには、ダッシュボードの再起動が必要な場合があります。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [ダッシュボードの概要](Overview-of-the-Dashboard-in-Windows-Server-Essentials.md)
 

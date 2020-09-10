@@ -5,14 +5,14 @@ ms.date: 10/31/2013
 ms.topic: article
 ms.assetid: 0951a67d-492f-41ad-9ae5-8e4cd25e3041
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 9e730ea3fe0deeca84759c546e3f4afa76e5c7d8
-ms.sourcegitcommit: 1eaad076ea74e72b36e8893aaa15f3e5f4237bd6
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 39b74722b9f3036bab5face5d48c9a5a5af3da90
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88659377"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622394"
 ---
 # <a name="system-requirements-for-windows-server-essentials"></a>Windows Server Essentials のシステム要件
 
@@ -36,7 +36,7 @@ ms.locfileid: "88659377"
 |コンポーネント|説明|
 |---------------|-----------------|
 |ネットワーク アダプター|Gigabit Ethernet アダプター (10/100/1000BaseT PHY/MAC)|
-|インターネット|機能によっては、インターネット アクセス (有料の可能性があります) または Microsoft アカウントが必要となる場合があります|
+|Test1|機能によっては、インターネット アクセス (有料の可能性があります) または Microsoft アカウントが必要となる場合があります|
 |サポートされるクライアント オペレーティング システム| Windows 10、Windows 8.1、Windows 8、Windows 7、Macintosh OS X バージョン10.5 から10.8。<br /><br /> **注:** 一部の機能には、professional またはそれ以降のエディションが必要です。<br /><br /> 1 GB の利用可能なハード ドライブの容量 (このディスクの一部はインストール後に解放されます)|
 |ルーター|IPv4 または IPv6 ネットワーク アドレス変換 (NAT) をサポートするルーターまたはファイアウォール|
 |その他の要件|DVD-ROM ドライブ|

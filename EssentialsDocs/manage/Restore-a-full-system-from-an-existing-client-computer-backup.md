@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47e498a6-1b71-47de-88f6-8c13c221d108
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 885a10ee9b5a684c385de9baa0ebcdfac61f2c0e
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 6b93e0e31c592a11d44aca74029012a1b6229227
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180828"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622981"
 ---
 # <a name="restore-a-full-system-from-an-existing-client-computer-backup"></a>既存のクライアント コンピューターのバックアップからシステム全体を復元する
 
@@ -32,7 +32,7 @@ ms.locfileid: "87180828"
 
 -   [ハードウェアのドライバーを見つけるには](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_FindDrivers)
 
-##  <a name="what-is-computer-full-system-restore"></a><a name="BKMK_WhatIs"></a>コンピューターのシステムの完全復元とは
+##  <a name="what-is-computer-full-system-restore"></a><a name="BKMK_WhatIs"></a> コンピューターのシステムの完全復元とは
  ハード ディスク ドライブを交換する場合や、コンピューターが障害によって使用できなくなったり、起動しなくなったりした場合、システムをコンピューターの以前のバックアップから復元できます。 システムの完全復元によって、システムがバックアップの時点の状態に戻ります。
 
 > [!IMPORTANT]
@@ -85,7 +85,7 @@ ms.locfileid: "87180828"
 ### <a name="raid-and-dynamic-disks"></a>RAID およびダイナミック ディスク
  RAID (Redundant Array of Independent Disks) とダイナミック ディスクのバックアップはサポートされていません。
 
-##  <a name="how-does-the-system-restore-environment-work"></a><a name="BKMK_HowDoes"></a>システム復元環境はどのように動作しますか。
+##  <a name="how-does-the-system-restore-environment-work"></a><a name="BKMK_HowDoes"></a> システム復元環境はどのように動作しますか。
  Windows server 2012 Essentials に付属しているシステム復元メディアは、 &reg; Windows プレインストール環境 (WINDOWS PE) をコンピューターにインストールします。 Windows PE は MS-DOS 環境の後継であり、Windows 用のコア プログラム ファイルが含まれています。 Windows Server Essentials では、2つのシステム復元方法がサポートされています。クライアント復元サービスを使用します。このサービスでは、ネットワークを使用し、メディアに依存しないか、USB フラッシュドライブを使用します。
 
 > [!NOTE]
@@ -97,7 +97,7 @@ ms.locfileid: "87180828"
 
  ほとんどの場合、システム復元環境に格納されているプログラム ファイルおよびドライバーだけで、新しいコンピューターまたは復元されたコンピューターを再起動できます。 新しいコンピューター ハードウェアまたは復元されたコンピューター ハードウェアによっては、復元されたコンピューターを再起動するときに必要な記憶域およびネットワーク アダプター ドライバーが、システム復元環境に含まれていない可能性があります。 システムの完全復元ウィザードでは、必要に応じて、ドライバーをインストールする選択を行うことが可能です。 ハードウェア ドライバーを見つける方法については、「[ハードウェアのドライバーを見つけるには](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_FindDrivers)」を参照してください。 システム復元メディアの使用方法については、「[システムの完全復元ウィザードの使用](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_Using)」を参照してください。
 
-##  <a name="create-a-bootable-usb-flash-drive-to-restore-a-client-computer"></a><a name="BKMK_CreateBootable"></a>起動可能な USB フラッシュドライブを作成してクライアントコンピューターを復元する
+##  <a name="create-a-bootable-usb-flash-drive-to-restore-a-client-computer"></a><a name="BKMK_CreateBootable"></a> 起動可能な USB フラッシュドライブを作成してクライアントコンピューターを復元する
  既存のバックアップからクライアントコンピューターを復元する必要があり、サーバーに付属している復元 CD (Windows Server Essentials の場合) が見つからない場合、またはサーバー (Windows Server Essentials) でクライアント復元サービスを設定したくない場合は、起動可能な USB フラッシュドライブを作成できます。 この USB フラッシュ ドライブを使用すると、クライアント コンピューターを起動し、システムを復元することができます。 この USB フラッシュ ドライブの容量は、1 GB 以上である必要があります。
 
 #### <a name="to-create-a-bootable-usb-flash-drive"></a>起動可能な USB フラッシュ ドライブを作成するには
@@ -109,7 +109,7 @@ ms.locfileid: "87180828"
 3.  [**タスク**] ウィンドウで、[**コンピューターのバックアップとファイル履歴の設定のカスタマイズ**] をクリックします。
 
     > [!NOTE]
-    >  Windows Server Essentials で、[**クライアントコンピューターのバックアップタスク**] をクリックします。
+    >  Windows Server Essentials で、[ **クライアントコンピューターのバックアップタスク**] をクリックします。
 
 4.  [**ツール**] タブの [**コンピューターの回復**] セクションで、[**キーの作成**] をクリックします。 コンピューター回復キーの作成ウィザードが開きます。
 
@@ -118,7 +118,7 @@ ms.locfileid: "87180828"
     > [!CAUTION]
     >  USB フラッシュ ドライブ上のすべてのデータは削除されます。
 
-##  <a name="using-the-full-system-restore-wizard"></a><a name="BKMK_Using"></a>システムの完全復元ウィザードの使用
+##  <a name="using-the-full-system-restore-wizard"></a><a name="BKMK_Using"></a> システムの完全復元ウィザードの使用
  正常に復元メディア、クライアント リストア サービス、または USB フラッシュ ドライブを使用してコンピューターが起動され、復元されたクライアント コンピューターまたは新しいクライアント コンピューターにすべてのハードウェア ドライバーが読み込まれていることが確認されると、システムの完全復元ウィザードが表示されます。 このウィザードを使用して、サーバー、コンピューターのバックアップ、およびコンピューターに復元するソース ボリュームにアクセスし、実際の復元処理を実行します。
 
 > [!NOTE]
@@ -150,7 +150,7 @@ ms.locfileid: "87180828"
 
         コンピューターの電源を再度オンにし、Power On Self Test (POST) 中に適切なファンクション キー (F キー) を押してブート デバイス メニューにアクセスし、CD/DVD ドライブを選択します。 Windows ブート マネージャーが起動します。
 
-   -   Windows Server Essentials: クライアントの復元サービスを使用している場合は、[**ネットワークから起動**] オプションを使用してコンピューターを再起動します。 それ以外の場合は、USB キーを使用してコンピューターを起動します。
+   -   Windows Server Essentials: クライアントの復元サービスを使用している場合は、[ **ネットワークから起動** ] オプションを使用してコンピューターを再起動します。 それ以外の場合は、USB キーを使用してコンピューターを起動します。
 
         コンピューターの電源を再度オンにし、Power On Self Test (POST) 中に適切なファンクション キー (F キー) を押してブート デバイス メニューにアクセスし、[**ネットワークから起動**] を選択します (または、USB キーからの起動を選択できます)。 Windows ブート マネージャーが起動します。
 
@@ -235,7 +235,7 @@ ms.locfileid: "87180828"
        1. [**ディスク マネージャーの実行 (詳細)**] をクリックし、システムの予約ボリュームと同じサイズの新しいボリュームを作成します。
 
           > [!NOTE]
-          >  クライアントコンピューターが Unified Extensible Firmware Interface (UEFI) ベースの場合は、 **diskpart**ツールを使用してシステムディスクを初期化する必要があります。 この初期化を行うには、コマンド ウィンドウを開き (WinPE 環境では、Ctrl + Alt + Shift を 5 秒間押します)、**diskpart.exe** を実行した後、次の diskpart コマンドを実行します。
+          >  クライアントコンピューターが Unified Extensible Firmware Interface (UEFI) ベースの場合は、 **diskpart** ツールを使用してシステムディスクを初期化する必要があります。 この初期化を行うには、コマンド ウィンドウを開き (WinPE 環境では、Ctrl + Alt + Shift を 5 秒間押します)、**diskpart.exe** を実行した後、次の diskpart コマンドを実行します。
           >
           > 1. **DISKPART> ディスクの一覧表示**
           >    2. **DISKPART> ディスク #** *<ディスク \> *の選択
@@ -268,7 +268,7 @@ ms.locfileid: "87180828"
     > [!IMPORTANT]
     >  復元前にコンピューターで BitLocker ドライブ暗号化が有効であった場合は、コンピューターの再起動後に、BitLocker を手動で有効にする必要があります。
 
-##  <a name="where-can-i-find-the-drivers-for-my-hardware"></a><a name="BKMK_FindDrivers"></a>ハードウェアのドライバーはどこで入手できますか。
+##  <a name="where-can-i-find-the-drivers-for-my-hardware"></a><a name="BKMK_FindDrivers"></a> ハードウェアのドライバーはどこで入手できますか。
  新しいコンピューター ハードウェアまたは復元されたコンピューター ハードウェアによっては、復元されたコンピューターを再起動するときに必要な記憶域およびネットワーク アダプター ドライバーが、復元メディアに含まれていない可能性があります。 システムの完全復元ウィザードを実行するときに、不足しているドライバーを特定し、既存のメディアまたは製造元の web サイトでそれらのドライバーを検索し、フラッシュドライブにコピーして、フラッシュドライブから新しいコンピューターまたは復元されたコンピューターにコピーする必要があります。
 
  コンピューターがバックアップされている場合、そのコンピューター用のドライバーはバックアップに保存されています。 必要なドライバーの一部がリカバリ メディアにない場合は、そのコンピューターのバックアップを開いて、ドライバーを USB フラッシュ ドライブにコピーできます。
@@ -294,7 +294,7 @@ ms.locfileid: "87180828"
 
    USB フラッシュ ドライブを使用して、コンピューターの復元時にコンピューターのドライバーをインストールできます。 システムの完全復元ウィザードの使用中、ファイルまたはフォルダーの復元ウィザードが、この USB フラッシュ ドライブ上で追加ドライバーを検索します。 必要になる可能性が最も高いドライバーは、ネットワーク アダプター ドライバーと記憶域デバイス ドライバーです。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [バックアップと復元の管理](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)
 

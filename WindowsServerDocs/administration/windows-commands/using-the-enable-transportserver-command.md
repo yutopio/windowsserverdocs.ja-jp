@@ -3,16 +3,16 @@ title: 有効にする-TransportServer
 description: トランスポートサーバーのすべてのサービスを有効にする enable TransportServer のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 9d79dba1-4b57-4a00-8cba-877e6b8618e6
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: e7b9fb6f7a646e448c4c4db6aba870f175d5661b
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 644703c32f5a4e51dfb75e2ff2934ce00c79ea3a
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89023286"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89621983"
 ---
 # <a name="enable-transportserver"></a>有効にする-TransportServer
 
@@ -25,7 +25,7 @@ ms.locfileid: "89023286"
 wdsutil [Options] /Enable-TransportServer [/Server:<Server name>]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |[/Server:<Server name>]|トランスポート サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 名前が指定されていない場合は、ローカルのサーバーが使用されます。|
 ## <a name="examples"></a>例

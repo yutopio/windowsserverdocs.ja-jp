@@ -3,16 +3,16 @@ title: logman create trace
 description: イベントトレースデータコレクターを作成する logman create trace コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: 1b4dfecd-6f56-4c51-b622-c2054b4aabd7
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ac0f8350e6dd42995c5d066201e1338f6d014a6d
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 31a286d90873d76ad604de27ac94a0668939d8da
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89023836"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622755"
 ---
 # <a name="logman-create-trace"></a>logman create trace
 
@@ -28,7 +28,7 @@ logman create trace <[-n] <name>> [options]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | -s `<computer name>` | 指定されたリモートコンピューターでコマンドを実行します。 |
 | -config `<value>` | コマンドオプションを含む設定ファイルを指定します。 |
@@ -61,7 +61,7 @@ logman create trace <[-n] <name>> [options]
 | -モード `<globalsequence|localsequence|pagedmemory>` | イベントトレースセッションロガーモードを次のように指定します。<ul><li>**Globalsequence** -イベントトレーサーは、イベントを受信したトレースセッションに関係なく、受信したすべてのイベントにシーケンス番号を追加します。</li><li>**Localsequence** -イベントトレーサーが特定のトレースセッションで受信したイベントのシーケンス番号を追加することを指定します。 このオプションを使用すると、すべてのセッションで重複するシーケンス番号が存在する可能性がありますが、各トレースセッション内で一意になります。</li><li>**Pagedmemory** -イベントトレーサーが、既定の非ページメモリプールではなく、ページングされたメモリを内部バッファー割り当てに使用することを指定します。</li></ul> |
 | /? | 状況依存のヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - [-] が一覧表示されている場合は、余分なハイフン (-) を追加すると、オプションが無効になります。
 

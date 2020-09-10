@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 094e5914fee1c5d2a1b6f3c68621fa81b96f21c0
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: f797bfee89b40437078862527a3c02e52e4f7833
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87837781"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623027"
 ---
 # <a name="manage-remote-web-access-in-windows-server-essentials"></a>Windows Server Essentials でのリモート Web アクセスの管理
 
@@ -32,7 +32,7 @@ ms.locfileid: "87837781"
 
 -   [リモート Web アクセスのトラブルシューティング](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_5)
 
-##  <a name="turn-on-and-configure-remote-web-access"></a><a name="BKMK_1"></a>リモート Web アクセスをオンにして構成する
+##  <a name="turn-on-and-configure-remote-web-access"></a><a name="BKMK_1"></a> リモート Web アクセスをオンにして構成する
  次のトピックでは、リモート Web アクセスを有効にして構成する方法について説明します。
 
 -   [リモート Web アクセスの概要](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview)
@@ -47,7 +47,7 @@ ms.locfileid: "87837781"
 
 -   [リモート Web アクセスと VPN ユーザーの管理](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ManageRWAVPN)
 
-###  <a name="remote-web-access-overview"></a><a name="BKMK_Overview"></a>リモート Web アクセスの概要
+###  <a name="remote-web-access-overview"></a><a name="BKMK_Overview"></a> リモート Web アクセスの概要
  オフィスから離れているときは、web ブラウザーを開いて、インターネットにアクセスできる任意の場所からリモート Web アクセスにアクセスすることができます。 リモート Web アクセスでは、次のことができます。
 
 - サーバー上の共有ファイルやフォルダーにアクセスします。
@@ -58,9 +58,9 @@ ms.locfileid: "87837781"
 
   リモート Web アクセスにアクセスするためのアクセス許可は、新しいユーザーアカウントを追加するときに自動的には付与されません。 ユーザー アカウントを追加するときに、共有フォルダー、メディア ライブラリ、コンピューター、ホーム ページ リンク、およびサーバー ダッシュボードへのアクセスを許可することができます。 また、リモート Web アクセスを使用することをユーザーに許可しないように指定することもできます。
 
-  [リモート Web アクセス] 設定は、Windows Server Essentials ダッシュボードの [**ユーザー** ] タブで、各ユーザーアカウントに対して表示されます。 リモート Web アクセス設定を変更するには、ユーザーアカウントを右クリックし、[**アカウントのプロパティの表示**] をクリックします。
+  [リモート Web アクセス] 設定は、Windows Server Essentials ダッシュボードの [ **ユーザー** ] タブで、各ユーザーアカウントに対して表示されます。 リモート Web アクセス設定を変更するには、ユーザーアカウントを右クリックし、[ **アカウントのプロパティの表示**] をクリックします。
 
-###  <a name="turn-on-remote-web-access"></a><a name="BKMK_TurnOnRWA"></a>リモート Web アクセスをオンにする
+###  <a name="turn-on-remote-web-access"></a><a name="BKMK_TurnOnRWA"></a> リモート Web アクセスをオンにする
  リモート Web アクセスを有効にするには、サーバー ダッシュボードから Anywhere Access のセットアップ ウィザードを実行します。
 
 ##### <a name="to-turn-on-remote-web-access"></a>リモート Web アクセスを有効にするには
@@ -69,13 +69,13 @@ ms.locfileid: "87837781"
 
 2.  **[設定]** をクリックし、**[Anywhere Access]** タブをクリックします。
 
-3.  **[構成]** をクリックします。 Anywhere Access のセットアップ ウィザードが表示されます。
+3.  **[Configure]\(構成\)** をクリックします。 Anywhere Access のセットアップ ウィザードが表示されます。
 
 4.  **[有効にする Anywhere Access の機能を選択します]** ページで、**[リモート Web アクセス]** チェック ボックスを選択します。
 
 5.  指示に従ってウィザードを完了します。
 
-###  <a name="change-your-region"></a><a name="BKMK_Region"></a>リージョンを変更する
+###  <a name="change-your-region"></a><a name="BKMK_Region"></a> リージョンを変更する
  ネットワーク管理者は、Windows Server Essentials の地域の設定を変更できます。
 
 ##### <a name="to-change-the-region-setting"></a>地域の設定を変更するには
@@ -88,7 +88,7 @@ ms.locfileid: "87837781"
 
 4.  ドロップダウン リストから、新しい地域を選択し、**[適用]** をクリックして新しい地域の設定を受け入れます。
 
-###  <a name="manage-remote-web-access-permissions"></a><a name="BKMK_ManagePerms"></a>リモート Web アクセスのアクセス許可を管理する
+###  <a name="manage-remote-web-access-permissions"></a><a name="BKMK_ManagePerms"></a> リモート Web アクセスのアクセス許可を管理する
  Windows Server Essentials でユーザー アカウントを追加する場合、既定では、新しいユーザーにはリモート Web アクセスの使用が許可されます。 ユーザーアカウントに対してリモート Web アクセスを許可しないことを選択し、ユーザーがリモート Web アクセスを使用する必要があることを確認した場合は、ユーザーアカウントのプロパティを更新できます。
 
 ##### <a name="to-manage-remote-web-access-permissions-for-a-user-account"></a>ユーザー アカウントのリモート Web アクセスへのアクセス許可を管理するには
@@ -103,15 +103,15 @@ ms.locfileid: "87837781"
 
 5. [**適用**] をクリックし、[**OK**] をクリックします。
 
-   詳細については、「[ユーザーアカウントの管理](Manage-User-Accounts-in-Windows-Server-Essentials.md)」を参照してください。
+   詳細については、「 [ユーザーアカウントの管理](Manage-User-Accounts-in-Windows-Server-Essentials.md)」を参照してください。
 
-###  <a name="secure-remote-web-access"></a><a name="BKMK_SecureRWA"></a>リモート Web アクセスをセキュリティで保護する
+###  <a name="secure-remote-web-access"></a><a name="BKMK_SecureRWA"></a> リモート Web アクセスをセキュリティで保護する
  Windows Server Essentials は、ソフトウェアと Web ブラウザーの間で交換される情報を保護するためにセキュリティ証明書を使用します。 コンピューターにコネクタ ソフトウェアをインストールするときに、Windows Server Essentials のセキュリティ証明書が、コンピューター上の信頼された証明書の一覧に追加されます。 オフィス以外の場所からリモート Web アクセスに接続する最適な方法は、コネクタ ソフトウェアがインストールされているポータブル コンピューターを使用することです。
 
 > [!WARNING]
 >  公共の場所または信頼されていない他のコンピューターからリモート Web アクセスを使用するユーザーは、コンピューターの前から離れる前やセッションを終了したときに、必ず Web サイトからログオフする必要があります。
 
-###  <a name="manage-remote-web-access-and-vpn-users"></a><a name="BKMK_ManageRWAVPN"></a>リモート Web アクセスと VPN ユーザーの管理
+###  <a name="manage-remote-web-access-and-vpn-users"></a><a name="BKMK_ManageRWAVPN"></a> リモート Web アクセスと VPN ユーザーの管理
  VPN を使用すると、Windows Server Essentials に接続し、サーバーに保存されているすべてのリソースにアクセスすることができます。 これが特に役立つのは、クライアント コンピューターに設定されているネットワーク アカウントを使用して、ホストされている Windows Server Essentials サーバーに VPN 経由で接続できる場合です。 ホストされている Windows Server Essentials サーバーで新しく作成されたユーザー アカウントはすべて、クライアント コンピューターへの初回ログオン時に VPN を使用する必要があります。
 
 ##### <a name="to-set-vpn-and-remote-web-access-permissions-for-network-users"></a>ネットワーク ユーザーの VPN とリモート Web アクセスのアクセス許可を設定するには
@@ -122,7 +122,7 @@ ms.locfileid: "87837781"
 
 3.  ユーザー アカウントの一覧から、リモートでデスクトップにアクセスするアクセス許可を付与するユーザー アカウントを選択します。
 
-4.  [**ユーザーアカウント \> タスクの<** ] ウィンドウで、[**プロパティ**] をクリックします。
+4.  [ ** ユーザーアカウント \> タスクの<** ] ウィンドウで、[ **プロパティ**] をクリックします。
 
 5.  **<ユーザーアカウントの \> プロパティ**] で、[ **Anywhere Access** ] タブをクリックします。
 
@@ -134,7 +134,7 @@ ms.locfileid: "87837781"
 
 7.  [**適用**] をクリックし、[**OK**] をクリックします。
 
-##  <a name="set-up-your-router"></a><a name="BKMK_2"></a>ルーターをセットアップする
+##  <a name="set-up-your-router"></a><a name="BKMK_2"></a> ルーターをセットアップする
  リモート Web アクセスを使用するようにサーバーを構成するときには、Anywhere Access のセットアップ ウィザードによってルーターのセットアップが行われます。 ルーターを交換したり、ルーターの設定を変更したりした場合は、ルーターのセットアップ ウィザードを再実行する必要があります。 詳細については、次のトピックを参照してください。
 
 -   [ルーターのセットアップ](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SetUpRouter)
@@ -145,7 +145,7 @@ ms.locfileid: "87837781"
 
 -   [リモート デスクトップ サービス ActiveX コントロールの有効化](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ActiveX)
 
-###  <a name="set-up-your-router"></a><a name="BKMK_SetUpRouter"></a>ルーターをセットアップする
+###  <a name="set-up-your-router"></a><a name="BKMK_SetUpRouter"></a> ルーターをセットアップする
  Windows Server Essentials は、この手順の間に UPnP コマンドを使用してルーターを自動的に構成しようと試みます。 このためには、ルーターが UPnP 標準をサポートしていて、ルーターで UPnP 設定が有効になっている必要があります。
 
 > [!NOTE]
@@ -153,7 +153,7 @@ ms.locfileid: "87837781"
 
  ルーターがドメイン名のセットアップ ウィザードによってセットアップされない場合は、手動でポート 443 を転送する必要があります。 ルーターでポートフォワーディングを設定する方法については、 [Small Business Server フォーラム](/answers/topics/windows-small-business-server.html)を参照してください。
 
-###  <a name="replace-a-router"></a><a name="BKMK_ReplaceRouter"></a>ルーターを交換する
+###  <a name="replace-a-router"></a><a name="BKMK_ReplaceRouter"></a> ルーターを交換する
  製造元の指示に従ってルーターを交換し、ルーターのセットアップウィザードを実行して新しいルーターを構成します。
 
 ##### <a name="to-set-up-your-new-router"></a>新しいルーターをセットアップするには
@@ -164,7 +164,7 @@ ms.locfileid: "87837781"
 
 3.  ウィザードの指示に従って、新しいルーターのセットアップを完了します。
 
-###  <a name="network-location-defined"></a><a name="BKMK_NetworkLocation"></a>定義されたネットワークの場所
+###  <a name="network-location-defined"></a><a name="BKMK_NetworkLocation"></a> 定義されたネットワークの場所
  ネットワークの場所は、ネットワークに接続するときに Windows によって適用されるネットワーク設定のコレクションです。 この設定は、使用するネットワークの種類によって異なり、カスタマイズすることができます。 ネットワークの場所の設定によって、特定の機能 (ファイルとプリンターの共有、ネットワーク探索、およびパブリック フォルダーの共有など) が有効または無効になるかどうかが決まります。 ネットワークの場所は、異なるネットワークに接続する必要がある場合に役立ちます。
 
  たとえば、自宅と職場の両方で使用するラップトップ コンピューターを所有している場合があります。 オフィスでは、オフィス ネットワークに接続します。 帰宅すると、ラップトップを使用し、ホーム サーバーに保存されているビデオや音楽にアクセスして再生します。 新しいネットワークに接続して場所の種類を指定すると、Windows により、その場所の種類に対して事前設定されているネットワーク プロファイルが割り当てられます。 次回にそのネットワークに接続すると、Windows はネットワークを認識し、正しい設定が自動的に割り当てられます。 これにより、コンピューター上の情報を保護するのに役立つセキュリティ層が追加され、その場所に必要なネットワーク機能のみが有効になります。
@@ -179,7 +179,7 @@ ms.locfileid: "87837781"
 
 -   **ドメイン** 職場などでドメインを使用する場合、このネットワークを選択します。 この種類のネットワークの場所は、ネットワーク管理者によって管理されており、選択または変更することはできません。
 
-###  <a name="enable-remote-desktop-services-activex-controls"></a><a name="BKMK_ActiveX"></a>リモートデスクトップサービス ActiveX コントロールを有効にする
+###  <a name="enable-remote-desktop-services-activex-controls"></a><a name="BKMK_ActiveX"></a> リモートデスクトップサービス ActiveX コントロールを有効にする
  リモートデスクトップサービス ActiveX コントロールを使用すると、リモート Web アクセスを使用して、別のコンピューターからインターネット経由で自宅または会社のコンピューターにアクセスできます。
 
 ##### <a name="to-enable-remote-desktop-services-activex-controls"></a>リモート デスクトップ サービス ActiveX コントロールを有効にするには
@@ -196,7 +196,7 @@ ms.locfileid: "87837781"
 
 4.  **[OK]** を 2 回クリックし、変更を受け入れてダイアログ ボックスを閉じます。
 
-##  <a name="set-up-your-domain-name"></a><a name="BKMK_3"></a>ドメイン名を設定する
+##  <a name="set-up-your-domain-name"></a><a name="BKMK_3"></a> ドメイン名を設定する
  リモート Web アクセスを有効にしたら、Windows Server Essentials が実行されているサーバーのドメイン名をセットアップできます。 この手順は、リモート コンピューターからリモート Web アクセスを使用する予定がある場合に必要です。 詳細については、次のトピックを参照してください。
 
 -   [ドメイン名の概要](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_DNOverview)
@@ -223,12 +223,12 @@ ms.locfileid: "87837781"
 
 -   [ドメイン ネーム サービス プロバイダーの確認](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Find)
 
-###  <a name="domain-names-overview"></a><a name="BKMK_DNOverview"></a>ドメイン名の概要
+###  <a name="domain-names-overview"></a><a name="BKMK_DNOverview"></a> ドメイン名の概要
  ドメイン名は、インターネット上のサーバーを一意に識別します。 ドメイン名は少なくとも 2 つの部分から構成されています。トップ レベルのドメイン名 (TLD) と第 2 レベルのドメイン名です。 たとえば、contoso.com では、com は TLD で、contoso は第2レベルのドメイン名です。
 
  オフィス以外の場所にいても、ドメイン名を使用して、ネットワーク内のサーバーまたはコンピューター上にある共有ファイルにアクセスできます。 離れた場所からサーバーを管理することもできます。 たとえば、サーバーに contoso.com を登録します。 オフィス以外の場所で、ラップトップの Web ブラウザーを開いてアドレス テキスト ボックスに **contoso.com** と入力し、Windows Server Essentials で設定したリモート Web アクセスのインスタンスに接続することができます。
 
-###  <a name="understand-microsoft-personalized-domain-names"></a><a name="BKMK_PersonalizedNames"></a>Microsoft の個人用ドメイン名について
+###  <a name="understand-microsoft-personalized-domain-names"></a><a name="BKMK_PersonalizedNames"></a> Microsoft の個人用ドメイン名について
  Microsoft の個人用ドメイン名には、次の機能が含まれます。
 
 - リモート Web アクセスのカスタムドメイン名 (*たとえば、remotewebaccess.com)。* 使用するドメイン名は、パブリック IP アドレスに関連付けられます。
@@ -242,16 +242,16 @@ ms.locfileid: "87837781"
 > [!IMPORTANT]
 >  Windows Live では、Microsoft アカウントのパスワードにサーバーがサポートしていない特殊文字を使用できます。 Microsoft の個人用ドメインを使用する場合、Microsoft アカウントのパスワードに、サーバーがサポートする文字のみが含まれていることを確認してください。 サーバーでは、$、/、'、および % の使用をサポートしていません。
 
-###  <a name="use-a-new-or-existing-domain-name"></a><a name="BKMK_UseNewName"></a>新規または既存のドメイン名を使用する
- Windows Server Essentials を実行するサーバーでドメイン名を自動的にセットアップするには、ドメイン名のセットアップ ウィザードに一覧表示されているドメイン ネーム サービス プロバイダーを使用する必要があります。 新しいドメイン名を取得するか、または既存のドメイン名を使用することもできます。 以下のいずれかを実行します。
+###  <a name="use-a-new-or-existing-domain-name"></a><a name="BKMK_UseNewName"></a> 新規または既存のドメイン名を使用する
+ Windows Server Essentials を実行するサーバーでドメイン名を自動的にセットアップするには、ドメイン名のセットアップ ウィザードに一覧表示されているドメイン ネーム サービス プロバイダーを使用する必要があります。 新しいドメイン名を取得するか、または既存のドメイン名を使用することもできます。 次のいずれかの操作を行います。
 
 -   ウィザードに一覧表示されているいずれかのドメイン ネーム サービス プロバイダーから新しいドメイン名を取得する場合は、**[新しいドメイン名をセットアップする]** をクリックします。
 
 -   サポートされているいずれかのドメイン ネーム サービス プロバイダーから購入した既存のドメイン名がある場合は、ドメイン名のセットアップ ウィザードを使用して、サーバーのドメイン名をセットアップできます。 **[既に所有しているドメイン名を使用する]** をクリックし、**[ドメイン名のセットアップ]** テキスト ボックスにドメイン名を入力します。 ドメイン名を購入するために使用したユーザー名とパスワードを指定する必要があります。
 
--   Windows Server Essentials ではサポートされていないドメイン ネーム サービス プロバイダーから購入した既存のドメイン名があり、ドメイン名のセットアップ ウィザードを使用してサーバーのドメイン名をセットアップする場合は、ウィザードに一覧表示されたドメイン ネーム サービス プロバイダーのいずれかにドメイン名を転送することができます。 [**既に所有しているドメイン名を使用する**] をクリックし、[**ドメイン**名] テキストボックスにドメイン名を入力して、ドメインネームサービスプロバイダーの web サイトの指示に従ってドメイン名を転送します。
+-   Windows Server Essentials ではサポートされていないドメイン ネーム サービス プロバイダーから購入した既存のドメイン名があり、ドメイン名のセットアップ ウィザードを使用してサーバーのドメイン名をセットアップする場合は、ウィザードに一覧表示されたドメイン ネーム サービス プロバイダーのいずれかにドメイン名を転送することができます。 [ **既に所有しているドメイン名を使用する**] をクリックし、[ **ドメイン** 名] テキストボックスにドメイン名を入力して、ドメインネームサービスプロバイダーの web サイトの指示に従ってドメイン名を転送します。
 
-###  <a name="set-up-a-domain-name"></a><a name="BKMK_SetUpName"></a>ドメイン名を設定する
+###  <a name="set-up-a-domain-name"></a><a name="BKMK_SetUpName"></a> ドメイン名を設定する
  リモート Web アクセスを有効にすると、サーバーのインターネット ドメイン名をセットアップできます。
 
 ##### <a name="to-set-up-or-manage-an-internet-domain-name"></a>インターネット ドメイン名をセットアップまたは管理するには
@@ -264,15 +264,15 @@ ms.locfileid: "87837781"
 
 4.  指示に従ってウィザードを完了します。 ドメイン名と証明書を所有していない場合、ウィザードを使用すると、ドメイン名と証明書を購入するドメイン ネーム プロバイダーを見つけるのに役立ちます。または、Microsoft の個人用ドメイン名を取得することもできます。
 
-###  <a name="choose-a-domain-name-service-provider"></a><a name="BKMK_ChooseProvider"></a>ドメインネームサービスプロバイダーの選択
- 使用するドメイン名拡張子をサポートしているドメイン ネーム サービス プロバイダーを選択する必要があります。 ドメイン名のセットアップウィザードには、各プロバイダーの web サイトへのリンクと共に使用できる、修飾されたプロバイダーの一覧が含まれています。 プロバイダーによって提供されるサービスと価格に関する情報を取得するには、各プロバイダーの名前の横にある [**詳細情報**] リンクをクリックします。
+###  <a name="choose-a-domain-name-service-provider"></a><a name="BKMK_ChooseProvider"></a> ドメインネームサービスプロバイダーの選択
+ 使用するドメイン名拡張子をサポートしているドメイン ネーム サービス プロバイダーを選択する必要があります。 ドメイン名のセットアップウィザードには、各プロバイダーの web サイトへのリンクと共に使用できる、修飾されたプロバイダーの一覧が含まれています。 プロバイダーによって提供されるサービスと価格に関する情報を取得するには、各プロバイダーの名前の横にある [ **詳細情報** ] リンクをクリックします。
 
 > [!NOTE]
 >  ドメイン ネーム サービス プロバイダーには、世界各国の幅広い地域でサービスを提供しているプロバイダーもあれば、より小さな市場を対象にしているプロバイダーもあります。 このため、一部のプロバイダーでは、ユーザーが使用する言語に翻訳された Web サイトが提供されていない可能性があります。
 
  ドメイン ネーム サービス プロバイダーからドメイン名を購入するときに、ドメイン ネーム システム (DNS) 動的更新プロトコル サービスの購入も検討することが必要になる場合があります。 DNS 動的更新プロトコルは、ローカル ネットワークの IP アドレスが絶えず変更されている場合でも、任意のユーザーがインターネットからそのネットワーク上のリソースにアクセスできるサービスです。 または、IP アドレスが変更されないように、インターネット サービス プロバイダー (ISP) から静的 IP アドレスを購入することもできます。
 
-###  <a name="choose-a-domain-name"></a><a name="BKMK_ChooseDomainName"></a>ドメイン名を選択してください
+###  <a name="choose-a-domain-name"></a><a name="BKMK_ChooseDomainName"></a> ドメイン名を選択してください
  ビジネス サーバーを一意に識別する名前を選択します。 たとえば、会社名が Contoso Ltd の場合、インターネット上のホームまたはビジネス サーバーを一意に識別するために Contoso を選択できます。 このドメイン名を使用できない場合は、この名前の別のバリエーションを試すか、まったく異なる名前を試してみてください。
 
  名前を入力する際の制限は次のとおりです。
@@ -284,7 +284,7 @@ ms.locfileid: "87837781"
     > [!NOTE]
     >  ドメイン名では大文字と小文字が区別されません。
 
-###  <a name="choose-a-domain-name-prefix"></a><a name="BKMK_Prefixes"></a>ドメイン名のプレフィックスを選択してください
+###  <a name="choose-a-domain-name-prefix"></a><a name="BKMK_Prefixes"></a> ドメイン名のプレフィックスを選択してください
  ドメイン名は階層的なラベルで構成されます。
 
  **トップレベル ドメイン拡張子**は、ドメイン名の一番右側のラベルです。 たとえば、www contoso.com の場合、 \. com はトップレベルのドメイン名拡張子です。
@@ -296,7 +296,7 @@ ms.locfileid: "87837781"
 > [!TIP]
 >  ドメイン名のプレフィックスとして、既定値である **[Remote]** を使用することをお勧めします。
 
-###  <a name="choose-a-domain-name-extension"></a><a name="BKMK_Extension"></a>ドメイン名拡張子の選択
+###  <a name="choose-a-domain-name-extension"></a><a name="BKMK_Extension"></a> ドメイン名拡張子の選択
  インターネットの Web サイトのドメイン名を選択するときは、使用するドメイン名拡張子も指定する必要があります。 この拡張子は、任意のドメイン名の最後のピリオドの後に続く文字で識別されます。 (拡張機能の正式な用語は、トップレベルドメインまたは TLD です)。
 
  使用できる主なドメイン拡張子には、汎用と国コードの 2 種類があります。
@@ -306,7 +306,7 @@ ms.locfileid: "87837781"
 
  **汎用トップレベル ドメインの例**
 
-|ドメイン拡張子|説明|
+|ドメイン拡張子|Description|
 |----------------------|-----------------|
 |.com|通常は商業組織によって使用されますが、だれでも使用できます。|
 |.net|ネットワーク インフラストラクチャ サービスを提供する企業向けです。|
@@ -318,7 +318,7 @@ ms.locfileid: "87837781"
 
  **国コード トップレベル ドメインの例**
 
-|ドメイン拡張子|説明|
+|ドメイン拡張子|Description|
 |----------------------|-----------------|
 |.ca|カナダの Web サイトで使用されます。|
 |.cn|中国の Web サイトで使用されます。|
@@ -330,16 +330,16 @@ ms.locfileid: "87837781"
 #### <a name="if-a-domain-extension-is-not-available-to-select-in-the-set-up-domain-name-wizard"></a>ドメイン名のセットアップ ウィザードで希望するドメイン拡張子を選択できない場合
  ドメイン名のセットアップ ウィザードを実行すると、ウィザードによりシステム情報が確認され、国または地域が特定されます。 次に、そのエリアの提携プロバイダーがサポートするドメイン拡張子のみが表示されます。 希望するドメイン拡張子が一覧に表示されない場合は、別のドメイン拡張子を選択して続行する必要があります。 ウィザードによって返される一覧から拡張子を選択してください。
 
-###  <a name="update-or-upgrade-your-domain-name-service"></a><a name="BKMK_UpdateService"></a>ドメインネームサービスの更新またはアップグレード
+###  <a name="update-or-upgrade-your-domain-name-service"></a><a name="BKMK_UpdateService"></a> ドメインネームサービスの更新またはアップグレード
  ドメイン名を購入しても証明書を購入していない場合は、ドメイン ネーム サービスの更新やアップグレードが必要になることがあります。 ドメイン ネーム サービス プロバイダーから提供される、ドメイン名の証明書が必要です。
 
 > [!NOTE]
 >  ドメイン ネーム サービス プロバイダーと連携して、必要な証明書の種類を決定してください。 提供されている安価な証明書のいずれかを使用できます。 ただし、高レベルのセキュリティを確保する証明書の場合は、ドキュメントと機能を確認して、ビジネスのニーズを適切に満たすかどうかを判断する必要があります。
 
-###  <a name="export-or-import-your-certificate-on-your-server"></a><a name="BKMK_ExportCert"></a>サーバーでの証明書のエクスポートまたはインポート
+###  <a name="export-or-import-your-certificate-on-your-server"></a><a name="BKMK_ExportCert"></a> サーバーでの証明書のエクスポートまたはインポート
  証明書のバックアップ コピーを作成するか、証明書を別のサーバーで使用する場合は、証明書をエクスポートする必要があります。 証明書をエクスポートする方法の詳細については、「 [証明書をエクスポートする](https://go.microsoft.com/fwlink/p/?LinkId=214362)」を参照してください。
 
-###  <a name="set-up-a-domain-name-manually"></a><a name="BKMK_SetNameManually"></a>ドメイン名を手動で設定する
+###  <a name="set-up-a-domain-name-manually"></a><a name="BKMK_SetNameManually"></a> ドメイン名を手動で設定する
  このオプションを選択すると、サーバーによるドメイン名の監視と管理は行われなくなります。構成の問題があっても警告は表示されません。 次のいずれかに当てはまる場合は、必要に応じてこのオプションを使用することも検討してください。
 
 - お住まいの国または地域に対応するパートナー ドメイン ネーム プロバイダーが表示されない場合。
@@ -364,7 +364,7 @@ ms.locfileid: "87837781"
 
 4.  ウィザードの指示に従って、信頼された証明書をインポートします。 信頼された証明書がない場合は、ウィザードに表示されるサポートされているドメイン ネーム プロバイダーから取得するか、任意の信頼できるプロバイダーから購入できます。 信頼された証明書の詳細については、ドメイン ネーム プロバイダーに問い合わせてください。
 
-###  <a name="find-your-domain-name-service-provider"></a><a name="BKMK_Find"></a>ドメインネームサービスプロバイダーの検索
+###  <a name="find-your-domain-name-service-provider"></a><a name="BKMK_Find"></a> ドメインネームサービスプロバイダーの検索
 
 ##### <a name="to-find-the-domain-name-service-provider-for-your-domain-name"></a>ドメイン名のドメイン ネーム サービス プロバイダーを確認するには
 
@@ -378,7 +378,7 @@ ms.locfileid: "87837781"
 
 5. 検索結果の **[Registrar]** の欄に、ドメイン ネーム サービス プロバイダーの名前が表示されます。
 
-##  <a name="customize-remote-web-access"></a><a name="BKMK_4"></a>リモート Web アクセスのカスタマイズ
+##  <a name="customize-remote-web-access"></a><a name="BKMK_4"></a> リモート Web アクセスのカスタマイズ
  リモート Web アクセス サイトは、個人用のロゴや背景画像を追加してカスタマイズできます。 また、ホーム ページへのリンクを追加して、すべてのユーザーがこの情報を参照できるようにすることもできます。 詳細については、次のトピックを参照してください。
 
 -   [リモート Web アクセスのカスタマイズ](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_CustomizeRWA)
@@ -387,7 +387,7 @@ ms.locfileid: "87837781"
 
 -   [リモート Web アクセスの修復](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_RepairRWA)
 
-###  <a name="customize-remote-web-access"></a><a name="BKMK_CustomizeRWA"></a>リモート Web アクセスのカスタマイズ
+###  <a name="customize-remote-web-access"></a><a name="BKMK_CustomizeRWA"></a> リモート Web アクセスのカスタマイズ
  リモート Web アクセスのホーム ページに対して、Web サイトのタイトルの変更、背景画像とロゴの変更、他の Web サイトへのリンクの追加を行ってカスタマイズすることができます。
 
 ##### <a name="to-customize-remote-web-access"></a>リモート Web アクセスをカスタマイズするには
@@ -400,7 +400,7 @@ ms.locfileid: "87837781"
 
 4.  リモート Web アクセスのカスタマイズが完了したら、**[OK]** をクリックします。 リモート Web アクセスの変更をテストします。
 
-###  <a name="customize-images-for-backgrounds-and-logos"></a><a name="BKMK_CustomizeImages"></a>背景とロゴ用にイメージをカスタマイズする
+###  <a name="customize-images-for-backgrounds-and-logos"></a><a name="BKMK_CustomizeImages"></a> 背景とロゴ用にイメージをカスタマイズする
  このセクションでは、リモート Web アクセスのカスタマイズに使用できる画像についての情報を提供します。
 
 #### <a name="image-size"></a>イメージ サイズ
@@ -423,7 +423,7 @@ ms.locfileid: "87837781"
 
 -   JPG (*.jpg)
 
-###  <a name="repair-remote-web-access"></a><a name="BKMK_RepairRWA"></a>リモート Web アクセスの修復
+###  <a name="repair-remote-web-access"></a><a name="BKMK_RepairRWA"></a> リモート Web アクセスの修復
  修復ウィザードを使用すると、ルーターやドメイン名の問題を検出して解決するのに役立ちます。 リモート Web アクセスの問題を検出するには 2 つの方法があります。
 
 -   ダッシュボードの [サーバーの設定] にある [Anywhere Access] タブに、赤い X マークのアイコンが問題の説明と共に表示されます。
@@ -445,7 +445,7 @@ ms.locfileid: "87837781"
 
 5.  ウィザードの完了時にアラートが表示される場合は、**[再試行]** をクリックすると、問題の修復が再試行されます。 引き続きアラートが表示される場合は、アラートを確認して、問題に関する追加情報とトラブルシューティングの手順を参照します。
 
-##  <a name="troubleshoot-remote-web-access"></a><a name="BKMK_5"></a>リモート Web アクセスのトラブルシューティング
+##  <a name="troubleshoot-remote-web-access"></a><a name="BKMK_5"></a> リモート Web アクセスのトラブルシューティング
 
 -   [リモート Web アクセスへの接続のトラブルシューティング](../support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)
 

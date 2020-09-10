@@ -3,16 +3,16 @@ title: manage-bde changepassword
 description: データドライブのパスワードを変更する manage-bde changepassword コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: b174e152-8442-4fba-8b33-56a81ff4f547
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 97bae4c10756818ec8475a114aa048a4cae58617
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 8c262b6ca123d76af6ebdca09e5546f41350686d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89030540"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622705"
 ---
 # <a name="manage-bde-changepassword"></a>manage-bde changepassword
 
@@ -26,7 +26,7 @@ manage-bde -changepassword [<drive>] [-computername <name>] [{-?|/?}] [{-help|-h
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<drive>` | コロンの後にドライブ文字を表します。 |
 | -computername | manage-bde.exe が別のコンピューターの BitLocker 保護を変更するために使用されることを指定します。 また、このコマンドの省略版として **-cn** を使用することもできます。 |

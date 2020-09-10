@@ -3,16 +3,16 @@ title: wbadmin start systemstatebackup
 description: Wbadmin start systemstatebackup のリファレンス記事。ローカルコンピューターのシステム状態のバックアップを作成し、指定された場所に保存します。
 ms.topic: reference
 ms.assetid: 998366c1-0a64-45e6-9ed3-4c3f5b8406f0
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 5b2910a6c6cbcd9fbf6bd8d8564425128b98af24
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 7bd0df6e0cbfd7e34439e858865420002f5fb364
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031860"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89621485"
 ---
 # <a name="wbadmin-start-systemstatebackup"></a>wbadmin start systemstatebackup
 
@@ -35,12 +35,12 @@ wbadmin start systemstatebackup
 
 ### <a name="parameters"></a>パラメーター
 
-|   パラメーター   |                                                                                                                                                                                                                      説明                                                                                                                                                                                                                      |
+|   パラメーター   |                                                                                                                                                                                                                      Description                                                                                                                                                                                                                      |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | -backuptarget | バックアップを保存する場所を指定します。 記憶域の場所には、次の形式のドライブ文字または GUID ベースのボリュームが必要です: \\ \\ ? \ volume{*guid*}。</br>Windows Server 2008 を実行しているコンピューターでは、共有ネットワークフォルダーへのシステム状態のバックアップはサポートされていません。 サーバーで Windows Server 2008 R2 以降が実行されている場合は、 **backuptarget: \\ \\ \\ servername\sharedFolder**コマンドを使用してシステム状態のバックアップを保存できます。 |
 |    -quiet     |                                                                                                                                                                                                   ユーザーにプロンプトを表示せずにサブコマンドを実行します。                                                                                                                                                                                                    |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 システム状態のバックアップをボリュームに保存する方法の詳細については、Microsoft サポート技術情報の記事 944530 () を参照してください [https://go.microsoft.com/fwlink/?LinkId=110439](https://go.microsoft.com/fwlink/?LinkId=110439) 。
 

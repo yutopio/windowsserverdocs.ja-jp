@@ -3,16 +3,16 @@ title: ImageGroup の追加
 description: Windows 展開サービスサーバーにイメージグループを追加する、ImageGroup の参照記事。
 ms.topic: reference
 ms.assetid: 6ca88671-51de-4924-b969-88f3dfd84270
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 4ee2af4677854e3a4abc727d399ce5a52244aaee
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 45edd86f62493cadbfbfd6e3f1e9bc86ea5bd9fc
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029760"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622212"
 ---
 # <a name="add-imagegroup"></a>ImageGroup の追加
 
@@ -25,7 +25,7 @@ Windows 展開サービス サーバーには、イメージ グループを追�
 wdsutil [Options] /add-ImageGroumediaGroup:<Image group name> [/Server:<Server name>]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 mediaGroup:<Image group name>|追加するイメージ グループの名前を指定します。|
 |[/Server:<Server name>]|サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 サーバー名が指定されていない場合は、ローカルのサーバーが使用されます。|

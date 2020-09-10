@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 7e50886e-08b8-4c97-95cf-456ba3800ebf
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 54985c9b09eba9e970df83254f69247e4016123b
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 534b08fbdc283dc3b37e7fd31d951605250e1c65
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180978"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623089"
 ---
 # <a name="manage-microsoft-online-services-in-windows-server-essentials"></a>Windows Server Essentials での Microsoft Online Services の管理
 
@@ -20,13 +20,13 @@ ms.locfileid: "87180978"
 
 次のトピックでは、組織のオンライン サービスを管理するために利用できる方法について説明します。
 
--   [Office 365 の管理](Manage-Office-365-in-Windows-Server-Essentials.md)
+-   [Microsoft 365 の管理](Manage-Office-365-in-Windows-Server-Essentials.md)
 
 -   [オンライン バックアップの管理](Manage-Online-Backup-in-Windows-Server-Essentials.md)
 
 -   [SharePoint Online の管理](Manage-SharePoint-Online-in-Windows-Server-Essentials.md)
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [Windows Server Essentials の管理](Manage-Windows-Server-Essentials.md)
 

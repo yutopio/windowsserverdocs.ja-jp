@@ -3,16 +3,16 @@ title: コピー DriverGroup
 description: フィルター、ドライバーパッケージ、有効/無効の状態を含む、サーバー上の既存のドライバーグループを複製する、コピー DriverGroup の参照記事。
 ms.topic: reference
 ms.assetid: 0aaf6fa5-8b5b-4a1e-ae9b-8b5c6d89f571
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ccd6676ff0d925ee83eea5a4b159fc3e4bf72ba3
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: fee0b3b6cf27cd0bf04f93f61301f65db17ee4be
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038220"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622168"
 ---
 # <a name="copy-drivergroup"></a>コピー DriverGroup
 
@@ -26,7 +26,7 @@ WDSUTIL /Copy-DriverGroup [/Server:<Server name>] /DriverGroup:<Source Group Nam
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------|-----------|
 |[/Server:\<Server name>]|サーバーの名前を指定します。 これには、NetBIOS 名または FQDN を指定できます。 サーバー名が指定されていない場合は、ローカル サーバーが使用されます。|
 |DriverGroup\<Source Group Name>|ソースのドライバー グループの名前を指定します。|

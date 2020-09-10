@@ -3,16 +3,16 @@ title: manage-bde forcerecovery
 description: BitLocker で保護されたドライブを再起動時に強制的に復旧モードにする manage-bde forcerecovery コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: eecae37c-c9a3-46c5-b615-a0ace1f1d778
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 11dd4754ffebbd204e7ad463c56bce47f2a15714
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b88aa4bb52ea6bcb50f34a6e8d42c6e14e0b1e59
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037690"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622615"
 ---
 # <a name="manage-bde-forcerecovery"></a>manage-bde forcerecovery
 
@@ -26,7 +26,7 @@ manage-bde –forcerecovery <drive> [-computername <name>] [{-?|/?}] [{-help|-h}
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<drive>` | コロンの後にドライブ文字を表します。 |
 | -computername | manage-bde.exe が別のコンピューターの BitLocker 保護を変更するために使用されることを指定します。 また、このコマンドの省略版として **-cn** を使用することもできます。 |

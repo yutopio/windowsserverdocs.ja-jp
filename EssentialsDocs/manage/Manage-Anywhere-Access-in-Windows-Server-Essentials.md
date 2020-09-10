@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c369c317-f94d-4179-a735-e74bf6f62692
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: a52c604aa9d79fe95d4e34673a94ff91c5cc4b7a
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 1bd8f498cef17edc73569077dc03d4b7b4e26d66
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181058"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623295"
 ---
 # <a name="manage-anywhere-access-in-windows-server-essentials"></a>Windows Server Essentials での Anywhere Access の管理
 
@@ -32,6 +32,6 @@ Windows Server Essentials で Anywhere Access 機能、リモート Web アク�
 
      DirectAccess を使用すると、仮想プライベートネットワーク (VPN) 接続を確立しなくても、インターネットに接続できる任意のリモートの場所から組織の "され s ネットワークにシームレスに接続することができます。 DirectAccess を使用すると、オフィス内外で同じ接続性を提供することで、組織の "され s モバイル従業員" の生産性が向上します。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [Windows Server Essentials の管理](Manage-Windows-Server-Essentials.md)

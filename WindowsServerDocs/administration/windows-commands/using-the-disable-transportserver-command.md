@@ -3,16 +3,16 @@ title: 無効にする-TransportServer
 description: トランスポートサーバーのすべてのサービスを無効にする、無効にする TransportServer のリファレンス記事です。
 ms.topic: reference
 ms.assetid: a009706b-8e89-486b-8e3d-512cd9f4de74
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 361a963f1e2e7fd98d05dc288dbca06353ae22f0
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 2fd2ac1c346aca8132870edea2bf7696114089b2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89032147"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89621999"
 ---
 # <a name="disable-transportserver"></a>無効にする-TransportServer
 
@@ -25,7 +25,7 @@ ms.locfileid: "89032147"
 wdsutil [Options] /Disable-TransportServer [/Server:<Server name>]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |[/Server:<Server name>]|無効にするトランスポート サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 トランスポート サーバーの名前が指定されていない場合は、ローカルのサーバーが使用されます。|
 ## <a name="examples"></a>例

@@ -5,14 +5,14 @@ ms.date: 05/04/2018
 ms.topic: article
 ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: a4a92a3ec4641b314213afe9b53d8dc033f41037
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: a5adc33cf0177ef6134d293a448cdf9a3999fcdb
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181428"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89621808"
 ---
 # <a name="create-a-bootable-usb-flash-drive"></a>ブート可能な USB フラッシュ ドライブの作成
 
@@ -22,7 +22,7 @@ ms.locfileid: "87181428"
 
 
 > [!TIP]
-> サーバーではなく PC での Windows の回復または再インストールに使用する起動可能な USB フラッシュドライブを作成するには、「[回復ドライブを作成](https://support.microsoft.com/help/4026852/windows-create-a-recovery-drive)する」を参照してください。
+> サーバーではなく PC での Windows の回復または再インストールに使用する起動可能な USB フラッシュドライブを作成するには、「 [回復ドライブを作成](https://support.microsoft.com/help/4026852/windows-create-a-recovery-drive)する」を参照してください。
 
  ブート可能な USB フラッシュ ドライブを作成または使用する可能性のあるその他のシナリオについては、次のトピックを参照してください。
 

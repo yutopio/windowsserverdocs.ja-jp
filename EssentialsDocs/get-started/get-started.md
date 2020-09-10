@@ -4,14 +4,14 @@ description: Windows Server Essentials の使用方法について説明しま�
 ms.topic: article
 ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
 author: nnamuhcs
-ms.author: coreyp
-manager: jasgro
-ms.openlocfilehash: df3eb1b5a1704dcd5a1fc05fab4023c7faaeabe7
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: ef30f70be32f0e8e277375118c539bc8283f9fb9
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87838111"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622411"
 ---
 # <a name="get-started-with-windows-server-essentials"></a>Windows Server Essentials の概要
 

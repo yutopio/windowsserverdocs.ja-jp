@@ -3,16 +3,16 @@ title: ftp user
 description: リモートコンピューターに対してユーザーを指定する、ftp ユーザーコマンドの参照記事です。
 ms.topic: reference
 ms.assetid: 0a77bfeb-27a9-4f2f-a3c4-2fef529fb569
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c1e928dd3aa30784d607da6f84ad9ae024881f3
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 5371a5f2ee731ceccfdc484c5473998338b6d37c
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89035660"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89621565"
 ---
 # <a name="ftp-user"></a>ftp user
 
@@ -28,7 +28,7 @@ user <username> [<password>] [<account>]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<username>` | リモート コンピューターへのログオンに使用するユーザー名を指定します。 |
 | `[<password>]` | *ユーザー名*のパスワードを指定します。 パスワードが指定されておらず、必須の場合は、 **ftp** コマンドによってパスワードの入力が求められます。 |

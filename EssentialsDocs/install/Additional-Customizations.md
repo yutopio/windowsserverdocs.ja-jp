@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 65a195d5-0098-4c3c-b4ba-07f7319c8f1e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 7fc1c9d681ac283eab4810d2a7cc4f7c4223a0b7
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: fef23f94e9a2a591b14e6e1c8457f07f0ecbdfc7
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181528"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89621864"
 ---
 # <a name="additional-customizations"></a>追加のカスタマイズ
 
@@ -46,7 +46,7 @@ Windows Server Essentials のイメージを作成およびカスタマイズす
 
 -   [Microsoft Online Service パートナー契約の登録パートナー情報の追加](../install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)
 
--   [Microsoft Online Service リセラー契約に基づく O365 統合モジュールの購入/試用版エンドポイントの URL の置換](../install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
+-   [Microsoft 365 統合モジュールの購入-エンドポイントの URL を Microsoft Online Service リセラー契約のサポートに置き換える](../install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
 
 -   [リモートで管理されるサーバー用のサーバー回復 DVD の作成](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)
 

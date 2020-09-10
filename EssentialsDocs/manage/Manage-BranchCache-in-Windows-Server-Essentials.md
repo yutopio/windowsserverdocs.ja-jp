@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f6e05aec-d07c-4e0b-94ab-f20279e9ffd1
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: aae5c0c8a3a98b25d13d7bf11f6fb14963714c24
-ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 52493dae886eb8f74a6276854c7b7cce2f77470f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87837921"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623206"
 ---
 # <a name="manage-branchcache-in-windows-server-essentials"></a>Windows Server Essentials での BranchCache の管理
 
@@ -36,12 +36,12 @@ BranchCache は、Windows Server Essentials サーバーがオフィスから離
 -   お使いの Windows Server Essentials サーバーは、別の場所にある別のオフィスにあります。
 
 ## <a name="distributed-cache-mode"></a>分散キャッシュ モード
- Windows Server Essentials では、branchcache は*分散キャッシュモード*で実装されます。これは、branchcache で使用可能な2つのキャッシュモードのうちの1つです。 分散キャッシュ モードでは、ブランチ オフィスのコンテンツ キャッシュがクライアント コンピューター間に分散されます。 ハードウェアを新たに追加したり、トポロジの変更を行ったりする必要がないため、このモードは、リモート サーバーやローカル サーバーを使用して SharePoint Online などのクラウド ベースのサービスにアクセスする小規模なオフィスに適しています。 Windows Server Essentials で BranchCache を有効にすると、分散キャッシュモードが実装されます。
+ Windows Server Essentials では、branchcache は *分散キャッシュモード*で実装されます。これは、branchcache で使用可能な2つのキャッシュモードのうちの1つです。 分散キャッシュ モードでは、ブランチ オフィスのコンテンツ キャッシュがクライアント コンピューター間に分散されます。 ハードウェアを新たに追加したり、トポロジの変更を行ったりする必要がないため、このモードは、リモート サーバーやローカル サーバーを使用して SharePoint Online などのクラウド ベースのサービスにアクセスする小規模なオフィスに適しています。 Windows Server Essentials で BranchCache を有効にすると、分散キャッシュモードが実装されます。
 
 > [!NOTE]
 >  複数のサブネットを使用したり、ネットワーク接続されているアプリケーションを使用している従業員が多数いる大規模なブランチ オフィスの場合、*ホスト型キャッシュ モード*で BranchCache を実装すると役立ちます。 ホスト型キャッシュ モードでは、コンテンツ キャッシュは、ブランチ オフィスの 1 つ以上のホスト型キャッシュ サーバーに格納されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
  Windows Server Essentials で BranchCache を使用するには、サーバーとクライアントコンピューターが次の要件を満たしている必要があります。
 
 -   サーバーは、windows server essentials オペレーティングシステム、windows server 2012 R2 Standard、または windows server 2012 R2 Datacenter オペレーティングシステムを Windows Server Essentials エクスペリエンスの役割で実行している必要があります。
@@ -63,7 +63,7 @@ BranchCache は、Windows Server Essentials サーバーがオフィスから離
 
 1.  管理者アカウントを使用して、Windows Server Essentials サーバーにサインインします。
 
-2.  Windows Server Essentials ダッシュボードで、[**設定**] をクリックします。
+2.  Windows Server Essentials ダッシュボードで、[ **設定**] をクリックします。
 
      セットアップ ウィザードが開きます。
 

@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d7d38505-cff5-4f15-9fd5-ae6dba15ce88
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 5ff685960c5690e1bdda47742d81ec44a38aeb8b
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 15a4c28c192ed93c18ad9ac515bdccda24293c6e
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181678"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622555"
 ---
 # <a name="azure-virtual-network-integration"></a>Azure Virtual network の統合
 
@@ -26,7 +26,7 @@ Azure 仮想ネットワークの構成は複雑になる可能性がありま�
 
 ![Windows Server Essentials ダッシュボードのホームページにある [作業の開始] タブを示すスクリーンショット。 [作業の開始] タブの [サービス] セクションが選択されています。ダッシュボードは、Azure 仮想ネットワークが現在無効になっている Microsoft Cloud Services 統合の下に表示されます。](media/azure-virtual-network-1.PNG)
 
-上のスクリーンショットの Azure 仮想ネットワークの [**今すぐ統合**] リンクをクリックすると、Microsoft Azure アカウントにログインするよう求めるダイアログボックスが表示されます。 Microsoft Azure アカウントを持っていない場合は、この画面でサインアップするオプションが表示されます。これにより、Azure アカウントのサインアップポータルにリダイレクトされます。
+上のスクリーンショットの Azure 仮想ネットワークの [ **今すぐ統合** ] リンクをクリックすると、Microsoft Azure アカウントにログインするよう求めるダイアログボックスが表示されます。 Microsoft Azure アカウントを持っていない場合は、この画面でサインアップするオプションが表示されます。これにより、Azure アカウントのサインアップポータルにリダイレクトされます。
 
 ![Azure 仮想ネットワークとの統合ウィザードの [Microsoft Azure へのサインイン] ページを示すスクリーンショット。](media/azure-virtual-network-2.PNG)
 
@@ -54,18 +54,18 @@ Azure 仮想ネットワークの構成が完了すると、状態が [接続済
 
 ダッシュボードの右側の [タスク] ウィンドウには、Azure 仮想ネットワークで実行できるさまざまなタスクがあります。
 
--   **AZURE VNET からの切断**Azure 仮想ネットワークのセットアップは無料ですが、オンプレミスと Azure のその他の Vnet に接続する VPN gateway には料金が発生します。 Azure VNET から切断すると、すべての課金が停止します。
+-   **AZURE VNET からの切断** Azure 仮想ネットワークのセットアップは無料ですが、オンプレミスと Azure のその他の Vnet に接続する VPN gateway には料金が発生します。 Azure VNET から切断すると、すべての課金が停止します。
 
--   **VPN デバイスを切り替える**VPN サーバーから VPN ルーターに変更する場合は、このタスクを使用してスイッチを作成し、Azure VNET に通知することができます。
+-   **VPN デバイスを切り替える** VPN サーバーから VPN ルーターに変更する場合は、このタスクを使用してスイッチを作成し、Azure VNET に通知することができます。
 
--   **AZURE VNET の構成**このタスクでは、azure vnet の [Azure portal の構成] ページにリダイレクトして、Azure VNET の詳細な構成オプションを変更できます。
+-   **AZURE VNET の構成** このタスクでは、azure vnet の [Azure portal の構成] ページにリダイレクトして、Azure VNET の詳細な構成オプションを変更できます。
 
--   **更新状態**[状態] ページを更新し、データを含む Azure VNET の接続状態を更新します。
+-   **更新状態** [状態] ページを更新し、データを含む Azure VNET の接続状態を更新します。
 
--   **Azure VNET 統合を無効にする**Azure VNET を切断し、Windows Server Essentials ダッシュボードから統合を削除します。 Azure VNET は削除されませんが、後で Azure VNET をダッシュボードに再度統合する場合は、azure に設定が保持されます。
+-   **Azure VNET 統合を無効にする** Azure VNET を切断し、Windows Server Essentials ダッシュボードから統合を削除します。 Azure VNET は削除されませんが、後で Azure VNET をダッシュボードに再度統合する場合は、azure に設定が保持されます。
 
 -   **AZURE VNET の詳細についてはこちら** [https://azure.microsoft.com/services/virtual-network/](https://azure.microsoft.com/services/virtual-network/) をご覧ください。
 
-<a name="see-also"></a>関連項目
+<a name="see-also"></a>こちらもご覧ください
 --------
 [Windows Server Essentials の概要](get-started.md)

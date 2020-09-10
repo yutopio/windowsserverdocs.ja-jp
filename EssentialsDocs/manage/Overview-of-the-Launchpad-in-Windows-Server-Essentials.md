@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: c648ab5921d50a2b1178b44104977b8bb3abd692
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: c20fd35a1a90e6d635891cd2257913c669273735
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180838"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623009"
 ---
 # <a name="overview-of-the-launchpad-in-windows-server-essentials"></a>Windows Server Essentials のスタート パッドの概要
 
@@ -39,10 +39,10 @@ Windows Server Essentials スタート パッドは、コンピューターが�
 
 - [Mac コンピューターでのスタート パッドの使用](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)
 
-##  <a name="use-the-launchpad"></a><a name="BKMK_Launchpad"></a>スタートパッドを使用する
+##  <a name="use-the-launchpad"></a><a name="BKMK_Launchpad"></a> スタートパッドを使用する
  次のリンクと情報は、Windows Server Essentials スタート パッドで使用できます。
 
-### <a name="backup"></a>バックアップ
+### <a name="backup"></a>Backup
  [**バックアップ**] をクリックして、コンピューターの [**バックアップ プロパティ**] を開きます。 [**バックアップ プロパティ**] ページでは、以下のことができます。
 
 - バックアップの開始と停止
@@ -51,27 +51,27 @@ Windows Server Essentials スタート パッドは、コンピューターが�
 
 - バックアップ実行中のコンピューターの電源管理方法の指定
 
-  スタートパッドを使用してコンピューターをバックアップする方法については、「[クライアントバックアップの管理](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)」を参照してください。
+  スタートパッドを使用してコンピューターをバックアップする方法については、「 [クライアントバックアップの管理](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)」を参照してください。
 
 ### <a name="remote-web-access"></a>リモート Web アクセス
- [**リモート Web アクセス**] をクリックして、Web ブラウザーを開いて、リモート Web アクセス サイトにアクセスします。 リモート Web アクセス サイトでは、他のコンピューターに接続して、インターネット対応のコンピューターを使って、オフィス内やオフィスから離れたどこからでも、一部のネットワーク リソースにアクセスすることができます。 リモート Web アクセスの詳細については、「[リモート Web アクセスの管理](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)」を参照してください。
+ [**リモート Web アクセス**] をクリックして、Web ブラウザーを開いて、リモート Web アクセス サイトにアクセスします。 リモート Web アクセス サイトでは、他のコンピューターに接続して、インターネット対応のコンピューターを使って、オフィス内やオフィスから離れたどこからでも、一部のネットワーク リソースにアクセスすることができます。 リモート Web アクセスの詳細については、「 [リモート Web アクセスの管理](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)」を参照してください。
 
 ### <a name="shared-folders"></a>共有フォルダー
  [**共有フォルダー**] をクリックして Windows エクスプローラーを開き、サーバー上の共有フォルダーの場所にアクセスします。 ファイルとフォルダーの共有の詳細については、「 [Manage Server folders](Manage-Server-Folders-in-Windows-Server-Essentials.md)」を参照してください。
 
 ### <a name="dashboard"></a>ダッシュボード
- **[ダッシュボード]** をクリックして、Windows Server Essentials ダッシュボードにアクセスするための **[サインイン]** ページを開きます。 サインインすると、サーバー ダッシュボードへのリモート デスクトップ接続が開きます。 ダッシュボードの詳細については、「[ダッシュボードの概要](Overview-of-the-Dashboard-in-Windows-Server-Essentials.md)」を参照してください。
+ **[ダッシュボード]** をクリックして、Windows Server Essentials ダッシュボードにアクセスするための **[サインイン]** ページを開きます。 サインインすると、サーバー ダッシュボードへのリモート デスクトップ接続が開きます。 ダッシュボードの詳細については、「 [ダッシュボードの概要](Overview-of-the-Dashboard-in-Windows-Server-Essentials.md)」を参照してください。
 
 > [!NOTE]
 >  この機能を使用するには、サーバーにログオンするための適切なアクセス権またはアクセス許可が必要です。
 
-### <a name="microsoft-office-365"></a>Microsoft Office 365
- [ **Microsoft Office 365** ] リンクは、ユーザーが Office 365 アカウントを所有している場合のみ、スタート パッドに表示されます。 **[Microsoft Office 365]** をクリックして、Office 365 リソースへの追加リンクにアクセスします。 詳細については、「 [Microsoft Office 365 を使用したクイックスタートガイド](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)」を参照してください。
+### <a name="microsoft-365"></a>Microsoft 365
+ **Microsoft 365**リンクは、ユーザーが Microsoft 365 アカウントを持っている場合にのみ、スタートパッドに表示されます。 Microsoft 365 リソースへの追加リンクにアクセスするには、[  **Microsoft 365** ] をクリックします。 詳細については、「 [Microsoft 365 を使用](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)したクイックスタートガイド」を参照してください。
 
 ### <a name="computer-health-alerts"></a>コンピューターの正常性アラート
- スタート パッドに表示される警告は、コンピューターの現在の正常性に関する簡易ステータスを提供します。 正常性アラートをに関する情報を表示するには、アラート インジケーターをクリックして、アラート ビューアーを開きます。 正常性アラートが重大度レベルに基づいてビューアーに表示されます。 最も重大なアラートがリストの先頭に表示され、重大の低い警告は一覧の後ろに表示されます。 コンピューターの正常性アラートの詳細については、「[システム正常性の管理](Manage-System-Health-in-Windows-Server-Essentials.md)」を参照してください。
+ スタート パッドに表示される警告は、コンピューターの現在の正常性に関する簡易ステータスを提供します。 正常性アラートをに関する情報を表示するには、アラート インジケーターをクリックして、アラート ビューアーを開きます。 正常性アラートが重大度レベルに基づいてビューアーに表示されます。 最も重大なアラートがリストの先頭に表示され、重大の低い警告は一覧の後ろに表示されます。 コンピューターの正常性アラートの詳細については、「 [システム正常性の管理](Manage-System-Health-in-Windows-Server-Essentials.md)」を参照してください。
 
-##  <a name="use-the-launchpad-with-a-mac-computer"></a><a name="BKMK_Mac"></a>Mac コンピューターでスタートパッドを使用する
+##  <a name="use-the-launchpad-with-a-mac-computer"></a><a name="BKMK_Mac"></a> Mac コンピューターでスタートパッドを使用する
  &reg;Mac OS X 10.5 以降を実行している Mac コンピューターを &reg; Windows server Essentials、Windows server essentials、または windows Server 2012 R2 に接続することも、コネクタソフトウェアをダウンロードしてインストールすることもできます。 コネクタ ソフトウェアのインストールが完了したら、起動時にスタート パッドを自動起動することもできます。
 
  スタート パッドは、共有ファイルやメディア、アドイン、リモート Web アクセスなど、サーバーの主な機能へのアクセスを、認証されたユーザーに提供する、サイズの小さいアプリケーションです。 スタート パッドは、コンピューターの正常性に関するリアルタイムの情報と通知も提供します。
@@ -79,19 +79,19 @@ Windows Server Essentials スタート パッドは、コンピューターが�
 > [!NOTE]
 >  サーバー管理者は Mac コンピューター上でスタート パッドやリモート Web アクセスを使って、サーバー ダッシュボードを開き、サーバーを管理することはできません。
 
-### <a name="backup"></a>バックアップ
+### <a name="backup"></a>Backup
  [**バックアップ**] をクリックし、コンピューターをバックアップする Time Machine のセットアップしたり、Time Machine の設定を変更します。 Time Machine の詳細については、コンピューターの製造元のドキュメントを参照してください。
 
 ### <a name="remote-web-access"></a>リモート Web アクセス
- [**リモート Web アクセス**] をクリックして、リモート Web アクセスサイトの Web ブラウザーを開きます。 リモート Web アクセスを使用すると、インターネット対応のコンピューターを使用して、任意のリモートの場所からサーバー上の共有ファイルやフォルダーにアクセスできます。 ファイルのアップロード、Web ベースのメディア再生を使った音楽やビデオの再生、画像の表示、スライド ショーの再生を実行できます。 詳細については、「 [Use Remote Web アクセス](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)」を参照してください。
+ [ **リモート Web アクセス** ] をクリックして、リモート Web アクセスサイトの Web ブラウザーを開きます。 リモート Web アクセスを使用すると、インターネット対応のコンピューターを使用して、任意のリモートの場所からサーバー上の共有ファイルやフォルダーにアクセスできます。 ファイルのアップロード、Web ベースのメディア再生を使った音楽やビデオの再生、画像の表示、スライド ショーの再生を実行できます。 詳細については、「 [Use Remote Web アクセス](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)」を参照してください。
 
 ### <a name="shared-folders"></a>共有フォルダー
- [**共有フォルダー**] をクリックしてファインダーを開き、サーバー上の共有フォルダーの場所にアクセスします。 ファイルとフォルダーの共有の詳細については、「[共有フォルダーの使用](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)」を参照してください。
+ [**共有フォルダー**] をクリックしてファインダーを開き、サーバー上の共有フォルダーの場所にアクセスします。 ファイルとフォルダーの共有の詳細については、「 [共有フォルダーの使用](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)」を参照してください。
 
 ### <a name="computer-health-alerts"></a>コンピューターの正常性アラート
  スタート パッドに表示される警告は、コンピューターの現在の正常性に関する簡易ステータスを提供します。 正常性アラートをに関する情報を表示するには、アラート インジケーターをクリックして、アラート ビューアーを開きます。 正常性アラートが重大度レベルに基づいてビューアーに表示されます。 一覧の先頭に最も重大な警告が表示されます。 重大性が低い警告は、一覧の後ろに表示されます。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [接続の取得](../use/Get-Connected-in-Windows-Server-Essentials.md)
 

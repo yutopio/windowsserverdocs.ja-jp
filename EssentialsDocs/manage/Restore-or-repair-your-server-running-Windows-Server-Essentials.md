@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 27bf6f24-30c4-4935-9b24-069eb43e22f4
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: def936272531c42623dfefb5940339c545ac8cf0
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 00c57fab4ee9689ba8bd760e5c99d87e3e18d130
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180818"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622954"
 ---
 # <a name="restore-or-repair-your-server-running-windows-server-essentials"></a>Windows Server Essentials を実行しているサーバーの復元または修復
 
@@ -26,7 +26,7 @@ ms.locfileid: "87180818"
 
 -   [サーバー上のファイルおよびフォルダーの復元](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesAndFolders)
 
-##  <a name="overview-of-server-system-restores"></a><a name="BKMK_Overview"></a>サーバーシステムの復元の概要
+##  <a name="overview-of-server-system-restores"></a><a name="BKMK_Overview"></a> サーバーシステムの復元の概要
  復元を実行するときのサーバーの状態が、使用できる復元方法と、どれだけ包括的に復元を実行できるかに影響します。
 
  サーバーを復元する最も一般的な理由として、次のような理由があります。
@@ -45,7 +45,7 @@ ms.locfileid: "87180818"
 
 - [サーバーを出荷時の設定に戻す](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_FactoryReset)
 
-###  <a name="restoring-the-server-from-a-backup"></a><a name="BKMK_RestoreFromBackup"></a>バックアップからサーバーを復元する
+###  <a name="restoring-the-server-from-a-backup"></a><a name="BKMK_RestoreFromBackup"></a> バックアップからサーバーを復元する
  このセクションでは、どのタイプのバックアップを選択する必要があるかについてガイダンスを示します。
 
  バックアップが利用可能な場合は、製造元のインストールメディアを使用して外部バックアップから復元することをお勧めします。 復元を実行すると、サーバーの設定とフォルダーが、選択したバックアップから回復されます。 バックアップ後に作成した設定とデータは、構成、復元する必要があります。
@@ -68,7 +68,7 @@ ms.locfileid: "87180818"
 
 - **サーバーに複数のハード ドライブが存在し、ドライブ 0 (システム ボリュームを含む) を交換する場合は**、システム ボリュームは復元されますが、以前にドライブ 0 に格納した共有フォルダーを手動で復元する必要があります。
 
-###  <a name="resetting-the-server-to-factory-default-settings"></a><a name="BKMK_FactoryReset"></a>サーバーを工場出荷時の既定設定にリセットしています
+###  <a name="resetting-the-server-to-factory-default-settings"></a><a name="BKMK_FactoryReset"></a> サーバーを工場出荷時の既定設定にリセットしています
  復元のソースとなるバックアップがない場合、または他の何らかの理由で、以前のサーバー構成を復元するのではなくシステム全体の復元の実行が望まれる、または要求される場合は、サーバーを出荷時の既定の設定に戻す復元を実行できます。このためには、サーバーのハードウェア製造元から提供されているインストール メディアまたは回復メディアを使用します。
 
  出荷時の既定の設定に戻すことによってサーバーを復元する場合、サーバー上の既存の設定とインストール済みアプリケーションはすべて削除され、サーバーを再度構成する必要があります。 出荷時の設定に戻った後、サーバーは再起動します。
@@ -93,7 +93,7 @@ ms.locfileid: "87180818"
 
 -   **クライアント コンピューターをサーバーに再接続します。** コンピューターが以前にサーバーに接続されていた場合は、コンピューターをサーバーに再度接続する前に、コンピューターから Windows Server Essentials コネクタソフトウェアをアンインストールする必要があります。 詳細については、「[コネクタ ソフトウェアのアンインストール](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)」と「[サーバーへのコンピューターの接続](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)」を参照してください。
 
-##  <a name="restore-or-repair-the-system-drive"></a><a name="BKMK_Restore"></a>システムドライブの復元または修復
+##  <a name="restore-or-repair-the-system-drive"></a><a name="BKMK_Restore"></a> システムドライブの復元または修復
  サーバー復元の最初のステップは、サーバー システム ドライブの復元または修復です。 システム ドライブを復元した後、サーバーのデータ ドライブを復元するために必要なことを行い、復元中に失われた共有があれば復元する必要があります。
 
  復元を実行するために 3 つの方法を使用できます。
@@ -104,7 +104,7 @@ ms.locfileid: "87180818"
 
 -   [回復 DVD を使用してクライアント コンピューターからサーバーを復元またはリセット](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore_2)します。 Windows Server Essentials を実行しているリモート管理サーバーを復元する必要がある場合は、サーバー製造元からの復元 DVD を使用して、クライアントコンピューターから復元を実行する必要があります。
 
-###  <a name="restore-or-repair-your-server-using-installation-media"></a><a name="BKMK_Restore_1"></a>インストールメディアを使用してサーバーを復元または修復する
+###  <a name="restore-or-repair-your-server-using-installation-media"></a><a name="BKMK_Restore_1"></a> インストールメディアを使用してサーバーを復元または修復する
  次の手順では、Windows Server Essentials のインストールメディアを使用して、バックアップからサーバーシステムドライブを復元する方法について説明します。 (インストール メディアを使用して出荷時の既定の設定に戻す方法については、サーバー製造元のドキュメントを参照してください。)
 
 > [!NOTE]
@@ -130,7 +130,7 @@ ms.locfileid: "87180818"
 
 4.  **[オプションの選択]** ページで、**[トラブルシューティング]** をクリックします。
 
-5.  [**システムイメージの回復**] ページで、[現在のシステム] を選択します。 **windows server Essentials**または**windows server essentials**のいずれかを選択します。
+5.  [ **システムイメージの回復** ] ページで、[現在のシステム] を選択します。 **windows server Essentials** または **windows server essentials**のいずれかを選択します。
 
      コンピューター イメージの再適用ウィザードが開きます。
 
@@ -156,7 +156,7 @@ ms.locfileid: "87180818"
 > [!NOTE]
 >  サーバーにフォルダーを復元して共有するには、追加の手順を実行する必要があります。 詳細については、「[サーバー上のファイルおよびフォルダーの復元](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesAndFolders)」を参照してください。
 
-###  <a name="restore-or-reset-your-server-from-a-client-computer-using-the-recovery-dvd"></a><a name="BKMK_Restore_2"></a>回復 DVD を使用してクライアントコンピューターからサーバーを復元またはリセットする
+###  <a name="restore-or-reset-your-server-from-a-client-computer-using-the-recovery-dvd"></a><a name="BKMK_Restore_2"></a> 回復 DVD を使用してクライアントコンピューターからサーバーを復元またはリセットする
  Windows Server Essentials では、作成した起動可能な USB フラッシュドライブからサーバーを起動し、サーバーの製造元から受け取った回復 DVD を使用して、クライアントコンピューターからサーバーを回復することができます。 クライアント コンピューターは、サーバーと同じネットワーク上に存在している必要があります。 この方法は、Windows Server Essentials では使用できません。
 
  次の手順は、サーバーの復元を実行する一般的なステップを示しています。 これらのステップは、バックアップから復元する場合も、出荷時の既定の設定に戻す場合も、同じように適用できます。 より具体的な手順については、サーバー製造元のドキュメントを参照してください。
@@ -181,7 +181,7 @@ ms.locfileid: "87180818"
 > [!NOTE]
 >  サーバーに追加の共有フォルダーを作成していた場合は、バックアップからデータを復元した後、追加の共有フォルダーがサーバーで認識されない可能性があります。 もう一度これらのフォルダーを共有する必要があります。 詳細については、「[サーバー上のファイルおよびフォルダーの復元](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesAndFolders)」を参照してください。
 
-##  <a name="restore-files-and-folders-on-the-server"></a><a name="BKMK_RestoreFilesAndFolders"></a>サーバー上のファイルとフォルダーを復元する
+##  <a name="restore-files-and-folders-on-the-server"></a><a name="BKMK_RestoreFilesAndFolders"></a> サーバー上のファイルとフォルダーを復元する
  サーバーを復元または修復するために使用した方法、およびサーバーで使用している記憶域の種類により、システム ドライブを復元した後にデータ ボリュームを回復することが必要になる場合があります。 場合によっては、既存のフォルダーを、サーバーで認識されるようにもう一度共有する必要があります。
 
  例として、次のような場合にファイルおよびフォルダーの復元が必要になる可能性があります。
@@ -190,7 +190,7 @@ ms.locfileid: "87180818"
 
 -   [サーバー上の共有フォルダーを復元する](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_ConfigreSharedFolders)場合。 サーバーに追加の共有フォルダーを作成していた場合は、バックアップからシステム ドライブを復元した後、共有フォルダーはまだデータ パーティションに存在しているか、データ パーティションに復元済みですが、サーバーで認識されない可能性があります。 もう一度これらのフォルダーを共有する必要があります。
 
-###  <a name="restore-files-and-folders-from-a-server-backup"></a><a name="BKMK_RestoreFilesFromBackup"></a>サーバーバックアップからのファイルとフォルダーの復元
+###  <a name="restore-files-and-folders-from-a-server-backup"></a><a name="BKMK_RestoreFilesFromBackup"></a> サーバーバックアップからのファイルとフォルダーの復元
  ファイルまたはフォルダーの復元ウィザードを使用すると、ハード ディスクが動作しなくなった場合またはファイルを誤って消去した場合に備えてデータを保護できます。 Windows Server Essentials のバックアップを使用すると、ハードドライブ上のすべてのデータのコピーを作成し、そのデータを外部記憶装置に格納することができます。 ハード ドライブ上の元のデータを誤って消去した場合や上書きした場合、またはドライブ異常のためデータにアクセスできなくなった場合は、バックアップからデータを復元できます。 ファイルまたはフォルダーの復元ウィザードを使用すると、1 個のファイルまたはフォルダー、複数のファイルまたはフォルダー、あるいはハード ドライブ全体を既存のバックアップから復元できます。
 
  システム復元後、ファイルまたはフォルダーの復元ウィザードを使用して、復元されなかったファイルとフォルダーを復元することが必要になる場合があります。 たとえば、システム ディスクを交換した場合、またはシステム ディスクのパーティション情報を読み取ることができない場合、システム ディスクの他のボリュームからデータを復元することはできません。
@@ -200,7 +200,7 @@ ms.locfileid: "87180818"
 
 ##### <a name="to-restore-files-and-folders-from-a-server-backup"></a>ファイルとフォルダーをサーバーのバックアップから復元するには
 
-1.  Windows Server Essentials ダッシュボードを開き、[**デバイス**] タブをクリックします。
+1.  Windows Server Essentials ダッシュボードを開き、[ **デバイス** ] タブをクリックします。
 
 2.  サーバー名をクリックし、**作業**ウィンドウで [**サーバーのファイルまたはフォルダーの復元**] をクリックします。
 
@@ -209,9 +209,9 @@ ms.locfileid: "87180818"
 3.  ウィザードの指示に従って、ファイルまたはフォルダーを復元します。
 
 > [!WARNING]
->  ファイルとフォルダーのバックアップと復元の詳細については、「[バックアップと復元の管理](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)」を参照してください。
+>  ファイルとフォルダーのバックアップと復元の詳細については、「 [バックアップと復元の管理](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)」を参照してください。
 
-###  <a name="restore-shared-folders-on-the-server"></a><a name="BKMK_ConfigreSharedFolders"></a>サーバー上の共有フォルダーを復元する
+###  <a name="restore-shared-folders-on-the-server"></a><a name="BKMK_ConfigreSharedFolders"></a> サーバー上の共有フォルダーを復元する
  サーバーのシステムドライブを復元した後、共有フォルダーがまだデータパーティションにある場合、またはデータパーティションに復元された場合は、サーバーがフォルダーを認識できるように、共有フォルダーをもう一度構成しなければならないことがあります。 次の手順では、以前に共有されていた共有フォルダーを追加する方法を説明します。
 
 ##### <a name="to-add-an-existing-folder-to-the-server-shared-folders"></a>既存のフォルダーをサーバー共有フォルダーに追加するには
@@ -238,7 +238,7 @@ ms.locfileid: "87180818"
 > [!IMPORTANT]
 >  共有フォルダーの一覧にフォルダーを追加した後、フォルダーがサーバーのバックアップに含まれていることを確認してください。 サーバーのバックアップにフォルダーを追加する方法については、「[サーバー バックアップのセットアップまたはカスタマイズ](Set-up-or-customize-server-backup.md)」を参照してください。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [バックアップと復元の管理](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)
 

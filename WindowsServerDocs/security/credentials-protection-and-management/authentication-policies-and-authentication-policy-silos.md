@@ -3,16 +3,16 @@ title: 認証ポリシーと認証ポリシー サイロ
 description: Windows Server のセキュリティ
 ms.topic: article
 ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: ad453c5581f966a2e21a5cd8b4ed1c9cb28fe9a8
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 931ebeda8b865c16dc6f67ae765b6bc6f7aaed1f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995897"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89621934"
 ---
 # <a name="authentication-policies-and-authentication-policy-silos"></a>認証ポリシーと認証ポリシー サイロ
 
@@ -59,7 +59,7 @@ Windows Server 2012 R2 で導入された機能を使用すると、高い特権
 
 Active Directory 勘定科目の種類によって、呼び出し元のロールは次のいずれかになります。
 
--   **User**
+-   **ユーザー**
 
     ユーザーは常に Protected Users セキュリティ グループのメンバーとなるようにしてください。このグループの既定では、NTLM による認証の試行は拒否されます。
 
@@ -89,15 +89,15 @@ Active Directory 勘定科目の種類によって、呼び出し元のロール
 |ポリシー|Authentication Policy Enforced|認証ポリシーを強制適用するかどうかを指定します。<p>強制適用されないときは、ポリシーは既定で監査モードとなり、成功や失敗の可能性を示すイベントが生成されますが、システムは保護されません。|
 |ポリシー|Assigned Authentication Policy Backlink|この属性は、msDS-AssignedAuthNPolicy の後方リンクです。|
 |ポリシー|Assigned Authentication Policy|AuthNPolicy をこのプリンシパルに適用するかどうかを指定します。|
-|User|User Authentication Policy|このサイロ オブジェクトに割り当てられたユーザーに、どの AuthNPolicy を適用するかを指定します。|
-|User|User Authentication Policy Backlink|この属性は、msDS-UserAuthNPolicy の後方リンクです。|
-|User|ms-DS-User-Allowed-To-Authenticate-To|この属性は、そのユーザー アカウントの下で実行されるサービスに対する認証を受けることのできるプリンシパルを指定するのに使用されます。|
-|User|ms-DS-User-Allowed-To-Authenticate-From|この属性は、ユーザー アカウントがどのデバイスへのサインインを許可されているかを指定するのに使用されます。|
-|User|User TGT Lifetime|ユーザーに対して発行される Kerberos TGT の最長有効期間を指定します (秒単位)。 作成された TGT は更新不可能です。|
-|Computer|Computer Authentication Policy|このサイロ オブジェクトに割り当てられたコンピューターに、どの AuthNPolicy を適用するかを指定します。|
-|Computer|Computer Authentication Policy Backlink|この属性は、msDS-ComputerAuthNPolicy の後方リンクです。|
-|Computer|ms-DS-Computer-Allowed-To-Authenticate-To|この属性は、そのコンピューター アカウントの下で実行されるサービスに対する認証を受けることのできるプリンシパルを指定するのに使用されます。|
-|Computer|Computer TGT Lifetime|コンピューターに対して発行される Kerberos TGT の最大有効期間を指定します (秒単位)。 この設定を変更することはお勧めしません。|
+|ユーザー|User Authentication Policy|このサイロ オブジェクトに割り当てられたユーザーに、どの AuthNPolicy を適用するかを指定します。|
+|ユーザー|User Authentication Policy Backlink|この属性は、msDS-UserAuthNPolicy の後方リンクです。|
+|ユーザー|ms-DS-User-Allowed-To-Authenticate-To|この属性は、そのユーザー アカウントの下で実行されるサービスに対する認証を受けることのできるプリンシパルを指定するのに使用されます。|
+|ユーザー|ms-DS-User-Allowed-To-Authenticate-From|この属性は、ユーザー アカウントがどのデバイスへのサインインを許可されているかを指定するのに使用されます。|
+|ユーザー|User TGT Lifetime|ユーザーに対して発行される Kerberos TGT の最長有効期間を指定します (秒単位)。 作成された TGT は更新不可能です。|
+|コンピューター|Computer Authentication Policy|このサイロ オブジェクトに割り当てられたコンピューターに、どの AuthNPolicy を適用するかを指定します。|
+|コンピューター|Computer Authentication Policy Backlink|この属性は、msDS-ComputerAuthNPolicy の後方リンクです。|
+|コンピューター|ms-DS-Computer-Allowed-To-Authenticate-To|この属性は、そのコンピューター アカウントの下で実行されるサービスに対する認証を受けることのできるプリンシパルを指定するのに使用されます。|
+|コンピューター|Computer TGT Lifetime|コンピューターに対して発行される Kerberos TGT の最大有効期間を指定します (秒単位)。 この設定を変更することはお勧めしません。|
 |サービス|Service Authentication Policy|このサイロ オブジェクトに割り当てられたサービスに、どの AuthNPolicy を適用するかを指定します。|
 |サービス|Service Authentication Policy Backlink|この属性は、msDS-ServiceAuthNPolicy の後方リンクです。|
 |サービス|ms-DS-Service-Allowed-To-Authenticate-To|この属性は、そのサービス アカウントの下で実行されるサービスに対する認証を受けることのできるプリンシパルを指定するのに使用されます。|
@@ -135,7 +135,7 @@ Protected Users セキュリティグループは、Windows Server 2012 R2 お�
 
 -   [Kerberos Version 5 認証プロトコルのしくみ](/previous-versions/windows/it-pro/windows-server-2003/cc772815(v=ws.10))
 
--   [Kerberos 認証の変更](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560670(v=ws.10))(windows Server 2008 R2 および windows 7)
+-   [Kerberos 認証の変更](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560670(v=ws.10)) (windows Server 2008 R2 および windows 7)
 
 ### <a name="how-the-kerberos-protocol-is-used-with-authentication-policy-silos-and-policies"></a><a name="BKMK_HowKerbUsed"></a>Kerberos プロトコルと認証ポリシー サイロおよびポリシーとの連携のしくみ
 ドメイン アカウントが認証ポリシー サイロにリンクされている状態でユーザーがサインインすると、セキュリティ アカウント マネージャーによって "認証ポリシー サイロ" というタイプのクレームが追加され、サイロが値として指定されます。 アカウントにおけるこのクレームによって、対象のサイロへのアクセスが可能になります。
@@ -226,7 +226,7 @@ Protected Users セキュリティグループは、Windows Server 2012 R2 お�
 
 これらのイベントを使用するトラブルシューティング手順については、「[認証ポリシーのトラブルシューティング](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicies)」と「[Protected Users 関連のイベントのトラブルシューティング](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_TrubleshootingEvents)」をご覧ください。
 
-|イベント ID とログ|説明|
+|イベント ID とログ|Description|
 |----------|--------|
 |101<p>**AuthenticationPolicyFailures-DomainController**|理由: 認証ポリシーが構成されているため、NTLM のサインインエラーが発生します。<p>イベントがドメイン コントローラーのログに記録されます。これは、アクセス制御による制限が必要とされていたが、その制限を NTLM に適用できないことが理由で NTLM 認証に失敗したことを示すものです。<p>アカウント、デバイス、ポリシー、およびサイロの名前が表示されます。|
 |105<p>**AuthenticationPolicyFailures-DomainController**|理由: 特定のデバイスからの認証が許可されていなかったため、Kerberos 制限エラーが発生します。<p>イベントがドメイン コントローラーのログに記録されます。これは、強制適用されているアクセス制御制限にデバイスが適合していないことが理由で Kerberos TGT が拒否されたことを示すものです。<p>アカウント、デバイス、ポリシー、サイロの名前、および TGT 有効期間が表示されます。|

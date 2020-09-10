@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 441c2d6c-435a-42cb-90f2-6d680d279d34
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 8342c542861598411570c4e702aea5a94f992c79
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 464b30d610dcf25dc53c12bf38f8ec3da8691e2a
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180808"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622943"
 ---
 # <a name="set-up-or-customize-server-backup"></a>サーバー バックアップのセットアップまたはカスタマイズ
 
@@ -30,7 +30,7 @@ ms.locfileid: "87180808"
 
 -   [バックアップ対象の項目](Set-up-or-customize-server-backup.md#BKMK_4)
 
-##  <a name="set-up-or-change-server-backup-settings"></a><a name="BKMK_1"></a>サーバーバックアップの設定をセットアップまたは変更する
+##  <a name="set-up-or-change-server-backup-settings"></a><a name="BKMK_1"></a> サーバーバックアップの設定をセットアップまたは変更する
 
 #### <a name="to-set-up-or-change-server-backup-settings"></a>サーバー バックアップの設定をセットアップまたは変更するには
 
@@ -57,10 +57,10 @@ ms.locfileid: "87180808"
 >    4. [**ドライブの最適化**] ウィンドウでドライブを選択し、[**設定の変更**] をクリックします。
 >    5. [**最適化のスケジュール**] ウィンドウで [**スケジュールに従って実行する (推奨)**] チェック ボックスをオフにし、[**OK**] をクリックして変更を保存します。
 
-##  <a name="server-backup-schedule"></a><a name="BKMK_2"></a>サーバーバックアップのスケジュール
+##  <a name="server-backup-schedule"></a><a name="BKMK_2"></a> サーバーバックアップのスケジュール
  サーバー バックアップのセットアップ ウィザードまたはサーバー バックアップのカスタマイズ ウィザードを使用する場合、サーバー データを 1 日に複数回バックアップするように選択できます。 これらのウィザードでは、増分ベースのバックアップのスケジュールが設定されるため、バックアップは高速に実行され、サーバーのパフォーマンスに大幅な影響はありません。 既定では、ウィザードはバックアップを毎日午後 12:00 と午後 11:00 に実行するようにスケジュールを設定します。 ただし組織のニーズに合わせて、バックアップ スケジュールを調整できます。 場合によっては、バックアップ計画の有効性を評価し、必要に応じて計画を変更します。
 
-##  <a name="backup-target-drive"></a><a name="BKMK_Target"></a>バックアップ先ドライブ
+##  <a name="backup-target-drive"></a><a name="BKMK_Target"></a> バックアップ先ドライブ
  複数の外部記憶域ドライブをバックアップに使用し、オンサイトとオフサイトの記憶域場所をローテーションすることができます。 これにより、オンサイトのハードウェアで物理的破損が発生しても、データの回復がサポートされるため、障害対策計画を向上させることができます。
 
  サーバー バックアップ用にストレージ ドライブを選択した場合、以下の点を考慮してください。
@@ -112,7 +112,7 @@ ms.locfileid: "87180808"
 >
 >    ドライブは直ちにダッシュボードに表示されます。
 
-##  <a name="items-to-be-backed-up"></a><a name="BKMK_4"></a>バックアップする項目
+##  <a name="items-to-be-backed-up"></a><a name="BKMK_4"></a> バックアップする項目
  サーバー上のすべてのドライブ、ファイル、およびフォルダーをバックアップするように選択することも、個別のドライブ、ファイル、またはフォルダーだけをバックアップするように選択することもできます。
 
  ドライブを追加または削除した場合、あるいは共有ファイルやフォルダーを追加または削除した場合は、サーバー バックアップ構成を再確認し、これらの項目がバックアップ構成に対して追加または削除されたことを確認してください。 バックアップする項目を追加または削除するには、以下のいずれかを行います。
@@ -128,7 +128,7 @@ ms.locfileid: "87180808"
 
   たとえば大量のハード ドライブ容量を使用する、テレビ番組の録画が記録されているフォルダーがあるとします。 通常、これらのファイルは見終わった後に削除するため、これらのファイルをバックアップしないことを選択できます。 または、保持することを目的としない一時ファイルが含まれているフォルダーが存在している場合もあります。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [サーバー バックアップの管理](Manage-Server-Backup-in-Windows-Server-Essentials.md)
 

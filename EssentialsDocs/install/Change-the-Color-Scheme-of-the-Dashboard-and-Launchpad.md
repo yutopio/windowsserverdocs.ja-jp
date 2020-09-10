@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: b2913e51-7979-4d48-a431-d2ec5f1042be
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 47d29fd8960de3f85031e59552219166946474f7
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: 8450d96caede5a08d123f9bf5844953735d4c2b4
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181468"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89621915"
 ---
 # <a name="change-the-color-scheme-of-the-dashboard-and-launchpad"></a>ダッシュボードとスタート パッドの配色の変更
 
@@ -137,30 +137,30 @@ ms.locfileid: "87181468"
 
 8.  ファイルを %programFiles%\Windows Server\Bin\OEM にコピーします。 OEM ディレクトリが存在しない場合は、ディレクトリを作成します。
 
-##  <a name="dashboard-and-launchpad-areas-that-can-be-changed"></a><a name="BKMK_Dashboard"></a>ダッシュボードとスタートパッドの変更可能な領域
+##  <a name="dashboard-and-launchpad-areas-that-can-be-changed"></a><a name="BKMK_Dashboard"></a> ダッシュボードとスタートパッドの変更可能な領域
  ここでは、ダッシュボードとスタート パッドのカスタマイズ可能な領域の例を示します。
 
 ### <a name="examples"></a>例
 
-####  <a name="figure-1-sign-in-page-of-the-dashboard"></a><a name="BKMK_Figure1"></a>図 1: ダッシュボードのサインインページ
+####  <a name="figure-1-sign-in-page-of-the-dashboard"></a><a name="BKMK_Figure1"></a> 図 1: ダッシュボードのサインインページ
  ![Windows Server Essentials ダッシュボード](media/SBS8_ADK_Dashboard_Signin_RC.png "SBS8_ADK_Dashboard_Signin_RC")
 
-####  <a name="figure-2-launchpad"></a><a name="BKMK_Figure2"></a>図 2: スタートパッド
+####  <a name="figure-2-launchpad"></a><a name="BKMK_Figure2"></a> 図 2: スタートパッド
  ![Windows SBS スタートパッドのサインイン&#45;](media/SBS8_ADK_LaunchpadSignin2.png "SBS8_ADK_LaunchpadSignin2")
 
-####  <a name="figure-3-sign-in-page-of-the-launchpad"></a><a name="BKMK_Figure3"></a>図 3: スタートパッドのサインインページ
+####  <a name="figure-3-sign-in-page-of-the-launchpad"></a><a name="BKMK_Figure3"></a> 図 3: スタートパッドのサインインページ
  ![Windows Server Essentials スタート パッド](media/SBS8_ADK_Launchpad_Signin_RC.png "SBS8_ADK_Launchpad_Signin_RC")
 
-####  <a name="figure-4-dashboard-text"></a><a name="BKMK_Figure4"></a>図 4: ダッシュボードのテキスト
+####  <a name="figure-4-dashboard-text"></a><a name="BKMK_Figure4"></a> 図 4: ダッシュボードのテキスト
  ![Windows Server Essentials ナビゲーションウィンドウ](media/SBS8_ADK_Navigation_RC.png "SBS8_ADK_Navigation_RC")
 
-####  <a name="figure-5-subtab-border"></a><a name="BKMK_Figure5"></a>図 5: サブタブの枠線
+####  <a name="figure-5-subtab-border"></a><a name="BKMK_Figure5"></a> 図 5: サブタブの枠線
  ![Windows SBS ダッシュボードのサブタブ ボーダー](media/SBS8_ADK_DashboardSubtabborder.png "SBS8_ADK_DashboardSubtabborder")
 
-####  <a name="figure-6-task-pane"></a><a name="BKMK_Figure6"></a>図 6: 作業ウィンドウ
+####  <a name="figure-6-task-pane"></a><a name="BKMK_Figure6"></a> 図 6: 作業ウィンドウ
  ![Windows SBS ダッシュボードの作業ウィンドウ](media/SBS8_ADK_DashboardTaskPane.png "SBS8_ADK_DashboardTaskPane")
 
-####  <a name="figure-7a-product-splash-screen"></a><a name="BKMK_Figure9"></a>図 7a: 製品のスプラッシュスクリーン
+####  <a name="figure-7a-product-splash-screen"></a><a name="BKMK_Figure9"></a> 図 7a: 製品のスプラッシュスクリーン
  ![Windows Server Essentials スプラッシュスクリーン](media/SBS8_ADK_productspalshscreen_RC.png "SBS8_ADK_productspalshscreen_RC")
 
 #### <a name="figure-7b-home-page"></a>図 7b: ホーム ページ

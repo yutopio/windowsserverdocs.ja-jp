@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ef7ddcdd-3a74-40ca-9487-c3a6fc5155a5
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 616b727ad75beefd0ac61c6a715ed1515d7712e5
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: be4bf42f2fe287ad6bd96b9ea5735147ec253e0d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181448"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89621833"
 ---
 # <a name="configure-server-storage"></a>サーバー記憶域の構成
 
@@ -27,7 +27,7 @@ ms.locfileid: "87181448"
 |サーバーのレベル|ディスク構成|
 |------------------|------------------------|
 |入力|-2 台の物理ディスク<br /><br /> -次のものを含む RAID 1 ミラーセットとして構成されます。<br /><br /> -C: ボリューム? 60 GB<br /><br /> -D: ボリューム? 1000 GB|
-|Medium|-3 台の物理ディスク<br /><br /> -次のものを含む RAID 5 セットとして構成されます。<br /><br /> -C: ボリューム? 60 GB<br /><br /> -D: ボリューム? 1500 GB|
+|中間|-3 台の物理ディスク<br /><br /> -次のものを含む RAID 5 セットとして構成されます。<br /><br /> -C: ボリューム? 60 GB<br /><br /> -D: ボリューム? 1500 GB|
 |高|-5 台以上の物理ディスク<br /><br /> -C: ボリュームを含む RAID 1 ミラーセット内の2つのディスク 100 GB<br /><br /> -次のものを含む RAID 5 セット内の残りのすべてのディスク。<br /><br /> -D: ボリューム? 1500 GB<br /><br /> -E: ボリューム? 1500 GB|
 
  これらの推奨値は、インストールされたオペレーティング システムのサイズ、サーバーが使用するデータ記憶域の標準的なサイズ、およびサーバーの稼働期間を通して予想されるデータ記憶域の増分を考慮に入れています。 ボリュームは、1 台の物理ディスク上のパーティションでも、または個別の物理ディスク上に作られたものでもかまいません。 サーバーには顧客の重要なデータが格納されるため、複数の物理ディスクを使用し、ハードウェア RAID または記憶域スペースを使用して顧客のデータを保護することをお勧めします。

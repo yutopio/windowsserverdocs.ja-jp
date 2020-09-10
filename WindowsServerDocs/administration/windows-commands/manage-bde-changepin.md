@@ -3,16 +3,16 @@ title: manage-bde changepin を管理する
 description: オペレーティングシステムドライブの PIN を変更する manage-bde changepin コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: c85aa1c7-3485-4839-a292-99dfcd6db252
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 001f934e55e8b78cae5800dda59ec5d5a12fb606
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 7b920e9c4580fced678e9d7dddd30fff66dad802
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89033980"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622637"
 ---
 # <a name="manage-bde-changepin"></a>manage-bde changepin を管理する
 
@@ -26,7 +26,7 @@ manage-bde -changepin [<drive>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | `<drive>` | コロンの後にドライブ文字を表します。 |
 | -computername | manage-bde.exe が別のコンピューターの BitLocker 保護を変更するために使用されることを指定します。 また、このコマンドの省略版として **-cn** を使用することもできます。 |

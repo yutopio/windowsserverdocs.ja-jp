@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 7975f70d75a33549d0a3c7616b5260064d5cb323
-ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: a0dd4b7469aa44773d978da7d5afd68eac57bff3
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554425"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89623311"
 ---
 # <a name="integrate-an-on-premises-exchange-server-with-windows-server-essentials"></a>社内 Exchange Server と Windows Server Essentials を統合する
 
@@ -51,7 +51,7 @@ ms.locfileid: "89554425"
  たとえば、会社のインターネット ドメイン名が contoso.com の場合、Exchange Server を実行する社内サーバーを参照するために *mail.contoso.com* という完全修飾ドメイン名 (FQDN) を使用するには、ドメイン ネーム プロバイダーと連携して、次の表に示すような DNS リソース レコードを作成します。
 
 
-| リソース レコード名 |     レコード タイプ     |                                                                         レコードの設定                                                                          |                                                                                                                                                                                                                                                              説明                                                                                                                                                                                                                                                              |
+| リソース レコード名 |     レコード タイプ     |                                                                         レコードの設定                                                                          |                                                                                                                                                                                                                                                              Description                                                                                                                                                                                                                                                              |
 |----------------------|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         mail         |      ホスト (A)       |                                                        Address=*ISP によって割り当てられたパブリック IP アドレス*                                                         |                                                                                                                                                                                                   Exchange Server で mail.contoso.com 当てのメールを受信します。<br /><br /> 他の名前を任意に選択して使用できます。                                                                                                                                                                                                    |
 |          MX          | メール エクスチェンジャー (MX) |                                            ホスト名=@<br /><br /> アドレス=mail.contoso.com<br /><br /> 優先順位=0                                             |                                                                                                                                                                                                      email@contoso.comExchange server を実行しているオンプレミスサーバーに到着するための電子メールメッセージのルーティングを提供します。                                                                                                                                                                                                       |

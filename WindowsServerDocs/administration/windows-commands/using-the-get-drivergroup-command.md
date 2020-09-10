@@ -3,16 +3,16 @@ title: get DriverGroup
 description: サーバー上のドライバーグループに関する情報を表示する、get DriverGroup の参照記事。
 ms.topic: reference
 ms.assetid: 7cfe10c3-a63f-48e7-bef9-f6b474b4ddbe
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 545bf634382e562221438295e5d015f7dbb97bf3
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: ec0341403140a0aaab2ec43dab960e81935cefa8
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029680"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622575"
 ---
 # <a name="get-drivergroup"></a>get DriverGroup
 
@@ -25,7 +25,7 @@ ms.locfileid: "89029680"
 wdsutil /Get-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |DriverGroup<Group Name>|ドライバー グループの名前を指定します。|
 |[/Server:<Server name>]|サーバーの名前を指定します。 これには、NetBIOS 名または FQDN を指定できます。  サーバー名が指定されていない場合は、ローカルサーバーが使用されます。|

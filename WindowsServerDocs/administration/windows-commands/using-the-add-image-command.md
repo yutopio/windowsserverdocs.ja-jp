@@ -3,16 +3,16 @@ title: イメージの追加
 description: Windows 展開サービスサーバーにイメージを追加する追加イメージのリファレンス記事です。
 ms.topic: reference
 ms.assetid: d5b6f4da-90ba-4b0e-9423-66c8ef5172e2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 03f7a024b2d396f54db66a48353557f776552db1
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 6239cab5d4da67c5a115a0261bc0446022a1080c
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029830"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622256"
 ---
 # <a name="add-image"></a>イメージの追加
 
@@ -20,7 +20,7 @@ ms.locfileid: "89029830"
 
 Windows 展開サービス サーバーにイメージを追加します。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 ブートイメージの場合は、次の構文を使用します。
 ```
 wdsutil /add-ImagmediaFile:<wim file path> [/Server:<Server name>mediatype:Boot [/Skipverify] [/Name:<Image name>] [/Description:<Image description>]
@@ -40,7 +40,7 @@ wdsutil /add-ImagmediaFile:<wim file path>
      [/UnattendFile:<Unattend file path>]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 mediaFile: < .wim ファイルのパス >|追加するイメージを含む Windows イメージ (.wim) ファイルの完全パスとファイル名を指定します。|
 |[/Server:<Server name>]|サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 サーバー名が指定されていない場合は、ローカルのサーバーが使用されます。|

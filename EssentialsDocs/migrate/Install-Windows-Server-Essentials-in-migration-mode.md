@@ -5,17 +5,17 @@ ms.date: 04/29/2020
 ms.topic: article
 ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ms.custom:
 - CI ID 117135
 - CSSTroubleshoot
-ms.openlocfilehash: 5e6db88b9888726fbec62d953b3510142ff1a699
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: ada3b5fa3b95fa6de45177513b26589c4180696d
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180768"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622833"
 ---
 # <a name="install-windows-server-essentials-in-migration-mode"></a>Windows Server Essentials を移行モードでインストールする
 
@@ -40,7 +40,7 @@ ms.locfileid: "87180768"
 
 6.  移行先サーバーをサイト ライセンス サーバーとして構成します。
 
-##  <a name="install-windows-server-essentials-on-the-destination-server"></a><a name="BKMK_Install"></a>移行先サーバーに Windows Server Essentials をインストールする
+##  <a name="install-windows-server-essentials-on-the-destination-server"></a><a name="BKMK_Install"></a> 移行先サーバーに Windows Server Essentials をインストールする
  移行モードで移行先サーバーに Windows Server Essentials をインストールして構成するには、次の手順を実行します。
 
 #### <a name="to-install-windows-server-essentials-on-the-destination-server"></a>移行先サーバーに Windows Server Essentials をインストールするには
@@ -48,7 +48,7 @@ ms.locfileid: "87180768"
 1. 移行先サーバーの電源を入れ、Windows Server Essentials DVD1 を DVD ドライブに挿入します。 CD または DVD から起動するかどうかを確認するメッセージが表示されたら、任意のキーを押してそうします。
 
    > [!NOTE]
-   >  移行先サーバーが USB フラッシュドライブからの起動をサポートしている場合は、 **windows 7 usb/DVD ダウンロードツール**を使用して、Windows SERVER Essentials ISO ファイルから起動可能な usb フラッシュドライブを作成できます。 USB フラッシュ ドライブの方が DVD-ROM ドライブよりデータ読み取り速度がはるかに速いので、フラッシュ ドライブを使用するとインストール プロセスの時間を大幅に短縮できます。 起動可能な USB フラッシュ ドライブを作成した後、応答ファイルをフラッシュ ドライブに追加できます。 [Windows 7 USB/DVD ダウンロードツールは、](https://go.microsoft.com/fwlink/p/?LinkId=248282) Microsoft Store web サイトで無料でダウンロードできます。
+   >  移行先サーバーが USB フラッシュドライブからの起動をサポートしている場合は、 **windows 7 usb/DVD ダウンロードツール** を使用して、Windows SERVER Essentials ISO ファイルから起動可能な usb フラッシュドライブを作成できます。 USB フラッシュ ドライブの方が DVD-ROM ドライブよりデータ読み取り速度がはるかに速いので、フラッシュ ドライブを使用するとインストール プロセスの時間を大幅に短縮できます。 起動可能な USB フラッシュ ドライブを作成した後、応答ファイルをフラッシュ ドライブに追加できます。 [Windows 7 USB/DVD ダウンロードツールは、](https://go.microsoft.com/fwlink/p/?LinkId=248282) Microsoft Store web サイトで無料でダウンロードできます。
 
    > [!NOTE]
    >  移行先サーバーが DVD から起動しない場合は、コンピューターを再起動し、BIOS Setup の起動シーケンスで **DVD-ROM** が一覧の最初に表示されていることを確認します。 BIOS Setup の起動シーケンスを変更する方法の詳細については、ハードウェア メーカーのドキュメントを参照してください。
@@ -68,7 +68,7 @@ ms.locfileid: "87180768"
 > [!NOTE]
 >  Windows Server Essentials のインストール中にデスクトップのロックを解除するには、ビルトイン administrator アカウントを使用して、パスワードを空白のままにします。
 
-##  <a name="verify-the-health-of-the-domain-controller"></a><a name="BKMK_VerifyTheHealthOfDC"></a>ドメインコントローラーの正常性を確認する
+##  <a name="verify-the-health-of-the-domain-controller"></a><a name="BKMK_VerifyTheHealthOfDC"></a> ドメインコントローラーの正常性を確認する
  移行を続行する前に、ドメインコントローラーと Windows Server Essentials ネットワークが正常であることを確認する必要があります。
 
  次の表は、移行先サーバー、ネットワーク、およびドメインの問題を診断するために使用できるツールの一覧を示しています。
@@ -82,4 +82,4 @@ ms.locfileid: "87180768"
  移行を続行する前に、これらのツールによって報告された問題をすべて修正する必要があります。
 
 > [!NOTE]
->  電子メールを別のオンプレミスの Exchange server に移行する場合は、オンプレミスの exchange server[と Windows Server Essentials の統合](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md)に関する情報を参照してください。
+>  電子メールを別のオンプレミスの Exchange server に移行する場合は、オンプレミスの exchange server [と Windows Server Essentials の統合](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md) に関する情報を参照してください。

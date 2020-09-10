@@ -5,14 +5,14 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 07d0c4c6-3e92-4969-82b8-105e46ab8d97
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: 9013d63d0fbedfd679b8d717b9501f4af567b6f5
-ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
+ms.author: geschuma
+manager: mtillman
+ms.openlocfilehash: bf5b6027c934c1dec9916ff08995a7f096a2b8bd
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554415"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622444"
 ---
 # <a name="support-for-larger-deployments"></a>大規模展開のサポート
 
@@ -59,6 +59,6 @@ Windows Server 2016 Essentials では、500ユーザーと500デバイスがサ�
 > [!NOTE]
 > Windows Server Essentials のサーバーの役割でサポートされているユーザーとデバイスの制限が引き上げられていますが、クライアントのバックアップでサポートされる制限は75にとどまります。
 
-<a name="see-also"></a>関連項目
+<a name="see-also"></a>こちらもご覧ください
 --------
 [Windows Server Essentials の概要](get-started.md)

@@ -3,16 +3,16 @@ title: taskkill
 description: 1つ以上のタスクまたはプロセスを終了する taskkill のリファレンス記事です。
 ms.topic: reference
 ms.assetid: 2b71e792-08b6-46d4-95a5-cb6336a79524
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: b3b0a2727116ca2a073e5ad5b17c4fe065453ab6
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: f750f7487e8220c93ea30a78ee185f28a74fd512
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027120"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622363"
 ---
 # <a name="taskkill"></a>taskkill
 
@@ -30,7 +30,7 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 
 ### <a name="parameters"></a>パラメーター
 
-|         パラメーター         |                                                                                                                                        説明                                                                                                                                        |
+|         パラメーター         |                                                                                                                                        Description                                                                                                                                        |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |      /s \<computer>       |                                                                                    名前またはリモート コンピューターの IP アドレスを指定します (円記号を使用しない)。 既定値はローカル コンピューターです。                                                                                     |
 | /u \<Domain>\\\<UserName> | 指定されているユーザーのアカウント権限でコマンドを実行して *UserName* または *ドメイン*\\*ユーザー名*します。 **/u** 場合にのみ指定できる **/s** を指定します。 既定では、コマンドを発行しているコンピューターに現在ログオンしているユーザーのアクセス許可です。 |
@@ -56,7 +56,7 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 | WINDOWTITLE |         eq、ne         |                                                                 ウィンドウのタイトル                                                                 |
 |   モジュール   |         eq、ne         |                                                                   DLL 名                                                                   |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 * リモート システムが指定されているときに、WINDOWTITLE と状態のフィルターはサポートされていません。
 * ワイルドカード文字 ( **\\** ) は、フィルターが適用されている場合にのみ<em>、**/im</em>オプションに受け入れられ*ます。
 * リモート プロセスの終了は常に実行が強制的に、かどうかに関係なく、 **/f** オプションを指定します。

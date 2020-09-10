@@ -3,16 +3,16 @@ title: イメージの削除
 description: サーバーからイメージを削除する削除イメージに関するリファレンス記事です。
 ms.topic: reference
 ms.assetid: ce5e2384-2264-4b22-92af-74eec8c10ae0
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: d720a924424840224afd1ecd88c48c4f9a9a1163
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b09735e552024abb09b59b9e1c9831988fbc601f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89023186"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622539"
 ---
 # <a name="remove-image"></a>イメージの削除
 
@@ -20,7 +20,7 @@ ms.locfileid: "89023186"
 
 サーバーからイメージを削除します。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 ブートイメージの場合:
 ```
 wdsutil [Options] /remove-Imagmedia:<Image name> [/Server:<Server name>mediatype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<Filename>]
@@ -30,7 +30,7 @@ wdsutil [Options] /remove-Imagmedia:<Image name> [/Server:<Server name>mediatype
 wdsutil [Options] /remove-Imagmedia:<Image name> [/Server:<Server name>mediatype:InstallmediaGroup:<Image group name>] [/Filename:<Filename>]
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 用紙<Image name>|イメージの名前を指定します。|
 |[/Server:<Server name>]|サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 サーバー名が指定されていない場合は、ローカルのサーバーが使用されます。|

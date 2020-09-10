@@ -3,16 +3,16 @@ title: 削除-AutoaddDevices
 description: 自動追加データベースから保留中、拒否、または承認されたコンピューターを削除する、AutoaddDevices の参照記事。
 ms.topic: reference
 ms.assetid: 8dcaca6a-212e-4c36-98e3-00938eef6b9c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 50160d9b015861f2e32f7ae693cbd99d6eccb020
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 9137c1f5888f4b60e19e1330feab57d678c3bfd1
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89038190"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89622097"
 ---
 # <a name="delete-autoadddevices"></a>削除-AutoaddDevices
 
@@ -25,7 +25,7 @@ ms.locfileid: "89038190"
 wdsutil /delete-AutoaddDevices [/Server:<Server name>] /Devicetype:{PendingDevices | RejectedDevices |ApprovedDevices}
 ```
 ### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
+|パラメーター|Description|
 |-------|--------|
 |[/Server:<Server name>]|サーバーの名前を指定します。 NetBIOS 名または完全修飾ドメイン名 (FQDN) のいずれかを指定できます。 サーバー名が指定されていない場合は、ローカルのサーバーが使用されます。|
 |/Devicetype: {PendingDevices &#124; RejectedDevices &#124;ApprovedDevices}|データベースから削除するコンピューターの種類を指定します。 次の 3 種類のいずれかになります。<p>-   **Pendingdevices** は、状態が [保留中] になっているデータベース内のすべてのコンピューターを返します。<br />-   **RejectedDevices** は、データベース内の、状態が拒否のすべてのコンピューターを返します。<br />-   **ApprovedDevices** は、状態が承認済みのすべてのコンピューターを返します。|
