@@ -3,16 +3,16 @@ title: bcdedit
 description: 新しいストアを作成し、既存のストアを変更して、ブートメニューパラメーターを追加する bcdedit コマンドの参照記事。
 ms.topic: reference
 ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 03/27/2018
-ms.openlocfilehash: 81ce7f6964b4ffebdc64056b1bb630bc3eb6d0f7
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b3cd41f3ba1980718a5e2c0a37df470a94f67657
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031610"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89632976"
 ---
 # <a name="bcdedit"></a>bcdedit
 
@@ -56,7 +56,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 #### <a name="parameters-that-operate-on-entries-in-a-store"></a>ストア内のエントリを操作するパラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | ------ | ----------- |
 | /copy | 同じシステム ストア内で指定されたブート エントリのコピーを作成します。 |
 | 作成します | ブート構成データ ストア内に新しいエントリを作成します。 既知の識別子が指定されている場合、 **/application**、 **/inherit**、および **/device** パラメーターを指定することはできません。 識別子が指定されていないか、よく知られていない場合は、 **/application**、 **/inherit**、または **/device** オプションを指定する必要があります。 |
@@ -64,21 +64,21 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 #### <a name="parameters-that-operate-on-entry-options"></a>入力オプションで動作するパラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | ------ | ----------- |
 | /deletevalue | ブート エントリから指定された要素を削除します。 |
 | /set | エントリ オプション値を設定します。 |
 
 #### <a name="parameters-that-control-output"></a>出力を制御するパラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | ------ | ----------- |
 | /enum | ストア内のエントリを一覧表示します。 **/Enum**オプションは bcedit の既定値であるため、パラメーターを指定せずに**bcdedit**コマンドを実行することは、 **bcdedit/enum active**コマンドを実行することと同じです。 |
 | /v | Verbose モード 通常、既知のエントリ ID は、わかりやすい短い形式で示されます。 **/V**をコマンドラインオプションとして指定すると、すべての識別子が完全に表示されます。 **Bcdedit/v**コマンドを単独で実行することは、 **bcdedit/enum active/v**コマンドを実行することと同じです。 |
 
 #### <a name="parameters-that-control-the-boot-manager"></a>ブートマネージャーを制御するパラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | ------ | ----------- |
 | /bootsequence | 次の起動時にのみ使用する、1 回限りの表示順序を指定します。 このコマンドは、次にコンピューターを起動するときにのみ使用される点を除いて、 **/displayorder** オプションに似ています。 このコマンドの実行後、コンピューターは元の表示順序に戻ります。 |
 | /default | タイムアウトとなった場合に、ブート マネージャーが選択する既定のエントリを指定します。 |
@@ -88,7 +88,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 #### <a name="parameters-that-control-emergency-management-services"></a>緊急管理サービスを制御するパラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | ------ | ----------- |
 | /bootems | 指定されたエントリの緊急管理サービス (EMS) を有効または無効にします。 |
 | /ems | 指定されたオペレーティング システムのブート エントリの EMS を有効または無効にします。 |
@@ -96,7 +96,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 #### <a name="parameters-that-control-debugging"></a>デバッグを制御するパラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | ------ | ----------- |
 | /bootdebug | 指定されたブート エントリのブート デバッガーを有効または無効にします。 このコマンドは任意のブート エントリに使用できますが、ブート アプリケーションにのみ効果があります。 |
 | /dbgsettings | システムのグローバル デバッガー設定を指定または表示します。 このコマンドは、enablepose 無効にします。 個々のグローバルデバッガー設定を設定するには、 **bcdedit/set**コマンドを使用し `<dbgsettings> <type> <value>` ます。 |

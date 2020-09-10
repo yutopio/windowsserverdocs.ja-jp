@@ -3,16 +3,16 @@ title: atmadm
 description: 非同期転送モード (atM) ネットワーク上の atM コールマネージャーによって登録された接続とアドレスを監視する、atmadm コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: 37156c2e-c4d4-4fd8-a03d-245fb60bf996
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: b79ecdad00872cb67beb38b7cfe35bbd2c45379e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: c77ab10ce7ec628d3a1c820bc644f4b117d82953
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029270"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89633405"
 ---
 # <a name="atmadm"></a>atmadm
 
@@ -35,7 +35,7 @@ atmadm [/c][/a][/s]
 | /s | アクティブな atM 接続の状態を監視するための統計情報を表示します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 - **Atmadm/c**コマンドを実行すると、次のような出力が生成されます。
 

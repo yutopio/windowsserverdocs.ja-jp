@@ -3,16 +3,16 @@ title: bitsadmin getnotifyflags
 description: Bitsadmin getnotifyflags コマンドの参照記事。指定されたジョブの通知フラグを取得します。
 ms.topic: reference
 ms.assetid: d4657e6c-8959-4db7-a4af-e73d3f80ecf8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3b0281629eb98a7f74defb0971b691fd656d9d97
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b7cdc2d65316bfcc856bb0fe55a9379d4fc6ba6b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89033440"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89631899"
 ---
 # <a name="bitsadmin-getnotifyflags"></a>bitsadmin getnotifyflags
 
@@ -26,11 +26,11 @@ bitsadmin /getnotifyflags <job>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | -------------- | -------------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 ジョブには、次の1つまたは複数の通知フラグを含めることができます。
 

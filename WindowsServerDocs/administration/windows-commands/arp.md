@@ -3,16 +3,16 @@ title: arp
 description: Arp コマンドの参照記事。 IP アドレスとその解決済みの物理アドレスを格納するために使用されるアドレス解決プロトコル (arp) キャッシュ内のエントリを表示および変更します。
 ms.topic: reference
 ms.assetid: 827e96eb-1945-483f-980f-714703456f7c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: b97c285f36bac3fd8587abddaf0a70423eb26155
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 33b636bb27a6dcb9bc5d744e164fb16051cf4f05
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029390"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89633451"
 ---
 # <a name="arp"></a>arp
 
@@ -36,7 +36,7 @@ arp [/a [<inetaddr>] [/n <ifaceaddr>]] [/g [<inetaddr>] [-n <ifaceaddr>]] [/d <i
 | `[/s <inetaddr> <etheraddr> [<ifaceaddr>]` | IP アドレス **inetaddr** を物理アドレス **etheraddr**に解決する静的エントリを arp キャッシュに追加します。 特定のインターフェイスの静的 arp キャッシュエントリをテーブルに追加するには、 **ifaceaddr** パラメーターを使用します。 **ifaceaddr** は、インターフェイスに割り当てられた IP アドレスです。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 - **Inetaddr**と**ifaceaddr**の IP アドレスは、ドット形式の10進表記で表されます。
 

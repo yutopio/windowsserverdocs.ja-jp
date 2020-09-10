@@ -3,16 +3,16 @@ title: bdehdcfg size
 description: 新しいシステムドライブを作成するときのシステムパーティションのサイズを指定する、bdehdcfg size コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: 80f55b1d-a28d-4edf-9997-1fb918b7b5a1
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f4aaedbbac5783fdf54814d7cf97ef9c70c9d346
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: c68322fe999a39c4a2913826f520f0b401a9d0ac
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031480"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89632820"
 ---
 # <a name="bdehdcfg-size"></a>bdehdcfg: サイズ
 

@@ -3,16 +3,16 @@ title: macfile
 description: Macintosh サーバー、ボリューム、ディレクトリ、およびファイルのファイルサーバーを管理する、macfile コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: e2ce586c-b316-41d3-90f8-4be0d074cc0e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 06095d99c6cfbdc51fd28f51f9bc06f08d959edf
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 6ed5af42108d56016a4b5793993cf19c80a87ff3
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89023696"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89633834"
 ---
 # <a name="macfile"></a>macfile
 
@@ -59,7 +59,7 @@ macfile directory[/server:\\<computername>] /path:<directory> [/owner:<ownername
 | 第 10 | ディレクトリの名前変更、移動、または削除を行うことはできません。 |
 | 11 番目 | 変更は、現在のディレクトリとすべてのサブディレクトリに適用されます。 |
 
-##### <a name="remarks"></a>解説
+##### <a name="remarks"></a>注釈
 
 - 入力した情報にスペースや特殊文字が含まれている場合は、テキストを引用符で囲みます (" `<computer name>` " など)。
 
@@ -99,7 +99,7 @@ macfile forkize[/server:\\<computername>] [/creator:<creatorname>] [/type:<typen
 | targetfile`<filepath>` | データフォークとリソースフォークを結合することによって作成されるファイルの場所を指定します。または、変更する型またはクリエーターを含むファイルの場所を指定します。 ファイルは、指定されたサーバー上に存在する必要があります。 このパラメーターは必須です。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-##### <a name="remarks"></a>解説
+##### <a name="remarks"></a>注釈
 
 - 入力した情報にスペースや特殊文字が含まれている場合は、テキストを引用符で囲みます (" `<computer name>` " など)。
 
@@ -136,7 +136,7 @@ macfile server [/server:\\<computername>] [/maxsessions:{number | unlimited}] [/
 | /loginmessage:`<message>` | Macintosh サーバーのファイルサーバーにサインインするときに、Macintosh ユーザーに表示されるメッセージを変更します。 サインインメッセージの最大文字数は199です。 省略した場合は、 **loginmessage** メッセージは、サーバーは変更されません。 既存のサインインメッセージを削除するには、 **/loginmessage** パラメーターを含めますが、 *message* 変数は空白のままにします。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-##### <a name="remarks"></a>解説
+##### <a name="remarks"></a>注釈
 
 - 入力した情報にスペースや特殊文字が含まれている場合は、テキストを引用符で囲みます (" `<computer name>` " など)。
 
@@ -174,7 +174,7 @@ macfile volume /remove[/server:\\<computername>] /name:<volumename>
 | /remove | Macintosh からアクセス可能なボリュームを削除する場合に必要です。 指定されたボリュームを削除します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-##### <a name="remarks"></a>解説
+##### <a name="remarks"></a>注釈
 
 - 入力した情報にスペースや特殊文字が含まれている場合は、テキストを引用符で囲みます (" `<computer name>` " など)。
 

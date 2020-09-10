@@ -3,16 +3,16 @@ title: bdehdcfg target
 description: BitLocker と Windows 回復によってシステムドライブとして使用するパーティションを準備する bdehdcfg target コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: f761d25d-8349-4ac7-ac46-6bb340a4348f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 173dfa5a8e873b76e512ce1d657eb1d51391640a
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 7cc13e3c224aa1af944c5e9c9550737addcb6980
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031470"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89632813"
 ---
 # <a name="bdehdcfg-target"></a>bdehdcfg: ターゲット
 
@@ -26,7 +26,7 @@ bdehdcfg -target {default|unallocated|<drive_letter> shrink|<drive_letter> merge
 
 #### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | default | は、コマンドラインツールが BitLocker セットアップウィザードと同じプロセスに従うことを示します。 |
 | 未 | ディスク上の使用可能な未割り当て領域からシステムパーティションを作成します。 |

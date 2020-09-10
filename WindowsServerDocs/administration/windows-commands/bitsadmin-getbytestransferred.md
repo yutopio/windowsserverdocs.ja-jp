@@ -3,16 +3,16 @@ title: bitsadmin getbytestransferred
 description: Bitsadmin getbytestransferred コマンドの参照記事。指定されたジョブで転送されたバイト数を取得します。
 ms.topic: reference
 ms.assetid: 47bbf184-e06f-4be0-b2ba-d32b10d82002
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 67e1432f2fbef32ac47320d87993f5d62053bb71
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: c67185ff147611436dcb75803e2282542f376019
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89028740"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89632301"
 ---
 # <a name="bitsadmin-getbytestransferred"></a>bitsadmin getbytestransferred
 
@@ -26,7 +26,7 @@ bitsadmin /getbytestransferred <job>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | -------------- | -------------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
 

@@ -3,16 +3,16 @@ title: bitsadmin addfile
 description: Bitsadmin addfile コマンドの参照記事。指定されたジョブにファイルを追加します。
 ms.topic: reference
 ms.assetid: 1b31aa93-0364-465b-af36-754968825989
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 63df6c33bae3022c91633d4507c1fe9709cdd65e
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 74e77f2af220a057ed0ad87da797e9ae88c7aef5
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031380"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89632740"
 ---
 # <a name="bitsadmin-addfile"></a>bitsadmin addfile
 
@@ -26,7 +26,7 @@ bitsadmin /addfile <job> <remoteURL> <localname>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
 | remoteURL | サーバー上のファイルの URL。 |

@@ -3,16 +3,16 @@ title: at
 description: At コマンドの参照記事。指定された日時にコンピューター上で実行するコマンドとプログラムをスケジュールします。
 ms.topic: reference
 ms.assetid: ff18fd16-9437-4c53-8794-bfc67f5256b3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 017e6bb59b891fddfff9e695f8e3040f678bd611
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 8cd6762c6a88e24b6092dcce519582a0f627c77f
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029290"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89633419"
 ---
 # <a name="at"></a>at
 
@@ -43,7 +43,7 @@ at [\computername] <time> [/interactive] [/every:date[,...] | /next:date[,...]] 
 | `<command>` | 実行する Windows コマンド、プログラム (.exe または .com ファイル)、またはバッチプログラム (つまり、.bat または .cmd ファイル) を指定してください。 コマンドが引数としてパスを必要とする場合は、絶対パス (つまり、ドライブ文字で始まるパス全体) を使用します。 コマンドがリモートコンピューター上にある場合は、リモートドライブ文字ではなく、サーバーと共有名に汎用名前付け規則 (UNC) 表記を指定します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 - コマンドを実行する前に、このコマンドでは cmd.exe が自動的に読み込まれません。 実行可能 (.exe) ファイルを実行していない場合は、次のように、コマンドの先頭に cmd.exe を明示的に読み込む必要があります。
 
@@ -115,7 +115,7 @@ at [\computername] <time> [/interactive] [/every:date[,...] | /next:date[,...]] 
 
         - **データ型。** reg_DWOrd
 
-        - **ベース.** 10 進数
+        - **ベース.** Decimal
 
         - **値のデータ:** 0. 値の**データ**フィールドの値が**0**の場合は、制限がないことを示し、停止することはありません。 1 ~ 99 の値は、時間数を示します。
 

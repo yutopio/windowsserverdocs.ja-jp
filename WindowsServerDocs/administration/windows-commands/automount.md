@@ -3,16 +3,16 @@ title: automount
 description: Automount コマンドの参照記事。自動マウント機能を有効または無効にします。
 ms.topic: reference
 ms.assetid: 4635fc91-a477-4f17-8dcc-aa08854bfe45
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 92fa9f66db510d887af793882a2400b31a1517c4
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 0f4be54f7610929627e0cc0332a7f5d65eafc8b2
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89031640"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89632998"
 ---
 # <a name="automount"></a>automount
 
@@ -23,13 +23,13 @@ ms.locfileid: "89031640"
 > [!IMPORTANT]
 > 記憶域ネットワーク (SAN) 構成では、自動マウントを無効にすると、システムに表示される新しいベーシックボリュームに、ドライブ文字を自動的にマウントしたり、割り当てたりすることができなくなります。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 自動マウント [{enable | disable | スクラブ}] [noerr]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | 有効化 (enable) | システムに追加された新しいベーシックおよびダイナミックボリュームを Windows で自動的にマウントし、ドライブ文字を割り当てることができるようにします。 |
 | 無効化 (disable) | システムに追加された新しいベーシックボリュームおよびダイナミックボリュームが Windows によって自動的にマウントされないようにします。<p>**注**: 自動マウントを無効にすると、フェールオーバークラスターが構成の検証ウィザードの記憶域部分に障害を起こす可能性があります。 |

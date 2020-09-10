@@ -3,16 +3,16 @@ title: attributes volume
 description: 属性 volume コマンドのリファレンス記事。ボリュームの属性を表示、設定、またはクリアします。
 ms.topic: reference
 ms.assetid: e40e8284-3d57-4de8-a46c-e4ade34a0d53
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 71f11eb692676cec4121e2ea24aed123f6a7d7d5
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: dd651732dbf537da31ae5f5343c687868ffb2741
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89029190"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89633286"
 ---
 # <a name="attributes-volume"></a>attributes volume
 
@@ -38,7 +38,7 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
 | shadowcopy | ボリュームをシャドウ コピー ボリュームに指定します。 |
 | noerr | スクリプト専用です。 エラーが発生しても、エラーが発生しなかったかのように DiskPart はコマンドの処理を続けます。 このパラメーターは、エラー発生すると、DiskPart はエラー コードを生成して終了します。 |
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 - ベーシックマスタブートレコード (MBR) ディスクでは、 **hidden**、 **readonly**、および **nodefaultdriveletter** 各パラメータがディスク上のすべてのボリュームに適用されます。
 

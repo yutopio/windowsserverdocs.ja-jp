@@ -3,16 +3,16 @@ title: bitsadmin addfilewithranges
 description: Bitsadmin addfilewithranges コマンドの参照記事。指定されたジョブにファイルを追加します。 BITS は、指定された範囲をリモートファイルからダウンロードします。
 ms.topic: reference
 ms.assetid: df0ce0bf-dff1-4a48-a16f-fd2f4d5f7189
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 08f9031ebd6ffe2e1480e59e5e357a33b9895766
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: 5eda860558f43b5f692bd41167617b24dbb6f86b
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89027850"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89632658"
 ---
 # <a name="bitsadmin-addfilewithranges"></a>bitsadmin addfilewithranges
 
@@ -26,14 +26,14 @@ bitsadmin /addfilewithranges <job> <remoteURL> <localname> <rangelist>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
 | ジョブ (job) | ジョブの表示名または GUID。 |
 | remoteURL | サーバー上のファイルの URL。 |
 | localname | ローカルコンピューター上のファイルの名前。 ファイルへの絶対パスが含まれている必要があります。 |
 | rangelist | オフセットの長さのコンマ区切りの一覧。 長さの値からオフセット値を区切るには、コロンを使用します。 たとえば、値がの場合は、オフセット `0:100,2000:100,5000:eof` 0 から100バイト、オフセット2000からの100バイト、およびオフセット5000からファイルの末尾までの残りのバイトを転送するようにビットに指示します。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 - トークン **eof** は、のオフセットと長さのペア内の有効な長さの値です `<rangelist>` 。 このメソッドは、指定されたファイルの末尾に読み取るようにサービスに指示します。
 
