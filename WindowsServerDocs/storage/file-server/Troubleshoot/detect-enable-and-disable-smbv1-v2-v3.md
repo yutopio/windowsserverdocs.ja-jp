@@ -6,12 +6,12 @@ manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 40ab29a115735e6c37bb7c7449980b94090565f3
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: f96302242eca58d589586fa44e6e7cd04ef98cc1
+ms.sourcegitcommit: 0b3d6661c44aa1a697087e644437279142726d84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86961074"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083643"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Windows で SMBv1、SMBv2、および SMBv3 を検出、有効化、および無効化する方法
 
@@ -20,7 +20,7 @@ ms.locfileid: "86961074"
 この記事では、SMB クライアントおよびサーバーコンポーネントで、サーバーメッセージブロック (SMB) バージョン 1 (SMBv1)、SMB バージョン 2 (SMBv2)、および SMB バージョン 3 (SMBv3) を有効または無効にする方法について説明します。 
 
 > [!IMPORTANT]
-> SMBv2 または SMBv3 を無効にし**ない**ことをお勧めします。 一時的なトラブルシューティングメジャーとして SMBv2 または SMBv3 のみを無効にします。 SMBv2 または SMBv3 は無効のままにしないでください。  
+> SMBv2 または SMBv3 を無効にし **ない** ことをお勧めします。 一時的なトラブルシューティングメジャーとして SMBv2 または SMBv3 のみを無効にします。 SMBv2 または SMBv3 は無効のままにしないでください。  
 
 Windows 7 と Windows Server 2008 R2 で SMBv2 を無効にすると、次の機能が非アクティブになります。 
  
@@ -66,7 +66,7 @@ SMBv2 および SMBv3 機能の機能の詳細については、次の記事を�
 - 識別 
 
   ```PowerShell
-  Get-WindowsFeature FS-SMB1
+  Get-WindowsOptionalFeature -Online -FeatureName smb1protocol
   ```
 
 - 切り替える 
@@ -137,7 +137,7 @@ SMBv2 および SMBv3 機能の機能の詳細については、次の記事を�
 
 ### <a name="for-windows-8-and-windows-server-2012"></a>Windows 8 および Windows Server 2012 の場合
 
-Windows 8 と Windows Server 2012 には、新しい**SMBServerConfiguration** windows PowerShell コマンドレットが導入されています。 コマンドレットを使用すると、サーバーコンポーネントの SMBv1、SMBv2、および SMBv3 プロトコルを有効または無効にすることができます。  
+Windows 8 と Windows Server 2012 には、新しい **SMBServerConfiguration** windows PowerShell コマンドレットが導入されています。 コマンドレットを使用すると、サーバーコンポーネントの SMBv1、SMBv2、および SMBv3 プロトコルを有効または無効にすることができます。  
 
 > [!NOTE]   
 > Windows 8 または Windows Server 2012 で SMBv2 を有効または無効にすると、SMBv3 も有効または無効になります。 これらのプロトコルは同じスタックを共有するため、この動作が発生します。     
@@ -215,7 +215,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Par
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 –Force
 ```  
 
-**メモ**これらの変更を行った後、コンピューターを再起動する必要があります。 詳細については、「 [Microsoft でのサーバーストレージ](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858)」を参照してください。 
+**メモ** これらの変更を行った後、コンピューターを再起動する必要があります。 詳細については、「 [Microsoft でのサーバーストレージ](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858)」を参照してください。 
 ##### <a name="smb-v2v3-on-smb-server"></a>Smb サーバー上の SMB v2/v3
 
 識別  
@@ -339,19 +339,19 @@ Default: 1 = Enabled (No registry key is created)
  
 1. [**グループ ポリシー管理コンソール**] を開きます。 新しい基本設定項目を含むグループ ポリシー オブジェクト (GPO) を右クリックして、**[編集]** をクリックします。
 
-2. コンソールツリーの [**コンピューターの構成**] の下にある [**基本設定**] フォルダーを展開し、[ **Windows の設定**] フォルダーを展開します。
+2. コンソールツリーの [ **コンピューターの構成**] の下にある [ **基本設定** ] フォルダーを展開し、[ **Windows の設定** ] フォルダーを展開します。
 
 3. **レジストリ**ノードを右クリックして [**新規作成**] をポイントし、[**レジストリ項目**] を選択します。
 
    ![レジストリ-新規-レジストリ項目](media/detect-enable-and-disable-smbv1-v2-v3-3.png)    
  
-[**新しいレジストリのプロパティ**] ダイアログボックスで、次のように選択します。 
+[ **新しいレジストリのプロパティ**] ダイアログボックスで、次のように選択します。 
  
 - **操作**: 作成    
 - **Hive**: HKEY_LOCAL_MACHINE    
 - **キーのパス**: SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters    
 - **値の名前**: SMB1    
-- **値の型**: REG_DWORD    
+- **値の型**:REG_DWORD    
 - **値のデータ**: 0    
  
 ![[新しいレジストリのプロパティ]-[全般]](media/detect-enable-and-disable-smbv1-v2-v3-4.png)
@@ -366,17 +366,17 @@ Default: 1 = Enabled (No registry key is created)
 
 ## <a name="disable-smbv1-client-with-group-policy"></a>グループポリシーを使用した SMBv1 クライアントの無効化
 
-SMBv1 クライアントを無効にするには、 **MRxSMB10**の開始を無効にするために、サービスのレジストリキーを更新する必要があります。 **MRxSMB10**の依存関係は、 **LanmanWorkstation**のエントリから削除する必要があります。これにより、最初に**MRxSMB10**を開始することなく、正常に開始できるようになります。
+SMBv1 クライアントを無効にするには、 **MRxSMB10** の開始を無効にするために、サービスのレジストリキーを更新する必要があります。 **MRxSMB10** の依存関係は、 **LanmanWorkstation** のエントリから削除する必要があります。これにより、最初に **MRxSMB10** を開始することなく、正常に開始できるようになります。
 
 これにより、レジストリ内の次の2つの項目の既定値が更新され、置き換えられます。 
 
 **HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\services\mrxsmb10** 
 
-レジストリエントリ:**開始**REG_DWORD: **4**= 無効
+レジストリエントリ: **開始** REG_DWORD: **4**= 無効
 
 **HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\LanmanWorkstation** 
 
-レジストリエントリ:**依存関係 Onservice** REG_MULTI_SZ: **"ブラウザー"、"MRxSmb20"、"NSI"**   
+レジストリエントリ: **依存関係 Onservice** REG_MULTI_SZ: **"ブラウザー"、"MRxSmb20"、"NSI"**   
 
 > [!NOTE]
 > 既定で含まれる MRxSMB10 は、依存関係として削除されます。
@@ -385,24 +385,24 @@ SMBv1 クライアントを無効にするには、 **MRxSMB10**の開始を無�
  
 1. [**グループ ポリシー管理コンソール**] を開きます。 新しい基本設定項目を含むグループ ポリシー オブジェクト (GPO) を右クリックして、**[編集]** をクリックします。
 
-2. コンソールツリーの [**コンピューターの構成**] の下にある [**基本設定**] フォルダーを展開し、[ **Windows の設定**] フォルダーを展開します。
+2. コンソールツリーの [ **コンピューターの構成**] の下にある [ **基本設定** ] フォルダーを展開し、[ **Windows の設定** ] フォルダーを展開します。
 
 3. **レジストリ**ノードを右クリックして [**新規作成**] をポイントし、[**レジストリ項目**] を選択します。    
 
-4. [**新しいレジストリのプロパティ**] ダイアログボックスで、次のように選択します。 
+4. [ **新しいレジストリのプロパティ** ] ダイアログボックスで、次のように選択します。 
  
    - **操作**: 更新
    - **Hive**: HKEY_LOCAL_MACHINE
    - **キーのパス**: SYSTEM\CurrentControlSet\services\mrxsmb10
    - **値の名前**: Start
-   - **値の型**: REG_DWORD
+   - **値の型**:REG_DWORD
    - **値のデータ**: 4
  
    ![開始プロパティ-全般](media/detect-enable-and-disable-smbv1-v2-v3-5.png)
 
-5. 次に、無効にしたばかりの**MRxSMB10**に対する依存関係を削除します。
+5. 次に、無効にしたばかりの **MRxSMB10** に対する依存関係を削除します。
 
-   [**新しいレジストリのプロパティ**] ダイアログボックスで、次のように選択します。 
+   [ **新しいレジストリのプロパティ** ] ダイアログボックスで、次のように選択します。 
  
    - **操作**: 置換
    - **Hive**: HKEY_LOCAL_MACHINE
@@ -434,7 +434,7 @@ SMBv1 クライアントを無効にするには、 **MRxSMB10**の開始を無�
 
 ### <a name="testing-and-validation"></a>テストと検証
 
-これらの構成が完了したら、ポリシーをレプリケートして更新できるようにします。 テストに必要な場合は、コマンドプロンプトで**gpupdate/force**を実行し、対象のコンピューターを確認して、レジストリ設定が正しく適用されていることを確認します。 環境内の他のすべてのシステムで SMB v2 と SMB v3 が機能していることを確認します。
+これらの構成が完了したら、ポリシーをレプリケートして更新できるようにします。 テストに必要な場合は、コマンドプロンプトで **gpupdate/force** を実行し、対象のコンピューターを確認して、レジストリ設定が正しく適用されていることを確認します。 環境内の他のすべてのシステムで SMB v2 と SMB v3 が機能していることを確認します。
 
 > [!NOTE]
 > 必ず、ターゲットシステムを再起動してください。
