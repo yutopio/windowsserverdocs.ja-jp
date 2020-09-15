@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/25/2020
+ms.date: 09/10/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ce718db142ac34a51642e1ed2128899a0e77dbf
-ms.sourcegitcommit: 47dc2671330c2ecc56cce39ef006cbfe108b4759
+ms.openlocfilehash: 8f0b5453265bc96cdeb7ba02795da8fa0f39ba1c
+ms.sourcegitcommit: 0407bd30eaf06358257cf88c3969a2cd8b77dca4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88821335"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027167"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows デスクトップ クライアントの新機能
 
@@ -25,19 +25,28 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 |ユーザー グループ |バージョン  |
 |-----------|---------|
 |パブリック     |1.2.1272 |
-|Insider    |1.2.1272 |
+|Insider    |1.2.1357 |
 
-## <a name="updates-for-version-121272"></a>バージョン 1.2.1272 の更新内容
+## <a name="updates-for-version-121357-insiders"></a>バージョン 1.2.1357 の更新内容 (インサイダー)
+
+*公開日:2020 年 9 月 9 日*
+
+ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139233)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139144)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- セキュリティで保護されたサインオン (SSO) が Windows 7 で動作しなかった問題を修正しました。
+
+## <a name="updates-for-version-121275"></a>バージョン 1.2.1275 の更新内容
 
 *公開日:2020 年 8 月 25 日*
 
-ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D7LK)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D5aF)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dan3)
+ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FpYR)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FpYS)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Fg3H)
 
 - ユーザーの ID からソブリン クラウドを自動検出する機能が追加されました。
 - すべてのユーザーに対してカスタム URL サブスクリプションを有効にする機能が追加されました。
 - アプリをフィード タスク バーにピン留めするときの問題を修正しました。
 - URL を使用してサブスクライブするときのクラッシュを修正しました。
 - リモート アプリ ウィンドウをタッチまたはペンでドラッグするときのエクスペリエンスが向上しました。
+- ローカライズに関する問題を修正しました。
 
 ## <a name="updates-for-version-121186"></a>バージョン 1.2.1186 の更新内容
 
@@ -55,8 +64,6 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 
 *公開日:2020 年 6 月 23 日*
 
-ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHS)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zrAd)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHR)
-
 - Windows Virtual Desktop の Azure Resource Manager 統合バージョンをサポートするために、**サブスクライブ** オプションの自動検出ロジックを更新しました。 Windows Virtual Desktop リソースのみを使用しているお客様は、Windows Virtual Desktop (クラシック) への同意を提供する必要はなりました。
 - スケール ファクターが最大 400% の高 DPI デバイスのサポートが強化されました。
 - 切断ダイアログが表示されない問題が修正されました。
@@ -67,8 +74,6 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 ## <a name="updates-for-version-121026"></a>バージョン 1.2.1026 の更新内容
 
 *公開日:2020 年 5 月 27 日*
-
-ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xsGB)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xd8P)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xq7m)
 
 - サブスクライブするときに、メール アドレスを入力する代わりに、アカウントを選択できるようになりました。
 - 新しい **[Subscribe with URL]\(URL でサブスクライブ\)** オプションが追加されました。これを使用すると、リソースを自動的に検出できない場合に、サブスクライブするワークスペースの URL を指定したり、[メール検出](../rds-email-discovery.md) (使用可能な場合) を利用したりすることができます。 これは、他のリモート デスクトップ クライアントでのサブスクリプション プロセスに似ています。 これを使用して、Windows Virtual Desktop ワークスペースに直接サブスクライブできます。
@@ -88,8 +93,6 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 ## <a name="updates-for-version-12945"></a>バージョン 1.2.945 の更新内容
 
 *公開日:2020 年 4 月 28 日*
-
-ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vhNM)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vhNO)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vuSV)
 
 - 接続センターのデスクトップ アイコンを右クリックしたときに利用できる、デスクトップ接続のための新しいディスプレイ設定オプションが追加されました。
   - 現在、3 つのディスプレイ構成オプションがあります。 **[All displays]\(すべてのディスプレイ\)** 、 **[Single display]\(単一ディスプレイ\)** 、 **[Select displays]\(ディスプレイの選択\)** です。

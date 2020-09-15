@@ -4,14 +4,14 @@ description: このトピックで説明するように、記憶域スペース 
 ms.topic: article
 ms.assetid: 15a519fa-37cc-4d84-a9fe-097d33bb71ea
 author: phstee
-ms.author: vshankar; danlo; clausjor; stevenek
+ms.author: vshankar
 ms.date: 4/14/2017
-ms.openlocfilehash: 18dca2080a311a337e0d41055e95e7a7f0f42a80
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 6863f7a7f2442aeea291f9ec4e9c48382bce6408
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991986"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077890"
 ---
 # <a name="performance-tuning-for-storage-spaces-direct"></a>記憶域スペース ダイレクトのパフォーマンス チューニング
 

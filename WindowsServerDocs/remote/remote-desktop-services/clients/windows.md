@@ -6,14 +6,14 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 06/01/2020
+ms.date: 09/05/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: c28ccbe0cfd49f1cf774031b002bf7b6142d0a00
-ms.sourcegitcommit: 9a59e00db5e68b1a12769b5cd5523b8c501776ad
+ms.openlocfilehash: 9bad174ad596ffc0262947464f2353b91a92872c
+ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89282114"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554531"
 ---
 # <a name="get-started-with-the-microsoft-store-client"></a>Microsoft Store クライアントの概要
 
@@ -198,7 +198,16 @@ Windows 10 デバイスでリモート デスクトップの使用を開始す�
 | マウス ポインター | 右ボタンのクリック          | 2 本の指でタップする                                                          |
 | マウス ポインター | 右クリックしてドラッグ | 2 本の指でダブルタップから長押しして、ドラッグする                              |
 | マウス ポインター | マウス ホイール          | 2 本の指で長押しして、上または下にドラッグする                          |
-| マウス ポインター | ズーム                 | 2 本の指を使用し、ピンチして拡大し、指を開いて縮小する |
+| マウス ポインター | ズーム                 | 2 本の指を使用し、ピンチして縮小し、指を開いて拡大する |
 
-> [!TIP]
-> 意見やご質問はへようこそ は常にします。 ただし、この記事のコメント セクションにサポート リクエストや製品フィードバックを投稿していただいた場合、Microsoft ではお客様のフィードバックに対応することはできません。 ヘルプが必要な場合や、クライアントのトラブルシューティングが必要な場合は、[リモート デスクトップ クライアント フォーラム](/answers/topics/windows-remote-desktop-client.html)にアクセスして、新しいスレッドを開始することを強くお勧めします。 機能に関するご提案がある場合は、[フィードバック Hub](feedback-hub://?tabid=2&contextid=605) を使用してお知らせください。
+## <a name="give-us-feedback"></a>フィードバックの送信
+
+機能に関するご提案がある場合、または問題を報告する場合は、 [フィードバック Hub](https://aka.ms/rdstorefeedback) を使用してお知らせください。
+
+次の図に示すように、クライアント アプリの省略記号ボタン ( **...** ) を選択し、 **[フィードバック]** を選択してフィードバックをお送りいただくこともできます。
+
+> [!div class="mx-imgBorder"]
+> ![省略記号ボタンが赤で強調表示されているスクリーンショット。 ボタンの下にドロップダウン メニューが開き、[フィードバック] オプションも赤色で強調表示されている。](../media/ellipsis-icon.png)
+
+>[!NOTE]
+>お客様に最適なサポートをご提供するために、問題に関する可能なかぎり詳細な情報を送っていただく必要があります。 たとえば、スクリーンショットや問題が発生するまでに実行した操作の記録を含めることができます。 有用なフィードバックを提供する方法の詳細については、「[フィードバック](/windows-insider/at-home/feedback#add-new-feedback)」を参照してください。
