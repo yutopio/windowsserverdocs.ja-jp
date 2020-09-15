@@ -2,15 +2,15 @@
 title: ソフトウェア定義ネットワークでの HNV ゲートウェイのパフォーマンスチューニング
 description: ソフトウェア定義ネットワークに関する HNV ゲートウェイのパフォーマンスチューニングガイドライン
 ms.topic: article
-ms.author: grcusanz; anpaul
+ms.author: grcusanz
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 4b367a8e35e6393a9560657fbd752859a6ddde7d
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: de6a83d883efbdf592c7a21524c36b9d9086b7cc
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895960"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077969"
 ---
 # <a name="hnv-gateway-performance-tuning-in-software-defined-networks"></a>ソフトウェア定義ネットワークでの HNV ゲートウェイのパフォーマンスチューニング
 
@@ -60,8 +60,8 @@ Windows Server 2016 と Hyper-v を実行し、ワークロードが Windows Ser
 | 構成項目                          | Windows Powershell の構成                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | スイッチ埋め込みチーミング                     | 複数のネットワークアダプターを含む vswitch を作成すると、それらのアダプターのスイッチ埋め込みチーミングが自動的に有効になります。 <br> ```New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 2"``` <br> LBFO による従来のチーム化は、Windows Server 2016 の SDN ではサポートされていません。 スイッチ埋め込みチーミングを使用すると、仮想トラフィックと RDMA トラフィックに同じセットの Nic を使用できます。 これは、LBFO に基づく NIC チーミングではサポートされませんでした。                                                        |
-| 物理 NIC での割り込み節度       | 既定の設定を使用します。 構成を確認するには、次の Windows PowerShell コマンドを使用します。```Get-NetAdapterAdvancedProperty```                                                                                                                                                                                                                                                                                                                                                                    |
-| 物理 NIC での受信バッファー サイズ       | 物理 Nic がこのパラメーターの構成をサポートしているかどうかを確認するには、コマンドを実行し ```Get-NetAdapterAdvancedProperty``` ます。 このパラメーターがサポートされていない場合、コマンドからの出力には "受信バッファー" プロパティは含まれません。 NIC がこのパラメーターをサポートしている場合、次の Windows PowerShell コマンドを使用して受信バッファー サイズを設定できます。 <br>```Set-NetAdapterAdvancedProperty "NIC1" –DisplayName "Receive Buffers" –DisplayValue 3000``` <br>                          |
+| 物理 NIC での割り込み節度       | 既定の設定を使用します。 構成を確認するには、次の Windows PowerShell コマンドを使用します。 ```Get-NetAdapterAdvancedProperty```                                                                                                                                                                                                                                                                                                                                                                    |
+| 物理 NIC での受信バッファー サイズ       | 物理 Nic がこのパラメーターの構成をサポートしているかどうかを確認するには、コマンドを実行し  ```Get-NetAdapterAdvancedProperty``` ます。 このパラメーターがサポートされていない場合、コマンドからの出力には "受信バッファー" プロパティは含まれません。 NIC がこのパラメーターをサポートしている場合、次の Windows PowerShell コマンドを使用して受信バッファー サイズを設定できます。 <br>```Set-NetAdapterAdvancedProperty "NIC1" –DisplayName "Receive Buffers" –DisplayValue 3000``` <br>                          |
 | 物理 NIC での送信バッファー サイズ          | 物理 Nic がこのパラメーターの構成をサポートしているかどうかを確認するには、コマンドを実行し ```Get-NetAdapterAdvancedProperty``` ます。 Nic がこのパラメーターをサポートしていない場合、コマンドの出力には "送信バッファー" プロパティは含まれません。 NIC がこのパラメーターをサポートしている場合、次の Windows PowerShell コマンドを使用して送信バッファー サイズを設定できます。 <br> ```Set-NetAdapterAdvancedProperty "NIC1" –DisplayName "Transmit Buffers" –DisplayValue 3000``` <br>                           |
 | 物理 NIC での Receive Side Scaling (RSS) | Windows PowerShell コマンド Get-NetAdapterRss を実行することによって、物理 NIC で RSS が有効であるかどうかを確認できます。 次の Windows PowerShell コマンドを使用して、ネットワークアダプターで RSS を有効にし、構成することができます。 <br> ```Enable-NetAdapterRss "NIC1","NIC2"```<br> ```Set-NetAdapterRss "NIC1","NIC2" –NumberOfReceiveQueues 16 -MaxProcessors``` <br> 注: VMMQ または VMQ が有効になっている場合、物理ネットワークアダプターで RSS を有効にする必要はありません。 ホスト仮想ネットワークアダプターで有効にすることができます。 |
 | VMMQ                                        | VM の VMMQ を有効にするには、次のコマンドを実行します。 <br> ```Set-VmNetworkAdapter -VMName <gateway vm name>,-VrssEnabled $true -VmmqEnabled $true``` <br> 注: すべてのネットワークアダプターが VMMQ をサポートしているわけではありません。 現時点では、Chelsio T5 と T6、Mellanox CX-3 と CX-4、および QLogic 45xxx シリーズでサポートされています。                                                                                                                                                                                                                                      |

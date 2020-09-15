@@ -2,15 +2,15 @@
 title: Windows Server ハードウェアの電源に関する考慮事項
 description: Windows Server ハードウェアの機能に関する考慮事項。
 ms.topic: conceptual
-ms.author: qizha;tristanb
+ms.author: qizha
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: ee380937e54faa77ec17f8ae47445089ba1eece8
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: fe316dd1f21d3f5e151cef60f63c3644ad1af06d
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896721"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077634"
 ---
 # <a name="server-hardware-power-considerations"></a>サーバー ハードウェアの電源に関する考慮事項
 
@@ -22,7 +22,7 @@ ms.locfileid: "87896721"
 
 一般に、パフォーマンスの目標を満たす最低 TDP プロセッサを選択してください。 また、新しい世代のプロセッサは、一般にエネルギー効率が向上し、Windows の電源管理アルゴリズムでより多くの電力状態が公開される可能性があります。これにより、すべてのパフォーマンスレベルでより良い電源管理が可能になります。 または、Microsoft がハードウェアの製造元と協力して開発した新しい "協調" 電源管理手法を使用することもあります。
 
-協調電源管理の手法の詳細については、「[高度な構成と電源インターフェイスの仕様](http://www.uefi.org/sites/default/files/resources/ACPI_5_1release.pdf)」の「コラボレーションプロセッサパフォーマンス制御」セクションを参照してください。
+協調電源管理の手法の詳細については、「 [高度な構成と電源インターフェイスの仕様](http://www.uefi.org/sites/default/files/resources/ACPI_5_1release.pdf)」の「コラボレーションプロセッサパフォーマンス制御」セクションを参照してください。
 
 ## <a name="memory-recommendations"></a>メモリに関する推奨事項
 
@@ -62,7 +62,7 @@ Windows Server 2016 では、USB デバイスのセレクティブサスペン�
 
 - プロセッサソケット
 - NUMA ノード (NUMA node)
-- コア
+- Core
 - 論理プロセッサ
 
 ![プロセッサの用語](../media/perftune-guide-figure-1.png)

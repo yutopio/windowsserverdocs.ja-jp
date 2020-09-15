@@ -6,14 +6,13 @@ manager: mtillman
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
 ms.topic: get-started-article
 ms.date: 10/28/2018
-ms.subservice: hybrid
 ms.author: billmath
-ms.openlocfilehash: 5db03a2d275dc4a02295c588bd0789fa757b8503
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 3a53e8bb9e06e51627d14f6e5e3b918f58102478
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86956220"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078679"
 ---
 # <a name="deploying-active-directory-federation-services-in-azure"></a>Azure での Active Directory フェデレーション サービスのデプロイ
 AD FS は、単純かつ安全な ID フェデレーションと Web シングル サインオン (SSO) 機能を実現します。 Azure AD または O365 とのフェデレーションによって、ユーザーはオンプレミスの資格情報を認証に使用し、クラウド内のあらゆるリソースにアクセスすることができます。 そのため、オンプレミスとクラウドの両方のリソースに確実にアクセスできるよう、AD FS インフラストラクチャには、高い可用性を確保することが重要となります。 AD FS を Azure にデプロイすると、必要な高可用性を最小限の手間で確保できます。
@@ -22,7 +21,7 @@ AD FS を Azure にデプロイする利点はいくつかありますが、そ�
 * **高可用性** - Azure の可用性セットを使用してインフラストラクチャに高い可用性を確保できます。
 * **拡張が容易** - パフォーマンスを強化する必要がある場合、 Azure からの簡単なクリック操作で簡単に、より高性能なマシンに移行できます。
 * **地域を越えた冗長性** - Azure Geo Redundancy によって地域を越えた世界規模での高可用性がインフラストラクチャに確保されます。
-* **管理しやすい** - 高度に単純化された管理オプションが Azure ポータルに用意されているため、インフラストラクチャ管理の手間がかからず、ごく簡単に管理することができます。 
+* **管理しやすい** - 高度に単純化された管理オプションが Azure ポータルに用意されているため、インフラストラクチャ管理の手間がかからず、ごく簡単に管理することができます。
 
 ## <a name="design-principles"></a>設計原則
 ![Deployment design](./media/how-to-connect-fed-azure-adfs/deployment.png)
@@ -75,7 +74,7 @@ NSG の作成後、NSG_INT をサブネット INT に、NSG_DMZ をサブネッ�
 ![NSG configure](./media/how-to-connect-fed-azure-adfs/nsgconfigure1.png)
 
 * [サブネット] をクリックしてサブネットのパネルを開きます。
-* NSG に関連付けるサブネットを選択します。 
+* NSG に関連付けるサブネットを選択します。
 
 構成後の [サブネット] のパネルは次のように表示されている必要があります。
 
@@ -98,7 +97,8 @@ ExpressRoute の使用をお勧めしますが、所属する組織に合った�
 ![Create storage accounts](./media/how-to-connect-fed-azure-adfs/storageaccount1.png)
 
 ### <a name="3-create-availability-sets"></a>3. 可用性セットを作成する
-それぞれのロール (DC/AD FS と WAP) について、最低 2 つのマシンを含んだ可用性セットを作成します。 そうすることで各ロールの可用性を高めることができます。 可用性セットを作成する際は、次の点についての意思決定が必須となります。
+それぞれのロール (DC/AD FS と WAP) について、最低 2 つのマシンを含んだ可用性セットを作成します。 そうすることで各ロールの可用性を高めることができます。
+可用性セットを作成する際は、次の点についての意思決定が必須となります。
 
 * **障害ドメイン**: 同じ障害ドメインの仮想マシンは、同じ電源と物理ネットワーク スイッチを共有します。 障害ドメインは 2 以上とすることをお勧めします。 ここでは既定値の 3 をそのまま使用します。
 * **更新ドメイン**: 同じ更新ドメインに属しているマシンは、更新時に一緒に再起動されます。 更新ドメインは 2 以上とすることをお勧めします。 ここでは既定値の 5 をそのまま使用します。
@@ -107,7 +107,7 @@ ExpressRoute の使用をお勧めしますが、所属する組織に合った�
 
 次の可用性セットを作成します。
 
-| 可用性セット | Role | 障害ドメイン | 更新ドメイン |
+| 可用性セット | ロール | 障害ドメイン | 更新ドメイン |
 |:---:|:---:|:---:|:--- |
 | contosodcset |DC/ADFS |3 |5 |
 | contosowapset |WAP |3 |5 |
@@ -115,7 +115,7 @@ ExpressRoute の使用をお勧めしますが、所属する組織に合った�
 ### <a name="4-deploy-virtual-machines"></a>4. 仮想マシンを展開する
 次に、インフラストラクチャ内の各ロールのホストとなる仮想マシンをデプロイします。 それぞれの可用性セットには、最低でも 2 つのマシンをデプロイすることをお勧めします。 基本的なデプロイでは 4 つの仮想マシンを作成します。
 
-| Machine | Role | Subnet | 可用性セット | ストレージ アカウント | IP アドレス |
+| Machine | ロール | Subnet | 可用性セット | ストレージ アカウント | IP アドレス |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | contosodc1 |DC/ADFS |INT |contosodcset |contososac1 |静的 |
 | contosodc2 |DC/ADFS |INT |contosodcset |contososac2 |静的 |
@@ -131,7 +131,7 @@ DNS が管理下にある場合は、静的 IP アドレスをお勧めします
 ### <a name="5-configuring-the-domain-controller--ad-fs-servers"></a>5. ドメインコントローラー/AD FS サーバーを構成する
  受信要求を認証するためには、AD FS がドメイン コントローラーに問い合わせを行う必要があります。 認証のたびに Azure がオンプレミスの DC とやり取りするのでは無駄が大きいため、ドメイン コントローラーのレプリカを Azure にデプロイすることをお勧めします。 高い可用性を確保するために、少なくとも 2 つのドメイン コントローラーから成る可用性セットを作成することをお勧めします。
 
-| ドメイン コントローラー | Role | ストレージ アカウント |
+| ドメイン コントローラー | ロール | ストレージ アカウント |
 |:---:|:---:|:---:|
 | contosodc1 |[レプリカ] |contososac1 |
 | contosodc2 |[レプリカ] |contososac2 |
@@ -146,8 +146,8 @@ ILB をデプロイするには、Azure ポータルで [ロード バランサ�
 
 > [!NOTE]
 > メニューに **[ロード バランサー]** が表示されない場合は、ポータルの左下にある **[参照]** をクリックし、**[ロード バランサー]** が表示されるまでスクロールします。  その後、黄色の星印をクリックするとメニューに追加されます。 この新しいロード バランサー アイコンを選択してパネルを開き、ロード バランサーの構成を開始してください。
-> 
-> 
+>
+>
 
 ![Browse load balancer](./media/how-to-connect-fed-azure-adfs/browseloadbalancer.png)
 
@@ -167,7 +167,7 @@ ILB をデプロイするには、Azure ポータルで [ロード バランサ�
 
 **6.2.ILB バックエンド プールを構成する**
 
-新しく作成した ILB を [ロード バランサー] パネルで選択し、 設定パネルを開きます。 
+新しく作成した ILB を [ロード バランサー] パネルで選択し、 設定パネルを開きます。
 
 1. 設定パネルからバックエンド プールを選択します。
 2. [バックエンド プールの追加] パネルで [仮想マシンの追加] をクリックします。
@@ -181,37 +181,25 @@ ILB をデプロイするには、Azure ポータルで [ロード バランサ�
 [ILB 設定] パネルで [正常性プローブ] を選択します。
 
 1. [追加] をクリックします。
-2. プローブの詳細を指定します  
-   a. **名前**: プローブ名  
-   b. **プロトコル**: HTTP  
-   c. **ポート**:80 (HTTP)  
-   d. **パス**:/adfs/probe   
-   e. **間隔**: 5 (既定値)-これは、ilb がバックエンドプール内のマシンをプローブする間隔です。  
-   f. **[Unhealthy threshold limit]\(異常しきい値\)**: 2 (既定値) - これはプローブ エラーの連続回数のしきい値です。この値を超えると、ILB はバックエンド プール内の仮想マシンが応答していないと判断し、トラフィックの送信を停止します。
+2. プローブの詳細を入力します。a.  **[名前]**: プローブ名。b.  **[プロトコル]**: HTTP c.  **[ポート]**: 80 (HTTP) d.  **[パス]**: /adfs/probe e.  **[間隔]**: 5 (既定値) - この値は、ILB がバックエンド プール内の仮想マシンをプローブする間隔です。f.  **[Unhealthy threshold limit]\(異常しきい値\)**: 2 (既定値) - これはプローブ エラーの連続回数のしきい値です。この値を超えると、ILB はバックエンド プール内の仮想マシンが応答していないと判断し、トラフィックの送信を停止します。
 
 
 完全な HTTPS パス チェックが実行できない AD FS 環境での正常性チェックには、明示的に作成された /adfs/probe エンドポイントを使用しています。  基本的なポート 443 チェックでは、最新の AD FS デプロイの状態が正確に反映されないため、この方が明らかに有利な方法といえます。  詳細については、https://blogs.technet.microsoft.com/applicationproxyblog/2014/10/17/hardware-load-balancer-health-checks-and-web-application-proxy-ad-fs-2012-r2/ を参照してください。
 
 **6.4.負荷分散規則を作成する**
 
-トラフィックのバランスを効果的に調整するためには、負荷分散規則を使って ILB を構成する必要があります。 負荷分散規則を作成するには、 
+トラフィックのバランスを効果的に調整するためには、負荷分散規則を使って ILB を構成する必要があります。 負荷分散規則を作成するには、
 
 1. ILB の設定パネルから負荷分散規則を選択します。
 2. [負荷分散規則] パネルの [追加] をクリックします。
-3. [負荷分散規則の追加] パネルで、  
-   a. **名前**: 規則の名前を指定します。  
-   b. **プロトコル**: [TCP] を選択します。  
-   c. **ポート**: 443  
-   d. **バックエンドポート**: 443  
-   e. **バックエンドプール**: AD FS クラスター用に作成したプールを選択します  
-   f. **[プローブ]**: AD FS サーバー用に作成しておいたプローブを選択します。
+3. [負荷分散規則の追加] パネルで、a.  **[名前]**: 規則の名前を入力します。b.  **[プロトコル]**: [TCP] を選択します。c.  **[ポート]**: 443。d.  **[バックエンド ポート]**: 443。e.  **[バックエンド プール]**: AD FS クラスター用に作成しておいたプールを選択します。f.  **[プローブ]**: AD FS サーバー用に作成しておいたプローブを選択します。
 
 ![Configure ILB balancing rules](./media/how-to-connect-fed-azure-adfs/ilbdeployment5.png)
 
 **6.5.DNS に ILB を反映する**
 
 内部 DNS サーバーを使用して、ILB の A レコードを作成します。 A レコードは、IP アドレスが ILB の IP アドレスを指すフェデレーションサービス用である必要があります。 たとえば、ILB IP アドレスが10.3.0.8 で、インストールされているフェデレーションサービスが fs.contoso.com の場合、10.3.0.8 を指す fs.contoso.com の A レコードを作成します。
-これにより、fs.contoso.com のすべてのデータ trasmitted が ILB で終了し、適切にルーティングされるようになります。 
+これにより、fs.contoso.com のすべてのデータ trasmitted が ILB で終了し、適切にルーティングされるようになります。
 
 > [!WARNING]
 > AD FS データベースに WID (Windows Internal Database) を使用している場合は、この値を一時的にプライマリ AD FS サーバーを指すように設定する必要があります。そうしないと、Web アプリケーションプロキシは enrollement に失敗します。 すべての Web Appplication プロキシサーバーを正常に登録したら、この DNS エントリをロードバランサーを指すように変更します。
@@ -231,7 +219,8 @@ Web アプリケーション プロキシ サーバーが ILB の内側にある
 
 **7.2.Web アプリケーション プロキシ ロールをインストールする**
 
-Web アプリケーション プロキシ サーバーから ILB の内側の AD FS サーバーに到達できる状態を確保したら、続けて Web アプリケーション プロキシ サーバーをインストールすることができます。 Web アプリケーション プロキシ サーバーは、ドメインに参加する必要はありません。 リモート アクセス ロールを選択して、2 つの Web アプリケーション プロキシ サーバーに Web アプリケーション プロキシ ロールをインストールします。 サーバー マネージャーの指示に従って、WAP のインストールを実行してください。
+Web アプリケーション プロキシ サーバーから ILB の内側の AD FS サーバーに到達できる状態を確保したら、続けて Web アプリケーション プロキシ サーバーをインストールすることができます。
+Web アプリケーション プロキシ サーバーは、ドメインに参加する必要はありません。 リモート アクセス ロールを選択して、2 つの Web アプリケーション プロキシ サーバーに Web アプリケーション プロキシ ロールをインストールします。 サーバー マネージャーの指示に従って、WAP のインストールを実行してください。
 WAP のデプロイ方法について詳しくは、「 [Web アプリケーション プロキシ サーバーをインストールし、構成する](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383662(v=ws.11))」をご覧ください。
 
 ### <a name="8--deploying-the-internet-facing-public-load-balancer"></a>8. インターネットに接続する (パブリック) Load Balancer を展開する
@@ -257,11 +246,11 @@ Azure ポータルで [ロード バランサー] を選択し、[追加] をク
 2. [構成] をクリックします。
 3. DNS ラベルを指定します。 これが、任意の場所からアクセスできるパブリック DNS ラベルになります (例: contosofs.westus.cloudapp.azure.com)。 外部 DNS には、この外部ロード バランサーの DNS ラベル (contosofs.westus.cloudapp.azure.com) に解決されるフェデレーション サービスのエントリ (例: fs.contoso.com) を追加してください。
 
-![Configure internet facing load balancer](./media/how-to-connect-fed-azure-adfs/elbdeployment3.png) 
+![Configure internet facing load balancer](./media/how-to-connect-fed-azure-adfs/elbdeployment3.png)
 
 ![Configure internet facing load balancer (DNS)](./media/how-to-connect-fed-azure-adfs/elbdeployment4.png)
 
-**8.3.インターネット接続 (パブリック) ロード バランサーのバックエンド プールを構成する** 
+**8.3.インターネット接続 (パブリック) ロード バランサーのバックエンド プールを構成する**
 
 内部ロード バランサーの作成と同じ手順に従って、インターネット接続 (パブリック) ロード バランサーのバックエンド プールを WAP サーバーの可用性セットとして構成します。 たとえば「contosowapset」とします。
 
@@ -286,7 +275,7 @@ ILB と同じ手順に従って、TCP 443 の負荷分散規則を構成しま�
 
 | ルール | 説明 | Flow |
 |:--- |:--- |:---:|
-| AllowHTTPSFromDMZ |DMZ からの HTTPS 通信を許可します。 |受信 |
+| AllowHTTPSFromDMZ |DMZ からの HTTPS 通信を許可します。 |着信 |
 | DenyInternetOutbound |インターネットへのアクセスを禁止します。 |送信 |
 
 ![INT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsg_int.png)
@@ -295,22 +284,22 @@ ILB と同じ手順に従って、TCP 443 の負荷分散規則を構成しま�
 
 | ルール | 説明 | Flow |
 |:--- |:--- |:---:|
-| AllowHTTPSFromInternet |インターネットから DMZ への HTTPS を許可します。 |受信 |
+| AllowHTTPSFromInternet |インターネットから DMZ への HTTPS を許可します。 |着信 |
 | DenyInternetOutbound |インターネットへの通信は HTTPS を除きすべてブロックします。 |送信 |
 
 ![EXT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsg_dmz.png)
 
 > [!NOTE]
 > クライアントユーザー証明書認証 (x.509 ユーザー証明書を使用した clientTLS 認証) が必要な場合、AD FS は、受信アクセスに対して TCP ポート49443を有効にする必要があります。
-> 
-> 
+>
+>
 
 ### <a name="10-test-the-ad-fs-sign-in"></a>10. AD FS サインインをテストする
 AD FS のテストは、IdpInitiatedSignon.aspx ページを使用して行うのが最も簡単です。 そのためには、AD FS のプロパティで IdpInitiatedSignOn を有効にする必要があります。 以下の手順に従って AD FS の設定を確認してください。
 
 1. AD FS サーバーで PowerShell から以下のコマンドレットを実行し、このプロパティを有効にします。
-   Set-AdfsProperties -EnableIdPInitiatedSignonPage $true 
-2. 外部のコンピューターから https:\//adfs-server.contoso.com/adfs/ls/IdpInitiatedSignon.aspx にアクセスします。  
+   Set-AdfsProperties -EnableIdPInitiatedSignonPage $true
+2. 外部のコンピューターから https:\//adfs-server.contoso.com/adfs/ls/IdpInitiatedSignon.aspx にアクセスします。
 3. 以下の AD FS ページが表示されたら成功です。
 
 ![Test login page](./media/how-to-connect-fed-azure-adfs/test1.png)
@@ -324,7 +313,7 @@ AD FS のテストは、IdpInitiatedSignon.aspx ページを使用して行う�
 
 [Azure での AD FS のデプロイ テンプレート](https://github.com/paulomarquesc/adfs-6vms-regular-template-based)
 
-このテンプレートのデプロイ中、既存の仮想ネットワークを使用するか、新しい VNET を作成できます。 デプロイをカスタマイズするために使用できる各種のパラメーターについて、デプロイ プロセスにおけるパラメーターの使用方法の説明と共に次の一覧に記載します。 
+このテンプレートのデプロイ中、既存の仮想ネットワークを使用するか、新しい VNET を作成できます。 デプロイをカスタマイズするために使用できる各種のパラメーターについて、デプロイ プロセスにおけるパラメーターの使用方法の説明と共に次の一覧に記載します。
 
 | パラメーター | 説明 |
 |:--- |:--- |
@@ -355,13 +344,13 @@ AD FS のテストは、IdpInitiatedSignon.aspx ページを使用して行う�
 | AdminPassword |仮想マシンのローカル管理者アカウントのパスワード |
 
 ## <a name="additional-resources"></a>その他のリソース
-* [可用性セット](https://aka.ms/Azure/Availability) 
+* [可用性セット](https://aka.ms/Azure/Availability)
 * [Azure Load Balancer](https://aka.ms/Azure/ILB)
-* [内部 Load Balancer](https://aka.ms/Azure/ILB/Internal)
+* [内部ロード バランサー](https://aka.ms/Azure/ILB/Internal)
 * [インターネットに接続する Load Balancer](https://aka.ms/Azure/ILB/Internet)
 * [ストレージ アカウント](https://aka.ms/Azure/Storage)
 * [Azure 仮想ネットワーク](https://aka.ms/Azure/VNet)
-* [AD FS と Web アプリケーション プロキシについてのリンク](https://aka.ms/ADFSLinks) 
+* [AD FS と Web アプリケーション プロキシについてのリンク](https://aka.ms/ADFSLinks)
 
 ## <a name="next-steps"></a>次のステップ
 * [オンプレミス ID と Azure Active Directory の統合](/azure/active-directory/hybrid/whatis-hybrid-identity)

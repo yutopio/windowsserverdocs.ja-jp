@@ -2,15 +2,15 @@
 title: Linux 仮想マシンに関する考慮事項
 description: Linux および BSD の仮想マシン
 ms.topic: article
-ms.author: asmahi; sandysp; jopoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: b1616af3cfc1f14c534392c7f083b333b4744ef3
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: be9d2f0d758f6f59282c770ef1a48d71a947ba00
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993347"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078289"
 ---
 # <a name="linux-virtual-machine-considerations"></a>Linux 仮想マシンに関する考慮事項
 
@@ -47,7 +47,7 @@ net.ipv4.ip_local_port_range = 10240 65535
 net.ipv4.tcp_abort_on_overflow = 1
 ```
 
-ネットワークマイクロベンチマークの便利なツールは ntttcp です。これは、Linux と Windows の両方で使用できます。 Linux バージョンはオープンソースであり、 [github.com の ntttcp-linux](https://github.com/Microsoft/ntttcp-for-linux)から入手できます。 Windows のバージョンについては、[ダウンロードセンター](https://gallery.technet.microsoft.com/NTttcp-Version-528-Now-f8b12769)を参照してください。 ワークロードをチューニングする場合は、スループットを最大にするために必要な数のストリームを使用することをお勧めします。 Ntttcp を使用してトラフィックをモデル化すると、パラメーターによって、 `-P` 使用される並列接続の数が設定されます。
+ネットワークマイクロベンチマークの便利なツールは ntttcp です。これは、Linux と Windows の両方で使用できます。 Linux バージョンはオープンソースであり、 [github.com の ntttcp-linux](https://github.com/Microsoft/ntttcp-for-linux)から入手できます。 Windows のバージョンについては、 [ダウンロードセンター](https://gallery.technet.microsoft.com/NTttcp-Version-528-Now-f8b12769)を参照してください。 ワークロードをチューニングする場合は、スループットを最大にするために必要な数のストリームを使用することをお勧めします。 Ntttcp を使用してトラフィックをモデル化すると、パラメーターによって、 `-P` 使用される並列接続の数が設定されます。
 
 ## <a name="linux-storage-performance"></a>Linux ストレージのパフォーマンス
 

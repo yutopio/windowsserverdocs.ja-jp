@@ -3,21 +3,22 @@ title: Windows Server-Server Core に含まれる役割、役割サービス、�
 description: Windows Server の Server Core インストールオプションにはどのような役割と機能が含まれていますか。
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 02/23/2018
-ms.openlocfilehash: 1569feb27a75815771cf84317bebb2fde9d83dfa
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: ded40a119d0d1ae759ec0b29ce9ee4808653ea50
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895868"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077759"
 ---
 # <a name="roles-role-services-and-features-included-in-windows-server---server-core"></a>Windows Server-Server Core に含まれる役割、役割サービス、および機能
 
 > 適用対象: Windows Server 2019、Windows Server 2016、および Windows Server (半期チャネル)
 
-通常、 [Server Core では*ないこと*](server-core-removed-roles.md)について説明します。ここでは、別のアプローチを試して、*含まれ*ているものと、既定で何かが*インストールさ*れているかどうかを確認します。 次の役割、役割サービス、および機能は、Windows Server の Server Core インストールオプション*に含ま*れています。 この情報は、お使いの環境で Server Core オプションが機能するかどうかを判断するのに役立ちます。 これは大きなリストなので、関心のある特定の役割または機能を検索することを検討してください。探しているものが見つからない場合、Server Core には含まれていません。
+通常、 [Server Core では*ないこと*](server-core-removed-roles.md)について説明します。ここでは、別のアプローチを試して、*含まれ*ているものと、既定で何かが*インストールさ*れているかどうかを確認します。 次の役割、役割サービス、および機能は、Windows Server の Server Core インストールオプション *に含ま* れています。 この情報は、お使いの環境で Server Core オプションが機能するかどうかを判断するのに役立ちます。 これは大きなリストなので、関心のある特定の役割または機能を検索することを検討してください。探しているものが見つからない場合、Server Core には含まれていません。
 
 たとえば、"リモートデスクトップセッションホスト" を検索すると、このページには見つかりません。 これは、RD セッションホストが Server Core イメージに含まれていないためです。
 
@@ -26,7 +27,7 @@ ms.locfileid: "87895868"
 ## <a name="roles-included-in-server-core"></a>Server Core に含まれる役割
 Server Core インストールオプションには、次のサーバーの役割があります。
 
-| Role                                            | 名前                           | 既定でインストールされますか? |
+| ロール                                            | 名前                           | 既定でインストールされますか? |
 |-------------------------------------------------|--------------------------------|-----------------------|
 | Active Directory 証明書サービス           | 証明書の AD                 | N                     |
 | Active Directory ドメイン サービス                | AD ドメインサービス             | N                     |
@@ -50,7 +51,7 @@ Server Core インストールオプションには、次のサーバーの役�
 ## <a name="role-services-included-in-server-core"></a>Server Core に含まれる役割サービス
 Server Core インストールオプションには、次の役割サービスが含まれています。
 
-| Role                                  | 役割サービス                                                   | 名前                    | 既定でインストールされますか? |
+| ロール                                  | 役割サービス                                                   | 名前                    | 既定でインストールされますか? |
 |---------------------------------------|----------------------------------------------------------------|-------------------------|-----------------------|
 | Active Directory 証明書サービス | 証明機関                                        | ADCS-証明書の機関     | N                     |
 |                                       | 証明書の登録ポリシー Web サービス                      | ADCS-Web-Registry.pol     | N                     |
@@ -86,7 +87,7 @@ Server Core インストールオプションには、次の役割サービス�
 |                                       | 既定のドキュメント                                               | Web の既定のドキュメント         | N                     |
 |                                       | ディレクトリの参照                                             | Web ディレクトリ参照        | N                     |
 |                                       | HTTP エラー                                                    | Web Http-エラー         | N                     |
-|                                       | 静的なコンテンツ                                                 | Web 静的コンテンツ      | N                     |
+|                                       | 静的コンテンツ                                                 | Web 静的コンテンツ      | N                     |
 |                                       | HTTP リダイレクト                                               | Web Http のリダイレクト       | N                     |
 |                                       | WebDAV 発行                                              | Web DAV 発行      | N                     |
 |                                       | 状態と診断                                         | Web ヘルス              | N                     |
@@ -97,10 +98,10 @@ Server Core インストールオプションには、次の役割サービス�
 |                                       | 要求モニター                                              | Web 要求のモニター     | N                     |
 |                                       | トレース                                                        | Web-Http-Tracing        | N                     |
 |                                       | パフォーマンス                                                    | Web パフォーマンス         | N                     |
-|                                       | 静的なコンテンツの圧縮                                     | Web の圧縮状態    | N                     |
+|                                       | 静的コンテンツ圧縮                                     | Web の圧縮状態    | N                     |
 |                                       | 動的なコンテンツ圧縮                                    | Web の圧縮 Dyn     | N                     |
 |                                       | セキュリティ                                                       | Web セキュリティ            | N                     |
-|                                       | 要求フィルター                                              | Web フィルター処理           | N                     |
+|                                       | 要求のフィルタリング                                              | Web フィルター処理           | N                     |
 |                                       | 基本認証                                           | Web Basic-認証          | N                     |
 |                                       | SSL 証明書サポートの集中化                            | Web CertProvider        | N                     |
 |                                       | クライアント証明書マッピング認証                      | Web クライアントの認証         | N                     |
@@ -153,12 +154,12 @@ Server Core インストールオプションには、次の機能がありま�
 | 名前付きパイプのアクティブ化                                  | NET-Activation45          | N                     |
 | TCP のアクティブ化                                         | NET-Activation45           | N                     |
 | TCP ポート共有                                       | NET-PortSharing45          | Y                     |
-| Background Intelligent Transfer Service (BITS)         | BITS                               | N                     |
+| バックグラウンド インテリジェント転送サービス (BITS)         | BITS                               | N                     |
 | コンパクト サーバー                                         | BITS-Compact サーバー                | N                     |
 | BitLocker ドライブ暗号化                             | BitLocker                          | N                     |
 | BranchCache                                            | BranchCache                        | N                     |
 | NFS クライアント                                         | NFS-クライアント                         | N                     |
-| Containers                                             | Containers                         | N                     |
+| コンテナー                                             | コンテナー                         | N                     |
 | データ センター ブリッジング                                   | データセンターブリッジング               | N                     |
 | 拡張記憶域                                       | EnhancedStorage                    | N                     |
 | フェールオーバー クラスタリング                                    | Failover-Clustering                | N                     |

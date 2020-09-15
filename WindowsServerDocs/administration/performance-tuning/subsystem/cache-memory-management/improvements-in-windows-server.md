@@ -2,15 +2,15 @@
 title: キャッシュとメモリマネージャーの機能強化
 description: Windows Server 2016 でのキャッシュおよびメモリ マネージャーの機能強化
 ms.topic: article
-ms.author: pavel; atales
+ms.author: pavel
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: c2fdceb7ff3743890c73ee4108ffcf8e00fe437f
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 799598223812f5992db0354780424f7da13033ea
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992058"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078009"
 ---
 # <a name="cache-and-memory-manager-improvements"></a>キャッシュとメモリマネージャーの機能強化
 
@@ -22,7 +22,7 @@ ms.locfileid: "87992058"
 
 
 ## <a name="cache-manager-improvements-in-windows-server-2012"></a>Windows Server 2012 でのキャッシュマネージャーの機能強化
-シーケンシャルなワークロードの先読みロジックに対するキャッシュマネージャーの機能強化に加えて、新しい API [CcSetReadAheadGranularityEx](/windows-hardware/drivers/ifs/ccsetreadaheadgranularityex)が追加されました。 SMB などのファイルシステムドライバーは、先読みパラメーターを変更できます。 これにより、1つの大規模な先行読み取り要求を送信する代わりに、複数の小さなサイズの先行読み取り要求を送信することで、リモートファイルのシナリオのスループットを向上させることができます。 ファイルシステムドライバーなどのカーネルコンポーネントのみが、ファイルごとにこれらの値をプログラムで構成できます。
+シーケンシャルなワークロードの先読みロジックに対するキャッシュマネージャーの機能強化に加えて、新しい API [CcSetReadAheadGranularityEx](/windows-hardware/drivers/ifs/ccsetreadaheadgranularityex) が追加されました。 SMB などのファイルシステムドライバーは、先読みパラメーターを変更できます。 これにより、1つの大規模な先行読み取り要求を送信する代わりに、複数の小さなサイズの先行読み取り要求を送信することで、リモートファイルのシナリオのスループットを向上させることができます。 ファイルシステムドライバーなどのカーネルコンポーネントのみが、ファイルごとにこれらの値をプログラムで構成できます。
 
 ## <a name="memory-manager-improvements-in-windows-server-2012"></a>Windows Server 2012 でのメモリマネージャーの機能強化
 ページの組み合わせを有効にすると、同じ内容のページがプライベートでページが多数存在するサーバーのメモリ使用量を減らすことができます。 たとえば、同じメモリを集中的に使用するアプリの複数のインスタンスを実行しているサーバーや、非常に反復的なデータを扱う1つのアプリの場合は、ページを結合することをお勧めします。 ページの結合を有効にすることの欠点は、CPU の使用率が高くなることです。

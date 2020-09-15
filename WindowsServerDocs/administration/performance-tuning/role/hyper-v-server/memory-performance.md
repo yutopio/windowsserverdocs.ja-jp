@@ -2,15 +2,15 @@
 title: Hyper-v メモリのパフォーマンス
 description: パフォーマンスチューニングに関するメモリの考慮事項 Hyper-v
 ms.topic: article
-ms.author: asmahi; sandysp; jopoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 08ccc5c8a6b7300f1fa476c01838080b0b01f67a
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: f0358747002eb850283c63770885d38872b7b903
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896094"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078268"
 ---
 # <a name="hyper-v-memory-performance"></a>Hyper-v メモリのパフォーマンス
 
@@ -23,7 +23,7 @@ ms.locfileid: "87896094"
 
 動的メモリを有効にすると、Windows が仮想マシンのメモリのサイズを動的に変更できるようになります。 動的メモリでは、仮想マシンのアプリケーションで大きな急激なメモリ割り当てが発生しているという問題が発生した場合は、仮想マシンのページファイルサイズを増やして、動的メモリがメモリ不足に応答するまで一時的なバックアップを確保することができます。
 
-動的メモリの詳細については、「 [hyper-v 動的メモリの概要]( https://go.microsoft.com/fwlink/?linkid=834434)」および「 [Hyper-v 動的メモリ構成ガイド](https://go.microsoft.com/fwlink/?linkid=834435)」を参照してください。
+動的メモリの詳細については、「 [hyper-v 動的メモリの概要]( https://go.microsoft.com/fwlink/?linkid=834434) 」および「 [Hyper-v 動的メモリ構成ガイド](https://go.microsoft.com/fwlink/?linkid=834435)」を参照してください。
 
 子パーティションで Windows を実行している場合は、子パーティション内で次のパフォーマンスカウンターを使用して、子パーティションにメモリ不足が発生しているかどうかを特定し、仮想マシンのメモリサイズを大きくするとパフォーマンスが向上する可能性があります。
 

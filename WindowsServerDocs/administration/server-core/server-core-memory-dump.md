@@ -3,15 +3,16 @@ title: Server Core インストール用にメモリダンプファイルを構�
 description: Windows Server の Server Core インストール用にメモリダンプファイルを構成する方法について説明します。
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 10/17/2017
-ms.openlocfilehash: d01757fcf1539e41db866b46cdf9eba60a59fc04
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: e3ef6076465bc7d165b58f1205ff8d0cf25014b7
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993205"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077779"
 ---
 # <a name="configure-memory-dump-files-for-server-core-installation"></a>Server Core インストール用にメモリダンプファイルを構成する
 
@@ -31,13 +32,13 @@ wmic computersystem set AutomaticManagedPagefile=False
 
 ## <a name="step-2-configure-the-destination-path-for-a-memory-dump"></a>手順 2: メモリダンプの宛先パスを構成する
 
-オペレーティングシステムがインストールされているパーティションにページファイルを配置する必要はありません。 ページファイルを別のパーティションに配置するには、 **DedicatedDumpFile**という名前の新しいレジストリエントリを作成する必要があります。 ページファイルのサイズを定義するには、 **dumpfilesize**ファイルサイズのレジストリエントリを使用します。 DedicatedDumpFile と DumpFileSize 両方のレジストリエントリを作成するには、次の手順を実行します。
+オペレーティングシステムがインストールされているパーティションにページファイルを配置する必要はありません。 ページファイルを別のパーティションに配置するには、 **DedicatedDumpFile**という名前の新しいレジストリエントリを作成する必要があります。 ページファイルのサイズを定義するには、 **dumpfilesize** ファイルサイズのレジストリエントリを使用します。 DedicatedDumpFile と DumpFileSize 両方のレジストリエントリを作成するには、次の手順を実行します。
 
-1. コマンドプロンプトで、 **regedit**コマンドを実行してレジストリエディターを開きます。
+1. コマンドプロンプトで、 **regedit** コマンドを実行してレジストリエディターを開きます。
 2. 次のレジストリサブキーを見つけてクリックします。 HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\CrashControl
 3. **[編集]、[新規]、[文字列値]** の順にクリックします。
-4. 新しい値に**DedicatedDumpFile**という名前を入力し、enter キーを押します。
-5. [ **DedicatedDumpFile**] を右クリックし、[**変更**] をクリックします。
+4. 新しい値に **DedicatedDumpFile**という名前を入力し、enter キーを押します。
+5. [ **DedicatedDumpFile**] を右クリックし、[ **変更**] をクリックします。
 6. [**値のデータ**型] に「」と入力** \<Drive\> \\ \<Dedicateddumpfile.sys\> し、[** **OK]** をクリックします。
 
    >[!NOTE]
@@ -45,9 +46,9 @@ wmic computersystem set AutomaticManagedPagefile=False
 
 7. [編集] をクリックし **> 新しい DWORD 値 >** ます。
 8. 「 **Dumpfilesize サイズ**」と入力し、enter キーを押します。
-9. [ **Dumpfilesize サイズ**] を右クリックし、[**変更**] をクリックします。
-10. [ **DWORD 値の編集**] の [**ベース**] で、[ **10 進**] をクリックします。
-11. [**値のデータ**] に適切な値を入力し、[ **OK]** をクリックします。
+9. [ **Dumpfilesize サイズ**] を右クリックし、[ **変更**] をクリックします。
+10. [ **DWORD 値の編集**] の [ **ベース**] で、[ **10 進**] をクリックします。
+11. [ **値のデータ**] に適切な値を入力し、[ **OK]** をクリックします。
     >[!NOTE]
     > ダンプファイルのサイズはメガバイト (MB) 単位です。
 12. レジストリ エディターを終了します。
@@ -84,7 +85,7 @@ wmic RECOVEROS get DebugInfoType
 wmic RECOVEROS set DebugInfoType = <Value>
 ```
 
-\<Value\>次に定義されているように、0、1、2、または3を指定できます。
+\<Value\> 次に定義されているように、0、1、2、または3を指定できます。
 
 - 0: メモリダンプの削除を無効にします。
 - 1: 完全なメモリダンプ。 コンピューターが予期せず停止したときに、システムメモリのすべての内容を記録します。 メモリダンプ全体には、メモリダンプが収集されたときに実行されていたプロセスのデータが含まれている場合があります。
@@ -125,7 +126,7 @@ wmic RECOVEROS set OverwriteExistingDebugFile = 1
 
 ## <a name="step-6-set-an-administrative-alert"></a>手順 6: 管理アラートを設定する
 
-管理アラートが適切かどうかを判断し、それに応じて**Sendadminalert**を設定します。 SendAdminAlert の現在の値を表示するには、次のコマンドを実行します。
+管理アラートが適切かどうかを判断し、それに応じて **Sendadminalert** を設定します。 SendAdminAlert の現在の値を表示するには、次のコマンドを実行します。
 
 ```
 wmic RECOVEROS get SendAdminAlert

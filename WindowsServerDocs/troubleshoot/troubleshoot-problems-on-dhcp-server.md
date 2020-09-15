@@ -1,18 +1,17 @@
 ---
 title: DHCP サーバーでの問題のトラブルシューティング
 description: この artilce では、DHCP サーバーの問題をトラブルシューティングし、データを収集する方法について説明します。
-ms.service: na
 manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: article
 author: Deland-Han
 ms.author: delhan
-ms.openlocfilehash: d6fc69c15c3465769232d89f70a65ca915d0584e
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: a6b5e4128c2e07e51ab8a9c07155a8c0212fcad8
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989035"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078589"
 ---
 # <a name="troubleshoot-problems-on-the-dhcp-server"></a>DHCP サーバーでの問題のトラブルシューティング
 
@@ -22,9 +21,9 @@ ms.locfileid: "87989035"
 
 次の設定を確認してください。
 
-  - DHCP サーバーサービスが開始され、実行されています。 この設定を確認するには、 **net start**コマンドを実行し、 **DHCP サーバー**を探します。
+  - DHCP サーバーサービスが開始され、実行されています。 この設定を確認するには、 **net start** コマンドを実行し、 **DHCP サーバー**を探します。
 
-  - DHCP サーバーが承認されている。 「[ドメインに参加しているシナリオでの WINDOWS DHCP サーバーの承認」を](/openspecs/windows_protocols/ms-dhcpe/56f8870b-a7c1-4db1-8a86-f69079fe5077)参照してください。
+  - DHCP サーバーが承認されている。 「 [ドメインに参加しているシナリオでの WINDOWS DHCP サーバーの承認」を](/openspecs/windows_protocols/ms-dhcpe/56f8870b-a7c1-4db1-8a86-f69079fe5077)参照してください。
 
   - DHCP クライアントがあるサブネットの DHCP サーバースコープで IP アドレスリースが使用可能であることを確認します。 これを行うには、DHCP サーバー管理コンソールで適切なスコープの統計情報を参照してください。
 
@@ -32,7 +31,7 @@ ms.locfileid: "87989035"
 
   - ネットワーク上のどのデバイスにも、DHCP スコープから除外されていない静的 IP アドレスがあるかどうかを確認します。
 
-  - DHCP サーバーがバインドされている IP アドレスが、IP アドレスをリースする必要があるスコープのサブネット内にあることを確認します。これは、使用可能なリレーエージェントがない場合に当てはまります。 これを行うには、 **DhcpServerv4Binding**または**DhcpServerv6Binding**コマンドレットを実行します。
+  - DHCP サーバーがバインドされている IP アドレスが、IP アドレスをリースする必要があるスコープのサブネット内にあることを確認します。これは、使用可能なリレーエージェントがない場合に当てはまります。 これを行うには、 **DhcpServerv4Binding** または **DhcpServerv6Binding** コマンドレットを実行します。
 
   - DHCP サーバーのみが UDP ポート67および68でリッスンしていることを確認します。 他のプロセスまたは他のサービス (WDS、PXE など) では、これらのポートを占有しません。 これを行うには、コマンドを実行し `netstat -anb` ます。
 

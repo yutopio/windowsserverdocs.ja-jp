@@ -2,21 +2,21 @@
 title: ソフトウェア定義ネットワークでの SLB ゲートウェイのパフォーマンスチューニング
 description: SDN ネットワークに関する SLB ゲートウェイのパフォーマンスチューニングガイドライン
 ms.topic: article
-ms.author: grcusanz; anpaul
+ms.author: grcusanz
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 64d045a270b8762d0d269055c8c65d1e40a71d63
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: d45a5f585c7da30e4d9bdd4c8ec3c2e2003b7ea0
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895937"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077919"
 ---
 # <a name="slb-gateway-performance-tuning-in-software-defined-networks"></a>ソフトウェア定義ネットワークでの SLB ゲートウェイのパフォーマンスチューニング
 
 ソフトウェア負荷分散は、ネットワークコントローラー Vm のロードバランサーマネージャー、Hyper-v 仮想スイッチ、および一連の Load Balancer Multixplexor (Mux) Vm の組み合わせによって提供されます。
 
-以下で説明するように、ネットワークコントローラーまたは Hyper-v ホストの負荷分散を構成するために、追加のパフォーマンスチューニングは必要ありません。[このセクションで](index.md)は、次に説明するように、sr-iov に sr-iov を使用する場合を除きます。
+以下で説明するように、ネットワークコントローラーまたは Hyper-v ホストの負荷分散を構成するために、追加のパフォーマンスチューニングは必要ありません。 [このセクションで](index.md) は、次に説明するように、sr-iov に sr-iov を使用する場合を除きます。
 
 ## <a name="slb-mux-vm-configuration"></a>SLB Mux VM 構成
 
@@ -26,7 +26,7 @@ SLB Mux 仮想マシンは、アクティブ/アクティブ構成で展開さ�
 
 場合によっては、要求のソースが、VIP を管理する同じネットワークコントローラーに追加された SDN ホストから送信された場合、要求の受信パスをさらに最適化することで、ほとんどのパケットをクライアントからサーバーに直接移動して、Mux VM 全体をバイパスすることができます。  この最適化を行うには、追加の構成は必要ありません。
 
-各 SLB Mux VM のサイズは、「[ソフトウェア定義ネットワークインフラストラクチャの計画](../../../../networking/sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)」トピックの「SDN インフラストラクチャ仮想マシンロールの要件」セクションに記載されているガイドラインに従って設定する必要があります。
+各 SLB Mux VM のサイズは、「  [ソフトウェア定義ネットワークインフラストラクチャの計画](../../../../networking/sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md) 」トピックの「SDN インフラストラクチャ仮想マシンロールの要件」セクションに記載されているガイドラインに従って設定する必要があります。
 
 ## <a name="single-root-io-virtualization-sr-iov"></a>シングルルート IO 仮想化 (sr-iov)
 

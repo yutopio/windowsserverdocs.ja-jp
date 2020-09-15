@@ -3,15 +3,16 @@ title: Server Core とは
 description: Windows Server の Server Core インストールオプションについて説明します。
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 02/20/2018
-ms.openlocfilehash: 01cf2568df3651e5f52649b04aa9d10b9690d597
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 42a016a95d24f6ec0abc560a54f8589ab4c65ab1
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895838"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077549"
 ---
 # <a name="what-is-the-server-core-installation-option-in-windows-server"></a>Windows Server の Server Core インストールオプションとは
 
@@ -34,7 +35,7 @@ Windows Server をインストールすると、選択したサーバーの役�
 - Microsoft-Windows-Server-Gui-パッケージ
 - Microsoft-Windows-Cortana-デスクトップ-パッケージ
 
-つまり、Server Core には、仕様による**デスクトップはありません**。 従来のビジネスアプリケーションと役割ベースのワークロードをサポートするために必要な機能を維持しながら、Server Core には従来のデスクトップインターフェイスはありません。 代わりに、Server Core は、コマンドライン、PowerShell、または GUI ツール ( [RSAT](../../remote/remote-server-administration-tools.md)や[Windows 管理センター](../../manage/windows-admin-center/overview.md)など) を使用してリモートで管理されるように設計されています。
+つまり、Server Core には、仕様による **デスクトップはありません** 。 従来のビジネスアプリケーションと役割ベースのワークロードをサポートするために必要な機能を維持しながら、Server Core には従来のデスクトップインターフェイスはありません。 代わりに、Server Core は、コマンドライン、PowerShell、または GUI ツール ( [RSAT](../../remote/remote-server-administration-tools.md) や [Windows 管理センター](../../manage/windows-admin-center/overview.md)など) を使用してリモートで管理されるように設計されています。
 
 Server Core は、UI がないだけでなく、次のようなデスクトップエクスペリエンスを備えたサーバーとも異なります。
 
@@ -42,7 +43,7 @@ Server Core は、UI がないだけでなく、次のようなデスクトッ�
 - Server Core を設定するための、OOBE なし (既定のエクスペリエンス)
 - オーディオサポートなし
 
-次の表は、Server Core とデスクトップエクスペリエンスの両方で*ローカル*に使用できるアプリケーションを示しています。 **重要**: ほとんどの場合、以下の "使用不可" と表示されているアプリケーションは、Windows クライアントコンピューターからリモートで実行して、Server Core インストールの管理に使用できます。
+次の表は、Server Core とデスクトップエクスペリエンスの両方で *ローカル* に使用できるアプリケーションを示しています。 **重要**: ほとんどの場合、以下の "使用不可" と表示されているアプリケーションは、Windows クライアントコンピューターからリモートで実行して、Server Core インストールの管理に使用できます。
 
 > [!NOTE]
 > この一覧はクイックリファレンスを目的としています。完全な一覧を示すものではありません。
@@ -85,9 +86,9 @@ Server Core は、UI がないだけでなく、次のようなデスクトッ�
 | ワードパッド\*                          | 利用不可   | 利用可能                      |
 
 
-Server Core に含まれる*内容の*詳細については、「 [Windows Server-server core に含まれる役割、役割サービス、および機能](server-core-roles-and-services.md)」を参照してください。 Server Core に含まれて*いない*内容の詳細については、「 [server core に含まれていない役割、役割サービス、および機能](server-core-removed-roles.md)」を参照してください。
+Server Core に含まれる *内容の* 詳細については、「 [Windows Server-server core に含まれる役割、役割サービス、および機能](server-core-roles-and-services.md)」を参照してください。 Server Core に含まれて*いない*内容の詳細については、「 [server core に含まれていない役割、役割サービス、および機能](server-core-removed-roles.md)」を参照してください。
 
-\*を参照してください。RTF ファイルは、Server Core SKU にローカルに保存されています。ユーザーは、ワードパッドがある別の Windows コンピューターにファイルをコピーできます。
+\* を参照してください。RTF ファイルは、Server Core SKU にローカルに保存されています。ユーザーは、ワードパッドがある別の Windows コンピューターにファイルをコピーできます。
 
 ## <a name="get-started-using-server-core"></a>Server Core の使用を開始する
 

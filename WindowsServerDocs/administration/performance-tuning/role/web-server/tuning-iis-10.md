@@ -2,15 +2,15 @@
 title: IIS 10.0 のチューニング
 description: Windows Server 16 の IIS 10.0 web サーバーのパフォーマンスチューニング recommmendations
 ms.topic: landing-page
-ms.author: davso; ericam; yashi
+ms.author: ericam
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 74badc4bd2c001a524a290b74054fffb1a08cd36
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 5ee33ad0c5246efa40263bcdba8c4380efb2e2bf
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896015"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078089"
 ---
 # <a name="tuning-iis-100"></a>IIS 10.0 のチューニング
 
@@ -50,23 +50,23 @@ HTTP.sys が提供する利点の1つは、カーネルモードのキャッシ�
 
 次に、HTTP.sys カーネルモードキャッシュの便利な設定をいくつか示します。
 
--   **UriEnableCache**既定値: 1
+-   **UriEnableCache** 既定値: 1
 
     0以外の値を指定すると、カーネルモードの応答とフラグメントのキャッシュが有効になります。 ほとんどのワークロードでは、キャッシュは有効なままにしておく必要があります。 応答が非常に少なく、フラグメントがキャッシュされることが予想される場合は、キャッシュを無効にすることを検討してください。
 
--   **UriMaxCacheMegabyteCount**既定値: 0
+-   **UriMaxCacheMegabyteCount** 既定値: 0
 
     カーネルモードのキャッシュで使用可能な最大メモリを指定する0以外の値。 既定値の0では、システムがキャッシュに使用できるメモリの量を自動的に調整できます。
 
-    **メモ**サイズを指定した場合、最大値のみが設定され、システムではキャッシュが最大サイズに拡張されない可能性があります。
+    **メモ** サイズを指定した場合、最大値のみが設定され、システムではキャッシュが最大サイズに拡張されない可能性があります。
 
     Â 
 
--   **Urimaxuribytes**既定値: 262144 バイト (256 KB)
+-   **Urimaxuribytes** 既定値: 262144 バイト (256 KB)
 
     カーネルモードキャッシュ内のエントリの最大サイズ。 この値より大きい応答またはフラグメントはキャッシュされません。 十分なメモリがある場合は、制限を増やすことを検討してください。 メモリが制限されていて、大きなエントリの crowding が小さい場合は、制限を低くすると役立つことがあります。
 
--   **UriScavengerPeriod**既定値: 120 秒
+-   **UriScavengerPeriod** 既定値: 120 秒
 
     HTTP.sys キャッシュは、スカベンジャーによって定期的にスキャンされ、スカベンジャースキャン間でアクセスされないエントリは削除されます。 スカベンジャー period を high 値に設定すると、スカベンジャースキャンの回数を減らすことができます。 ただし、アクセス頻度の低い古いエントリがキャッシュに残っている可能性があるため、キャッシュメモリの使用量が増加する可能性があります。 期間を低く設定すると、より頻繁にスカベンジャースキャンが実行され、フラッシュとキャッシュチャーンが過剰になる可能性があります。
 
@@ -117,7 +117,7 @@ Windows Server 2016 では、HTTP.sys は自動的に接続を管理します。
 
 % SystemRoot% \\ system32 \\ inetsrv config administration.config \\ config \\applicationHost.config
 
-これらを変更するには、Appcmd.exe、IIS 10.0 管理コンソール、WebAdministration または IISAdministration PowerShell コマンドレットを使用します。 ほとんどの設定は自動的に検出され、IIS 10.0 ワーカープロセスまたは web アプリケーションサーバーを再起動する必要はありません。 applicationHost.config ファイルの詳細については、「 [ApplicationHost.configの概要](https://www.iis.net/learn/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig)」を参照してください。
+これらを変更するには、Appcmd.exe、IIS 10.0 管理コンソール、WebAdministration または IISAdministration PowerShell コマンドレットを使用します。 ほとんどの設定は自動的に検出され、IIS 10.0 ワーカープロセスまたは web アプリケーションサーバーを再起動する必要はありません。 applicationHost.config ファイルの詳細については、「 [ApplicationHost.configの概要 ](https://www.iis.net/learn/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig)」を参照してください。
 
 
 ## <a name="ideal-cpu-setting-for-numa-hardware"></a>NUMA ハードウェアの理想的な CPU 設定
@@ -140,8 +140,8 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\ThreadP
 
 | 属性 | 説明 | Default |
 |--|--|--|
-| Enabled | **False**に設定されている場合、ユーザーモードの IIS キャッシュを無効にします。 キャッシュヒット率が非常に小さい場合は、キャッシュコードパスに関連付けられているオーバーヘッドを回避するために、キャッシュを完全に無効にすることができます。 ユーザーモードのキャッシュを無効にしても、カーネルモードのキャッシュは無効になりません。 | True |
-| Enableカーネルキャッシュ | **False**に設定されている場合、カーネルモードのキャッシュを無効にします。 | True |
+| Enabled | **False**に設定されている場合、ユーザーモードの IIS キャッシュを無効にします。 キャッシュヒット率が非常に小さい場合は、キャッシュコードパスに関連付けられているオーバーヘッドを回避するために、キャッシュを完全に無効にすることができます。 ユーザーモードのキャッシュを無効にしても、カーネルモードのキャッシュは無効になりません。 | ○ |
+| Enableカーネルキャッシュ | **False**に設定されている場合、カーネルモードのキャッシュを無効にします。 | ○ |
 | maxCacheSize | IIS ユーザーモードのキャッシュサイズを指定したサイズ (メガバイト単位) に制限します。 IIS では、使用可能なメモリに応じて既定値が調整されます。 頻繁にアクセスするファイルのセットのサイズと RAM の容量または IIS プロセスのアドレス空間に基づいて、値を慎重に選択します。 | 0 |
 | maxResponseSize | 指定されたサイズまでファイルをキャッシュします。 実際の値は、データセット内の最大ファイルの数とサイズ、および使用可能な RAM によって異なります。 頻繁に要求される大規模なファイルをキャッシュすることで、CPU の使用率、ディスクアクセス、および関連する待機時間を減らすことができます。 | 262144 |
 
@@ -157,15 +157,15 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\ThreadP
 |--|--|--|
 | staticCompression-EnableCpuUsage<br><br>staticCompression-DisableCpuUsage<br><br>dynamicCompression-EnableCpuUsage<br><br>dynamicCompression-DisableCpuUsage | 現在の CPU 使用率が、指定された制限を超えた場合、または下回った場合に、圧縮を有効または無効にします。<br><br>IIS 7.0 以降では、安定状態の CPU が無効しきい値を超えた場合、圧縮は自動的に無効になります。 CPU が有効しきい値を下回ると、圧縮が有効になります。 | 50、100、50、および90 |
 | directory | 圧縮されたバージョンの静的ファイルが一時的に格納およびキャッシュされるディレクトリを指定します。 頻繁にアクセスされる場合は、このディレクトリをシステムドライブから移動することを検討してください。 | %SystemDrive%\inetpub\temp\IIS Temporary Compressed Files |
-| Dodiskspace の制限 | 圧縮されたすべてのファイルが占有できるディスク領域の制限が存在するかどうかを指定します。 圧縮されたファイルは、 **directory**属性によって指定された圧縮ディレクトリに格納されます。 | True |
+| Dodiskspace の制限 | 圧縮されたすべてのファイルが占有できるディスク領域の制限が存在するかどうかを指定します。 圧縮されたファイルは、 **directory** 属性によって指定された圧縮ディレクトリに格納されます。 | ○ |
 | Maxdiskspace Usage | 圧縮ファイルが圧縮ディレクトリに格納できるディスク領域のバイト数を指定します。<br><br>圧縮されたすべてのコンテンツの合計サイズが大きすぎる場合は、この設定を増やす必要があります。 | 100 MB |
 
 **System.webserver/urlCompression**
 
 | 属性 | 説明 | Default |
 |--|--|--|
-| doStaticCompression | 静的コンテンツを圧縮するかどうかを指定します。 | True |
-| doDynamicCompression | 動的コンテンツを圧縮するかどうかを指定します。 | True |
+| doStaticCompression | 静的コンテンツを圧縮するかどうかを指定します。 | ○ |
+| doDynamicCompression | 動的コンテンツを圧縮するかどうかを指定します。 | ○ |
 
 > [!NOTE]
 > 平均 CPU 使用率が低い IIS 10.0 を実行しているサーバーの場合、特に応答が大きい場合は、動的コンテンツの圧縮を有効にすることを検討してください。 これは、ベースラインからの CPU 使用率の影響を評価するために、まずテスト環境で実行する必要があります。
@@ -184,14 +184,14 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\ThreadP
 
 | 属性 | 説明 | Default |
 |--|--|--|
-| enabled | 既定のドキュメントを有効にすることを指定します。 | True |
+| enabled | 既定のドキュメントを有効にすることを指定します。 | ○ |
 | `<files>` 要素 | 既定のドキュメントとして構成されているファイル名を指定します。 | 既定の一覧は Default.htm、default.asp、Index.htm、Index.html、Iisstart.htm、および default.aspx です。 |
 
 ## <a name="central-binary-logging"></a>中央バイナリログ
 
 サーバーセッションに多数の URL グループが含まれている場合、個々の URL グループに対して数百の形式のログファイルを作成し、ログデータをディスクに書き込むプロセスによって、貴重な CPU リソースとメモリリソースを迅速に使用できるため、パフォーマンスとスケーラビリティの問題が発生する可能性があります。 バイナリログの一元化により、ログ記録に使用されるシステムリソースの量が最小限に抑えられ、同時に、それを必要とする組織のための詳細なログデータを提供します。 バイナリ形式のログを解析するには、処理後のツールが必要です。
 
-CentralLogFileMode 属性を CentralBinary に設定し、 **enabled**属性を**True**に設定することによって、中央のバイナリログ記録を有効にすることができます。 システムアクティビティとログアクティビティの競合を避けるために、中央のログファイルの場所をシステムパーティションから専用のログ記録ドライブに移動することを検討してください。
+CentralLogFileMode 属性を CentralBinary に設定し、 **enabled** 属性を **True**に設定することによって、中央のバイナリログ記録を有効にすることができます。 システムアクティビティとログアクティビティの競合を避けるために、中央のログファイルの場所をシステムパーティションから専用のログ記録ドライブに移動することを検討してください。
 
 **Applicationhost.config/log**
 
@@ -203,7 +203,7 @@ CentralLogFileMode 属性を CentralBinary に設定し、 **enabled**属性を*
 
 | 属性 | 説明 | Default |
 |--|--|--|
-| enabled | 中央バイナリログを有効にするかどうかを指定します。 | False |
+| enabled | 中央バイナリログを有効にするかどうかを指定します。 | × |
 | directory | ログエントリが書き込まれるディレクトリを指定します。 | %SystemDrive%\inetpub\logs\LogFiles |
 
 ## <a name="application-and-site-tunings"></a>アプリケーションとサイトチューニング
@@ -215,13 +215,13 @@ CentralLogFileMode 属性を CentralBinary に設定し、 **enabled**属性を*
 | 属性 | 説明 | Default |
 |--|--|--|
 | queueLength | 今後の要求が拒否されるまでに、アプリケーションプールのキューに登録されている要求の数を HTTP.sys することを示します。 このプロパティの値を超えた場合、IIS は503エラーが発生した後続の要求を拒否します。<br><br>503エラーが検出された場合に、待機時間の長いバックエンドデータストアと通信するアプリケーションでは、これを増やすことを検討してください。 | 1000 |
-| enable32BitAppOnWin64 | True の場合、64ビットプロセッサを搭載したコンピューターで32ビットアプリケーションを実行できます。<br><br>メモリ使用量が問題になる場合は、32ビットモードを有効にすることを検討してください。 ポインターのサイズと命令のサイズが小さいため、32ビットアプリケーションでは、64ビットアプリケーションよりもメモリ使用量が少なくなります。 64ビットコンピューターで32ビットアプリケーションを実行する場合の欠点は、ユーザーモードのアドレス空間が 4 GB に制限されていることです。 | False |
+| enable32BitAppOnWin64 | True の場合、64ビットプロセッサを搭載したコンピューターで32ビットアプリケーションを実行できます。<br><br>メモリ使用量が問題になる場合は、32ビットモードを有効にすることを検討してください。 ポインターのサイズと命令のサイズが小さいため、32ビットアプリケーションでは、64ビットアプリケーションよりもメモリ使用量が少なくなります。 64ビットコンピューターで32ビットアプリケーションを実行する場合の欠点は、ユーザーモードのアドレス空間が 4 GB に制限されていることです。 | × |
 
 **Applicationhost.config/sites/VirtualDirectoryDefault**
 
 | 属性 | 説明 | Default |
 |--|--|--|
-| で allowsubdirconfig | IIS が現在のレベルより低いコンテンツディレクトリ内の web.config ファイルを検索するか (True)、現在のレベルより低いコンテンツディレクトリ内の web.config ファイルを検索するか (False) を指定します。 単純な制限を適用することで、仮想ディレクトリでのみ構成できるようになるため、iisâでは、ファイル** / &lt; 名 &gt; .htm**が仮想ディレクトリでない限り、構成ファイルを検索しないことがわかります。 追加のファイル操作を省略すると、ランダムにアクセスされる静的コンテンツが非常に多い web サイトのパフォーマンスを大幅に向上させることができます。 | True |
+| で allowsubdirconfig | IIS が現在のレベルより低いコンテンツディレクトリ内の web.config ファイルを検索するか (True)、現在のレベルより低いコンテンツディレクトリ内の web.config ファイルを検索するか (False) を指定します。 単純な制限を適用することで、仮想ディレクトリでのみ構成できるようになるため、iisâでは、ファイル** / &lt; 名 &gt; .htm**が仮想ディレクトリでない限り、構成ファイルを検索しないことがわかります。 追加のファイル操作を省略すると、ランダムにアクセスされる静的コンテンツが非常に多い web サイトのパフォーマンスを大幅に向上させることができます。 | ○ |
 
 ## <a name="managing-iis-100-modules"></a>IIS 10.0 モジュールの管理
 
@@ -256,7 +256,7 @@ applicationHost.config からモジュールを削除するには、system.webse
 
 | 属性 | 説明 | Default |
 |--|--|--|
-| executeInMta | IIS が ASP コンテンツを提供している間にエラーまたはエラーが検出された場合は、 **True**に設定します。 これは、たとえば、各サイトが独自のワーカープロセスで実行される複数の分離されたサイトをホストする場合に発生することがあります。 エラーは通常、イベントビューアーの COM + から報告されます。 この設定により、ASP でマルチスレッドアパートメントモデルが有効になります。 | False |
+| executeInMta | IIS が ASP コンテンツを提供している間にエラーまたはエラーが検出された場合は、 **True** に設定します。 これは、たとえば、各サイトが独自のワーカープロセスで実行される複数の分離されたサイトをホストする場合に発生することがあります。 エラーは通常、イベントビューアーの COM + から報告されます。 この設定により、ASP でマルチスレッドアパートメントモデルが有効になります。 | × |
 
 ## <a name="aspnet-concurrency-setting"></a>ASP.NET concurrency の設定
 
@@ -271,7 +271,7 @@ applicationHost.config からモジュールを削除するには、system.webse
 
 システム上のリソースを完全に使用するには、次の設定が役立ちます。
 
--   **maxConcurrentRequestPerCpu**既定値: 5000
+-   **maxConcurrentRequestPerCpu** 既定値: 5000
 
     この設定は、システムで同時に実行される ASP.NET 要求の最大数を制限します。 既定値は控えめで、ASP.NET アプリケーションのメモリ使用量を削減します。 同期 i/o 操作が長時間実行されるアプリケーションを実行するシステムでは、この制限を引き上げることを検討してください。 そうしないと、既定の設定が使用されていると、キューの制限が高負荷の場合に発生するため、キューまたは要求の失敗が原因で、待機時間が長くなる可能性があります。
 
@@ -284,8 +284,8 @@ MaxConcurrentRequestPerCpu の設定に加えて、ASP.NET 4.7 には、非同�
 </system.web>
 ```
 
--   **percentCpuLimit**既定値:90 非同期要求には、(ハードウェア機能を超えた) 大きな負荷が発生した場合に、スケーラビリティの問題がいくつかあります。 この問題は、非同期シナリオでの割り当ての性質に起因します。 このような状況では、非同期操作の開始時に割り当てが行われ、完了時に割り当てられます。 その時点で、itâs は、オブジェクトが GC によってジェネレーション1または2に移動された可能性があります。 この場合、負荷を上げると、1秒あたりの要求数 (rps) が増加します。 このポイントに到達すると、GC で費やされた時間が問題になり、rps は dip を開始し、負のスケーリング効果が適用されます。 この問題を解決するには、cpu 使用率が percentCpuLimit の設定を超えると、要求が ASP.NET ネイティブキューに送信されます。
--   **percentCpuLimitMinActiveRequestPerCpu**既定値: 100 CPU 調整 (percentCpuLimit 設定) は、要求の数に基づいていませんが、コストが高くなります。 その結果、大量の CPU を集中的に使用する要求が発生し、ネイティブキューでバックアップが実行され、受信要求とは別に空にすることができなくなる可能性があります。 この problme を解決するために、percentCpuLimitMinActiveRequestPerCpu を使用して、調整が開始される前に最小数の要求が提供されるようにすることができます。
+-   **percentCpuLimit** 既定値:90 非同期要求には、(ハードウェア機能を超えた) 大きな負荷が発生した場合に、スケーラビリティの問題がいくつかあります。 この問題は、非同期シナリオでの割り当ての性質に起因します。 このような状況では、非同期操作の開始時に割り当てが行われ、完了時に割り当てられます。 その時点で、itâs は、オブジェクトが GC によってジェネレーション1または2に移動された可能性があります。 この場合、負荷を上げると、1秒あたりの要求数 (rps) が増加します。 このポイントに到達すると、GC で費やされた時間が問題になり、rps は dip を開始し、負のスケーリング効果が適用されます。 この問題を解決するには、cpu 使用率が percentCpuLimit の設定を超えると、要求が ASP.NET ネイティブキューに送信されます。
+-   **percentCpuLimitMinActiveRequestPerCpu** 既定値: 100 CPU 調整 (percentCpuLimit 設定) は、要求の数に基づいていませんが、コストが高くなります。 その結果、大量の CPU を集中的に使用する要求が発生し、ネイティブキューでバックアップが実行され、受信要求とは別に空にすることができなくなる可能性があります。 この problme を解決するために、percentCpuLimitMinActiveRequestPerCpu を使用して、調整が開始される前に最小数の要求が提供されるようにすることができます。
 
 ## <a name="worker-process-and-recycling-options"></a>ワーカープロセスとリサイクルのオプション
 

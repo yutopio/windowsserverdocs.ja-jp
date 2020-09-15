@@ -2,15 +2,15 @@
 title: What's New in Kerberos Authentication
 ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
-manager: alanth
 author: justinha
+ms.author: Justinha
 ms.date: 11/09/2016
-ms.openlocfilehash: 514b19689c73c1c5c61184a1ff8c13636b57864e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: eac9e1abd2891b21e818eac1d69b0eac231a02b4
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948665"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078539"
 ---
 # <a name="whats-new-in-kerberos-authentication"></a>What's New in Kerberos Authentication
 
@@ -26,7 +26,7 @@ Windows Server 2016 以降では、Kdc は公開キーマッピングの方法�
 
 ## <a name="kerberos-client-and-kdc-support-for-rfc-8070-pkinit-freshness-extension"></a>Kerberos クライアントと KDC での RFC 8070 の PKInit 鮮度拡張機能のサポート
 
-Windows 10、バージョン1607、および Windows Server 2016 以降では、Kerberos クライアントは、公開キーベースのサインオンに対して[RFC 8070 の PKInit 鮮度拡張機能](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/)を試行します。
+Windows 10、バージョン1607、および Windows Server 2016 以降では、Kerberos クライアントは、公開キーベースのサインオンに対して [RFC 8070 の PKInit 鮮度拡張機能](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) を試行します。
 
 Windows Server 2016 以降では、Kdc は PKInit 鮮度拡張機能をサポートできます。
 既定では、Kdc は PKInit 鮮度拡張機能を提供しません。 有効にするには、ドメイン内のすべての Dc に対して、[PKInit 鮮度拡張機能の kdc] 管理用テンプレートポリシー設定の新しい KDC サポートを使用します。

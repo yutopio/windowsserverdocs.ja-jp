@@ -3,13 +3,14 @@ title: モバイル ブロードバンド ネットワーク (MBN) 用の netsh 
 description: netsh mbn を使用して、モバイル ブロードバンドの設定とパラメーターを照会および構成します。
 ms.topic: article
 author: apdutta
+ms.author: apdutta
 ms.date: 02/20/2020
-ms.openlocfilehash: 50c0bbf441e3109189117cbfd8df9ee597712bcd
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 30d81f8c36c5ba745d0af1d940d8f4f3971d37a0
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953988"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078569"
 ---
 # <a name="netsh-mbn-commands"></a>netsh mbn コマンド
 
@@ -500,32 +501,55 @@ set tracing mode=yes
 
 使用できる netsh mbn set コマンドは次のとおりです。
 
-- [acstate](#acstate)
-- [capability](#capability)
-- [connection](#connection)
-- [dataenablement](#dataenablement)
-- [dataroamcontrol](#dataroamcontrol)
-- [dmprofiles](#dmprofiles)
-- [enterpriseapnparams](#enterpriseapnparams)
-- [highestconncategory](#highestconncategory)
-- [homeprovider](#homeprovider)
-- [interfaces](#interfaces)
-- [netlteattachinfo](#netlteattachinfo)
-- [pin](#pin)
-- [pinlist](#pinlist)
-- [preferredproviders](#preferredproviders)
-- [profiles](#profiles)
-- [profilestate](#profilestate)
-- [provisionedcontexts](#provisionedcontexts)
-- [purpose](#purpose)
-- [radio](#radio)
-- [readyinfo](#readyinfo)
-- [signal](#signal)
-- [slotmapping](#slotmapping)
-- [slotstatus](#slotstatus)
-- [smsconfig](#smsconfig)
-- [tracing](#tracing)
-- [visibleproviders](#visibleproviders)
+- [netsh mbn コマンド](#netsh-mbn-commands)
+  - [add](#add)
+    - [dmprofile](#dmprofile)
+    - [profile](#profile)
+  - [connect](#connect)
+  - [delete](#delete)
+    - [dmprofile](#dmprofile-1)
+    - [profile](#profile-1)
+  - [diagnose](#diagnose)
+  - [disconnect](#disconnect)
+  - [dump](#dump)
+  - [help](#help)
+  - [set](#set)
+    - [acstate](#acstate)
+    - [dataenablement](#dataenablement)
+    - [dataroamcontrol](#dataroamcontrol)
+    - [enterpriseapnparams](#enterpriseapnparams)
+    - [highestconncategory](#highestconncategory)
+    - [powerstate](#powerstate)
+    - [profileparameter](#profileparameter)
+    - [slotmapping](#slotmapping)
+    - [tracing](#tracing)
+  - [show](#show)
+    - [acstate](#acstate-1)
+    - [capability](#capability)
+    - [connection](#connection)
+    - [dataenablement](#dataenablement-1)
+    - [dataroamcontrol](#dataroamcontrol-1)
+    - [dmprofiles](#dmprofiles)
+    - [enterpriseapnparams](#enterpriseapnparams-1)
+    - [highestconncategory](#highestconncategory-1)
+    - [homeprovider](#homeprovider)
+    - [interfaces](#interfaces)
+    - [netlteattachinfo](#netlteattachinfo)
+    - [pin](#pin)
+    - [pinlist](#pinlist)
+    - [preferredproviders](#preferredproviders)
+    - [profiles](#profiles)
+    - [profilestate](#profilestate)
+    - [provisionedcontexts](#provisionedcontexts)
+    - [purpose](#purpose)
+    - [radio](#radio)
+    - [readyinfo](#readyinfo)
+    - [signal](#signal)
+    - [slotmapping](#slotmapping-1)
+    - [slotstatus](#slotstatus)
+    - [smsconfig](#smsconfig)
+    - [tracing](#tracing-1)
+    - [visibleproviders](#visibleproviders)
 
 ### <a name="acstate"></a>acstate
 

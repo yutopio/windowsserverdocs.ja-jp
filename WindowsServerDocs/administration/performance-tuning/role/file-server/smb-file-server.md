@@ -3,14 +3,14 @@ title: SMB ファイルサーバーのパフォーマンスチューニング
 description: SMB ファイルサーバーのパフォーマンスチューニング
 ms.topic: article
 author: phstee
-ms.author: nedpyle; danlo; dkruse
+ms.author: nedpyle
 ms.date: 4/14/2017
-ms.openlocfilehash: 4a1fd4036e20e4cbb5b137832297daca99e9f5cc
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2515f400f746c5e256a168d191efa842d4ba50fd
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992169"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077209"
 ---
 # <a name="performance-tuning-for-smb-file-servers"></a>SMB ファイルサーバーのパフォーマンスチューニング
 
@@ -19,12 +19,12 @@ ms.locfileid: "87992169"
 
 BIOS およびオペレーティングシステムの電源管理モードが必要に応じて設定されていることを確認します。これには、高パフォーマンスモードまたは C 状態の変更が含まれる場合があります。 最新、回復性、最速の記憶域およびネットワークデバイスドライバーがインストールされていることを確認します。
 
-ファイルのコピーは、ファイルサーバーで実行される一般的な操作です。 Windows Server には、コマンドプロンプトを使用して実行できるいくつかの組み込みファイルコピーユーティリティがあります。 Robocopy をお勧めします。 Windows Server 2008 R2 で導入された **/mt**オプションを使用すると、複数の小さなファイルをコピーするときに複数のスレッドを使用することで、リモートファイル転送の速度を大幅に向上させることができます。 また、 **/log**オプションを使用して、ログを NUL デバイスまたはファイルにリダイレクトすることにより、コンソールの出力を減らすことをお勧めします。 Xcopy を使用する場合は、既存のパラメーターに **/q**オプションと **/k**オプションを追加することをお勧めします。 以前のオプションでは、コンソール出力を減らすことで CPU のオーバーヘッドが削減され、後者ではネットワークトラフィックが減少します。
+ファイルのコピーは、ファイルサーバーで実行される一般的な操作です。 Windows Server には、コマンドプロンプトを使用して実行できるいくつかの組み込みファイルコピーユーティリティがあります。 Robocopy をお勧めします。 Windows Server 2008 R2 で導入された **/mt** オプションを使用すると、複数の小さなファイルをコピーするときに複数のスレッドを使用することで、リモートファイル転送の速度を大幅に向上させることができます。 また、 **/log** オプションを使用して、ログを NUL デバイスまたはファイルにリダイレクトすることにより、コンソールの出力を減らすことをお勧めします。 Xcopy を使用する場合は、既存のパラメーターに **/q** オプションと **/k** オプションを追加することをお勧めします。 以前のオプションでは、コンソール出力を減らすことで CPU のオーバーヘッドが削減され、後者ではネットワークトラフィックが減少します。
 
 ## <a name="smb-performance-tuning"></a>SMB パフォーマンスチューニング
 
 
-ファイルサーバーのパフォーマンスと使用可能なチューニングは、各クライアントとサーバーの間でネゴシエートされる SMB プロトコルと、展開されたファイルサーバーの機能によって異なります。 現在利用可能な最も高いプロトコルバージョンは、Windows Server 2016 と Windows 10 の SMB 3.1.1 です。 クライアントで Windows PowerShell **SMBConnection**を使用して、ネットワークで使用されている SMB のバージョンを確認できます。 **SMBSession |** サーバー上の FL。
+ファイルサーバーのパフォーマンスと使用可能なチューニングは、各クライアントとサーバーの間でネゴシエートされる SMB プロトコルと、展開されたファイルサーバーの機能によって異なります。 現在利用可能な最も高いプロトコルバージョンは、Windows Server 2016 と Windows 10 の SMB 3.1.1 です。 クライアントで Windows PowerShell **SMBConnection** を使用して、ネットワークで使用されている SMB のバージョンを確認できます。 **SMBSession |** サーバー上の FL。
 
 ### <a name="smb-30-protocol-family"></a>SMB 3.0 プロトコルファミリ
 
@@ -52,7 +52,7 @@ SMB マルチチャネルの詳細については、「 [Smb マルチチャネ�
 
 SMB スケールアウトを使用すると、クラスター構成の SMB 3.0 でクラスターのすべてのノードの共有を表示できます。 このアクティブ/アクティブ構成を使用すると、複数のボリューム、共有、およびクラスターリソースを含む複雑な構成を使用せずに、ファイルサーバークラスターをさらに拡張することができます。 最大共有帯域幅は、すべてのファイルサーバークラスターノードの合計帯域幅です。 合計帯域幅は、1つのクラスターノードの帯域幅によって制限されなくなりましたが、その代わりに、バッキングストレージシステムの機能に依存しています。 ノードを追加することで合計の帯域幅を増大することができます。
 
-SMB スケールアウトの詳細については、「[アプリケーションデータの概要」](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11))および「スケール[アウトするため](https://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx)のブログの投稿」 (スケールアウトファイルサーバーを参照してください。
+SMB スケールアウトの詳細については、「 [アプリケーションデータの概要」](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11)) および「スケール [アウトするため](https://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx)のブログの投稿」 (スケールアウトファイルサーバーを参照してください。
 
 ### <a name="performance-counters-for-smb-30"></a>SMB 3.0 のパフォーマンスカウンター
 
@@ -62,7 +62,7 @@ SMB スケールアウトの詳細については、「[アプリケーション
 
     これらのカウンターは、SMB 2.0 以降のバージョンを使用しているクライアントによってアクセスされているサーバー上のファイル共有に関する情報を表示します。
 
-    Windows の通常のディスクカウンターを使い慣れている場合、特定のあくまが発生することがあります。 これは偶然ではありません。 SMB クライアント共有のパフォーマンスカウンターは、ディスクカウンターと正確に一致するように設計されています。 この方法により、現在使用しているアプリケーションディスクのパフォーマンスチューニングに関するガイダンスを簡単に再利用できます。 カウンターマッピングの詳細については、「[共有クライアントパフォーマンスカウンターのブログ](/archive/blogs/josebda/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight)」を参照してください。
+    Windows の通常のディスクカウンターを使い慣れている場合、特定のあくまが発生することがあります。 これは偶然ではありません。 SMB クライアント共有のパフォーマンスカウンターは、ディスクカウンターと正確に一致するように設計されています。 この方法により、現在使用しているアプリケーションディスクのパフォーマンスチューニングに関するガイダンスを簡単に再利用できます。 カウンターマッピングの詳細については、「 [共有クライアントパフォーマンスカウンターのブログ](/archive/blogs/josebda/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight)」を参照してください。
 
 -   **SMB サーバー共有**
 
@@ -84,14 +84,14 @@ SMB スケールアウトの詳細については、「[アプリケーション
 
 -   **物理ディスク、SMB、CSV FS パフォーマンスカウンターの関係**
 
-    物理ディスク、SMB、および CSV FS (ファイルシステム) カウンターの関連の詳細については、次のブログ記事を参照してください。[クラスターの共有ボリュームパフォーマンスカウンター](https://blogs.msdn.com/b/clustering/archive/2014/06/05/10531462.aspx)です。
+    物理ディスク、SMB、および CSV FS (ファイルシステム) カウンターの関連の詳細については、次のブログ記事を参照してください。 [クラスターの共有ボリュームパフォーマンスカウンター](https://blogs.msdn.com/b/clustering/archive/2014/06/05/10531462.aspx)です。
 
 ## <a name="tuning-parameters-for-smb-file-servers"></a>SMB ファイルサーバーのチューニングパラメーター
 
 
 次の REG \_ DWORD レジストリ設定は、SMB ファイルサーバーのパフォーマンスに影響を与える可能性があります。
 
-- **Smb2CreditsMin**と**Smb2CreditsMax**
+- **Smb2CreditsMin** と **Smb2CreditsMax**
 
   ```
   HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\Smb2CreditsMin
@@ -146,7 +146,7 @@ SMB スケールアウトの詳細については、「[アプリケーション
 
 次の設定は、多くの場合に、ファイルサーバーのパフォーマンスに対してコンピューターを最適化することができます。 この設定は、すべてのコンピューターに最適で妥当というわけでありません。 個々の設定を適用する前に、その影響を評価する必要があります。
 
-| パラメーター                       | 値 | 既定 |
+| パラメーター                       | 値 | Default |
 |---------------------------------|-------|---------|
 | AdditionalCriticalWorkerThreads | 64    | 0       |
 | MaxThreadsPerQueue              | 64    | 20      |

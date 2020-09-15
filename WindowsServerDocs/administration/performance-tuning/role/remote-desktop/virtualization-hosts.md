@@ -2,15 +2,15 @@
 title: リモートデスクトップ仮想化ホストのパフォーマンスチューニング
 description: リモートデスクトップ仮想化ホストのパフォーマンスチューニング
 ms.topic: article
-ms.author: hammadbu; vladmis; denisgun
+ms.author: hammadbu
 author: phstee
 ms.date: 10/22/2019
-ms.openlocfilehash: 235dd0209030854f1fc883f52ab41550ab693dc5
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: b9a634ddf8e2f90e3a61db7aad691ea22ec03fed
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992082"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078139"
 ---
 # <a name="performance-tuning-remote-desktop-virtualization-hosts"></a>リモートデスクトップ仮想化ホストのパフォーマンスチューニング
 
@@ -20,7 +20,7 @@ Windows Server では、個人用仮想デスクトップとプールされた�
 
 ## <a name="general-considerations"></a>一般的な考慮事項
 
-### <a name="storage"></a>記憶域
+### <a name="storage"></a>ストレージ
 
 ストレージは、パフォーマンスのボトルネックとなる可能性が高いので、仮想マシンの状態の変更によって生成される i/o 負荷を適切に処理するために、記憶域のサイズを変更することが重要です。 パイロットまたはシミュレーションが不可能な場合は、4つのアクティブな仮想マシン用に1つのディスクスピンドルをプロビジョニングすることをお勧めします。 書き込みパフォーマンスが良好なディスク構成 (RAID 1 + 0 など) を使用します。
 

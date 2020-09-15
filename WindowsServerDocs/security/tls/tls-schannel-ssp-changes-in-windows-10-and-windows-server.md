@@ -2,15 +2,15 @@
 title: TLS (Schannel SSP)
 ms.topic: article
 ms.assetid: ebd3c40c-b4c0-4f6d-a00c-f90eda4691df
-manager: alanth
 author: justinha
+ms.author: Justinha
 ms.date: 05/16/2018
-ms.openlocfilehash: 92a61452d3c22c34bb3251ee2668679068f3a2ad
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 389a5a009320f7a19f5cbf942fe7c86f08f573ac
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989489"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078529"
 ---
 # <a name="tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016"></a>Windows 10 および Windows Server 2016 での TLS (Schannel SSP) の変更点
 
@@ -53,7 +53,7 @@ Windows 10、バージョン1507、および Windows Server 2016 Diffie-hellman 
 
 ### <a name="sch_use_strong_crypto-option-changes"></a>SCH_USE_STRONG_CRYPTO オプションの変更
 
-Windows 10、バージョン1507、および Windows Server 2016 では、 [SCH_USE_STRONG_CRYPTO](/windows/win32/api/schannel/ns-schannel-schannel_cred)オプションによって、NULL、MD5、DES、およびエクスポートの暗号が無効になります。
+Windows 10、バージョン1507、および Windows Server 2016 では、 [SCH_USE_STRONG_CRYPTO](/windows/win32/api/schannel/ns-schannel-schannel_cred) オプションによって、NULL、MD5、DES、およびエクスポートの暗号が無効になります。
 
 ## <a name="elliptical-curve-changes"></a>楕円曲線の変化
 
@@ -83,7 +83,7 @@ Windows 10、バージョン1607、および Windows Server 2016 HTTP.SYS の TL
 
 HKLM\SYSTEM\CurrentControlSet\Control\LSA
 
-CPU コアあたりの最大スレッドプールサイズを指定するには、 **MaxAsyncWorkerThreadsPerCpu**エントリを作成します。
+CPU コアあたりの最大スレッドプールサイズを指定するには、 **MaxAsyncWorkerThreadsPerCpu** エントリを作成します。
 既定では、このエントリはレジストリに存在しません。
 エントリを作成した後、DWORD 値を目的のサイズに変更します。
 構成されていない場合、最大値は CPU コアあたり2スレッドです。
@@ -113,7 +113,7 @@ Windows 10、バージョン1507、および Windows Server 2016 では、セッ
 
 Windows 10、バージョン1507、および Windows Server 2016 では、RFC 7627: Transport Layer Security (TLS) セッションハッシュと拡張マスタシークレット拡張機能のサポートが追加されています。
 
-この変更のため、Windows 10 および Windows Server 2016 では、NCRYPT_SSL_INTERFACE_VERSION_3 をサポートし、この新しいインターフェイスについて説明するために、サードパーティの[CNG SSL プロバイダー](/windows/win32/seccng/cng-ssl-provider-functions)の更新が必要です。
+この変更のため、Windows 10 および Windows Server 2016 では、NCRYPT_SSL_INTERFACE_VERSION_3 をサポートし、この新しいインターフェイスについて説明するために、サードパーティの [CNG SSL プロバイダー](/windows/win32/seccng/cng-ssl-provider-functions) の更新が必要です。
 
 
 ## <a name="ssl-support"></a>SSL のサポート
@@ -125,7 +125,7 @@ Windows 10 バージョン1607および Windows Server 2016 以降では、SSL 2
 
 ## <a name="changes-to-windows-tls-adherence-to-tls-12-requirements-for-connections-with-non-compliant-tls-clients"></a>準拠していない TLS クライアントとの接続に関する Windows TLS 1.2 の要件に対する変更
 
-TLS 1.2 では、クライアントは["signature_algorithms" 拡張機能](https://tools.ietf.org/html/rfc5246#section-7.4.1.4.1)を使用して、署名/ハッシュアルゴリズムペアがデジタル署名 (つまり、サーバー証明書とサーバーキー交換) で使用できることをサーバーに示します。
+TLS 1.2 では、クライアントは ["signature_algorithms" 拡張機能](https://tools.ietf.org/html/rfc5246#section-7.4.1.4.1) を使用して、署名/ハッシュアルゴリズムペアがデジタル署名 (つまり、サーバー証明書とサーバーキー交換) で使用できることをサーバーに示します。
 TLS 1.2 RFC では、サーバー証明書メッセージが "signature_algorithms" 拡張機能を優先する必要もあります。
 
 "クライアントが" signature_algorithms "拡張機能を提供した場合、サーバーによって提供されるすべての証明書は、その拡張機能に表示されるハッシュ/署名アルゴリズムペアによって署名されている必要があります。"

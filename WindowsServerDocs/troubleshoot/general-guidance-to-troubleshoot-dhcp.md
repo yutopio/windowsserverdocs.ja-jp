@@ -1,18 +1,17 @@
 ---
 title: DHCP のトラブルシューティングに関する一般的なガイダンス
 description: この artilce では、DHCP のトラブルシューティングに関する一般的なガイダンスについて説明します。
-ms.service: na
 manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: article
 author: Deland-Han
 ms.author: delhan
-ms.openlocfilehash: 92b76748153f19419733c32c08a24d48e53d5647
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e5550654beb0f303be946358c171f3a1b197ea40
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970049"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078649"
 ---
 # <a name="general-guidance-to-troubleshoot-dhcp"></a>DHCP のトラブルシューティングに関する一般的なガイダンス
 
@@ -20,7 +19,7 @@ ms.locfileid: "87970049"
 
 ## <a name="checklist"></a>チェック リスト
 
-  - 問題が発生し始めた時期
+  - 問題が発生し始めたのはいつですか?
 
   - エラーメッセージはありますか。
 

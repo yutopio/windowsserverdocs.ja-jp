@@ -3,15 +3,16 @@ title: Server Core への修正プログラムの適用
 description: Windows Server の Server Core インストールを更新する方法について説明します。
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 10/17/2017
-ms.openlocfilehash: eb444dd05359f033bec8b45aa9ed53a6ed5096c6
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 7e84d4fa90cc6e95435d2f0e48efd3ac44ccaebe
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87895856"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077749"
 ---
 # <a name="patch-a-server-core-installation"></a>Server Core インストールにパッチを適用する
 
@@ -30,7 +31,7 @@ Windows PowerShell を使用して更新プログラムを表示するには、 
 
 コマンドを実行して更新プログラムを表示するには、 **systeminfo.exe**を実行します。 ツールがシステムを検査する間、しばらく時間がかかることがあります。
 
-また、コマンドラインから**wmic qfe リスト**を実行することもできます。
+また、コマンドラインから **wmic qfe リスト** を実行することもできます。
 
 ## <a name="patch-server-core-automatically-with-windows-update"></a>Windows Update で自動的に Server Core にパッチを適用する
 
@@ -65,11 +66,11 @@ Windows Update が使用可能なすべての更新プログラムを即座に�
 Wuauclt /detectnow
 ```
 
-インストールされる更新プログラムによっては、コンピューターの再起動が必要になる場合があります。ただし、これはシステムから通知されません。 インストールプロセスが完了したかどうかを判断するには、タスクマネージャーを使用して、 **wuauclt.exe**または**信頼さ**れたインストーラプロセスがアクティブに実行されていないことを確認します。 「 [Server Core サーバーにインストールされている更新プログラムを表示](#view-the-updates-installed-on-your-server-core-server)する」の方法を使用して、インストールされている更新プログラムの一覧を確認することもできます。
+インストールされる更新プログラムによっては、コンピューターの再起動が必要になる場合があります。ただし、これはシステムから通知されません。 インストールプロセスが完了したかどうかを判断するには、タスクマネージャーを使用して、 **wuauclt.exe** または **信頼さ** れたインストーラプロセスがアクティブに実行されていないことを確認します。 「 [Server Core サーバーにインストールされている更新プログラムを表示](#view-the-updates-installed-on-your-server-core-server) する」の方法を使用して、インストールされている更新プログラムの一覧を確認することもできます。
 
 ## <a name="patch-the-server-with-wsus"></a>WSUS を使用してサーバーに修正プログラムを適用する
 
-Server Core サーバーがドメインのメンバーである場合は、WSUS サーバーとグループ ポリシーを使用するようにサーバーを構成できます。 詳細については、[グループポリシー参照情報](https://www.microsoft.com/download/details.aspx?id=25250)をダウンロードしてください。 また、[自動更新のグループポリシー設定の構成](../windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates.md)を確認することもできます。
+Server Core サーバーがドメインのメンバーである場合は、WSUS サーバーとグループ ポリシーを使用するようにサーバーを構成できます。 詳細については、 [グループポリシー参照情報](https://www.microsoft.com/download/details.aspx?id=25250)をダウンロードしてください。 また、[自動更新のグループポリシー設定の構成](../windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates.md)を確認することもできます。
 
 ## <a name="patch-the-server-manually"></a>サーバーに手動で修正プログラムを適用する
 

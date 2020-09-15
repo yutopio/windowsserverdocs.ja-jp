@@ -3,15 +3,16 @@ title: Server Core コンテナーに含まれていない役割、役割サー�
 description: Windows Server の Server Core コンテナーイメージから削除した役割と機能について説明します。
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 05/07/2018
-ms.openlocfilehash: 2092e330af479ae0cbdb1da88ba87cf233307b59
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 8b81ae6dc86ad9fd3a8650ca22ba9f3a42af4d3f
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993258"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077859"
 ---
 # <a name="roles-role-services-and-features-not-in-server-core-containers---windows-server-version-1803"></a>Server Core コンテナーに含まれていない役割、役割サービス、および機能-Windows Server、バージョン1803
 
@@ -20,7 +21,7 @@ ms.locfileid: "87993258"
 Windows Server バージョン1803では、 [Server Core コンテナーイメージ全体のサイズが**1.58 GB**に縮小](https://blogs.technet.microsoft.com/virtualization/2018/01/22/a-smaller-windows-server-core-container-with-better-application-compatibility/)されています。 これを行うには、アーキテクチャを最適化し、 [Server Core コンテナー](/virtualization/windowscontainers/about/)で必要のないものを削除します。 コンテナーでは機能しなかったものもあれば、ロールや機能が使用されていないものもあります。
 
 > [!IMPORTANT]
-> Server Core**コンテナー**イメージから削除しました。[サーバーコア自体](server-core-roles-and-services.md)ではありません。
+> Server Core **コンテナー** イメージから削除しました。 [サーバーコア自体](server-core-roles-and-services.md)ではありません。
 
 Server Core コンテナーイメージから削除された機能とロールの完全な一覧を次に示します。
 
@@ -37,7 +38,7 @@ Server Core コンテナーイメージから削除された機能とロール�
 <br>CertificateEnrollmentServer
 <br>すべてのサービス
 <br>ClientForNFS-インフラストラクチャ
-<br>Containers
+<br>コンテナー
 <br>CoreFileServer 場合
 <br>DataCenterBridging-LLDP-Tools
 <br>DataCenterBridging

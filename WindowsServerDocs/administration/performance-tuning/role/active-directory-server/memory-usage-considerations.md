@@ -2,15 +2,15 @@
 title: AD DS パフォーマンスチューニングにおけるメモリ使用量に関する考慮事項
 description: Windows Server 2012 R2、2016、および2019を実行しているドメインコントローラーでの Lsass.exe プロセスによるメモリ使用量。
 ms.topic: article
-ms.author: v-tea; lindakup
+ms.author: v-tea
 author: teresa-motiv
 ms.date: 7/3/2019
-ms.openlocfilehash: 6ad663e77603ca813601345614174afd0dcf0e99
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 546839b803e8306fb3093ade6e317a155b7a117d
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896226"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077279"
 ---
 # <a name="memory-usage-considerations-for-ad-ds-performance-tuning"></a>AD DS パフォーマンスチューニングに関するメモリ使用量に関する考慮事項
 
@@ -38,7 +38,7 @@ DC 上で LSASS が使用するメモリの量は、Active Directory の使用�
 図に示すように、LSASS メモリ使用量は、ESE データベースバッファーキャッシュ、ESE バージョンストアなど、いくつかの部分に分けることができます。 この記事の残りの部分では、これらの各部分について説明します。
 
 ## <a name="ese-database-buffer-cache"></a>ESE データベースバッファーキャッシュ
-LSASS 内の最大可変メモリ使用量は、ESE データベースバッファーキャッシュです。 キャッシュのサイズは、1 MB 未満からデータベース全体のサイズまでの範囲で指定できます。 キャッシュのサイズが大きいとパフォーマンスが向上するため、Active Directory (ESENT) のデータベースエンジンはキャッシュを可能な限り保持しようとします。 キャッシュのサイズはコンピューターのメモリ不足によって異なりますが、ESE データベースバッファーキャッシュの最大サイズは、コンピューターにインストールされている物理 RAM によって*のみ*制限されます。 他にメモリ不足が発生しない限り、Active Directory ntds.dit データベースファイルのサイズにキャッシュが拡張される可能性があります。 キャッシュ可能なデータベースの数が多いほど、DC のパフォーマンスが向上します。
+LSASS 内の最大可変メモリ使用量は、ESE データベースバッファーキャッシュです。 キャッシュのサイズは、1 MB 未満からデータベース全体のサイズまでの範囲で指定できます。 キャッシュのサイズが大きいとパフォーマンスが向上するため、Active Directory (ESENT) のデータベースエンジンはキャッシュを可能な限り保持しようとします。 キャッシュのサイズはコンピューターのメモリ不足によって異なりますが、ESE データベースバッファーキャッシュの最大サイズは、コンピューターにインストールされている物理 RAM によって *のみ* 制限されます。 他にメモリ不足が発生しない限り、Active Directory ntds.dit データベースファイルのサイズにキャッシュが拡張される可能性があります。 キャッシュ可能なデータベースの数が多いほど、DC のパフォーマンスが向上します。
 
 > [!NOTE]
 > データベースキャッシュアルゴリズムの動作は、データベースのサイズが使用可能な RAM よりも小さい64ビットシステムでは、データベースのキャッシュが、データベースのサイズよりも 30 ~ 40% 大きくなる可能性があるためです。
@@ -47,7 +47,7 @@ LSASS 内の最大可変メモリ使用量は、ESE データベースバッフ�
 
 ESE バージョンストア (上の図の赤い部分) によるメモリ使用量が変動しています。 使用されるメモリの量は、Windows Server 2019 以前のバージョンの Windows があるかどうかによって異なります。
 
-- Windows server 2019 の Windows server バージョンでは、既定で LSASS は、ESE バージョンストアの64ビットコンピューター上のメモリの最大 400 MB (Cpu 数によって異なります) を使用する場合があります。 バージョンストアの使用方法の詳細については、「ASKDS」のブログ投稿「ライアン Ries: バージョンストア」を参照してください。[これらはすべて、バケットから除外](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/The-Version-Store-Called-and-They-8217-re-All-Out-of-Buckets/ba-p/400415)されています。
+- Windows server 2019 の Windows server バージョンでは、既定で LSASS は、ESE バージョンストアの64ビットコンピューター上のメモリの最大 400 MB (Cpu 数によって異なります) を使用する場合があります。 バージョンストアの使用方法の詳細については、「ASKDS」のブログ投稿「ライアン Ries: バージョンストア」を参照してください。 [これらはすべて、バケットから除外](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/The-Version-Store-Called-and-They-8217-re-All-Out-of-Buckets/ba-p/400415)されています。
 
 - Windows Server 2019 では、これは簡略化され、NTDS サービスが最初に開始されたときに、ESE バージョンストアのサイズが物理 RAM の10% として計算されるようになりました。最小値は 400 MB、最大値は 4 GB です。 このバージョンおよびバージョンストアのトラブルシューティングの詳細については、「ライアン Ries: [ACTIVE DIRECTORY ESE バージョンストアのサーバー2019の変更点」](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/Deep-Dive-Active-Directory-ESE-Version-Store-Changes-in-Server/ba-p/400510)を参照してください。
 

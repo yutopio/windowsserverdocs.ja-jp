@@ -1,17 +1,17 @@
 ---
 title: 記憶域スペースダイレクトのトラブルシューティング
 description: 記憶域スペースダイレクトのデプロイのトラブルシューティング方法について説明します。
-ms.author: ''
+ms.author: kaushika
 ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 719a44a6c442f64b83a804c9ca20eb6ceaa791e9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 525db4b22e0408847e4a52659d06ecddf5b1df8f
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954609"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078669"
 ---
 # <a name="troubleshoot-storage-spaces-direct"></a>記憶域スペースダイレクトのトラブルシューティング
 
@@ -24,7 +24,7 @@ ms.locfileid: "87954609"
 1. Windows server カタログを使用して、SSD の製造元とモデルが Windows Server 2016 および Windows Server 2019 に対して認定されていることを確認します。 記憶域スペースダイレクトでドライブがサポートされていることをベンダーに確認します。
 2. 記憶域に障害が発生しているドライブがないかどうかを調べます。 記憶域管理ソフトウェアを使用して、ドライブの状態を確認します。 ドライブのいずれかに問題がある場合は、ベンダーと協力してください。
 3. 必要に応じて、記憶域を更新し、ファームウェアをドライブします。
-   すべてのノードに最新の Windows 更新プログラムがインストールされていることを確認します。 Windows Server 2016 の最新の更新プログラムは、windows 10 および windows server [2016 の更新履歴](https://aka.ms/update2016)と、windows [10 および windows server 2019 更新](https://support.microsoft.com/help/4464619)プログラムの履歴から windows server 2019 用に入手できます。
+   すべてのノードに最新の Windows 更新プログラムがインストールされていることを確認します。 Windows Server 2016 の最新の更新プログラムは、windows 10 および windows server [2016 の更新履歴](https://aka.ms/update2016) と、windows [10 および windows server 2019 更新](https://support.microsoft.com/help/4464619)プログラムの履歴から windows server 2019 用に入手できます。
 4. ネットワークアダプターのドライバーとファームウェアを更新します。
 5. クラスター検証を実行し、[記憶域スペースダイレクト] セクションを確認し、キャッシュに使用されるドライブが正しく報告され、エラーが発生していないことを確認します。
 
@@ -35,10 +35,10 @@ ms.locfileid: "87954609"
 
 |FriendlyName|ResiliencySettingName| OperationalStatus| HealthStatus| IsManualAttach|サイズ| PSComputerName|
 |------------|---------------------| -----------------| ------------| --------------|-----| --------------|
-|Disk4| ミラー| [OK]|  Healthy| True|  10 TB|  ノード-01...|
-|Disk3         |ミラー                 |[OK]                          |Healthy       |True            |10 TB | ノード-01...|
-|Disk2         |ミラー                 |冗長性なし               |異常     |True            |10 TB | ノード-01...|
-|Disk1         |ミラー                 |{冗長性なし、InService}  |異常     |True            |10 TB | ノード-01...|
+|Disk4| ミラー| OK|  Healthy| ○|  10 TB|  ノード-01...|
+|Disk3         |ミラー                 |OK                          |Healthy       |○            |10 TB | ノード-01...|
+|Disk2         |ミラー                 |冗長性なし               |Unhealthy     |○            |10 TB | ノード-01...|
+|Disk1         |ミラー                 |{冗長性なし、InService}  |Unhealthy     |○            |10 TB | ノード-01...|
 
 さらに、仮想ディスクをオンラインにしようとすると、次の情報がクラスターログ (DiskRecoveryAction) に記録されます。
 
@@ -48,7 +48,7 @@ ms.locfileid: "87954609"
 [Verbose] 00002904.00001040:: YYYY/MM/DD -12:03:44.891 ERR [RES] Physical Disk <DiskName>: Failing online due to virtual disk in 'no redundancy' state. If you would like to attempt to online the disk anyway, first set this resource's private property 'DiskRecoveryAction' to 1. We will try to bring the disk online for recovery, but even if successful, its volume(s) or CSV may be unavailable.
 ```
 
-ディスクに障害が発生した場合、またはシステムが仮想ディスク上のデータにアクセスできない場合、**冗長性のない操作状態**が発生する可能性があります。 ノードのメンテナンス中にノードで再起動が行われると、この問題が発生する可能性があります。
+ディスクに障害が発生した場合、またはシステムが仮想ディスク上のデータにアクセスできない場合、 **冗長性のない操作状態** が発生する可能性があります。 ノードのメンテナンス中にノードで再起動が行われると、この問題が発生する可能性があります。
 
 この問題を解決するには、次の手順を実行します。
 
@@ -87,21 +87,21 @@ ms.locfileid: "87954609"
    Add-ClusterSharedVolume -name "VdiskName"
    ```
 
-**Diskrecoveryaction**は、チェックを行わずに領域ボリュームを読み取り/書き込みモードでアタッチできる上書きスイッチです。 プロパティを使用すると、ボリュームがオンラインにならない理由について診断を行うことができます。 これはメンテナンスモードによく似ていますが、障害が発生した状態のリソースで呼び出すことができます。 また、データにアクセスすることもできます。これは、"冗長性がありません" などの状況で役立つことがあります。この場合、可能なデータにアクセスしてコピーできます。 DiskRecoveryAction プロパティは、2018年2月22日、更新プログラム、KB 4077525 で追加されました。
+**Diskrecoveryaction** は、チェックを行わずに領域ボリュームを読み取り/書き込みモードでアタッチできる上書きスイッチです。 プロパティを使用すると、ボリュームがオンラインにならない理由について診断を行うことができます。 これはメンテナンスモードによく似ていますが、障害が発生した状態のリソースで呼び出すことができます。 また、データにアクセスすることもできます。これは、"冗長性がありません" などの状況で役立つことがあります。この場合、可能なデータにアクセスしてコピーできます。 DiskRecoveryAction プロパティは、2018年2月22日、更新プログラム、KB 4077525 で追加されました。
 
 
 ## <a name="detached-status-in-a-cluster"></a>クラスターでのデタッチされた状態
 
-**VirtualDisk**コマンドレットを実行すると、1つまたは複数の記憶域スペースダイレクトの仮想ディスクの OperationalStatus が切断されます。 ただし **、HealthStatus コマンドレット**によって報告されるのは、すべての物理ディスクが正常な状態であることを示しています。
+**VirtualDisk**コマンドレットを実行すると、1つまたは複数の記憶域スペースダイレクトの仮想ディスクの OperationalStatus が切断されます。 ただし **、HealthStatus コマンドレット** によって報告されるのは、すべての物理ディスクが正常な状態であることを示しています。
 
 **VirtualDisk**コマンドレットからの出力の例を次に示します。
 
 |FriendlyName|  ResiliencySettingName|  OperationalStatus|   HealthStatus|  IsManualAttach|  サイズ|   PSComputerName|
 |-|-|-|-|-|-|-|
-|Disk4|         ミラー|                 [OK]|                  Healthy|       True|            10 TB|  ノード-01...|
-|Disk3|         ミラー|                 [OK]|                  Healthy|       True|            10 TB|  ノード-01...|
-|Disk2|         ミラー|                 デタッチ|            Unknown|       True|            10 TB|  ノード-01...|
-|Disk1|         ミラー|                 デタッチ|            Unknown|       True|            10 TB|  ノード-01...|
+|Disk4|         ミラー|                 OK|                  Healthy|       ○|            10 TB|  ノード-01...|
+|Disk3|         ミラー|                 OK|                  Healthy|       ○|            10 TB|  ノード-01...|
+|Disk2|         ミラー|                 デタッチ|            Unknown|       ○|            10 TB|  ノード-01...|
+|Disk1|         ミラー|                 デタッチ|            Unknown|       ○|            10 TB|  ノード-01...|
 
 
 さらに、ノードに次のイベントが記録される場合があります。
@@ -148,7 +148,7 @@ DeviceName:
 Volume Name:
 ```
 
-デタッチされた**動作状態**は、ダーティ領域追跡 (DRT) ログがいっぱいになった場合に発生する可能性があります。 記憶域スペースでは、ミラー化されたスペースに対してダーティ領域の追跡 (DRT) を使用して、電源障害が発生したときに、記憶域スペースが復元操作を再実行または元に戻して、停電やシステムが復旧したときに記憶域スペースを柔軟かつ一貫した状態に戻すことができるようにします。 DRT ログがいっぱいになった場合、DRT メタデータが同期されてフラッシュされるまで、仮想ディスクをオンラインにすることはできません。 このプロセスではフルスキャンを実行する必要がありますが、完了するまでに数時間かかることがあります。
+デタッチされた **動作状態** は、ダーティ領域追跡 (DRT) ログがいっぱいになった場合に発生する可能性があります。 記憶域スペースでは、ミラー化されたスペースに対してダーティ領域の追跡 (DRT) を使用して、電源障害が発生したときに、記憶域スペースが復元操作を再実行または元に戻して、停電やシステムが復旧したときに記憶域スペースを柔軟かつ一貫した状態に戻すことができるようにします。 DRT ログがいっぱいになった場合、DRT メタデータが同期されてフラッシュされるまで、仮想ディスクをオンラインにすることはできません。 このプロセスではフルスキャンを実行する必要がありますが、完了するまでに数時間かかることがあります。
 
 この問題を解決するには、次の手順を実行します。
 1. 影響を受けた仮想ディスクを CSV から削除します。
@@ -194,18 +194,18 @@ Volume Name:
    ```powershell
    Add-ClusterSharedVolume -name "VdiskName"
    ```
-   **Diskrunchkdsk 値 7**を使用して、領域ボリュームをアタッチし、パーティションを読み取り専用モードにします。 これにより、修復をトリガーすることによって、スペースを自己検出し、自己回復することができます。 修復は、マウントされると自動的に実行されます。 また、データにアクセスすることもできます。これは、コピーできるあらゆるデータにアクセスするのに役立ちます。 完全な DRT ログなどの一部のエラー状態では、スケジュールされたクラッシュ復旧タスクのデータ整合性スキャンを実行する必要があります。
+   **Diskrunchkdsk 値 7** を使用して、領域ボリュームをアタッチし、パーティションを読み取り専用モードにします。 これにより、修復をトリガーすることによって、スペースを自己検出し、自己回復することができます。 修復は、マウントされると自動的に実行されます。 また、データにアクセスすることもできます。これは、コピーできるあらゆるデータにアクセスするのに役立ちます。 完全な DRT ログなどの一部のエラー状態では、スケジュールされたクラッシュ復旧タスクのデータ整合性スキャンを実行する必要があります。
 
-**クラッシュ回復タスクのデータ整合性スキャン**は、完全なダーティリージョン追跡 (DRT) ログの同期と消去に使用されます。 このタスクの完了には数時間かかることがあります。 "クラッシュ回復のデータ整合性スキャン" は、記憶域ジョブとして表示されないタスクであり、進行状況インジケーターはありません。 タスクが実行中であると表示されている場合は、実行されています。 完了すると、完了として表示されます。 このタスクの実行中にタスクをキャンセルするか、ノードを再起動する場合、タスクは最初からやり直す必要があります。
+**クラッシュ回復タスクのデータ整合性スキャン** は、完全なダーティリージョン追跡 (DRT) ログの同期と消去に使用されます。 このタスクの完了には数時間かかることがあります。 "クラッシュ回復のデータ整合性スキャン" は、記憶域ジョブとして表示されないタスクであり、進行状況インジケーターはありません。 タスクが実行中であると表示されている場合は、実行されています。 完了すると、完了として表示されます。 このタスクの実行中にタスクをキャンセルするか、ノードを再起動する場合、タスクは最初からやり直す必要があります。
 
-詳細については、「[記憶域スペースダイレクトの正常性と動作状態のトラブルシューティング](storage-spaces-states.md)」を参照してください。
+詳細については、「 [記憶域スペースダイレクトの正常性と動作状態のトラブルシューティング](storage-spaces-states.md)」を参照してください。
 
 ## <a name="event-5120-with-status_io_timeout-c00000b5"></a>STATUS_IO_TIMEOUT c00000b5 のイベント5120
 
 > [!Important]
 > **Windows Server 2016 の場合:** 修正プログラムを適用している間にこのような現象が発生する可能性を減らすために、以下のストレージメンテナンスモードの手順を使用して、2018年5月[2018 8](https://support.microsoft.com/help/4103723)日から[10 月 2018 9](https://support.microsoft.com/help/KB4462917)日にリリースされた windows server 2016 の累積的な更新プログラムがノードにインストールされている場合に、 [windows server 2016 以降の累積的な更新プログラム](https://support.microsoft.com/help/4462928)
 
-Windows Server 2016 上のノードを再起動した後、5120年5月8日から[2018 kb 4103723](https://support.microsoft.com/help/4103723)から[10 月9日の 2018 kb](https://support.microsoft.com/help/4462917) c00000b5 にリリースされた累積的な更新プログラムを使用して、イベント STATUS_IO_TIMEOUT を受け取る場合があります。
+Windows Server 2016 上のノードを再起動した後、5120年5月8日から [2018 kb 4103723](https://support.microsoft.com/help/4103723) から [10 月9日の 2018 kb](https://support.microsoft.com/help/4462917) c00000b5 にリリースされた累積的な更新プログラムを使用して、イベント STATUS_IO_TIMEOUT を受け取る場合があります。
 
 ノードを再起動すると、イベント5120がシステムイベントログに記録され、次のいずれかのエラーコードが表示されます。
 
@@ -225,9 +225,9 @@ Event ID: 1135
 Description: Cluster node 'NODENAME'was removed from the active failover cluster membership. The Cluster service on this node may have stopped. This could also be due to the node having lost communication with other active nodes in the failover cluster. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapters on this node. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 ```
 
-2018年5月8で導入された変更は、クラスター内 SMB ネットワークセッション記憶域スペースダイレクトの SMB 弾性ハンドルを追加するための累積的な更新プログラムである Windows Server 2016 です。 これは、一時的なネットワーク障害に対する回復性を向上させ、RoCE がネットワークの輻輳を処理する方法を改善するために行われました。 また、これらの機能強化により、SMB 接続の再接続が試行され、ノードの再起動時のタイムアウトを待機したときに、タイムアウトが大幅に増加しました。 これらの問題は、負荷がかかっているシステムに影響を与える可能性があります。 予定外のダウンタイム時には、システムがタイムアウトへの接続を待機している間、最大60秒の IO が一時停止されています。この問題を解決するには、 [2018 年10月18日の累積的な更新プログラム (Windows Server 2016 以降の](https://support.microsoft.com/help/4462928)バージョン) をインストールします。
+2018年5月8で導入された変更は、クラスター内 SMB ネットワークセッション記憶域スペースダイレクトの SMB 弾性ハンドルを追加するための累積的な更新プログラムである Windows Server 2016 です。 これは、一時的なネットワーク障害に対する回復性を向上させ、RoCE がネットワークの輻輳を処理する方法を改善するために行われました。 また、これらの機能強化により、SMB 接続の再接続が試行され、ノードの再起動時のタイムアウトを待機したときに、タイムアウトが大幅に増加しました。 これらの問題は、負荷がかかっているシステムに影響を与える可能性があります。 予定外のダウンタイム時には、システムがタイムアウトへの接続を待機している間、最大60秒の IO が一時停止されています。この問題を解決するには、 [2018 年10月18日の累積的な更新プログラム (Windows Server 2016 以降の](https://support.microsoft.com/help/4462928) バージョン) をインストールします。
 
-*メモ*この更新では、CSV タイムアウトと SMB 接続タイムアウトを整合させることで、この問題を解決します。 「回避策」セクションで説明したライブダンプ生成を無効にする変更は実装されていません。
+*メモ* この更新では、CSV タイムアウトと SMB 接続タイムアウトを整合させることで、この問題を解決します。 「回避策」セクションで説明したライブダンプ生成を無効にする変更は実装されていません。
 
 ### <a name="shutdown-process-flow"></a>シャットダウンプロセスフロー:
 
@@ -243,7 +243,7 @@ Description: Cluster node 'NODENAME'was removed from the active failover cluster
    Get-StorageFaultDomain -type StorageScaleUnit | Where-Object {$_.FriendlyName -eq "<NodeName>"} | Enable-StorageMaintenanceMode
    ```
 4. **Get PhysicalDisk**コマンドレットを実行し、OperationalStatus 値がメンテナンスモードであることを確認します。
-5. コンピューターの**再**起動コマンドレットを実行して、ノードを再起動します。
+5. コンピューターの **再** 起動コマンドレットを実行して、ノードを再起動します。
 6. ノードが再起動した後、次のコマンドレットを実行して、そのノードのディスクをストレージメンテナンスモードから削除します。
 
    ```powershell
@@ -272,7 +272,7 @@ Description: Cluster node 'NODENAME'was removed from the active failover cluster
 ライブダンプシステム全体を含め、すべてのダンプを完全に無効にするには、次の手順を実行します。
 
 1. 次のレジストリキーを作成します: HKLM\System\CurrentControlSet\Control\CrashControl\ForceDumpsDisabled
-2. 新しい**ForceDumpsDisabled**キーの下に、"GuardedHost" として REG_DWORD プロパティを作成し、その値を0x10000000 に設定します。
+2. 新しい **ForceDumpsDisabled** キーの下に、"GuardedHost" として REG_DWORD プロパティを作成し、その値を0x10000000 に設定します。
 3. 各クラスターノードに新しいレジストリキーを適用します。
 
 >[!NOTE]
@@ -289,7 +289,7 @@ reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelR
 reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelReports" /v ComponentThrottleThreshold /t REG_DWORD /d 0xFFFFFFFF /f
 ```
 
-*メモ*変更を有効にするには、コンピューターを再起動する必要があります。
+*メモ* 変更を有効にするには、コンピューターを再起動する必要があります。
 
 ### <a name="method-3"></a>方法3
 ライブダンプのクラスター生成を無効にするには (イベント5120がログに記録されたときなど)、次のコマンドレットを実行します。
@@ -330,30 +330,30 @@ IO パフォーマンスの低下が見られる場合は、記憶域スペー�
     2. "Ipmo ストレージ" の実行
     3. "$d" を実行します。 使用法は自動選択であり、Journal ではなく、次のような出力が表示されることに注意してください。
 
-   |FriendlyName|  SerialNumber| MediaType| CanPool| OperationalStatus| HealthStatus| 使用方法| サイズ|
+   |FriendlyName|  SerialNumber| MediaType| CanPool| OperationalStatus| HealthStatus| 使用法| サイズ|
    |-----------|------------|---------| -------| -----------------| ------------| -----| ----|
-   |NVMe INTEL SSDPE7KX02| PHLF733000372P0LGN| SSD| False|   [OK]|                Healthy|      1.82 TB を自動選択|
-   |NVMe INTEL SSDPE7KX02 |PHLF7504008J2P0LGN| SSD|  False|    [OK]|                Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02| PHLF7504005F2P0LGN| SSD|  False|  [OK]|                Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02 |PHLF7504002A2P0LGN| SSD| False| [OK]|    Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02| PHLF7504004T2P0LGN |SSD| False|[OK]|       Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02 |PHLF7504002E2P0LGN| SSD| False| [OK]|      Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02 |PHLF7330002Z2P0LGN| SSD| False| [OK]|      Healthy|自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02 |PHLF733000272P0LGN |SSD| False| [OK]|  Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02 |PHLF7330001J2P0LGN |SSD| False| [OK]| Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02| PHLF733000302P0LGN |SSD| False| [OK]|Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02| PHLF7330004D2P0LGN |SSD| False| [OK]| Healthy| 自動選択 |1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF733000372P0LGN| SSD| ×|   OK|                Healthy|      1.82 TB を自動選択|
+   |NVMe INTEL SSDPE7KX02 |PHLF7504008J2P0LGN| SSD|  ×|    OK|                Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF7504005F2P0LGN| SSD|  ×|  OK|                Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02 |PHLF7504002A2P0LGN| SSD| ×| OK|    Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF7504004T2P0LGN |SSD| ×|OK|       Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02 |PHLF7504002E2P0LGN| SSD| ×| OK|      Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02 |PHLF7330002Z2P0LGN| SSD| ×| OK|      Healthy|自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02 |PHLF733000272P0LGN |SSD| ×| OK|  Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02 |PHLF7330001J2P0LGN |SSD| ×| OK| Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF733000302P0LGN |SSD| ×| OK|Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF7330004D2P0LGN |SSD| ×| OK| Healthy| 自動選択 |1.82 TB|
 
 ## <a name="how-to-destroy-an-existing-cluster-so-you-can-use-the-same-disks-again"></a>同じディスクを再び使用できるように既存のクラスターを破棄する方法
 
-記憶域スペースダイレクトクラスターでは、記憶域スペースダイレクトを無効にして[クリーンドライブ](deploy-storage-spaces-direct.md#step-31-clean-drives)に記載されているクリーンアッププロセスを使用すると、クラスター化された記憶域プールは依然としてオフライン状態のままで、ヘルスサービスはクラスターから削除されます。
+記憶域スペースダイレクトクラスターでは、記憶域スペースダイレクトを無効にして [クリーンドライブ](deploy-storage-spaces-direct.md#step-31-clean-drives)に記載されているクリーンアッププロセスを使用すると、クラスター化された記憶域プールは依然としてオフライン状態のままで、ヘルスサービスはクラスターから削除されます。
 
 次の手順では、ファントム記憶域プールを削除します。
    ```powershell
    Get-ClusterResource -Name "Cluster Pool 1" | Remove-ClusterResource
    ```
 
-これで、いずれかのノードで**Get-PhysicalDisk**を実行すると、プール内にあったすべてのディスクが表示されます。 たとえば、4つの SAS ディスクを搭載した4ノードクラスターを備えたラボでは、各ノードに 100 GB が表示されます。 この場合、記憶域スペースダイレクトを無効にすると、SBL (記憶域バスレイヤー) が削除されますが、フィルターは解除されます。この場合、 **Get PhysicalDisk**を実行すると、ローカル OS ディスクを除く4つのディスクを報告する必要があります。 代わりに、16を報告しました。 これは、クラスター内のすべてのノードで同じです。 **Get Disk**コマンドを実行すると、次のサンプル出力に示すように、ローカルに接続されているディスクの番号が0、1、2などになります。
+これで、いずれかのノードで **Get-PhysicalDisk** を実行すると、プール内にあったすべてのディスクが表示されます。 たとえば、4つの SAS ディスクを搭載した4ノードクラスターを備えたラボでは、各ノードに 100 GB が表示されます。 この場合、記憶域スペースダイレクトを無効にすると、SBL (記憶域バスレイヤー) が削除されますが、フィルターは解除されます。この場合、 **Get PhysicalDisk**を実行すると、ローカル OS ディスクを除く4つのディスクを報告する必要があります。 代わりに、16を報告しました。 これは、クラスター内のすべてのノードで同じです。 **Get Disk**コマンドを実行すると、次のサンプル出力に示すように、ローカルに接続されているディスクの番号が0、1、2などになります。
 
 |Number| フレンドリ名| シリアル番号|HealthStatus|OperationalStatus|総サイズ| パーティションの形式|
 |-|-|-|-|-|-|-|-|
@@ -389,19 +389,19 @@ IO パフォーマンスの低下が見られる場合は、記憶域スペー�
 
 `<identifier>`ノードに接続されたディスク `<nodename>` が SCSI ポートの関連付けを返しましたが、対応するエンクロージャデバイスが見つかりませんでした。 ハードウェアが記憶域スペースダイレクト (S2D) と互換性がない場合は、ハードウェアの製造元に問い合わせて、SCSI エンクロージャサービス (SES) のサポートを確認してください。
 
-この問題は、ディスクと HBA カードの間にある HPE SAS エクスパンダーカードを使用しています。 SAS エクスパンダーは、エキスパンダーに接続されている最初のドライブとエキスパンダー自体の間に重複する ID を作成します。  これは[Hpe Smart Array CONTROLLER SAS エクスパンダーファームウェア: 4.02](https://support.hpe.com/hpsc/swd/public/detail?sp4ts.oid=7304566&swItemId=MTX_ef8d0bf4006542e194854eea6a&swEnvOid=4184#tab3)で解決されました。
+この問題は、ディスクと HBA カードの間にある HPE SAS エクスパンダーカードを使用しています。 SAS エクスパンダーは、エキスパンダーに接続されている最初のドライブとエキスパンダー自体の間に重複する ID を作成します。  これは [Hpe Smart Array CONTROLLER SAS エクスパンダーファームウェア: 4.02](https://support.hpe.com/hpsc/swd/public/detail?sp4ts.oid=7304566&swItemId=MTX_ef8d0bf4006542e194854eea6a&swEnvOid=4184#tab3)で解決されました。
 
 ## <a name="intel-ssd-dc-p4600-series-has-a-non-unique-nguid"></a>Intel SSD DC P4600 シリーズには一意ではない n があります。
 Intel SSD DC P4600 シリーズデバイスが、次の例のように、0100000001000000E4D25C000014E214 や0100000001000000E4D25C0000EEE214 などの複数の名前空間について、同様の16バイトを報告していると思われる問題が発生する可能性があります。
 
 
-|               uniqueid               | deviceid | MediaType | BusType |               serialnumber               |      size      | canpool | フレンドリ | OperationalStatus |
+|               uniqueid               | deviceid | MediaType | BusType |               serialnumber               |      サイズ      | canpool | フレンドリ | OperationalStatus |
 |--------------------------------------|----------|-----------|---------|------------------------------------------|----------------|---------|--------------|-------------------|
-|           5000CCA251D12E30           |    0     |    HDD    |   SAS   |                 7PKR197G                 | 10000831348736 |  False  |     HGST     |  HUH721010AL4200  |
-| 0100000001000000E4D25C000014E214 |    4     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214。 | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
-| 0100000001000000E4D25C000014E214 |    5     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214。 | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
-| 0100000001000000E4D25C0000EEE214 |    6     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214。 | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
-| 0100000001000000E4D25C0000EEE214 |    7     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214。 | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
+|           5000CCA251D12E30           |    0     |    HDD    |   SAS   |                 7PKR197G                 | 10000831348736 |  ×  |     HGST     |  HUH721010AL4200  |
+| 0100000001000000E4D25C000014E214 |    4     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214。 | 1600321314816  |  ○   |    INTEL     |   SSDPE2KE016T7   |
+| 0100000001000000E4D25C000014E214 |    5     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214。 | 1600321314816  |  ○   |    INTEL     |   SSDPE2KE016T7   |
+| 0100000001000000E4D25C0000EEE214 |    6     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214。 | 1600321314816  |  ○   |    INTEL     |   SSDPE2KE016T7   |
+| 0100000001000000E4D25C0000EEE214 |    7     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214。 | 1600321314816  |  ○   |    INTEL     |   SSDPE2KE016T7   |
 
 この問題を解決するには、Intel ドライブのファームウェアを最新バージョンに更新します。  2018年5月のファームウェアバージョン QDV101B1 は、この問題を解決することがわかっています。
 
@@ -412,14 +412,14 @@ Intel SSD DC P4600 シリーズデバイスが、次の例のように、0100000
 
 Windows Server 2016 記憶域スペースダイレクトクラスターでは、1つ以上の物理ディスクの HealthStatus が "健全" と表示されることがあります。一方、OperationalStatus は "(プールから削除, OK)" です。
 
-"プールからの削除" は、 **remove-PhysicalDisk**が呼び出されて状態を維持するために正常性に格納され、削除操作が失敗した場合に回復を許可する場合に設定されます。 次のいずれかの方法を使用して、OperationalStatus を手動で健全に変更できます。
+"プールからの削除" は、 **remove-PhysicalDisk** が呼び出されて状態を維持するために正常性に格納され、削除操作が失敗した場合に回復を許可する場合に設定されます。 次のいずれかの方法を使用して、OperationalStatus を手動で健全に変更できます。
 
 - 物理ディスクをプールから削除してから、もう一度追加してください。
 - [Clear-PhysicalDiskHealthData.ps1 スクリプト](https://go.microsoft.com/fwlink/?linkid=2034205)を実行して目的をクリアします。 (としてダウンロードできます。TXT ファイル。 これをとして保存する必要があります。PS1 ファイルを実行する前に実行してください)。
 
 スクリプトの実行方法を示すいくつかの例を次に示します。
 
-- "健全" に設定する必要があるディスクを指定するには、[**シリアル**状態のパラメーターを使用します。 シリアル番号は、 **WMI MSFT_PhysicalDisk**または **-PhysicalDisk**から取得できます。 (以下のシリアル番号には0を使用しています)。
+- "健全" に設定する必要があるディスクを指定するには、[ **シリアル** 状態のパラメーターを使用します。 シリアル番号は、 **WMI MSFT_PhysicalDisk** または **-PhysicalDisk**から取得できます。 (以下のシリアル番号には0を使用しています)。
 
    ```powershell
    Clear-PhysicalDiskHealthData -Intent -Policy -SerialNumber 000000000000000 -Verbose -Force
@@ -449,7 +449,7 @@ Event ID 205: Windows lost communication with physical disk {XXXXXXXXXXXXXXXXXXX
 Event ID 203: Windows lost communication with physical disk {xxxxxxxxxxxxxxxxxxxxxxxx }. This can occur if a cable failed or was disconnected, or if the disk itself failed.
 ```
 
-Azure Vm を実行している場合は、このイベントを無視してもかまいません。`Event ID 32: The driver detected that the device \Device\Harddisk5\DR5 has its write cache enabled. Data corruption may occur.`
+Azure Vm を実行している場合は、このイベントを無視してもかまいません。 `Event ID 32: The driver detected that the device \Device\Harddisk5\DR5 has its write cache enabled. Data corruption may occur.`
 
 ## <a name="slow-performance-or-lost-communication-io-error-detached-or-no-redundancy-errors-for-deployments-that-use-intel-p3x00-nvme-devices"></a>Intel P3x00 NVMe デバイスを使用する展開で、パフォーマンスが低下したり、"通信が失われました"、"IO エラー"、"切断されました"、"冗長性がありません" エラーが発生する
 
@@ -458,4 +458,4 @@ Azure Vm を実行している場合は、このイベントを無視しても�
 >[!NOTE]
 > 個々の Oem は、固有のファームウェアバージョン文字列を使用して、Intel P3x00 ファミリの NVMe デバイスをベースとするデバイスを持つことができます。 最新のファームウェアバージョンの詳細については、OEM にお問い合わせください。
 
-デバイスの Intel P3x00 ファミリに基づくハードウェアを展開で使用している場合は、すぐに利用可能な最新のファームウェアを適用することをお勧めします (少なくともメンテナンスリリース 8)。 この[Microsoft サポートの記事](https://support.microsoft.com/help/4052341/slow-performance-or-lost-communication-io-error-detached-or-no-redunda)では、この問題に関する追加情報を提供します。
+デバイスの Intel P3x00 ファミリに基づくハードウェアを展開で使用している場合は、すぐに利用可能な最新のファームウェアを適用することをお勧めします (少なくともメンテナンスリリース 8)。 この [Microsoft サポートの記事](https://support.microsoft.com/help/4052341/slow-performance-or-lost-communication-io-error-detached-or-no-redunda) では、この問題に関する追加情報を提供します。

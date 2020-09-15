@@ -7,13 +7,13 @@ manager: mtillman
 ms.assetid: a14bc870-9fad-45ed-acd5-a90ccd432e54
 ms.topic: get-started-article
 ms.date: 09/01/2016
-ms.author: anandy;billmath
-ms.openlocfilehash: 1beb08cc3a135f034ce5493d7e7360680dbeef9a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.author: billmath
+ms.openlocfilehash: 9ce16db4a50fbb31c8454b085a6d0471ebbdf32c
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940929"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078659"
 ---
 # <a name="high-availability-cross-geographic-ad-fs-deployment-in-azure-with-azure-traffic-manager"></a>Azure Traffic Manager を使用した Azure への可用性に優れた地域間 AD FS デプロイ
 [Azure への AD FS のデプロイ](how-to-connect-fed-azure-adfs.md) 」では、組織の簡単な AD FS インフラストラクチャを Azure にデプロイする方法について、詳細なガイドラインを示しています。 この記事では、その次の手順として、 [Azure Traffic Manager](/azure/traffic-manager/)を使用して Azure で AD FS の地域間デプロイを作成する手順について説明します。 Azure Traffic Manager を使用すると、インフラストラクチャのさまざまなニーズに合わせて使用可能な各種ルーティング方法を利用して、地理的に分散し、高い可用性とパフォーマンスを誇る AD FS インフラストラクチャを組織向けに作成できます。
@@ -53,7 +53,7 @@ ms.locfileid: "87940929"
     ![Traffic Manager profile creation](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/trafficmanager01.png)
 2. **トラフィック ルーティング方法:** Traffic Manager では、次の 3 つのルーティング オプションを使用できます。
 
-   * Priority
+   * 優先度
    * パフォーマンス
    * 重み付け
 

@@ -2,15 +2,15 @@
 title: Hyper-v プロセッサのパフォーマンス
 description: Hyper-v のパフォーマンスチューニングにおけるプロセッサのパフォーマンスに関する考慮事項
 ms.topic: article
-ms.author: asmahi; sandysp; jopoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: ba426a2a4db853dbd91180fcceed6807726efbf8
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 4691f71b98cbbe0993a6e837f5d13b4b5c5a21b6
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992101"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078230"
 ---
 # <a name="hyper-v-processor-performance"></a>Hyper-v プロセッサのパフォーマンス
 
@@ -47,7 +47,7 @@ Windows Server 2016 の hyper-v は、仮想マシンあたり最大240の仮想
 
 -   仮想マシンのサムネイルは常に更新されるため、Hyper-v マネージャーを実行したままにしないでください。
 
-次に、仮想マシンで*クライアントバージョン*の Windows を構成して全体的な CPU 使用率を削減するための追加のベストプラクティスを示します。
+次に、仮想マシンで *クライアントバージョン* の Windows を構成して全体的な CPU 使用率を削減するための追加のベストプラクティスを示します。
 
 -   SuperFetch や Windows Search などのバックグラウンドサービスを無効にします。
 

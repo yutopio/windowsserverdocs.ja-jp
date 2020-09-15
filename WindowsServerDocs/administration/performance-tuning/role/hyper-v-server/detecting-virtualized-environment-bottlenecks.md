@@ -2,15 +2,15 @@
 title: 仮想化環境のボトルネックの検出
 description: Hyper-v のパフォーマンスに関する潜在的なボトルネックを検出して解決する方法
 ms.topic: article
-ms.author: asmahi; sandysp; jopoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 049df52033d637409a73400616b596037f9d7976
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: cc072d51623d53539bcf27dfaf950e4ba1621e71
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896136"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077249"
 ---
 # <a name="detecting-bottlenecks-in-a-virtualized-environment"></a>仮想化環境のボトルネックの検出
 
@@ -72,9 +72,9 @@ ms.locfileid: "87896136"
 
 -   \\使用可能なメモリ (mb)
 
-使用** \\ 可能**なメモリ (Mb **) と hyper-v 動的メモリバランサー ( \* ) の \\ 使用可能なメモリ**カウンターがホストで低い場合は、重要ではないサービスを停止し、1つまたは複数の仮想マシンを別のホストに移行する必要があります。
+使用 ** \\ 可能** なメモリ (Mb **) と hyper-v 動的メモリバランサー ( \* ) の \\ 使用可能なメモリ** カウンターがホストで低い場合は、重要ではないサービスを停止し、1つまたは複数の仮想マシンを別のホストに移行する必要があります。
 
-仮想マシン**で \\ 使用可能なメモリ (mb** ) カウンターが不足している場合は、仮想マシンにより多くのメモリを割り当てる必要があります。 動的メモリを使用する場合は、[最大メモリ] 設定を増やす必要があります。
+仮想マシン **で \\ 使用可能なメモリ (mb** ) カウンターが不足している場合は、仮想マシンにより多くのメモリを割り当てる必要があります。 動的メモリを使用する場合は、[最大メモリ] 設定を増やす必要があります。
 
 ## <a name="network-bottlenecks"></a>ネットワークのボトルネック
 

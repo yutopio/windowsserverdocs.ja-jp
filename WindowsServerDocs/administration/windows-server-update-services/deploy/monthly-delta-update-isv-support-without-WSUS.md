@@ -2,16 +2,16 @@
 title: WSUS を使用しない毎月の差分更新 ISV のサポート
 description: Windows Server Update Service (WSUS) のトピック - 独立系ソフトウェア ベンダー (ISV) が WSUS Express 更新プログラム配信ではなく毎月の差分更新プログラムを一時的に使用してパッケージ サイズを小さくする方法
 ms.topic: get-started article
-author: sakitong
-ms.author: coreyp
-manager: dougkim
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 103e52d140ee70ff2ee6ac7817371c9b80d037ca
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2b983b06a9f8bf4c2a6d5c72aef13689a72b3684
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990996"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89624470"
 ---
 # <a name="monthly-delta-update-isv-support-without-wsus"></a>WSUS を使用しない毎月の差分更新 ISV のサポート
 

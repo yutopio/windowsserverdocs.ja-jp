@@ -2,15 +2,15 @@
 title: ドメインに参加しているデバイスの公開キー認証
 ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
-manager: alanth
-author: michikos
+author: justinha
+ms.author: Justinha
 ms.date: 08/18/2017
-ms.openlocfilehash: 37710710bc301173503450a46fc1ccc2b0614cf4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d9603cde90ca4a689d6d5993c8e131ba5a2e7d40
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943952"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077599"
 ---
 # <a name="domain-joined-device-public-key-authentication"></a>ドメインに参加しているデバイスの公開キー認証
 
@@ -33,10 +33,10 @@ Credential Guard が使用できず、TPM がの場合は、公開キーと秘�
 Windows が起動すると、そのコンピューターアカウントに公開キーがプロビジョニングされているかどうかを確認します。 そうでない場合は、バインドされた公開キーを生成し、Windows Server 2016 以降の DC を使用して AD のアカウント用に構成します。 すべての Dc がダウンレベルの場合、キーはプロビジョニングされません。
 
 ### <a name="configuring-device-to-only-use-public-key"></a>公開キーのみを使用するようにデバイスを構成する
-[**証明書を使用したデバイス認証のサポート**をグループポリシー設定] が [**強制**] に設定されている場合、デバイスは、Windows Server 2016 以降を実行している DC を認証する必要があります。 この設定は、[管理用テンプレート > システム > Kerberos] の下にあります。
+[ **証明書を使用したデバイス認証のサポート** をグループポリシー設定] が [ **強制**] に設定されている場合、デバイスは、Windows Server 2016 以降を実行している DC を認証する必要があります。 この設定は、[管理用テンプレート > システム > Kerberos] の下にあります。
 
 ### <a name="configuring-device-to-only-use-password"></a>パスワードのみを使用するようにデバイスを構成する
-[**証明書を使用したデバイス認証のサポート**をグループポリシー設定] が無効になっている場合は、常にパスワードが使用されます。 この設定は、[管理用テンプレート > システム > Kerberos] の下にあります。
+[ **証明書を使用したデバイス認証のサポート** をグループポリシー設定] が無効になっている場合は、常にパスワードが使用されます。 この設定は、[管理用テンプレート > システム > Kerberos] の下にあります。
 
 ## <a name="domain-joined-device-authentication-using-public-key"></a>公開キーを使用した、ドメインに参加しているデバイスの認証
 Windows がドメインに参加しているデバイス用の証明書を持っている場合、Kerberos はまず、証明書を使用して認証を行い、パスワードを使用して失敗したときに再試行します。 これにより、デバイスはダウンレベルの Dc に対して認証を行うことができます。

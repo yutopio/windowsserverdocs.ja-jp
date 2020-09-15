@@ -2,26 +2,26 @@
 title: での LDAP に関する考慮事項によるパフォーマンスチューニングの追加
 description: Active Directory ワークロードでの LDAP に関する考慮事項
 ms.topic: article
-ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
+ms.author: timwi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 779175a4e1e42bae5f40aa4d4d8495ac7803c655
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: dec345b872b6a87d7d0a1414aef6fe9b6da39cc5
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992257"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077361"
 ---
 # <a name="ldap-considerations-in-adds-performance-tuning"></a>での LDAP に関する考慮事項によるパフォーマンスチューニングの追加
 
 > [!IMPORTANT]
-> 以下は、 [Active Directory Domain Services の容量計画](https://go.microsoft.com/fwlink/?LinkId=324566)に関する記事で詳しく説明されている Active Directory ワークロードのために、サーバーハードウェアを最適化するための主な推奨事項と考慮事項の概要を示しています。 リーダーは、 [Active Directory Domain Services のキャパシティプランニング](https://go.microsoft.com/fwlink/?LinkId=324566)を検討して、これらの推奨事項に関する技術的な理解と影響を高めます。
+> 以下は、 [Active Directory Domain Services の容量計画](https://go.microsoft.com/fwlink/?LinkId=324566) に関する記事で詳しく説明されている Active Directory ワークロードのために、サーバーハードウェアを最適化するための主な推奨事項と考慮事項の概要を示しています。 リーダーは、 [Active Directory Domain Services のキャパシティプランニング](https://go.microsoft.com/fwlink/?LinkId=324566) を検討して、これらの推奨事項に関する技術的な理解と影響を高めます。
 
 ## <a name="verify-ldap-queries"></a>LDAP クエリの検証
 
 LDAP クエリが効率的なクエリの作成に関する推奨事項に準拠していることを確認します。
 
-Active Directory に対して使用するクエリを適切に記述、構築、および分析する方法については、MSDN の幅広いドキュメントを参照してください。 詳細については、「[より効率的な Microsoft Active Directory 対応アプリケーションの作成](/previous-versions/ms808539(v=msdn.10))」を参照してください。
+Active Directory に対して使用するクエリを適切に記述、構築、および分析する方法については、MSDN の幅広いドキュメントを参照してください。 詳細については、「 [より効率的な Microsoft Active Directory 対応アプリケーションの作成](/previous-versions/ms808539(v=msdn.10))」を参照してください。
 
 ## <a name="optimize-ldap-page-sizes"></a>LDAP ページサイズの最適化
 
@@ -45,12 +45,12 @@ Active Directory に対して使用するクエリを適切に記述、構築、
 
 - 長い期間の大量のクエリでは、ATQ LDAP スレッドの消費と枯渇が発生しています。 次のパフォーマンスカウンターを監視します。
 
-    - **NTDS \\要求の待機時間**–これは、要求の処理にかかる時間の影響を受けます。 ただし、120秒 (既定値) の後に要求がタイムアウトになるようにすると、ほとんどの場合、実行時間が大幅に短縮され、極端に長時間に実行されるクエリは、全体の数値で非表示になります。 Active Directory 絶対しきい値ではなく、この基準の変更を検索します。
+    - **NTDS \\要求の待機時間** –これは、要求の処理にかかる時間の影響を受けます。 ただし、120秒 (既定値) の後に要求がタイムアウトになるようにすると、ほとんどの場合、実行時間が大幅に短縮され、極端に長時間に実行されるクエリは、全体の数値で非表示になります。 Active Directory 絶対しきい値ではなく、この基準の変更を検索します。
 
         > [!NOTE]
         > この値が高い場合は、他のドメインに対する "プロキシ処理" 要求の遅延を示すインジケーターや、CRL チェックを行うこともできます。
 
-    - **NTDS \\推定キュー遅延**–最適なパフォーマンスを得るためには、最適なパフォーマンスを得るためには0に近い必要があります。これは、要求がサービスの待機に時間を費やすことがないためです。
+    - **NTDS \\推定キュー遅延** –最適なパフォーマンスを得るためには、最適なパフォーマンスを得るためには0に近い必要があります。これは、要求がサービスの待機に時間を費やすことがないためです。
 
 これらのシナリオは、次の1つまたは複数の方法を使用して検出できます。
 
@@ -60,7 +60,7 @@ Active Directory に対して使用するクエリを適切に記述、構築、
 
 -   パフォーマンスモニターの Active Directory 診断データコレクターセット ([SPA の Son: Win2008 以降の AD データコレクターセット](/archive/blogs/askds/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond))
 
--   [Microsoft Server Performance Advisor](../../../server-performance-advisor/microsoft-server-performance-advisor.md)Active Directory Advisor パック
+-   [Microsoft Server Performance Advisor](../../../server-performance-advisor/microsoft-server-performance-advisor.md) Active Directory Advisor パック
 
 -   先祖インデックスを使用する "(objectClass =)" 以外の任意のフィルターを使用して検索し \* ます。
 
@@ -68,11 +68,11 @@ Active Directory に対して使用するクエリを適切に記述、構築、
 
 -   クエリがオプションとして使い果たされた後に、インデックスを作成して問題に対する適切な解決策があることを確認してください。 ハードウェアのサイズを正しく設定することは非常に重要です。 インデックスは、ハードウェアの問題を難読化しようとするのではなく、属性にインデックスを設定する必要がある場合にのみ追加してください。
 
--   インデックスを作成すると、インデックスを作成する属性の合計サイズの最小値によって、データベースのサイズが大きくなります。 このため、データベースの増加量の見積もりは、属性内のデータの平均サイズを取得し、属性が設定されるオブジェクトの数を乗算することで評価できます。 一般に、これはデータベースサイズの1% 増加に関するものです。 詳細については、「[データストアのしくみ](/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10))」を参照してください。
+-   インデックスを作成すると、インデックスを作成する属性の合計サイズの最小値によって、データベースのサイズが大きくなります。 このため、データベースの増加量の見積もりは、属性内のデータの平均サイズを取得し、属性が設定されるオブジェクトの数を乗算することで評価できます。 一般に、これはデータベースサイズの1% 増加に関するものです。 詳細については、「 [データストアのしくみ](/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10))」を参照してください。
 
 -   検索動作が組織単位レベルで行われる場合は、コンテナー化検索のインデックス作成を検討してください。
 
--   タプルインデックスは通常のインデックスよりも大きくなりますが、サイズを推定するのは非常に困難です。 通常のインデックスサイズの推定値は、増加に対するフロアとして使用します。最大値は20% です。 詳細については、「[データストアのしくみ](/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10))」を参照してください。
+-   タプルインデックスは通常のインデックスよりも大きくなりますが、サイズを推定するのは非常に困難です。 通常のインデックスサイズの推定値は、増加に対するフロアとして使用します。最大値は20% です。 詳細については、「 [データストアのしくみ](/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10))」を参照してください。
 
 -   検索動作が組織単位レベルで行われる場合は、コンテナー化検索のインデックス作成を検討してください。
 

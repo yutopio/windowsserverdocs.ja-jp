@@ -3,16 +3,16 @@ title: WSUS 展開を計画します。
 description: Windows Server Update Service (WSUS) のトピック - 展開計画のプロセスの概要と関連トピックへのリンク
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 05/24/2018
-ms.openlocfilehash: 8e6aaaef666577db134d5d5bb42feffb38cb5a36
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 45d2dbc330c4277de961943cdd7a97fb50215de1
+ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990936"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89628544"
 ---
 # <a name="plan-your-wsus-deployment"></a>WSUS 展開を計画する
 

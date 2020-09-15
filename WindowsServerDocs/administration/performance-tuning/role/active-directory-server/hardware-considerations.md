@@ -2,20 +2,20 @@
 title: AD パフォーマンスチューニングにおけるハードウェアの考慮事項
 description: AD パフォーマンスチューニングにおけるハードウェアの考慮事項
 ms.topic: article
-ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
+ms.author: timwi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 0ec22e4c85dab5e76e61cea8a68d88d7fd37b14e
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: b01df0d8bcef7dc49ca1a27833abb1022fcf0d90
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87896250"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077350"
 ---
 # <a name="hardware-considerations-in-adds-performance-tuning"></a>のハードウェアの考慮事項により、パフォーマンスチューニングが追加されます。
 
 >[!Important]
-> 以下は、 [Active Directory Domain Services の容量計画](https://go.microsoft.com/fwlink/?LinkId=324566)に関する記事で詳しく説明されている Active Directory ワークロードのために、サーバーハードウェアを最適化するための主な推奨事項と考慮事項の概要を示しています。 リーダーは、 [Active Directory Domain Services のキャパシティプランニング](https://go.microsoft.com/fwlink/?LinkId=324566)を検討して、これらの推奨事項に関する技術的な理解と影響を高めます。
+> 以下は、 [Active Directory Domain Services の容量計画](https://go.microsoft.com/fwlink/?LinkId=324566) に関する記事で詳しく説明されている Active Directory ワークロードのために、サーバーハードウェアを最適化するための主な推奨事項と考慮事項の概要を示しています。 リーダーは、 [Active Directory Domain Services のキャパシティプランニング](https://go.microsoft.com/fwlink/?LinkId=324566) を検討して、これらの推奨事項に関する技術的な理解と影響を高めます。
 
 ## <a name="avoid-going-to-disk"></a>ディスクへの移動を避ける
 
@@ -55,7 +55,7 @@ Active Directory は、メモリと同じくらいの量のデータベースを
 
 十分な空きサイクルがないプロセッサは、実行のためにスレッドをプロセッサに取得するのに長い待機時間が発生する可能性があります。 多くの環境では、このようなシナリオでのクライアントの応答性への影響を最小限に抑えるために、負荷の急激な増加やスパイクに対応できる十分なヘッドルームがあることを保証することが理念となっています。 簡単に言うと、以下のしきい値を超えても、短期間 (5 ~ 15 分) には問題ありません。ただし、これらの統計を使用して継続的に実行されるシステムでは、異常な負荷に対応するためのヘッドルームは提供されず、過剰に課税されるシナリオに簡単に組み込むことができます。 しきい値を超えて一定期間使用されているシステムは、プロセッサの負荷を軽減する方法について調査する必要があります。
 
--   プロセッサを選択する方法の詳細については、「[サーバーハードウェアのパフォーマンスチューニング](../../hardware/index.md)」を参照してください。
+-   プロセッサを選択する方法の詳細については、「 [サーバーハードウェアのパフォーマンスチューニング](../../hardware/index.md)」を参照してください。
 
 -   CPU 負荷を軽減するために、ハードウェアの追加、負荷の最適化、クライアントの他の場所への接続、または環境からの負荷の削除を行います。
 
@@ -65,7 +65,7 @@ Active Directory は、メモリと同じくらいの量のデータベースを
 
 プロセッサの場合と同様に、ネットワークアダプターが過剰に使用されると、送信トラフィックがネットワークに到達するまでの待機時間が長くなります。 Active Directory は、小さな受信要求を行い、クライアントシステムに返されるデータ量が比較的大きくなる傾向があります。 送信されたデータは、受信したデータを超えています。 多くの環境では、負荷の急激な増加や急増に対応できる十分なヘッドルームがあることを保証することが理念です。 このしきい値は、負荷の急激な増加や急増に対応するヘッドルームが制限され、クライアントの応答性が低下する警告しきい値です。 簡単に言うと、これらのしきい値を超えることは短時間 (5 ~ 15 分) では悪くありません。ただし、これらの統計情報を使用して継続的に実行されるシステムは過剰に課税されるため、調査する必要があります。
 
--   ネットワークサブシステムを調整する方法の詳細については、「[ネットワークサブシステムのパフォーマンスチューニング](../../../../networking/technologies/network-subsystem/net-sub-performance-top.md)」を参照してください。
+-   ネットワークサブシステムを調整する方法の詳細については、「 [ネットワークサブシステムのパフォーマンスチューニング](../../../../networking/technologies/network-subsystem/net-sub-performance-top.md)」を参照してください。
 
 -   Compare NetworkInterface ( \* ) \\ Bytes Sent/Sec with NetworkInterface ( \* ) \\ Current 帯域幅パフォーマンスカウンタを使用します。 比率は、使用率が60% 未満である必要があります。
 

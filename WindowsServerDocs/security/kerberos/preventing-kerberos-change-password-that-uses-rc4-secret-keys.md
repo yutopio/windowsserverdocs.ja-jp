@@ -2,15 +2,15 @@
 title: RC4 秘密キーを使用する Kerberos 変更パスワードの防止
 ms.topic: article
 ms.assetid: de207d55-aa3d-4c16-bd3b-496db43663a4
-manager: alanth
 author: justinha
+ms.author: Justinha
 ms.date: 11/09/2016
-ms.openlocfilehash: 4069d88c6c46415417cb3e0e03a539e5b7118f33
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a98e5e6ed62f4a43ca5e36af7051e9ece106c074
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968739"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078559"
 ---
 # <a name="preventing-kerberos-change-password-that-uses-rc4-secret-keys"></a>Kerberos での RC4 秘密キーを使用するパスワードの変更を防ぐ
 
@@ -32,10 +32,10 @@ IT 担当者向けのこのトピックでは、悪意のあるユーザーが�
     - [Windows Server 2012](https://support.microsoft.com/kb/3086213)
     - 以前のバージョンの Windows Server では修正プログラムを利用できません
 
-- Windows Server 2012 R2 ドメインの機能レベル以上に設定されたドメインを展開し、Protected Users セキュリティグループのメンバーとしてユーザーを構成します。 この機能は、Kerberos プロトコルでの RC4 の使用よりも中断するため[、次の「関連](#see-also)項目」セクションのリソースを参照してください。
+- Windows Server 2012 R2 ドメインの機能レベル以上に設定されたドメインを展開し、Protected Users セキュリティグループのメンバーとしてユーザーを構成します。 この機能は、Kerberos プロトコルでの RC4 の使用よりも中断するため [、次の「関連](#see-also) 項目」セクションのリソースを参照してください。
 
 ## <a name="see-also"></a>参照
 
-- Windows Server 2012 R2 ドメインで RC4 暗号化の種類が使用されないようにする方法については、「 [Protected Users セキュリティグループ](/../credentials-protection-and-management/protected-users-security-group.md)」と「[保護されたアカウントの構成方法](/../credentials-protection-and-management/how-to-configure-protected-accounts.md)」を参照してください。
+- Windows Server 2012 R2 ドメインで RC4 暗号化の種類が使用されないようにする方法については、「 [Protected Users セキュリティグループ](/../credentials-protection-and-management/protected-users-security-group.md)」と「 [保護されたアカウントの構成方法](/../credentials-protection-and-management/how-to-configure-protected-accounts.md)」を参照してください。
 
 - RFC 4120 および RFC 4757 の説明については、「 [IETF Documents](http://tools.ietf.org/html/)」を参照してください。

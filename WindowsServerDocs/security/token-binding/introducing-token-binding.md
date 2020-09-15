@@ -2,15 +2,15 @@
 title: トークンバインドの概要
 ms.topic: article
 ms.assetid: 4623a48c-cefd-4a27-9173-2af58ac212f2
-manager: alanth
 author: justinha
+ms.author: Justinha
 ms.date: 11/09/2016
-ms.openlocfilehash: cc636e3a775ed315e03f8ec112f7e53ee370ca39
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 08042ef376587c1e3370c07bf6c77b07f7aedc1f
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989415"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078519"
 ---
 # <a name="introducing-token-binding"></a>トークンバインドの概要
 
@@ -22,19 +22,19 @@ ms.locfileid: "87989415"
 バージョンのサポート:
 
 - Windows 10 バージョン 1507-既定でオフ
-    - トークンバインドプロトコルが追加されました[[tokbind-01]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/01/)
-    - WinInet & HTTP.SYS HTTP 経由のトークンバインドのサポート[[draft-tokbind-01]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/01/)
+    - トークンバインドプロトコルが追加されました [[tokbind-01]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/01/)
+    - WinInet & HTTP.SYS HTTP 経由のトークンバインドのサポート [[draft-tokbind-01]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/01/)
 - Windows 10、バージョン1511および1607、および Windows Server 2016 –既定でオン
-    - トークンバインドプロトコルが更新されました[[tokbind-01]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/01/)
-    - トークンバインドネゴシエーションの TLS 拡張機能が追加されました[[tokbind-00]](https://tools.ietf.org/html/draft-popov-tokbind-negotiation-00)
+    - トークンバインドプロトコルが更新されました [[tokbind-01]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/01/)
+    - トークンバインドネゴシエーションの TLS 拡張機能が追加されました [[tokbind-00]](https://tools.ietf.org/html/draft-popov-tokbind-negotiation-00)
     - WinInet & HTTP 更新によるトークンバインドのサポート HTTP.SYS [[draft-ietf-tokbind-02]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/02/)
-- Windows 10、バージョン 1507 (サービス更新プログラム[KB4034668](https://support.microsoft.com/kb/KB4034668)、windows 10、バージョン1511、サービス更新[KB4034660](https://support.microsoft.com/kb/KB4034660)、windows 10、バージョン1607、windows Server 2016 with サービス更新[KB4034658](https://support.microsoft.com/kb/KB4034658)サポートトークンバインドプロトコルバージョン0.10 –既定)
-    - トークンバインドプロトコルが更新されました[[tokbind-10]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/10/)
-    - トークンバインドネゴシエーションの TLS 拡張機能が追加されました[[tokbind-05]](https://tools.ietf.org/html/draft-ietf-tokbind-negotiation-05)
+- Windows 10、バージョン 1507 (サービス更新プログラム [KB4034668](https://support.microsoft.com/kb/KB4034668)、windows 10、バージョン1511、サービス更新 [KB4034660](https://support.microsoft.com/kb/KB4034660)、windows 10、バージョン1607、windows Server 2016 with サービス更新 [KB4034658](https://support.microsoft.com/kb/KB4034658) サポートトークンバインドプロトコルバージョン0.10 –既定)
+    - トークンバインドプロトコルが更新されました [[tokbind-10]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/10/)
+    - トークンバインドネゴシエーションの TLS 拡張機能が追加されました [[tokbind-05]](https://tools.ietf.org/html/draft-ietf-tokbind-negotiation-05)
     - WinInet & HTTP 更新によるトークンバインドのサポート HTTP.SYS [[draft-ietf-tokbind-06]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/06/)
 - Windows 10 バージョン1703では、トークンバインディングプロトコルバージョン0.10 が既定でサポートされています。
-    - トークンバインドプロトコルが更新されました[[tokbind-10]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/10/)
-    - トークンバインドネゴシエーションの TLS 拡張機能が追加されました[[tokbind-05]](https://tools.ietf.org/html/draft-ietf-tokbind-negotiation-05)
+    - トークンバインドプロトコルが更新されました [[tokbind-10]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/10/)
+    - トークンバインドネゴシエーションの TLS 拡張機能が追加されました [[tokbind-05]](https://tools.ietf.org/html/draft-ietf-tokbind-negotiation-05)
     - WinInet & HTTP 更新によるトークンバインドのサポート HTTP.SYS [[draft-ietf-tokbind-06]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/06/)
     - 仮想化ベースのセキュリティが有効になっている Windows デバイスは、実行中のオペレーティングシステムから分離された保護された環境でトークンバインドキーを保持します。
 

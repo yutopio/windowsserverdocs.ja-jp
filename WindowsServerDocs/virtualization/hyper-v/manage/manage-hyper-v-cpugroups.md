@@ -2,16 +2,16 @@
 title: 仮想マシンのリソースコントロール
 description: VM の CPU グループの使用
 author: allenma
+ms.prod: windows-server
 ms.date: 06/18/2018
 ms.topic: article
-ms.service: windows-10-hyperv
 ms.assetid: cc7bb88e-ae75-4a54-9fb4-fc7c14964d67
-ms.openlocfilehash: 215521886418167fe6504c5f08b59dbfa7375432
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: dc26dbe6bda9dc4f4f9b2bd99b3b8400555651ac
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994050"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077189"
 ---
 # <a name="virtual-machine-resource-controls"></a>仮想マシンのリソースコントロール
 
@@ -27,12 +27,12 @@ ms.locfileid: "87994050"
 
 ## <a name="managing-cpu-groups"></a>CPU グループの管理
 
-CPU グループは、Hyper-v ホストコンピューティングサービス (HCS) を介して管理されます。 HCS、その genesis、HCS Api へのリンクの詳細については、Microsoft 仮想化チームのブログで[ホストコンピューティングサービス (hcs) の導入](https://blogs.technet.microsoft.com/virtualization/2017/01/27/introducing-the-host-compute-service-hcs/)に関する投稿を参照してください。
+CPU グループは、Hyper-v ホストコンピューティングサービス (HCS) を介して管理されます。 HCS、その genesis、HCS Api へのリンクの詳細については、Microsoft 仮想化チームのブログで [ホストコンピューティングサービス (hcs) の導入](https://blogs.technet.microsoft.com/virtualization/2017/01/27/introducing-the-host-compute-service-hcs/)に関する投稿を参照してください。
 
 >[!NOTE]
 >CPU グループを作成および管理するために使用できるのは HCS だけです。Hyper-v マネージャーアプレット、WMI および PowerShell 管理インターフェイスは、CPU グループをサポートしていません。
 
-Microsoft では、HCS インターフェイスを使用して CPU グループを管理する、 [Microsoft ダウンロードセンター](https://go.microsoft.com/fwlink/?linkid=865968)で cpugroups.exe コマンドラインユーティリティを提供しています。  このユーティリティでは、ホストの CPU トポロジを表示することもできます。
+Microsoft では、HCS インターフェイスを使用して CPU グループを管理する、 [Microsoft ダウンロードセンター](https://go.microsoft.com/fwlink/?linkid=865968) で cpugroups.exe コマンドラインユーティリティを提供しています。  このユーティリティでは、ホストの CPU トポロジを表示することもできます。
 
 ## <a name="how-cpu-groups-work"></a>CPU グループのしくみ
 
@@ -40,9 +40,9 @@ CPU グループ間でのホストコンピューティングリソースの割�
 
 CPU グループの上限は、G = *n* x *C*として計算されます。
 
-- *G*は、グループに割り当てるホスト LP の量です。
-- *n*は、グループ内の論理プロセッサ (lps) の合計数です。
-- *C*は、最大 CPU 割り当て (グループに必要なサービスのクラス) です。これは、システムの合計コンピューティング容量に対する割合で表されます。
+- *G* は、グループに割り当てるホスト LP の量です。
+- *n* は、グループ内の論理プロセッサ (lps) の合計数です。
+- *C* は、最大 CPU 割り当て (グループに必要なサービスのクラス) です。これは、システムの合計コンピューティング容量に対する割合で表されます。
 
 たとえば、CPU グループが4つの論理プロセッサ (LPs) で構成され、キャップが50% であるとします。
 

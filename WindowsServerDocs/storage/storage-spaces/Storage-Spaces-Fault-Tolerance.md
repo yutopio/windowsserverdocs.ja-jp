@@ -1,25 +1,25 @@
 ---
 title: 記憶域スペース ダイレクトでのフォールト トレランスと記憶域の効率
-ms.author: cosmosdarwin
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
+ms.author: cosdar
 ms.date: 10/11/2017
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 description: ミラーリングとパリティを含む、記憶域スペース ダイレクトの回復性オプションについて説明します。
 ms.localizationpriority: medium
-ms.openlocfilehash: 83a38655f1fa40522de84372e270b85f64128e6f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c6ef53927a1c6ed4e5275bc2412faa97510c024e
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961186"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078509"
 ---
 # <a name="fault-tolerance-and-storage-efficiency-in-storage-spaces-direct"></a>記憶域スペース ダイレクトでのフォールト トレランスと記憶域の効率
 
 >適用先:Windows Server 2016
 
-このトピックでは、[記憶域スペースダイレクト](storage-spaces-direct-overview.md)で使用できる回復性オプションについて説明し、スケール要件、記憶域の効率、それぞれの一般的な利点とトレードオフについて説明します。 また、作業を開始するための使用方法についても説明し、役に立つ資料、ブログ、およびその他の詳細情報について紹介します。
+このトピックでは、 [記憶域スペースダイレクト](storage-spaces-direct-overview.md) で使用できる回復性オプションについて説明し、スケール要件、記憶域の効率、それぞれの一般的な利点とトレードオフについて説明します。 また、作業を開始するための使用方法についても説明し、役に立つ資料、ブログ、およびその他の詳細情報について紹介します。
 
 記憶域スペースについて既によく理解している場合は、「[まとめ](#summary)」セクションに進むことができます。
 
@@ -54,7 +54,7 @@ Windows Server 2016 では、記憶域スペース用に 2 種類のミラーリ
 
 ## <a name="parity"></a>パリティ
 
-パリティエンコード ("消去コード" と呼ばれることもあります) では、ビットごとの算術演算を使用してフォールトトレランスを提供しますが、これは[非常に複雑](https://www.microsoft.com/research/wp-content/uploads/2016/02/LRC12-cheng20webpage.pdf)になります。 このしくみは、ミラーリングほど明確ではありませんが、理解に役立つ多くの優れたオンラインリソースがあります (たとえば、このサードパーティの「[Dummies Guide to Erasure Coding](http://smahesh.com/blog/2012/07/01/dummies-guide-to-erasure-coding/)」など)。 これは、フォールト トレランスを損なうことなく、より高いストレージ効率を実現します。
+パリティエンコード ("消去コード" と呼ばれることもあります) では、ビットごとの算術演算を使用してフォールトトレランスを提供しますが、これは [非常に複雑](https://www.microsoft.com/research/wp-content/uploads/2016/02/LRC12-cheng20webpage.pdf)になります。 このしくみは、ミラーリングほど明確ではありませんが、理解に役立つ多くの優れたオンラインリソースがあります (たとえば、このサードパーティの「[Dummies Guide to Erasure Coding](http://smahesh.com/blog/2012/07/01/dummies-guide-to-erasure-coding/)」など)。 これは、フォールト トレランスを損なうことなく、より高いストレージ効率を実現します。
 
 Windows Server 2016 では、記憶域スペース用に 2 種類のパリティ ("シングル" パリティと "デュアル" パリティ) が用意されています。"デュアル" パリティでは、大規模な場合に対応するための "ローカル再構築コード" と呼ばれる高度な手法が採用されています。
 

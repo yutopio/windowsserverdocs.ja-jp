@@ -1,18 +1,17 @@
 ---
 title: 動的ホスト構成プロトコル (DHCP) のトラブルシューティングガイド
 description: この artilce には、DHCP の問題に関するトラブルシューティングガイドが導入されています。
-ms.service: na
 manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: article
 author: Deland-Han
 ms.author: delhan
-ms.openlocfilehash: 88b02dc70ff60c13fd84366883e4f741fa4694a9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 92a7984fe2070ac194aa01a5a9aa63e85b7aa45d
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954659"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078619"
 ---
 # <a name="troubleshooting-guide-for-dynamic-host-configuration-protocol-dhcp"></a>動的ホスト構成プロトコル (DHCP) のトラブルシューティングガイド
 
@@ -20,7 +19,7 @@ ms.locfileid: "87954659"
 
 この記事では、Microsoft IPv4 DHCP クライアントとサーバーの一般的なトラブルシューティング手順について説明します。
 
-## <a name="more-information"></a>詳細情報
+## <a name="more-information"></a>説明
 
 IPv4 アドレス割り当ての手順には、通常、次の3つの主要なコンポーネントが含まれます。
 

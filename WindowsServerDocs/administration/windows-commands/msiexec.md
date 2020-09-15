@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 93ce1de1f75ff03bc7bb5f79d2046502c2d81bc4
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: a59e48a4c368a33e0d0e751b9b818f263b470b90
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89639617"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078439"
 ---
 # <a name="msiexec"></a>msiexec
 
@@ -73,7 +73,7 @@ msiexec.exe /i <path_to_package> [/quiet][/passive][/q{n|b|r|f}]
 | /qr | インストールプロセス中の UI エクスペリエンスの縮小を指定します。 |
 | /qf | インストールプロセス中の完全な UI エクスペリエンスを指定します。 |
 
-##### <a name="remarks"></a>注釈
+##### <a name="remarks"></a>解説
 
 - インストールがユーザーによって取り消された場合、モーダルボックスは表示されません。 **Qb +!** または、 **[キャンセル**] ボタンを非表示**にします**。
 
@@ -211,7 +211,7 @@ msiexec.exe [/f{p|o|e|d|c|a|u|m|s|v}] <product_code>
 | /fu | すべての必要なユーザー固有のレジストリエントリを修復します。 |
 | /fm | 必要なコンピューター固有のレジストリエントリをすべて修復します。 |
 | /fs | 既存のショートカットをすべて修復します。 |
-| /fc | ソースから実行し、ローカルパッケージを再キャッシュします。 |
+| /fv | ソースから実行し、ローカルパッケージを再キャッシュします。 |
 
 #### <a name="examples"></a>例
 

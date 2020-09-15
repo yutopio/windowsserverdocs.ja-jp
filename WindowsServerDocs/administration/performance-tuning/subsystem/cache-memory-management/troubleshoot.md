@@ -2,15 +2,15 @@
 title: キャッシュとメモリマネージャーのパフォーマンスの問題のトラブルシューティング
 description: Windows Server 16 でのキャッシュとメモリマネージャーのパフォーマンスに関する問題のトラブルシューティング
 ms.topic: article
-ms.author: pavel; atales
+ms.author: pavel
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: ba6c04ca8ac1941221809af958a9d6c53701b101
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: cb9aa4d9ec10b27e423da9d312b5d395c6e2e690
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992021"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90077989"
 ---
 # <a name="troubleshoot-cache-and-memory-manager-performance-issues"></a>キャッシュとメモリマネージャーのパフォーマンスの問題のトラブルシューティング
 
@@ -41,7 +41,7 @@ Windows Server 2012 より前では、特定のワークロードで使用可能
 
 この問題は、RAMMAP の出力で、非常に多くのアクティブなマップ済みファイルページによって示されています。 これは通常、サーバー上の一部のアプリケーションが、ファイル[CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) \_ フラグランダムアクセスフラグが設定された CreateFile API を使用して多数の大きなファイルを開いていることを示してい \_ \_ ます。
 
-この問題の詳細については、サポート技術情報の記事[2549369](https://support.microsoft.com/default.aspx?scid=kb;en-US;2549369)で説明されています。 FILE \_ フラグ \_ ランダム \_ アクセスフラグは、メモリ内のファイルのマップされたビューを可能な限り長く保持するためのキャッシュマネージャーのヒントです (メモリマネージャーによってメモリ不足の状態が通知されるまで)。 同時に、このフラグは、ファイルデータのプリフェッチを無効にするようにキャッシュマネージャーに指示します。
+この問題の詳細については、サポート技術情報の記事 [2549369](https://support.microsoft.com/default.aspx?scid=kb;en-US;2549369)で説明されています。 FILE \_ フラグ \_ ランダム \_ アクセスフラグは、メモリ内のファイルのマップされたビューを可能な限り長く保持するためのキャッシュマネージャーのヒントです (メモリマネージャーによってメモリ不足の状態が通知されるまで)。 同時に、このフラグは、ファイルデータのプリフェッチを無効にするようにキャッシュマネージャーに指示します。
 
 この状況は、Windows Server 2012 以降で設定のトリミングの機能強化により、ある程度軽減されていますが、この問題自体は、ファイルフラグランダムアクセスを使用せずに、アプリケーションベンダーが主に対処する必要があり \_ \_ \_ ます。 アプリケーションベンダー向けの代替ソリューションとして、ファイルへのアクセス時に低メモリ優先度を使用することもできます。 これは、 [Setthreadinformation](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadinformation) API を使用して実現できます。 低いメモリ優先度でアクセスされるページは、作業セットから積極的に削除されます。
 

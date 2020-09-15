@@ -2,15 +2,15 @@
 title: Hyper-v ストレージ i/o パフォーマンス
 description: Hyper-v のパフォーマンスチューニングに関する記憶域の i/o パフォーマンスに関する考慮事項
 ms.topic: article
-ms.author: asmahi; sandysp; jopoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: d19790a6a86c7538ee3a062b3f08bbbdbc8b9d92
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 762ff719eb60a2fbcec61c0b9b6cb2e14f9ba677
+ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992092"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90078220"
 ---
 # <a name="hyper-v-storage-io-performance"></a>Hyper-v ストレージ i/o パフォーマンス
 
@@ -60,7 +60,7 @@ Windows Server 2012 以降で作成された新しい VHD には、4 KB のア�
 Convert-VHD –Path E:\vms\testvhd\test.vhd –DestinationPath E:\vms\testvhd\test-converted.vhd
 ```
 
-システム上のすべての Vhd の配置プロパティを確認し、最適な 4 KB のアラインメントに変換する必要があります。 元の VHD からのデータで新しい VHD を作成するには、[**ソースから作成**] オプションを使用します。
+システム上のすべての Vhd の配置プロパティを確認し、最適な 4 KB のアラインメントに変換する必要があります。 元の VHD からのデータで新しい VHD を作成するには、[ **ソースから作成** ] オプションを使用します。
 
 Windows Powershell を使用して配置を確認するには、次に示すように配置線を確認します。
 
@@ -186,7 +186,7 @@ VHD は親 VHD ファイルを指しています。 に書き込まれていな�
 
 ペイロードデータを更新するために現在のパーサーによって発行された 4 KB の書き込みコマンドごとに、ディスク上の2つのブロックに対して2つの読み取りが行われます。その後、更新された後、2つのディスクブロックに書き戻されます。 Windows Server 2016 の hyper-v は、vhd 形式で 4 KB の境界に配置するために前述の構造を準備することによって、VHD スタック上の512e ディスクのパフォーマンスへの影響の一部を軽減します。 これにより、仮想ハードディスクファイル内のデータにアクセスするときと、仮想ハードディスクのメタデータ構造を更新するときに、RMW 効果は回避されます。
 
-既に説明したように、以前のバージョンの Windows Server からコピーされた Vhd は、自動的に 4 KB にアラインされません。 VHD インターフェイスで使用可能な [**コピー元ディスクからコピー**する] オプションを使用して、これらを最適な位置に手動で変換できます。
+既に説明したように、以前のバージョンの Windows Server からコピーされた Vhd は、自動的に 4 KB にアラインされません。 VHD インターフェイスで使用可能な [ **コピー元ディスクからコピー** する] オプションを使用して、これらを最適な位置に手動で変換できます。
 
 既定では、Vhd は、物理的なセクターサイズが512バイトで公開されます。 これは、アプリケーションと Vhd を以前のバージョンの Windows Server から移動した場合に、物理的なセクターサイズに依存するアプリケーションが影響を受けないようにするためです。
 
