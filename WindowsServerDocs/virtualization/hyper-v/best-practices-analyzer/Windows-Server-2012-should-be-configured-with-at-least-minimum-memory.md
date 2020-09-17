@@ -1,18 +1,17 @@
 ---
 title: Windows Server 2012 にする必要があります最小メモリ量以上で構成
 description: このベストプラクティスアナライザー規則によって報告された問題を解決するための手順を示します。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: f218a7c7-4361-45f1-835c-e19761b2565c
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: fa116f74c6e9b28c596dfbf196c59b9f98d58785
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 75f527e422a7763534efde05fdbb27a88d642e14
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996808"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90744907"
 ---
 # <a name="windows-server-2012-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Windows Server 2012 にする必要があります最小メモリ量以上で構成
 
@@ -24,7 +23,7 @@ ms.locfileid: "87996808"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,24 +36,24 @@ ms.locfileid: "87996808"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>**解決策**
+## <a name="resolution"></a>**解決方法**
 *Hyper-v マネージャーを使用して、この仮想マシンに割り当てられているメモリを少なくとも 512 MB に増やします。*
 
 ### <a name="increase-the-memory-using-hyper-v-manager"></a>Hyper-v マネージャーを使用してメモリを増やす
 
 1.  Hyper-V マネージャーを開きます。 **[スタート]** ボタンをクリックし、**[管理ツール]** をポイントして **[Hyper-V マネージャー]** をクリックします。
 
-2.  結果ウィンドウで [ **仮想マシン**, 、構成する仮想マシンを選択します。 バーチャルマシンの状態は [**オフ (オフ**)」と表示されます。 そうでない場合は、バーチャルマシンを右クリックし、[**シャットダウン**] をクリックします。
+2.  結果ウィンドウで [ **仮想マシン**, 、構成する仮想マシンを選択します。 バーチャルマシンの状態は [ **オフ (オフ**)」と表示されます。 そうでない場合は、バーチャルマシンを右クリックし、[ **シャットダウン**] をクリックします。
 
 3.  **[操作]** ウィンドウで、仮想マシン名の下の **[設定]** をクリックします。
 
-4.  ナビゲーションウィンドウで、[**メモリ**] をクリックします。
+4.  ナビゲーションウィンドウで、[ **メモリ**] をクリックします。
 
-5.  [**メモリ**] ページで、**スタートアップ RAM**を 512 MB 以上に設定し、[ **OK]** をクリックします。
+5.  [ **メモリ** ] ページで、 **スタートアップ RAM** を 512 MB 以上に設定し、[ **OK]** をクリックします。
 
 ### <a name="increase-the-memory-using-windows-powershell"></a>Windows PowerShell を使用してメモリを増やす
 
-1.  Windows PowerShell を開きます。 (デスクトップから [**スタート**] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
+1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
 2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
 
@@ -64,5 +63,5 @@ ms.locfileid: "87996808"
 Set-VMMemory <MyVM> -StartupBytes 512MB
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [設定-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)

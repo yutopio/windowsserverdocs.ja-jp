@@ -1,18 +1,17 @@
 ---
 title: Windows ハイパーバイザーが実行されている必要があります。
 description: このベストプラクティスアナライザー規則によって報告された問題を解決するための手順を示します。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 501a9beb-c464-46c0-88c5-e3e7e3e70101
-author: kbdazure
 ms.date: 10/03/2016
-ms.openlocfilehash: aa89f3735151b2dee795c1a325e22446e3770fa0
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 75437680370672a1eef9fad2957f398ce4f267d7
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994538"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90744818"
 ---
 # <a name="windows-hypervisor-must-be-running"></a>Windows ハイパーバイザーが実行されている必要があります。
 
@@ -22,7 +21,7 @@ ms.locfileid: "87994538"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|前提条件|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -35,7 +34,7 @@ ms.locfileid: "87994538"
 
 *Windows ハイパーバイザーが実行されるまで、仮想マシンを起動することはできません。*
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *Windows Server カタログを調べて、このサーバーで Hyper-v を実行することが認められているかどうかを確認してください。次に、BIOS でハードウェア依存の仮想化とハードウェアによるデータ実行防止が有効になっていることを確認します。次に、Hyper-v ハイパーバイザーのイベントログを確認します。*
 
@@ -73,17 +72,17 @@ ms.locfileid: "87994538"
 
 #### <a name="to-check-the-event-logs"></a>イベントログを確認するには
 
-1.  イベント ビューアーを開きます。 [**スタート**] をクリックし、[**管理ツール**] をクリックして、[**イベントビューアー**] をクリックします。
+1.  イベント ビューアーを開きます。 [ **スタート**] をクリックし、[ **管理ツール**] をクリックして、[ **イベントビューアー**] をクリックします。
 
 2.  Hyper-v ハイパーバイザーイベントログを開きます。 ナビゲーションウィンドウで、[**アプリケーションとサービスログ**] [  >>  **Microsoft**  >>  **Windows**  >>  **hyper-v-ハイパーバイザー**] の順に展開し、[**操作**] をクリックします。
 
 3.  Windows ハイパーバイザーが実行されている場合は、これ以上の操作は必要ありません。 Windows ハイパーバイザーが実行されていない場合は、次の手順を実行します。
 
-4.  システムログを開きます。 (ナビゲーションウィンドウで、[ **Windows ログ**] を展開し、[**システム**] を選択します)。
+4.  システムログを開きます。 (ナビゲーションウィンドウで、[ **Windows ログ** ] を展開し、[ **システム**] を選択します)。
 
 5.  フィルターを使用して、Hyper-v ハイパーバイザーイベントを検索します。
-    1. [**操作**] ウィンドウで、[**現在のログをフィルター**] をクリックします。 **イベントソース**の場合は、"Hyper-v-ハイパーバイザー" を指定します。
+    1. [ **操作** ] ウィンドウで、[ **現在のログをフィルター**] をクリックします。 **イベントソース**の場合は、"Hyper-v-ハイパーバイザー" を指定します。
     2. 問題を報告するイベントを探します。 たとえば、イベント ID 41 は、BIOS 構成に問題があることを示しています。 "Hyper-v の起動に失敗しました。VMX が存在しないか、BIOS で有効になっていません。 "
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 コンピューターで Hyper-v を実行できるかどうかを確認する方法など、Windows 10 で Hyper-v を使用する方法の詳細については、「 [windows 10 hyper-v のシステム要件](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements)」を参照してください。

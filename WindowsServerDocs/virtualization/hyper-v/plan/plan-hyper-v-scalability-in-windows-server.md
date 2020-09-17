@@ -1,17 +1,16 @@
 ---
 title: Windows Server 2016 および Windows Server 2019 での Hyper-v のスケーラビリティの計画
 description: 最大値では、コンポーネントを追加するか、Hyper-v ホストと仮想マシンから削除の数がサポートされているリストなどのメモリの量と仮想プロセッサの数。
-manager: dongill
 ms.topic: article
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 09/28/2016
-ms.openlocfilehash: bf7ad4e90f5303041153bb4f651d2f09c613da84
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2e7eecbf68a8b08caae2851bce45673ebb09bcef
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996062"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90745927"
 ---
 # <a name="plan-for-hyper-v-scalability-in-windows-server-2016-and-windows-server-2019"></a>Windows Server 2016 および Windows Server 2019 での Hyper-v のスケーラビリティの計画
 
@@ -52,7 +51,7 @@ ms.locfileid: "87996062"
 |ネットワーク アダプター チーム (NIC チーミング)|Hyper-V による制限はありません。|詳細については、「 [NIC チーミング](../../../networking/technologies/nic-teaming/NIC-Teaming.md)します。|
 |物理ネットワーク アダプター|Hyper-V による制限はありません。|[なし] :|
 |サーバーごとに実行される仮想マシン|1024|[なし] :|
-|記憶域|による制限は、ホスト オペレーティング システムでサポートされています。 Hyper-V による制限はありません。|**注:** マイクロソフトは、SMB 3.0 を使用する場合、ネットワーク接続ストレージ (NAS) をサポートしています。 NFS ベースのストレージはサポートされません。|
+|ストレージ|による制限は、ホスト オペレーティング システムでサポートされています。 Hyper-V による制限はありません。|**注:** マイクロソフトは、SMB 3.0 を使用する場合、ネットワーク接続ストレージ (NAS) をサポートしています。 NFS ベースのストレージはサポートされません。|
 |サーバーごとの仮想ネットワーク スイッチ ポート|状況によって異なり、Hyper-V による制限はありません。|実際の制限は、利用可能なコンピューティング リソースによって異なります。|
 |論理プロセッサごとの仮想プロセッサ|Hyper-V による比率はありません。|[なし] :|
 |サーバーごとの仮想プロセッサ|2048|[なし] :|

@@ -1,18 +1,17 @@
 ---
 title: 証明書ベースの認証が構成されていますが、指定された証明書がレプリカサーバーまたはフェールオーバークラスターノードにインストールされていません
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 4cabbce3-9367-4ddc-a108-1e5e1ab2bcff
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 8205ea267750e3fec78a756da00b0bd063ed8baf
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 545a51f110a264e1fb456039362e373a51bcb2f8
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948515"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90745867"
 ---
 # <a name="certificate-based-authentication-is-configured-but-the-specified-certificate-is-not-installed-on-the-replica-server-or-failover-cluster-nodes"></a>証明書ベースの認証が構成されていますが、指定された証明書がレプリカサーバーまたはフェールオーバークラスターノードにインストールされていません
 
@@ -26,7 +25,7 @@ ms.locfileid: "87948515"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -41,7 +40,7 @@ ms.locfileid: "87948515"
 
 \<list of nodes>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *構成した証明書をレプリカサーバー (およびフェールオーバークラスター内のすべての関連ノード (存在する場合) にインストールします。*
 

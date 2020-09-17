@@ -1,18 +1,17 @@
 ---
 title: 統合サービスは、プライマリの前にインストールする必要がありますか、レプリカ仮想マシンは、フェールオーバー後に代替の IP アドレスを使用することができます。
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。詳細情報へのリンクがあります。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: a7fdd185-d6c8-4f58-9b58-2df5827bb056
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 171b9b4a41f012be3262dbddea0527381282d105
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3a612c9e119ac2b74bea070feb458703dd50040f
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946015"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90745827"
 ---
 # <a name="integration-services-must-be-installed-before-primary-or-replica-virtual-machines-can-use-an-alternate-ip-address-after-a-failover"></a>統合サービスは、プライマリの前にインストールする必要がありますか、レプリカ仮想マシンは、フェールオーバー後に代替の IP アドレスを使用することができます。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87946015"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87946015"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 *仮想マシン接続を使用すると、仮想マシンで統合サービスをインストールできます。*
 
 Windows Server 2016 の時点では、Windows 仮想マシン用の統合サービスは、Windows Update を通じて配信されます。 Integration services の最新バージョンを取得する Windows 更新プログラムを受信するこれらの仮想マシンが構成されていることを確認します。 Linux カーネルは、ここで Linux integration services (LIS) が含まれていて、新しいリリースでは更新されましたが、古いカーネルに基づく Linux ディストリビューションは、最新の機能強化または修正プログラムがない可能性が。 詳細については、「 [Windows 上の hyper-v でサポートされている Linux および FreeBSD 仮想マシン](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)」を参照してください。

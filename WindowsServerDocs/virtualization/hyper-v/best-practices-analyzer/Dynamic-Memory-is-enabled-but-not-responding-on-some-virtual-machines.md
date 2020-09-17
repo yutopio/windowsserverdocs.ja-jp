@@ -1,18 +1,17 @@
 ---
 title: 動的メモリは有効になっていますが、一部の仮想マシンでは応答しません
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 91b7f50f-a071-4ab6-beb1-1b29f92f52b6
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: d6227829f73cdccefecd0758a69a25a299665557
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: c826fc39637b3a7cf0f155065945d180bce5e4cb
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988958"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90744137"
 ---
 # <a name="dynamic-memory-is-enabled-but-not-responding-on-some-virtual-machines"></a>動的メモリは有効になっていますが、一部の仮想マシンでは応答しません
 
@@ -24,7 +23,7 @@ ms.locfileid: "87988958"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87988958"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 *これは、仮想マシンが起動している場合に想定される動作です。バーチャルマシンが起動していない場合は、統合サービスが最新バージョンにアップグレードされていること、およびゲストオペレーティングシステムが動的メモリをサポートしていることを確認してください。*
 
 Windows Server 2016 の場合、integration services は Windows Update を通じて配信されます。 最新バージョンの integration services を取得するための更新プログラムを受信するように仮想マシンが構成されていることを確認します。

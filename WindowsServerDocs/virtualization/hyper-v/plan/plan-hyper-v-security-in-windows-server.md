@@ -3,16 +3,15 @@ title: Windows Server での Hyper-v セキュリティの計画
 description: Hyper-v ホストと仮想マシンのセキュリティに関する考慮事項の一覧を示します。
 ms.topic: article
 ms.assetid: 115db481-b57e-41c3-8354-504f4bc6113a
-manager: dongill
-author: larsiwer
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 08/03/2018
-ms.openlocfilehash: af974edfb94ccf1a0a4844df43885198ab68d416
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: e41a97846a9adc6ff849fbece4c4ac2ee7590c89
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996005"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90745917"
 ---
 # <a name="plan-for-hyper-v-security-in-windows-server"></a>Windows Server での Hyper-v セキュリティの計画
 
@@ -22,7 +21,7 @@ HYPER-V ホストのオペレーティング システム、仮想マシン、�
 
 ## <a name="secure-the-hyper-v-host"></a>HYPER-V ホストのセキュリティ保護します。
 - **ホストの OS をセキュリティで保護してください。**
-    - 管理オペレーティング システムに必要な最低限の Windows Server インストール オプションを使用して、攻撃対象領域を最小限に抑えます。 詳細については、Windows Server テクニカルコンテンツライブラリの[インストールオプション](../../../get-started-19/install-upgrade-migrate-19.md)に関するセクションを参照してください。 Windows 10 では、HYPER-V では、実稼働ワークロードを実行することは推奨されません。
+    - 管理オペレーティング システムに必要な最低限の Windows Server インストール オプションを使用して、攻撃対象領域を最小限に抑えます。 詳細については、Windows Server テクニカルコンテンツライブラリの [インストールオプション](../../../get-started-19/install-upgrade-migrate-19.md) に関するセクションを参照してください。 Windows 10 では、HYPER-V では、実稼働ワークロードを実行することは推奨されません。
     - HYPER-V ホストのオペレーティング システム、ファームウェア、およびデバイス ドライバーは最新のセキュリティ更新プログラムを最新のしてください。 ファームウェアとドライバーを更新する、ベンダーの推奨事項を確認してください。
     - HYPER-V ホストをワークステーションとして使用したり、不要なソフトウェアをインストールしないでください。
     - HYPER-V ホストをリモートで管理します。 ローカル HYPER-V ホストを管理する必要があります、資格情報の保護を使用します。 詳細については、次を参照してください。 [派生した資格情報 Guard でのドメイン資格情報を保護する](/windows/access-protection/credential-guard/credential-guard)です。
