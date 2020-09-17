@@ -2,21 +2,21 @@
 title: 個別のデバイスの割り当てを使用して NVMe 記憶装置を展開する
 description: DDA を使用して記憶装置を展開する方法について説明します。
 ms.topic: article
-author: chrishuybregts
-ms.author: chrihu
+ms.author: benarm
+author: BenjaminArmstrong
 ms.assetid: 1c36107e-78c9-4ec0-a313-6ed557ac0ffc
-ms.openlocfilehash: fdf6372d642a2e1413a2ed5029d9e9f25af4ce3f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 66da2888a5d7ce0777cb1976cdd484287362f691
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945945"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746087"
 ---
 # <a name="deploy-nvme-storage-devices-using-discrete-device-assignment"></a>個別のデバイスの割り当てを使用して NVMe 記憶装置を展開する
 
 >適用対象: Microsoft Hyper-V Server 2016、Windows Server 2016
 
-Windows Server 2016 以降では、個別のデバイス割り当て (DDA) を使用して、PCIe デバイス全体を VM に渡すことができます。  これにより、デバイスのネイティブドライバーを利用できるのに対して、VM 内から NVMe ストレージやグラフィックスカードなどのデバイスに高パフォーマンスでアクセスできるようになります。  デバイスの展開については、デバイス[の個別割り当てを使用したデバイスの展開計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)に関するページを参照してください。DDA でデバイスを使用するには、次の3つの手順を実行します。
+Windows Server 2016 以降では、個別のデバイス割り当て (DDA) を使用して、PCIe デバイス全体を VM に渡すことができます。  これにより、デバイスのネイティブドライバーを利用できるのに対して、VM 内から NVMe ストレージやグラフィックスカードなどのデバイスに高パフォーマンスでアクセスできるようになります。  デバイスの展開については、デバイス [の個別割り当てを使用したデバイスの展開計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) に関するページを参照してください。DDA でデバイスを使用するには、次の3つの手順を実行します。
 -   DDA 用に VM を構成する
 -   ホストパーティションからデバイスのマウントを解除する
 -   ゲスト VM へのデバイスの割り当て
@@ -35,7 +35,7 @@ Set-VM -Name VMName -AutomaticStopAction TurnOff
 ## <a name="dismount-the-device-from-the-host-partition"></a>ホストパーティションからデバイスのマウントを解除する
 
 ### <a name="locating-the-devices-location-path"></a>デバイスの場所のパスを特定する
-ホストからデバイスをマウント解除してマウントするには、PCI ロケーションパスが必要です。  ロケーションパスの例は次のように `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"` なります。   場所のパスの詳細については、「[個別のデバイスの割り当てを使用したデバイスの展開の計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)」を参照してください。
+ホストからデバイスをマウント解除してマウントするには、PCI ロケーションパスが必要です。  ロケーションパスの例は次のように `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"` なります。   場所のパスの詳細については、「 [個別のデバイスの割り当てを使用したデバイスの展開の計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)」を参照してください。
 
 ### <a name="disable-the-device"></a>デバイスを無効にする
 デバイスマネージャーまたは PowerShell を使用して、デバイスが "無効" になっていることを確認します。

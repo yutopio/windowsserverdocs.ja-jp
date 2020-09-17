@@ -1,18 +1,17 @@
 ---
 title: Windows Server 2008 R2 は、推奨されるメモリ量で構成する必要があります。
 description: このベストプラクティスアナライザー規則によって報告された問題を解決するための手順を示します。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 26872519-ccf0-4757-827f-8df2a7a2b9f9
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 7ce1c5a2f37a82ed4c09ab8afbbdce4ffded0d9d
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 70efebe89677f905c1f36e723bcf57fa3b584ccd
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994879"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746667"
 ---
 # <a name="windows-server-2008-r2-should-be-configured-with-the-recommended-amount-of-memory"></a>Windows Server 2008 R2 は、推奨されるメモリ量で構成する必要があります。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87994879"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -39,7 +38,7 @@ ms.locfileid: "87994879"
 
 \<list of virtual machine names>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *Hyper-v マネージャーを使用して、この仮想マシンに割り当てられているメモリを少なくとも 2 GB に増やします。*
 
@@ -47,17 +46,17 @@ ms.locfileid: "87994879"
 
 1.  Hyper-V マネージャーを開きます。 **[スタート]** ボタンをクリックし、**[管理ツール]** をポイントして **[Hyper-V マネージャー]** をクリックします。
 
-2.  結果ウィンドウで [ **仮想マシン**, 、構成する仮想マシンを選択します。 バーチャルマシンの状態は [**オフ (オフ**)」と表示されます。 そうでない場合は、バーチャルマシンを右クリックし、[**シャットダウン**] をクリックします。
+2.  結果ウィンドウで [ **仮想マシン**, 、構成する仮想マシンを選択します。 バーチャルマシンの状態は [ **オフ (オフ**)」と表示されます。 そうでない場合は、バーチャルマシンを右クリックし、[ **シャットダウン**] をクリックします。
 
 3.  **[操作]** ウィンドウで、仮想マシン名の下の **[設定]** をクリックします。
 
-4.  ナビゲーションウィンドウで、[**メモリ**] をクリックします。
+4.  ナビゲーションウィンドウで、[ **メモリ**] をクリックします。
 
-5.  [**メモリ**] ページで、**スタートアップ RAM**を 2 GB 以上に設定し、[ **OK]** をクリックします。
+5.  [ **メモリ** ] ページで、 **スタートアップ RAM** を 2 GB 以上に設定し、[ **OK]** をクリックします。
 
 ### <a name="increase-the-memory-using-windows-powershell"></a>Windows PowerShell を使用してメモリを増やす
 
-1.  Windows PowerShell を開きます。 (デスクトップから [**スタート**] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
+1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
 2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
 
@@ -67,5 +66,5 @@ ms.locfileid: "87994879"
 Set-VMMemory <MyVM> -StartupBytes 2GB
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [設定-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)

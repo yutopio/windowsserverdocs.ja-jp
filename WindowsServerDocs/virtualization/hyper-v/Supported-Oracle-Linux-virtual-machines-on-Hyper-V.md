@@ -1,18 +1,17 @@
 ---
 title: HYPER-V でサポートされている Oracle Linux 仮想マシン
 description: 各バージョンに含まれる Linux integration services と機能の一覧を示します。
-manager: dongill
 ms.topic: article
 ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 06/05/2020
-ms.openlocfilehash: 0e9a11fbff5015037bffa1cad14e70d629fef94b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 7c1029f31abe70b09bddc83f928ee492be18ef2b
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989301"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746397"
 ---
 # <a name="supported-oracle-linux-virtual-machines-on-hyper-v"></a>HYPER-V でサポートされている Oracle Linux 仮想マシン
 
@@ -20,7 +19,7 @@ ms.locfileid: "87989301"
 
 次の機能の配布マップでは、各バージョンに存在する機能を示します。 既知の問題と各配布の回避策は、表の下に一覧表示されます。
 
-このセクションの内容は次のとおりです。
+このセクションの内容:
 
 * [Oracle Linux 2.x シリーズ](#oracle-linux-8x-series)
 * [Oracle Linux 2.x シリーズ](#oracle-linux-7x-series)
@@ -46,7 +45,7 @@ ms.locfileid: "87989301"
 |       **可用性**        |   |
 |       **[コア](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019、2016、2012 R2 | &#10004; |
 |       Windows Server 2016 の正確な時刻       | 2019、2016 | &#10004; |
-|       **[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |
+|       **[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |
 |       Jumbo Frame        | 2019、2016、2012 R2 | &#10004; |
 |       VLAN のタグ付けとトランキング       | 2019、2016、2012 R2 | &#10004;  |
 |       ライブ マイグレーション      | 2019、2016、2012 R2 | &#10004; |
@@ -221,7 +220,7 @@ Windows Server 2016 の正確な時刻
 <tr height="50px">
 <td width="20%">
 
- **[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**
+ **[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**
 </td>
 <td width="20%">
 
@@ -1273,7 +1272,7 @@ UEFI を使用したブート
 |       **可用性**     |   | LIS 4.3  | 組み込み  |
 |       **[コア](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019、2016、2012 R2 | &#10004; | &#10004;
 |       Windows Server 2016 の正確な時刻       | 2019、2016 | |
-|       **[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |  |
+|       **[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |  |
 |       Jumbo Frame        | 2019、2016、2012 R2 | &#10004; | &#10004;|
 |       VLAN のタグ付けとトランキング       | 2019、2016、2012 R2 | & #10004 です。注 1 | & #10004 です。注 1 |
 |       ライブ マイグレーション      | 2019、2016、2012 R2 | &#10004; | &#10004;|
@@ -1326,7 +1325,7 @@ UEFI を使用したブート
 
    1. ファイルを作成する **/etc/udev/rules.d/100-balloon.rules**します。 ファイルの他の目的の名前を使用することがあります。
 
-   2. 次の内容をファイルに追加します。`SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"`
+   2. 次の内容をファイルに追加します。 `SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"`
 
    3. ホット アド サポートを有効にするシステムを再起動します。
 
@@ -1338,7 +1337,7 @@ UEFI を使用したブート
 
    * システム全体の利用可能なメモリを消費する傾向があるアプリケーションは、使用可能なメモリの最大 80% を消費してに制限されます。
 
-9. Windows Server 2016 または Windows Server 2012 R2 オペレーティングシステムで動的メモリを使用している場合は、[**起動メモリ**]、[**最小メモリ**]、[**最大メモリ**] パラメーターを128メガバイト (mb) の倍数で指定します。 そのためにはエラーがホット アドの障害につながるし、ゲスト オペレーティング システムのメモリが表示されない場合があります。
+9. Windows Server 2016 または Windows Server 2012 R2 オペレーティングシステムで動的メモリを使用している場合は、[ **起動メモリ**]、[ **最小メモリ**]、[ **最大メモリ** ] パラメーターを128メガバイト (mb) の倍数で指定します。 そのためにはエラーがホット アドの障害につながるし、ゲスト オペレーティング システムのメモリが表示されない場合があります。
 
 10. キー/値ペア (KVP) インフラストラクチャを有効にするには、Oracle Linux ISO から hypervkvpd または hyperv デーモン rpm パッケージをインストールします。 または、パッケージを Oracle Linux Yum リポジトリから直接インストールすることもできます。
 
@@ -1353,7 +1352,7 @@ UEFI を使用したブート
     Linux Integration Services ダウンロードは、世代 2 の既存の Vm に適用することができますが、第 2 世代の機能には影響しません。
 
 
-参照
+関連項目
 
 * [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
 

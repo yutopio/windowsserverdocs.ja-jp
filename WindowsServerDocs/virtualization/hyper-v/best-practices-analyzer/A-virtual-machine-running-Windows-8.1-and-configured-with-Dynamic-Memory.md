@@ -1,18 +1,17 @@
 ---
 title: Windows 8.1 を実行し動的メモリで構成された仮想マシンでは、メモリ設定に推奨値を使用する必要があります
 description: このベストプラクティスアナライザー規則によって報告された問題を解決するための手順を示します。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: b9a14f85-326f-4916-9278-2c8d39a32848
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: ba32e3dc40022539c4205e55e74deab8ba619d0b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7ad74e982ad75a7763c37ad28599642c593b5612
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954509"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746337"
 ---
 # <a name="a-virtual-machine-running-windows-81-and-configured-with-dynamic-memory-should-use-recommended-values-for-memory-settings"></a>Windows 8.1 を実行し動的メモリで構成された仮想マシンでは、メモリ設定に推奨値を使用する必要があります
 
@@ -24,7 +23,7 @@ ms.locfileid: "87954509"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -38,20 +37,20 @@ ms.locfileid: "87954509"
 \<list of virtual machines>
 
 
-## <a name="resolution"></a>**解決策**
+## <a name="resolution"></a>**解決方法**
 *Hyper-v マネージャーを使用して、最小メモリを 256 MB 以上に増やし、起動メモリを少なくとも 512 MB、最大メモリをこの仮想マシンに対して 1 GB 以上に増やします。*
 
 #### <a name="increase-memory-using-hyper-v-manager"></a>Hyper-v マネージャーを使用してメモリを増やす
 
 1.  Hyper-V マネージャーを開きます。 (サーバーマネージャーから、[**ツール**  >  ] をクリックします。**Hyper-v マネージャー**)
 
-2.  仮想マシンの一覧から目的のものを右クリックし、[**設定**] をクリックします。
+2.  仮想マシンの一覧から目的のものを右クリックし、[ **設定**] をクリックします。
 
-3.  ナビゲーションウィンドウで、[**メモリ**] をクリックします。
+3.  ナビゲーションウィンドウで、[ **メモリ**] をクリックします。
 
 4.  **RAM**を 512 MB 以上に変更します。
 
-5.  [**動的メモリ**で、**最小 RAM**を 256 MB 以上、**最大 ram**を 1 GB に変更します。
+5.  [ **動的メモリ**で、 **最小 RAM** を 256 MB 以上、 **最大 ram** を 1 GB に変更します。
 
 6.  **[OK]** をクリックします。
 

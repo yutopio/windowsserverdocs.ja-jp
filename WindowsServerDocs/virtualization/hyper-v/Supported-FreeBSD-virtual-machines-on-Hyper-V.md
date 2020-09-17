@@ -1,18 +1,17 @@
 ---
 title: HYPER-V でサポートされている FreeBSD 仮想マシン
 description: 各バージョンに含まれる Linux integration services と機能の一覧を示します。
-manager: dongill
 ms.topic: article
 ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 04/07/2020
-ms.openlocfilehash: 3767c56640dd4e4e07e2cdd4a578ec0c3db2f470
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: bf4b1aeb701741a7f58f3d186ffe7861cdd1e8e0
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965639"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746407"
 ---
 # <a name="supported-freebsd-virtual-machines-on-hyper-v"></a>HYPER-V でサポートされている FreeBSD 仮想マシン
 
@@ -22,7 +21,7 @@ ms.locfileid: "87965639"
 
 ## <a name="table-legend"></a>表の凡例
 
-* **組み込み**の BIS (Freebsd Integration Service) は、この freebsd リリースの一部として含まれています。
+* **組み込み** の BIS (Freebsd Integration Service) は、この freebsd リリースの一部として含まれています。
 
 * & #10004 です。の機能使用
 
@@ -33,7 +32,7 @@ ms.locfileid: "87965639"
 |**可用性**||組み込み|組み込み|組み込み|組み込み|組み込み|組み込み|[ポート](https://svnweb.freebsd.org/ports/branches/2015Q1/emulators/hyperv-is/) |
 |**[コア](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 の正確な時刻|2019、2016|&#10004;|&#10004;||||||
-|**[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
+|**[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
 |Jumbo Frame|2019、2016、2012 R2|& #10004 です。注 3|& #10004 です。注 3|& #10004 です。注 3|& #10004 です。注 3|& #10004 です。注 3|& #10004 です。注 3|& #10004 です。注 3|
 |VLAN のタグ付けとトランキング|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |ライブ マイグレーション|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -69,7 +68,7 @@ ms.locfileid: "87965639"
 
 ## <a name="notes"></a><a name="BKMK_notes"></a>注
 
-1. 起動時にルートマウントエラーが発生しないように、[ディスクデバイスにラベルを付ける]( https://www.freebsd.org/doc/handbook/geom-glabel.html)ことをお勧めします。
+1. 起動時にルートマウントエラーが発生しないように、 [ディスクデバイスにラベルを付ける]( https://www.freebsd.org/doc/handbook/geom-glabel.html) ことをお勧めします。
 
 2. 次のコマンドを使用してレガシ ATA ドライバーを有効にしない限り、BIS ドライバーが FreeBSD 2.x と1.x に読み込まれるときに、バーチャル DVD ドライブが認識されないことがあります。
     ```sh
@@ -81,7 +80,7 @@ ms.locfileid: "87965639"
 
 4. フェールオーバーのシナリオでは、レプリカ サーバーで静的な IPv6 アドレスを設定できません。 代わりに IPv4 アドレスを使用します。
 
-5. KVP は、FreeBSD 10.0 のポートによって提供されます。 詳細については、FreeBSD.org の[FreeBSD 10.0 ポート](https://svnweb.freebsd.org/ports/branches/2015Q1/emulators/hyperv-is/)を参照してください。
+5. KVP は、FreeBSD 10.0 のポートによって提供されます。 詳細については、FreeBSD.org の [FreeBSD 10.0 ポート](https://svnweb.freebsd.org/ports/branches/2015Q1/emulators/hyperv-is/) を参照してください。
 
 6. VHDX のオンラインサイズ変更が FreeBSD 11.0 で適切に行われるようにするには、11.0 + で修正されたジオメトリバグを回避するための特別な手動手順が必要です。これは、ホストが VHDX ディスクのサイズを変更した後、書き込み用にディスクを開き、次のように "gpart 回復" を実行します。
     ```sh
@@ -89,9 +88,9 @@ ms.locfileid: "87965639"
     # gpart recover da1
     ```
 
-**追加の注意事項**:10 安定および11安定した機能マトリックスは、FreeBSD 11.1 リリースと同じです。 さらに、FreeBSD 10.2 とそれ以前のバージョン (10.1、10.0、1.x、2.x) は、有効期間が終了します。 サポートされているリリースと最新のセキュリティアドバイザリの最新の一覧については、[こちら](https://security.freebsd.org/)を参照してください。
+**追加の注意事項**:10 安定および11安定した機能マトリックスは、FreeBSD 11.1 リリースと同じです。 さらに、FreeBSD 10.2 とそれ以前のバージョン (10.1、10.0、1.x、2.x) は、有効期間が終了します。 サポートされているリリースと最新のセキュリティアドバイザリの最新の一覧については、 [こちら](https://security.freebsd.org/) を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [Hyper-v 上の Linux および FreeBSD 仮想マシンの機能の説明](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
 * [HYPER-V での FreeBSD の実行に関するベスト プラクティス](Best-practices-for-running-FreeBSD-on-Hyper-V.md)

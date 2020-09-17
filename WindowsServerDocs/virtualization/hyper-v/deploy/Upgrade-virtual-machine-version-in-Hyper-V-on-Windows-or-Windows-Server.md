@@ -1,18 +1,17 @@
 ---
 title: Windows 10 または Windows Server の Hyper-v で仮想マシンのバージョンをアップグレードする
 description: バーチャルマシンのバージョンをアップグレードするための手順と考慮事項を示します。
-manager: dongill
 ms.topic: article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
 author: jasongerend
 ms.author: jgerend
 ms.date: 05/22/2019
-ms.openlocfilehash: 24e67bd88a644c44b65d5eb8ccd3d6190737b5db
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 236e0230c30e1d0260f4a72d1735b3ba687c3fd8
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995640"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746047"
 ---
 # <a name="upgrade-virtual-machine-version-in-hyper-v-on-windows-10-or-windows-server"></a>Windows 10 または Windows Server の Hyper-v で仮想マシンのバージョンをアップグレードする
 
@@ -24,26 +23,26 @@ ms.locfileid: "87995640"
 - クラスターの機能レベルをアップグレードします。
 - 以前のバージョンの Windows または Windows Server を実行している Hyper-v ホストに仮想マシンを戻す必要がないことを確認します。
 
-詳細については、「[クラスターオペレーティングシステムのローリングアップグレード](../../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md)」および「 [VMM で hyper-v ホストクラスターのローリングアップグレードを実行する](/system-center/vmm/hyper-v-rolling-upgrade)」を参照してください。
+詳細については、「 [クラスターオペレーティングシステムのローリングアップグレード](../../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) 」および「 [VMM で hyper-v ホストクラスターのローリングアップグレードを実行する](/system-center/vmm/hyper-v-rolling-upgrade)」を参照してください。
 
 ## <a name="step-1-check-the-virtual-machine-configuration-versions"></a>手順 1: 仮想マシンの構成バージョンを確認する
 
 1. Windows デスクトップで [スタート] ボタンをクリックし、名前の一部を入力 **Windows PowerShell**します。
-2. [Windows PowerShell] を右クリックし、[**管理者として実行**] を選択します。
+2. [Windows PowerShell] を右クリックし、[ **管理者として実行**] を選択します。
 3. [GET VM](/powershell/module/hyper-v/get-vm)コマンドレットを使用します。 次のコマンドを実行して、仮想マシンのバージョンを取得します。
 
 ```PowerShell
 Get-VM * | Format-Table Name, Version
 ```
 
-仮想マシンを選択して [**概要**] タブを表示することで、hyper-v マネージャーで構成バージョンを確認することもできます。
+仮想マシンを選択して [ **概要** ] タブを表示することで、hyper-v マネージャーで構成バージョンを確認することもできます。
 
 ## <a name="step-2-upgrade-the-virtual-machine-configuration-version"></a>手順 2: 仮想マシンの構成バージョンをアップグレードする
 
 1. Hyper-v マネージャーで仮想マシンをシャットダウンします。
 2. [アクション > アップグレード構成バージョン] を選択します。 特定の仮想マシンについてこのオプションを選択できない場合、その仮想マシンは既に Hyper-V ホストでサポートされる最新の構成バージョンになっています。
 
-Windows PowerShell を使用して仮想マシンの構成バージョンをアップグレードするには、[更新プログラム VMVersion](/powershell/module/hyper-v/update-vmversion)コマンドレットを使用します。 次のコマンドを実行します。ここで、vmname は仮想マシンの名前です。
+Windows PowerShell を使用して仮想マシンの構成バージョンをアップグレードするには、 [更新プログラム VMVersion](/powershell/module/hyper-v/update-vmversion) コマンドレットを使用します。 次のコマンドを実行します。ここで、vmname は仮想マシンの名前です。
 
 ```PowerShell
 Update-VMVersion <vmname>
@@ -51,13 +50,13 @@ Update-VMVersion <vmname>
 
 ## <a name="supported-virtual-machine-configuration-versions"></a>サポートされている仮想マシンの構成バージョン
 
-PowerShell コマンドレット[VMHostSupportedVersion](/powershell/module/hyper-v/get-vmhostsupportedversion)を実行して、hyper-v ホストでサポートされている仮想マシンの構成バージョンを確認します。 仮想マシンを作成すると、既定の構成バージョンで作成されます。 既定値を確認するには、次のコマンドを実行します。
+PowerShell コマンドレット [VMHostSupportedVersion](/powershell/module/hyper-v/get-vmhostsupportedversion) を実行して、hyper-v ホストでサポートされている仮想マシンの構成バージョンを確認します。 仮想マシンを作成すると、既定の構成バージョンで作成されます。 既定値を確認するには、次のコマンドを実行します。
 
 ```PowerShell
 Get-VMHostSupportedVersion -Default
 ```
 
-以前のバージョンの Windows を実行している Hyper-v ホストに移動できる仮想マシンを作成する必要がある場合は、-version パラメーターを指定して、[新しい VM](/powershell/module/hyper-v/new-vm)コマンドレットを使用します。 たとえば、Windows Server 2012 R2 を実行している Hyper-v ホストに移動できる仮想マシンを作成するには、次のコマンドを実行します。 このコマンドは、"WindowsCV5" という名前の仮想マシンを、構成バージョン5.0 で作成します。
+以前のバージョンの Windows を実行している Hyper-v ホストに移動できる仮想マシンを作成する必要がある場合は、-version パラメーターを指定して、 [新しい VM](/powershell/module/hyper-v/new-vm) コマンドレットを使用します。 たとえば、Windows Server 2012 R2 を実行している Hyper-v ホストに移動できる仮想マシンを作成するには、次のコマンドを実行します。 このコマンドは、"WindowsCV5" という名前の仮想マシンを、構成バージョン5.0 で作成します。
 
 ```PowerShell
 New-VM -Name "WindowsCV5" -Version 5.0
@@ -90,7 +89,7 @@ New-VM -Name "WindowsCV5" -Version 5.0
 | Windows Server バージョン 1903 |&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;| &#10004;|
 |Windows Server、バージョン 1809|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows 10 October 2018 Update (バージョン 1809)|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows Server バージョン 1803|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows Server、バージョン 1803|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows 10 April 2018 Update (バージョン 1803)|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows 10 Fall Creators Update (バージョン 1709)|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows 10 Creators Update (バージョン 1703)|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|

@@ -1,24 +1,23 @@
 ---
 title: Windows Server 2016 にインストールされた Hyper-v の新機能します。
 description: Hyper-v の新機能の概要を示します。
-manager: dongill
 ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 09/21/2017
-ms.openlocfilehash: aa61fd14418efe2cb5ee68c1b86e300db24c4fe4
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 49ea6e324a11d2261dae8133e29d86d2c5bacae7
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996619"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746707"
 ---
 # <a name="whats-new-in-hyper-v-on-windows-server"></a>Windows Server での Hyper-v の新機能
 
 >適用対象: Windows Server 2019、Microsoft Hyper-V Server 2016、Windows Server 2016
 
-この記事では、Windows Server 2019、Windows Server 2016、および Microsoft Hyper-V Server 2016 での Hyper-v の新機能と変更された機能について説明します。 Windows Server 2012 R2 で作成され、Windows Server 2019 または Windows Server 2016 で Hyper-v を実行するサーバーに移動またはインポートされた仮想マシンで新機能を使用するには、仮想マシンの構成バージョンを手動でアップグレードする必要があります。 手順については、「[仮想マシンのバージョンのアップグレード](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)」を参照してください。
+この記事では、Windows Server 2019、Windows Server 2016、および Microsoft Hyper-V Server 2016 での Hyper-v の新機能と変更された機能について説明します。 Windows Server 2012 R2 で作成され、Windows Server 2019 または Windows Server 2016 で Hyper-v を実行するサーバーに移動またはインポートされた仮想マシンで新機能を使用するには、仮想マシンの構成バージョンを手動でアップグレードする必要があります。 手順については、「 [仮想マシンのバージョンのアップグレード](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)」を参照してください。
 
 この記事に記載されていることと、機能が新機能か更新されたものかを示します。
 
@@ -56,7 +55,7 @@ ms.locfileid: "87996619"
 
 ### <a name="compatible-with-connected-standby-new"></a>コネクトスタンバイの新規接続との互換性 \(\)
 
-Always On/Always Connected (ビデオ) 電源モデルを使用しているコンピューターに Hyper-v の役割がインストールされている場合、**コネクトスタンバイ**電源の状態が使用できるようになりました。
+Always On/Always Connected (ビデオ) 電源モデルを使用しているコンピューターに Hyper-v の役割がインストールされている場合、 **コネクトスタンバイ** 電源の状態が使用できるようになりました。
 
 ### <a name="discrete-device-assignment-new"></a>個別のデバイスの割り当て- \( 新規\)
 
@@ -84,11 +83,11 @@ Set-VMProcessor TestVM -EnableHostResourceProtection $true
 
 ### <a name="hyper-v-manager-improvements-updated"></a>Hyper-v マネージャーの機能強化の \( 更新\)
 
--   **代替の資格情報のサポート**-別の windows Server 2016 または windows 10 リモートホストに接続するときに、hyper-v マネージャーで別の資格情報のセットを使用できるようになりました。 また、これらの資格情報を保存しておくと、もう一度ログオンしやすくなります。
+-   **代替の資格情報のサポート** -別の windows Server 2016 または windows 10 リモートホストに接続するときに、hyper-v マネージャーで別の資格情報のセットを使用できるようになりました。 また、これらの資格情報を保存しておくと、もう一度ログオンしやすくなります。
 
--   **以前のバージョンを管理**する-windows server 2019、windows server 2016、および windows 10 の Hyper-v マネージャーを使用して、windows server 2012、windows 8、windows Server 2012 R2、および Windows 8.1 で hyper-v を実行しているコンピューターを管理できます。
+-   **以前のバージョンを管理** する-windows server 2019、windows server 2016、および windows 10 の Hyper-v マネージャーを使用して、windows server 2012、windows 8、windows Server 2012 R2、および Windows 8.1 で hyper-v を実行しているコンピューターを管理できます。
 
--   **更新された管理プロトコル**-hyper-v マネージャーが、CredSSP、Kerberos、または NTLM 認証を許可する ws-i プロトコルを使用して、リモートの hyper-v ホストと通信できるようになりました。 CredSSP を使用してリモート Hyper-v ホストに接続する場合は、Active Directory で制約付き委任を有効にせずにライブマイグレーションを実行できます。 また、WS MAN ベースのインフラストラクチャを使用すると、ホストをリモート管理用に簡単に有効にすることもできます。 WS-MAN はポート 80 で接続します。このポートは既定で開かれています。
+-   **更新された管理プロトコル** -hyper-v マネージャーが、CredSSP、Kerberos、または NTLM 認証を許可する ws-i プロトコルを使用して、リモートの hyper-v ホストと通信できるようになりました。 CredSSP を使用してリモート Hyper-v ホストに接続する場合は、Active Directory で制約付き委任を有効にせずにライブマイグレーションを実行できます。 また、WS MAN ベースのインフラストラクチャを使用すると、ホストをリモート管理用に簡単に有効にすることもできます。 WS-MAN はポート 80 で接続します。このポートは既定で開かれています。
 
 ### <a name="integration-services-delivered-through-windows-update-updated"></a>Windows Update 更新を通じて配信 \( された統合サービス\)
 
@@ -119,19 +118,19 @@ Hyper-v 上の Linux 仮想マシンの詳細については、「 [hyper-v 上�
 
 -   Intel VT-x のプロセッサ (入れ子になった仮想化は、現時点では Intel プロセッサでのみ使用できます)。
 
-詳細と手順については、「[入れ子になった仮想化を使用した仮想マシンでの hyper-v の実行](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization)」を参照してください。
+詳細と手順については、「 [入れ子になった仮想化を使用した仮想マシンでの hyper-v の実行](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization)」を参照してください。
 
 ### <a name="networking-features-new"></a>ネットワーク機能の \( 新機能\)
 
 新しいネットワーク機能は次のとおりです。
 
--   **リモートダイレクトメモリアクセス (RDMA) とスイッチ埋め込みチーミング (SET)**。 SET が使用されているかどうかに関係なく、Hyper-v 仮想スイッチにバインドされているネットワークアダプターで RDMA を設定できます。 SET には、NIC チーミングと同じ機能の一部を備えた仮想スイッチが用意されています。 詳細については、「[リモートダイレクトメモリアクセス (RDMA) とスイッチ埋め込みチーミング (SET)](../hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md)」を参照してください。
+-   **リモートダイレクトメモリアクセス (RDMA) とスイッチ埋め込みチーミング (SET)**。 SET が使用されているかどうかに関係なく、Hyper-v 仮想スイッチにバインドされているネットワークアダプターで RDMA を設定できます。 SET には、NIC チーミングと同じ機能の一部を備えた仮想スイッチが用意されています。 詳細については、「 [リモートダイレクトメモリアクセス (RDMA) とスイッチ埋め込みチーミング (SET)](../hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md)」を参照してください。
 
 -   **仮想マシンの複数のキュー (VMMQ)**。 は、仮想マシンごとに複数のハードウェアキューを割り当てることによって、VMQ スループットを向上させます。  既定のキューは、仮想マシンのキューのセットになり、キュー間にトラフィックが分散されます。
 
 -   **ソフトウェアで定義されたネットワークのサービス品質 (QoS)**。 既定のクラスの帯域幅内で仮想スイッチを経由するトラフィックの既定のクラスを管理します。
 
-新しいネットワーク機能の詳細については、「[ネットワークの新](../../networking/What-s-New-in-Networking.md)機能」を参照してください。
+新しいネットワーク機能の詳細については、「 [ネットワークの新](../../networking/What-s-New-in-Networking.md)機能」を参照してください。
 
 ### <a name="production-checkpoints-new"></a>運用チェックポイントの \( 新規作成\)
 
@@ -142,7 +141,7 @@ Hyper-v 上の Linux 仮想マシンの詳細については、「 [hyper-v 上�
 
 ### <a name="rolling-hyper-v-cluster-upgrade-new"></a>Hyper-v クラスターのローリングアップグレードの \( 新規作成\)
 
-Windows server 2019 または Windows Server 2016 を実行しているノードを、Windows Server 2012 R2 を実行しているノードで Hyper-v クラスターに追加できるようになりました。 これにより、ダウンタイムなしでクラスターをアップグレードできます。 クラスターは、クラスター内のすべてのノードをアップグレードし、Windows PowerShell コマンドレット[ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel)を使用してクラスターの機能レベルを更新するまで、windows Server 2012 R2 の機能レベルで実行されます。
+Windows server 2019 または Windows Server 2016 を実行しているノードを、Windows Server 2012 R2 を実行しているノードで Hyper-v クラスターに追加できるようになりました。 これにより、ダウンタイムなしでクラスターをアップグレードできます。 クラスターは、クラスター内のすべてのノードをアップグレードし、Windows PowerShell コマンドレット [ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel)を使用してクラスターの機能レベルを更新するまで、windows Server 2012 R2 の機能レベルで実行されます。
 
 > [!IMPORTANT]
 > クラスターの機能レベルを更新しても、Windows Server 2012 R2 には返されません。
@@ -163,18 +162,18 @@ Windows server 2012 R2 の機能レベルが windows server 2012 R2、Windows Se
 
 -   新しい Hyper-v 機能を有効にすることができます。
 
--   新しいバーチャルマシン機能を使用できるようにするには、更新プログラム VmConfigurationVersion コマンドレットを使用して、バーチャルマシンの構成レベルを手動で更新します。 手順については、「[仮想マシンのバージョンのアップグレード](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)」を参照してください。
+-   新しいバーチャルマシン機能を使用できるようにするには、更新プログラム VmConfigurationVersion コマンドレットを使用して、バーチャルマシンの構成レベルを手動で更新します。 手順については、「 [仮想マシンのバージョンのアップグレード](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)」を参照してください。
 -   Windows Server 2012 R2 を実行している Hyper-v クラスターにノードを追加することはできません。
 
 > [!NOTE]
 > Windows 10 の hyper-v では、フェールオーバークラスタリングはサポートされていません。
 
-詳細と手順については、「[クラスターのオペレーティングシステムのローリングアップグレード](https://technet.microsoft.com/library/dn850430.aspx)」を参照してください。
+詳細と手順については、「 [クラスターのオペレーティングシステムのローリングアップグレード](https://technet.microsoft.com/library/dn850430.aspx)」を参照してください。
 
 ### <a name="shared-virtual-hard-disks-updated"></a>共有仮想ハードディスクが \( 更新されました\)
 ゲストクラスタリングに使用される共有仮想ハードディスク (.vhdx ファイル) のサイズをダウンタイムなしで変更できるようになりました。 共有仮想ハードディスクは、仮想マシンがオンラインの間に拡張または圧縮できます。 ゲストクラスターでは、Hyper-v レプリカを使用して障害回復を行うことで、共有仮想ハードディスクを保護することもできます。
 
-コレクションでレプリケーションを有効にします。 コレクションでのレプリケーションの有効化は **、WMI インターフェイスを介してのみ公開**されます。 詳細については、 [Msvm_CollectionReplicationService クラス](/previous-versions/windows/desktop/clushyperv/msvm-collectionreplicationservice)のドキュメントを参照してください。 **PowerShell コマンドレットまたは UI を使用して、コレクションのレプリケーションを管理することはできません。** コレクションに固有の機能にアクセスするには、Hyper-v クラスターの一部であるホスト上に Vm を配置する必要があります。 これには、Hyper-v レプリカでサポートされていないスタンドアロンホスト上の共有 VHD 共有 Vhd が含まれます。
+コレクションでレプリケーションを有効にします。 コレクションでのレプリケーションの有効化は **、WMI インターフェイスを介してのみ公開**されます。 詳細については、 [Msvm_CollectionReplicationService クラス](/previous-versions/windows/desktop/clushyperv/msvm-collectionreplicationservice) のドキュメントを参照してください。 **PowerShell コマンドレットまたは UI を使用して、コレクションのレプリケーションを管理することはできません。** コレクションに固有の機能にアクセスするには、Hyper-v クラスターの一部であるホスト上に Vm を配置する必要があります。 これには、Hyper-v レプリカでサポートされていないスタンドアロンホスト上の共有 VHD 共有 Vhd が含まれます。
 
 [「仮想ハードディスクの共有の概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281956(v=ws.11))」の共有 vhd のガイドラインに従って、共有 vhd がゲストクラスターの一部であることを確認します。
 
@@ -182,22 +181,22 @@ Windows server 2012 R2 の機能レベルが windows server 2012 R2、Windows Se
 
 ### <a name="virtual-machine-backupnew"></a>仮想マシンのバックアップの \( 新規作成\)
 
-(ホストがクラスター化されているかどうかに関係なく) 1 つの仮想マシンをバックアップする場合は、VM グループを使用しないでください。  また、スナップショットコレクションを使用する必要もありません。 VM グループとスナップショットコレクションは、共有 vhdx を使用しているゲストクラスターのバックアップ専用に使用することを目的としています。 代わりに、 [HYPER-V WMI v2 プロバイダー](/windows/win32/hyperv_v2/windows-virtualization-portal)を使用してスナップショットを作成する必要があります。 同様に、[フェールオーバークラスター WMI プロバイダー](/previous-versions/windows/desktop/clushyperv/failover-clustering-hyper-v-wmi-provider-portal)は使用しないでください。
+(ホストがクラスター化されているかどうかに関係なく) 1 つの仮想マシンをバックアップする場合は、VM グループを使用しないでください。  また、スナップショットコレクションを使用する必要もありません。 VM グループとスナップショットコレクションは、共有 vhdx を使用しているゲストクラスターのバックアップ専用に使用することを目的としています。 代わりに、 [HYPER-V WMI v2 プロバイダー](/windows/win32/hyperv_v2/windows-virtualization-portal)を使用してスナップショットを作成する必要があります。 同様に、 [フェールオーバークラスター WMI プロバイダー](/previous-versions/windows/desktop/clushyperv/failover-clustering-hyper-v-wmi-provider-portal)は使用しないでください。
 
 ### <a name="shielded-virtual-machines-new"></a>シールドされた仮想マシンの \( 新規作成\)
 
-シールドされた仮想マシンはいくつかの機能を使用して、ホスト上の Hyper-v 管理者とマルウェアが、シールドされた仮想マシンの状態からデータを検査、改ざん、または盗むことを困難にします。 データと状態は暗号化されており、Hyper-v 管理者はビデオの出力とディスクを見ることができず、バーチャルマシンはホストガーディアンサーバーによって決定された既知の正常なホストでのみ実行されるように制限することができます。 詳細については、「保護された[ファブリックとシールド](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)された vm」をご覧ください。
+シールドされた仮想マシンはいくつかの機能を使用して、ホスト上の Hyper-v 管理者とマルウェアが、シールドされた仮想マシンの状態からデータを検査、改ざん、または盗むことを困難にします。 データと状態は暗号化されており、Hyper-v 管理者はビデオの出力とディスクを見ることができず、バーチャルマシンはホストガーディアンサーバーによって決定された既知の正常なホストでのみ実行されるように制限することができます。 詳細については、「保護された [ファブリックとシールド](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)された vm」をご覧ください。
 
 > [!NOTE]
 > シールドされた仮想マシンは、Hyper-v レプリカと互換性があります。 シールドされたバーチャルマシンをレプリケートするには、そのシールドされたバーチャルマシンの実行を承認する必要があります。
 
 ### <a name="start-order-priority-for-clustered-virtual-machines-new"></a>クラスター化された仮想マシンの開始順序の優先順位の \( 新規作成\)
 
-この機能を使用すると、最初に起動または再起動するクラスター化された仮想マシンをより細かく制御できます。 これにより、これらのサービスを使用する仮想マシンの前にサービスを提供する仮想マシンを簡単に起動できます。 セットを定義し、仮想マシンをセットに配置して、依存関係を指定します。 Windows PowerShell コマンドレットを使用して、[新しい-ClusterGroupSet](/powershell/module/failoverclusters/new-clustergroupset)、 [Get clustergroupset](/powershell/module/failoverclusters/get-clustergroupset)、および[Add clustergroupsetdependency](/powershell/module/failoverclusters/add-clustergroupsetdependency)などのセットを管理します。
+この機能を使用すると、最初に起動または再起動するクラスター化された仮想マシンをより細かく制御できます。 これにより、これらのサービスを使用する仮想マシンの前にサービスを提供する仮想マシンを簡単に起動できます。 セットを定義し、仮想マシンをセットに配置して、依存関係を指定します。 Windows PowerShell コマンドレットを使用して、 [新しい-ClusterGroupSet](/powershell/module/failoverclusters/new-clustergroupset)、 [Get clustergroupset](/powershell/module/failoverclusters/get-clustergroupset)、および [Add clustergroupsetdependency](/powershell/module/failoverclusters/add-clustergroupsetdependency)などのセットを管理します。
 .
 ### <a name="storage-quality-of-service-qos-updated"></a>記憶域のサービスの品質 (QoS) が \( 更新されました\)
 
-スケールアウト ファイル サーバーで記憶域の QoS ポリシーを作成し、Hyper-V 仮想マシンの 1 つ以上の仮想ディスクにそのポリシーを割り当てることができるようになりました。 記憶域のパフォーマンスは、記憶域の負荷の変動に従って、ポリシーに合わせて自動的に再調整されます。 詳細については、「[記憶域のサービスの品質](../../storage/storage-qos/storage-qos-overview.md)」を参照してください。
+スケールアウト ファイル サーバーで記憶域の QoS ポリシーを作成し、Hyper-V 仮想マシンの 1 つ以上の仮想ディスクにそのポリシーを割り当てることができるようになりました。 記憶域のパフォーマンスは、記憶域の負荷の変動に従って、ポリシーに合わせて自動的に再調整されます。 詳細については、「 [記憶域のサービスの品質](../../storage/storage-qos/storage-qos-overview.md)」を参照してください。
 
 ### <a name="virtual-machine-configuration-file-format-updated"></a>仮想マシンの構成ファイルの形式が \( 更新されました\)
 
@@ -212,12 +211,12 @@ Windows server 2012 R2 の機能レベルが windows server 2012 R2、Windows Se
 
 Windows server 2012 R2 の 2019 2016 Hyper-v を実行するサーバーに仮想マシンを移動またはインポートする場合、仮想マシンの構成は自動的に更新されません。 これは、Windows Server 2012 R2 を実行しているサーバーに仮想マシンを戻すことができることを意味します。 ただし、これは、仮想マシンの構成のバージョンを手動で更新するまで、新しい仮想マシンの機能を使用できないことも意味します。
 
-バージョンの確認とアップグレードの手順については、「[仮想マシンバージョンのアップグレード](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)」を参照してください。 この記事では、一部の機能が導入されたバージョンも示します。
+バージョンの確認とアップグレードの手順については、「 [仮想マシンバージョンのアップグレード](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)」を参照してください。 この記事では、一部の機能が導入されたバージョンも示します。
 
 > [!IMPORTANT]
 > -   バージョンを更新した後は、Windows Server 2012 R2 を実行しているサーバーに仮想マシンを移動することはできません。
 > -   構成を以前のバージョンにダウングレードすることはできません。
-> -   クラスターの機能レベルが Windows Server 2012 R2 の場合、Hyper-v クラスターで[更新プログラム VMVersion](/powershell/module/hyper-v/update-vmversion)コマンドレットがブロックされます。
+> -   クラスターの機能レベルが Windows Server 2012 R2 の場合、Hyper-v クラスターで [更新プログラム VMVersion](/powershell/module/hyper-v/update-vmversion) コマンドレットがブロックされます。
 
 ### <a name="virtualization-based-security-for-generation-2-virtual-machines-new"></a>第2世代仮想マシンの仮想化ベースのセキュリティ \( 新)
 

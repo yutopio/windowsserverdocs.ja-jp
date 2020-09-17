@@ -1,18 +1,17 @@
 ---
 title: HYPER-V が有効になっている唯一の役割をする必要があります。
 description: このベストプラクティスアナライザー規則によって報告された問題を解決するための手順を示します。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 5a0ed176-048f-40b1-b56c-8391b805fd37
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 2e2c392ad75f4f0c84216db637a0106be8821b41
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a59f4ebd1bf3ce7ce93d2eb098302b5bd2c42cce
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968339"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746837"
 ---
 # <a name="hyper-v-should-be-the-only-enabled-role"></a>HYPER-V が有効になっている唯一の役割をする必要があります。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87968339"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -41,7 +40,7 @@ ms.locfileid: "87968339"
 
 このベスト プラクティスは、ホスト オペレーティング システムの役割、機能、および HYPER-V を実行する必要があるアプリケーションの無料に保持できます。 このベスト プラクティスに従うと、Nano サーバーで HYPER-V を実行する必要 Nano Server のみは HYPER-V サービスのコンポーネントと Windows ハイパーバイザー、ソフトウェアの更新の対象ではための更新の数を削減に役立ちます。
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *サーバー マネージャーを使用して、HYPER-V を除くすべての役割を削除します。*
 

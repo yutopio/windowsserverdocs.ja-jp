@@ -1,18 +1,17 @@
 ---
 title: HYPER-V でサポートされている SUSE 仮想マシン
 description: 各バージョンに含まれる Linux integration services と機能の一覧を示します。
-manager: dongill
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 04/07/2020
-ms.openlocfilehash: 4e2948bdb07ecefc0cbb46553aeaece3efd914c2
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 92dd65669a537d619d9104378adae26c91878dca
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989292"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746737"
 ---
 # <a name="supported-suse-virtual-machines-on-hyper-v"></a>HYPER-V でサポートされている SUSE 仮想マシン
 
@@ -24,7 +23,7 @@ SUSE では、HYPER-V 用の組み込みの SUSE Linux Enterprise Service ドラ
 
 ## <a name="table-legend"></a>表の凡例
 
-* **組み込み**の LIS は、この Linux ディストリビューションの一部として含まれています。Microsoft 提供の LIS ダウンロードパッケージは、この配布では機能しないため、インストールしないでください。組み込み LIS のカーネルモジュールのバージョン番号 (たとえば、 **lsmod**によって示されている) は、Microsoft 提供の lis ダウンロードパッケージのバージョン番号とは異なります。 組み込みの LIS の項目が古いことに不一致が示されません。
+* **組み込み** の LIS は、この Linux ディストリビューションの一部として含まれています。Microsoft 提供の LIS ダウンロードパッケージは、この配布では機能しないため、インストールしないでください。組み込み LIS のカーネルモジュールのバージョン番号 (たとえば、 **lsmod**によって示されている) は、Microsoft 提供の lis ダウンロードパッケージのバージョン番号とは異なります。 組み込みの LIS の項目が古いことに不一致が示されません。
 
 * & #10004 です。の機能使用
 
@@ -37,7 +36,7 @@ SLES12 + は64ビットのみです。
 |**可用性**||組み込み|組み込み|組み込み|組み込み|組み込み|組み込み|組み込み|
 |**[コア](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 の正確な時刻|2019、2016|&#10004;|&#10004;|&#10004;|&#10004;||||
-|**[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|||||||||
+|**[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|||||||||
 |Jumbo Frame|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |VLAN のタグ付けとトランキング|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |ライブ マイグレーション|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -99,7 +98,7 @@ SLES12 + は64ビットのみです。
 
    ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
 

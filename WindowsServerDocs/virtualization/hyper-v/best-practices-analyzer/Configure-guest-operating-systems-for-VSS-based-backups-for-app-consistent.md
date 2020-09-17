@@ -1,18 +1,17 @@
 ---
 title: VSS ベースのバックアップ用のゲストオペレーティングシステムを構成して、Hyper-v レプリカのアプリケーション整合性スナップショットを有効にする
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 7638e996-d42d-47b8-a670-1e09e7183850
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 5270584b6213ad59ef43c378e5aa7a5dbcc30a4e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b6a7eec504282e63e0cb24efbd2cdc5f66849005
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939106"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746887"
 ---
 # <a name="configure-guest-operating-systems-for-vss-based-backups-to-enable-application-consistent-snapshots-for-hyper-v-replica"></a>VSS ベースのバックアップ用のゲストオペレーティングシステムを構成して、Hyper-v レプリカのアプリケーション整合性スナップショットを有効にする
 
@@ -24,7 +23,7 @@ ms.locfileid: "87939106"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87939106"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 *仮想マシン接続を使用すると、仮想マシンで統合サービスをインストールできます。*
 
 

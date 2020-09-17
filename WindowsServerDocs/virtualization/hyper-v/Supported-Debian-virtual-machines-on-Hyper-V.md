@@ -1,18 +1,17 @@
 ---
 title: Debian の仮想マシンを HYPER-V でサポートされています。
 description: 各バージョンに含まれる Linux integration services と機能の一覧を示します。
-manager: dongill
 ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 04/07/2020
-ms.openlocfilehash: da96f78c9886ea392ccb2834f4b245a2422dc17e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c0ea0a8e9a030c8d35bf3042b16108523753b36b
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965749"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746547"
 ---
 # <a name="supported-debian-virtual-machines-on-hyper-v"></a>Debian の仮想マシンを HYPER-V でサポートされています。
 
@@ -33,7 +32,7 @@ ms.locfileid: "87965749"
 | **可用性**                                                                                                                             |                                             | 組み込み              | 組み込み              | 組み込み              | 組み込み (メモ 5)     |
 | **[コア](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019、2016、2012 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              |
 | Windows Server 2016 の正確な時刻                                                                                                            | 2019、2016                                  | & #10004 です。注 4       | & #10004 です。注 4       |                       |                       |
-| **[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                                       |                                             |                       |                       |                       |                       |
+| **[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                                       |                                             |                       |                       |                       |                       |
 | Jumbo Frame                                                                                                                                 | 2019、2016、2012 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              |
 | VLAN のタグ付けとトランキング                                                                                                                    | 2019、2016、2012 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              |
 | ライブ マイグレーション                                                                                                                               | 2019、2016、2012 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              |
@@ -78,11 +77,11 @@ ms.locfileid: "87965749"
    ```Powershell
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
    ```
-4. 最新のアップストリームカーネル機能は、カーネルに含まれる[Debian バックポート](https://wiki.debian.org/Backports)を使用した場合にのみ使用できます。
+4. 最新のアップストリームカーネル機能は、カーネルに含まれる [Debian バックポート](https://wiki.debian.org/Backports)を使用した場合にのみ使用できます。
 
 5. Debian 6.x はサポート対象外であり、古いカーネルを使用していますが、debian 2.x の Debian backports に含まれるカーネルは、Hyper-v の機能を強化しています。
 
-参照
+関連項目
 
 * [CentOS をサポートし、HYPER-V 上の Red Hat Enterprise Linux 仮想マシン](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

@@ -1,18 +1,17 @@
 ---
 title: 仮想マシンに構成されているすべての仮想ネットワークアダプターを有効にする
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: fcd350b7-4240-4359-aadd-93e7ac4d314e
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 7958bf5ced635c344ded45f8fde54bd7779ccbe9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 81e0bbb8fce32b8343a13dea953498efb627d496
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87960575"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746287"
 ---
 # <a name="enable-all-virtual-network-adapters-configured-for-a-virtual-machine"></a>仮想マシンに構成されているすべての仮想ネットワークアダプターを有効にする
 
@@ -24,7 +23,7 @@ ms.locfileid: "87960575"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -39,7 +38,7 @@ ms.locfileid: "87960575"
 
 \<list of virtual machine names>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *ゲストオペレーティングシステムのデバイスマネージャーを使用して、すべての仮想ネットワークアダプターを有効にします。アダプターが不要な場合は、Hyper-v マネージャーを使用して仮想マシンから削除します。*
 

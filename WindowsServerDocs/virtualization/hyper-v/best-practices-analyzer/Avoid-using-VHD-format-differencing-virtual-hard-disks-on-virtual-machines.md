@@ -1,18 +1,17 @@
 ---
 title: 運用環境でサーバーワークロードを実行する仮想マシンで、VHD 形式の差分仮想ハードディスクを使用しない
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 272de33d-2708-4679-8564-ee28848a2839
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: ded65ab95c4a32ae55e9270cd5f77d80a6d1f9e1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 688dd348a7b00a32a50778cf0fb6350b37232f58
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946045"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90747017"
 ---
 # <a name="avoid-using-vhd-format-differencing-virtual-hard-disks-on-virtual-machines-that-run-server-workloads-in-a-production-environment"></a>運用環境でサーバーワークロードを実行する仮想マシンで、VHD 形式の差分仮想ハードディスクを使用しない
 
@@ -24,7 +23,7 @@ ms.locfileid: "87946045"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87946045"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>**解決策**
+## <a name="resolution"></a>**解決方法**
 *バーチャルマシンをシャットダウンし、VHD 形式の差分バーチャルハードディスクのチェーンを VHDX 形式に変換するか、固定バーチャルハードディスクにチェーンを結合します。(VHDX 形式には、電源障害によりディスクを破損から保護するのに役立つ信頼性機構があります)。ただし、仮想ハードディスクが、ある時点で以前のリリースの Windows に接続されている可能性がある場合は、変換しないでください。Windows Server 2012 より前の windows リリースでは、VHDX 形式はサポートされていません。*
 
 

@@ -1,18 +1,17 @@
 ---
 title: Hyper-v の仮想ローカルエリアネットワークを構成する
 description: Hyper-v ホスト上のバーチャルマシンで使用する仮想ローカルエリアネットワーク (VLAN) を構成する手順について説明します。
-manager: dongill
 ms.topic: article
 ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 10/11/2016
-ms.openlocfilehash: e44a60becc84e3b376797bd64ffe433ce44b8c55
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 7b756127e7396ec96e3f8e6901aaabef1d5664aa
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990356"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746027"
 ---
 # <a name="configure-virtual-local-area-networks-for-hyper-v"></a>Hyper-v の仮想ローカルエリアネットワークを構成する
 仮想ローカルエリアネットワーク \( vlan \) は、ネットワークトラフィックを分離するための1つの方法を提供します。 Vlan は、802.1 q をサポートするスイッチとルーターで構成されます。 複数の Vlan を構成し、それらの間で通信が行われるようにするには、ネットワークデバイスでそのような構成を行う必要があります。
@@ -30,9 +29,9 @@ Vlan を構成するには、次のものが必要です。
 
 2. [操作] メニューの **[仮想スイッチ マネージャー]** をクリックします。
 
-3. [**仮想スイッチ**] で、vlan をサポートする物理ネットワークアダプターに接続されている仮想スイッチを選択します。
+3. [ **仮想スイッチ**] で、vlan をサポートする物理ネットワークアダプターに接続されている仮想スイッチを選択します。
 
-4. 右側のウィンドウの [VLAN ID] で、[**仮想 LAN の識別を有効にする**] を選択し、vlan id の番号を入力します。
+4. 右側のウィンドウの [VLAN ID] で、[ **仮想 LAN の識別を有効にする** ] を選択し、vlan id の番号を入力します。
 
     仮想スイッチに接続されている物理ネットワークアダプターを経由するすべてのトラフィックには、設定した VLAN ID がタグ付けされます。
 
@@ -40,11 +39,11 @@ Vlan を構成するには、次のものが必要です。
 
 1. Hyper-v \- マネージャーを開きます。
 
-2. 結果ウィンドウの [ **Virtual Machines**で、適切な仮想マシンを選択し、[**設定**] を右クリックします。
+2. 結果ウィンドウの [ **Virtual Machines**で、適切な仮想マシンを選択し、[ **設定**] を右クリックします。
 
-3. [**ハードウェア**] で、VLAN が設定されている仮想スイッチを選択します。
+3. [ **ハードウェア**] で、VLAN が設定されている仮想スイッチを選択します。
 
-4. 右側のウィンドウで、[**仮想 LAN の識別を有効にする**] を選択し、仮想スイッチに指定したものと同じ VLAN ID を入力します。
+4. 右側のウィンドウで、[ **仮想 LAN の識別を有効にする**] を選択し、仮想スイッチに指定したものと同じ VLAN ID を入力します。
 
 仮想マシンでより多くの Vlan を使用する必要がある場合は、次のいずれかの操作を行います。
 
@@ -52,6 +51,6 @@ Vlan を構成するには、次のものが必要です。
 
 - [Set \- set-vmnetworkadaptervlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan?view=win10-ps)コマンドレットを使用して、仮想ネットワークアダプターをトランクモードで構成します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Hyper-v \- 仮想スイッチ](../../hyper-v-virtual-switch/hyper-v-virtual-switch.md)

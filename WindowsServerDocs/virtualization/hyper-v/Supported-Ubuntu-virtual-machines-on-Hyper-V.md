@@ -1,18 +1,17 @@
 ---
 title: HYPER-V でサポートされている Ubuntu 仮想マシン
 description: 各バージョンに含まれる Linux integration services と機能の一覧を示します。
-manager: dongill
 ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
-author: shirgall
-ms.author: shirgall
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 08/29/2020
-ms.openlocfilehash: 5bd5f7a129cbc5c69bc6b909e292c096a3812af1
-ms.sourcegitcommit: 34f9577ef32cbdc7ef96040caabc9d83517f9b79
+ms.openlocfilehash: cc59a9c45a1dee797196c8a12550945d3d834cd7
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554555"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746577"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>HYPER-V でサポートされている Ubuntu 仮想マシン
 
@@ -31,9 +30,9 @@ ms.locfileid: "89554555"
 |**機能**|**Windows Server オペレーティング システムのバージョン**|**20.04 LTS**|**18.04 LTS**|**16.04 LTS**|**14.04 LTS**|
 |-|-|-|-|-|-|
 |**可用性**||組み込み|組み込み|組み込み|組み込み|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
+|**[コア](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 の正確な時刻|2019、2016|&#10004;|&#10004;|&#10004;||
-|**[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||
+|**[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||
 |Jumbo Frame|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |VLAN のタグ付けとトランキング|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |ライブ マイグレーション|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -53,7 +52,7 @@ ms.locfileid: "89554555"
 |動的メモリでホット アド|2019、2016、2012 R2|&#10004; ノート6、7、8|&#10004; ノート6、7、8|&#10004; ノート6、7、8|&#10004; ノート6、7、8|
 |動的メモリ - バルーニング|2019、2016、2012 R2|&#10004; ノート6、7、8|&#10004; ノート6、7、8|&#10004; ノート6、7、8|&#10004; ノート6、7、8|
 |ランタイムのメモリのサイズ変更|2019、2016|&#10004;|&#10004;|&#10004;|&#10004;|
-|**[ビデオ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||
 |HYPER-V で特定のビデオ デバイス|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[その他](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|||||
 |キーと値のペア|2019、2016、2012 R2|&#10004; メモ5、9|&#10004; メモ5、9|&#10004; メモ5、9|&#10004; メモ5、9|
@@ -130,7 +129,7 @@ ms.locfileid: "89554555"
        # sudo mv shimx64.efi bootx64.efi
        ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [CentOS をサポートし、HYPER-V 上の Red Hat Enterprise Linux 仮想マシン](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

@@ -1,18 +1,17 @@
 ---
 title: 1 つ以上のネットワーク アダプターを使用する必要があります。
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 59940e56-e06a-490f-90ea-cf30d9f80b09
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 57abcbbc796ab2664d30ca9ff63c1e41f47c17a4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 05dc0583424ed155c4780f9f0b4c016be850a71c
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950246"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746267"
 ---
 # <a name="more-than-one-network-adapter-should-be-available"></a>1 つ以上のネットワーク アダプターを使用する必要があります。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87950246"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87950246"
 
 *管理オペレーティング システムのネットワークのパフォーマンスが低下する可能性があります。*
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *このコンピューターにネットワークアダプターを追加します。管理オペレーティングシステムで使用するために1つのネットワークアダプターを予約するには、外部仮想ネットワークで使用するように構成しないでください。*
 

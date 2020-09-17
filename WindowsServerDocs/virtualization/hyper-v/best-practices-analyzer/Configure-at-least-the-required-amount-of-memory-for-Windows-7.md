@@ -1,18 +1,17 @@
 ---
 title: Windows 7 を実行し、動的メモリに対して有効になっている仮想マシンに対して、少なくとも必要なメモリ容量を構成します。
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 119965bf-6154-414d-b3a1-aa5b30eac5f6
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: d5d88fd149cd2d8a361e11edb09cb467a422bd5f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cf6ab68e0c8d7339b8ba6574a7b0a4c02fa59e6e
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968469"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746967"
 ---
 # <a name="configure-at-least-the-required-amount-of-memory-for-a-virtual-machine-running-windows-7-and-enabled-for-dynamic-memory"></a>Windows 7 を実行し、動的メモリに対して有効になっている仮想マシンに対して、少なくとも必要なメモリ容量を構成します。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87968469"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,26 +36,26 @@ ms.locfileid: "87968469"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 *Hyper-v マネージャーまたは Windows PowerShell を使用して、最小メモリを 256 MB 以上、起動メモリと最大メモリを 512 MB 以上に増やします。*
 
 ### <a name="increase-memory-using-hyper-v-manager"></a>Hyper-v マネージャーを使用してメモリを増やす
 
 1.  Hyper-V マネージャーを開きます。 (サーバーマネージャーから、[**ツール**  >  ] をクリックします。**Hyper-v マネージャー**)
 
-2.  仮想マシンの一覧から目的のものを右クリックし、[**設定**] をクリックします。
+2.  仮想マシンの一覧から目的のものを右クリックし、[ **設定**] をクリックします。
 
-3.  ナビゲーションウィンドウで、[**メモリ**] をクリックします。
+3.  ナビゲーションウィンドウで、[ **メモリ**] をクリックします。
 
 4.  **RAM**を 512 MB 以上に変更します。
 
-5.  [**動的メモリ**で、**最小 RAM**を 256 mb 以上、 **ram の最大値**を 512 mb に変更します。
+5.  [ **動的メモリ**で、 **最小 RAM** を 256 mb 以上、 **ram の最大値** を 512 mb に変更します。
 
 6.  **[OK]** をクリックします。
 
 ### <a name="increase-memory-using-windows-powershell"></a>Windows PowerShell を使用してメモリを増やす
 
-1.  Windows PowerShell を開きます。 (デスクトップから [**スタート**] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
+1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
 2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
 

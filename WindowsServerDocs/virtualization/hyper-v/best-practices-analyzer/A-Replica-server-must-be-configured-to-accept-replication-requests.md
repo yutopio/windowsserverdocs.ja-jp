@@ -1,17 +1,16 @@
 ---
 title: レプリケーション要求を受け入れるようにレプリカサーバーを構成する必要がある
 description: このベストプラクティスアナライザー規則によって報告された問題を解決するための手順を示します。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 027b9df0bad5e37e0a6e2f2d9c44dde1a3e79127
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 941eccbafb7b84caf161f68b022c9a93fffd4f5f
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87960745"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746387"
 ---
 # <a name="a-replica-server-must-be-configured-to-accept-replication-requests"></a>レプリケーション要求を受け入れるようにレプリカサーバーを構成する必要がある
 
@@ -23,7 +22,7 @@ ms.locfileid: "87960745"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -34,22 +33,22 @@ ms.locfileid: "87960745"
 ## <a name="impact"></a>影響
 *このサーバーは、プライマリサーバーからのレプリケーショントラフィックを受け付けることができません。*
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 *Hyper-v マネージャーを使用して、このレプリカサーバーがレプリケーションデータを受け入れるプライマリサーバーを指定します。*
 
 #### <a name="create-authorization-entries-using-hyper-v-manager"></a>HYPER-V マネージャーを使用して承認エントリを作成します。
 
 1.  Hyper-V マネージャーを開きます。 (サーバーマネージャーから、[**ツール**  >  ] をクリックします。**Hyper-v マネージャー**)
 
-2.  ホストの一覧から、目的のホストを右クリックし、[Hyper-v の**設定**] をクリックします。
+2.  ホストの一覧から、目的のホストを右クリックし、[Hyper-v の **設定**] をクリックします。
 
-3.  ナビゲーションウィンドウで、[**レプリケーションの構成**] をクリックします。
+3.  ナビゲーションウィンドウで、[ **レプリケーションの構成**] をクリックします。
 
-4.  [**承認と記憶域**] で、[**指定したサーバーからレプリケーションを許可する**] をクリックします。
+4.  [ **承認と記憶域**] で、[ **指定したサーバーからレプリケーションを許可する**] をクリックします。
 
-5.  サーバーの一覧の下にある [**追加**] をクリックします。
+5.  サーバーの一覧の下にある [ **追加**] をクリックします。
 
-6.  [**承認エントリの追加**] で、次のようにします。
+6.  [ **承認エントリの追加**] で、次のようにします。
 
     -   最初のサーバーの完全修飾名を入力します。
 

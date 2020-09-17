@@ -1,18 +1,17 @@
 ---
 title: 仮想マシンですべての統合サービスを有効にする
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 16e202ad-3795-40c9-8176-7ca319e56d26
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: d1a3fd16be0d85f185efb9ceb9d7b2f690eaae47
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ca614074035678f50dd55b82864d989b789e61fb
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969979"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746877"
 ---
 # <a name="enable-all-integration-services-in-virtual-machines"></a>仮想マシンですべての統合サービスを有効にする
 
@@ -24,7 +23,7 @@ ms.locfileid: "87969979"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -39,7 +38,7 @@ ms.locfileid: "87969979"
 
 \<list of virtual machine names>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *サービススナップインまたは sc config コマンドラインツールを使用して、サービスが自動的に開始するように構成されていて、停止していないことを確認します。*
 
@@ -49,13 +48,13 @@ ms.locfileid: "87969979"
 
 2.  [サービス] を開きます。 (をクリックして **開始**, 、内をクリックして、 **検索の開始** ボックスに、入力 **services.msc**, 、ENTER キーを押します)。
 
-3.  詳細ウィンドウで、構成するサービスを右クリックし、[**プロパティ**] をクリックします。
+3.  詳細ウィンドウで、構成するサービスを右クリックし、[ **プロパティ**] をクリックします。
 
 4.  **全般** ] タブの [ **スタートアップ** をクリックして、入力 **自動**です。
 
 #### <a name="to-configure-how-a-service-is-started-using-sc-config"></a>SC Config を使用してサービスを開始する方法を構成するには
 
-1.  Windows PowerShell を開きます。 (デスクトップから [**スタート**] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
+1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
 2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
 

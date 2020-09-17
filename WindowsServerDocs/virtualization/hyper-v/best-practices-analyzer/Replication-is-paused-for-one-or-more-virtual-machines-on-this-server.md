@@ -1,18 +1,17 @@
 ---
 title: このサーバーでの 1 つまたは複数の仮想マシンのレプリケーションが一時停止します。
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: e1119a40-eda3-4058-8648-7df81cbc6c29
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: a40c4d45eea6d0c363cd03d5eef94543ddc1317d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3a2bf07e1f93aed3966dd98ce608af53168bdf9e
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948430"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746517"
 ---
 # <a name="replication-is-paused-for-one-or-more-virtual-machines-on-this-server"></a>このサーバーでの 1 つまたは複数の仮想マシンのレプリケーションが一時停止します。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87948430"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|操作|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87948430"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 *レプリケーションの一時停止が意図されていることを確認します。ディスク領域不足またはネットワーク接続に対処するためにレプリケーションが一時停止されている場合は、それらの問題が解決されるとすぐにレプリケーションを再開します。*
 
 

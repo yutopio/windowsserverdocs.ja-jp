@@ -1,18 +1,17 @@
 ---
 title: Hyper-v Integration Services を管理する
 description: 統合サービスをオンまたはオフにし、必要に応じてインストールする方法について説明します。
-author: kbdazure
-ms.author: kathydav
-manager: dongill
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 12/20/2016
 ms.topic: article
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
-ms.openlocfilehash: 5d5f69e1c71df9746421329d8fdf11a9786a948b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 9056beec7d07d1657ece3703f461ecfe5d9cd0fc
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996759"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746447"
 ---
 # <a name="manage-hyper-v-integration-services"></a>Hyper-v Integration Services を管理する
 
@@ -27,15 +26,15 @@ Hyper-v では、仮想マシンのパフォーマンスを向上させ、Hyper-
 
 ## <a name="turn-an-integration-service-on-or-off-using-hyper-v-manager"></a>Hyper-v マネージャーを使用して統合サービスをオンまたはオフにする
 
-1. 中央のウィンドウで、仮想マシンを右クリックし、[**設定**] をクリックします。
+1. 中央のウィンドウで、仮想マシンを右クリックし、[ **設定**] をクリックします。
 
-2. [**設定**] ウィンドウの左ペインで、[**管理**] の下にある [ **Integration Services**] をクリックします。
+2. [ **設定** ] ウィンドウの左ペインで、[ **管理**] の下にある [ **Integration Services**] をクリックします。
 
 Integration Services ウィンドウには、Hyper-v ホストで使用可能なすべての統合サービスの一覧と、ホストがバーチャルマシンを使用できるようにしたかどうかが表示されます。
 
 ### <a name="turn-an-integration-service-on-or-off-using-powershell"></a>PowerShell を使用して統合サービスをオンまたはオフにする
 
-PowerShell でこれを行うには、 [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice?view=win10-ps)を使用し、 [-Vmintegrationservice を無効](/powershell/module/hyper-v/disable-vmintegrationservice?view=win10-ps)にします。
+PowerShell でこれを行うには、 [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice?view=win10-ps) を使用し、 [-Vmintegrationservice を無効](/powershell/module/hyper-v/disable-vmintegrationservice?view=win10-ps)にします。
 
 次の例では、"demovm" という名前の仮想マシンのゲストファイルコピー統合サービスをオンまたはオフにする方法を示します。
 
@@ -126,7 +125,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
     Running  vmicvss            Hyper-V Volume Shadow Copy Requestor
     ```
 
-1. サービスの[開始](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7)または[停止の](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7)いずれかを実行します。 たとえば、Windows PowerShell Direct を無効にするには、次のように実行します。
+1. サービスの [開始](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7) または [停止の](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7)いずれかを実行します。 たとえば、Windows PowerShell Direct を無効にするには、次のように実行します。
 
     ```
     Stop-Service -Name vmicvmsession
@@ -134,7 +133,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 ## <a name="start-and-stop-an-integration-service-from-a-linux-guest"></a>Linux ゲストから統合サービスを開始および停止する
 
-一般的に、Linux 統合サービスは Linux カーネルで提供されます。 Linux integration services ドライバーには**hv_utils**という名前が付けられています。
+一般的に、Linux 統合サービスは Linux カーネルで提供されます。 Linux integration services ドライバーには **hv_utils**という名前が付けられています。
 
 1. **Hv_utils**が読み込まれているかどうかを確認するには、次のコマンドを使用します。
 
@@ -247,29 +246,29 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 | - | | |
 | Linux ゲスト | パッケージ マネージャー | Linux 用 Integration services はディストリビューションに組み込まれていますが、オプションの更新プログラムが利用可能な場合もあります。 ******** |
 
-\*データ交換統合サービスを有効にできない場合、これらのゲストの統合サービスは、[ダウンロードセンター](https://support.microsoft.com/kb/3071740)からキャビネット (cab) ファイルとして入手できます。 Cab を適用する手順については、こちらの[ブログ記事](https://techcommunity.microsoft.com/t5/virtualization/integration-components-available-for-virtual-machines-not/ba-p/382247)をご覧ください。
+\* データ交換統合サービスを有効にできない場合、これらのゲストの統合サービスは、 [ダウンロードセンター](https://support.microsoft.com/kb/3071740) からキャビネット (cab) ファイルとして入手できます。 Cab を適用する手順については、こちらの [ブログ記事](https://techcommunity.microsoft.com/t5/virtualization/integration-components-available-for-virtual-machines-not/ba-p/382247)をご覧ください。
 
 **Windows 8.1 または Windows Server 2012R2 ホストで実行されている仮想マシンの場合:**
 
 | ゲスト  | 更新方法 | メモ |
 |:---------|:---------|:---------|
 | Windows 10 | Windows Update | |
-| Windows 8.1 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows 8 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows 7 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Vista (SP 2) | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows XP (SP 2、SP 3) | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
+| Windows 8.1 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows 8 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows 7 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Vista (SP 2) | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows XP (SP 2、SP 3) | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
 | - | | |
 | Windows Server 2016 | Windows Update | |
 | Windows Server 半期チャネル | Windows Update | |
-| Windows Server 2012 R2 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Server 2012 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Server 2008 R2 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Server 2008 (SP 2) | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Home Server 2011 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Small Business Server 2011 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Server 2003 R2 (SP 2) | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Server 2003 (SP 2) | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2012 R2 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2012 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2008 R2 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2008 (SP 2) | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Home Server 2011 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Small Business Server 2011 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2003 R2 (SP 2) | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2003 (SP 2) | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
 | - | | |
 | Linux ゲスト | パッケージ マネージャー | Linux 用 Integration services はディストリビューションに組み込まれていますが、オプションの更新プログラムが利用可能な場合もあります。 ** |
 
@@ -278,20 +277,20 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 | ゲスト  | 更新方法 | メモ |
 |:---------|:---------|:---------|
-| Windows 8.1 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows 8 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows 7 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Vista (SP 2) | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows XP (SP 2、SP 3) | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
+| Windows 8.1 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows 8 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows 7 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Vista (SP 2) | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows XP (SP 2、SP 3) | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
 | - | | |
-| Windows Server 2012 R2 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Server 2012 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Server 2008 R2 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。|
-| Windows Server 2008 (SP 2) | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Home Server 2011 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Small Business Server 2011 | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Server 2003 R2 (SP 2) | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
-| Windows Server 2003 (SP 2) | 統合サービス ディスク | 以下の[手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2012 R2 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2012 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2008 R2 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。|
+| Windows Server 2008 (SP 2) | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Home Server 2011 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Small Business Server 2011 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2003 R2 (SP 2) | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
+| Windows Server 2003 (SP 2) | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
 | - | | |
 | Linux ゲスト | パッケージ マネージャー | Linux 用 Integration services はディストリビューションに組み込まれていますが、オプションの更新プログラムが利用可能な場合もあります。 ** |
 
@@ -300,13 +299,13 @@ Linux ゲストの詳細については、「 [Windows 上の hyper-v のサポ�
 ## <a name="install-or-update-integration-services"></a>Integration services のインストールまたは更新
 
 > [!NOTE]
-> Windows Server 2016 と Windows 10 より前のホストでは、ゲストオペレーティングシステムの統合サービスを**手動でインストールまたは更新**する必要があります。
+> Windows Server 2016 と Windows 10 より前のホストでは、ゲストオペレーティングシステムの統合サービスを **手動でインストールまたは更新** する必要があります。
 
 Integration services を手動でインストールまたは更新する手順は次のとおりです。
 
 1.  Hyper-V マネージャーを開きます。 サーバーマネージャーの [ツール] メニューで、[ **Hyper-v マネージャー**] をクリックします。
 
-2.  仮想マシンへの接続 仮想マシンを右クリックし、[**接続**] をクリックします。
+2.  仮想マシンへの接続 仮想マシンを右クリックし、[ **接続**] をクリックします。
 
 3.  [仮想マシン接続] の [操作] メニューで、**[統合サービス セットアップ ディスクの挿入]** をクリックします。 この操作により、仮想 DVD ドライブにセットアップ ディスクが読み込まれます。 ゲストオペレーティングシステムによっては、インストールを手動で開始する必要がある場合があります。
 

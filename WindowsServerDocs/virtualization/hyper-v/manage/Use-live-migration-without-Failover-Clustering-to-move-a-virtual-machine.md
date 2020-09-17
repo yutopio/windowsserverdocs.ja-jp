@@ -1,18 +1,17 @@
 ---
 title: フェールオーバー クラスタ リングのないライブ マイグレーションを使用して仮想マシンを移動するには
 description: スタンドアロン環境でライブマイグレーションを実行するための前提条件と手順について説明します。
-manager: dongill
 ms.topic: article
 ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 01/17/2017
-ms.openlocfilehash: e28ddefb5c1718fa251aa3de6d4323a3bc14c633
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: b02c30a612ef6aa1ed56e1c26e86c21a48b5b138
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990224"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746637"
 ---
 # <a name="use-live-migration-without-failover-clustering-to-move-a-virtual-machine"></a>フェールオーバー クラスタ リングのないライブ マイグレーションを使用して仮想マシンを移動するには
 
@@ -26,7 +25,7 @@ ms.locfileid: "87990224"
 
 - 移行元サーバーと移行先サーバーにインストールされ、ライブマイグレーション用に設定されている Windows Server 2016 または Windows Server 2012 R2 の Hyper-v の役割。 Windows Server 2016 と Windows Server 2012 R2 を実行しているホスト間でライブマイグレーションを実行するには、仮想マシンのバージョンが少なくとも5である必要があります。
 
-    バージョンのアップグレード手順については、「 [windows 10 または Windows Server 2016 で hyper-v の仮想マシンのバージョンをアップグレード](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)する」を参照してください。 インストール手順については、「[ライブマイグレーション用にホストを設定](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)する」を参照してください。
+    バージョンのアップグレード手順については、「 [windows 10 または Windows Server 2016 で hyper-v の仮想マシンのバージョンをアップグレード](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)する」を参照してください。 インストール手順については、「 [ライブマイグレーション用にホストを設定](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)する」を参照してください。
 
 - 送信元または送信先のサーバーで、ツールがインストールされていない場合は、Windows Server 2016 または Windows 10 を実行しているコンピューターにインストールされている HYPER-V 管理ツールは、そこからそれらを実行します。
 

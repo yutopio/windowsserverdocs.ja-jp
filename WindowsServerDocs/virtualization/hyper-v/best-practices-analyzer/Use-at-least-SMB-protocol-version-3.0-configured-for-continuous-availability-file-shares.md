@@ -1,18 +1,17 @@
 ---
 title: 仮想マシンのファイルを格納するファイル共有での継続的な可用性を実現するように構成された SMB プロトコルバージョン3.0 以降を使用する
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: a1fa5cf9-8a48-4f63-bb57-d81e63e77b30
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 7fd84ecf7876638d421f9a8f7042e81c131f2ab2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9e913ac96075d7ad15d4e50872e52aa3c863ac5a
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87960275"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746797"
 ---
 # <a name="use-at-least-smb-protocol-version-30-configured-for-continuous-availability-on-file-shares-that-store-files-for-virtual-machines"></a>仮想マシンのファイルを格納するファイル共有での継続的な可用性を実現するように構成された SMB プロトコルバージョン3.0 以降を使用する
 
@@ -24,7 +23,7 @@ ms.locfileid: "87960275"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,8 +36,8 @@ ms.locfileid: "87960275"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>**解決策**
-以下のいずれかを実行します。
+## <a name="resolution"></a>**解決方法**
+次のいずれかの操作を行います。
 
 -   継続的な可用性を確保するように構成されている SMB 3.0 ファイル共有にファイルを移動します。
 

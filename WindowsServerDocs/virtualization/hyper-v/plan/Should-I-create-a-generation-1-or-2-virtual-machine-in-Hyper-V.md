@@ -1,18 +1,17 @@
 ---
 title: HYPER-V でジェネレーション 1 または 2 の仮想マシンを作成するか。
 description: サポートされているブート方法やその他の機能の違いなど、ニーズを満たす世代を選択する際に役立つ考慮事項を示します。
-manager: dongill
 ms.topic: article
 ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 12/05/2016
-ms.openlocfilehash: b41cefc34bce2a9d1e2e29e9d31353d4f9b8a669
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: f9cdb144e7edacf8a1be0f2d98509517adf5c87e
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996973"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746597"
 ---
 # <a name="should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v"></a>HYPER-V でジェネレーション 1 または 2 の仮想マシンを作成するか。
 
@@ -167,11 +166,11 @@ Debian のバージョンとして使用できます、ゲスト オペレーテ
 ## <a name="what-are-the-advantages-of-using-generation-2-virtual-machines"></a>第 2 世代仮想マシンを使用する利点とは
 
 第 2 世代仮想マシンを使用する場合のメリットの一部を次に示します。
-- **セキュアブート**これは、承認されていないファームウェア、オペレーティングシステム、または UEFI ドライバーが起動時に実行されないようにするために、ブートローダーが UEFI データベース内の信頼された機関によって署名されていることを確認する機能です。 セキュア ブートは、第 2 世代仮想マシンでは既定で有効になります。 セキュア ブートでサポートされていないゲスト オペレーティング システムを実行する必要がある場合に、仮想マシンの作成後に無効にできます。  詳細については、「[セキュア ブート](/previous-versions/windows/it-pro/windows-8.1-and-8/dn486875(v=ws.11))」を参照してください。
+- **セキュアブート** これは、承認されていないファームウェア、オペレーティングシステム、または UEFI ドライバーが起動時に実行されないようにするために、ブートローダーが UEFI データベース内の信頼された機関によって署名されていることを確認する機能です。 セキュア ブートは、第 2 世代仮想マシンでは既定で有効になります。 セキュア ブートでサポートされていないゲスト オペレーティング システムを実行する必要がある場合に、仮想マシンの作成後に無効にできます。  詳細については、「[セキュア ブート](/previous-versions/windows/it-pro/windows-8.1-and-8/dn486875(v=ws.11))」を参照してください。
 
     セキュア ブートの第 2 世代の Linux 仮想マシン、仮想マシンを作成するときに、UEFI CA セキュア ブート テンプレートを選択する必要があります。
 
-- **大きなブートボリューム**第2世代仮想マシンの最大ブートボリュームは、64 TB です。 これは、最大ディスク サイズでサポートされているのです。VHDX します。 第 1 世代仮想マシンの最大のブート ボリュームは用に 2 TB をします。VHDX と 2040 gb 以上、します。VHD です。 詳細については、次を参照してください。 [Hyper-v 仮想ハード ディスク フォーマットに関するテクニカル プレビュー](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831446(v=ws.11))します。
+- **大きなブートボリューム** 第2世代仮想マシンの最大ブートボリュームは、64 TB です。 これは、最大ディスク サイズでサポートされているのです。VHDX します。 第 1 世代仮想マシンの最大のブート ボリュームは用に 2 TB をします。VHDX と 2040 gb 以上、します。VHD です。 詳細については、次を参照してください。 [Hyper-v 仮想ハード ディスク フォーマットに関するテクニカル プレビュー](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831446(v=ws.11))します。
 
   第 2 世代仮想マシンで仮想マシンのブートとインストール時間にわずかな改善を表示することもあります。
 
@@ -232,13 +231,13 @@ COM ポートは、追加するまで、第2世代仮想マシンでは使用で
 
 COM ポートを追加するには:
 
-1. セキュア ブートを無効にします。 カーネルデバッグはセキュアブートと互換性がありません。 バーチャルマシンがオフ状態であることを確認してから、 [set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)コマンドレットを使用してください。 たとえば、次のコマンドでは、仮想マシン TestVM でセキュア ブートを無効にします。
+1. セキュア ブートを無効にします。 カーネルデバッグはセキュアブートと互換性がありません。 バーチャルマシンがオフ状態であることを確認してから、 [set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps) コマンドレットを使用してください。 たとえば、次のコマンドでは、仮想マシン TestVM でセキュア ブートを無効にします。
 
     ```powershell
     Set-VMFirmware -Vmname TestVM -EnableSecureBoot Off
     ```
 
-2. COM ポートを追加します。 これを行うには、 [Set VMComPort](/powershell/module/hyper-v/set-vmcomport?view=win10-ps)コマンドレットを使用します。 たとえば、次のコマンドは、仮想マシンの名前付きパイプ TestPipe、ローカル コンピューター上に接続するための TestVM で最初の COM ポートを構成します。
+2. COM ポートを追加します。 これを行うには、 [Set VMComPort](/powershell/module/hyper-v/set-vmcomport?view=win10-ps) コマンドレットを使用します。 たとえば、次のコマンドは、仮想マシンの名前付きパイプ TestPipe、ローカル コンピューター上に接続するための TestVM で最初の COM ポートを構成します。
 
     ```powershell
     Set-VMComPort -VMName TestVM 1 \\.\pipe\TestPipe
@@ -247,7 +246,7 @@ COM ポートを追加するには:
 > [!NOTE]
 > 構成済みの COM ポートは、Hyper-v マネージャーの仮想マシンの設定に一覧表示されません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Hyper-V での Linux および FreeBSD の仮想マシン](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 - [VMConnect を使って Hyper-V 仮想マシン上でローカル リソースを使用する](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)

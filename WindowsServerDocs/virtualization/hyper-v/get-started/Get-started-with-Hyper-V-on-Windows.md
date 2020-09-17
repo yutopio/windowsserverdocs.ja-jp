@@ -1,24 +1,23 @@
 ---
 title: Windows Server での Hyper-v の概要
 description: Hyper-v の概要に関する記事へのリンクを提供します。
-manager: dongill
 ms.topic: get-started-article
 ms.assetid: 9a3f8b74-f3c0-433f-a320-850ca8610757
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 10/07/2016
-ms.openlocfilehash: 60caaa261a8c4d67dc868a4d877b593512461d99
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1a6d4c3e958a95cbb934b84fae270517ad02c93a
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996583"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746017"
 ---
 # <a name="get-started-with-hyper-v-on-windows-server"></a>Windows Server での Hyper-v の概要
 
 >適用先:Windows Server 2016、Microsoft Hyper-V Server 2016、Windows Server 2019、Microsoft Hyper-V Server 2019
 
-次のリソースを使用して、Windows Server 2019 または Windows Server 2016 の Server Core または GUI インストールオプションで Hyper-v をセットアップして試してみてください。 ただし、インストールする前に、 [Windows Server のシステム要件](../../../get-started/system-requirements.md)と[Hyper-v のシステム要件](../System-requirements-for-Hyper-V-on-Windows.md)を確認してください。
+次のリソースを使用して、Windows Server 2019 または Windows Server 2016 の Server Core または GUI インストールオプションで Hyper-v をセットアップして試してみてください。 ただし、インストールする前に、 [Windows Server のシステム要件](../../../get-started/system-requirements.md) と [Hyper-v のシステム要件](../System-requirements-for-Hyper-V-on-Windows.md)を確認してください。
 
 - [Windows Server のダウンロードとインストール](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019)
 

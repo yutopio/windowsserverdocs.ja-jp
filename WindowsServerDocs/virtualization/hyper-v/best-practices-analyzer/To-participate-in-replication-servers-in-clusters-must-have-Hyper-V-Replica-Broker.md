@@ -1,18 +1,17 @@
 ---
 title: レプリケーションに参加するには、フェールオーバークラスター内のサーバーに Hyper-v レプリカブローカーが構成されている必要があります。
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 5ec88ce5-a8b2-4ece-9062-366523c8b17f
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 5394a649c095fff6ac1c925481b01192c2942bf9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7fdd6167561be4922540a0def1f91f70b519aa0f
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87960345"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746127"
 ---
 # <a name="to-participate-in-replication-servers-in-failover-clusters-must-have-a-hyper-v-replica-broker-configured"></a>レプリケーションに参加するには、フェールオーバークラスター内のサーバーに Hyper-v レプリカブローカーが構成されている必要があります。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87960345"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -35,7 +34,7 @@ ms.locfileid: "87960345"
 ## <a name="impact"></a>影響
 *仮想マシンが別のフェールオーバークラスターノードに移動された場合、レプリケーションを続行できません。*
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 *フェールオーバークラスターマネージャーを使用して、Hyper-v レプリカブローカーを構成します。Hyper-v マネージャーで、レプリケーション構成で Hyper-v レプリカブローカー名がサーバー名として使用されていることを確認します。*
 
 

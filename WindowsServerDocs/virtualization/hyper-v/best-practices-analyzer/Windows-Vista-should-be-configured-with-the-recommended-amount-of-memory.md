@@ -1,18 +1,17 @@
 ---
 title: Windows Vista には推奨されるメモリ量を構成します。
 description: このベストプラクティスアナライザー規則によって報告された問題を解決するための手順を示します。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 64f4e53b-4adb-4e1d-bc48-c24f5f9d222f
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: edfc39153785b9926a39032520082329ad37d830
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: bd9c645dd1649ad23a37fda1727bfd9678097d51
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989778"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746167"
 ---
 # <a name="windows-vista-should-be-configured-with-the-recommended-amount-of-memory"></a>Windows Vista には推奨されるメモリ量を構成します。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87989778"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -39,7 +38,7 @@ ms.locfileid: "87989778"
 
 \<list of virtual machine names>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *HYPER-V マネージャーを使用して、1 GB 以上にするには、この仮想マシンに割り当てるメモリを増やします。*
 
@@ -47,17 +46,17 @@ ms.locfileid: "87989778"
 
 1.  Hyper-V マネージャーを開きます。 **[スタート]** ボタンをクリックし、**[管理ツール]** をポイントして **[Hyper-V マネージャー]** をクリックします。
 
-2.  結果ウィンドウで [ **仮想マシン**, 、構成する仮想マシンを選択します。 バーチャルマシンの状態は [**オフ (オフ**)」と表示されます。 そうでない場合は、バーチャルマシンを右クリックし、[**シャットダウン**] をクリックします。
+2.  結果ウィンドウで [ **仮想マシン**, 、構成する仮想マシンを選択します。 バーチャルマシンの状態は [ **オフ (オフ**)」と表示されます。 そうでない場合は、バーチャルマシンを右クリックし、[ **シャットダウン**] をクリックします。
 
 3.  **[操作]** ウィンドウで、仮想マシン名の下の **[設定]** をクリックします。
 
-4.  ナビゲーションウィンドウで、[**メモリ**] をクリックします。
+4.  ナビゲーションウィンドウで、[ **メモリ**] をクリックします。
 
-5.  [**メモリ**] ページで、**スタートアップ RAM**を 1 GB 以上に設定し、[ **OK]** をクリックします。
+5.  [ **メモリ** ] ページで、 **スタートアップ RAM** を 1 GB 以上に設定し、[ **OK]** をクリックします。
 
 ### <a name="increase-the-memory-using-windows-powershell"></a>Windows PowerShell を使用してメモリを増やす
 
-1.  Windows PowerShell を開きます。 (デスクトップから [**スタート**] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
+1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
 2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
 
@@ -67,5 +66,5 @@ ms.locfileid: "87989778"
 Set-VMMemory <MyVM> -StartupBytes 1GB
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [設定-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)

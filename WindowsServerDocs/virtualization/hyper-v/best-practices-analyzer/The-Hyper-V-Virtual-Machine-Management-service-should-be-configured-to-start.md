@@ -1,18 +1,17 @@
 ---
 title: HYPER-V 仮想マシン管理サービスは、自動的に開始するように構成する必要があります。
 description: このベストプラクティスアナライザー規則によって報告された問題を解決するための手順を示します。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 222bbe76-c514-4a3f-b61b-860a4dc2826a
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 73ef8f7de89da5a05fedd53b9b23a32fed683dbf
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8245e425adb1b1187918e9ee213135c16a190cde
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87960485"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746497"
 ---
 # <a name="the-hyper-v-virtual-machine-management-service-should-be-configured-to-start-automatically"></a>HYPER-V 仮想マシン管理サービスは、自動的に開始するように構成する必要があります。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87960485"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -39,7 +38,7 @@ ms.locfileid: "87960485"
 
 実行されている仮想マシンは引き続き実行します。 ただし、仮想マシンを管理または作成またはサービスが実行されるまでは、それらを削除することはできません。
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *サービス スナップインまたは sc config コマンド ライン ツールを使用して、自動的に開始するサービスを再構成します。*
 

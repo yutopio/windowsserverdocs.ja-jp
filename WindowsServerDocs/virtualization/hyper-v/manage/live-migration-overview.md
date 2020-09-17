@@ -3,15 +3,15 @@ title: ライブ マイグレーションの概要
 description: Windows Server 2016 のライブマイグレーション機能の概要を示します。
 ms.topic: article
 ms.assetid: 5cc875ab-05c4-439e-b27d-6bfc77054660
-author: johncslack
-ms.author: joslack
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 06/27/2017
-ms.openlocfilehash: 442e546983d1758dbe4d658eba29fca917e6225c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 46768ced2b493ff68df945739fb0b3f920846c7d
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994084"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746617"
 ---
 # <a name="live-migration-overview"></a>ライブ マイグレーションの概要
 
@@ -20,14 +20,14 @@ ms.locfileid: "87994084"
 ## <a name="related-technologies-and-documentation"></a>関連テクノロジとドキュメント
 
 ライブマイグレーションは、フェールオーバークラスタリングや System Center Virtual Machine Manager など、いくつかの関連テクノロジと組み合わせて使用されることがよくあります。  これらのテクノロジを使用してライブマイグレーションを使用している場合は、最新のドキュメントを参照してください。
-* [フェールオーバークラスタリング](../../../failover-clustering/failover-clustering-overview.md)(Windows Server 2016)
+* [フェールオーバークラスタリング](../../../failover-clustering/failover-clustering-overview.md) (Windows Server 2016)
 * [System Center Virtual Machine Manager](/system-center/vmm/) (System Center 2016)
 
 以前のバージョンの Windows Server を使用している場合、または以前のバージョンの Windows Server で導入された機能の詳細が必要な場合は、次のドキュメントを参照してください。
-* [ライブマイグレーション](/previous-versions/windows/it-pro/microsoft-hyper-v-server-2008-R2/ee815293(v=ws.10))(Windows Server 2008 R2)
-* [ライブマイグレーション](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831435(v=ws.11))(Windows Server 2012 R2)
-* [フェールオーバークラスタリング](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))(Windows Server 2012 R2)
-* [フェールオーバークラスタリング](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff182338(v=ws.10))(Windows Server 2008 R2)
+* [ライブマイグレーション](/previous-versions/windows/it-pro/microsoft-hyper-v-server-2008-R2/ee815293(v=ws.10)) (Windows Server 2008 R2)
+* [ライブマイグレーション](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831435(v=ws.11)) (Windows Server 2012 R2)
+* [フェールオーバークラスタリング](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11)) (Windows Server 2012 R2)
+* [フェールオーバークラスタリング](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff182338(v=ws.10)) (Windows Server 2008 R2)
 * [System Center Virtual Machine Manager](/previous-versions/system-center/system-center-2012-R2/gg610610(v=sc.12)) (System Center 2012 R2)
 * [System Center Virtual Machine Manager](https://technet.microsoft.com/library/cc917964.aspx) (System Center 2008 R2)
 

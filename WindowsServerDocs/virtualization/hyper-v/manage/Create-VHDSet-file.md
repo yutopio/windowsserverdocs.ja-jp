@@ -3,18 +3,15 @@ title: Hyper-v VHD セットファイルの作成
 description: Hyper-v 2016 で VHDset ファイルを作成する手順
 author: jiwool
 ms.author: jiwool
-manager: senthilr
 ms.date: 01/26/2017
 ms.topic: article
 ms.assetid: 444e1496-9e5a-41cf-bfbc-306e2ed8e00a
-audience: IT Pros
-ms.reviewer: kathydav
-ms.openlocfilehash: a2c4b2ff3ca4dda2cb2989c629c5dac5f529cac0
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 7e2c287666115b9a81c6ab5585187f26dad7a5e3
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991454"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746467"
 ---
 # <a name="create-hyper-v-vhd-set-files"></a>Hyper-v VHD セットファイルの作成
 VHD セットファイルは、Windows Server 2016 のゲストクラスター用の新しい共有仮想ディスクモデルです。 VHD セットファイルは、共有仮想ディスクのオンラインサイズ変更をサポートし、Hyper-v レプリカをサポートします。また、アプリケーション整合性チェックポイントに含めることができます。
@@ -29,14 +26,14 @@ Hyper-v では、チェックポイントチェーンの管理と共有 VHD セ�
 ## <a name="create-a-vhd-set-file-from-hyper-v-manager"></a>Hyper-v マネージャーからの VHD セットファイルの作成
 
 1.  Hyper-V マネージャーを開きます。 **[スタート]** ボタンをクリックし、**[管理ツール]** をポイントして **[Hyper-V マネージャー]** をクリックします。
-2.  [操作] ウィンドウで [**新規作成**] をクリックし、[**ハードディスク**] をクリックします。
-3.  [**ディスクフォーマットの選択**] ページで、バーチャルハードディスクの形式として [ **VHD Set** ] を選択します。
-4.  ウィザードのページに進み、バーチャルハードディスクをカスタマイズします。 [**次へ**] をクリックしてウィザードの各ページを移動するか、左ペインでページの名前をクリックすると、そのページに直接移動できます。
-5.  バーチャルハードディスクの構成が完了したら、[**完了**] をクリックします。
+2.  [操作] ウィンドウで [ **新規作成**] をクリックし、[ **ハードディスク**] をクリックします。
+3.  [ **ディスクフォーマットの選択** ] ページで、バーチャルハードディスクの形式として [ **VHD Set** ] を選択します。
+4.  ウィザードのページに進み、バーチャルハードディスクをカスタマイズします。 [ **次へ** ] をクリックしてウィザードの各ページを移動するか、左ペインでページの名前をクリックすると、そのページに直接移動できます。
+5.  バーチャルハードディスクの構成が完了したら、[ **完了**] をクリックします。
 
 ## <a name="create-a-vhd-set-file-from-windows-powershell"></a>Windows PowerShell からの VHD セットファイルの作成
 
-ファイルの種類を使用して、[新しい VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps)コマンドレットを使用します。ファイルパス内の VHD。 この例では、10 Gb の base .vhd という名前の VHD セットファイルを作成します。
+ファイルの種類を使用して、 [新しい VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps) コマンドレットを使用します。ファイルパス内の VHD。 この例では、10 Gb の base .vhd という名前の VHD セットファイルを作成します。
 
 ``` PowerShell
 PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB

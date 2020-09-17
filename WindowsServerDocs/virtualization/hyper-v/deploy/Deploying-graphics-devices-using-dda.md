@@ -2,22 +2,22 @@
 title: Discrete Device Assignment を使用したグラフィックス デバイスのデプロイ
 description: DDA を使用して Windows Server でグラフィックスデバイスを展開する方法について説明します。
 ms.topic: article
-author: chrishuybregts
-ms.author: chrihu
+ms.author: benarm
+author: BenjaminArmstrong
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
 ms.date: 08/21/2019
-ms.openlocfilehash: 0e9a79ff12b89a5b99ce95213078406eb2d21ea2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3ea25da7b8ac3be2c7d2c194df6ead57653b2c76
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945975"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746097"
 ---
 # <a name="deploy-graphics-devices-using-discrete-device-assignment"></a>Discrete Device Assignment を使用したグラフィックス デバイスのデプロイ
 
 > 適用対象: Microsoft Hyper-V Server 2016、Windows Server 2016、Windows Server 2019、Microsoft Hyper-V Server 2019
 
-Windows Server 2016 以降では、個別のデバイス割り当て (DDA) を使用して、PCIe デバイス全体を VM に渡すことができます。  これにより、デバイスのネイティブドライバーを利用できるのに対して、VM 内から[NVMe ストレージ](./Deploying-storage-devices-using-dda.md)やグラフィックスカードなどのデバイスに高パフォーマンスでアクセスできるようになります。  デバイスの展開については、デバイス[の個別割り当てを使用したデバイスの展開計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)に関するページを参照してください。
+Windows Server 2016 以降では、個別のデバイス割り当て (DDA) を使用して、PCIe デバイス全体を VM に渡すことができます。  これにより、デバイスのネイティブドライバーを利用できるのに対して、VM 内から [NVMe ストレージ](./Deploying-storage-devices-using-dda.md) やグラフィックスカードなどのデバイスに高パフォーマンスでアクセスできるようになります。  デバイスの展開については、デバイス [の個別割り当てを使用したデバイスの展開計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) に関するページを参照してください。
 
 デバイスに個別のデバイス割り当てを使用するには、次の3つの手順を実行します。
 -   個別のデバイスの割り当て用に VM を構成する
@@ -37,7 +37,7 @@ Set-VM -Name VMName -AutomaticStopAction TurnOff
 
 ### <a name="some-additional-vm-preparation-is-required-for-graphics-devices"></a>グラフィックスデバイスには、追加の VM 準備が必要です。
 
-VM が特定の方法で構成されていると、一部のハードウェアのパフォーマンスが向上します。  ハードウェアに次の構成が必要かどうかの詳細については、ハードウェアベンダーにお問い合わせください。 その他の詳細につい[ては、「個別のデバイスの割り当てを使用したデバイスのデプロイ計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)」と、このブログの投稿を参照して[ください。](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266)
+VM が特定の方法で構成されていると、一部のハードウェアのパフォーマンスが向上します。  ハードウェアに次の構成が必要かどうかの詳細については、ハードウェアベンダーにお問い合わせください。 その他の詳細につい [ては、「個別のデバイスの割り当てを使用したデバイスのデプロイ計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) 」と、このブログの投稿を参照して [ください。](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266)
 
 1. CPU で書き込み結合を有効にする
    ```
@@ -52,7 +52,7 @@ VM が特定の方法で構成されていると、一部のハードウェア�
    Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
    ```
    > [!TIP]
-   > 上の MMIO space 値は、1つの GPU を試すために設定する妥当な値です。  VM を起動した後、デバイスがリソース不足に関連するエラーを報告している場合は、これらの値を変更する必要があります。 MMIO の要件を正確に計算する方法については、 [「個別のデバイスの割り当てを使用したデバイスの展開計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)」を参照してください。
+   > 上の MMIO space 値は、1つの GPU を試すために設定する妥当な値です。  VM を起動した後、デバイスがリソース不足に関連するエラーを報告している場合は、これらの値を変更する必要があります。 MMIO の要件を正確に計算する方法については、 [「個別のデバイスの割り当てを使用したデバイスの展開計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) 」を参照してください。
 
 ## <a name="dismount-the-device-from-the-host-partition"></a>ホストパーティションからデバイスのマウントを解除する
 ### <a name="optional---install-the-partitioning-driver"></a>オプション-パーティションドライバーをインストールする
@@ -60,7 +60,7 @@ VM が特定の方法で構成されていると、一部のハードウェア�
 > パーティション分割ドライバーが指定されていない場合、マウントを解除するときに、オプションを使用してセキュリティの警告を回避する必要があり `-force` ます。 [個別のデバイスの割り当てを使用してデバイスを展開する計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)については、セキュリティへの影響について詳しくお読みください。
 
 ### <a name="locating-the-devices-location-path"></a>デバイスの場所のパスを特定する
-ホストからデバイスをマウント解除してマウントするには、PCI ロケーションパスが必要です。  ロケーションパスの例は次のように `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"` なります。  場所のパスの詳細については、「[個別のデバイスの割り当てを使用したデバイスの展開の計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)」を参照してください。
+ホストからデバイスをマウント解除してマウントするには、PCI ロケーションパスが必要です。  ロケーションパスの例は次のように `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"` なります。  場所のパスの詳細については、「 [個別のデバイスの割り当てを使用したデバイスの展開の計画](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)」を参照してください。
 
 ### <a name="disable-the-device"></a>デバイスを無効にする
 デバイスマネージャーまたは PowerShell を使用して、デバイスが "無効" になっていることを確認します。

@@ -1,18 +1,17 @@
 ---
 title: 仮想ファイバー チャネル アダプターで構成された仮想マシンをファイバー チャネル ベースの記憶域を高可用性を構成してください。
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 73127bdd-8086-4268-a93c-2fdf1623e91b
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 60a96d6e559f3fefe6f8c1c52c2d145efa006c99
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8a6c86f34f42dd88b29653096fbcb67919081a08
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87960185"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746217"
 ---
 # <a name="virtual-machines-configured-with-a-virtual-fibre-channel-adapter-should-be-configured-for-high-availability-to-the-fibre-channel-based-storage"></a>仮想ファイバー チャネル アダプターで構成された仮想マシンをファイバー チャネル ベースの記憶域を高可用性を構成してください。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87960185"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|情報|
+|**Severity**|Information|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87960185"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>**解決策**
+## <a name="resolution"></a>**解決方法**
 *仮想マシンからホスト バス アダプターに別の接続を追加し、ファイバー チャネルの冗長な接続を確立するためにゲスト オペレーティング システムにマルチパス I/O (MPIO) を構成します。*
 
 

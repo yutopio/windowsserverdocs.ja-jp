@@ -1,18 +1,17 @@
 ---
 title: SR-IOV を使用するように仮想マシンが構成されている場合、仮想関数ドライバーが正しく動作することを確認します。
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: d21e4b93-29bf-423a-a635-71c6d48dc49e
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 8fc14e14ff66b59099ebad1f3b9643b94427346a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3be2f616ab8981e887688404f2907524f5f53e49
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954489"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746847"
 ---
 # <a name="ensure-that-the-virtual-function-driver-operates-correctly-when-a-virtual-machine-is-configured-to-use-sr-iov"></a>SR-IOV を使用するように仮想マシンが構成されている場合、仮想関数ドライバーが正しく動作することを確認します。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87954489"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87954489"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 *ゲストオペレーティングシステムで、次の手順を実行します。適切なドライバーがインストールされており、すべてのネットワークデバイスが有効になっていることを確認し、イベントログにエラーまたは警告がないかどうかを確認します。*
 
 

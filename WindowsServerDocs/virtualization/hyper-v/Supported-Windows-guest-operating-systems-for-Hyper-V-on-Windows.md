@@ -1,18 +1,17 @@
 ---
 title: Windows Server 上の Hyper-v でサポートされている Windows ゲストオペレーティングシステム
 description: 仮想マシンでゲストとして使用できるようにサポートされている Windows オペレーティングシステムの一覧を示します。 また、以前のバージョンの Hyper-v に関する同様の記事へのリンクも示します。
-manager: dongill
 ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
-author: lizap
-ms.author: elizapo
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 01/08/2019
-ms.openlocfilehash: 53036a353fa08b7be06aae6b4b70353a8a99ea0e
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2e5cf6c94d0127a283c640a48aaa2fced5472e9d
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997628"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746727"
 ---
 # <a name="supported-windows-guest-operating-systems-for-hyper-v-on-windows-server"></a>Windows Server 上の Hyper-v でサポートされている Windows ゲストオペレーティングシステム
 
@@ -32,7 +31,7 @@ Windows server 2016 および Windows Server 2019 で Hyper-v のゲストオペ
 |Windows Server バージョン 1903 |ジェネレーション 2 の 240<br>64 (第1世代)|組み込み||
 |Windows Server、バージョン 1809 |ジェネレーション 2 の 240<br>64 (第1世代)|組み込み||
 |Windows Server 2019 |ジェネレーション 2 の 240<br>64 (第1世代)|組み込み||
-|Windows Server バージョン 1803 |ジェネレーション 2 の 240<br>64 (第1世代)|組み込み||
+|Windows Server、バージョン 1803 |ジェネレーション 2 の 240<br>64 (第1世代)|組み込み||
 |Windows Server 2016 |ジェネレーション 2 の 240<br>64 (第1世代)|組み込み||
 |Windows Server 2012 R2 |64|組み込み||
 |Windows Server 2012 |64|組み込み||

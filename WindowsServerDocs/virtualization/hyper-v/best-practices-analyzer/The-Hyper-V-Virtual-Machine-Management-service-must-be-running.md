@@ -1,18 +1,17 @@
 ---
 title: HYPER-V 仮想マシン管理サービスを実行する必要があります。
 description: このベストプラクティスアナライザー規則によって報告された問題を解決するための手順を示します。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
-author: kbdazure
 ms.date: 10/03/2016
-ms.openlocfilehash: 889529d8920f9ae0c9e6d431ae1e4cd2c3b75172
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6fe2f95821b23f98931b7cecc3c59dc58f0f5e37
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87960495"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746237"
 ---
 # <a name="the-hyper-v-virtual-machine-management-service-must-be-running"></a>HYPER-V 仮想マシン管理サービスを実行する必要があります。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87960495"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|前提条件|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -39,7 +38,7 @@ ms.locfileid: "87960495"
 
 実行されている仮想マシンは引き続き実行します。 ただし、仮想マシンを管理または作成またはサービスが実行されるまでは、それらを削除することはできません。
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *サービススナップインまたは Sc config コマンドラインツールを使用して、サービスを自動的に開始するように再構成します。*
 
@@ -64,7 +63,7 @@ Hyper-v 管理ツールをインストールするには、次のようにしま
 
 ### <a name="to-reconfigure-the-service-to-start-automatically-using-sc-config"></a>SC Config を自動的に使用を開始するサービスを再構成するには
 
-1.  Windows PowerShell を開きます。 (デスクトップから [**スタート**] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
+1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
 2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
 

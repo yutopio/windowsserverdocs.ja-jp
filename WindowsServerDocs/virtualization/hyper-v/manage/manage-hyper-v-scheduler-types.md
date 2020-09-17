@@ -1,18 +1,18 @@
 ---
 title: Hyper-v ハイパーバイザーのスケジューラの種類について理解し、使用する
 description: Hyper-v のスケジューラモードの使用に関する Hyper-v ホスト管理者向けの情報を提供します。
-author: allenma
-ms.author: allenma
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: low
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
-ms.openlocfilehash: a1f53dba659af7d5ac0efff2e72bd168523bde0c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1aa270adc30f72f8efcdbbea2162e3c6b925dade
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995632"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746427"
 ---
 # <a name="managing-hyper-v-hypervisor-scheduler-types"></a>Hyper-v ハイパーバイザーのスケジューラの種類の管理
 
@@ -21,9 +21,9 @@ ms.locfileid: "87995632"
 この記事では、Windows Server 2016 で初めて導入された仮想プロセッサスケジューリングロジックの新しいモードについて説明します。 これらのモードまたはスケジューラの種類によって、Hyper-v ハイパーバイザーがゲスト仮想プロセッサ間での作業の割り当てと管理を行う方法が決まります。 Hyper-v ホスト管理者は、ゲスト仮想マシン (Vm) に最適なハイパーバイザースケジューラの種類を選択し、スケジュールロジックを利用するように Vm を構成できます。
 
 > [!NOTE]
-> このドキュメントで説明されているハイパーバイザースケジューラ機能を使用するには、更新プログラムが必要です。 詳細については、「[必須の更新プログラム](#required-updates)」を参照してください。
+> このドキュメントで説明されているハイパーバイザースケジューラ機能を使用するには、更新プログラムが必要です。 詳細については、「 [必須の更新プログラム](#required-updates)」を参照してください。
 
-## <a name="background"></a>バックグラウンド
+## <a name="background"></a>背景
 
 Hyper-v 仮想プロセッサスケジュールの背後にあるロジックと制御について説明する前に、この記事で説明されている基本的な概念を確認することをお勧めします。
 
@@ -135,19 +135,19 @@ Windows Server 2016 Hyper-v では、従来のハイパーバイザースケジ�
 
 ## <a name="windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler"></a>Windows Server 2019 Hyper-v は、既定でコアスケジューラを使用する
 
-最適なセキュリティ構成で Hyper-v ホストを確実に展開できるように、Windows Server 2019 Hyper-v では、既定でコアハイパーバイザースケジューラモデルが使用されるようになりました。 ホスト管理者は、必要に応じて、従来のクラシックスケジューラを使用するようにホストを構成することができます。 管理者は、スケジューラの種類の既定の設定を上書きする前に、各スケジューラの種類が仮想化ホストのセキュリティとパフォーマンスに与える影響を慎重に確認し、理解し、考慮する必要があります。  詳細については[、「hyper-v scheduler の種類の選択につい](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/understanding-hyper-v-scheduler-type-selection)て」を参照してください。
+最適なセキュリティ構成で Hyper-v ホストを確実に展開できるように、Windows Server 2019 Hyper-v では、既定でコアハイパーバイザースケジューラモデルが使用されるようになりました。 ホスト管理者は、必要に応じて、従来のクラシックスケジューラを使用するようにホストを構成することができます。 管理者は、スケジューラの種類の既定の設定を上書きする前に、各スケジューラの種類が仮想化ホストのセキュリティとパフォーマンスに与える影響を慎重に確認し、理解し、考慮する必要があります。  詳細については [、「hyper-v scheduler の種類の選択につい](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/understanding-hyper-v-scheduler-type-selection) て」を参照してください。
 
 ### <a name="required-updates"></a>必要な更新プログラム
 
 > [!NOTE]
 > このドキュメントで説明されているハイパーバイザースケジューラ機能を使用するには、次の更新プログラムが必要です。 これらの更新プログラムには、 `hypervisorschedulertype` ホストの構成に必要な新しい BCD オプションをサポートするための変更が含まれています。
 
-| Version | リリース  | 更新が必要 | KB Article |
+| Version | Release  | 更新が必要 | KB Article |
 |--------------------|------|---------|-------------:|
 |Windows Server 2016 | 1607 | 2018.07 C | [KB4338822](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822) |
 |Windows Server 2016 | 1703 | 2018.07 C | [KB4338827](https://support.microsoft.com/help/4338827/windows-10-update-kb4338827) |
 |Windows Server 2016 | 1709 | 2018.07 C | [KB4338817](https://support.microsoft.com/help/4338817/windows-10-update-kb4338817) |
-|Windows Server 2019 | 1804 | None | None |
+|Windows Server 2019 | 1804 | なし | なし |
 
 ## <a name="selecting-the-hypervisor-scheduler-type-on-windows-server"></a>Windows Server でのハイパーバイザースケジューラの種類の選択
 

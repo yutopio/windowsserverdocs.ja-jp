@@ -1,18 +1,17 @@
 ---
 title: 使用中の論理プロセッサの数は、サポートされている最大を超えていない必要があります。
 description: このベストプラクティスアナライザー規則によって報告された問題を解決するための手順を示します。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 66df8b02-91d1-424b-8934-a39c214d530e
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 4a78f81fa90bc25d9ca1888d2c74d90a417f1071
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 580d04af45416e08e536d815390be0e45b760312
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993432"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746147"
 ---
 # <a name="the-number-of-logical-processors-in-use-must-not-exceed-the-supported-maximum"></a>使用中の論理プロセッサの数は、サポートされている最大を超えていない必要があります。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87993432"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|ポリシー|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示されるテキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87993432"
 
 *Microsoft では、このコンピューターで HYPER-V を実行することはできません。*
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *このコンピューターから一部のプロセッサを削除するか、msconfig を使用して、使用可能なプロセッサの数を制限します。*
 

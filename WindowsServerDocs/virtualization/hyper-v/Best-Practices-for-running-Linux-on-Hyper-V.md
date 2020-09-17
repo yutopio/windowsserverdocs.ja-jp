@@ -1,18 +1,17 @@
 ---
 title: HYPER-V で Linux を実行するためのベスト プラクティス
 description: 仮想マシンで Linux を実行するための推奨事項を提供します。
-manager: dongill
 ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 04/15/2020
-ms.openlocfilehash: b9a03ec24adf0b77ff4a6e477f550c63760c9d85
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 216bd83eb06cd14b2b2290e3294041b097cfdbd9
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989107"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90747167"
 ---
 # <a name="best-practices-for-running-linux-on-hyper-v"></a>HYPER-V で Linux を実行するためのベスト プラクティス
 
@@ -47,7 +46,7 @@ PS > New-VHD -Path C:\MyVHDs\test.vhdx -SizeBytes 127GB -Dynamic -BlockSizeBytes
 
 PIT タイマーは第2世代 Virtual Machines には存在しないため、PxE TFTP サーバーへのネットワーク接続が途中で終了し、ブートローダーが Grub 構成を読み取らず、サーバーからカーネルが読み込まれないようにすることができます。
 
-RHEL 6.x では、次に示すように、従来の grub v 0.97 EFI ブートローダーを grub2 の代わりに使用できます。[https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html)
+RHEL 6.x では、次に示すように、従来の grub v 0.97 EFI ブートローダーを grub2 の代わりに使用できます。 [https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html)
 
 RHEL 6.x 以外の Linux ディストリビューションでは、同様の手順に従って、PxE サーバーから Linux カーネルを読み込むように grub v 0.97 を構成できます。
 
@@ -70,7 +69,7 @@ Kickstart ファイルをプレインストールカーネルに指定すると�
 
 ## <a name="use-hyper-v-specific-network-adapters-not-the-legacy-network-adapter"></a>レガシネットワークアダプターではなく、Hyper-v 固有のネットワークアダプターを使用する
 
-仮想イーサネットアダプターを構成して使用します。これは、パフォーマンスが向上した Hyper-v 固有のネットワークカードです。 レガシおよび Hyper-v 固有のネットワークアダプターの両方が仮想マシンに接続されている場合、 **ifconfig**の出力に含まれるネットワーク名に、 **_tmp12000801310**などのランダムな値が表示されることがあります。 この問題を回避するには、Linux 仮想マシンで Hyper-v 固有のネットワークアダプターを使用するときに、すべてのレガシネットワークアダプターを削除します。
+仮想イーサネットアダプターを構成して使用します。これは、パフォーマンスが向上した Hyper-v 固有のネットワークカードです。 レガシおよび Hyper-v 固有のネットワークアダプターの両方が仮想マシンに接続されている場合、 **ifconfig** の出力に含まれるネットワーク名に、 **_tmp12000801310**などのランダムな値が表示されることがあります。 この問題を回避するには、Linux 仮想マシンで Hyper-v 固有のネットワークアダプターを使用するときに、すべてのレガシネットワークアダプターを削除します。
 
 ## <a name="use-io-scheduler-noopnone-for-better-disk-io-performance"></a>ディスク i/o パフォーマンスを向上させるには、i/o scheduler noop/none を使用します。
 
@@ -84,7 +83,7 @@ Linux カーネルには、要求の順序を変更するための2セットの�
 
 ## <a name="reserve-more-memory-for-kdump"></a>Kdump 用に追加のメモリを予約する
 
-ダンプキャプチャカーネルが起動時にパニックに陥る場合は、カーネル用により多くのメモリを予約します。 たとえば、Ubuntu の grub 構成ファイルで、パラメーター **crashkernel = 384 m-: 128m**を**crashkernel = 384 M-: 256 m**に変更します。
+ダンプキャプチャカーネルが起動時にパニックに陥る場合は、カーネル用により多くのメモリを予約します。 たとえば、Ubuntu の grub 構成ファイルで、パラメーター **crashkernel = 384 m-: 128m** を **crashkernel = 384 M-: 256 m** に変更します。
 
 ## <a name="shrinking-vhdx-or-expanding-vhd-and-vhdx-files-can-result-in-erroneous-gpt-partition-tables"></a>VHDX を圧縮したり、VHD および VHDX ファイルを拡張すると、GPT パーティションテーブルにエラーが発生する可能性があります
 

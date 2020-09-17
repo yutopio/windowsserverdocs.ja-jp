@@ -1,18 +1,17 @@
 ---
 title: HYPER-V での FreeBSD の実行に関するベスト プラクティス
 description: 仮想マシンでの FreeBSD の実行に関する推奨事項について説明します。
-manager: dongill
 ms.topic: article
 ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 01/09/2017
-ms.openlocfilehash: f0903fa53e5a9384e3940c53fb880090108aa492
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 09b6f532bac2b57fd8334556501c6197fa3036cc
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968609"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90747157"
 ---
 # <a name="best-practices-for-running-freebsd-on-hyper-v"></a>HYPER-V での FreeBSD の実行に関するベスト プラクティス
 
@@ -22,7 +21,7 @@ ms.locfileid: "87968609"
 
 ## <a name="enable-carp-in-freebsd-102-on-hyper-v"></a>Hyper-v で FreeBSD 10.2 の CARP を有効にする
 
-共通アドレス冗長プロトコル (CARP) を使用すると、複数のホストが同じ IP アドレスと仮想ホスト ID (VHID) を共有して、1つ以上のサービスの高可用性を実現するのに役立ちます。 1つまたは複数のホストで障害が発生した場合、他のホストは透過的に処理されるため、ユーザーはサービスの障害に気付くことはありません。FreeBSD 10.2 で CARP を使用するには、 [freebsd ハンドブック](https://www.freebsd.org/doc/en/books/handbook/carp.html)に記載されている手順に従って、hyper-v マネージャーで次の操作を実行します。
+共通アドレス冗長プロトコル (CARP) を使用すると、複数のホストが同じ IP アドレスと仮想ホスト ID (VHID) を共有して、1つ以上のサービスの高可用性を実現するのに役立ちます。 1つまたは複数のホストで障害が発生した場合、他のホストは透過的に処理されるため、ユーザーはサービスの障害に気付くことはありません。FreeBSD 10.2 で CARP を使用するには、 [freebsd ハンドブック](https://www.freebsd.org/doc/en/books/handbook/carp.html) に記載されている手順に従って、hyper-v マネージャーで次の操作を実行します。
 
 * 仮想マシンにネットワークアダプターがあり、仮想スイッチが割り当てられていることを確認します。 仮想マシンを選択し、[**アクション**の設定] を選択し  >  **Settings**ます。
 
@@ -32,13 +31,13 @@ ms.locfileid: "87968609"
 
    1. 仮想マシンを選択し、[**アクション**の設定] を選択し  >  **Settings**ます。
 
-   2. [**ネットワークアダプター** ] を展開し、[**高度な機能**] を選択します。
+   2. [ **ネットワークアダプター** ] を展開し、[ **高度な機能**] を選択します。
 
    3. [ **MAC アドレスのスプーフィングを有効にする**] を選択します。
 
 ## <a name="create-labels-for-disk-devices"></a>ディスクデバイスのラベルを作成する
 
-デバイスノードは、起動時に新しいデバイスが検出されると作成されます。 これは、新しいデバイスを追加したときにデバイス名が変更される可能性があることを意味します。 起動時にルートマウントエラーが発生した場合は、競合や変更を回避するために、各 IDE パーティションのラベルを作成する必要があります。 詳細については、「[ディスクデバイスのラベル付け](https://www.freebsd.org/doc/handbook/geom-glabel.html)」を参照してください。 次に例を示します。
+デバイスノードは、起動時に新しいデバイスが検出されると作成されます。 これは、新しいデバイスを追加したときにデバイス名が変更される可能性があることを意味します。 起動時にルートマウントエラーが発生した場合は、競合や変更を回避するために、各 IDE パーティションのラベルを作成する必要があります。 詳細については、「 [ディスクデバイスのラベル付け](https://www.freebsd.org/doc/handbook/geom-glabel.html)」を参照してください。 次に例を示します。
 
 > [!IMPORTANT]
 > Fstab のバックアップコピーを作成してから、変更を加えてください。
@@ -58,7 +57,7 @@ ms.locfileid: "87968609"
    # exit
    ```
 
-   ジオメトリラベルの追加情報については、「[ディスクデバイスのラベル付け](https://www.freebsd.org/doc/handbook/geom-glabel.html)」を参照してください。
+   ジオメトリラベルの追加情報については、「 [ディスクデバイスのラベル付け](https://www.freebsd.org/doc/handbook/geom-glabel.html)」を参照してください。
 
 3. システムはマルチユーザーブートを続行します。 ブートが完了したら、/etc/fstab を編集し、従来のデバイス名をそれぞれのラベルに置き換えます。 最後の/etc/fstab は次のようになります。
 

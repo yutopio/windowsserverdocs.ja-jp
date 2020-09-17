@@ -1,18 +1,17 @@
 ---
 title: ネットワーク上のレプリケーショントラフィックを調整するためのポリシーを構成する
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 82cb1aef-cdc3-4d0a-88d4-ef497ab79606
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: dcee85911ebcc93e935a7df30d43768a15978ece
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 18c1c1e586075dfb1ef477c1d3f21e549791464a
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957179"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746987"
 ---
 # <a name="configure-a-policy-to-throttle-the-replication-traffic-on-the-network"></a>ネットワーク上のレプリケーショントラフィックを調整するためのポリシーを構成する
 
@@ -24,7 +23,7 @@ ms.locfileid: "87957179"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87957179"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 *別の方法を使用してネットワークトラフィックを調整する場合は、これを無視してもかまいません。それ以外の場合は、グループポリシーエディターを使用して、レプリカサーバーの関連ポートへのネットワークトラフィックを制限するポリシーを構成します。*
 
 

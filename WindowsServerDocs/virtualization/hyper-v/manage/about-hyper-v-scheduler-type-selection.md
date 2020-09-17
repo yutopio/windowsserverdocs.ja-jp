@@ -1,26 +1,26 @@
 ---
 title: Hyper-v ハイパーバイザースケジューラの種類の選択について
 description: Hyper-v のスケジューラモードの使用に関する Hyper-v ホスト管理者向けの情報を提供します。
-author: allenma
-ms.author: allenma
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: low
 ms.assetid: 5fe163d4-2595-43b0-ba2f-7fad6e4ae069
-ms.openlocfilehash: 332ec3a31d8a442fada7f01d30c5cb7d44965238
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 9c41dfb5bad28122f8c2a6b06ff6574acd89a9ec
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994095"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746627"
 ---
 # <a name="about-hyper-v-hypervisor-scheduler-type-selection"></a>Hyper-v ハイパーバイザースケジューラの種類の選択について
 
 適用先:
 
 * Windows Server 2016
-* Windows Server バージョン 1709
-* Windows Server バージョン 1803
+* Windows Server、バージョン 1709
+* Windows Server、バージョン 1803
 * Windows Server 2019
 
 このドキュメントでは、ハイパーバイザースケジューラの種類の Hyper-v の既定の推奨される使用に関する重要な変更点について説明します。 これらの変更は、システムセキュリティと仮想化の両方のパフォーマンスに影響します。 仮想化ホスト管理者は、このドキュメントで説明されている変更と影響を確認して理解し、急速に変化するセキュリティランドスケープの面で Hyper-v ホストを展開および管理する方法を理解するために必要な影響、推奨される展開ガイダンス、およびリスク要因を慎重に評価する必要があります。
@@ -28,7 +28,7 @@ ms.locfileid: "87994095"
 >[!IMPORTANT]
 >現在、複数のプロセッサアーキテクチャで sighted されている既知のサイドチャネルセキュリティの脆弱性は、マルチスレッド (SMT) が有効になっているホストで実行するときに、従来のハイパーバイザークラシックスケジューラの種類のスケジュール動作を通じて、悪意のあるゲスト VM によって悪用される可能性があります。  正常に利用できた場合、悪意のあるワークロードがパーティション境界の外部にあるデータを観察する可能性があります。 この種の攻撃は、ハイパーバイザーのコアスケジューラの種類を利用し、ゲスト Vm を再構成するように Hyper-v ハイパーバイザーを構成することで軽減できます。 コアスケジューラを使用すると、ハイパーバイザーはゲスト VM の VPs が同じ物理プロセッサコアで実行されるように制限します。そのため、データにアクセスする VM の機能が、実行されている物理コアの境界に厳密に分離されます。  これは、これらのサイドチャネル攻撃に対する非常に効果的な軽減策であり、ルートまたは別のゲストパーティションにかかわらず、他のパーティションからのアイテムを VM が監視しないようにします。  そのため、Microsoft では、仮想化ホストとゲスト Vm の既定の構成設定と推奨される構成設定を変更しています。
 
-## <a name="background"></a>バックグラウンド
+## <a name="background"></a>背景
 
 Windows Server 2016 以降、Hyper-v では、ハイパーバイザー scheduler の種類と呼ばれる仮想プロセッサのスケジュール設定と管理の方法がいくつかサポートされています。  すべてのハイパーバイザースケジューラの種類の詳細については、 [「hyper-v ハイパーバイザーのスケジューラの種類とその使用方法](./manage-hyper-v-scheduler-types.md)」を参照してください。
 
@@ -76,7 +76,7 @@ SMT が有効になっていない仮想マシンに対して VP がスケジュ
 最大のセキュリティ体制で Hyper-v ホストを展開するには、ハイパーバイザーのコアスケジューラの種類を使用する必要があります。 既定でお客様がセキュリティで保護されていることを確認するために、Microsoft では次の既定の設定と推奨設定を変更しています。
 
 >[!NOTE]
->Windows Server 2016、Windows Server 1709、および Windows Server 1803 の最初のリリースには、ハイパーバイザーによるスケジューラの内部サポートが含まれていましたが、ハイパーバイザースケジューラの種類を選択できる構成コントロールにアクセスするには、更新プログラムが必要です。  これらの更新の詳細については[、「hyper-v ハイパーバイザー scheduler の種類と使用](./manage-hyper-v-scheduler-types.md)」を参照してください。
+>Windows Server 2016、Windows Server 1709、および Windows Server 1803 の最初のリリースには、ハイパーバイザーによるスケジューラの内部サポートが含まれていましたが、ハイパーバイザースケジューラの種類を選択できる構成コントロールにアクセスするには、更新プログラムが必要です。  これらの更新の詳細については [、「hyper-v ハイパーバイザー scheduler の種類と使用](./manage-hyper-v-scheduler-types.md) 」を参照してください。
 
 ### <a name="virtualization-host-changes"></a>仮想化ホストの変更
 
@@ -119,7 +119,7 @@ VM の SMT 構成は、Hyper-v マネージャーコンソールの [概要] ペ
 Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <0, 1, 2>
 ```
 
-この場合、
+各値の説明:
 
 - 0 = ホストから SMT トポロジを継承します (Windows Server 2016 では、HwThreadCountPerCore = 0 の設定はサポートされていません)
 
@@ -166,7 +166,7 @@ Microsoft ハイパーバイザーでは、複数の enlightenments (ヒント) 
 
 ### <a name="nononarchitecturalcoresharing-enlightenment-details"></a>NoNonArchitecturalCoreSharing 啓蒙の詳細
 
-Windows Server 2016 以降では、ハイパーバイザーは、VP スケジューリングとゲスト OS への配置の処理を記述する新しい啓蒙を定義します。 この啓蒙は、[ハイパーバイザーのトップレベル機能仕様である 5.0 c](/virtualization/hyper-v-on-windows/reference/tlfs)で定義されています。
+Windows Server 2016 以降では、ハイパーバイザーは、VP スケジューリングとゲスト OS への配置の処理を記述する新しい啓蒙を定義します。 この啓蒙は、 [ハイパーバイザーのトップレベル機能仕様である 5.0 c](/virtualization/hyper-v-on-windows/reference/tlfs)で定義されています。
 
 ハイパーバイザー合成 CPUID リーフ CPUID. 0x40000004。 EAX:18 [NoNonArchitecturalCoreSharing = 1] は、兄弟 SMT スレッドとして報告される仮想プロセッサを除き、仮想プロセッサが物理コアを別の仮想プロセッサと共有しないことを示します。 たとえば、ゲスト VP は、同じプロセッサコア上の兄弟 SMT スレッドで同時に実行されたルート VP と共に、SMT スレッドで実行されることはありません。 この条件は、仮想化を実行している場合にのみ可能であり、セキュリティに深刻な影響を与えるアーキテクチャ以外の SMT 動作を表します。 ゲスト OS は、NoNonArchitecturalCoreSharing = 1 を使用して最適化を安全に行うことができることを示すことができます。これにより、同じように設定することにより、パフォーマンスのオーバーヘッドを回避できます。
 

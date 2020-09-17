@@ -1,18 +1,17 @@
 ---
 title: バーチャルマシンのファイルを保存するファイル共有には、SMB プロトコルバージョン3.0 以降を使用してください。
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 4bb832b8-f1aa-4c1f-a0f2-324dd53553ea
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: b2393e2aa0418758ff59c527cef6f38a0c8b8402
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a979035c5b58542865faf6254baf49815f81cc2d
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948389"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746787"
 ---
 # <a name="use-at-least-smb-protocol-version-30-for-file-shares-that-store-files-for-virtual-machines"></a>バーチャルマシンのファイルを保存するファイル共有には、SMB プロトコルバージョン3.0 以降を使用してください。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87948389"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87948389"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>**解決策**
+## <a name="resolution"></a>**解決方法**
 *SMB プロトコルバージョン3.0 以降を使用しているファイル共有にファイルを移動します。*
 
 

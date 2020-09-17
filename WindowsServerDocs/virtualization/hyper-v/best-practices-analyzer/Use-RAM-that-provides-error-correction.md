@@ -1,18 +1,17 @@
 ---
 title: エラー修正機能を提供する RAM を使用します。
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 1f89ceb20cbd58260f103b244be80c9d8c292d93
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 818f7400b8ada5c92bc9f780c64a83d719cc13ee
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87960335"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746817"
 ---
 # <a name="use-ram-that-provides-error-correction"></a>エラー修正機能を提供する RAM を使用します。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87960335"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|エラー|
+|**Severity**|エラー|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87960335"
 
 *Microsoft はサポートしていません Windows Server 2016 コンピューターの RAM を修正することはエラーなし。*
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *サーバーは、Windows Server catalog に掲載して HYPER-V の修飾名を確認します。*
 

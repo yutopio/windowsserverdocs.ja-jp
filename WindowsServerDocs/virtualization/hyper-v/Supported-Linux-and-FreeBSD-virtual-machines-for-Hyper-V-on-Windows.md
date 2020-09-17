@@ -1,18 +1,17 @@
 ---
 title: Windows にインストールされた Hyper-v の Linux および FreeBSD 仮想マシンがサポートされています。
 description: 各バージョンに含まれる Linux integration services と機能の一覧を示します。
-manager: dongill
 ms.topic: article
 ms.assetid: 990ff94a-30fb-434b-b4a2-3804a5245ba6
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 10/03/2016
-ms.openlocfilehash: 3c971b3b802f1059454bc8935b638ddcc10c825c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 891ad97d8ae5ef01c6dbfd0d59f7be6316c6e687
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965629"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746747"
 ---
 # <a name="supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows"></a>Windows にインストールされた Hyper-v の Linux および FreeBSD 仮想マシンがサポートされています。
 
@@ -27,7 +26,7 @@ LIS は Linux カーネルに追加されているされ、新しいリリース
 (10.0) の前に古い FreeBSD リリースには、マイクロソフトは、インストール可能な BIS ドライバーおよび FreeBSD の仮想マシンの対応するデーモンが含まれているポートを提供します。 それ以降の FreeBSD リリースの BIS、FreeBSD オペレーティング システムに組み込まれて、個別のダウンロードやインストールは FreeBSD 10.0 に必要な KVP ポート ダウンロード以外は必要ありません。
 
 > [!TIP]
-> - 評価センターから[Windows Server 2019](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019)をダウンロードします。
+> - 評価センターから [Windows Server 2019](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) をダウンロードします。
 
 このコンテンツの目的は、情報が役立ちますが、HYPER-V 上の Linux または FreeBSD 展開を容易にするためです。 特定の詳細は次のとおりです。
 

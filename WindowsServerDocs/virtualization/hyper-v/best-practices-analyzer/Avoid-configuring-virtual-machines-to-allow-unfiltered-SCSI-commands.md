@@ -1,18 +1,17 @@
 ---
 title: フィルター処理される SCSI コマンドを許可するようにバーチャルマシンを構成しない
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: dd4a3d78-a77f-451e-a383-d5cf45ea17cf
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 33c211073c74da334abb8b483fa36974216a1185
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 95d7fa223371aa3dbc3b66efcfefed217eed5216
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948585"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90747087"
 ---
 # <a name="avoid-configuring-virtual-machines-to-allow-unfiltered-scsi-commands"></a>フィルター処理される SCSI コマンドを許可するようにバーチャルマシンを構成しない
 
@@ -26,7 +25,7 @@ ms.locfileid: "87948585"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|操作|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -41,7 +40,7 @@ ms.locfileid: "87948585"
 
 \<list of virtual machine names>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 
 *この構成が必要かどうかを判断するには、記憶域のベンダーに問い合わせてください。また、管理オペレーティングシステムまたはその他のゲストオペレーティングシステムが侵害されたり、通常とは異なる動作が発生したりした場合は、コマンドをブロックするようにバーチャルマシンを再構成します。*
 

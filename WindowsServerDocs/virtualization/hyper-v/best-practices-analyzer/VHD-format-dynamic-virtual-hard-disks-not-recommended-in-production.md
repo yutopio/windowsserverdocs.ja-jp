@@ -1,18 +1,17 @@
 ---
 title: VHD 形式の動的な仮想ハード ディスクは、運用環境でサーバーのワークロードを実行する仮想マシンには推奨されません。
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 324a60a0-1d15-4ef2-9f17-23cbd2eb42ce
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 4865fcbc75ac135a6fe04622692aaf1ce2893a3a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 080858d709592fd877fc643219a7cca1bd0607ff
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87960255"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746777"
 ---
 # <a name="vhd-format-dynamic-virtual-hard-disks-are-not-recommended-for-virtual-machines-that-run-server-workloads-in-a-production-environment"></a>VHD 形式の動的な仮想ハード ディスクは、運用環境でサーバーのワークロードを実行する仮想マシンには推奨されません。
 
@@ -24,7 +23,7 @@ ms.locfileid: "87960255"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87960255"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>**解決策**
+## <a name="resolution"></a>**解決方法**
 *仮想マシンをシャットダウンし、VHD 形式の動的仮想ハードディスクを VHDX 形式の仮想ハードディスクまたは容量固定の仮想ハードディスクに変換します。(VHDX 形式には、システム電源障害によりディスクを破損から保護するのに役立つ信頼性機構があります)。ただし、仮想ハードディスクが、ある時点で以前のリリースの Windows に接続されている可能性がある場合は、変換しないでください。Windows Server 2012 より前の windows リリースでは、VHDX 形式はサポートされていません。*
 
 

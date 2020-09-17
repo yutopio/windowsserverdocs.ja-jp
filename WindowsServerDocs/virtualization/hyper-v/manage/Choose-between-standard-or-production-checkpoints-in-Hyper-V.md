@@ -1,18 +1,17 @@
 ---
 title: Hyper-v で標準チェックポイントまたは運用チェックポイントを選択する
 description: 標準チェックポイントまたは運用チェックポイントを使用するように仮想マシンを構成する手順について説明します。
-manager: dongill
 ms.topic: article
 ms.assetid: 92bb573b-03b7-470e-b72e-e35edf52b349
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 10/04/2016
-ms.openlocfilehash: 9aeff8371b357d9e4b063d48c310b32843dc00af
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 00a3c8d94fc18d180faa8927b33b90dc98854da0
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968159"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746477"
 ---
 # <a name="choose-between-standard-or-production-checkpoints-in-hyper-v"></a>Hyper-v で標準チェックポイントまたは運用チェックポイントを選択する
 
@@ -29,18 +28,18 @@ Windows Server 2016 と Windows 10 以降では、各仮想マシンの標準チ
 
 1.  **Hyper-v マネージャー**で、仮想マシンを右クリックし、[**設定**] をクリックします。
 
-2.  [**管理**] セクションで、[**チェックポイント**] を選択します。
+2.  [ **管理** ] セクションで、[ **チェックポイント**] を選択します。
 
 3.  運用チェックポイントまたは標準チェックポイントのいずれかを選択します。
 
     運用チェックポイントを選択した場合は、運用チェックポイントを取得できない場合に、ホストが標準チェックポイントを取得するかどうかを指定することもできます。 このチェックボックスをオフにして、運用チェックポイントを取得できない場合、チェックポイントは作成されません。
 
-4.  チェックポイントの構成ファイルを別の場所に保存する場合は、[**チェックポイントファイルの場所**] セクションで変更します。
+4.  チェックポイントの構成ファイルを別の場所に保存する場合は、[ **チェックポイントファイルの場所** ] セクションで変更します。
 
-5.  [**適用**] をクリックして変更を保存します。 完了したら、[ **OK** ] をクリックしてダイアログボックスを閉じます。
+5.  [ **適用** ] をクリックして変更を保存します。 完了したら、[ **OK** ] をクリックしてダイアログボックスを閉じます。
 
 > [!NOTE]
-> Active Directory Domain Services ロール (ドメインコントローラー) または Active Directory ライトウェイトディレクトリサービスロールを実行しているゲストでは、**運用チェックポイント**のみがサポートされます。
+> Active Directory Domain Services ロール (ドメインコントローラー) または Active Directory ライトウェイトディレクトリサービスロールを実行しているゲストでは、 **運用チェックポイント** のみがサポートされます。
 
 ## <a name="additional-references"></a>その他の参照情報
 

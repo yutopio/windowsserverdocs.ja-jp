@@ -1,18 +1,17 @@
 ---
 title: Hyper-V レプリカを設定する
 description: レプリカの設定、フェールオーバーのテスト、および最初のレプリケーションの実行について説明します。
-manager: dongill
 ms.topic: article
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 10/10/2016
-ms.openlocfilehash: 24fce3e0ebbfc51167a7e6e390de092433cceaff
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cfa21867503c091da42866aba4c9bc51050200ae
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87941850"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746647"
 ---
 # <a name="set-up-hyper-v-replica"></a>Hyper-V レプリカを設定する
 
@@ -30,14 +29,14 @@ Hyper-V レプリカは、Hyper-V ロールの重要な一部です。 使用可
 
 -   **フェールオーバー**: 場合は、プライマリで障害が発生した (またはセカンダリの場合の拡張) の計画、テストを手動で開始する場所または計画外のフェールオーバーします。
 
-    | 質問 | テスト | 対応予定 | 予想外 |
+    | Question | テスト | 対応予定 | 予想外 |
     |--|--|--|--|
     | ときに実行する必要がありますか。 | 仮想マシンがフェールオーバーおよびセカンダリ サイトにスタートすることを確認します。<p>テスト セットとトレーニングに便利です。 | 計画されたダウンタイムとシステム停止時に | 予期しないイベント時に |
     | 複製の仮想マシンの作成 | はい | いいえ | いいえ |
     | ここでは、開始するでしょうか。 | レプリカ仮想マシンで | プライマリで開始され、セカンダリで完了する | レプリカ仮想マシンで |
     | どのくらいの頻度で実行すればでしょうか。 | テスト用の月に 1 回をお勧め | 6 か月に 1 回またはコンプライアンスのニーズに合わせて | プライマリ仮想マシンが利用できない場合に障害が発生した場合のみ |
     | プライマリ仮想マシンは、レプリケーションを続行しますか。 | はい | 正解です。 停止するときは、プライマリとセカンダリが同期されるように、その変更が、プライマリ サイトに戻すレプリケーションの反転のレプリケートを解決します。 | いいえ |
-    | データの損失はありますか。 | None | [なし] : フェールオーバー後に、HYPER-V レプリカは、プライマリへのデータの損失を確実に最新の変更履歴のセットをレプリケートします。 | イベントおよび回復ポイントに依存します |
+    | データの損失はありますか。 | なし | [なし] : フェールオーバー後に、HYPER-V レプリカは、プライマリへのデータの損失を確実に最新の変更履歴のセットをレプリケートします。 | イベントおよび回復ポイントに依存します |
     | ダウンタイムは発生するか | [なし] : 運用環境に影響しません。 フェールオーバー中に、重複のテスト仮想マシンを作成します。 フェールオーバーが完了すると選択した後に **フェールオーバー** レプリカ仮想マシンが自動的にクリーンアップおよび削除します。 | 計画された停止の期間 | 予期しない停止の期間 |
 
 -   **回復ポイント**: を格納する回復ポイントを指定する仮想マシンのレプリケーション設定を構成するときにします。 回復ポイントは、スナップショットを表しますに仮想マシンを回復することができます。 ごく最近の回復ポイントから回復する場合、明らかに低いデータは失われます。 回復ポイントをアクセスする最大 24 時間以上前です。
@@ -81,9 +80,9 @@ Hyper-V レプリカは、Hyper-V ロールの重要な一部です。 使用可
 
 -  HYPER-V クラスターでのルールを有効にするを使用して Windows PowerShell セッションを開く **管理者として実行**, 、これらのコマンドのいずれかを実行します。
 
-    -   HTTP の場合:`get-clusternode | ForEach-Object  {Invoke-command -computername $_.name -scriptblock {Enable-Netfirewallrule -displayname "Hyper-V Replica HTTP Listener (TCP-In)"}}`
+    -   HTTP の場合:  `get-clusternode | ForEach-Object  {Invoke-command -computername $_.name -scriptblock {Enable-Netfirewallrule -displayname "Hyper-V Replica HTTP Listener (TCP-In)"}}`
 
-    -   HTTPS の場合:`get-clusternode | ForEach-Object  {Invoke-command -computername $_.name -scriptblock {Enable-Netfirewallrule -displayname "Hyper-V Replica HTTPS Listener (TCP-In)"}}`
+    -   HTTPS の場合: `get-clusternode | ForEach-Object  {Invoke-command -computername $_.name -scriptblock {Enable-Netfirewallrule -displayname "Hyper-V Replica HTTPS Listener (TCP-In)"}}`
 
 ### <a name="enable-virtual-machine-replication"></a>仮想マシンのレプリケーションを有効にする
 レプリケートする各仮想マシンでは、次の操作を行います。
@@ -114,8 +113,8 @@ Hyper-V レプリカは、Hyper-V ロールの重要な一部です。 使用可
 ## <a name="run-a-failover"></a>フェールオーバーの実行
 これらの展開手順が完了したら、複製された環境が稼働しています。 必要に応じてフェールオーバーを実行できます。
 
-**テスト フェールオーバー**: テスト フェールオーバーの右クリックし、プライマリ仮想マシンを実行し、選択する場合 **レプリケーション** > **テスト フェールオーバーの**です。 構成されている場合、またはその他の最新の回復ポイントを選択します。 新しいテスト仮想マシンが作成され、セカンダリ サイトで開始します。 テストが完了したら、レプリカ仮想マシンで [**テストフェールオーバーの停止**] を選択してクリーンアップします。 仮想マシンの場合は、一度に1つのテストフェールオーバーのみを実行できます。 詳細については、[こちら](https://blogs.technet.com/b/virtualization/archive/2012/07/26/types-of-failover-operations-in-hyper-v-replica.aspx)を参照してください。
+**テスト フェールオーバー**: テスト フェールオーバーの右クリックし、プライマリ仮想マシンを実行し、選択する場合 **レプリケーション** > **テスト フェールオーバーの**です。 構成されている場合、またはその他の最新の回復ポイントを選択します。 新しいテスト仮想マシンが作成され、セカンダリ サイトで開始します。 テストが完了したら、レプリカ仮想マシンで [  **テストフェールオーバーの停止** ] を選択してクリーンアップします。 仮想マシンの場合は、一度に1つのテストフェールオーバーのみを実行できます。 [詳細については、こちらを参照してください](https://blogs.technet.com/b/virtualization/archive/2012/07/26/types-of-failover-operations-in-hyper-v-replica.aspx)。
 
-**計画されたフェールオーバー**: 計画フェールオーバーを右クリックしてプライマリ仮想マシンを実行し、選択する **レプリケーション** > **計画されたフェールオーバーの**です。 計画されたフェールオーバーでは、データの損失を確実に前提条件チェックを実行します。 プライマリ仮想マシンがフェールオーバーを開始する前にシャット ダウンすることを確認します。 仮想マシンがフェールオーバー後がある場合は、プライマリ サイトに再び変更内容をレプリケートを開始します。 メモこれが機能するプライマリ サーバーにセカンダリ サーバーまたはプライマリ クラスターの場合、HYPER-V レプリカ ブローカーから受信レプリケーションを構成する必要があります。 フェールオーバーの送信、最後に変更履歴の設定を計画します。 詳細については、[こちら](https://blogs.technet.com/b/virtualization/archive/2012/07/31/types-of-failover-operations-in-hyper-v-replica-part-ii-planned-failover.aspx)を参照してください。
+**計画されたフェールオーバー**: 計画フェールオーバーを右クリックしてプライマリ仮想マシンを実行し、選択する **レプリケーション** > **計画されたフェールオーバーの**です。 計画されたフェールオーバーでは、データの損失を確実に前提条件チェックを実行します。 プライマリ仮想マシンがフェールオーバーを開始する前にシャット ダウンすることを確認します。 仮想マシンがフェールオーバー後がある場合は、プライマリ サイトに再び変更内容をレプリケートを開始します。 メモこれが機能するプライマリ サーバーにセカンダリ サーバーまたはプライマリ クラスターの場合、HYPER-V レプリカ ブローカーから受信レプリケーションを構成する必要があります。 フェールオーバーの送信、最後に変更履歴の設定を計画します。 [詳細については、こちらを参照してください](https://blogs.technet.com/b/virtualization/archive/2012/07/31/types-of-failover-operations-in-hyper-v-replica-part-ii-planned-failover.aspx)。
 
-**計画外のフェールオーバー**: 計画外のフェールオーバーを実行するには、レプリカ仮想マシンを右クリックし、選択 **レプリケーション** > **計画外のフェールオーバー** HYPER-V マネージャーまたはフェールオーバー クラスター マネージャーからです。 このオプションが有効になっている場合は、最新の回復ポイントまたは以前の回復ポイントを復元できます。 フェールオーバー後、確認、障害が発生したで期待どおりに、すべてが動作する仮想マシンをクリックし、 **完了** レプリカ バーチャル マシンでします。 詳細については、[こちら](https://blogs.technet.com/b/virtualization/archive/2012/08/08/types-of-failover-operations-in-hyper-v-replica-part-iii-unplanned-failover.aspx)を参照してください。
+**計画外のフェールオーバー**: 計画外のフェールオーバーを実行するには、レプリカ仮想マシンを右クリックし、選択 **レプリケーション** > **計画外のフェールオーバー** HYPER-V マネージャーまたはフェールオーバー クラスター マネージャーからです。 このオプションが有効になっている場合は、最新の回復ポイントまたは以前の回復ポイントを復元できます。 フェールオーバー後、確認、障害が発生したで期待どおりに、すべてが動作する仮想マシンをクリックし、 **完了** レプリカ バーチャル マシンでします。 [詳細については、こちらを参照してください](https://blogs.technet.com/b/virtualization/archive/2012/08/08/types-of-failover-operations-in-hyper-v-replica-part-iii-unplanned-failover.aspx)。

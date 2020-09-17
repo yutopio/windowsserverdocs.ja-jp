@@ -1,18 +1,17 @@
 ---
 title: すべての必須の仮想スイッチ拡張機能が使用可能であることを確認する
 description: このベストプラクティスアナライザールールのテキストのオンラインバージョン。
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 2f2f2698-f5ec-4cad-aa64-d6987e8142a1
-author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 48c8ee80a0044c067d29730c1ec79bd67fdc062b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8eeadf6ed8b90ef217d694e2f14b38314b8be7a5
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950256"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90746857"
 ---
 # <a name="ensure-that-all-mandatory-virtual-switch-extensions-are-available"></a>すべての必須の仮想スイッチ拡張機能が使用可能であることを確認する
 
@@ -24,7 +23,7 @@ ms.locfileid: "87950256"
 |-|-|
 |**オペレーティング システム**|Windows Server 2016|
 |**製品/機能**|Hyper-V|
-|**重大度**|警告|
+|**Severity**|警告|
 |**カテゴリ**|構成|
 
 次のセクションでは、斜体は、この問題のためのベスト プラクティス アナライザー ツールで表示される UI テキストを示します。
@@ -37,7 +36,7 @@ ms.locfileid: "87950256"
 
 \<list of virtual machines>
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解決策
 *まず、必須の拡張機能がホストにインストールされていることを確認し、必要に応じて拡張機能をインストールします。その後、必須の拡張機能が無効になっている場合は、仮想スイッチマネージャーまたは Windows PowerShell コマンドレット VMSwitchExtension を使用して拡張機能を有効にします。*
 
 
