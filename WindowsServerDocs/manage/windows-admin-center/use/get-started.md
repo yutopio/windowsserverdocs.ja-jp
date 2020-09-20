@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 02/15/2019
-ms.openlocfilehash: c824b2ae8c43be4b5b33b79ce9ddb75dd03c9a9e
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: e5ea882347a0605d814682b50c2ec71e24047472
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990530"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766975"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Windows 管理センターを使ってみる
 
@@ -19,7 +19,7 @@ ms.locfileid: "87990530"
 
 > [!Tip]
 > Windows Admin Center を初めて使用する場合
-> [Windows Admin Center についての詳細を確認する](../overview.md)か、[今すぐダウンロード](https://aka.ms/windowsadmincenter)してください。
+> [Windows Admin Center についての詳細を確認する](../overview.md)か、[今すぐダウンロード](../overview.md)してください。
 
 ## <a name="windows-admin-center-installed-on-windows-10"></a>Windows 10 にインストールされた windows 管理センター
 
@@ -28,7 +28,7 @@ ms.locfileid: "87990530"
 
 ### <a name="selecting-a-client-certificate"></a>クライアント証明書の選択
 
-Windows 10 で windows 管理センターを初めて開くときは、必ず*Windows 管理センタークライアント*証明書を選択してください (そうしないと、"このページにアクセスできません" という HTTP 403 エラーが表示されます)。
+Windows 10 で windows 管理センターを初めて開くときは、必ず *Windows 管理センタークライアント* 証明書を選択してください (そうしないと、"このページにアクセスできません" という HTTP 403 エラーが表示されます)。
 
 Microsoft Edge で、このダイアログボックスが表示されたら、次のように入力します。
 
@@ -58,7 +58,7 @@ Windows 管理センターのインストールが完了したら、メインの
 
    ![Windows 管理センター-[リソースの追加] ページ](../media/launch/ChooseConnectionType.png)
 
-3. 管理するサーバーまたはクラスターの名前を入力し、[**送信**] をクリックします。 サーバーまたはクラスターが [概要] ページの接続リストに追加されます。
+3. 管理するサーバーまたはクラスターの名前を入力し、[ **送信**] をクリックします。 サーバーまたはクラスターが [概要] ページの接続リストに追加されます。
 
    ![Windows 管理センター-[サーバー] ページ](../media/launch/addserver2.png)
 
@@ -66,11 +66,11 @@ Windows 管理センターのインストールが完了したら、メインの
 
 **複数のサーバーの一括インポート**
 
- 1. [**サーバー接続の追加**] ページで、[**サーバーのインポート**] タブを選択します。
+ 1. [ **サーバー接続の追加** ] ページで、[ **サーバーのインポート** ] タブを選択します。
 
     ![Windows 管理センター-[サーバーのインポート] タブ](../media/launch/import-servers.png)
 
- 2. [**参照**] をクリックし、追加するサーバーの fqdn のコンマまたは改行を含むテキストファイルを選択します。
+ 2. [ **参照** ] をクリックし、追加するサーバーの fqdn のコンマまたは改行を含むテキストファイルを選択します。
 
 > [!Note]
 > [PowerShell を使用した接続のエクスポート](#use-powershell-to-import-or-export-your-connections-with-tags)によって作成される .csv ファイルには、サーバー名以外の追加情報が含まれており、このインポート方法との互換性がありません。
@@ -79,13 +79,13 @@ Windows 管理センターのインストールが完了したら、メインの
 
 **Active Directory を検索してサーバーを追加する**
 
- 1. [**サーバー接続の追加**] ページで、[**検索 Active Directory** ] タブを選択します。
+ 1. [ **サーバー接続の追加** ] ページで、[ **検索 Active Directory** ] タブを選択します。
 
     ![Windows 管理センター-検索 Active Directory タブ](../media/launch/search-ad.png)
 
- 2. 検索条件を入力し、[**検索**] をクリックします。 ワイルドカード (*) がサポートされています。
+ 2. 検索条件を入力し、[ **検索**] をクリックします。 ワイルドカード (*) がサポートされています。
 
- 3. 検索が完了したら、1つまたは複数の結果を選択し、必要に応じてタグを追加して、[**追加**] をクリックします。
+ 3. 検索が完了したら、1つまたは複数の結果を選択し、必要に応じてタグを追加して、[ **追加**] をクリックします。
 
 ## <a name="authenticate-with-the-managed-node"></a>管理ノードで認証する ##
 
@@ -101,9 +101,9 @@ Windows Server に Windows 管理センターがインストールされてい�
 
 **--または--**
 
-**管理アカウントを使用し*て*資格情報を指定する**
+**管理アカウントを使用し *て* 資格情報を指定する**
 
-[**すべての接続**] で、一覧からサーバーを選択し、[管理に使用する資格情報] を選択し**て**、管理ノードへの認証に使用する資格情報を指定します。
+[ **すべての接続**] で、一覧からサーバーを選択し、[管理に使用する資格情報] を選択し **て** 、管理ノードへの認証に使用する資格情報を指定します。
 
 ![すべての接続、オプションとして管理](../media/launch-use-6.png)
 
@@ -111,11 +111,11 @@ Windows 管理センターが Windows Server でサービスモードで実行�
 
 ![[資格情報の指定] ページ](../media/launch-use-7.png)
 
-すべての接続に資格情報を適用することができます。これにより、その特定のブラウザーセッションに対して資格情報がキャッシュされます。 ブラウザーを再読み込みする場合は、**管理**者の資格情報を再入力する必要があります。
+すべての接続に資格情報を適用することができます。これにより、その特定のブラウザーセッションに対して資格情報がキャッシュされます。 ブラウザーを再読み込みする場合は、 **管理** 者の資格情報を再入力する必要があります。
 
 **ローカル管理者パスワードソリューション (LAPS)**
 
-お使いの環境で[LAPS](/previous-versions/mt227395(v=msdn.10))を使用していて、Windows 管理センターが WINDOWS 10 PC にインストールされている場合は、LAPS の資格情報を使用して、管理対象ノードで認証を行うことができます。 **このシナリオを使用する場合は、フィードバックを提供してください** [provide feedback](https://aka.ms/WACFeedback)。
+お使いの環境で [LAPS](/previous-versions/mt227395(v=msdn.10))を使用していて、Windows 管理センターが WINDOWS 10 PC にインストールされている場合は、LAPS の資格情報を使用して、管理対象ノードで認証を行うことができます。 **このシナリオを使用する場合は、フィードバックを提供してください** [provide feedback](https://aka.ms/WACFeedback)。
 
 ## <a name="using-tags-to-organize-your-connections"></a>タグを使用した接続の整理
 
@@ -128,9 +128,9 @@ Windows 管理センターが Windows Server でサービスモードで実行�
 
 ![Windows 管理センター-[タグの編集] オプション](../media/launch/tags-5.png)
 
-[**接続タグの編集**] ウィンドウでは、選択した接続のタグを変更、追加、または削除できます。
+[ **接続タグの編集** ] ウィンドウでは、選択した接続のタグを変更、追加、または削除できます。
 
-* 選択した接続に新しいタグを追加するには、[**タグの追加**] を選択し、使用するタグ名を入力します。
+* 選択した接続に新しいタグを追加するには、[ **タグの追加** ] を選択し、使用するタグ名を入力します。
 
 * 既存のタグ名を使用して選択した接続にタグを付けるには、適用するタグ名の横にあるチェックボックスをオンにします。
 

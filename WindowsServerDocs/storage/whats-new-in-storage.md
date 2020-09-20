@@ -6,12 +6,12 @@ manager: dongill
 ms.topic: article
 author: jasongerend
 ms.date: 05/29/2019
-ms.openlocfilehash: 3b1a3fa120e27439c1ec55f68521b813588d330b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b186f664411bde60351c949c0ca16e7b4d3bb40c
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965949"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766995"
 ---
 # <a name="whats-new-in-storage-in-windows-server"></a>Windows Server での記憶域の新機能
 
@@ -55,7 +55,7 @@ Windows Admin Center の新しいリリースがリリースされ、Windows Ser
 
 ### <a name="manage-storage-with-windows-admin-center"></a>Windows 管理センターを使用して記憶域を管理する
 
-[Windows 管理センター](../manage/windows-admin-center/overview.md)は、新しいローカルに展開されたブラウザーベースのアプリで、サーバー、クラスター、記憶域スペースダイレクトを使用したハイパー集約型インフラストラクチャ、および Windows 10 pc を管理します。 Windows 以外の追加コストはなく、運用環境で使用する準備ができています。
+[Windows 管理センター](../manage/windows-admin-center/overview.md) は、新しいローカルに展開されたブラウザーベースのアプリで、サーバー、クラスター、記憶域スペースダイレクトを使用したハイパー集約型インフラストラクチャ、および Windows 10 pc を管理します。 Windows 以外の追加コストはなく、運用環境で使用する準備ができています。
 
 Windows 管理センターは、windows Server 2019 およびその他のバージョンの Windows で実行されている別のダウンロードですが、それを見逃してしまいたいと思います。
 
@@ -69,7 +69,7 @@ Windows Server 2019 で記憶域スペースダイレクトには、次のよう
 
 - **ReFS ボリュームの重複除去と圧縮**
 
-    同じボリューム上に、ReFS ファイルシステムの重複除去と圧縮を使用して最大10倍のデータを格納します。 ( [1 回クリックするだけ](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be)で、Windows 管理センターで有効にすることができます)。オプションの圧縮を使用した可変サイズのチャンクストアでは、節約率が最大になりますが、マルチスレッドの後処理アーキテクチャではパフォーマンスに影響を最小限に抑えることができます。 は、最大 64 TB のボリュームをサポートし、各ファイルの最初の 4 TB を重複除去します。
+    同じボリューム上に、ReFS ファイルシステムの重複除去と圧縮を使用して最大10倍のデータを格納します。 ( [1 回クリックするだけ](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) で、Windows 管理センターで有効にすることができます)。オプションの圧縮を使用した可変サイズのチャンクストアでは、節約率が最大になりますが、マルチスレッドの後処理アーキテクチャではパフォーマンスに影響を最小限に抑えることができます。 は、最大 64 TB のボリュームをサポートし、各ファイルの最初の 4 TB を重複除去します。
 
 - **永続メモリのネイティブ サポート**
 
@@ -93,11 +93,11 @@ Windows Server 2019 で記憶域スペースダイレクトには、次のよう
 
 - **クラスターごとに 4 PB まで拡張可能**
 
-    メディア、バックアップ、およびアーカイブのユース ケースに最適なマルチペタバイトの拡張性を実現します。 Windows Server 2019 の記憶域スペース ダイレクトでは、記憶域プールあたり最大 4 ペタバイト (PB) = 4,000 テラバイトの未加工容量がサポートされます。 関連する容量ガイドラインも引き上げられています。たとえば、作成できるボリューム数が 2 倍になり (32 から 64 に増加)、それぞれの大きさも従来の 2 倍になっています (32 TB から 64 TB に増加)。 複数のクラスターをまとめて1つの記憶域名前空間内でさらに大きなスケールを行う[クラスターセット](storage-spaces/cluster-sets.md)にします。 詳細については、 [Microsoft ブログ](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)の「Storage」を参照してください。
+    メディア、バックアップ、およびアーカイブのユース ケースに最適なマルチペタバイトの拡張性を実現します。 Windows Server 2019 の記憶域スペース ダイレクトでは、記憶域プールあたり最大 4 ペタバイト (PB) = 4,000 テラバイトの未加工容量がサポートされます。 関連する容量ガイドラインも引き上げられています。たとえば、作成できるボリューム数が 2 倍になり (32 から 64 に増加)、それぞれの大きさも従来の 2 倍になっています (32 TB から 64 TB に増加)。 複数のクラスターをまとめて1つの記憶域名前空間内でさらに大きなスケールを行う [クラスターセット](storage-spaces/cluster-sets.md) にします。 詳細については、 [Microsoft ブログ](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)の「Storage」を参照してください。
 
 - **ミラーリングによって高速化されたパリティで 2 倍の速度を実現**
 
-    ミラーリングによって高速化されたパリティを使用すると、記憶域スペース ダイレクトのボリュームを作成できます。このボリュームでは、RAID-1 と RAID-5/6 の良い部分を組み合わせるような形で、一部がミラー、一部がパリティになっています  (Windows 管理センターで考えている[よりも簡単](https://www.youtube.com/watch?v=R72QHudqWpE)です)。Windows Server 2019 では、最適化により、ミラーアクセラレータのパリティのパフォーマンスが Windows Server 2016 に比べて2倍になっています。
+    ミラーリングによって高速化されたパリティを使用すると、記憶域スペース ダイレクトのボリュームを作成できます。このボリュームでは、RAID-1 と RAID-5/6 の良い部分を組み合わせるような形で、一部がミラー、一部がパリティになっています  (Windows 管理センターで考えている [よりも簡単](https://www.youtube.com/watch?v=R72QHudqWpE) です)。Windows Server 2019 では、最適化により、ミラーアクセラレータのパリティのパフォーマンスが Windows Server 2016 に比べて2倍になっています。
 
 - **ドライブの待機時間に関する外れ値の検出**
 
@@ -105,11 +105,11 @@ Windows Server 2019 で記憶域スペースダイレクトには、次のよう
 
 - **フォールト トレランスを向上するボリュームの割り当てを手動で区切る**
 
-    これにより、管理者は記憶域スペースダイレクトでボリュームの割り当てを手動で区切ることができます。 これにより、特定の条件下でフォールトトレランスを大幅に向上させることができますが、管理上の考慮事項と複雑さが増加します。 詳細については、「[ボリュームの割り当てを区切る](storage-spaces/delimit-volume-allocation.md)」を参照してください。
+    これにより、管理者は記憶域スペースダイレクトでボリュームの割り当てを手動で区切ることができます。 これにより、特定の条件下でフォールトトレランスを大幅に向上させることができますが、管理上の考慮事項と複雑さが増加します。 詳細については、「 [ボリュームの割り当てを区切る](storage-spaces/delimit-volume-allocation.md)」を参照してください。
 
 ### <a name="storage-replica"></a><a name="storage-replica2019"></a>記憶域レプリカ
 
-このリリースでは、[記憶域レプリカ](storage-replica/storage-replica-overview.md)にいくつかの機能強化が行われています。
+このリリースでは、 [記憶域レプリカ](storage-replica/storage-replica-overview.md) にいくつかの機能強化が行われています。
 
 #### <a name="storage-replica-in-windows-server-standard-edition"></a>Windows Server Standard Edition の記憶域レプリカ
 
@@ -126,7 +126,7 @@ Datacenter Edition に加えて、Windows Server Standard Edition でも記憶�
 
 #### <a name="test-failover"></a>[テスト フェールオーバー]
 
-テストまたはバックアップの目的で、レプリケートされたストレージのスナップショットを移行先サーバーに一時的にマウントできるようになりました。 詳細については、「[記憶域レプリカについてよく寄せられる質問](https://aka.ms/srfaq)」をご覧ください。
+テストまたはバックアップの目的で、レプリケートされたストレージのスナップショットを移行先サーバーに一時的にマウントできるようになりました。 詳細については、「[記憶域レプリカについてよく寄せられる質問](./storage-replica/storage-replica-frequently-asked-questions.md)」をご覧ください。
 
 #### <a name="windows-admin-center-support"></a>Windows Admin Center サポート
 
@@ -170,7 +170,7 @@ Windows Server バージョン1709は、半期チャネルの最初の Windows S
 
 記憶域レプリカによって追加されたディザスターリカバリー保護が拡張され、次のものが含まれるようになりました。
 
-- **テスト フェールオーバー**: 宛先の記憶域をマウントするオプションが、テスト フェールオーバー機能によって可能になりました。 レプリケートされた記憶域のスナップショットを、宛先ノードで、テストやバックアップの目的で、一時的にマウントすることができます。 詳細については、「[記憶域レプリカについてよく寄せられる質問](https://aka.ms/srfaq)」をご覧ください。
+- **テスト フェールオーバー**: 宛先の記憶域をマウントするオプションが、テスト フェールオーバー機能によって可能になりました。 レプリケートされた記憶域のスナップショットを、宛先ノードで、テストやバックアップの目的で、一時的にマウントすることができます。 詳細については、「[記憶域レプリカについてよく寄せられる質問](./storage-replica/storage-replica-frequently-asked-questions.md)」をご覧ください。
 - **Windows 管理センターのサポート**: サーバーマネージャーツールを使用して、Windows 管理センターでレプリケーションのグラフィカル管理をサポートできるようになりました。 これには、サーバー間のレプリケーション、クラスター間のレプリケーション、およびストレッチクラスターレプリケーションが含まれます。
 
 記憶域レプリカには、次の機能強化も含まれています。
@@ -248,8 +248,8 @@ CSV クラスターで記憶域の QoS ポリシーを作成し、Hyper-V 仮想
 ### <a name="data-deduplication"></a><a name="dedup"></a>データ重複除去
 | 機能 | 新機能か更新された機能か | 説明 |
 |---------------|----------------|-------------|
-| [大容量ボリュームのサポート](data-deduplication/whats-new.md#large-volume-support) | [更新] | Windows Server 2016 の前までは、予期される変更量に合わせてボリュームのサイズを具体的に設定する必要がありました。そして、10 TB 以上のサイズのボリュームは重複除去に適した候補ではありませんでした。 Windows Server 2016 では、データ重複除去は**最大 64 TB**のボリュームサイズをサポートしています。 |
-| [大きなファイルのサポート](data-deduplication/whats-new.md#large-file-support) | [更新] | Windows Server 2016 の前では、1 TB に近いサイズのファイルは重複除去に適した候補ではありませんでした。 Windows Server 2016 では、 **1 TB まで**のファイルが完全にサポートされています。 |
+| [大容量ボリュームのサポート](data-deduplication/whats-new.md#large-volume-support) | [更新] | Windows Server 2016 の前までは、予期される変更量に合わせてボリュームのサイズを具体的に設定する必要がありました。そして、10 TB 以上のサイズのボリュームは重複除去に適した候補ではありませんでした。 Windows Server 2016 では、データ重複除去は **最大 64 TB**のボリュームサイズをサポートしています。 |
+| [大きなファイルのサポート](data-deduplication/whats-new.md#large-file-support) | [更新] | Windows Server 2016 の前では、1 TB に近いサイズのファイルは重複除去に適した候補ではありませんでした。 Windows Server 2016 では、 **1 TB まで** のファイルが完全にサポートされています。 |
 | [Nano Server のサポート](data-deduplication/whats-new.md#nano-server-support) | 新規 | Windows Server 2016 の新しい Nano Server 展開オプションでは、データ重複除去が利用可能で、完全にサポートされています。 |
 | [簡略化されたバックアップのサポート](data-deduplication/whats-new.md#simple-backup-support) | 新規 | Windows Server 2012 R2 では、Microsoft の [Data Protection Manager](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)) などの仮想化されたバックアップ アプリケーションは、一連の手動による構成手順を実行することでサポートされていました。 Windows Server 2016 では、仮想化されたバックアップ アプリケーション用にデータ重複除去をシームレスに展開するために、使用法の種類の新しい既定値として "バックアップ" が追加されました。 |
 | [クラスター OS のローリング アップグレードのサポート](data-deduplication/whats-new.md#cluster-upgrade-support) | 新規 | データ重複除去では、Windows Server 2016 の新機能である、[クラスター OS のローリング アップグレード](..//failover-clustering/cluster-operating-system-rolling-upgrade.md)が完全にサポートされています。 |

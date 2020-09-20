@@ -6,12 +6,12 @@ author: jwwool
 ms.author: jeffrew
 ms.date: 04/12/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 381073ad383913684b1b861883b981a19583767f
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 4fd03195feb275bd56c6958f8436c607829c8392
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997528"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766665"
 ---
 # <a name="deploy-windows-admin-center-in-azure"></a>Windows Admin Center を Azure に展開する
 
@@ -29,13 +29,13 @@ ms.locfileid: "87997528"
 
 独自の証明書を指定する場合:
 
-* 証明書を[Azure Key Vault](/azure/key-vault/key-vault-whatis)にアップロードします。 まず、Azure Portal でキーコンテナーを作成し、その証明書を key vault にアップロードします。 または、Azure ポータルを使用して証明書を生成することもできます。
+* 証明書を [Azure Key Vault](/azure/key-vault/key-vault-whatis)にアップロードします。 まず、Azure Portal でキーコンテナーを作成し、その証明書を key vault にアップロードします。 または、Azure ポータルを使用して証明書を生成することもできます。
 
 ### <a name="script-parameters"></a>スクリプト パラメーター
 
 * **ResourceGroupName** -[STRING] VM が作成されるリソースグループの名前を指定します。
 
-* **名前**-[文字列] VM の名前を指定します。
+* **名前** -[文字列] VM の名前を指定します。
 
 * **Credential** -[PSCREDENTIAL] VM の資格情報を指定します。
 
@@ -47,13 +47,13 @@ ms.locfileid: "87997528"
 
 * **GenerateSslCert** -[SWITCH] MSI が自己署名 ssl 証明書を生成する必要がある場合は True を指定します。
 
-* **ポート**番号-[Int] Windows 管理センターサービスの ssl ポート番号を指定します。 省略した場合、既定値は443です。
+* **ポート** 番号-[Int] Windows 管理センターサービスの ssl ポート番号を指定します。 省略した場合、既定値は443です。
 
 * **Openports** -[int []] VM の開いているポートを指定します。
 
 * **Location** -[STRING] VM の場所を指定します。
 
-* **サイズ**-[文字列] VM のサイズを指定します。 省略した場合、既定値は "Standard_DS1_v2" になります。
+* **サイズ** -[文字列] VM のサイズを指定します。 省略した場合、既定値は "Standard_DS1_v2" になります。
 
 * **Image** -[STRING] VM のイメージを指定します。 省略した場合、既定値は "Win2016Datacenter" です。
 
@@ -145,7 +145,7 @@ Set-AzNetworkSecurityGroup -NetworkSecurityGroup $newNSG
 ### <a name="requirements-for-managed-azure-vms"></a>管理対象の Azure VM の要件
 
 ポート 5985 (WinRM over HTTP) は開いている必要があり、アクティブなリスナーを持っている必要があります。
-Azure Cloud Shell の次のコードを使用して、管理対象ノードを更新できます。 ```$ResourceGroupName```とは ```$Name``` 配置スクリプトと同じ変数を使用しますが、管理対象の VM に固有のを使用する必要があり ```$Credential``` ます。
+Azure Cloud Shell の次のコードを使用して、管理対象ノードを更新できます。 ```$ResourceGroupName``` とは ```$Name``` 配置スクリプトと同じ変数を使用しますが、管理対象の VM に固有のを使用する必要があり ```$Credential``` ます。
 
 ```powershell
 Enable-AzVMPSRemoting -ResourceGroupName $ResourceGroupName -Name $Name
@@ -155,12 +155,12 @@ Invoke-AzVMCommand -ResourceGroupName $ResourceGroupName -Name $Name -ScriptBloc
 
 ## <a name="deploy-manually-on-an-existing-azure-virtual-machine"></a>既存の Azure 仮想マシンに手動でデプロイする
 
-必要なゲートウェイ VM に Windows 管理センターをインストールする前に、HTTPS 通信に使用する SSL 証明書をインストールするか、Windows 管理センターによって生成された自己署名証明書を使用するかを選択できます。 ただし、後者のオプションを選択した場合は、ブラウザーから接続しようとすると警告が表示されます。 Edge でこの警告を回避するには、[> 詳細] をクリックして**web ページにアクセス**するか、Chrome で [詳細] を選択し **> [web ページ] に進み**ます。 テスト環境では自己署名証明書のみを使用することをお勧めします。
+必要なゲートウェイ VM に Windows 管理センターをインストールする前に、HTTPS 通信に使用する SSL 証明書をインストールするか、Windows 管理センターによって生成された自己署名証明書を使用するかを選択できます。 ただし、後者のオプションを選択した場合は、ブラウザーから接続しようとすると警告が表示されます。 Edge でこの警告を回避するには、[> 詳細] をクリックして **web ページにアクセス** するか、Chrome で [詳細] を選択し **> [web ページ] に進み**ます。 テスト環境では自己署名証明書のみを使用することをお勧めします。
 
 > [!NOTE]
 > これらの手順は、Server Core インストールではなく、デスクトップエクスペリエンスで Windows Server にをインストールするためのものです。
 
-1. [Windows 管理センター](https://aka.ms/windowsadmincenter)をローカルコンピューターにダウンロードします。
+1. [Windows 管理センター](../overview.md) をローカルコンピューターにダウンロードします。
 
 2. VM へのリモートデスクトップ接続を確立し、ローカルコンピューターから MSI をコピーして、VM に貼り付けます。
 
@@ -176,12 +176,12 @@ Invoke-AzVMCommand -ResourceGroupName $ResourceGroupName -Name $Name -ScriptBloc
 
 ### <a name="configure-the-gateway-vm-to-enable-https-port-access"></a>HTTPS ポートアクセスを有効にするゲートウェイ VM を構成します。
 
-1. Azure portal で VM に移動し、[**ネットワーク**] を選択します。
+1. Azure portal で VM に移動し、[ **ネットワーク**] を選択します。
 
 2. [**受信ポートの規則の追加**] を選択し、[**サービス**] で [ **HTTPS** ] を選択します。
 
 > [!NOTE]
-> 既定の443以外のポートを選択した場合は、[サービス] で [**カスタム**] を選択し、[**ポートの範囲**] の手順3で選択したポートを入力します。
+> 既定の443以外のポートを選択した場合は、[サービス] で [ **カスタム** ] を選択し、[ **ポートの範囲**] の手順3で選択したポートを入力します。
 
 ### <a name="accessing-a-windows-admin-center-gateway-installed-on-an-azure-vm"></a>Azure VM にインストールされている Windows 管理センターゲートウェイへのアクセス
 
@@ -192,6 +192,6 @@ Invoke-AzVMCommand -ResourceGroupName $ResourceGroupName -Name $Name -ScriptBloc
 
 Windows 管理センターにアクセスしようとすると、Windows 管理センターがインストールされている仮想マシンにアクセスするための資格情報を要求するプロンプトが表示されます。 ここでは、仮想マシンのローカルユーザーまたはローカルの administrators グループにある資格情報を入力する必要があります。
 
-VNet 内の他の Vm を追加するには、PowerShell で次のコマンドを実行するか、ターゲット VM でコマンドプロンプトを実行して、ターゲット Vm で WinRM が実行されていることを確認します。`winrm quickconfig`
+VNet 内の他の Vm を追加するには、PowerShell で次のコマンドを実行するか、ターゲット VM でコマンドプロンプトを実行して、ターゲット Vm で WinRM が実行されていることを確認します。 `winrm quickconfig`
 
-Azure VM にドメイン参加していない場合、VM はワークグループ内のサーバーのように動作するため、[ワークグループで Windows 管理センターを使用](../support/troubleshooting.md#using-windows-admin-center-in-a-workgroup)することを確認する必要があります。
+Azure VM にドメイン参加していない場合、VM はワークグループ内のサーバーのように動作するため、 [ワークグループで Windows 管理センターを使用](../support/troubleshooting.md#using-windows-admin-center-in-a-workgroup)することを確認する必要があります。

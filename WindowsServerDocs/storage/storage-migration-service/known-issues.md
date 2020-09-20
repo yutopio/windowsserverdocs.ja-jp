@@ -6,12 +6,12 @@ ms.author: nedpyle
 manager: tiaascs
 ms.date: 07/29/2020
 ms.topic: article
-ms.openlocfilehash: ea138d8bb0b804ae4d08ed6ffe330e9714af43f3
-ms.sourcegitcommit: 2b1a12c85acff137e5ac84cd0e62d8353fcdde31
+ms.openlocfilehash: 0c3e52c11f7771856608b86ddd778ef51c4c8516
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89087485"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766915"
 ---
 # <a name="storage-migration-service-known-issues"></a>記憶域移行サービスの既知の問題
 
@@ -424,7 +424,7 @@ Guidance: Confirm that the Netlogon service on the computer is reachable through
 
 転送を完了し、その後同じデータの再転送を実行すると、移行元サーバー上でデータがほとんど変更されていない場合でも、転送時間が大幅に短縮されないことがあります。
 
-非常に多数のファイルと入れ子になったフォルダーを転送する場合は、この動作が想定されます。 データのサイズが関連していません。 まず、 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) でこの動作を改善し、転送のパフォーマンスを最適化しています。 パフォーマンスをさらに調整するには、「 [インベントリと転送のパフォーマンスの最適化](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#optimizing-inventory-and-transfer-performance)」を参照してください。
+非常に多数のファイルと入れ子になったフォルダーを転送する場合は、この動作が想定されます。 データのサイズが関連していません。 まず、 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) でこの動作を改善し、転送のパフォーマンスを最適化しています。 パフォーマンスをさらに調整するには、「 [インベントリと転送のパフォーマンスの最適化](./faq.md#optimizing-inventory-and-transfer-performance)」を参照してください。
 
 ## <a name="data-does-not-transfer-user-renamed-when-migrating-to-or-from-a-domain-controller"></a>データが転送されず、ドメインコントローラーとの間で移行するときにユーザー名が変更される
 
@@ -606,7 +606,7 @@ GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\com
 
 ## <a name="inventory-fails-with-element-not-found"></a>"要素が見つかりません" でインベントリが失敗する
 
-次のシナリオについて検討してください。
+以下のシナリオについて考えてみます。
 
 DNS ホスト名を持つソースサーバーと、15文字以上の unicode 文字 ("iamalt longcomputername" など) を Active Directory 名がある。 仕様により、Windows では、従来の NetBIOS 名をこの長さに設定することはできませんでした。サーバーにという名前が付けられ、NetBIOS 名が 15 unicode ワイド文字 (例: "iamaverylongcom") に切り捨てられると、警告が表示されました。 このコンピューターのインベントリを実行しようとすると、Windows 管理センターとイベントログに次のメッセージが表示されます。
 

@@ -6,12 +6,12 @@ ms.author: billmath
 manager: femila
 ms.date: 08/11/2017
 ms.topic: article
-ms.openlocfilehash: 8a967718adc40d42c5798870b05cde6e228a0b18
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2306c5ad57b7714c10076a5bb11f6cae5bb7f92d
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956559"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766885"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>登録済みデバイスを使用したオンプレミスの条件付きアクセスの構成
 
@@ -30,7 +30,7 @@ ms.locfileid: "87956559"
 |Azure AD Connect|2015年11月の QFE 以降。  [ここで](https://www.microsoft.com/download/details.aspx?id=47594)最新バージョンを入手してください。
 |Windows Server 2016|AD FS のビルド10586以降
 |Windows Server 2016 Active Directory スキーマ|スキーマレベル85以上が必要です。
-|Windows Server 2016 ドメインコントローラー|これは、Hello For Business のキー信頼のデプロイにのみ必要です。  詳細については、[こちら](https://aka.ms/whfbdocs)を参照してください。
+|Windows Server 2016 ドメインコントローラー|これは、Hello For Business のキー信頼のデプロイにのみ必要です。  詳細については、 [こちら](/windows/security/identity-protection/hello-for-business/hello-identity-verification)を参照してください。
 |Windows 10 クライアント|上記のドメインに参加しているビルド10586以降は、Windows 10 ドメインへの参加と Microsoft Passport for Work のシナリオにのみ必要です
 |Azure AD Premium ライセンスが割り当てられているユーザーアカウントを Azure AD|デバイスを登録する場合
 
@@ -62,7 +62,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ![PowerShell](media/Configure-Device-Based-Conditional-Access-on-Premises/pshell1.png)
 
-アップグレードの詳細については、「[ドメインコントローラーを Windows Server 2016 にアップグレードする](../../ad-ds/deploy/upgrade-domain-controllers.md)」を参照してください。
+アップグレードの詳細については、「 [ドメインコントローラーを Windows Server 2016 にアップグレードする](../../ad-ds/deploy/upgrade-domain-controllers.md)」を参照してください。
 
 ## <a name="enable-azure-ad-device-registration"></a>Azure AD Device Registration を有効にします。
 このシナリオを構成するには、Azure AD でデバイス登録機能を構成する必要があります。
@@ -71,8 +71,8 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ## <a name="setup-ad-fs"></a>セットアップ AD FS
 1. [新しい AD FS 2016 ファーム](../deployment/deploying-a-federation-server-farm.md)を作成します。
-2.  または AD FS 2012 R2 から AD FS 2016 にファームを[移行](../deployment/upgrading-to-ad-fs-in-windows-server.md)する
-4. AD FS を Azure AD に接続するには、カスタムパスを使用して[Azure AD Connect](../deployment/upgrading-to-ad-fs-in-windows-server.md)をデプロイします。
+2.  または AD FS 2012 R2 から AD FS 2016 にファームを [移行](../deployment/upgrading-to-ad-fs-in-windows-server.md) する
+4. AD FS を Azure AD に接続するには、カスタムパスを使用して [Azure AD Connect](../deployment/upgrading-to-ad-fs-in-windows-server.md) をデプロイします。
 
 ## <a name="configure-device-write-back-and-device-authentication"></a>デバイスのライトバックとデバイスの認証を構成する
 > [!NOTE]
@@ -151,7 +151,7 @@ AD DS オブジェクトおよびコンテナーは適切な状態で Azure AD �
 - [構成] --> [サービス] --> [Device Registration Configuration] の Device Registration Configuration コンテナーとオブジェクト
 
 ### <a name="enable-device-write-back-in-azure-ad-connect"></a>デバイスの書き込みを有効にする Azure AD に接続します。
-この操作をまだ行っていない場合は、ウィザードをもう一度実行して [**同期オプションのカスタマイズ]** を選択し、[デバイスの書き戻し] チェックボックスをオンにして、上記のコマンドレットを実行したフォレストを選択して、Azure AD Connect でデバイスの書き戻しを有効にします。
+この操作をまだ行っていない場合は、ウィザードをもう一度実行して [ **同期オプションのカスタマイズ]** を選択し、[デバイスの書き戻し] チェックボックスをオンにして、上記のコマンドレットを実行したフォレストを選択して、Azure AD Connect でデバイスの書き戻しを有効にします。
 
 ### <a name="configure-device-authentication-in-ad-fs"></a>AD FS でデバイス認証を構成します。
 次のコマンドを実行して AD FS のポリシーを構成する管理者特権の PowerShell コマンド ウィンドウを使用して、
@@ -186,14 +186,14 @@ AD DS オブジェクトおよびコンテナーは適切な状態で Azure AD �
 - 上記のコンテナー内の msDS-DeviceRegistrationService 型のオブジェクト
 
 ### <a name="see-it-work"></a>It の仕事を見る
-新しい要求とポリシーを評価するには、まずデバイスを登録します。  たとえば、> [バージョン情報] の下にある [設定] アプリを使用して Windows 10 コンピューターに参加 Azure AD ことができ[ます。また](/azure/active-directory/devices/hybrid-azuread-join-plan)、追加の手順に従って、windows 10 ドメイン参加と自動デバイス登録をセットアップすることもできます。  Windows 10 mobile デバイスの参加の詳細については、[こちら](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)のドキュメントを参照してください。
+新しい要求とポリシーを評価するには、まずデバイスを登録します。  たとえば、> [バージョン情報] の下にある [設定] アプリを使用して Windows 10 コンピューターに参加 Azure AD ことができ [ます。また](/azure/active-directory/devices/hybrid-azuread-join-plan)、追加の手順に従って、windows 10 ドメイン参加と自動デバイス登録をセットアップすることもできます。  Windows 10 mobile デバイスの参加の詳細については、 [こちら](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)のドキュメントを参照してください。
 
 最も簡単な評価を行うには、クレームの一覧を表示するテストアプリケーションを使用して AD FS にサインオンします。 IsManaged、Ismanaged、trusttype を含む新しい要求を表示できるようになります。  作業の Microsoft Passport を有効にした場合は要求 prt も表示されます。
 
 
 ## <a name="configure-additional-scenarios"></a>その他のシナリオを構成します。
 ### <a name="automatic-registration-for-windows-10-domain-joined-computers"></a>Windows 10 ドメインに参加しているコンピューターの自動登録
-Windows 10 ドメインに参加しているコンピューターの自動デバイス登録を有効にするには、[こちら](/azure/active-directory/devices/hybrid-azuread-join-plan)の手順 1. と 2. に従います。
+Windows 10 ドメインに参加しているコンピューターの自動デバイス登録を有効にするには、 [こちら](/azure/active-directory/devices/hybrid-azuread-join-plan)の手順 1. と 2. に従います。
 これは、次のことを実現するのに役立ちます。
 
 1. AD DS のサービス接続ポイントが存在し、適切なアクセス許可を持っていることを確認します (上記のオブジェクトを作成しましたが、二重チェックには害がありません)。
@@ -205,7 +205,7 @@ Windows 10 ドメインに参加しているコンピューターの自動デバ
 Microsoft Passport for Work で Windows 10 を有効にする方法の詳細については、「[組織内の Microsoft Passport for Work を有効にする](/windows/security/identity-protection/hello-for-business/hello-identity-verification)」を参照してください。
 
 ### <a name="automatic-mdm-enrollment"></a>MDM の自動登録
-登録済みデバイスの MDM の自動登録を有効にして、アクセス制御ポリシーで isCompliant の要求を使用できるようにするには、こちらの手順に従って[ください。](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)
+登録済みデバイスの MDM の自動登録を有効にして、アクセス制御ポリシーで isCompliant の要求を使用できるようにするには、こちらの手順に従って [ください。](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 1.  誤った状態で既に存在しているオブジェクトに関するエラーが発生した場合は、 `Initialize-ADDeviceRegistration` 以前に powershell コマンド Azure AD Connect を実行し、AD DS で部分構成を使用している可能性があるというメッセージが表示されます。  **Cn = Device Registration configuration、cn = Services、CN = Configuration、DC = &lt; domain &gt; **の下にあるオブジェクトを手動で削除してみてください。
@@ -218,7 +218,7 @@ Microsoft Passport for Work で Windows 10 を有効にする方法の詳細に�
     3. **EnrollmentType**を**0**に変更します。
     4. デバイスの登録または登録をもう一度やり直してください。
 
-### <a name="related-articles"></a>関連トピック
+### <a name="related-articles"></a>関連記事
 * [Azure Active Directory に接続されている Office 365 とその他のアプリへのアクセスの保護](/azure/active-directory/conditional-access/overview)
 * [Office 365 サービス用条件付きアクセスのデバイス ポリシー](/azure/active-directory/conditional-access/overview)
 * [Azure Active Directory Device Registration を使用したオンプレミスの条件付きアクセスの設定](/azure/active-directory/active-directory-device-registration-on-premises-setup)

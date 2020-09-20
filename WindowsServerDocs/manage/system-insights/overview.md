@@ -6,12 +6,12 @@ author: gawatu
 ms.author: gawatu
 manager: mallikarjun.chadalapaka
 ms.date: 5/23/2018
-ms.openlocfilehash: 9bedd593cdd26b67e6e16ddea73955bb926a87a5
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 0fe40bd568a043f4eec9bfc86f9e1a537c07f038
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996675"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766855"
 ---
 # <a name="system-insights-overview"></a>システム インサイトの概要
 
@@ -19,9 +19,9 @@ ms.locfileid: "87996675"
 
 System Insights は、Windows Server 2019 の新しい予測分析機能です。 機械学習モデルによって支えられている System Insights の予測機能は、パフォーマンスカウンターやイベントなどの Windows Server システムデータをローカルで分析して、サーバーの機能に関する洞察を提供し、デプロイの問題をリアクティブに管理するための運用コストの削減に役立ちます。
 
-Windows Server 2019 では、容量予測に焦点を合わせた4つの既定の機能が搭載されており、以前の使用パターンに基づいて、コンピューティング、ネットワーク、ストレージの将来のリソースが予測されます。 また、system Insights には[拡張可能なインフラストラクチャ](adding-and-developing-capabilities.md)が付属しているため、Microsoft とサードパーティはオペレーティングシステムを更新しなくても、新しい予測機能を System Insights に追加できます。
+Windows Server 2019 では、容量予測に焦点を合わせた4つの既定の機能が搭載されており、以前の使用パターンに基づいて、コンピューティング、ネットワーク、ストレージの将来のリソースが予測されます。 また、system Insights には [拡張可能なインフラストラクチャ](adding-and-developing-capabilities.md)が付属しているため、Microsoft とサードパーティはオペレーティングシステムを更新しなくても、新しい予測機能を System Insights に追加できます。
 
-System Insights は、直感的な[Windows 管理センター](../windows-admin-center/overview.md)の拡張機能または[PowerShell を使用](https://aka.ms/SystemInsightsPowerShell)して直接管理できます。また、system insights では、デプロイのニーズに応じて各予測機能を個別に構成できます。 すべての予測結果がイベントログに発行されます。これにより、 [Azure Monitor](https://azure.microsoft.com/services/monitor/)または[System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807)を使用して、コンピューターグループ全体の予測を簡単に集計および表示できます。
+System Insights は、直感的な [Windows 管理センター](../windows-admin-center/overview.md) の拡張機能または [PowerShell を使用](/powershell/module/systeminsights/)して直接管理できます。また、system insights では、デプロイのニーズに応じて各予測機能を個別に構成できます。 すべての予測結果がイベントログに発行されます。これにより、 [Azure Monitor](https://azure.microsoft.com/services/monitor/) または [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807) を使用して、コンピューターグループ全体の予測を簡単に集計および表示できます。
 
 ![Windows 管理センターの System Insights 拡張機能。予測をプロットしたグラフで CPU 容量予測機能を表示](media/cpu-forecast-2.png)
 
@@ -37,19 +37,19 @@ System Insights は、Windows Server 上で完全にローカルに実行され�
 >[!TIP]
 >これらの短いビデオをご覧になり、System Insights の使用を開始し、自信を持って管理するために必要な情報をご確認ください。 [10 分で System insights を使ってみる](https://blogs.technet.microsoft.com/filecab/2018/07/24/getting-started-with-system-insights-in-10-minutes/)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 System Insights は、任意の Windows Server 2019 インスタンスで使用できます。 ホストとゲストの両方のコンピューター、すべてのハイパーバイザー、および任意のクラウドで実行されます。
 
 ### <a name="install-system-insights"></a>System Insights のインストール
 >[!IMPORTANT]
->System Insights は、最大で1年分のデータをローカルに収集して保存します。 オペレーティングシステムをアップグレードするときにデータを保持する場合は、**インプレースアップグレードを使用する**ようにしてください。
+>System Insights は、最大で1年分のデータをローカルに収集して保存します。 オペレーティングシステムをアップグレードするときにデータを保持する場合は、 **インプレースアップグレードを使用する**ようにしてください。
 
 #### <a name="install-the-feature"></a>機能のインストール
 Windows 管理センター内の拡張機能を使用して、System Insights をインストールできます。
 
 ![System Insights 拡張機能の日0エクスペリエンス。](media/day-0-2.png)
 
-System insights は、**システムインサイト**機能を追加するか、PowerShell を使用して、サーバーマネージャーから直接インストールすることもできます。
+System insights は、 **システムインサイト** 機能を追加するか、PowerShell を使用して、サーバーマネージャーから直接インストールすることもできます。
 
 ```PowerShell
 Add-WindowsFeature System-Insights -IncludeManagementTools

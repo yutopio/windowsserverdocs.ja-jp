@@ -7,12 +7,12 @@ ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
 ms.topic: get-started-article
 ms.date: 10/28/2018
 ms.author: billmath
-ms.openlocfilehash: 3a53e8bb9e06e51627d14f6e5e3b918f58102478
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: a077a76814cc5ed99d4a1c0eb6c23584b22363e1
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078679"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766755"
 ---
 # <a name="deploying-active-directory-federation-services-in-azure"></a>Azure での Active Directory フェデレーション サービスのデプロイ
 AD FS は、単純かつ安全な ID フェデレーションと Web シングル サインオン (SSO) 機能を実現します。 Azure AD または O365 とのフェデレーションによって、ユーザーはオンプレミスの資格情報を認証に使用し、クラウド内のあらゆるリソースにアクセスすることができます。 そのため、オンプレミスとクラウドの両方のリソースに確実にアクセスできるよう、AD FS インフラストラクチャには、高い可用性を確保することが重要となります。 AD FS を Azure にデプロイすると、必要な高可用性を最小限の手間で確保できます。
@@ -89,7 +89,7 @@ Azure にドメイン コントローラー (DC) をデプロイするために�
 * ExpressRoute
 
 推奨されるのは、ExpressRoute を使用する方法です。 ExpressRoute を使用すると、Azure データセンターと、お客様のオンプレミスまたはコロケーション環境にあるインフラストラクチャとの間にプライベート接続を作成できます。 ExpressRoute 接続では、公共のインターネットを利用できません。 ExpressRoute 接続は一般的なインターネットでの接続よりも信頼性が高く、高速で、待ち時間が短く、セキュリティの高い接続を提供します。
-ExpressRoute の使用をお勧めしますが、所属する組織に合った任意の接続方法を選ぶことができます。 ExpressRoute と ExpressRoute を使用した各種の接続方法の詳細については、「 [ExpressRoute の技術概要](https://aka.ms/Azure/ExpressRoute)」を参照してください。
+ExpressRoute の使用をお勧めしますが、所属する組織に合った任意の接続方法を選ぶことができます。 ExpressRoute と ExpressRoute を使用した各種の接続方法の詳細については、「 [ExpressRoute の技術概要](/azure/expressroute/expressroute-introduction)」を参照してください。
 
 ### <a name="2-create-storage-accounts"></a>2. ストレージアカウントを作成する
 高い可用性を維持し、1 つのストレージ アカウントへの依存を回避するために、ストレージ アカウントは 2 つ作成することができます。 可用性セットごとの 2 つのグループにマシンを分けたうえで、それぞれのグループに別個のストレージ アカウントを割り当てます。
@@ -117,12 +117,12 @@ ExpressRoute の使用をお勧めしますが、所属する組織に合った�
 
 | Machine | ロール | Subnet | 可用性セット | ストレージ アカウント | IP アドレス |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| contosodc1 |DC/ADFS |INT |contosodcset |contososac1 |静的 |
-| contosodc2 |DC/ADFS |INT |contosodcset |contososac2 |静的 |
-| contosowap1 |WAP |DMZ |contosowapset |contososac1 |静的 |
-| contosowap2 |WAP |DMZ |contosowapset |contososac2 |静的 |
+| contosodc1 |DC/ADFS |INT |contosodcset |contososac1 |Static |
+| contosodc2 |DC/ADFS |INT |contosodcset |contososac2 |Static |
+| contosowap1 |WAP |DMZ |contosowapset |contososac1 |Static |
+| contosowap2 |WAP |DMZ |contosowapset |contososac2 |Static |
 
-お気付きかもしれませんが、NSG が指定されていません。 これは NSG が、Azure ではサブネット レベルで使用できるためです。 マシンのネットワーク トラフィックは、サブネットまたは NIC オブジェクトに関連付けられている個々の NSG を使って制御できます。 詳しくは、「 [ネットワーク セキュリティ グループ (NSG) について](https://aka.ms/Azure/NSG)」をご覧ください。
+お気付きかもしれませんが、NSG が指定されていません。 これは NSG が、Azure ではサブネット レベルで使用できるためです。 マシンのネットワーク トラフィックは、サブネットまたは NIC オブジェクトに関連付けられている個々の NSG を使って制御できます。 詳しくは、「 [ネットワーク セキュリティ グループ (NSG) について](/azure/virtual-network/tutorial-filter-network-traffic)」をご覧ください。
 DNS が管理下にある場合は、静的 IP アドレスをお勧めします。 Azure DNS を使用し、ドメインの DNS レコードの方から、対応する Azure FQDN で新しいマシンを参照することができます。
 デプロイの完了後、[仮想マシン] ウィンドウは次のように表示されている必要があります。
 
@@ -343,14 +343,14 @@ AD FS のテストは、IdpInitiatedSignon.aspx ページを使用して行う�
 | AdminUserName |仮想マシンのローカル管理者の名前 |
 | AdminPassword |仮想マシンのローカル管理者アカウントのパスワード |
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="additional-resources"></a>その他の技術情報
 * [可用性セット](https://aka.ms/Azure/Availability)
-* [Azure Load Balancer](https://aka.ms/Azure/ILB)
-* [内部ロード バランサー](https://aka.ms/Azure/ILB/Internal)
-* [インターネットに接続する Load Balancer](https://aka.ms/Azure/ILB/Internet)
+* [Azure Load Balancer](/azure/load-balancer/load-balancer-overview)
+* [内部 Load Balancer](/azure/load-balancer/quickstart-load-balancer-standard-internal-powershell)
+* [インターネットに接続する Load Balancer](/azure/load-balancer/quickstart-load-balancer-standard-public-powershell)
 * [ストレージ アカウント](https://aka.ms/Azure/Storage)
-* [Azure 仮想ネットワーク](https://aka.ms/Azure/VNet)
-* [AD FS と Web アプリケーション プロキシについてのリンク](https://aka.ms/ADFSLinks)
+* [Azure 仮想ネットワーク](/azure/virtual-network/virtual-networks-overview)
+* [AD FS と Web アプリケーション プロキシについてのリンク](/archive/blogs/tangent_thoughts/qrg-quick-reference-guide-active-directory-federation-services)
 
 ## <a name="next-steps"></a>次のステップ
 * [オンプレミス ID と Azure Active Directory の統合](/azure/active-directory/hybrid/whatis-hybrid-identity)

@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 09/18/2018
-ms.openlocfilehash: 09d39aa027adf360c339da434b16038a3b8e5c90
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fe519498e8021bde67b87ec7f78b3e1b9a64160b
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964598"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766945"
 ---
 # <a name="prepare-your-development-environment"></a>開発環境を準備する
 
@@ -28,7 +28,7 @@ Windows 管理センター SDK を使用して拡張機能の開発を開始し�
 
 SDK で開発を開始するには、次の前提条件をダウンロードしてインストールします。
 
-* [Windows 管理センター](https://aka.ms/WACDownloadPage) (GA またはプレビューバージョン)
+* [Windows 管理センター](../overview.md) (GA またはプレビューバージョン)
 * Visual Studio または [Visual Studio Code](https://code.visualstudio.com)
 * [Node.js](https://nodejs.org/en/download/releases/) (バージョン 10.3.0)
 * [ノードパッケージマネージャー](https://npmjs.com/get-npm) (8.12.0 以降)
@@ -71,4 +71,3 @@ npm install -g windows-admin-center-cli
 ## <a name="sdk-design-toolkit"></a>SDK design toolkit
 
 Windows 管理センター [SDK design toolkit](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip)をご覧ください。 このツールキットは、Windows 管理センターのスタイル、コントロール、およびページテンプレートを使用して、PowerPoint の拡張機能を迅速にモックアップできるように設計されています。 コーディングを開始する前に、Windows 管理センターで拡張機能がどのように表示されるかを確認してください。
-

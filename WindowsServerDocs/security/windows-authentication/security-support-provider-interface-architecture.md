@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: aec55bca0be096a3866cc49e718743a9c32d8f6b
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: da7c390427a3f0f2348d91e14d0affef905db390
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638750"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766955"
 ---
 # <a name="security-support-provider-interface-architecture"></a>セキュリティ サポート プロバイダー インターフェイスのアーキテクチャ
 
@@ -83,9 +83,9 @@ Kerberos プロトコルは Windows 2000 以降の既定の認証プロトコル
 
 -   [Microsoft Kerberos (Windows)](/windows/win32/secauthn/microsoft-kerberos)
 
--   [\[MS-16 \] : Kerberos プロトコル拡張機能](https://msdn.microsoft.com/library/cc233855(PROT.10).aspx)
+-   [\[MS-16 \] : Kerberos プロトコル拡張機能](/openspecs/windows_protocols/ms-kile/2a32282e-dd48-4ad9-a542-609804b02cc9)
 
--   [\[MS SFU \] : Kerberos プロトコル拡張機能: ユーザーと制約付き委任プロトコルの仕様のサービス](https://msdn.microsoft.com/library/cc246071(PROT.13).aspx)
+-   [\[MS SFU \] : Kerberos プロトコル拡張機能: ユーザーと制約付き委任プロトコルの仕様のサービス](/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94)
 
 -   [Kerberos SSP/AP (Windows)](/windows/win32/secauthn/kerberos-ssp-ap)
 
@@ -139,7 +139,7 @@ Ntlm セキュリティサポートプロバイダー (NTLM SSP) は、NTLM チ�
 
 -   [Microsoft ダイジェスト認証 (Windows)](/windows/win32/secauthn/microsoft-digest-ssp)
 
--   [\[MS-DPSP \] : Digest プロトコル拡張機能](https://msdn.microsoft.com/library/cc227906(PROT.13).aspx)
+-   [\[MS-DPSP \] : Digest プロトコル拡張機能](/openspecs/windows_protocols/ms-dpsp/3e44be62-2067-472a-9ef0-e937298b68fb)
 
 ### <a name="schannel-security-support-provider"></a><a name="BKMK_SchannelSSP"></a>Schannel セキュリティサポートプロバイダ
 セキュリティで保護されたチャネル (Schannel) は、ユーザーがセキュリティで保護された web サーバーにアクセスしようとした場合など、web ベースのサーバー認証に使用されます。
@@ -177,7 +177,7 @@ DTLS は、アプリケーションによって明示的に呼び出されたと
 
 -   [TLS/SSL テクニカルリファレンス](/previous-versions/windows/it-pro/windows-server-2003/cc784149(v=ws.10))
 
--   [\[MS TLSP \] : Transport Layer Security (TLS) プロファイル](https://msdn.microsoft.com/library/dd207968(PROT.13).aspx)
+-   [\[MS TLSP \] : Transport Layer Security (TLS) プロファイル](/openspecs/windows_protocols/ms-tlsp/58aba05b-62b0-4cd1-b88b-dc8a24920346)
 
 ### <a name="negotiate-security-support-provider"></a><a name="BKMK_NegoSSP"></a>セキュリティサポートプロバイダーのネゴシエート
 Simple and Protected GSS API ネゴシエーションメカニズム (SPNEGO) は、特定の認証プロトコルのネゴシエーションに使用できる Negotiate SSP の基礎を形成します。 アプリケーションは、SSPI を呼び出してネットワークにログオンするときに、要求を処理する SSP を指定できます。 アプリケーションで Negotiate SSP が指定されている場合は、要求を分析し、顧客が構成したセキュリティポリシーに基づいて、要求を処理するための適切なプロバイダーを選択します。
@@ -194,9 +194,9 @@ SPNEGO は、RFC 2478 で指定されています。
 
 -   [Microsoft Negotiate (Windows)](/windows/win32/secauthn/microsoft-negotiate)
 
--   [\[MS-SPNG \] : Simple および PROTECTED GSS-API ネゴシエーションメカニズム (SPNEGO) の拡張機能](https://msdn.microsoft.com/library/cc247021(PROT.13).aspx)
+-   [\[MS-SPNG \] : Simple および PROTECTED GSS-API ネゴシエーションメカニズム (SPNEGO) の拡張機能](/openspecs/windows_protocols/ms-spng/f377a379-c24f-4a0f-a3eb-0d835389e28a)
 
--   [\[N2HT \] : Negotiate と NEGO2 HTTP 認証プロトコルの仕様](https://msdn.microsoft.com/library/dd303576(PROT.13).aspx)
+-   [\[N2HT \] : Negotiate と NEGO2 HTTP 認証プロトコルの仕様](/openspecs/windows_protocols/ms-n2ht/4b88aa77-4b12-4933-8740-0f32d8f4eacf)
 
 ### <a name="credential-security-support-provider"></a><a name="BKMK_CredSSP"></a>資格情報セキュリティサポートプロバイダ
 Credential Security Service Provider (CredSSP) は、新しいターミナルサービスとリモートデスクトップサービスセッションを開始するときにシングルサインオン (SSO) ユーザーエクスペリエンスを提供します。 CredSSP を使用すると、アプリケーションは、クライアントのポリシーに基づいて、(クライアント側の SSP を使用して) クライアントコンピューターからターゲットサーバーにユーザーの資格情報を委任することができます。 CredSSP ポリシーはグループポリシーを使用して構成され、資格情報の委任は既定で無効になっています。
@@ -207,7 +207,7 @@ Credential Security Service Provider (CredSSP) は、新しいターミナルサ
 
 **資格情報 SSP に関するその他のリソース**
 
--   [\[MS-CSSP \] : Credential Security Support Provider (CredSSP) プロトコル仕様](https://msdn.microsoft.com/library/cc226764(PROT.13).aspx)
+-   [\[MS-CSSP \] : Credential Security Support Provider (CredSSP) プロトコル仕様](/openspecs/windows_protocols/ms-cssp/85f57821-40bb-46aa-bfcb-ba9590b8fc30)
 
 -   [資格情報セキュリティサービスプロバイダーとターミナルサービスログオン用 SSO](/previous-versions/windows/it-pro/windows-vista/cc749211(v=ws.10))
 

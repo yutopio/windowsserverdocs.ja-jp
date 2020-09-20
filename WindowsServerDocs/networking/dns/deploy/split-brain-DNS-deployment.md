@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: bc1e63ff865a7eb6d4d83c75d6c2680dcf8ddb49
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: e8b19df2313bd0f3f6599aae8a23a18233f469e7
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996863"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766925"
 ---
 # <a name="use-dns-policy-for-split-brain-dns-deployment"></a>Split ブレイン DNS 展開に DNS ポリシーを使用する \-
 
@@ -86,7 +86,7 @@ DNS のポリシーを使用して DNS Split-Brain 展開を構成するには�
 
 `Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "internal"`
 
-詳細については、次を参照してください [追加 DnsServerZoneScope。](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
+詳細については、次を参照してください [追加 DnsServerZoneScope。](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
 ### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records"></a>レコードをゾーンのスコープに追加します。
 
@@ -103,14 +103,14 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4Address "10.0.0.39” -ZoneScope "internal"
 `
 
-詳細については、次を参照してください。 [追加 DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)します。
 
 ### <a name="create-the-dns-policies"></a><a name="bkmk_policies"></a>DNS のポリシーを作成します。
 
 外部ネットワークおよび内部ネットワーク用のサーバー インターフェイスを識別する、ゾーンのスコープを作成した後は、内部および外部のゾーンのスコープを接続する DNS ポリシーを作成する必要があります。
 
 >[!NOTE]
->この例では、条件として、サーバー インターフェイスを使用して、内部および外部のクライアントを区別します。 内部および外部のクライアントを区別するために別の方法では、クライアントのサブネットを使用して、条件として、です。 内部のクライアントが属するサブネットを特定する場合は、クライアントのサブネットに基づいて区別するために DNS のポリシーを構成できます。 クライアントのサブネットの条件を使用したトラフィック管理を構成する方法については、次を参照してください。 [のプライマリ サーバーの地理的な場所ベースのトラフィック管理用の DNS ポリシーを使用して](https://technet.microsoft.com/windows-server-docs/networking/dns/deploy/scenario--use-dns-policy-for-geo-location-based-traffic-management-with-primary-servers)します。
+>この例では、条件として、サーバー インターフェイスを使用して、内部および外部のクライアントを区別します。 内部および外部のクライアントを区別するために別の方法では、クライアントのサブネットを使用して、条件として、です。 内部のクライアントが属するサブネットを特定する場合は、クライアントのサブネットに基づいて区別するために DNS のポリシーを構成できます。 クライアントのサブネットの条件を使用したトラフィック管理を構成する方法については、次を参照してください。 [のプライマリ サーバーの地理的な場所ベースのトラフィック管理用の DNS ポリシーを使用して](./primary-geo-location.md)します。
 
 DNS サーバーは、プライベート インターフェイスでクエリを受信したときに、内部のゾーンのスコープから DNS クエリの応答が返されます。
 

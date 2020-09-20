@@ -5,12 +5,12 @@ ms.topic: article
 author: phstee
 ms.author: nedpyle
 ms.date: 4/14/2017
-ms.openlocfilehash: 2515f400f746c5e256a168d191efa842d4ba50fd
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: f4cd1c68cd4d9ac6ba873f297c54818560d50176
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077209"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90765933"
 ---
 # <a name="performance-tuning-for-smb-file-servers"></a>SMB ファイルサーバーのパフォーマンスチューニング
 
@@ -28,7 +28,7 @@ BIOS およびオペレーティングシステムの電源管理モードが必
 
 ### <a name="smb-30-protocol-family"></a>SMB 3.0 プロトコルファミリ
 
-SMB 3.0 は Windows server 2012 で導入され、Windows Server 2012 R2 (SMB 3.02) および Windows Server 2016 (SMB 3.1.1) でさらに強化されました。 このバージョンでは、ファイルサーバーのパフォーマンスと可用性を大幅に向上させることができるテクノロジが導入されました。 詳細については、「 [Windows Server 2012 および 2012 R2 2012 の smb](https://aka.ms/smb3plus) 」と「 [smb 3.1.1 の新機能](https://aka.ms/smb311)」を参照してください。
+SMB 3.0 は Windows server 2012 で導入され、Windows Server 2012 R2 (SMB 3.02) および Windows Server 2016 (SMB 3.1.1) でさらに強化されました。 このバージョンでは、ファイルサーバーのパフォーマンスと可用性を大幅に向上させることができるテクノロジが導入されました。 詳細については、「 [Windows Server 2012 および 2012 R2 2012 の smb](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) 」と「 [smb 3.1.1 の新機能](https://aka.ms/smb311)」を参照してください。
 
 
 
@@ -40,13 +40,13 @@ RDMA 対応のネットワークが SMB によって検出されると、常に 
 
 Smb ダイレクトは smb 構成には必要ありませんが、待機時間を減らし、CPU 使用率を低くする必要があるユーザーには、常にお勧めします。
 
-SMB ダイレクトの詳細については、「 [Smb ダイレクトを使用したファイルサーバーのパフォーマンスの向上](https://aka.ms/smbdirect)」を参照してください。
+SMB ダイレクトの詳細については、「 [Smb ダイレクトを使用したファイルサーバーのパフォーマンスの向上](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134210(v=ws.11))」を参照してください。
 
 ### <a name="smb-multichannel"></a>SMB マルチチャネル
 
 SMB マルチチャネルにより、ファイルサーバーは複数のネットワーク接続を同時に使用し、スループットを向上させることができます。
 
-SMB マルチチャネルの詳細については、「 [Smb マルチチャネルの展開](https://aka.ms/smbmulti)」を参照してください。
+SMB マルチチャネルの詳細については、「 [Smb マルチチャネルの展開](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn610980(v=ws.11))」を参照してください。
 
 ### <a name="smb-scale-out"></a>SMB スケールアウト
 

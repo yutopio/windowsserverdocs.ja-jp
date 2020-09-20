@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 31f3fa4e-cd25-4bf3-89e9-a01a6cec7893
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 9623ce4e5e31b905c1c18e9359811389d8d75f23
-ms.sourcegitcommit: 1eaad076ea74e72b36e8893aaa15f3e5f4237bd6
+ms.openlocfilehash: 27ceace93c42ccabdb2db0208c6e3dabce41e1b0
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88659387"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766815"
 ---
 # <a name="network-controller"></a>ネットワーク コントローラー
 
@@ -23,12 +23,12 @@ ms.locfileid: "88659387"
 
 > [!NOTE]
 > このトピックに加え、次のネットワーク コント ローラーのドキュメントは使用できます。
-> - [ネットワークコントローラーの高可用性](network-controller-high-availability.md)
+> - [ネットワーク コントローラーの高可用性](network-controller-high-availability.md)
 > - [ネットワークコントローラーを展開するためのインストールおよび準備の要件](../../plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)
 > - [Windows PowerShell を使用してネットワーク コントローラーを展開する](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
 > - [サーバー マネージャーを使用してネットワーク コントローラー サーバーの役割をインストールする](Install-the-Network-Controller-server-role-using-Server-Manager.md)
 > - [ネットワークコントローラーの展開後の手順](post-deploy-steps-nc.md)
-> - [ネットワーク コント ローラーのコマンドレット](https://docs.microsoft.com/powershell/module/networkcontroller/?view=win10-ps)
+> - [ネットワーク コント ローラーのコマンドレット](/powershell/module/networkcontroller/?view=win10-ps)
 
 ## <a name="network-controller-overview"></a><a name="bkmk_overview"></a>ネットワークコントローラーの概要
 
@@ -37,7 +37,7 @@ ms.locfileid: "88659387"
 ドメインと非ドメイン環境の両方のネットワーク コント ローラーを展開することができます。 ドメイン環境でネットワーク コント ローラーのユーザーとネットワーク デバイスを使用して認証 Kerberos です。非ドメイン環境では、認証に証明書を展開する必要があります。
 
 >[!IMPORTANT]
->ネットワークコントローラーのサーバーの役割を物理ホストに展開しないでください。 ネットワークコントローラーを展開するに \( は、hyper-v ホストにインストールされている hyper-v 仮想マシン VM にネットワークコントローラーサーバーの役割をインストールする必要があり \) ます。 3つの異なる Hyper-v ホスト上の Vm にネットワークコントローラーをインストールした後 \- 、 \- \( \) Windows PowerShell コマンド **NetworkControllerServer**を使用してネットワークコントローラーにホストを追加することで、ソフトウェア定義ネットワーク SDN 用の hyper-v ホストを有効にする必要があります。 これにより、SDN ソフトウェア Load Balancer を機能させることができます。 詳細については、「 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)」を参照してください。
+>ネットワーク コントローラー サーバー ロールを物理ホストに展開しないでください。 ネットワークコントローラーを展開するに \( は、hyper-v ホストにインストールされている hyper-v 仮想マシン VM にネットワークコントローラーサーバーの役割をインストールする必要があり \) ます。 3つの異なる Hyper-v ホスト上の Vm にネットワークコントローラーをインストールした後 \- 、 \- \( \) Windows PowerShell コマンド **NetworkControllerServer**を使用してネットワークコントローラーにホストを追加することで、ソフトウェア定義ネットワーク SDN 用の hyper-v ホストを有効にする必要があります。 これにより、SDN ソフトウェア ロード バランサーを機能させることができます。 詳細については、「 [NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver)」を参照してください。
 
 ネットワーク コントローラーは、Southbound API を使用してネットワーク デバイス、サービス、コンポーネントと通信します。 ネットワーク デバイスの検出、サービス構成の検出、ネットワークについて必要なすべての情報の収集に Southbound API を利用できます。 さらに、Southbound API を使用して、構成の変更などの情報をネットワーク インフラストラクチャに送信することもできます。
 
@@ -72,7 +72,7 @@ Windows PowerShell、REST API、または管理アプリケーションを使用
 
 次のネットワーク コントローラーの機能を使用すると、仮想および物理ネットワーク デバイスとサービスの構成と管理を行うことができます。
 
--   [ファイアウォール管理](#bkmk_firewall)
+-   [ファイアウォールの管理](#bkmk_firewall)
 
 -   [ソフトウェア ロード バランサー管理](#bkmk_slb)
 
@@ -83,7 +83,7 @@ Windows PowerShell、REST API、または管理アプリケーションを使用
 >[!IMPORTANT]
 >ネットワーク コント ローラーのバックアップと復元では、Windows Server 2016 で現在使用できません。
 
-### <a name="firewall-management"></a><a name="bkmk_firewall"></a>ファイアウォール管理
+### <a name="firewall-management"></a><a name="bkmk_firewall"></a>ファイアウォールの管理
 
 このネットワーク コントローラーの機能を使用すると、データセンターの East/West および North/South 両方のネットワーク トラフィックについて、ワークロード VM のファイアウォール アクセス制御の許可または拒否の規則を構成および管理できます。 ファイアウォール規則は、ワークロード VM の vSwitch ポートに組み込まれるので、データセンター内のワークロード全体に配布されます。 Northbound API を使用すると、ワークロード VM の送受信トラフィックのファイアウォール規則を定義できます。 また、規則で許可または拒否されたトラフィックをログに記録するように、各ファイアウォール規則を構成することもできます。
 

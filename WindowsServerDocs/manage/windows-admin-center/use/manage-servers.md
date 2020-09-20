@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 11/21/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 25edd2851638fec99b6afda0415fdf8e8c8f1699
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 7be02bd7c513d0e7680ed70f107a34c6a9af6ed2
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997183"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90765963"
 ---
 # <a name="manage-servers-with-windows-admin-center"></a>Windows 管理センターを使用してサーバーを管理する
 
@@ -31,15 +31,15 @@ Windows Server 2012 以降を実行している個々のサーバーを Windows 
 
 Windows 管理センターにサーバーを追加するには:
 
-1. [すべての接続] の下にある [ **+ 追加**] をクリックします。
+1. [すべての接続] の下にある [ **+ 追加** ] をクリックします。
 2. **サーバー接続**を追加することを選択します。
 3. サーバーの名前を入力し、メッセージが表示されたら、使用する資格情報を入力します。
-4. [**送信**] をクリックして完了します。
+4. [ **送信** ] をクリックして完了します。
 
 サーバーが [概要] ページの接続リストに追加されます。 サーバーに接続するには、これをクリックします。
 
 > [!NOTE]
-> Windows 管理センターでは、[フェールオーバークラスター](manage-failover-clusters.md)または[ハイパー集約クラスター](manage-hyper-converged.md)を個別の接続として追加することもできます。
+> Windows 管理センターでは、 [フェールオーバークラスター](manage-failover-clusters.md) または [ハイパー集約クラスター](manage-hyper-converged.md) を個別の接続として追加することもできます。
 
 ## <a name="tools"></a>ツール
 
@@ -53,14 +53,14 @@ Windows 管理センターにサーバーを追加するには:
 | [証明書](#certificates) | 証明書の表示と変更 |
 | [Containers](#containers) | コンテナーの表示 |
 | [デバイス](#devices) | デバイスの表示と変更 |
-| [[DHCP]](#dhcp) | DHCP サーバー構成の表示と管理 |
+| [DHCP](#dhcp) | DHCP サーバー構成の表示と管理 |
 | [DNS](#dns) | DNS サーバー構成の表示と管理 |
 | [イベント](#events) | イベントの表示 |
-| [ファイル](#files) | ファイルとフォルダーを参照する |
+| [[ファイル]](#files) | ファイルとフォルダーを参照する |
 | [ファイアウォール](#firewall) | ファイアウォール規則の表示と変更 |
 | [インストール済みアプリ](#installed-apps) | インストールされているアプリを表示および削除する |
 | [ローカル ユーザーとグループ](#local-users-and-groups) | ローカルユーザーとグループを表示および変更する |
-| [ネットワーク](#network) | ネットワークデバイスの表示と変更 |
+| [Network](#network) | ネットワークデバイスの表示と変更 |
 | [パケットの監視](https://aka.ms/wac1908) | ネットワークパケットを監視する |
 | [パフォーマンスモニター](https://aka.ms/perfmon-blog) | パフォーマンスカウンターとレポートの表示 |
 | [PowerShell](#powershell) | PowerShell を使用したサーバーとの対話 |
@@ -81,9 +81,9 @@ Windows 管理センターにサーバーを追加するには:
 
 ## <a name="overview"></a>概要
 
-**概要**を使用すると、CPU、メモリ、およびネットワークパフォーマンスの現在の状態を確認できるだけでなく、操作を実行したり、対象のコンピューターまたはサーバーの設定を変更したりできます。
+**概要** を使用すると、CPU、メモリ、およびネットワークパフォーマンスの現在の状態を確認できるだけでなく、操作を実行したり、対象のコンピューターまたはサーバーの設定を変更したりできます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 サーバーマネージャーの概要では、次の機能がサポートされています。
 
@@ -101,9 +101,9 @@ Windows 管理センターにサーバーを追加するには:
 
 ## <a name="active-directory-preview"></a>Active Directory (プレビュー)
 
-**Active Directory**は、[拡張機能フィード](../configure/using-extensions.md)で使用できる早期プレビューです。
+**Active Directory** は、 [拡張機能フィード](../configure/using-extensions.md)で使用できる早期プレビューです。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 次の Active Directory 管理を使用できます。
 
@@ -119,14 +119,14 @@ Windows 管理センターにサーバーを追加するには:
 
 [**Active Directory のフィードバックと提案された機能を表示**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BActive%20Directory%5D)します。
 
-## <a name="backup"></a>バックアップ
+## <a name="backup"></a>Backup
 
-**バックアップ**を使用すると、サーバーを Microsoft Azure に直接バックアップして、Windows server を破損、攻撃、災害から保護することができます。
+**バックアップ** を使用すると、サーバーを Microsoft Azure に直接バックアップして、Windows server を破損、攻撃、災害から保護することができます。
 [詳細については、Azure Backup を参照してください。](https://aka.ms/windows-admin-center-backup)
 
 [Windows 管理センターでバックアップに関するフィードバックを提供する](https://aka.ms/backup-wac-feedback)
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 バックアップでは、次の機能がサポートされています。
 
@@ -141,7 +141,7 @@ Windows 管理センターにサーバーを追加するには:
 
 証明**書**を使用すると、コンピューターまたはサーバー上の証明書ストアを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 証明書では、次の機能がサポートされています。
 
@@ -156,15 +156,15 @@ Windows 管理センターにサーバーを追加するには:
 
 ## <a name="containers"></a>Containers
 
-**コンテナーを使用する**と、Windows Server コンテナーホスト上のコンテナーを表示できます。 Windows Server Core コンテナーが実行されている場合は、イベントログを表示し、コンテナーの CLI にアクセスできます。
+**コンテナーを使用する** と、Windows Server コンテナーホスト上のコンテナーを表示できます。 Windows Server Core コンテナーが実行されている場合は、イベントログを表示し、コンテナーの CLI にアクセスできます。
 
 [**コンテナーのフィードバックと提案された機能を表示**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BContainers%5D)します。
 
 ## <a name="devices"></a>デバイス
 
-**デバイス**では、コンピューターまたはサーバー上の接続されているデバイスを管理できます。
+**デバイス** では、コンピューターまたはサーバー上の接続されているデバイスを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 デバイスでは、次の機能がサポートされています。
 
@@ -177,9 +177,9 @@ Windows 管理センターにサーバーを追加するには:
 
 ## <a name="dhcp"></a>[DHCP]
 
-**DHCP**を使用すると、コンピューターまたはサーバー上の接続されているデバイスを管理できます。
+**DHCP** を使用すると、コンピューターまたはサーバー上の接続されているデバイスを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 - IPV4 と IPV6 のスコープを作成/構成/表示する
 - アドレスの除外を作成し、開始 IP アドレスと終了 IP アドレスを構成する
@@ -189,9 +189,9 @@ Windows 管理センターにサーバーを追加するには:
 
 ## <a name="dns"></a>DNS
 
-**DNS**を使用すると、コンピューターまたはサーバー上の接続されているデバイスを管理できます。
+**DNS** を使用すると、コンピューターまたはサーバー上の接続されているデバイスを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 - DNS 前方参照ゾーン、逆引き参照ゾーン、および DNS レコードの詳細を表示する
 - 前方参照ゾーン (プライマリ、セカンダリ、またはスタブ) を作成し、前方参照ゾーンのプロパティを構成する
@@ -202,11 +202,11 @@ Windows 管理センターにサーバーを追加するには:
 
 [**DHCP のフィードバックと提案**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BDNS%5D)された機能を表示します。
 
-## <a name="events"></a>イベント
+## <a name="events"></a>events
 
-**イベント**を使用すると、コンピューターまたはサーバー上のイベントログを管理できます。
+**イベント** を使用すると、コンピューターまたはサーバー上のイベントログを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 イベントでは、次の機能がサポートされています。
 
@@ -217,11 +217,11 @@ Windows 管理センターにサーバーを追加するには:
 
 [**フィードバックとイベントの提案された機能を表示**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BEvents%5D)します。
 
-## <a name="files"></a>ファイル
+## <a name="files"></a>Files
 
-**ファイル**を使用すると、コンピューターまたはサーバー上のファイルとフォルダーを管理できます。
+**ファイル** を使用すると、コンピューターまたはサーバー上のファイルとフォルダーを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 ファイルでは、次の機能がサポートされています。
 
@@ -240,11 +240,11 @@ Windows 管理センターにサーバーを追加するには:
 
 [**ファイルのフィードバックと提案された機能を表示**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BFiles%5D)します。
 
-## <a name="firewall"></a>ファイアウォール
+## <a name="firewall"></a>Firewall
 
-**ファイアウォール**では、コンピューターまたはサーバーのファイアウォール設定と規則を管理できます。
+**ファイアウォール** では、コンピューターまたはサーバーのファイアウォール設定と規則を管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 ファイアウォールでは、次の機能がサポートされています。
 
@@ -262,15 +262,15 @@ Windows 管理センターにサーバーを追加するには:
 
 ## <a name="installed-apps"></a>インストール済みアプリ
 
-**インストール**されているアプリを使用して、インストールされているアプリケーションを一覧表示およびアンインストールできます。
+**インストール** されているアプリを使用して、インストールされているアプリケーションを一覧表示およびアンインストールできます。
 
 [**インストールされているアプリのフィードバックと提案された機能を表示**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BInstalled%20Apps%5D)します。
 
 ## <a name="local-users-and-groups"></a>ローカル ユーザーとグループ
 
-**ローカルユーザーとグループ**を使用すると、コンピューターまたはサーバーのローカルに存在するセキュリティグループとユーザーを管理できます。
+**ローカルユーザーとグループ** を使用すると、コンピューターまたはサーバーのローカルに存在するセキュリティグループとユーザーを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 ローカルユーザーとグループでは、次の機能がサポートされています。
 
@@ -285,9 +285,9 @@ Windows 管理センターにサーバーを追加するには:
 
 ## <a name="network"></a>ネットワーク
 
-**ネットワーク**では、コンピューターまたはサーバー上のネットワークデバイスと設定を管理できます。
+**ネットワーク** では、コンピューターまたはサーバー上のネットワークデバイスと設定を管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 ネットワークでは、次の機能がサポートされています。
 
@@ -300,9 +300,9 @@ Windows 管理センターにサーバーを追加するには:
 
 ## <a name="powershell"></a>PowerShell
 
-**Powershell**を使用すると、powershell セッションを使用してコンピューターまたはサーバーと対話できます。
+**Powershell** を使用すると、powershell セッションを使用してコンピューターまたはサーバーと対話できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 PowerShell では、次の機能がサポートされています。
 
@@ -313,9 +313,9 @@ PowerShell では、次の機能がサポートされています。
 
 ## <a name="processes"></a>処理
 
-**プロセス**を使用すると、コンピューターまたはサーバー上で実行中のプロセスを管理できます。
+**プロセス** を使用すると、コンピューターまたはサーバー上で実行中のプロセスを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 プロセスでは、次の機能がサポートされています。
 
@@ -328,11 +328,11 @@ PowerShell では、次の機能がサポートされています。
 
 [**フィードバックとプロセスの提案された機能を表示**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BProcesses%5D)します。
 
-## <a name="registry"></a>Registry
+## <a name="registry"></a>レジストリ
 
-**レジストリ**を使用して、コンピューターまたはサーバー上のレジストリキーと値を管理できます。
+**レジストリ** を使用して、コンピューターまたはサーバー上のレジストリキーと値を管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 レジストリでは、次の機能がサポートされています。
 
@@ -344,9 +344,9 @@ PowerShell では、次の機能がサポートされています。
 
 ## <a name="remote-desktop"></a>リモート デスクトップ
 
-**リモートデスクトップ**を使用すると、対話型デスクトップセッションを使用してコンピューターまたはサーバーと対話できます。
+**リモートデスクトップ** を使用すると、対話型デスクトップセッションを使用してコンピューターまたはサーバーと対話できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 リモートデスクトップでは、次の機能がサポートされています。
 
@@ -358,9 +358,9 @@ PowerShell では、次の機能がサポートされています。
 
 ## <a name="roles-and-features"></a>役割と機能
 
-**役割と機能**を使用すると、サーバー上の役割と機能を管理できます。
+**役割と機能** を使用すると、サーバー上の役割と機能を管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 役割と機能では、次の機能がサポートされています。
 
@@ -373,9 +373,9 @@ PowerShell では、次の機能がサポートされています。
 
 ## <a name="scheduled-tasks"></a>スケジュールされたタスク
 
-**スケジュール**されたタスクを使用して、コンピューターまたはサーバー上のスケジュールされたタスクを管理できます。
+**スケジュール** されたタスクを使用して、コンピューターまたはサーバー上のスケジュールされたタスクを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 スケジュールされたタスクでは、次の機能がサポートされています。
 
@@ -389,9 +389,9 @@ PowerShell では、次の機能がサポートされています。
 
 ## <a name="services"></a>サービス
 
-**サービス**を使用すると、コンピューターまたはサーバー上のサービスを管理できます。
+**サービス** を使用すると、コンピューターまたはサーバー上のサービスを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 サービスでは、次の機能がサポートされています。
 
@@ -404,30 +404,30 @@ PowerShell では、次の機能がサポートされています。
 
 [**サービスのフィードバックと提案された機能を表示**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BServices%5D)します。
 
-## <a name="settings"></a>Settings
+## <a name="settings"></a>設定
 
-**設定**は、コンピューターまたはサーバーの設定を管理するための一元的な場所です。
+**設定** は、コンピューターまたはサーバーの設定を管理するための一元的な場所です。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 - ユーザーとシステムの環境変数を表示および変更する
-- アラートを監視するための構成を表示[Azure Monitor](../azure/azure-monitor.md)
+- アラートを監視するための構成を表示 [Azure Monitor](../azure/azure-monitor.md)
 - 電源構成の表示と変更
 - リモートデスクトップの設定を表示および変更する
 - ロールベースのアクセス制御設定を表示および変更する
 - Hyper-v ホストの設定を表示および変更する (該当する場合)
 
-## <a name="storage"></a>記憶域
+## <a name="storage"></a>ストレージ
 
-**記憶域**を使用すると、コンピューターまたはサーバー上の記憶装置を管理できます。
+**記憶域** を使用すると、コンピューターまたはサーバー上の記憶装置を管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 ストレージでは、次の機能がサポートされています。
 
 - サーバー上の既存のディスクを参照して検索する
 - ディスクの詳細の表示
-- ボリュームの作成
+- ボリュームを作成する
 - ディスクの初期化
 - バーチャルハードディスク (VHD) の作成、アタッチ、および切断
 - ディスクをオフラインにする
@@ -436,13 +436,13 @@ PowerShell では、次の機能がサポートされています。
 - ボリュームのプロパティの編集
 - ボリュームを削除する
 - クォータ管理のインストール
-- ファイルサーバーリソースマネージャーのクォータ[の記憶域の管理->のクォータの作成と更新](../../../storage/fsrm/quota-management.md)
+- ファイルサーバーリソースマネージャーのクォータ [の記憶域の管理->のクォータの作成と更新](../../../storage/fsrm/quota-management.md)
 
 [**ストレージのフィードバックと提案された機能を表示する**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BStorage%5D)
 
 ## <a name="storage-migration-service"></a>記憶域移行サービス
 
-**Storage Migration Service**を使用すると、アプリケーションやユーザーによる変更を必要とせずに、サーバーとファイル共有を Azure または Windows Server 2019 に移行することができます。
+**Storage Migration Service** を使用すると、アプリケーションやユーザーによる変更を必要とせずに、サーバーとファイル共有を Azure または Windows Server 2019 に移行することができます。
 [Storage Migration Service の概要を見る](https://go.microsoft.com/fwlink/?linkid=2016155)
 
 >[!NOTE]
@@ -455,17 +455,17 @@ PowerShell では、次の機能がサポートされています。
 
 ## <a name="system-insights"></a>システム インサイト
 
-**System Insights**では、予測分析が Windows server にネイティブで導入され、サーバーの機能に関する洞察が向上しています。
-[System Insights の概要を見る](https://aka.ms/systeminsights)
+**System Insights** では、予測分析が Windows server にネイティブで導入され、サーバーの機能に関する洞察が向上しています。
+[System Insights の概要を見る](../../system-insights/overview.md)
 
 >[!NOTE]
 >System Insights には Windows Server 2019 が必要です。
 
-## <a name="updates"></a>更新プログラム
+## <a name="updates"></a>更新
 
-**更新プログラム**を使用すると、コンピューターまたはサーバーで Microsoft や Windows の更新プログラムを管理できます。
+**更新プログラム** を使用すると、コンピューターまたはサーバーで Microsoft や Windows の更新プログラムを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 更新プログラムでは、次の機能がサポートされています。
 
@@ -483,9 +483,9 @@ PowerShell では、次の機能がサポートされています。
 
 ## <a name="virtual-switches"></a>仮想スイッチ
 
-**仮想スイッチ**を使用すると、コンピューターまたはサーバー上の hyper-v 仮想スイッチを管理できます。
+**仮想スイッチ** を使用すると、コンピューターまたはサーバー上の hyper-v 仮想スイッチを管理できます。
 
-### <a name="features"></a>機能
+### <a name="features"></a>特徴
 
 仮想スイッチでは、次の機能がサポートされています。
 

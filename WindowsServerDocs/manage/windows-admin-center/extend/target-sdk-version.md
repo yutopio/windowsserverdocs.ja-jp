@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 96e17326bc289b4ad018da59b01344956586a198
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3d6b08e69d69a37b31b616994b3bdb67666cb2bb
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964558"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766935"
 ---
 # <a name="target-a-different-version-of-the-windows-admin-center-sdk"></a>別のバージョンの Windows 管理センター SDK をターゲットにする
 
@@ -21,12 +21,12 @@ SDK の変更とプラットフォームの変更によって拡張機能を最�
 
 次の3つの SDK バージョンを選択できます。
 
-* ```latest```-この SDK パッケージは、Windows 管理センターの現在の GA リリースと整合しています
-* ```insider```-この SDK パッケージは、Windows 管理センターの現在のプレビューリリース (Windows Server Insider Preview で利用可能) と整合しています。
-* ```next```–この SDK パッケージには、最新の機能が含まれています
+* ```latest``` -この SDK パッケージは、Windows 管理センターの現在の GA リリースと整合しています
+* ```insider``` -この SDK パッケージは、Windows 管理センターの現在のプレビューリリース (Windows Server Insider Preview で利用可能) と整合しています。
+* ```next``` –この SDK パッケージには、最新の機能が含まれています
 
 > [!NOTE]
-> ダウンロードできる Windows 管理センターのさまざまな[バージョン](https://aka.ms/WACDownloadPage)については、こちらを参照してください。
+> ダウンロードできる Windows 管理センターのさまざまな [バージョン](../overview.md) については、こちらを参照してください。
 
 ## <a name="targeting-sdk-version-on-a-new-project"></a>新しいプロジェクトでの SDK バージョンのターゲット設定
 

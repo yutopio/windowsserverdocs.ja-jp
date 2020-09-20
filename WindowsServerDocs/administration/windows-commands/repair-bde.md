@@ -7,19 +7,19 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: e7ebf0f2923e565e16e546a7804ee42771eec83d
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 4caa619c248a30c48cdfc291f2fde25ba51d85f7
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640637"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766285"
 ---
 # <a name="repair-bde"></a>repair-bde
 
 重大な損傷を受けたドライブの重要な部分の再構築を試行し、BitLocker を使用してドライブが暗号化されている場合は回復可能なデータを回復します。また、暗号化解除のために有効な回復パスワードまたは回復キーを持っている場合は、
 
 > [!IMPORTANT]
-> ドライブ上の BitLocker メタデータデータが破損している場合は、回復パスワードまたは回復キーに加えて、バックアップキーパッケージを指定できる必要があります。 Active Directory Domain Services の [既定のキーのバックアップ] 設定を使用した場合は、キーパッケージがバックアップされます。 Bitlocker [: Bitlocker 回復パスワードビューアー](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-recovery-password-viewer) を使用して、AD DS からキーパッケージを取得できます。
+> ドライブ上の BitLocker メタデータデータが破損している場合は、回復パスワードまたは回復キーに加えて、バックアップキーパッケージを指定できる必要があります。 Active Directory Domain Services の [既定のキーのバックアップ] 設定を使用した場合は、キーパッケージがバックアップされます。 Bitlocker [: Bitlocker 回復パスワードビューアー](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-recovery-password-viewer) を使用して、AD DS からキーパッケージを取得できます。
 >
 > キーパッケージと回復パスワードまたは回復キーを使用すると、ディスクが破損している場合でも、BitLocker で保護されたドライブの一部を暗号化解除できます。 各キーパッケージは、対応するドライブ識別子を持つドライブに対してのみ機能します。
 

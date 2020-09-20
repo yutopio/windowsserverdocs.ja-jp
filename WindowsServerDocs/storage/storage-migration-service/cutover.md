@@ -6,12 +6,12 @@ ms.author: t-chrche
 manager: nedpyle
 ms.date: 08/31/2020
 ms.topic: article
-ms.openlocfilehash: 985fd14b7791d28246b8e9186ca83216df734875
-ms.sourcegitcommit: a640c2d7f2d21d7cd10a9be4496e1574e5e955f0
+ms.openlocfilehash: 1e886c505435976b6495e0460705821086781a62
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89448928"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766905"
 ---
 # <a name="how-cutover-works-in-storage-migration-service"></a>Storage Migration Service でのカットオーバーのしくみ
 
@@ -66,7 +66,7 @@ ms.locfileid: "89448928"
 |  進捗状況 | 説明                                                                                               |  メモ |
 |:-----|:--------------------------------------------------------------------------------------------------------------------|:---|
 |  0% | カットオーバーはアイドル状態です。 |   |
-| 2%  | ソースコンピューターに接続しています... |   [移行元と移行先の両方のコンピューターの要件](https://docs.microsoft.com/windows-server/storage/storage-migration-service/overview#security-requirements-the-storage-migration-service-proxy-service-and-firewall-ports)が満たされていることを確認してください。|
+| 2%  | ソースコンピューターに接続しています... |   [移行元と移行先の両方のコンピューターの要件](./overview.md#security-requirements-the-storage-migration-service-proxy-service-and-firewall-ports)が満たされていることを確認してください。|
 | 5%  | 対象のコンピューターに接続しています... |   |
 | 6%  | Active Directory のコンピューターオブジェクトに対するセキュリティのアクセス許可を設定しています... |   移行先コンピューターのソースコンピューターの Active Directory オブジェクトのセキュリティアクセス許可をレプリケートします。|
 | 8%  | 作成した一時アカウントがソースコンピューターで正常に削除されたことを確認しています... |   同じ名前の一時的なアカウントを作成できることを確認します。|
@@ -95,7 +95,7 @@ ms.locfileid: "89448928"
 | 52% | 最初の再起動後にソースコンピューターが応答するのを待機しています... |   |
 | 55% | 2回目の再起動後にソースコンピューターが応答するのを待機しています... |   |
 | 56% | 3番目の再起動後にソースコンピューターが応答するのを待機しています... |   |
-| 57% | ソースの代替コンピューター名を削除しています... |   ソースが他のユーザーとアプリに到達できないようにします。 詳細については、「 [Netdom computername](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11))」を参照してください。 |
+| 57% | ソースの代替コンピューター名を削除しています... |   ソースが他のユーザーとアプリに到達できないようにします。 詳細については、「 [Netdom computername](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11))」を参照してください。 |
 | 58% | ソースコンピューターに作成した一時ローカルアカウントを削除しています... |   |
 | 61% | ソースコンピューターのローカルアカウントトークンフィルターポリシーをリセットしています... |   ポリシーを有効にします。|
 | 63% | 対象のコンピューターをドメインから削除しています... |   |
@@ -119,20 +119,20 @@ ms.locfileid: "89448928"
 
 ### <a name="__is-domain-controller-migration-supported__"></a>__ドメインコントローラーの移行はサポートされていますか?__
 
-現時点ではありませんが、回避策については、 [FAQ のページ](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#is-domain-controller-migration-supported) を参照してください。
+現時点ではありませんが、回避策については、 [FAQ のページ](./faq.md#is-domain-controller-migration-supported) を参照してください。
 
 
 ## <a name="known-issues"></a>既知の問題
 >記憶域移行サービスの [概要](overview.md) に関する要件を満たしていること、および記憶域移行サービスを実行しているコンピューターに最新の Windows update がインストールされていることを確認します。
 
-次の問題の詳細については、[ [既知の問題] ページ](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues) を参照してください。
-* [__記憶域移行サービスの切り替えの検証が、"対象コンピューターのトークンフィルターポリシーのアクセスが拒否されました" というエラーで失敗する__](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues#storage-migration-service-cutover-validation-fails-with-error-access-is-denied-for-the-token-filter-policy-on-destination-computer)
+次の問題の詳細については、[ [既知の問題] ページ](./known-issues.md) を参照してください。
+* [__記憶域移行サービスの切り替えの検証が、"対象コンピューターのトークンフィルターポリシーのアクセスが拒否されました" というエラーで失敗する__](./known-issues.md#storage-migration-service-cutover-validation-fails-with-error-access-is-denied-for-the-token-filter-policy-on-destination-computer)
 
-* [__"ネットリソースに対する CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO に失敗しました" というエラーが発生し、Windows Server 2008 R2 クラスターのカットオーバーが失敗する__](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues#error-clusctl_resource_netname_repair_vco-failed-against-netname-resource-and-windows-server-2008-r2-cluster-cutover-fails)
+* [__"ネットリソースに対する CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO に失敗しました" というエラーが発生し、Windows Server 2008 R2 クラスターのカットオーバーが失敗する__](./known-issues.md#error-clusctl_resource_netname_repair_vco-failed-against-netname-resource-and-windows-server-2008-r2-cluster-cutover-fails)
 
-* [__"38% のソースコンピューターのネットワークインターフェイスのマッピングが停止しています..."静的 Ip を使用する場合__](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues#cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer-when-using-static-ips)
+* [__"38% のソースコンピューターのネットワークインターフェイスのマッピングが停止しています..."静的 Ip を使用する場合__](./known-issues.md#cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer-when-using-static-ips)
 
-* [__"38% のソースコンピューターのネットワークインターフェイスのマッピングが停止しています..."__](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues#cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer)
+* [__"38% のソースコンピューターのネットワークインターフェイスのマッピングが停止しています..."__](./known-issues.md#cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer)
 
 ## <a name="additional-references"></a>その他の参照情報
 

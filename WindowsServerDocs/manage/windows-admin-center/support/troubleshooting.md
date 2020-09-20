@@ -6,23 +6,23 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.date: 06/07/2019
-ms.openlocfilehash: 76b171b81ff01a7a16b700d720bf289fefddf0f7
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1775149495871353ef250eff3cb8f6f8cc5c22d6
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990208"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766205"
 ---
 # <a name="troubleshooting-windows-admin-center"></a>Windows Admin Center のトラブルシューティング
 
 > 適用先:Windows Admin Center、Windows Admin Center Preview
 
 > [!Important]
-> このガイドは、Windows Admin Center を使用できない原因となっている問題を診断および解決するのに役立ちます。 特定のツールで問題が発生している場合は、[既知の問題](https://aka.ms/wacknownissues)が発生しているかどうかを確認してください。
+> このガイドは、Windows Admin Center を使用できない原因となっている問題を診断および解決するのに役立ちます。 特定のツールで問題が発生している場合は、[既知の問題](./known-issues.md)が発生しているかどうかを確認してください。
 
 ## <a name="installer-fails-with-message-_the-module-microsoftpowershelllocalaccounts-could-not-be-loaded_"></a>インストーラーは次のメッセージで失敗します: **_モジュール ' Microsoft. PowerShell. localaccounts ' を読み込めませんでした。_**
 
-これは、既定の PowerShell モジュールパスが変更または削除された場合に発生する可能性があります。 この問題を解決するには、 ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` が PSModulePath 環境変数の**最初**の項目であることを確認します。 これは、次の PowerShell の行を使用して実現できます。
+これは、既定の PowerShell モジュールパスが変更または削除された場合に発生する可能性があります。 この問題を解決するには、 ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` が PSModulePath 環境変数の **最初** の項目であることを確認します。 これは、次の PowerShell の行を使用して実現できます。
 
 ```powershell
 [Environment]::SetEnvironmentVariable("PSModulePath","%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules;" + ([Environment]::GetEnvironmentVariable("PSModulePath","User")),"User")
@@ -55,7 +55,7 @@ ms.locfileid: "87990208"
 
 * Web ブラウザーとして Microsoft Edge または Google Chrome のいずれかを使用していることを確認します。
 
-* サーバーで、[タスクマネージャー > サービス] を開き、 **Servermanagementgateway/Windows 管理センター**が実行されていることを確認します。
+* サーバーで、[タスクマネージャー > サービス] を開き、 **Servermanagementgateway/Windows 管理センター** が実行されていることを確認します。
 
     ![タスクマネージャー-[サービス] タブ](../media/Service-TaskMan.PNG)
 
@@ -100,7 +100,7 @@ EnableHttp2Tls=dword:00000000
 
 ## <a name="im-having-trouble-with-the-remote-desktop-events-and-powershell-tools"></a>リモートデスクトップ、イベント、PowerShell ツールで問題が発生しています。
 
-これら3つのツールには websocket プロトコルが必要です。これは通常、プロキシサーバーとファイアウォールによってブロックされます。 Google Chrome を使用している場合は、websocket と NTLM 認証に関する[既知の問題](known-issues.md#google-chrome)があります。
+これら3つのツールには websocket プロトコルが必要です。これは通常、プロキシサーバーとファイアウォールによってブロックされます。 Google Chrome を使用している場合は、websocket と NTLM 認証に関する [既知の問題](known-issues.md#google-chrome) があります。
 
 ## <a name="i-can-connect-to-some-servers-but-not-others"></a>一部のサーバーに接続できるが、他のサーバーには接続できない
 
@@ -192,14 +192,14 @@ netsh http delete urlacl url=https://+:443/
 
 ## <a name="azure-features-dont-work-properly-in-edge"></a>Azure の機能がエッジで適切に動作しない
 
-エッジには、Windows 管理センターでの Azure ログインに影響を与えるセキュリティゾーンに関連する[既知の問題](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge)があります。 Edge を使用しているときに Azure の機能を使用する際に問題が発生する場合は https://login.microsoftonline.com 、ゲートウェイの URL を信頼済みサイトとして追加し、 https://login.live.com クライアント側ブラウザーでエッジポップアップブロック設定の許可されたサイトに追加してみてください。
+エッジには、Windows 管理センターでの Azure ログインに影響を与えるセキュリティゾーンに関連する [既知の問題](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) があります。 Edge を使用しているときに Azure の機能を使用する際に問題が発生する場合は https://login.microsoftonline.com 、ゲートウェイの URL を信頼済みサイトとして追加し、 https://login.live.com クライアント側ブラウザーでエッジポップアップブロック設定の許可されたサイトに追加してみてください。
 
 これを行うには、次の手順を実行します。
-1. Windows の [スタート] メニューの [**インターネットオプション**] を検索します。
-2. [**セキュリティ**] タブにアクセスします。
+1. Windows の [スタート] メニューの [ **インターネットオプション** ] を検索します。
+2. [ **セキュリティ** ] タブにアクセスします。
 3. **[信頼済みサイト]** オプションで、 **[サイト]** ボタンをクリックし、表示されたダイアログ ボックスに URL を追加します。 ゲートウェイの URL とおよびを追加する必要があり https://login.microsoftonline.com https://login.live.com ます。
-4. [**プライバシー** ] タブにアクセスします。
-5. [**ポップアップブロック**] セクションで、[**設定**] ボタンをクリックし、表示されるダイアログボックスに url を追加します。 ゲートウェイの URL とおよびを追加する必要があり https://login.microsoftonline.com https://login.live.com ます。
+4. [ **プライバシー** ] タブにアクセスします。
+5. [ **ポップアップブロック** ] セクションで、[ **設定** ] ボタンをクリックし、表示されるダイアログボックスに url を追加します。 ゲートウェイの URL とおよびを追加する必要があり https://login.microsoftonline.com https://login.live.com ます。
 
 ## <a name="having-an-issue-with-an-azure-related-feature"></a>Azure 関連の機能に問題がある場合は、
 

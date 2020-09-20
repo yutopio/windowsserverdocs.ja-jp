@@ -6,12 +6,12 @@ author: JasonGerend
 manager: dougkim
 ms.author: jgerend
 ms.date: 09/11/2018
-ms.openlocfilehash: 3867df04c83fe536473c227e43700a4758c1294e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3be878629d19542629cc3cbb849ac46fe14de0bd
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935859"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766835"
 ---
 # <a name="iscsi-target-server-scalability-limits"></a>iSCSI ターゲットサーバーのスケーラビリティの制限
 
@@ -33,20 +33,20 @@ ms.locfileid: "87935859"
 <th><p>Item</p></th>
 <th><p>サポートの制限</p></th>
 <th><p>リレーションシップ?</p></th>
-<th><p>解説</p></th>
+<th><p>コメント</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><p>iscsi ターゲットサーバーあたりの iSCSI ターゲットインスタンス</p></td>
 <td><p>256</p></td>
-<td><p>いいえ</p></td>
+<td><p>No</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>iscsi ターゲットサーバーあたりの iSCSI 論理ユニット (Lu) または仮想ディスク</p></td>
 <td><p>512</p></td>
-<td><p>いいえ</p></td>
+<td><p>No</p></td>
 <td><p>含まれているテスト構成: ターゲットインスタンスあたりの平均は64ターゲット、256ターゲットインスタンスはターゲットごとに1つの LU を使用します。</p></td>
 </tr>
 <tr class="odd">
@@ -71,7 +71,7 @@ ms.locfileid: "87935859"
 <td><p>ローカルにマウントされた仮想ディスクまたはスナップショット (ストレージアプライアンスあたり)</p></td>
 <td><p>32</p></td>
 <td><p>はい</p></td>
-<td><p>ローカルにマウントされた仮想ディスクは iSCSI 固有の機能を提供&#39;t ではなく、非推奨とされます。詳細については、「 <a href="https://technet.microsoft.com/library/dn303411.aspx">Windows Server 2012 R2 で削除された機能または非推奨の機能</a>」を参照してください。</p></td>
+<td><p>ローカルにマウントされた仮想ディスクは iSCSI 固有の機能を提供&#39;t ではなく、非推奨とされます。詳細については、「 <a href="/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303411(v=ws.11)">Windows Server 2012 R2 で削除された機能または非推奨の機能</a>」を参照してください。</p></td>
 </tr>
 </tbody>
 </table>
@@ -90,21 +90,21 @@ ms.locfileid: "87935859"
 <th><p>Item</p></th>
 <th><p>サポートの制限</p></th>
 <th><p>リレーションシップ?</p></th>
-<th><p>解説</p></th>
+<th><p>コメント</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><p>フェールオーバークラスターノード</p></td>
 <td><p>8 (Windows Server 2012 では 5)</p></td>
-<td><p>いいえ</p></td>
+<td><p>No</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>複数のアクティブなクラスターノード</p></td>
 <td><p>サポートされています</p></td>
 <td>
-<p>該当なし</p></td>
+<p>N/A</p></td>
 <td><p>フェールオーバークラスター内の各アクティブノードは、実行可能な所有者ノードとして機能する他のノードと異なる iSCSI ターゲットサーバークラスターインスタンスを所有しています。</p></td>
 </tr>
 <tr class="odd">
@@ -122,13 +122,13 @@ ms.locfileid: "87935859"
 <tr class="odd">
 <td><p>ISCSI ターゲットインスタンスに同時に接続できるセッション</p></td>
 <td><p>544 (Windows Server 2012 の 512)</p></td>
-<td><p>いいえ</p></td>
+<td><p>No</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>マルチパス入出力 (MPIO)</p></td>
 <td><p>サポートされています</p></td>
-<td><p>該当なし</p></td>
+<td><p>N/A</p></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -139,8 +139,8 @@ ms.locfileid: "87935859"
 </tr>
 <tr class="even">
 <td><p>スタンドアロン iSCSI ターゲットサーバーから、クラスター化された iSCSI ターゲットサーバーへの変換またはその逆の変換</p></td>
-<td><p>サポートなし</p></td>
-<td><p>いいえ</p></td>
+<td><p>サポートされていません</p></td>
+<td><p>No</p></td>
 <td><p>ISCSI ターゲットインスタンスと仮想ディスク構成データ (スナップショットメタデータを含む) は、変換中に失われます。</p></td>
 </tr>
 </tbody>
@@ -160,14 +160,14 @@ ms.locfileid: "87935859"
 <th><p>Item</p></th>
 <th><p>サポートの制限</p></th>
 <th><p>リレーションシップ?</p></th>
-<th><p>解説</p></th>
+<th><p>コメント</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><p>アクティブなネットワークアダプターの最大数</p></td>
 <td><p>8</p></td>
-<td><p>いいえ</p></td>
+<td><p>No</p></td>
 <td><p>アプライアンス内のネットワークアダプターの合計数ではなく、iSCSI トラフィック専用のネットワークアダプターに適用されます。</p></td>
 </tr>
 <tr class="even">
@@ -179,25 +179,25 @@ ms.locfileid: "87935859"
 <tr class="odd">
 <td><p>ネットワークポートの速度</p></td>
 <td><p>1 Gbps、10 Gbps、40Gbps、56 Gbps (Windows Server 2012 R2 以降のみ)</p></td>
-<td><p>いいえ</p></td>
+<td><p>No</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>IPv4</p></td>
 <td><p>サポートされています</p></td>
-<td><p>該当なし</p></td>
+<td><p>N/A</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>IPv6</p></td>
 <td><p>サポートされています</p></td>
-<td><p>該当なし</p></td>
+<td><p>N/A</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>TCP オフロード</p></td>
 <td><p>サポートされています</p></td>
-<td><p>該当なし</p></td>
+<td><p>N/A</p></td>
 <td><p>大規模な送信 (セグメンテーション)、チェックサム、割り込みモデレート、RSS オフロードの活用</p></td>
 </tr>
 <tr class="odd">
@@ -209,19 +209,19 @@ ms.locfileid: "87935859"
 <tr class="even">
 <td><p>Jumbo Frame</p></td>
 <td><p>サポートされています</p></td>
-<td><p>該当なし</p></td>
+<td><p>N/A</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>IPSec</p></td>
 <td><p>サポートされています</p></td>
-<td><p>該当なし</p></td>
+<td><p>N/A</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>CRC オフロード</p></td>
 <td><p>サポートされています</p></td>
-<td><p>該当なし</p></td>
+<td><p>N/A</p></td>
 <td></td>
 </tr>
 </tbody>
@@ -241,7 +241,7 @@ ms.locfileid: "87935859"
 <th><p>Item</p></th>
 <th><p>サポートの制限</p></th>
 <th><p>リレーションシップ?</p></th>
-<th><p>解説</p></th>
+<th><p>コメント</p></th>
 </tr>
 </thead>
 <tbody>
@@ -289,13 +289,13 @@ ms.locfileid: "87935859"
 <tr class="odd">
 <td><p>VHD の固定形式</p></td>
 <td><p>サポートされています</p></td>
-<td><p>いいえ</p></td>
+<td><p>No</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>VHD 差分形式</p></td>
 <td><p>サポートされています</p></td>
-<td><p>いいえ</p></td>
+<td><p>No</p></td>
 <td><p>差分 VHD ベースの iSCSI 仮想ディスクを使用してスナップショットを作成することはできません。</p></td>
 </tr>
 <tr class="odd">
@@ -326,13 +326,13 @@ ms.locfileid: "87935859"
 <tr class="odd">
 <td><p>ReFS</p></td>
 <td><p>サポートされています</p></td>
-<td><p>該当なし</p></td>
+<td><p>N/A</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>NTFS</p></td>
 <td><p>サポートされています</p></td>
-<td><p>該当なし</p></td>
+<td><p>N/A</p></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -344,14 +344,14 @@ ms.locfileid: "87935859"
 <tr class="even">
 <td><p>仮想プロビジョニング</p></td>
 <td><p>いいえ</p></td>
-<td><p>該当なし</p></td>
+<td><p>N/A</p></td>
 <td><p>動的 Vhd はサポートされていますが、マップ解除はサポートされていません&#39;。</p></td>
 </tr>
 <tr class="odd">
 <td><p>論理ユニットの圧縮</p></td>
 <td><p>はい (Windows Server 2012 R2 以降のみ)</p></td>
-<td><p>該当なし</p></td>
-<td><p>LUN を圧縮するには、 <a href="https://docs.microsoft.com/powershell/module/iscsitarget/resize-iscsivirtualdisk">convert-iscsivirtualdisk</a>を使用します。</p></td>
+<td><p>N/A</p></td>
+<td><p>LUN を圧縮するには、 <a href="/powershell/module/iscsitarget/resize-iscsivirtualdisk">convert-iscsivirtualdisk</a> を使用します。</p></td>
 </tr>
 <tr class="even">
 <td><p>論理ユニットの複製</p></td>
@@ -374,7 +374,7 @@ ms.locfileid: "87935859"
 <tr class="header">
 <th><p>Item</p></th>
 <th><p>サポートの制限</p></th>
-<th><p>解説</p></th>
+<th><p>コメント</p></th>
 </tr>
 </thead>
 <tbody>
@@ -390,38 +390,38 @@ ms.locfileid: "87935859"
 </tr>
 <tr class="odd">
 <td><p>書き込み可能なスナップショット</p></td>
-<td><p>サポートなし</p></td>
+<td><p>サポートされていません</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>スナップショット–完全に変換</p></td>
-<td><p>サポートなし</p></td>
+<td><p>サポートされていません</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>スナップショット–オンラインロールバック</p></td>
-<td><p>サポートなし</p></td>
+<td><p>サポートされていません</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>スナップショット–書き込み可能に変換</p></td>
-<td><p>サポートなし</p></td>
+<td><p>サポートされていません</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>スナップショット-リダイレクト</p></td>
-<td><p>サポートなし</p></td>
+<td><p>サポートされていません</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>スナップショット-ピン留め</p></td>
-<td><p>サポートなし</p></td>
+<td><p>サポートされていません</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>ローカルマウント</p></td>
 <td><p>サポートされています</p></td>
-<td><p>ローカルにマウントされた iSCSI 仮想ディスクは非推奨です-詳細については、「 <a href="https://technet.microsoft.com/library/dn303411.aspx">Windows Server 2012 R2 で削除された機能または非推奨の機能</a>」を参照してください。 ダイナミックディスクスナップショットをローカルにマウントすることはできません。</p></td>
+<td><p>ローカルにマウントされた iSCSI 仮想ディスクは非推奨です-詳細については、「 <a href="/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303411(v=ws.11)">Windows Server 2012 R2 で削除された機能または非推奨の機能</a>」を参照してください。 ダイナミックディスクスナップショットをローカルにマウントすることはできません。</p></td>
 </tr>
 </tbody>
 </table>
@@ -430,7 +430,7 @@ ms.locfileid: "87935859"
 
 アプリケーションサーバーから iSCSI 仮想ディスク上のデータのボリュームシャドウコピー (VSS オープンファイルスナップショット) を作成する場合は、または、仮想ディスクサービス (VDS) ハードウェアプロバイダーを必要とする古いアプリケーション (Diskraid コマンドなど) を使用して iSCSI 仮想ディスクを管理する場合は、スナップショットを取得するサーバーに iSCSI ターゲット記憶域プロバイダーをインストールするか、VDS 管理アプリを使用します。
 
-ISCSI ターゲット記憶域プロバイダーは、Windows Server 2016、Windows Server 2012 R2、および Windows Server 2012 の役割サービスです。また、iSCSI ターゲットサーバーが Windows Server 2012 で実行されている限り、次のオペレーティングシステムで[ダウンレベルアプリケーションサーバーの Iscsi ターゲット記憶域プロバイダー (VDS/VSS) を](https://www.microsoft.com/download/details.aspx?id=34759)ダウンロードしてインストールすることもできます。
+ISCSI ターゲット記憶域プロバイダーは、Windows Server 2016、Windows Server 2012 R2、および Windows Server 2012 の役割サービスです。また、iSCSI ターゲットサーバーが Windows Server 2012 で実行されている限り、次のオペレーティングシステムで [ダウンレベルアプリケーションサーバーの Iscsi ターゲット記憶域プロバイダー (VDS/VSS) を](https://www.microsoft.com/download/details.aspx?id=34759) ダウンロードしてインストールすることもできます。
 
   - Windows Storage Server 2008 R2
 

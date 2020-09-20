@@ -7,12 +7,12 @@ manager: daveba
 ms.reviewer: zhvolosh
 ms.date: 01/31/2019
 ms.topic: article
-ms.openlocfilehash: 836a40ffa9df8fa308d1005fbac3a9e087488949
-ms.sourcegitcommit: 52a8d5d7e969eaa07fd3a45ed6d3cb5a5173b6d1
+ms.openlocfilehash: 7cf8e191fbc6fd9b5ff7cac5b6315ead4ad899ba
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970629"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766255"
 ---
 # <a name="delegate-ad-fs-powershell-commandlet-access-to-non-admin-users"></a>管理者以外のユーザーへの AD FS Powershell コマンドレットのアクセスの委任
 既定では、PowerShell を使用した AD FS 管理は、AD FS の管理者のみが実行できます。 多くの大規模な組織では、これは、ヘルプデスク担当者などの他のペルソナを扱うときに実行可能な運用モデルではない可能性があります。
@@ -62,7 +62,7 @@ Install-ADServiceAccount gMSAcontoso
 
 ### <a name="create-the-jea-role-file"></a>JEA ロールファイルを作成する
 
-AD FS サーバーで、メモ帳ファイルに JEA ロールを作成します。 ロールを作成する手順については、 [Jea ロール機能](https://docs.microsoft.com/powershell/scripting/learn/remoting/jea/role-capabilities)に関する説明を参照してください。
+AD FS サーバーで、メモ帳ファイルに JEA ロールを作成します。 ロールを作成する手順については、 [Jea ロール機能](/powershell/scripting/learn/remoting/jea/role-capabilities)に関する説明を参照してください。
 
 この例で委任されたコマンドレットは、 `Reset-AdfsAccountLockout, Get-ADFSAccountActivity, and Set-ADFSAccountActivity` です。
 
@@ -78,7 +78,7 @@ VisibleCmdlets = 'Reset-AdfsAccountLockout', 'Get-ADFSAccountActivity', 'Set-ADF
 
 
 ### <a name="create-the-jea-session-configuration-file"></a>JEA セッション構成ファイルを作成する
-手順に従って [Jea セッション構成](https://docs.microsoft.com/powershell/scripting/learn/remoting/jea/session-configurations) ファイルを作成します。 この構成ファイルによって、JEA エンドポイントを使用できるユーザーと、ユーザーがアクセスできる機能が決まります。
+手順に従って [Jea セッション構成](/powershell/scripting/learn/remoting/jea/session-configurations) ファイルを作成します。 この構成ファイルによって、JEA エンドポイントを使用できるユーザーと、ユーザーがアクセスできる機能が決まります。
 
 ロール機能は、ロール機能ファイルのフラット名 (拡張子なしのファイル名) によって参照されます。 同じフラット名を持つシステムで複数のロール機能を使用できる場合、PowerShell は暗黙的な検索順序を使用して有効なロール機能ファイルを選択します。 同じ名前のすべてのロール機能ファイルへのアクセス権は付与されません。
 

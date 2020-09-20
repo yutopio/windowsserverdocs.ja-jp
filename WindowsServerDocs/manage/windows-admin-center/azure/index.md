@@ -6,12 +6,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/31/2019
-ms.openlocfilehash: 5dcba9b92d9c0d85f99a1d54d50bef187fd51f10
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 04776c46d321a7a5aef19edd2866637c26d79125
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997474"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766325"
 ---
 # <a name="connecting-windows-server-to-azure-hybrid-services"></a>Azure ハイブリッド サービスへの Windows Server の接続
 
@@ -64,7 +64,7 @@ Azure ハイブリッド サービス ツールから、次の操作を実行で
 
 ### <a name="extend-storage-capacity"></a>記憶容量の拡張
 
-- **[Azure File Sync](https://aka.ms/afs) を使用してファイル サーバーとクラウドを同期する** このサーバー上のファイルを Azure ファイル共有と同期します。 すべてのファイルをローカルに保持するか、クラウド階層化を使用して空き領域を増やし、最も頻繁に使用されるファイルのみをサーバー上にキャッシュし、コールド データをクラウドに階層化します。 クラウド内のデータはバックアップ可能なため、オンプレミス サーバーのバックアップについて心配する必要はありません。 さらに、複数サイト同期により、複数のサーバー間で一連のファイルの同期を保つことができます。
+- **[Azure File Sync](/azure/storage/files/storage-sync-files-planning) を使用してファイル サーバーとクラウドを同期する** このサーバー上のファイルを Azure ファイル共有と同期します。 すべてのファイルをローカルに保持するか、クラウド階層化を使用して空き領域を増やし、最も頻繁に使用されるファイルのみをサーバー上にキャッシュし、コールド データをクラウドに階層化します。 クラウド内のデータはバックアップ可能なため、オンプレミス サーバーのバックアップについて心配する必要はありません。 さらに、複数サイト同期により、複数のサーバー間で一連のファイルの同期を保つことができます。
 詳しくは、「[Azure File Sync を使用してファイル サーバーをクラウドと同期する](azure-file-sync.md)」をご覧ください。
 
 - **[ストレージ移行サービス](../../../storage/storage-migration-service/overview.md)を使用して Azure でストレージを VM に移行する** ステップバイステップ ツールを使用して、Windows および Linux サーバー上のデータのインベントリを作成し、新しい Azure VM にデータを転送します。 Windows Admin Center では、転送元からデータを受信するように適切にサイズ設定され、構成されたジョブ用に新しい Azure VM を作成できます。
