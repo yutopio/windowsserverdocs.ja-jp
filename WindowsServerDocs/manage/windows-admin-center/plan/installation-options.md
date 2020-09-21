@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 12/02/2019
-ms.openlocfilehash: 4114869b3f138eea2e6ed45a4317699706471c5b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 403a0f68f559d72dfaa54e4b537a50a66fc3ec6a
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997003"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766725"
 ---
 # <a name="what-type-of-installation-is-right-for-you"></a>適切なインストールの種類
 
@@ -77,4 +77,4 @@ Windows Admin Center を使って、次の Windows オペレーティング シ�
 [Windows Admin Center の高可用性展開の方法をご確認ください](../deploy/high-availability.md)。
 
 > [!Tip]
-> Windows Admin Center をインストールする準備はできましたか。 [今すぐダウンロード](https://aka.ms/windowsadmincenter)
+> Windows Admin Center をインストールする準備はできましたか。 [今すぐダウンロード](../overview.md)

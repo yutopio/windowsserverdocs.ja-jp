@@ -6,12 +6,12 @@ author: JasonGerend
 ms.author: jgerend
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 8645373f4f8e933e0eaad8e62672ecc16518ed4d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 488a82d7ea4081acbca07f2f699e001f0945d6ce
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957610"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766655"
 ---
 # <a name="deploy-primary-computers-for-folder-redirection-and-roaming-user-profiles"></a>フォルダー リダイレクトと移動ユーザー プロファイル用のプライマリ コンピューターを展開する
 
@@ -39,7 +39,7 @@ ms.locfileid: "87957610"
 プライマリ コンピューターのサポートを展開する際の最初の手順は、各ユーザーのプライマリ コンピューターを指定することです。 これを行うには、Active Directory 管理センターを使用して、関連するコンピューターの識別名を取得し、**msDs-PrimaryComputer** 属性を設定します。
 
 > [!TIP]
-> Windows PowerShell を使用してプライマリ コンピューターを操作する場合は、ブログ投稿「[Windows 8 のプライマリ コンピューターをもう少し深く掘り下げる](<https://blogs.technet.microsoft.com/askds/2012/10/23/digging-a-little-deeper-into-windows-8-primary-computer/>)」を参照してください。
+> Windows PowerShell を使用してプライマリ コンピューターを操作する場合は、ブログ投稿「[Windows 8 のプライマリ コンピューターをもう少し深く掘り下げる](/archive/blogs/askds/digging-a-little-deeper-into-windows-8-primary-computer)」を参照してください。
 
 ユーザーのプライマリ コンピューターを指定する方法を次に示します。
 

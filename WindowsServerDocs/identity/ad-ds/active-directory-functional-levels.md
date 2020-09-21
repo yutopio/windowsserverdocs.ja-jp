@@ -8,12 +8,12 @@ ms.date: 08/25/2020
 ms.topic: article
 ms.custom: it-pro
 ms.reviewer: maheshu
-ms.openlocfilehash: e82dccb79a4fc3452d528581beb43ef32d52ecfc
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 8a990e5ab19a5f5cd30d23d0d31e28249801040b
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940942"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90765943"
 ---
 # <a name="forest-and-domain-functional-levels"></a>フォレストとドメインの機能レベル
 
@@ -25,7 +25,7 @@ AD DS を展開するときに、ドメインおよびフォレストの機能�
 
 Windows Server 2003、2008、および 2008 R2 の有効期間が終了したら、これらのドメイン コントローラー (DC) を、Windows Server 2012、2012 R2、2016、または 2019 に更新する必要があります。 その結果として、Windows Server 2008 R2 およびそれ以前を実行するすべてのドメイン コントローラーを、ドメインから削除する必要があります。
 
-Windows Server 2008 以上のドメイン機能レベルでは、分散ファイル サービス (DFS) レプリケーションを使用して、ドメイン コントローラー間で SYSVOL フォルダーの内容をレプリケートします。 Windows Server 2008 ドメイン機能レベル以上で新しいドメインを作成した場合、SYSVOL のレプリケートには DFS レプリケーションが自動的に使用されます。 それより低い低い機能レベルでドメイン作成した場合は、SYSVOL のレプリケーションを FRS から DFS に移行する必要があります。 移行手順については、[TechNet の手順](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx)に従うか、[ストレージ チームのファイル キャビネット ブログの合理化された一連の手順](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx)を参照してください。 Windows Server 2016 RS1 は、FRS を含む最新の Windows Server リリースです。
+Windows Server 2008 以上のドメイン機能レベルでは、分散ファイル サービス (DFS) レプリケーションを使用して、ドメイン コントローラー間で SYSVOL フォルダーの内容をレプリケートします。 Windows Server 2008 ドメイン機能レベル以上で新しいドメインを作成した場合、SYSVOL のレプリケートには DFS レプリケーションが自動的に使用されます。 それより低い低い機能レベルでドメイン作成した場合は、SYSVOL のレプリケーションを FRS から DFS に移行する必要があります。 移行手順については、[TechNet の手順](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md)に従うか、[ストレージ チームのファイル キャビネット ブログの合理化された一連の手順](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx)を参照してください。 Windows Server 2016 RS1 は、FRS を含む最新の Windows Server リリースです。
 
 ## <a name="windows-server-2019"></a>Windows Server 2019
 

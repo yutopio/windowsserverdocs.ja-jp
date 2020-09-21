@@ -4,12 +4,12 @@ ms.date: 06/18/2014
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 0a19bdd00000e466f2a2af92116356a9ad2a6428
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 346fa77e1a22626094baa33aaf70ead23f2f0db0
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950787"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766645"
 ---
 # <a name="dfs-replication-frequently-asked-questions-faq"></a>DFS レプリケーション: よく寄せられる質問 (FAQ)
 
@@ -282,7 +282,7 @@ DFS 管理は、Windows Server 2012 R2、Windows Server 2012、Windows Server�
 
 
 > [!IMPORTANT]
-> フェールオーバー クラスターである読み取り専用のレプリケート フォルダーまたはメンバーが含まれるレプリケーション グループを表示または管理するには、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2、<a href="https://go.microsoft.com/fwlink/p/?linkid=238560">Windows 8 用リモート サーバー管理ツール</a>、または <a href="https://technet.microsoft.com/library/ee449475">Windows 7 用リモート サーバー管理ツール</a>に含まれるバージョンの DFS 管理を使用する必要があります。
+> フェールオーバー クラスターである読み取り専用のレプリケート フォルダーまたはメンバーが含まれるレプリケーション グループを表示または管理するには、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2、<a href="https://go.microsoft.com/fwlink/p/?linkid=238560">Windows 8 用リモート サーバー管理ツール</a>、または <a href="/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee449475(v=ws.10)">Windows 7 用リモート サーバー管理ツール</a>に含まれるバージョンの DFS 管理を使用する必要があります。
 <br>
 
 

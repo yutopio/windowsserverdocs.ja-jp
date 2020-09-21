@@ -8,12 +8,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: a7eda2d06a91891529ebbe5c7e448c17fdb070f3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d2e7d7a064806646ccc075c96fff2ba20acfe005
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953136"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766215"
 ---
 # <a name="active-directory-administrative-tier-model"></a>Active Directory 管理階層モデル
 
@@ -138,7 +138,7 @@ Active Directory などの ID システムに依存する資産の数は多い�
 
 ![Active Directory とドメイン コントローラーが依存するシステムの数を最小限に抑える必要があることを示す図](../media/securing-privileged-access-reference-material/PAW_RM_Fig010.JPG)
 
-Active Directory の上位のリスクに対するセキュリティ強化の詳細については、[このページ](https://aka.ms/hardenAD)を参照してください。
+Active Directory の上位のリスクに対するセキュリティ強化の詳細については、[このページ](../ad-ds/plan/security-best-practices/reducing-the-active-directory-attack-surface.md)を参照してください。
 
 ## <a name="operational-standards-based-on-clean-source-principle"></a>クリーン ソースの原則に基づく運用基準
 
@@ -313,7 +313,7 @@ Active Directory の上位のリスクに対するセキュリティ強化の詳
 > [!NOTE]
 > 対話形式でホストにログオンすると、そのホストに資格情報の制御を与えることになるため、このような手順が必要です。
 >
-> ログオンの種類、一般的な管理ツール、資格情報の公開の詳細については、「[管理ツールとログオンの種類](https://aka.ms/admintoolsecurity)」を参照してください。
+> ログオンの種類、一般的な管理ツール、資格情報の公開の詳細については、「[管理ツールとログオンの種類]()」を参照してください。
 
 ##### <a name="use-of-approved-support-technology-and-methods"></a>承認済みのサポート テクノロジと手法の使用
 
@@ -329,7 +329,7 @@ Active Directory の上位のリスクに対するセキュリティ強化の詳
 このシナリオでは、確実に次の手順を実行してください。
 
 - **リモート サーバーのサポート**: リモートからサーバーにアクセスする場合、階層 0 の管理者は次のガイドラインに従う必要があります。
-  - **プライマリ (ツール)** : ネットワーク ログオン (タイプ 3) を使用するリモート ツール。 詳細については、「[管理ツールとログオンの種類](https://aka.ms/admintoolsecurity)」を参照してください。
+  - **プライマリ (ツール)** : ネットワーク ログオン (タイプ 3) を使用するリモート ツール。 詳細については、「[管理ツールとログオンの種類]()」を参照してください。
   - **プライマリ (対話形式)** : ドメイン アカウントで、管理ワークステーションから RDP RestrictedAdmin または標準の RDP セッションを使用します。
 
     > [!NOTE]
@@ -488,7 +488,7 @@ Microsoft Azure や Office 365 などのクラウド サービスで管理特権
 
 - **ワークステーションのセキュリティ強化** - [Privileged Access Workstation](../securing-privileged-access/privileged-access-workstations.md) を使用して (フェーズ 3 を通じて) 管理ワークステーションを構築しますが、ドメインのメンバーシップを実稼働環境ではなく管理フォレストに変更します。
 - **サーバーと DC のセキュリティ強化** - 管理フォレスト内のすべてのドメイン コントローラーとサーバーについて、次のことを実行します。
-   - すべてのインストール メディアが、「[インストール メディアのクリーン ソース](https://aka.ms/cleansource)」のガイダンスに従って検証されていることを確認します。
+   - すべてのインストール メディアが、「[インストール メディアのクリーン ソース]()」のガイダンスに従って検証されていることを確認します。
    - 実稼働環境で実現できない場合でも、管理フォレストのサーバーには最新のオペレーティング システムがインストールされていることを確認します。
    - 管理者フォレスト ホストはセキュリティ更新プログラムで自動更新する必要があります。
 

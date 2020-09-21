@@ -8,12 +8,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/20/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: e0ce10cbdc1dfe70156d36a96978222395afaa94
-ms.sourcegitcommit: 8e5530ba7f7d3e2569590949e1f443d908683a17
+ms.openlocfilehash: c7d05731997aeb9fcdb1fadb73ba80f2ff6655e5
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88702821"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766695"
 ---
 # <a name="get-started-with-the-macos-client"></a>macOS クライアントの概要
 
@@ -159,7 +159,7 @@ Windows Server 2012 R2 には、新しい認証方法、リモート デスク�
 > [!IMPORTANT]
 > Windows 8.1 より前では、カスタムの認証と承認モデルはサポートされていませんが、上記の記事では、それらについて説明しています。
 
-この機能の詳細については、[https://aka.ms/paa-sample](https://aka.ms/paa-sample) を確認してください。
+この機能の詳細については、[https://aka.ms/paa-sample](/samples/browse/?redirectedfrom=MSDN-samples) を確認してください。
 
 > [!TIP]
 > 意見やご質問はへようこそ は常にします。 ただし、投稿しないでくださいコメント機能を使用して、この記事の最後に、トラブルシューティングのヘルプを要求します。 代わりに移動、 [リモート デスクトップ クライアントのフォーラム](/answers/topics/windows-remote-desktop-client.html) し、新しいスレッドを開始します。 機能の候補があるか。 内の指定、 [クライアント ユーザーの声フォーラム](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android)します。

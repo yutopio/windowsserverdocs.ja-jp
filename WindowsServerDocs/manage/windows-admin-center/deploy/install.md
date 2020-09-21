@@ -6,12 +6,12 @@ author: jwwool
 ms.author: jeffrew
 ms.date: 07/17/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: df5e7e2c23b9120a890b34448868ec4d5b1c99b3
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: cf403094ec7b9fb91b3337680c49538425e0fc2e
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997412"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766495"
 ---
 # <a name="install-windows-admin-center"></a>Windows Admin Center のインストール
 
@@ -21,7 +21,7 @@ ms.locfileid: "87997412"
 
 > [!Tip]
 > Windows Admin Center を初めて使用する場合
-> [Windows Admin Center についての詳細を確認する](../overview.md)か、[今すぐダウンロード](https://aka.ms/windowsadmincenter)してください。
+> [Windows Admin Center についての詳細を確認する](../overview.md)か、[今すぐダウンロード](../overview.md)してください。
 
 ## <a name="determine-your-installation-type"></a>インストールの種類を決定する
 

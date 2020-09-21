@@ -4,12 +4,12 @@ description: VDI イメージとして使用される Windows 10 1803 デスク�
 ms.author: robsmi
 ms.topic: article
 author: jaimeo
-ms.openlocfilehash: 4ba432e13785694844229a41f2966eb7cf65fa7e
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 38ddd48b6bf5502851615adeb75446f07bc860c1
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078639"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90767005"
 ---
 # <a name="optimizing-windows-10-version-1803-for-a-virtual-desktop-infrastructure-vdi-role"></a>仮想デスクトップ インフラストラクチャ (VDI) ロール用の Windows 10 バージョン 1803 の最適化
 
@@ -580,7 +580,7 @@ VDI を使用した Windows Defender の最適化の詳細については、こ�
 
 このセクションの一部の設定は*レジストリ ベースのみ*であり、実稼働環境での使用のためにイメージを展開する前に、基本イメージに組み込む必要があります。
 
-次の設定は、Windows Product Group により Microsoft.com で公開された [Windows Server 2016 のパフォーマンス チューニング ガイドライン](/windows-server/administration/performance-tuning/)の情報に記載されています。
+次の設定は、Windows Product Group により Microsoft.com で公開された [Windows Server 2016 のパフォーマンス チューニング ガイドライン](../../administration/performance-tuning/index.md)の情報に記載されています。
 
 #### <a name="disablebandwidththrottling"></a>DisableBandwidthThrottling
 

@@ -6,12 +6,12 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 03/07/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c96968f55a06c7ccffd9f7919001f21bff6a75c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 184eca56dc14e91220a7fb7eb196c48706562ff7
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996986"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766715"
 ---
 # <a name="user-access-options-with-windows-admin-center"></a>Windows Admin Center でのユーザー アクセス オプション
 
@@ -58,7 +58,7 @@ Active Directory またはローカル マシンのグループを ID プロバ�
 ただし、ユーザーによっては、ジョブを実行するためにマシンへの無制限のアクセス権を必要としない場合があります。
 Windows Admin Center で**ロールベースのアクセス制御**を使用すると、そのようなユーザーに対して、完全なローカル管理者としてのアクセス権ではなく、マシンへの制限付きアクセス権を付与できます。
 
-Windows Admin Center でのロールベースのアクセス制御は、PowerShell の [Just Enough Administration](https://aka.ms/jeadocs) エンドポイントを使用して各管理対象サーバーを構成することにより機能します。
+Windows Admin Center でのロールベースのアクセス制御は、PowerShell の [Just Enough Administration](/powershell/scripting/learn/remoting/jea/overview) エンドポイントを使用して各管理対象サーバーを構成することにより機能します。
 このエンドポイントでは、各ロールが管理できるシステムの側面や、ロールに割り当てられているユーザーなど、ロール定義を行います。
 ユーザーが制限付きエンドポイントに接続すると、代わりにシステムを管理するための一時的なローカル管理者アカウントが作成されます。
 これにより、独自の委任モデルを持たないツールでも、引き続き Windows Admin Center を使用して管理できます。

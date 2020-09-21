@@ -8,12 +8,12 @@ ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 78a869f826bd9d13e627f5710cca1b3ef1cdcdc4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cb6ffed04856c1e4fe670893a2af3acedb6da012
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87959630"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90765953"
 ---
 # <a name="manage-nano-server"></a>Nano Server の管理
 
@@ -212,12 +212,12 @@ Get-WindowsPackage -Online
 
 ## <a name="performance-and-event-monitoring-on-nano-server"></a>Nano Server のパフォーマンスおよびイベントを監視する
 [comment]: # (Venkat Yalla より。)
-Nano Server では、[Windows イベント トレーシング](https://aka.ms/u2pa0i) (ETW) フレームワークを完全にサポートしています。しかし、トレースとパフォーマンス カウンターを管理するための使い慣れたツールには、Nano Server で現在使用できないものがあります。 ただし、Nano Server には、最も一般的なパフォーマンス分析シナリオを実現するツールとコマンドレットが用意されています。
+Nano Server では、[Windows イベント トレーシング](/windows/win32/etw/event-tracing-portal) (ETW) フレームワークを完全にサポートしています。しかし、トレースとパフォーマンス カウンターを管理するための使い慣れたツールには、Nano Server で現在使用できないものがあります。 ただし、Nano Server には、最も一般的なパフォーマンス分析シナリオを実現するツールとコマンドレットが用意されています。
 
 大まかなワークフローは、どの Window Server インストールでも同じです。オーバーヘッドの少ないトレースをターゲットの (Nano Server) コンピューターで実行し、生成されたトレース ファイルやログを別のコンピューターで [Windows Performance Analyzer](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10)) や [Message Analyzer](https://www.microsoft.com/download/details.aspx?id=44226) などのツールを使用してオフラインで後処理します。
 
 > [!NOTE]
-> PowerShell リモート処理を使用してファイルを転送する方法については、「[How to copy files to and from Nano Server (Nano Server との間でファイルをコピーする方法)](https://aka.ms/nri9c8)」を参照してください。
+> PowerShell リモート処理を使用してファイルを転送する方法については、「[How to copy files to and from Nano Server (Nano Server との間でファイルをコピーする方法)](/previous-versions/windows/desktop/legacy/mt708806(v=vs.85))」を参照してください。
 
 次のセクションでは、最も一般的なパフォーマンス データ収集作業と、Nano Server でそれを実現するためのサポートされている方法の一覧を示します。
 
@@ -381,7 +381,7 @@ TimeCreated           Message
 9/15/2016 11:31:16 AM The Virtualization Based Security enablement policy check at phase 0 failed with status: {File...
 ```
 
-Nano Server では、```wevtutil.exe``` もサポートしています。このコマンドレットを使用すると、イベント ログと発行元に関する情報を取得できます。 詳細については、[wevtutil.exe のドキュメント](https://aka.ms/qvod7p)を参照してください。
+Nano Server では、```wevtutil.exe``` もサポートしています。このコマンドレットを使用すると、イベント ログと発行元に関する情報を取得できます。 詳細については、[wevtutil.exe のドキュメント](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11))を参照してください。
 
 ### <a name="graphical-interface-tools"></a>グラフィカル インターフェイス ツール
 [Web ベースのサーバー管理ツール](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog)を使用して、Nano Server ターゲットをリモートで管理し、Web ブラウザーで Nano Server のイベント ログを表示できます。 最後に、MMC スナップイン イベント ビューアー (eventvwr.msc) を使用して、ログを表示することもできます (コンピューターのデスクトップで開き、リモートの Nano Server を参照するだけです)。

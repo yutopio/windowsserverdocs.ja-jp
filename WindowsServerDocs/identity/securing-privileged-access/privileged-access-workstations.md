@@ -8,12 +8,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 014e19088394135c00d1df63a46ba74f400fa411
-ms.sourcegitcommit: 08da40966c5d633f8748c8ae348f12656a54d3b2
+ms.openlocfilehash: 6dbaf3fe76ce6c2ac79a0c835a320241e47f4068
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88140309"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766355"
 ---
 # <a name="privileged-access-workstations"></a>Privileged Access Workstations
 
@@ -40,7 +40,7 @@ PAW のセキュリティ制御では、侵害の大きな影響と高いリス�
 * **インターネット攻撃** - ほとんどの攻撃は、直接的または間接的にインターネットを発生源とし、データの取り出し、コマンドとコントロール (C2) のためにインターネットを使用します。 オープンなインターネットから PAW を分離することが、PAW が侵害されないようにするための主要な要素です。
 * **使いやすさのリスク** - PAW が日常のタスクに使用するには難しすぎる場合、管理者がジョブを簡単に実行できるような回避策を作成したくなります。 多くの場合、これらの回避策は、管理ワークステーションとアカウントを大きなセキュリティ リスクにさらすので、PAW ユーザーがこれらの使いやすさの問題を安全に軽減できるように支援する必要があります。 これは、ユーザーのフィードバックを聞き、ジョブを実行するために必要なツールとスクリプトをインストールし、すべての管理者が PAW を使用する必要がある理由、PAW とは何か、および正しい使用方法を認識しているかを確認することで、これを実現できます。
 * **環境のリスク** - 環境内の他の多くのコンピューターやアカウントは直接的または間接的にインターネットに公開されているので、運用環境内の侵害された資産からの攻撃に対して PAW を保護する必要があります。 このためには、これらの特別なワークステーションをセキュリティで保護して監視するために PAW にアクセスできる管理ツールやアカウントの使用を最小限にする必要があります。
-* **サプライ チェーンの改ざん** - サプライ チェーン内のハードウェアやソフトウェアが改ざんされるリスクをすべての取り除くことは不可能ですが、いくつかの重要なアクションを実施することで、攻撃にすぐに利用される重要な攻撃ベクターを軽減することができます。 これには、インストール メディアの整合性の検証 ([クリーン ソースの原則](https://aka.ms/cleansource)) や信頼できる評判の高いハードウェアおよびソフトウェアのサプライヤーの使用などが含まれます。
+* **サプライ チェーンの改ざん** - サプライ チェーン内のハードウェアやソフトウェアが改ざんされるリスクをすべての取り除くことは不可能ですが、いくつかの重要なアクションを実施することで、攻撃にすぐに利用される重要な攻撃ベクターを軽減することができます。 これには、インストール メディアの整合性の検証 ([クリーン ソースの原則](./securing-privileged-access-reference-material.md)) や信頼できる評判の高いハードウェアおよびソフトウェアのサプライヤーの使用などが含まれます。
 * **物理的な攻撃** - PAW は、物理的に移動可能であり、物理的にセキュリティで保護された施設の外部で使用できるので、コンピューターへの不正な物理的アクセスを利用する攻撃から保護する必要があります。
 
 > [!NOTE]
@@ -174,7 +174,7 @@ PAW アプローチは、管理者用の別々の管理アカウントとユー�
 
 #### <a name="credential-guard-and-windows-hello-for-business"></a>Credential Guard と Windows Hello for Business
 
-Windows 10 で導入された [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard) は、ハードウェアおよび仮想化ベースのセキュリティを使用して、派生する資格情報を保護することにより、Pass-the-Hash などの一般的な資格情報盗難攻撃を軽減します。 [Windows Hello for Business](https://aka.ms/passport) で使用される資格情報の秘密キーもトラステッド プラットフォーム モジュール (TPM) ハードウェアで保護できます。
+Windows 10 で導入された [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard) は、ハードウェアおよび仮想化ベースのセキュリティを使用して、派生する資格情報を保護することにより、Pass-the-Hash などの一般的な資格情報盗難攻撃を軽減します。 [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification) で使用される資格情報の秘密キーもトラステッド プラットフォーム モジュール (TPM) ハードウェアで保護できます。
 
 これらは強力な軽減策ですが、資格情報が Credential Guard または Windows Hello for Business によって保護される場合でも、ワークステーションは特定の攻撃に対して引き続き脆弱になる可能性があります。 攻撃には、特権の乱用、侵害されたデバイスからの資格情報の直接の使用、Credential Guard を有効にする前の、以前に盗まれた資格情報の再利用、ワークステーション上での管理ツールおよび脆弱なアプリケーション構成の乱用などが含まれます。
 
@@ -238,7 +238,7 @@ PAW アーキテクチャを使うと、ユーザー ワークステーション
 
 これらのソリューションは一般的に、柔軟性のあるワークフローを使用してアクセス権を付与し、多くはサービス アカウント パスワード管理や管理ジャンプ サーバーとの統合などの追加のセキュリティ機能備えています。 特権管理機能を提供する多くのソリューションは市場で販売されています。Microsoft Identity Manager (MIM) 特権アクセス管理 (PAM) はその 1 つです。
 
-マイクロソフトは、PAW を使用して、特権管理ソリューションにアクセスすることをお勧めします。 これらのソリューションへのアクセス権は、PAW にのみ付与する必要があります。 マイクロソフトは、これらのソリューションを PAW の代わりに使用することをお勧めしません。これは、下の図に示すように、侵害された可能性があるユーザー デスクトップからこれらのソリューションを使用して特権にアクセスすることは[クリーン ソース](https://aka.ms/cleansource)の原則に違反するためです。
+マイクロソフトは、PAW を使用して、特権管理ソリューションにアクセスすることをお勧めします。 これらのソリューションへのアクセス権は、PAW にのみ付与する必要があります。 マイクロソフトは、これらのソリューションを PAW の代わりに使用することをお勧めしません。これは、下の図に示すように、侵害された可能性があるユーザー デスクトップからこれらのソリューションを使用して特権にアクセスすることは[クリーン ソース](./securing-privileged-access-reference-material.md)の原則に違反するためです。
 
 ![Microsoft がこれらのソリューションを PAW の代わりに使用することをお勧めしないことを示す図。これは、侵害された可能性があるユーザー デスクトップからこれらのソリューションを使用して特権にアクセスすることはクリーン ソースの原則に違反するため。](../media/privileged-access-workstations/PAWFig7.JPG)
 
@@ -248,9 +248,9 @@ PAW アーキテクチャを使うと、ユーザー ワークステーション
 
 > [!NOTE]
 > これらのシステムは、管理する特権の最上位階層に分類する必要があり、そのセキュリティ レベル以上のレベルで保護する必要があります。 これは一般的に、階層 0 ソリューションおよび階層 0 資産を管理するように構成され、階層 0 に分類される必要があります。
-> 階層モデルの詳細については、[https://aka.ms/tiermodel](https://aka.ms/tiermodel) を参照してください。階層 0 グループの詳細については、「[特権アクセスのセキュリティ保護に関する参考資料](../securing-privileged-access/securing-privileged-access-reference-material.md)」の「階層 0 と同等のグループ」を参照してください。
+> 階層モデルの詳細については、[https://aka.ms/tiermodel](./securing-privileged-access-reference-material.md) を参照してください。階層 0 グループの詳細については、「[特権アクセスのセキュリティ保護に関する参考資料](../securing-privileged-access/securing-privileged-access-reference-material.md)」の「階層 0 と同等のグループ」を参照してください。
 
-Microsoft Identity Manager (MIM) 特権アクセス管理 (PAM) の展開方法については、[https://aka.ms/mimpamdeploy](https://aka.ms/mimpamdeploy) を参照してください
+Microsoft Identity Manager (MIM) 特権アクセス管理 (PAM) の展開方法については、[https://aka.ms/mimpamdeploy](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) を参照してください
 
 ## <a name="paw-scenarios"></a>PAW のシナリオ
 
@@ -261,7 +261,7 @@ Microsoft Identity Manager (MIM) 特権アクセス管理 (PAM) の展開方法�
 > [!NOTE]
 > このガイダンスでは、インターネット上の特定のサービス (Azure や Office 365 管理ポータルなど) へのアクセスが必要な状況とすべてのホストとサービスの「開かれたインターネット」を明確に区別しています。
 
-階層指定の詳細については、[階層モデル ページ](https://aka.ms/tiermodel)を参照してください。
+階層指定の詳細については、[階層モデル ページ](./securing-privileged-access-reference-material.md)を参照してください。
 
 |**シナリオ**|**PAW の使用**|**範囲とセキュリティに関する考慮事項**|
 |---------|--------|---------------------|
@@ -341,14 +341,14 @@ PAW は、セキュリティで保護された信頼性の高い管理のソー�
    >
    > サプライ チェーンのセキュリティの重要性の背景情報については、[このサイト](https://www.microsoft.com/security/cybersecurity/)にアクセスしてください。
 
-4. **必要な Windows 10 Enterprise Edition とアプリケーション ソフトウェアを入手して検証します**。 PAW に必要なソフトウェアを入手し、「[インストール メディアのクリーン ソース](https://aka.ms/cleansource)」のガイダンスを使用して検証します。
+4. **必要な Windows 10 Enterprise Edition とアプリケーション ソフトウェアを入手して検証します**。 PAW に必要なソフトウェアを入手し、「[インストール メディアのクリーン ソース](./securing-privileged-access-reference-material.md)」のガイダンスを使用して検証します。
 
    * Windows 10 Enterprise Edition
    * Windows 10 用の[リモート サーバー管理ツール](https://www.microsoft.com/download/details.aspx?id=45520)
-   * [Windows 10 のセキュリティ基本計画](https://aka.ms/win10baselines)
+   * [Windows 10 のセキュリティ基本計画](/windows/security/threat-protection/windows-security-baselines)
 
       > [!NOTE]
-      > マイクロソフトは、MSDN のすべてのオペレーティング システムおよびアプリケーションに対して MD5 ハッシュを発行していますが、すべてのソフトウェア ベンダーが同様のドキュメントを提供しているわけではありません。  そのような場合は、その他の戦略が必要になります。  ソフトウェアを検証する方法の詳細については、インストール メディアの[クリーン ソース](https://aka.ms/cleansource)を参照してください。
+      > マイクロソフトは、MSDN のすべてのオペレーティング システムおよびアプリケーションに対して MD5 ハッシュを発行していますが、すべてのソフトウェア ベンダーが同様のドキュメントを提供しているわけではありません。  そのような場合は、その他の戦略が必要になります。  ソフトウェアを検証する方法の詳細については、インストール メディアの[クリーン ソース](./securing-privileged-access-reference-material.md)を参照してください。
 
 5. **イントラネット上に利用可能な WSUS サーバーがあることを確認します**。 PAW の更新プログラムをダウンロードしてインストールするには、WSUS サーバーがイントラネット上に置かれている必要があります。 この WSUS サーバーが、Windows 10 のすべてのセキュリティ更新プログラムを自動的に承認するように構成されているか、管理者が、ソフトウェアの更新を迅速に適用する責任を持っている必要があります。
 
@@ -659,7 +659,7 @@ Domain Admin、Enterprise Admin、または階層 0 の同等のグループ (�
    >
    > PAW の展開を自動化する場合は、次の操作を行う必要があります。
    >
-   > * 「[インストール メディアのクリーン ソース](https://aka.ms/cleansource)」のガイダンスを使用して検証されたインストール メディアを使用してシステムを構築します。
+   > * 「[インストール メディアのクリーン ソース](./securing-privileged-access-reference-material.md)」のガイダンスを使用して検証されたインストール メディアを使用してシステムを構築します。
    > * オペレーティング システムの構築プロセス中に、自動展開システムがネットワークから切断されていることを確認します。
 
 2. ローカル管理者アカウントの固有の複雑なパスワードを設定します。  環境内の他のアカウントに使用されているパスワードは使用しないでください。
@@ -681,14 +681,14 @@ Domain Admin、Enterprise Admin、または階層 0 の同等のグループ (�
    必要に応じて *Fabrikam* の参照を自分のドメイン名に置き換えます。  ドメイン名を複数のレベル (例: child.fabrikam.com) に拡張する場合、追加する名前に "DC =" 識別子を付けて、ドメインの完全修飾ドメイン名で表示される順序で追加します。
 
    > [!NOTE]
-   > [ESAE 管理フォレスト](https://aka.ms/esae) (フェーズ 1 で階層 0 の管理者用)、または [Microsoft Identity Manager (MIM) 特権アクセス管理 (PAM)](https://aka.ms/mimpamdeploy) (フェーズ 2 で階層 1 および階層 2 の管理者用) を展開した場合、ここでは運用環境のドメインの代わりにその環境のドメインに PAW を参加させます。
+   > [ESAE 管理フォレスト](./securing-privileged-access-reference-material.md) (フェーズ 1 で階層 0 の管理者用)、または [Microsoft Identity Manager (MIM) 特権アクセス管理 (PAM)](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) (フェーズ 2 で階層 1 および階層 2 の管理者用) を展開した場合、ここでは運用環境のドメインの代わりにその環境のドメインに PAW を参加させます。
 
 7. 他のソフトウェア (管理ツール、エージェントなどを含む) をインストールする前にすべての重要な Windows 更新プログラムを適用します。
 8. グループ ポリシーの適用を強制します。
    1. 管理者特権のコマンド プロンプトを開き、次のコマンドを入力します: `Gpupdate /force /sync`
    2. コンピューターを再起動します
 
-9. (省略可能) Active Directory 管理者用の追加で必要なツールをインストールします。 職務を実行するために必要な他のツールやスクリプトをインストールします。 PAW にツールを追加する前に、ツールによるターゲット コンピューターでの資格情報の消失のリスクを必ず評価してください。 管理ツールと接続方法の資格情報漏洩リスクの評価の詳細については、[このページ](https://aka.ms/logontypes)にアクセスしてください。 「[インストール メディアのクリーン ソース](https://aka.ms/cleansource)」のガイダンスを使用してすべてのインストール メディアを取得していることを確認します。
+9. (省略可能) Active Directory 管理者用の追加で必要なツールをインストールします。 職務を実行するために必要な他のツールやスクリプトをインストールします。 PAW にツールを追加する前に、ツールによるターゲット コンピューターでの資格情報の消失のリスクを必ず評価してください。 管理ツールと接続方法の資格情報漏洩リスクの評価の詳細については、[このページ](./securing-privileged-access-reference-material.md)にアクセスしてください。 「[インストール メディアのクリーン ソース](./securing-privileged-access-reference-material.md)」のガイダンスを使用してすべてのインストール メディアを取得していることを確認します。
 
    > [!NOTE]
    > 中央の場所でこれらのツール用のジャンプ サーバーを使用すると、それがセキュリティ境界として機能しない場合でも複雑さが緩和されます。
@@ -857,7 +857,7 @@ Domain Admin、Enterprise Admin、または階層 0 の同等のグループ (�
          > [!NOTE]
          > "SCM Windows 10 - Domain Security" GPO は、PAW とは関係なくドメインにリンクされる場合がありますが、ドメイン全体に影響します。
 
-6. (省略可能) 階層 1 管理者に追加で必要なツールをインストールします。 職務を実行するために必要な他のツールやスクリプトをインストールします。 PAW にツールを追加する前に、ツールによるターゲット コンピューターでの資格情報の消失のリスクを必ず評価してください。 管理ツールと接続方法の資格情報漏洩リスクの評価の詳細については、[このページ](https://aka.ms/logontypes)にアクセスしてください。 「インストール メディアのクリーン ソース」のガイダンスを使用してすべてのインストール メディアを取得していることを確認します。
+6. (省略可能) 階層 1 管理者に追加で必要なツールをインストールします。 職務を実行するために必要な他のツールやスクリプトをインストールします。 PAW にツールを追加する前に、ツールによるターゲット コンピューターでの資格情報の消失のリスクを必ず評価してください。 管理ツールと接続方法の資格情報漏洩リスクの評価の詳細については、[このページ](./securing-privileged-access-reference-material.md)にアクセスしてください。 「インストール メディアのクリーン ソース」のガイダンスを使用してすべてのインストール メディアを取得していることを確認します。
 7. 管理に必要なソフトウェアとアプリケーションを識別して安全に入手します。  これは、フェーズ 1 で実施した作業に似ていますが、セキュリティで保護されるアプリケーション、サービス、システムの数が増えるために範囲が広くなります。
 
    > [!NOTE]
@@ -967,13 +967,13 @@ PAW と共に追加の構成管理、運用監視、およびセキュリティ�
 
 ## <a name="operating-paws"></a>PAW の運用
 
-PAW ソリューションは、クリーン ソースの原則に基づく[運用標準](https://aka.ms/securitystandards)を使用して運用する必要があります。
+PAW ソリューションは、クリーン ソースの原則に基づく[運用標準](./securing-privileged-access-reference-material.md)を使用して運用する必要があります。
 
 ## <a name="deploy-paws-using-a-guarded-fabric"></a>保護されたファブリックを使用して PAW を展開する
 
-[保護されたファブリック](https://aka.ms/shieldedvms)を使用して、ノート パソコンまたはジャンプ サーバー上のシールドされた仮想マシンで PAW のワークロードを実行できます。
+[保護されたファブリック](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)を使用して、ノート パソコンまたはジャンプ サーバー上のシールドされた仮想マシンで PAW のワークロードを実行できます。
 このアプローチを採用するには、追加のインフラストラクチャと運用手順が必要になりますが、PAW イメージの定期的な再展開が容易になり、複数の異なる階層化された (分類) PAW を、1 つのデバイスにおいてサイドバイサイドで実行されている仮想マシンに統合することができます。
-保護されたファブリックのトポロジとセキュリティの約束の詳細については、[保護されたファブリックのドキュメント](https://aka.ms/shieldedvms)を参照してください。
+保護されたファブリックのトポロジとセキュリティの約束の詳細については、[保護されたファブリックのドキュメント](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)を参照してください。
 
 ### <a name="changes-to-the-paw-gpos"></a>PAW GPO の変更
 

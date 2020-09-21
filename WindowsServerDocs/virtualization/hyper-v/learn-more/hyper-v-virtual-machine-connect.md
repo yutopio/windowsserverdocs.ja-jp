@@ -1,18 +1,17 @@
 ---
 title: Hyper-V 仮想マシン接続
 description: 仮想マシンへのリモート アクセスを提供する仮想マシン接続について説明します。 仮想マシンへの Ctrl-Alt-Delete の送信など、一般的なタスクの実行方法に関する詳細が含まれます。
-manager: dongill
 ms.topic: article
 ms.assetid: deae35b9-7647-42b8-b6bf-45645a44c9c4
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 10/04/2016
-ms.openlocfilehash: 2ffe54a1699fdb23833adc5e0036747d516e3056
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 80e87fcfa38f441491985ba7bb58b25c7e4cc165
+ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990176"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90745967"
 ---
 # <a name="hyper-v-virtual-machine-connection"></a>Hyper-V 仮想マシン接続
 

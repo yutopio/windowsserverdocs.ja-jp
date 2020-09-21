@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 06/07/2019
-ms.openlocfilehash: 3075c571fb933692745a872df138ef5cbfa6b283
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: affbc610484abc5a4e45534a7f75e4f06efc23e9
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995305"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766965"
 ---
 # <a name="what-is-windows-admin-center"></a>Windows Admin Center とは?
 
@@ -25,7 +25,7 @@ Windows Admin Center は、サーバー マネージャーや MMC などの "イ
 
 ## <a name="how-does-windows-admin-center-work"></a>Windows Admin Center のしくみ
 
-Windows Admin Center は Web ブラウザーで実行され、Windows Server またはドメインに参加している Windows 10 にインストールされた **Windows Admin Center ゲートウェイ**を介して Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows 10、Azure Stack HCI などを管理します。 ゲートウェイは、リモート PowerShell と WMI over WinRM を介してサーバーを管理します。 ゲートウェイは、[ダウンロード](https://aka.ms/windowsadmincenter)可能な単一の軽量な .msi パッケージとして Windows Admin Center に含まれています。
+Windows Admin Center は Web ブラウザーで実行され、Windows Server またはドメインに参加している Windows 10 にインストールされた **Windows Admin Center ゲートウェイ**を介して Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows 10、Azure Stack HCI などを管理します。 ゲートウェイは、リモート PowerShell と WMI over WinRM を介してサーバーを管理します。 ゲートウェイは、[ダウンロード](../overview.md)可能な単一の軽量な .msi パッケージとして Windows Admin Center に含まれています。
 
 Windows Admin Center ゲートウェイは、DNS に発行され、対応する企業ファイアウォールによってアクセス権が与えられると、Microsoft Edge または Google Chrome によってユーザーがどこからでもサーバーに安全に接続し、管理できるようにします。
 
@@ -70,4 +70,4 @@ Windows Admin Center は、仮想化されたコンピューター、ストレ�
 Windows Admin Center は拡張機能を念頭に置いて一から構築され、Microsoft およびサード パーティーの開発者が現在提供されている製品に含まれないツールやソリューションを構築できる機能が用意されています。 Microsoft は、開発者が Windows Admin Center 向けの独自のツールを構築できるようにする [SDK](../extend/extensibility-overview.md) を提供します。
 
 > [!Tip]
-> Windows Admin Center をインストールする準備はできましたか。 [今すぐダウンロード](https://aka.ms/windowsadmincenter)
+> Windows Admin Center をインストールする準備はできましたか。 [今すぐダウンロード](../overview.md)

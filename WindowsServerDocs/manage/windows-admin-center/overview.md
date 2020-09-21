@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 01/07/2020
 ms.localizationpriority: high
-ms.openlocfilehash: 8a1cd07167fd0a73d72dc57708a5f9bd23d2252c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d6fa3e4535748b6c4d5b45755b0336dc26815bee
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958680"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766735"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -149,7 +149,7 @@ Microsoft Ignite 2019 セッションのビデオを次に示します。
 - [Microsoft Azure ハイブリッド サービスを Windows Admin Center や Windows Server と連携させる方法](https://aka.ms/WAC-THR2073)
 - [ライブ Q & A: Windows Admin Center を使用してハイブリッド サーバー環境を管理する](https://aka.ms/WAC-MLS1055)
 - [ラーニング パス: ハイブリッド管理テクノロジ](https://aka.ms/WAC-HybridMgmtTech)
-- [ハンズオン ラボ: Windows Admin Center とハイブリッド](https://aka.ms/WAC-HOL2019)
+- [ハンズオン ラボ: Windows Admin Center とハイブリッド](/learn/?WT.mc_id=sitertzn_homepage_learn-redirect-handsonlabs)
 
 Windows Server サミット 2019 セッションのビデオを次に示します。
 

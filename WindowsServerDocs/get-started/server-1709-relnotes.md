@@ -8,12 +8,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: afadca07931284e975aaf18192664fa1ed81e184
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: f707dbbe22624489f9c5939987ea9831cc467214
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89033740"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766705"
 ---
 # <a name="release-notes-important-issues-in-windows-server-version-1709"></a>リリース ノート:Windows Server バージョン 1709 に関する重要な問題
 
@@ -29,7 +29,7 @@ ms.locfileid: "89033740"
 
 Windows Server バージョン 1709 を実行しているサーバーを、Windows Server 2016 記憶域スペース ダイレクトの展開に導入することもサポートされていません。
 
-Windows Server のリリース モデルでは、[Windows 10](/windows/deployment/update/waas-overview) と [Microsoft 365 Apps](https://docs.microsoft.com/DeployOffice/overview-update-channels) で行われている同様のリリースおよびサービス モデルに連動するために、新しいオプションが提供されます。 半期チャネルのリリースでは、迅速なペースでの移行を考えているお客様に新しい機能を提供します。新しいリリースは、年に 2 回、春と秋に提供されます。
+Windows Server のリリース モデルでは、[Windows 10](/windows/deployment/update/waas-overview) と [Microsoft 365 Apps](/DeployOffice/overview-update-channels) で行われている同様のリリースおよびサービス モデルに連動するために、新しいオプションが提供されます。 半期チャネルのリリースでは、迅速なペースでの移行を考えているお客様に新しい機能を提供します。新しいリリースは、年に 2 回、春と秋に提供されます。
 
 半期チャネルの Windows Server は、よりすばやいイノベーションからメリットを引き出す、コンテナーとアプリケーションのシナリオに重点を置いています。追加情報については、この[ブログ](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update)を参照してください。 記憶域スペース ダイレクトなどのインフラストラクチャ ロールを探しているお客様は、Windows Server 2016 (現在利用可能) や [Windows Server 2019](https://cloudblogs.microsoft.com/windowsserver/2018/03/20/introducing-windows-server-2019-now-available-in-preview) (今年後半にリリース) のように長期的なサービス チャネルのリリースを使用する必要があります。 ハイパーコンバージド インフラストラクチャの最適なプラットフォームの構築に取り組んでおり、新しい機能の開発や、お客様のフィードバックに基づいた既存の機能の改善を継続しています。
 

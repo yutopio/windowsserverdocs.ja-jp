@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 12/02/2019
-ms.openlocfilehash: 2b1b6c8665e289647fe793125e7cc4c5024b4135
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: f33707050f6686ad285fc8ecb786456f0157fef7
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993537"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90767015"
 ---
 # <a name="windows-admin-center-frequently-asked-questions"></a>Windows Admin Center についてよく寄せられる質問
 
@@ -154,7 +154,7 @@ Windows Admin Center は、"Project Honolulu" の正式な製品名であり、�
 
 ## <a name="where-can-i-learn-more-about-windows-admin-center-or-get-more-details-on-the-topics-above"></a>Windows Admin Center の詳細や上のトピックの詳細を、どこで確認できますか。
 
-Microsoft の[起動画面](https://aka.ms/WindowsAdminCenter)を出発点にするのが最適です。新たに分類されたドキュメント コンテンツ、ダウンロード場所、フィードバックの提供方法、リファレンス情報、その他のリソースへのリンクがあります。
+Microsoft の[起動画面](../overview.md)を出発点にするのが最適です。新たに分類されたドキュメント コンテンツ、ダウンロード場所、フィードバックの提供方法、リファレンス情報、その他のリソースへのリンクがあります。
 
 ## <a name="what-is-the-version-history-of-windows-admin-center"></a>Windows Admin Center のバージョン履歴とは何ですか。
 

@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: d0ba6860edd40202da3078ee0ad05eb91901e1f2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5dfed9e70e4f0406c59c31201c8d2d1a9b3caafe
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945715"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766865"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Windows Server 2016 の新機能
 
@@ -55,7 +55,7 @@ Windows Server 2016 には、不正に使用されているファブリックか
 
 - ホスト ガーディアン サービスによる既存の安全な Active Directory のサポート。独自の Active Directory インスタンスを作成するのではなく、既存の Active Directory フォレストを Active Directory として使用するようにホスト ガーディアン サービスに対して指示できます。
 
-シールドされた仮想マシンを使用するための詳細および手順については、[シールドされた VM と保護されたファブリックの検証ガイド: Windows Server 2016 (TPM)](https://aka.ms/shieldedvms) に関する記事を参照してください。
+シールドされた仮想マシンを使用するための詳細および手順については、[シールドされた VM と保護されたファブリックの検証ガイド: Windows Server 2016 (TPM)](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md) に関する記事を参照してください。
 
 ## <a name="identity-and-access"></a>[ID およびアクセス](../identity/Identity-and-Access.yml)
 ID での新機能では、組織が Active Directory 環境をセキュリティで保護する機能が強化され、クラウドのみの展開およびハイブリッドの展開に移行するために役立ちます。ハイブリッドの展開では、一部のアプリケーションとサービスはクラウドでホストされ、残りはオンプレミスでホストされます。

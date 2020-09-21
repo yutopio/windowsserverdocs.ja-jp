@@ -5,12 +5,12 @@ author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 02/24/2020
 ms.topic: article
-ms.openlocfilehash: cb549f951865a065c70a6bfbfa9d49faf71ffd97
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 60aae8d96107b45ca3ef101780a3f1fec9c5f364
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989789"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766585"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Windows タイム サービスのツールと設定
 
@@ -87,7 +87,7 @@ W32tm /query /computer:contosoW1 /configuration
 このコマンドの出力は、Windows タイム クライアント用に設定された構成パラメーターの一覧です。
 
 > [!IMPORTANT]
-> [Windows Server 2016 では、RFC 仕様に合わせて時間同期アルゴリズムが改善](https://aka.ms/WS2016Time)されました。 そのため、ローカル Windows タイム クライアントが複数のピアを指すように設定する場合は、3 つ以上の異なるタイム サーバーを準備することを強くお勧めします。
+> [Windows Server 2016 では、RFC 仕様に合わせて時間同期アルゴリズムが改善](./accurate-time.md)されました。 そのため、ローカル Windows タイム クライアントが複数のピアを指すように設定する場合は、3 つ以上の異なるタイム サーバーを準備することを強くお勧めします。
 >
 > タイム サーバーが 2 つのみの場合は、**UseAsFallbackOnly** フラグ (0x2) を指定して、いずれかの優先順位を下げます。 たとえば、clock.adatum.com よりも ntpserver.contoso.com を優先させる場合は、次のコマンドを実行します。
 > ```cmd

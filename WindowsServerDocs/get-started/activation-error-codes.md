@@ -10,12 +10,12 @@ ms.custom:
 - CI ID 116803
 - CSSTroubleshoot
 manager: dcscontentpm
-ms.openlocfilehash: 40de898aa7627f092c179d7dc9e88e366e01ebab
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: dbb660ad1ccf3b15efe8cf656ebc98a2f7f41472
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078549"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766675"
 ---
 # <a name="resolve-windows-activation-error-codes"></a>Windows ライセンス認証のエラー コードの解決
 
@@ -26,7 +26,7 @@ ms.locfileid: "90078549"
 
 ボリューム ライセンス認証の詳細については、[ボリューム ライセンス認証の計画](/windows/deployment/volume-activation/plan-for-volume-activation-client)のページを参照してください。
 
-Windows の現在のバージョンと最新バージョンのボリューム ライセンス認証の詳細については、[ボリュームライセンス認証 [クライアント]](https://docs.microsoft.com/windows/deployment/volume-activation/volume-activation-windows-10) のページを参照してください。
+Windows の現在のバージョンと最新バージョンのボリューム ライセンス認証の詳細については、[ボリュームライセンス認証 [クライアント]](/windows/deployment/volume-activation/volume-activation-windows-10) のページを参照してください。
 
 以前のバージョンの Windows でのボリューム ライセンス認証の詳細については、KB 929712 の「 [Windows Vista、Windows Server 2008、Windows Server 2008 R2、および Windows 7 のボリューム アクティベーション情報](https://support.microsoft.com/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi)」を参照してください。
 

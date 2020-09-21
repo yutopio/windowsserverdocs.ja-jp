@@ -6,12 +6,12 @@ author: JasonGerend
 ms.author: jgerend
 ms.date: 04/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f08d10a4fea9ff86c22fedb8f9738a7177d0217
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 75954af63c8eda759d181e5b90b8f58d26596e05
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989952"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766245"
 ---
 # <a name="folder-redirection-offline-files-and-roaming-user-profiles-overview"></a>フォルダー リダイレクト、オフライン ファイル、移動ユーザー プロファイルの概要
 
@@ -129,7 +129,7 @@ Windows 8 と Windows Server 2012 の導入以前は、ユーザーが従量制�
 
 | コンテンツ タイプ | 参考資料 |
 | --- | --- |
-| 製品評価 | [信頼性の高いファイル サービスと記憶域によるインフォメーション ワーカーのサポート](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[オフライン ファイルの新機能](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows 7 および Windows Server 2008 R2)<br>[Windows Vista のオフライン ファイルの新機能](</previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Windows Vista でのオフライン ファイルの変更点](<https://technet.microsoft.com/library/2007.11.offline.aspx>) (TechNet Magazine) |
+| 製品評価 | [信頼性の高いファイル サービスと記憶域によるインフォメーション ワーカーのサポート](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[オフライン ファイルの新機能](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows 7 および Windows Server 2008 R2)<br>[Windows Vista のオフライン ファイルの新機能](</previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Windows Vista でのオフライン ファイルの変更点](/previous-versions/technet-magazine/cc137753(v=msdn.10)) (TechNet Magazine) |
 | 展開 | [フォルダー リダイレクト オフライン ファイルおよび移動ユーザー プロファイルを展開する](deploy-folder-redirection.md)<br>[エンド ユーザー データの一元管理ソリューションの実装: フォルダー リダイレクトとオフライン ファイルのテクノロジの検証と展開](https://download.microsoft.com/download/3/0/1/3019A3DA-2F41-4F2D-BBC9-A6D24C4C68C4/Implementing%20an%20End-User%20Data%20Centralization%20Solution.docx)<br>[ローミング ユーザー データ展開の管理ガイド](</previous-versions/windows/it-pro/windows-vista/cc766489(v=ws.10)>)<br>[Windows 7 コンピューターの新しいオフライン ファイル機能の構成手順ガイド](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff633429(v=ws.10)>)<br>[フォルダー リダイレクトを使用する](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753996(v=ws.11)>)<br>[フォルダー リダイレクトの実装](</previous-versions/windows/it-pro/windows-server-2003/cc737434(v=ws.10)>) (Windows Server 2003) |
 | ツールと設定 | [MSDN でのオフライン ファイル](/previous-versions/windows/desktop/offlinefiles/offline-files-portal)<br>[オフライン ファイル グループ ポリシー リファレンス](https://msdn.microsoft.com/library/ms878937.aspx) (Windows 2000) |
 | コミュニティ リソース | [ファイル サービスとストレージに関するフォーラム](/answers/topics/windows-server-storage.html)<br>[Hey, Scripting Guy! Windows でオフライン ファイル機能を使用する方法](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)<br>[Hey, Scripting Guy! オフライン ファイルを有効および無効にする方法](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>) |

@@ -4,12 +4,12 @@ ms.date: 01/30/2019
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 44f0db935e50bf7976612edc4317b4212818f84d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7bdcb67c5bcb36d2ebe5ee02d765f3cab63c7bed
+ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950746"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90766825"
 ---
 # <a name="volume-shadow-copy-service"></a>ボリューム シャドウ コピー サービス
 
@@ -372,7 +372,7 @@ VSS は、ボリューム全体のシャドウ コピーを作成するように
 > <UL>
 > <LI>以前のバージョンの機能を使用して、Windows Server 上で作成されたシャドウ コピーからファイルを削除することはできません。<BR><BR>
 > <LI>共有フォルダーのシャドウ コピーからファイルを削除することはできません。<BR><BR>
-> <LI><a href="https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](../../administration/windows-commands/diskshadow.md)">Diskshadow</a> ユーティリティを使用して作成されたシャドウ コピーからファイルを削除することはできますが、<a href="https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](../../administration/windows-commands/vssadmin.md)">Vssadmin</a> ユーティリティを使用して作成されたシャドウ コピーからファイルを削除することはできません。<BR><BR>
+> <LI><a href="/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](../../administration/windows-commands/diskshadow.md)">Diskshadow</a> ユーティリティを使用して作成されたシャドウ コピーからファイルを削除することはできますが、<a href="/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](../../administration/windows-commands/vssadmin.md)">Vssadmin</a> ユーティリティを使用して作成されたシャドウ コピーからファイルを削除することはできません。<BR><BR>
 > <LI>ファイルは、ベストエフォート方式でシャドウ コピーから削除されます。 つまり、削除されることは保証されていません。<BR><BR></LI></UL>
 
 
