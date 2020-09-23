@@ -5,27 +5,27 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/10/2020
+ms.date: 09/16/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f0b5453265bc96cdeb7ba02795da8fa0f39ba1c
-ms.sourcegitcommit: 0407bd30eaf06358257cf88c3969a2cd8b77dca4
+ms.openlocfilehash: 5d45bfad559069f9652768ba7f89bbdd3521ab8a
+ms.sourcegitcommit: d04f8fd54fe9aa5703af2f66a7150f4a6fb5bb37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027167"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718626"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows デスクトップ クライアントの新機能
 
 Windows デスクトップ クライアントの詳細については、「[Windows デスクトップ クライアントの概要](windowsdesktop.md)」で確認できます。 クライアントの最新の更新プログラムはこの記事で確認できます。
 
-## <a name="latest-client-versions"></a>最新のクライアント バージョン
+## <a name="supported-client-versions"></a>サポートされているクライアント バージョン
 
 クライアントは、さまざまな[ユーザー グループ](windowsdesktop-admin.md#configure-user-groups)に対して構成できます。 次の表に、各ユーザー グループで使用できる現在のバージョンを示します。
 
-|ユーザー グループ |バージョン  |
-|-----------|---------|
-|パブリック     |1.2.1272 |
-|Insider    |1.2.1357 |
+|ユーザー グループ |最新バージョン  |サポートされる最低バージョン |
+|-----------|----------------|--------------------------|
+|パブリック     |1.2.1272        |1.2.945                   |
+|Insider    |1.2.1357        |1.2.1357                  |
 
 ## <a name="updates-for-version-121357-insiders"></a>バージョン 1.2.1357 の更新内容 (インサイダー)
 
@@ -33,7 +33,7 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 
 ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139233)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139144)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
-- セキュリティで保護されたサインオン (SSO) が Windows 7 で動作しなかった問題を修正しました。
+- シングル サインオン (SSO) が Windows 7 で動作しなかった問題を修正しました。
 
 ## <a name="updates-for-version-121275"></a>バージョン 1.2.1275 の更新内容
 

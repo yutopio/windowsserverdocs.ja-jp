@@ -8,12 +8,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 07/16/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 672a9d1b33137d9559d88b8773d3c7ccd2493ddc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 420cedebcfc71a5ba78908d244d1f8ca651bee4c
+ms.sourcegitcommit: 0b3d6661c44aa1a697087e644437279142726d84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87955059"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083673"
 ---
 # <a name="frequently-asked-questions-about-the-remote-desktop-clients"></a>リモート デスクトップ クライアントについてよく寄せられる質問
 
@@ -174,7 +174,7 @@ Web クライアントは、Windows、macOS、Linux、および ChromeOS をサ�
 
 - 標準的な PC の 2 つのボタン USB マウス
 - Apple Magic Mouse:右クリックを有効にするには、ドックで **[システム環境設定]** をクリックし、 **[マウス]** をクリックしてから **[Secondary click]** (セカンダリ クリック) を有効にします。
-- Apple Magic Trackpad または MacBook Trackpad:右クリックを有効にするには、ドックで **[システム環境設定]** をクリックし、 **[マウス]** をクリックしてから **[Secondary click]** (セカンダリ クリック) を有効にします。
+- Apple Magic Trackpad または MacBook Trackpad:右クリックを有効にするには、ドックで **[システム環境設定]** をクリックし、 **[トラックパッド]** をクリックしてから **[Secondary click]\(セカンダリ クリック\)** を有効にします。
 
 ### <a name="is-airprint-supported"></a>AirPrint がサポートされているか。
 いいえ、リモート デスクトップ クライアントは AirPrint をサポートしていません。 (これは Mac と iOS の両方のクライアントに当てはまります)。

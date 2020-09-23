@@ -72,6 +72,7 @@
 #### [Windows デスクトップ クライアントの概要](clients/windowsdesktop.md)
 #### [管理者用 Windows デスクトップクライアント](clients/windowsdesktop-admin.md)
 #### [Windows デスクトップ クライアントの新機能](clients/windowsdesktop-whatsnew.md)
+#### [ショートカット キー](/windows/win32/termserv/terminal-services-shortcut-keys)
 ### Microsoft Store クライアント
 #### [Microsoft Store クライアントの概要](clients/windows.md)
 #### [Microsoft Store クライアントの新機能](clients/windows-whatsnew.md)
