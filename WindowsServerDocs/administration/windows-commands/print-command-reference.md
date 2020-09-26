@@ -7,18 +7,18 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 54f69a7dc0841908d9fb4cc2bef81e4b2a85876a
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 7491070b7170ec6a47d4a2abe30c0ab7e5f4a28c
+ms.sourcegitcommit: e164aeffc01069b8f1f3248bf106fcdb7f64f894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638390"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91388303"
 ---
 # <a name="print-command-line-tool-reference"></a>印刷コマンドラインツールのリファレンス
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-関連する各印刷コマンドラインツールへの情報とリンク。
+関連する各印刷コマンドラインツールへの情報とリンク:
 
 | command | 説明 |
 |--|--|

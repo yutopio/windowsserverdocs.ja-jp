@@ -1,17 +1,18 @@
 ---
 title: TPM で信頼された構成証明のホスト情報を追加する
+description: TPM によって信頼された構成証明のホスト情報を追加する方法について説明します。
 ms.topic: article
 ms.assetid: f0aa575b-b34e-4f6c-8416-ed3e398e0ad2
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 06/21/2019
-ms.openlocfilehash: fc879fda0f6a708a8a1d4ebd60834f4e6543f3ba
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2f4f684b0c18c19cdbdf09e672c83e51f426ca04
+ms.sourcegitcommit: e164aeffc01069b8f1f3248bf106fcdb7f64f894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997165"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91388853"
 ---
 # <a name="add-host-information-for-tpm-trusted-attestation"></a>TPM で信頼された構成証明のホスト情報を追加する
 
@@ -20,7 +21,7 @@ ms.locfileid: "87997165"
 TPM モードでは、ファブリック管理者は3種類のホスト情報をキャプチャし、それぞれを HGS 構成に追加する必要があります。
 
 - 各 Hyper-v ホストの TPM 識別子 (EKpub)
-- コード整合性ポリシー、Hyper-v ホストで許可されているバイナリのホワイトリスト
+- コード整合性ポリシー、Hyper-v ホストで許可されているバイナリの許可リスト
 - 同じクラスのハードウェア上で実行される一連の Hyper-v ホストを表す TPM ベースライン (ブート測定)
 
 ファブリック管理者が情報をキャプチャしたら、次の手順に従って、その情報を HGS 構成に追加します。
@@ -32,12 +33,12 @@ TPM モードでは、ファブリック管理者は3種類のホスト情報を
     ```
 
     > [!NOTE]
-    > 信頼されていない保証キー証明書 (EKCert) に関する TPM 識別子を追加するときにエラーが発生した場合は、[信頼された tpm ルート証明書が HGS ノードに追加され](guarded-fabric-install-trusted-tpm-root-certificates.md)ていることを確認します。
+    > 信頼されていない保証キー証明書 (EKCert) に関する TPM 識別子を追加するときにエラーが発生した場合は、 [信頼された tpm ルート証明書が HGS ノードに追加され](guarded-fabric-install-trusted-tpm-root-certificates.md) ていることを確認します。
     > また、一部の TPM ベンダーは EKCerts を使用しません。
     > EKCert がないかどうかを確認するには、メモ帳などのエディターで XML ファイルを開き、EKCert が見つからなかったことを示すエラーメッセージがないかどうかを確認します。
     > この場合、コンピューターの TPM が本物であることを信頼している場合は、フラグを使用して `-Force` この安全性チェックを無効にし、ホスト id を HGS に追加することができます。
 
-2. ホスト用にファブリック管理者が作成したコード整合性ポリシーをバイナリ形式 ( \* . p7b) で取得します。 それを HGS サーバーにコピーします。 その後、次のコマンドを実行します。
+2. ホスト用にファブリック管理者が作成したコード整合性ポリシーをバイナリ形式 ( \* . p7b) で取得します。 それを HGS サーバーにコピーします。 次に、次のコマンドを実行します。
 
     `<PolicyName>`では、適用するホストの種類を示す CI ポリシーの名前を指定します。 ベストプラクティスとしては、コンピューターのメーカー/モデルの後に名前を指定し、それを実行する特別なソフトウェア構成を指定することをお勧めします。<br>`<Path>`では、コード整合性ポリシーのパスとファイル名を指定します。
 
@@ -49,14 +50,14 @@ TPM モードでは、ファブリック管理者は3種類のホスト情報を
     > 署名済みのコード整合性ポリシーを使用している場合は、HGS と同じポリシーの署名されていないコピーを登録します。
     > コード整合性ポリシーの署名は、ポリシーの更新を制御するために使用されますが、ホスト TPM には測定されないため、HGS で証明することはできません。
 
-3. ファブリック管理者が参照ホストからキャプチャした TCG ログファイルを取得します。 ファイルを HGS サーバーにコピーします。 その後、次のコマンドを実行します。 通常、ポリシーには、それが表すハードウェアのクラス (たとえば、"製造元のモデルのリビジョン") の後に名前を指定します。
+3. ファブリック管理者が参照ホストからキャプチャした TCG ログファイルを取得します。 ファイルを HGS サーバーにコピーします。 次に、次のコマンドを実行します。 通常、ポリシーには、それが表すハードウェアのクラス (たとえば、"製造元のモデルのリビジョン") の後に名前を指定します。
 
     ```powershell
     Add-HgsAttestationTpmPolicy -Path <Filename>.tcglog -Name '<PolicyName>'
     ```
 
-これで、TPM モード用に HGS クラスターを構成するプロセスが完了します。 ファブリック管理者は、ホストの構成を完了する前に、HGS から2つの Url を指定する必要がある場合があります。 これらの Url を取得するには、HGS サーバーで[HgsServer](/powershell/module/hgsserver/get-hgsserver?view=win10-ps)を実行します。
+これで、TPM モード用に HGS クラスターを構成するプロセスが完了します。 ファブリック管理者は、ホストの構成を完了する前に、HGS から2つの Url を指定する必要がある場合があります。 これらの Url を取得するには、HGS サーバーで [HgsServer](/powershell/module/hgsserver/get-hgsserver?view=win10-ps)を実行します。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [構成証明を確認する](guarded-fabric-confirm-hosts-can-attest-successfully.md)

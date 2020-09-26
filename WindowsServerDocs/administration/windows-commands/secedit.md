@@ -1,66 +1,63 @@
 ---
-title: secedit
-description: 参照記事 * * * *-
+title: secedit コマンド
+description: Secedit コマンドの参照記事。現在のセキュリティ構成を指定されたセキュリティテンプレートと比較します。
 ms.topic: reference
 ms.assetid: 58ed57ed-08e3-403d-a363-0620b358637a
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 8a1e4e49c5fd9cef10f6b60d18511f3a38d0dea6
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: ceb1a28376c17ab9d08689c7b0367dd90fdecc4f
+ms.sourcegitcommit: e164aeffc01069b8f1f3248bf106fcdb7f64f894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89635500"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91388289"
 ---
-# <a name="secedit"></a>secedit
+# <a name="secedit-commands"></a>secedit コマンド
 
-
-
-構成し、指定したセキュリティ テンプレートと現在の構成を比較することによってシステムのセキュリティを分析します。
-
-## <a name="syntax"></a>構文
-
-```
-secedit
-[/analyze /db <database file name> /cfg <configuration file name> [/overwrite] /log <log file name> [/quiet]]
-[/configure /db <database file name> [/cfg <configuration filename>] [/overwrite] [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]]
-[/export /db <database file name> [/mergedpolicy] /cfg <configuration file name> [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>]]
-[/generaterollback /db <database file name> /cfg <configuration file name> /rbk <rollback file name> [/log <log file name>] [/quiet]]
-[/import /db <database file name> /cfg <configuration file name> [/overwrite] [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]]
-[/validate <configuration file name>]
-```
-
-#### <a name="parameters"></a>パラメーター
-
-|パラメーター|説明|
-|---------|-----------|
-|[Secedit:analyze](secedit-analyze.md)|データベースに格納されているベースライン設定に対する現在のシステム設定を分析できます。  分析結果は、データベースの独立した領域には保存され、セキュリティの構成と分析スナップインで表示できます。|
-|[Secedit:configure](secedit-configure.md)|使用すると、システム データベースに格納されているセキュリティ設定を構成できます。|
-|[Secedit:export](secedit-export.md)|データベースに格納されているセキュリティ設定をエクスポートできます。|
-|[Secedit:generaterollback](secedit-generaterollback.md)|構成テンプレートに関してロールバック テンプレートを生成できます。|
-|[Secedit:import](secedit-import.md)|テンプレートで指定された設定をシステムに適用またはシステムに照らして分析できるように、データベースにセキュリティ テンプレートをインポートできます。|
-|[Secedit:validate](secedit-validate.md)|セキュリティ テンプレートの構文を検証できます。|
-
-## <a name="remarks"></a>注釈
-
-すべてのファイル名のパスが指定されていない場合、現在のディレクトリが使用されます。
-
-セキュリティ テンプレート スナップイン、およびセキュリティの構成を使用して、セキュリティ テンプレートが作成され、[スナップインの分析が実行時に、次のファイルが作成されます。
-
-
-|           ファイル           |                                                                                                                                                                                                                                                               説明                                                                                                                                                                                                                                                                |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|        Scesrv.log        |                                                                                                                             **場所**: %windir%\security\logs</br>**によって作成された**: オペレーティング システム</br>**ファイルの種類**: テキスト</br>**リフレッシュ レート**: ときに上書き secedit、分析を構成する、エクスポートまたは/import を実行します。</br>**コンテンツ**: ポリシーの種類でグループ化された分析の結果が含まれています。                                                                                                                             |
-| *ユーザーが選択した名前*.sdb |                                                                                    **場所**: %windir%\*ユーザー アカウント<em>\Documents\Security\Database</br></em>*作成者* <em> : セキュリティの構成と分析スナップインを実行する</br></em>*ファイルの種類* <em> : 専有</br></em>*更新頻度* <em> : 新しいセキュリティテンプレートが作成されるたびに更新されます。</br></em>*コンテンツ* \* : ローカルセキュリティポリシーとユーザーが作成したセキュリティテンプレート。                                                                                    |
-| *ユーザーが選択した名前*.log | **場所**: ユーザー定義しますが、既定値は %windir%\*ユーザー アカウント<em>\Documents\Security\Logs</br></em>*作成者* <em> :/analyze および/configure サブコマンドを実行する (またはセキュリティの構成と分析スナップインを使用する)</br></em>*ファイルの種類* <em> : テキスト</br></em>*リフレッシュレート* <em> :/analyze および/configure サブコマンドを実行する (またはセキュリティの構成と分析スナップインを使用する)。上書きします。</br></em>*コンテンツ* \* :</br>1. ログファイル名</br>2. 日付と時刻</br>3. 分析または調査の結果。 |
-| *ユーザーが選択した名前*.inf |                                                                                     **場所**: %windir%\*ユーザー アカウント<em>\Documents\Security\Templates</br></em>*作成者* <em> : セキュリティテンプレートスナップインの実行</br></em>*ファイルの種類* <em> : テキスト</br></em>*更新頻度* <em> : セキュリティテンプレートが更新されるたびに、</br></em>*コンテンツ* \* : スナップインを使用して選択した各ポリシーのテンプレートに関する設定情報が含まれます。                                                                                     |
+現在のセキュリティ構成を指定されたセキュリティテンプレートと比較することによって、システムのセキュリティを構成および分析します。
 
 > [!NOTE]
 > Microsoft 管理コンソール (MMC) とセキュリティの構成と分析スナップインでは、Server Core では使用できません。
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="syntax"></a>構文
 
-このコマンドの使用方法の例については、サブコマンドのファイルのいずれかの例を参照してください。
+```
+secedit /analyze
+secedit /configure
+secedit /export
+secedit /generaterollback
+secedit /import
+secedit /validate
+```
+
+### <a name="parameters"></a>パラメーター
+
+| パラメーター | [説明] |
+|--|--|
+| [secedit/analyze](secedit-analyze.md) | データベースに格納されているベースライン設定に対する現在のシステム設定を分析できます。  分析結果は、データベースの独立した領域には保存され、セキュリティの構成と分析スナップインで表示できます。 |
+| [secedit/configure](secedit-configure.md) | 使用すると、システム データベースに格納されているセキュリティ設定を構成できます。 |
+| [secedit/export](secedit-export.md) | データベースに格納されているセキュリティ設定をエクスポートできます。 |
+| [secedit/generaterollback](secedit-generaterollback.md) | 構成テンプレートに関してロールバック テンプレートを生成できます。 |
+| [secedit/import](secedit-import.md) | テンプレートで指定された設定をシステムに適用またはシステムに照らして分析できるように、データベースにセキュリティ テンプレートをインポートできます。 |
+| [secedit/validate](secedit-validate.md) | セキュリティ テンプレートの構文を検証できます。 |
+
+#### <a name="remarks"></a>解説
+
+- Filepath が指定されていない場合は、すべてのファイル名が既定で現在のディレクトリに設定されます。
+
+- 分析結果はデータベースの別の領域に格納され、[セキュリティの構成と分析] スナップインで MMC に表示できます。
+
+- セキュリティテンプレートスナップインを使用してセキュリティテンプレートを作成し、それらのテンプレートに対してセキュリティの構成と分析スナップインを実行すると、次のファイルが作成されます。
+
+    | ファイル | 説明 |
+    |--|--|
+    | scesrv.dll | <ul><li>**場所:**`%windir%\security\logs`</li><li>**作成者:** オペレーティング システム</li><li>**ファイルの種類:** 本文</li><li>**更新頻度:**`secedit analyze`、 `secedit configure` 、または `secedit export` が実行されるときに上書き `secedit import` されます。</li><li>**コンテンツ:** ポリシーの種類ごとにグループ化された分析の結果が含まれます。</li></ul> |
+    | *ユーザーが選択した名前*sdb | <ul><li>**場所:**`%windir%\<user account>\Documents\Security\Database`</li><li>**作成者:** セキュリティの構成と分析スナップインの実行</li><li>**ファイルの種類:** 各社</li><li>**更新頻度:** 新しいセキュリティテンプレートが作成されるたびに更新されます。</li><li>**コンテンツ:** ローカルセキュリティポリシーとユーザーが作成したセキュリティテンプレート。</li></ul> |
+    | *ユーザーが選択した名前*.log | <ul><li>**場所:** ユーザー定義ですが、既定値は `%windir%\<user account>\Documents\Security\Logs`</li><li>**作成者:**`secedit analyze`コマンドまたは `secedit configure` コマンドを実行するか、セキュリティの構成と分析スナップインを使用します。</li><li>**ファイルの種類:** 本文</li><li>**更新頻度:** または `secedit analyze` の `secedit configure` 実行時、またはセキュリティの構成と分析スナップインを使用して上書きされます。</li><li>**コンテンツ:** ログファイル名、日付と時刻、および分析または調査の結果。</li></ul> |
+    | *ユーザーが選択した名前 (.inf)* | <ul><li>**場所:**`%windir%\*<user account>\Documents\Security\Templates`</li><li>**作成者:** セキュリティテンプレートスナップインを実行しています。</li><li>**ファイルの種類:** 本文</li><li>**更新頻度:** セキュリティテンプレートが更新されるたびに上書きされます。</li><li>**コンテンツ:** スナップインを使用して選択した各ポリシーのテンプレートに関する設定情報が含まれます。</li></ul> |
+
+## <a name="additional-references"></a>その他のリファレンス
+
 - [コマンド ライン構文の記号](command-line-syntax-key.md)

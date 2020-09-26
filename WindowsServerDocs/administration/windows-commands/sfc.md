@@ -1,60 +1,60 @@
 ---
 title: sfc
-description: すべての保護されたシステムファイルの整合性をスキャンおよび検証し、不適切なバージョンを正しいバージョンに置き換える sfc のリファレンス記事です。
+description: Sfc コマンドの参照記事。保護されたすべてのシステムファイルの整合性をスキャンおよび検証し、不適切なバージョンを正しいバージョンに置き換えます。
 ms.topic: reference
 ms.assetid: c58c25da-e028-42a6-9e10-973484a4b953
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 18c7457b7f51449796374930d6232045be443c85
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 829c6e328ad0ea993e11cb5eb5d96d99f0d52476
+ms.sourcegitcommit: e164aeffc01069b8f1f3248bf106fcdb7f64f894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640982"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91388942"
 ---
 # <a name="sfc"></a>sfc
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-スキャンし、保護されているすべてのシステムの整合性がファイルし、正しいバージョンと正しくないバージョンが置き換えられますことを確認します。
+スキャンし、保護されているすべてのシステムの整合性がファイルし、正しいバージョンと正しくないバージョンが置き換えられますことを確認します。 このコマンドによって、保護されたファイルが上書きされたことが検出されると、 **systemroot\system32\dllcache** フォルダーから正しいバージョンのファイルが取得され、正しくないファイルが置き換えられます。
 
+> [!IMPORTANT]
+> このコマンドを実行するには、Administrators グループのメンバーとしてログオンする必要があります。
 
 ## <a name="syntax"></a>構文
+
 ```
 sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir=<offline windows directory> /offbootdir=<offline boot directory>]
 ```
 
-#### <a name="parameters"></a>パラメーター
-|パラメーター|説明|
-|-------|--------|
-|/scannow|すべての保護されたシステム ファイルの整合性をスキャンし、可能であれば、問題のあるファイルを修復します。|
-|/verifyonly|すべての保護されたシステム ファイルの整合性をスキャンします。 修復操作は実行されません。|
-|/scanfile|指定されたファイルの整合性をスキャンし、可能であれば、問題が検出された場合、ファイルを修復します。|
-|\<file>|指定した完全なパスとファイル名|
-|/verifyfile|指定されたファイルの整合性を検証します。 修復操作は実行されません。|
-|/offwindir|オフライン修復用のオフラインの windows ディレクトリの場所を指定します。|
-|/offbootdir|オフラインのオフライン ブート ディレクトリの場所を指定します|
-|/?|コマンド プロンプトにヘルプを表示します。|
+### <a name="parameters"></a>パラメーター
 
-## <a name="remarks"></a>注釈
--   実行する管理者グループのメンバーとしてログオンする必要があります **sfc.exe**します。
--   **sfc**によって保護されたファイルが上書きされたことが検出されると、 **systemroot\system32\dllcache**フォルダーから正しいバージョンのファイルが取得され、正しくないファイルが置き換えられます。
--   Windows Server 2003、windows server 2008、および Windows Server 2008 R2 の **sfc** には、機能上の違いがあります。
--   Windows Server 2003 の **sfc** の詳細については、Microsoft サポート技術情報の [記事 310747](https://go.microsoft.com/fwlink/?LinkId=227069) を参照してください。
--   Windows Server 2008 および Windows Server 2008 R2 の **sfc** の詳細については、「 [システムファイルチェッカー](https://go.microsoft.com/fwlink/?LinkId=227071)」を参照してください。
+| パラメーター | [説明] |
+|--|--|
+| /scannow | すべての保護されたシステム ファイルの整合性をスキャンし、可能であれば、問題のあるファイルを修復します。 |
+| /verifyonly | 修復を実行せずに、保護されたすべてのシステムファイルの整合性をスキャンします。 |
+| /scanfile `<file>` | 指定されたファイル (完全パスとファイル名) の整合性をスキャンし、問題が検出された場合は修復を試みます。 |
+| /verifyfile `<file>` | 修復を実行せずに、指定されたファイル (完全パスとファイル名) の整合性を確認します。 |
+| /offwindir `<offline windows directory>` | オフライン修復用のオフラインの windows ディレクトリの場所を指定します。 |
+| /offbootdir `<offline boot directory>` | オフライン修復用のオフラインブートディレクトリの場所を指定します。 |
+| /? | コマンド プロンプトにヘルプを表示します。 |
 
 ## <a name="examples"></a>例
-確認する、 **kernel32.dll ファイル**, 、種類。
+
+確認する、 *kernel32.dll ファイル*, 、種類。
+
 ```
 sfc /verifyfile=c:\windows\system32\kernel32.dll
 ```
-セットアップのオフライン修復するには、 **kernel32.dll** 設定オフライン ブート ディレクトリとファイル **d:** とオフラインの windows ディレクトリに設定 **d:\windows**, 、種類。
+
+オフラインのブートディレクトリを * D: に設定し、オフラインの windows ディレクトリを D:\windows に設定して、 *kernel32.dll*ファイルのオフライン修復をセットアップするには \* 、次のように入力します。 *D:\windows*
+
 ```
-sfc /scanfile=d:\windows\system32\kernel32.dll /offbootdir=d:\ /offwindir=d:\windows
+sfc /scanfile=D:\windows\system32\kernel32.dll /offbootdir=D:\ /offwindir=d:\windows
 ```
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
+
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
-

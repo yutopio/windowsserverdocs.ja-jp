@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 5545e63efc87527506704ecd6ff956c8000b95a5
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: a47817c43e8130091922a775b7844d9ea596f79b
+ms.sourcegitcommit: e164aeffc01069b8f1f3248bf106fcdb7f64f894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89636092"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91388255"
 ---
 # <a name="erase"></a>erase
 
@@ -20,7 +20,6 @@ ms.locfileid: "89636092"
 
 > [!NOTE]
 > このコマンドは [del コマンド](del.md)と同じです。
-
 
 ## <a name="syntax"></a>構文
 
@@ -31,7 +30,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | [説明] |
 | --------- | ----------- |
 | `<names>` | 1つ以上のファイルまたはディレクトリのリストを指定します。 複数のファイルを削除するには、ワイルドカードを使用できます。 ディレクトリを指定すると、ディレクトリ内のすべてのファイルが削除されます。 |
 | /p | 指定されたファイルを削除する前に確認メッセージを表示します。 |
@@ -41,7 +40,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 | /a [:]`<attributes>` | 次のファイル属性に基づいてファイルを削除します。<ul><li>**r** 読み取り専用ファイル</li><li>**h** 隠しファイル</li><li>コンテンツにインデックスが**設定され**ていないファイル</li><li>**s** システムファイル</li><li>アーカイブの準備**が**できているファイル</li><li>**左** 再解析ポイント</li><li>**-** ' Not ' を意味するプレフィックスとして使用されます。</li></ul>. |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 - コマンドを使用すると、 `erase /p` 次のメッセージが表示されます。
 
@@ -93,7 +92,7 @@ erase *.bat
 erase /a:r *.*
 ```
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
 

@@ -5,14 +5,14 @@ ms.author: cosdar
 manager: dongill
 ms.topic: article
 author: cosmosdarwin
-ms.date: 07/17/2019
+ms.date: 09/21/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 315b645cf3c2adc60bd8eeed0406e1226b2d2128
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 502b04676fcb9a9c7342e701e71be473890f9668
+ms.sourcegitcommit: 8a826e992f28a70e75137f876a5d5e61238a24e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968849"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365355"
 ---
 # <a name="understanding-the-cache-in-storage-spaces-direct"></a>記憶域スペース ダイレクトのキャッシュについて
 
@@ -28,36 +28,16 @@ ms.locfileid: "87968849"
 
 ## <a name="drive-types-and-deployment-options"></a>ドライブの種類とデプロイ オプション
 
-現在、記憶域スペース ダイレクトは、次の 3 種類の記憶装置で動作します。
+記憶域スペースダイレクト現在、次の4種類の記憶装置で動作します。
 
-<table>
-    <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:70px">
-            <img src="media/understand-the-cache/NVMe-100px.png" alt="Image of NVMe (Non-Volatile Memory Express)" >
-        </td>
-        <td style="padding: 10px; border: 0;" valign="middle">
-            NVMe (Non-Volatile Memory Express)
-        </td>
-    </tr>
-    <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:70px">
-            <img src="media/understand-the-cache/SSD-100px.png" alt="Image of SSD" >
-        </td>
-        <td style="padding: 10px; border: 0;" valign="middle">
-            SATA/SAS SSD (ソリッドステート ドライブ)
-        </td>
-    </tr>
-    <tr style="border: 0;">
-        <td style="padding: 10px; border: 0; width:70px">
-            <img src="media/understand-the-cache/HDD-100px.png"alt="Image of HDD" >
-        </td>
-        <td style="padding: 10px; border: 0;" valign="middle">
-            HDD (ハード ディスク ドライブ)
-        </td>
-    </tr>
-</table>
+| ドライブの種類 | 説明 |
+|----------------------|--------------------------|
+|![PMem](media/understand-the-cache/pmem-100px.png)|**PMem** とは永続メモリを意味します。これは、低待機時間かつ高パフォーマンスの新しい種類の記憶域です。|
+|![NVMe](media/understand-the-cache/NVMe-100px.png)|**NVMe** (Non-Volatile Memory Express) とは、PCIe バスに直接接続されたソリッドステート ドライブを指します。 一般的なフォーム ファクターは、2.5 インチU.2、PCIe Add-In-Card (AIC)、および M.2 です。 NVMe では、PMem を除いて、現在サポートされている他の種類のドライブよりも高い IOPS と IO スループットおよび低待機時間が実現します。|
+|![SSD](media/understand-the-cache/SSD-100px.png)|**SSD** は、従来の SATA または SAS 経由で接続されるソリッドステート ドライブを指します。|
+|![HDD](media/understand-the-cache/HDD-100px.png)|**HDD** は、大容量の記憶域容量を提供する、回転式の磁気ハード ディスク ドライブを指します。|
 
-これらの組み合わせには 6 通りあり、"オールフラッシュ" と "ハイブリッド" の 2 つのカテゴリに分けられます。
+これらはさまざまな方法で組み合わせることができ、"オールフラッシュ" と "ハイブリッド" という 2 つのカテゴリに分類されます。
 
 ### <a name="all-flash-deployment-possibilities"></a>オールフラッシュ デプロイの可能性
 
@@ -169,7 +149,7 @@ Windows ソフトウェアで定義された記憶域スタックには、関連
 
 記憶域スペース ダイレクトでは、記憶域スペースのライトバック キャッシュを既定の動作から変更することはできません。 たとえば、**New-Volume** コマンドレットの **-WriteCacheSize** などのパラメーターは使用できません。
 
-CSV キャッシュを使用するかどうかはユーザーが自由に選択できます。 記憶域スペース ダイレクトでは既定でオフになっていますが、このトピックで説明している新しいキャッシュと競合することはありません。 特定のシナリオでは、パフォーマンスを向上させることができます。 詳細については、[CSV キャッシュを有効にする方法](../../failover-clustering/failover-cluster-csvs.md#enable-the-csv-cache-for-read-intensive-workloads-optional)に関する記事を参照してください。
+CSV キャッシュを使用するかどうかはユーザーが自由に選択できます。 このトピックで説明されているキャッシュと競合することはありません。 特定のシナリオでは、パフォーマンスを向上させることができます。 詳細については、[CSV キャッシュを有効にする方法](../../failover-clustering/failover-cluster-csvs.md#enable-the-csv-cache-for-read-intensive-workloads-optional)に関する記事を参照してください。
 
 ## <a name="manual-configuration"></a>手動構成
 
@@ -269,7 +249,7 @@ Windows の組み込みのパフォーマンス モニター (PerfMon.exe) ユ�
 
 普遍的な規則ではありませんが、読み取りのキャッシュ ミスが多すぎる場合は、キャッシュのサイズが不足している可能性があるため、キャッシュ ドライブを追加してキャッシュを拡張することを検討してください。 キャッシュ ドライブまたは容量ドライブは、必要時にいつでも個別に追加できます。
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 - [ドライブと回復性の種類の選択](choosing-drives.md)
 - [フォールト トレランスとストレージの効率性](storage-spaces-fault-tolerance.md)

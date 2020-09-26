@@ -1,59 +1,59 @@
 ---
-title: 'secedit: generaterollback'
-description: 参照記事 * * * *-
+title: secedit generaterollback
+description: 指定された構成テンプレートのロールバックテンプレートを生成することができる、secedit generaterollback コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: 385a6799-51a7-4fe3-bd73-10c7998b6680
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 28b8fedf952bfa5466bc0a893a46f2e7f69165f6
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: ae2e368ef387ea84095fcbcc51ad1e622225a2cc
+ms.sourcegitcommit: e164aeffc01069b8f1f3248bf106fcdb7f64f894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89636797"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91388818"
 ---
-# <a name="seceditgeneraterollback"></a>secedit: generaterollback
+# <a name="secedit-generaterollback"></a>secedit/generaterollback
 
+指定した構成テンプレートのロールバック テンプレートを生成できます。 既存のロールバックテンプレートが存在する場合、このコマンドを再実行すると、既存の情報が上書きされます。
 
-
-指定した構成テンプレートのロールバック テンプレートを生成できます。
+このコマンドを正常に実行すると、指定したセキュリティテンプレートのセキュリティポリシーの構成と scesrv.dll ファイルとの不一致がログに記録されます。
 
 ## <a name="syntax"></a>構文
 
 ```
-Secedit /generaterollback /db <database file name> /cfg <configuration file name> /rbk <rollback template file name> [/log <log file name>] [/quiet]
+secedit /generaterollback /db <database file name> /cfg <configuration file name> /rbk <rollback template file name> [/log <log file name>] [/quiet]
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------|-----------|
-|db|必須。</br>分析を実行する、格納されている構成を含んでいるデータベースのパスとファイル名を指定します。</br>ファイル名をそれに関連付けられているセキュリティ テンプレート (ように、構成ファイルによって表される) されていないデータベースを指定する場合、 `/cfg \<configuration file name>` でもコマンド ライン オプションに指定する必要があります。|
-|cfg|必須。</br>分析用のデータベースにインポートするセキュリティ テンプレートのパスとファイル名を指定します。</br>この/cfg オプションを使用すると、 `/db \<database file name>` パラメーター。 これが指定されていない場合、データベースに既に格納されている構成に対して分析を実行します。|
-|rbk|必須。</br>ロールバック情報が書き込まれるセキュリティ テンプレートを指定します。 セキュリティ テンプレートを作成するには、セキュリティ テンプレート スナップインを使用します。 次のコマンドでは、ロールバック ファイルを作成できます。|
-|log|省略可能。</br>プロセスのログ ファイルのパスとファイル名を指定します。|
-|quiet|省略可能。</br>画面とログの出力を抑制します。 できます分析結果を表示する、セキュリティの構成と分析スナップインを Microsoft 管理コンソール (MMC) を使用しています。|
-
-## <a name="remarks"></a>注釈
-
-ログ ファイルのパスを指定しない場合、既定のログ ファイル (*systemroot*\Users \*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) を使用します。
-
-Windows Server 2008 で始まる `Secedit /refreshpolicy` に置き換えられました `gpupdate`します。 セキュリティ設定を更新する方法については、次を参照してください。 [Gpupdate](gpupdate.md)します。
-
-このコマンドが正常に実行されると、タスクが正常に完了したことが表示されます。 指定されたセキュリティ テンプレートとセキュリティ ポリシーの構成間の不一致のみのログ。 Scesrv.log、これらの不一致が一覧表示します。
-
-既存のロールバック テンプレートが指定されている場合、このコマンドが上書きされます。 次のコマンドでは、新しいロールバック テンプレートを作成できます。 どちらの条件は、追加のパラメーターは必要ありません。
+| パラメーター | [説明] |
+|--|--|
+| /db | 必須です。 分析の実行対象となる保存された構成を含むデータベースのパスとファイル名を指定します。 ファイル名に、関連付けられている (構成ファイルによって表される) セキュリティテンプレートがないデータベースが指定されている場合は、 `/cfg <configuration file name>` オプションも指定する必要があります。 |
+| /cfg | 必須です。 分析用のデータベースにインポートするセキュリティ テンプレートのパスとファイル名を指定します。 このオプションは、パラメーターと共に使用する場合にのみ有効です `/db <database file name>` 。 このパラメーターも指定されていない場合は、データベースに既に格納されている構成に対して分析が実行されます。 |
+| /rbk | 必須です。 ロールバック情報が書き込まれるセキュリティ テンプレートを指定します。 セキュリティ テンプレートを作成するには、セキュリティ テンプレート スナップインを使用します。 次のコマンドでは、ロールバック ファイルを作成できます。 |
+| /log | プロセスで使用するログ ファイルのパスとファイル名を指定します。 ファイルの場所を指定しない場合は、既定のログファイル `<systemroot>\Documents and Settings\<UserAccount>\My Documents\Security\Logs\<databasename>.log` が使用されます。 |
+| スイッチを | 画面とログの出力を抑制します。 できます分析結果を表示する、セキュリティの構成と分析スナップインを Microsoft 管理コンソール (MMC) を使用しています。 |
 
 ## <a name="examples"></a>例
 
-セキュリティの構成と分析スナップインで、SecTmplContoso.inf を使用してセキュリティ テンプレートを作成した後、元の設定を保存するロールバック構成ファイルを作成します。 FY11 ログ ファイルにアクションを記述します。
+以前に作成した *Sectmplcontoso .inf* ファイルのロールバック構成ファイルを作成し、元の設定を保存して、その操作を *SecAnalysisContosoFY11* ログファイルに書き込むには、次のように入力します。
+
 ```
-Secedit /generaterollback /db C:\Security\FY11\SecDbContoso.sdb /cfg sectmplcontoso.inf /rbk sectmplcontosoRBK.inf /log C:\Security\FY11\SecAnalysisContosoFY11.log
+secedit /generaterollback /db C:\Security\FY11\SecDbContoso.sdb /cfg sectmplcontoso.inf /rbk sectmplcontosoRBK.inf /log C:\Security\FY11\SecAnalysisContosoFY11.log
 ```
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
--   [Secedit](secedit.md)
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
+
+- [secedit/analyze](secedit-analyze.md)
+
+- [secedit/configure](secedit-configure.md)
+
+- [secedit/export](secedit-export.md)
+
+- [secedit/import](secedit-import.md)
+
+- [secedit/validate](secedit-validate.md)
