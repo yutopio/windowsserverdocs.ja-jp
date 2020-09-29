@@ -1,17 +1,16 @@
 ---
 title: Storage Migration Service でのカットオーバーのしくみ
 description: Storage Migration Service のカットダウンステージの概要と詳細
-author: t-chrche
-ms.author: t-chrche
-manager: nedpyle
+author: nedpyle
+ms.author: nedpyle
 ms.date: 08/31/2020
 ms.topic: article
-ms.openlocfilehash: 1e886c505435976b6495e0460705821086781a62
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 2f323b03052f0a920ff064860bf5cbf4c6a2f01e
+ms.sourcegitcommit: 014e730c7fb19ed06393d144a446e4248fc35444
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766905"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91495649"
 ---
 # <a name="how-cutover-works-in-storage-migration-service"></a>Storage Migration Service でのカットオーバーのしくみ
 
@@ -134,7 +133,7 @@ ms.locfileid: "90766905"
 
 * [__"38% のソースコンピューターのネットワークインターフェイスのマッピングが停止しています..."__](./known-issues.md#cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer)
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 - [記憶域移行サービスの概要](overview.md)
 - [記憶域移行サービスを使用してファイルサーバーを移行する](migrate-data.md)
