@@ -5,33 +5,33 @@ ms.author: eldenc
 manager: eldenc
 ms.topic: article
 author: eldenchristensen
-ms.date: 07/24/2020
+ms.date: 09/24/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c53179f32f0e6837297859413fa0cb88d66a0d2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fcbd7a955efda11543010d3e4705bf52b7d9bdea
+ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961126"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91517498"
 ---
 # <a name="storage-spaces-direct-hardware-requirements"></a>記憶域スペース ダイレクトのハードウェア要件
 
 > 適用先:Windows Server 2019、Windows Server 2016
 
-このトピックでは、Windows Server での記憶域スペースダイレクトの最小ハードウェア要件について説明します。 Azure Stack HCI のハードウェア要件については、クラウドへの接続を使用したハイパー集約型の展開向けに設計された、microsoft のオペレーティングシステム[AZURE STACK HCI: ハードウェア要件の決定](/azure-stack/hci/deploy/before-you-start#determine-hardware-requirements)」を参照してください。
+このトピックでは、Windows Server での記憶域スペースダイレクトの最小ハードウェア要件について説明します。 Azure Stack HCI のハードウェア要件については、クラウドへの接続を使用したハイパー集約型の展開向けに設計された、microsoft のオペレーティングシステム [AZURE STACK HCI: ハードウェア要件の決定](/azure-stack/hci/deploy/before-you-start#determine-hardware-requirements)」を参照してください。
 
 運用環境では、Microsoft のパートナーから検証済みのハードウェア/ソフトウェアソリューションを購入することをお勧めします。これには、展開ツールと手順が含まれます。 これらのソリューションは、互換性と信頼性を確保するために、Microsoft の参照アーキテクチャに照らして設計、組み立て、検証されているため、迅速に稼働させることができます。 Windows Server 2019 ソリューションについては、 [AZURE STACK HCI solutions の web サイト](https://azure.microsoft.com/overview/azure-stack/hci)を参照してください。 Windows Server 2016 ソリューションの詳細については、「 [Windows Server Software Defined](https://microsoft.com/wssd)」を参照してください。
 
    > [!TIP]
-   > 記憶域スペースダイレクト評価するが、ハードウェアがない場合は、 「[ゲスト仮想マシンクラスターでの記憶域スペースダイレクトの使用](storage-spaces-direct-in-vm.md)」の説明に従って、hyper-v または Azure の仮想マシンを使用します。
+   > 記憶域スペースダイレクト評価するが、ハードウェアがない場合は、 「 [ゲスト仮想マシンクラスターでの記憶域スペースダイレクトの使用](storage-spaces-direct-in-vm.md)」の説明に従って、hyper-v または Azure の仮想マシンを使用します。
 
 ## <a name="base-requirements"></a>基本要件
 
-システム、コンポーネント、デバイス、およびドライバーは、windows [Server カタログ](https://www.windowsservercatalog.com)に従って**Windows server 2016 認定**を受ける必要があります。 さらに、以下に示すように、サーバー、ドライブ、ホストバスアダプター、およびネットワークアダプターには、**ソフトウェア定義データセンター (sddc) 標準**または**ソフトウェア定義データセンター (sddc) Premium**追加の要件 (aqs) があることをお勧めします。 これには、1000以上のコンポーネントが含まれています。
+システム、コンポーネント、デバイス、およびドライバーは、 [Windows Server カタログ](https://www.windowsservercatalog.com)で使用しているオペレーティングシステムに対して認定されている必要があります。 さらに、以下に示すように、サーバー、ドライブ、ホストバスアダプター、およびネットワークアダプターには、 **ソフトウェア定義データセンター (sddc) 標準** または **ソフトウェア定義データセンター (sddc) Premium** 追加の要件 (aqs) があることをお勧めします。 これには、1000以上のコンポーネントが含まれています。
 
-![SDDC が表示されている Windows Server カタログのスクリーンショット](media/hardware-requirements/sddc-aqs.png)
+![ソフトウェア定義データセンター (SDDC) の Premium 認定を含むシステムを示す Windows Server カタログのスクリーンショット](media/hardware-requirements/sddc-aqs.png)
 
-完全に構成されたクラスター (サーバー、ネットワーク、および記憶域) は、フェールオーバークラスターマネージャーのウィザードまたは PowerShell のコマンドレットに従って、すべての[クラスター検証テスト](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10))に合格する必要があり `Test-Cluster` [cmdlet](/powershell/module/failoverclusters/test-cluster?view=win10-ps)ます。
+完全に構成されたクラスター (サーバー、ネットワーク、および記憶域) は、フェールオーバークラスターマネージャーのウィザードまたは PowerShell のコマンドレットに従って、すべての[クラスター検証テスト](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10))に合格する必要があり `Test-Cluster` [cmdlet](/powershell/module/failoverclusters/test-cluster)ます。
 
 また、次の要件が適用されます。
 
@@ -53,7 +53,7 @@ ms.locfileid: "87961126"
 ## <a name="boot"></a>ブート
 
 - Windows Server でサポートされているすべてのブートデバイスで、 [SATADOM が含まれるようになりました](https://cloudblogs.microsoft.com/windowsserver/2017/08/30/announcing-support-for-satadom-boot-drives-in-windows-server-2016/)。
-- RAID 1 ミラーは必要**ありません**が、ブートではサポートされています。
+- RAID 1 ミラーは必要 **ありません** が、ブートではサポートされています。
 - 推奨: 200 GB の最小サイズ
 
 ## <a name="networking"></a>ネットワーク
@@ -76,7 +76,7 @@ Small scale 2-3 ノードの最小相互接続
 
 ## <a name="drives"></a>ドライブ
 
-記憶域スペースダイレクトは、1台のサーバーに物理的に接続されている直接接続 SATA、SAS、NVMe、または永続メモリ (PMem) ドライブを使用します。 ドライブの選択の詳細については、「[ドライブの選択](choosing-drives.md)」および「永続メモリの概要[と展開](deploy-pmem.md)」を参照してください。
+記憶域スペースダイレクトは、1台のサーバーに物理的に接続されている直接接続 SATA、SAS、NVMe、または永続メモリ (PMem) ドライブを使用します。 ドライブの選択の詳細については、「 [ドライブの選択](choosing-drives.md) 」および「永続メモリの概要 [と展開](deploy-pmem.md) 」を参照してください。
 
 - SATA、SAS、persistent memory、NVMe (M. 2、U 2、およびカードの追加) ドライブがすべてサポートされます。
 - 512n、512n、および4K のネイティブドライブがすべてサポートされています。
@@ -97,7 +97,7 @@ Small scale 2-3 ノードの最小相互接続
 - SATA ドライブを搭載した SAS ホストバスアダプター (HBA)
 - **サポートされていない:** RAID コントローラーカードまたは SAN (ファイバーチャネル、iSCSI、FCoE) ストレージ。 ホスト バス アダプター (HBA) カードは、単純なパススルー モードを実装する必要があります。
 
-![サポートされているドライブの相互接続の図](media/hardware-requirements/drive-interconnect-support-1.png)
+![RAID カードがサポートされていない、サポートされているドライブの相互接続を示す図](media/hardware-requirements/drive-interconnect-support-1.png)
 
 ドライブは、サーバーの内部、または 1 台のサーバーにのみ接続されている外部エンクロージャに配置できます。 スロットのマッピングと識別のために SCSI エンクロージャ ービス (SES) が必要になります。 各外部エンクロージャは、一意識別子 (一意の ID) を提示する必要があります。
 
@@ -105,7 +105,7 @@ Small scale 2-3 ノードの最小相互接続
 - 1つのサーバーに接続されている外部エンクロージャ ("JBOD") 内のドライブ
 - **サポートされていない:** 複数のサーバーに接続されている共有 SAS エンクロージャ、または複数のパスからドライブにアクセスできる任意の形式のマルチパス IO (MPIO)。
 
-![サポートされているドライブの相互接続の図](media/hardware-requirements/drive-interconnect-support-2.png)
+![サーバーに直接接続されている内部および外部のドライブはサポートされていますが、共有 SAS はサポートされていません。](media/hardware-requirements/drive-interconnect-support-2.png)
 
 ### <a name="minimum-number-of-drives-excludes-boot-drive"></a>ドライブの最小数 (ブートドライブを除く)
 
@@ -124,7 +124,7 @@ Small scale 2-3 ノードの最小相互接続
 | NVMe + SSD + HDD      | 2 つの NVMe + 4 つのそれ以外のドライブ       |
 
    >[!NOTE]
-   > 次の表は、ハードウェア展開の最小値を示しています。 Microsoft Azure など、仮想マシンおよび仮想化された記憶域を使用してデプロイする場合は、「[ゲスト仮想マシンクラスターでの記憶域スペースダイレクトの使用](storage-spaces-direct-in-vm.md)」を参照してください。
+   > 次の表は、ハードウェア展開の最小値を示しています。 Microsoft Azure など、仮想マシンおよび仮想化された記憶域を使用してデプロイする場合は、「 [ゲスト仮想マシンクラスターでの記憶域スペースダイレクトの使用](storage-spaces-direct-in-vm.md)」を参照してください。
 
 ### <a name="maximum-capacity"></a>最大容量
 

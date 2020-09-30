@@ -6,12 +6,12 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.date: 06/07/2019
-ms.openlocfilehash: b4d7d039c775b85321d168f8de7415de6b92e784
-ms.sourcegitcommit: 97a65d8f52514848963e8917021bd9a1f6ee3b19
+ms.openlocfilehash: c062531e96e12ca73e001018ac3f640e27fdad99
+ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89287824"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91517558"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center の既知の問題
 
@@ -57,7 +57,7 @@ ms.locfileid: "89287824"
 
 ### <a name="google-chrome"></a>Google Chrome
 
-- バージョン70より前 (10 月、2018)、Chrome には websocket プロトコルと NTLM 認証に関する [バグ](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) がありました。 これは、イベント、PowerShell、リモート デスクトップのツールに影響します。
+- バージョン70より前 (10 月、2018)、Chrome には Websocket プロトコルと NTLM 認証に関する [バグ](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) がありました。 これは、イベント、PowerShell、リモート デスクトップのツールに影響します。
 
 - Chrome では、特に**ワークグループ** (非ドメイン) 環境での接続の追加エクスペリエンスの実行中に、複数の資格情報プロンプトが表示される場合があります。
 
@@ -96,7 +96,7 @@ PowerShell で `$PSVersiontable` を入力して、WMF がインストールさ�
 
 - .PFX の暗号化された証明書を現在のユーザー ストアにインポートすることはできません。 [11818622]
 
-### <a name="events"></a>イベント
+### <a name="events"></a>events
 
 - イベントは、[プロキシ サービスを使用する場合に WebSocket の互換性](#websocket-compatibility-when-using-a-proxy-service)に影響を受けます。
 
@@ -152,7 +152,7 @@ PowerShell で `$PSVersiontable` を入力して、WMF がインストールさ�
 
 - 自動的に再起動するように選択した場合、状態が 100% に更新される前に、再起動が行われます。 [13098852]
 
-### <a name="storage"></a>Storage
+### <a name="storage"></a>ストレージ
 
 - ダウンレベル: DVD/CD/フロッピー ドライブは、ダウンレベルのボリュームとして表示されません。
 
@@ -195,7 +195,7 @@ PowerShell で `$PSVersiontable` を入力して、WMF がインストールさ�
 
   - Windows 10 クライアントの管理を有効にするには、管理者特権の PowerShell プロンプトから ```Enable-PSRemoting``` コマンドを実行する必要があります。
 
-  - また、```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any``` を使用して、ローカル サブネットの外部から接続を許可できるようにファイアウォールを更新する必要があります。 より制限の厳しいネットワーク シナリオでは、[このドキュメント](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1)を参照してください。
+  - また、```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any``` を使用して、ローカル サブネットの外部から接続を許可できるようにファイアウォールを更新する必要があります。 より制限の厳しいネットワーク シナリオでは、[このドキュメント](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true)を参照してください。
 
 ## <a name="cluster-deployment"></a>クラスターの展開
 
@@ -244,7 +244,7 @@ Disable-WsmanCredSSP -Role Server
 Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
 ```
 
-3. コマンドを使用してグループポリシー反映データをリセットする
+3. コマンドを使用してグループポリシーの伝達されたデータをリセットする
 ```Command Line
 gpupdate /force
 ```
@@ -288,6 +288,17 @@ Windows 管理センターバージョン2007のクラスター展開ウィザ�
 - **Drives - Update firmware**、**Servers - Remove**、および **Volumes - Open** などの一部のコマンドは無効になっていて現在サポートされていません。
 
 ## <a name="azure-services"></a>Azure サービス
+
+### <a name="azure-login-and-gateway-registration"></a>Azure のログインとゲートウェイの登録
+2009リリースでは、Azure へのログインまたは Windows 管理センターゲートウェイの Azure への登録に関する問題が発生する可能性があります。 以下のガイダンスは、これらの問題を軽減するのに役立ちます。 
+
+* ゲートウェイの登録を含め、Windows 管理センター内で Azure の機能を使用する前に、別のタブまたはウィンドウで Azure アカウントにサインインしていることを確認してください。 [Azure ポータル](https://portal.azure.com/)を使用してサインインすることをお勧めします。  
+
+* ゲートウェイの登録中に Azure に正常にサインインしても、Windows 管理センターの設定の [ **azure** ] ページで [視覚的な確認] が表示されない場合は、 **azure** ページに戻る前に、[設定] の別のページに移動してみてください。 
+
+* このビルドでは、Azure サインインのポップアップがより頻繁に表示される場合があり、管理者が Windows 管理センターのアクセス許可をより頻繁に付与することが必要になる場合があります。 
+
+* Azure Portal で Windows 管理センターの管理者の承認を既に付与していても、"管理者の承認が必要" というエラーメッセージが表示される場合は、[ **設定** ] ページではなく、Windows 管理センターのいずれかのバナーを使用して Azure にサインインしてみてください。 
 
 ### <a name="azure-file-sync-permissions"></a>Azure File Sync のアクセス許可
 

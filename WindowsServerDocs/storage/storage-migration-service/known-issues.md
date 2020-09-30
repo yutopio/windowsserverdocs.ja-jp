@@ -6,12 +6,12 @@ ms.author: nedpyle
 manager: tiaascs
 ms.date: 07/29/2020
 ms.topic: article
-ms.openlocfilehash: 0c3e52c11f7771856608b86ddd778ef51c4c8516
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 6c3ca3a44665bab08c58853d569823f88c908f35
+ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766915"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91517518"
 ---
 # <a name="storage-migration-service-known-issues"></a>記憶域移行サービスの既知の問題
 
@@ -606,7 +606,7 @@ GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\com
 
 ## <a name="inventory-fails-with-element-not-found"></a>"要素が見つかりません" でインベントリが失敗する
 
-以下のシナリオについて考えてみます。
+次のシナリオについて検討してください。
 
 DNS ホスト名を持つソースサーバーと、15文字以上の unicode 文字 ("iamalt longcomputername" など) を Active Directory 名がある。 仕様により、Windows では、従来の NetBIOS 名をこの長さに設定することはできませんでした。サーバーにという名前が付けられ、NetBIOS 名が 15 unicode ワイド文字 (例: "iamaverylongcom") に切り捨てられると、警告が表示されました。 このコンピューターのインベントリを実行しようとすると、Windows 管理センターとイベントログに次のメッセージが表示されます。
 
@@ -636,6 +636,17 @@ Guidance: Check the detailed error and make sure the inventory requirements are 
 ```
 
 この問題は、Storage Migration Service のコード障害が原因で発生します。 現時点で唯一の回避策は、コンピューターの名前を NetBIOS 名と同じ名前に変更してから、 [NETDOM COMPUTERNAME/add](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)) を使用して、インベントリを開始する前に使用されていた長い名前を含む別のコンピューター名を追加します。 記憶域移行サービスは、別のコンピューター名の移行をサポートしています。
+
+## <a name="storage-migration-service-inventory-fails-with-a-parameter-cannot-be-found-that-matches-parameter-name-includedfsn"></a>"パラメーター名 ' IncludeDFSN ' に一致するパラメーターが見つかりません" というエラーで記憶域移行サービスインベントリが失敗する 
+
+Windows 管理センターの2009バージョンを使用して Windows Server 2019 orchestrator を管理する場合、ソースコンピューターのインベントリを試行すると、次のエラーが表示されます。
+
+```
+Remote exception : a parameter cannot be found that matches parameter name 'IncludeDFSN'" 
+```
+
+解決するには、Windows 管理センターで、Storage Migration Service 拡張機能を少なくともバージョン1.113.0 に更新します。 更新プログラムがフィードに自動的に表示され、インストールを求めるメッセージが表示されます。
+
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 11/21/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 7be02bd7c513d0e7680ed70f107a34c6a9af6ed2
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 1438db87cd59e233328422b03d4d9a6a659d4960
+ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90765963"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91517534"
 ---
 # <a name="manage-servers-with-windows-admin-center"></a>Windows 管理センターを使用してサーバーを管理する
 
@@ -56,7 +56,7 @@ Windows 管理センターにサーバーを追加するには:
 | [DHCP](#dhcp) | DHCP サーバー構成の表示と管理 |
 | [DNS](#dns) | DNS サーバー構成の表示と管理 |
 | [イベント](#events) | イベントの表示 |
-| [[ファイル]](#files) | ファイルとフォルダーを参照する |
+| [ファイルとファイル共有](#files-and-file-sharing) | ファイルとフォルダーを参照する |
 | [ファイアウォール](#firewall) | ファイアウォール規則の表示と変更 |
 | [インストール済みアプリ](#installed-apps) | インストールされているアプリを表示および削除する |
 | [ローカル ユーザーとグループ](#local-users-and-groups) | ローカルユーザーとグループを表示および変更する |
@@ -217,13 +217,13 @@ Windows 管理センターにサーバーを追加するには:
 
 [**フィードバックとイベントの提案された機能を表示**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BEvents%5D)します。
 
-## <a name="files"></a>Files
+## <a name="files-and-file-sharing"></a>ファイルとファイル共有
 
-**ファイル** を使用すると、コンピューターまたはサーバー上のファイルとフォルダーを管理できます。
+ファイル**とファイル共有**を使用すると、コンピューターまたはサーバー上のファイルとフォルダーを管理できます。
 
 ### <a name="features"></a>特徴
 
-ファイルでは、次の機能がサポートされています。
+ファイルとファイル共有では、次の機能がサポートされています。
 
 - ファイルとフォルダーを参照する
 - ファイルやフォルダーを検索する
@@ -237,8 +237,9 @@ Windows 管理センターにサーバーを追加するには:
 - ファイルまたはフォルダーのプロパティの表示
 - ファイル共有の追加、編集、または削除
 - ファイル共有のユーザーとグループのアクセス許可を変更する
+- ファイルサーバーのセキュリティを変更する
 
-[**ファイルのフィードバックと提案された機能を表示**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BFiles%5D)します。
+[**ファイルとファイル共有のフィードバックと提案された機能を表示**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BFiles%5D)します。
 
 ## <a name="firewall"></a>Firewall
 
@@ -461,7 +462,7 @@ PowerShell では、次の機能がサポートされています。
 >[!NOTE]
 >System Insights には Windows Server 2019 が必要です。
 
-## <a name="updates"></a>更新
+## <a name="updates"></a>更新プログラム
 
 **更新プログラム** を使用すると、コンピューターまたはサーバーで Microsoft や Windows の更新プログラムを管理できます。
 

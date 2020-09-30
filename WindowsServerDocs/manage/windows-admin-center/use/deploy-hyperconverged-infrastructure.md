@@ -1,23 +1,24 @@
 ---
 title: Windows 管理センターを使用してハイパー集約インフラストラクチャを展開する
+description: Windows 管理センターを使用して、ハイパー集約型インフラストラクチャをデプロイします。
 ms.topic: article
 author: cosmosdarwin
 ms.author: cosdar
 ms.date: 11/04/2019
-ms.openlocfilehash: 06062f4add54fda3ddcda4d092d6eaf1d692ebf8
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1f8e8a5433b986333975f45009819a98d90b61fc
+ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993490"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91517508"
 ---
 # <a name="deploy-hyperconverged-infrastructure-with-windows-admin-center"></a>Windows 管理センターを使用してハイパー集約インフラストラクチャを展開する
 
 > 適用先:Windows Admin Center、Windows Admin Center Preview
 
-Windows 管理センター[バージョン 1910](../overview.md)以降を使用して、2つ以上の適切な windows サーバーを使用してハイパー集約インフラストラクチャを展開することができます。 この新しい機能では、機能のインストール、ネットワークの構成、クラスターの作成、記憶域スペースダイレクトまたはソフトウェアによるネットワーク制御 (SDN) の展開など、選択した場合に役立つマルチステージワークフローの形式を使用します。
+Windows 管理センター [バージョン 1910](../overview.md) 以降を使用して、2つ以上の適切な windows サーバーを使用してハイパー集約インフラストラクチャを展開することができます。 この新しい機能では、機能のインストール、ネットワークの構成、クラスターの作成、記憶域スペースダイレクトまたはソフトウェアによるネットワーク制御 (SDN) の展開など、選択した場合に役立つマルチステージワークフローの形式を使用します。
 
-Windows 管理センターバージョン2007以降では、Windows 管理センターでは Azure Stack HCI OS がサポートされています。 [Windows 管理センターでクラスターを展開する方法については、AZURE STACK HCI のドキュメント](/azure-stack/hci/getting-started)を参照してください。このドキュメントでは Azure Stack HCI に焦点を合わせています。この手順は、Windows Server の展開にも適しています。
+Windows 管理センターバージョン2007以降では、Windows 管理センターでは Azure Stack HCI OS がサポートされています。 [Windows 管理センターでクラスターを展開する方法については、AZURE STACK HCI のドキュメント](/azure-stack/hci/get-started)を参照してください。このドキュメントでは Azure Stack HCI に焦点を当てていますが、この手順はほとんどの場合、Windows Server の展開にも適用できます。
 
 ## <a name="undo-and-start-over"></a>元に戻すとやり直す
 
@@ -86,7 +87,7 @@ Get-NetAdapter | Where Name -Ne "Management" | Set-NetAdapter -VlanID 0
 
 これで、ワークフローを開始する準備ができました。
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 - [Hello, Windows 管理センター](../overview.md)
 - [記憶域スペース ダイレクトの展開](../../../storage/storage-spaces/deploy-storage-spaces-direct.md)

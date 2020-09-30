@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 27ded378a40537455423f79869dfd07dcd2ba625
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 293fa8a617d7ceb1628ec72df2f015b6b2547f16
+ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949597"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91517588"
 ---
 # <a name="develop-a-solution-extension"></a>ソリューション拡張機能の開発
 
@@ -29,11 +29,11 @@ Windows 管理センターの [接続] ページから接続を選択すると�
 上記の既定の接続の種類 (ネットワークスイッチなど) で定義されていないサービス、またはコンピューター名で検出できないその他のハードウェアの管理 GUI を構築する場合は、独自のソリューション拡張機能を作成することをお勧めします。
 
 > [!NOTE]
-> さまざまな拡張機能の種類に慣れていない場合は、 拡張[機能のアーキテクチャと拡張機能の種類](understand-extensions.md)の詳細については、こちらを参照してください。
+> さまざまな拡張機能の種類に慣れていない場合は、 拡張 [機能のアーキテクチャと拡張機能の種類](understand-extensions.md)の詳細については、こちらを参照してください。
 
 ## <a name="prepare-your-environment"></a>環境を準備する
 
-まだインストールしていない場合は、すべてのプロジェクトに必要な依存関係とグローバルな前提条件をインストールして[環境を準備](prepare-development-environment.md)します。
+まだインストールしていない場合は、すべてのプロジェクトに必要な依存関係とグローバルな前提条件をインストールして [環境を準備](prepare-development-environment.md) します。
 
 ## <a name="create-a-new-solution-extension-with-the-windows-admin-center-cli"></a>Windows 管理センター CLI を使用して新しいソリューション拡張機能を作成する ##
 
@@ -74,8 +74,9 @@ Windows 管理センター CLI を使用して拡張機能を作成したので�
 - [カスタム接続プロバイダー](guides/create-connection-provider.md)を作成する
 - [ルートナビゲーション動作](guides/modify-root-navigation.md)の変更
 
-その他の例については、 [GITHUB SDK サイト](https://aka.ms/wacsdk)を参照してください。
--  [開発者ツール](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools)は、完全に機能する拡張機能であり、Windows 管理センターにサイドロードすることができます。また、独自の拡張機能で参照して使用できる、サンプル機能とツール例の豊富なコレクションが含まれています。
+その他の例については、開発者ガイドを参照してください。 開発者ガイドは、完全に機能するソリューションの拡張機能であり、Windows 管理センターにサイドロードすることができます。また、独自の拡張機能で参照して使用できる、サンプル機能とツール例の豊富なコレクションが含まれています。 
+
+Windows 管理センターの設定の **[詳細** 設定] ページで、開発者ガイド拡張機能を有効にします。 
 
 ## <a name="build-and-side-load-your-extension"></a>拡張機能をビルドしてサイドロードする
 

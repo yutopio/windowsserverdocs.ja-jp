@@ -1,24 +1,24 @@
 ---
 title: アプリケーション データ用のスケールアウト ファイル サーバーの概要
-description: Windows Server 201 R2 および Windows Server 2012 のスケールアウトファイルサーバー機能の概要について説明します。
+description: スケールアウトファイルサーバーは、ファイルベースのサーバーアプリケーション記憶域で継続的に使用可能なスケールアウトファイル共有を提供するように設計されています。 スケールアウト ファイル共有では、同じクラスターの複数のノードから同じフォルダーを共有できる機能が提供されます。 このシナリオでは、スケールアウト ファイル サーバーの計画および展開方法に焦点を当てます。
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 04/26/2018
+ms.date: 09/29/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 71c719bb4c148a0ff1b287011086ba75e5a3fc69
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 5aca126d036dffc9b7463edd07e70a3dd02b7dbd
+ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766575"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91517488"
 ---
 # <a name="scale-out-file-server-for-application-data-overview"></a>アプリケーション データ用のスケールアウト ファイル サーバーの概要
 
->適用対象: Windows Server 2012 R2、Windows Server 2012
+>適用先:Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-スケールアウト ファイル サーバーは、ファイル ベースのサーバー アプリケーション記憶域用に継続的に使用可能なスケールアウト ファイル共有を提供するように設計された機能です。 スケールアウト ファイル共有では、同じクラスターの複数のノードから同じフォルダーを共有できる機能が提供されます。 このシナリオでは、スケールアウト ファイル サーバーの計画および展開方法に焦点を当てます。
+スケールアウトファイルサーバーは、ファイルベースのサーバーアプリケーション記憶域で継続的に使用可能なスケールアウトファイル共有を提供するように設計されています。 スケールアウト ファイル共有では、同じクラスターの複数のノードから同じフォルダーを共有できる機能が提供されます。 このシナリオでは、スケールアウト ファイル サーバーの計画および展開方法に焦点を当てます。
 
 クラスター化されたファイル サーバーを展開および構成するには、次のいずれかの方法を使用します。
 
@@ -72,7 +72,7 @@ ms.locfileid: "90766575"
 <tbody>
 <tr class="odd">
 <td>SMB</td>
-<td>継続的な SMB 可用性</td>
+<td>SMB 継続的可用性 (*)</td>
 <td>はい</td>
 <td>はい</td>
 </tr>
@@ -223,7 +223,10 @@ ms.locfileid: "90766575"
 </tbody>
 </table>
 
-\* フォルダーリダイレクト、オフラインファイル、移動ユーザープロファイル、またはホームディレクトリによって、継続的に使用可能なファイル共有を使用する場合に、ディスクにすぐに書き込む必要がある (バッファリングなしで) 大量の書き込みが生成されます。汎用のファイル共有と比較すると、パフォーマンスが低下します。 また、継続的に使用可能なファイル共有にもファイル サーバー リソース マネージャー、および Windows XP を実行している PC との互換性がありません。 また、ユーザーが共有へのアクセスを失った後、オフラインファイルがオフライン3-6 モードに移行しないことがあります。これにより、オフラインファイルの Always Offline モードをまだ使用していないユーザーに不満が生じる可能性があります。
+\*<a href="https://docs.microsoft.com/windows-server/storage/storage-spaces/cluster-sets#scale-out-file-server-and-cluster-sets">Hyper-v 構成の SMB ループバック継続的可用性 (CA)</a>は、Windows Server 2019 では使用できです。 
+
+>[!NOTE]
+>フォルダーリダイレクト、オフラインファイル、移動ユーザープロファイル、またはホームディレクトリによって、継続的に使用可能なファイル共有を使用する場合に、ディスクにすぐに書き込む必要がある (バッファリングなしで) 大量の書き込みが生成されます。汎用のファイル共有と比較すると、パフォーマンスが低下します。 また、継続的に使用可能なファイル共有にもファイル サーバー リソース マネージャー、および Windows XP を実行している PC との互換性がありません。 また、ユーザーが共有へのアクセスを失った後、オフラインファイルがオフライン3-6 モードに移行しないことがあります。これにより、オフラインファイルの Always Offline モードをまだ使用していないユーザーに不満が生じる可能性があります。
 
 ## <a name="practical-applications"></a>実際の適用例
 
@@ -266,7 +269,7 @@ Windows Server 2012 R2 での SMB の新機能と変更された機能の詳細�
 </tbody>
 </table>
 
-## <a name="more-information"></a>説明
+## <a name="more-information"></a>詳細情報
 
 - [Software-Defined Storage (SDS) の設計に関する考慮事項のガイド](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt243829(v%3dws.11)>)
 - [Increasing Server, Storage, and Network Availability](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)

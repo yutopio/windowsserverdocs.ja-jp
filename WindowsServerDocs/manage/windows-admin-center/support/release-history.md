@@ -5,20 +5,21 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 01/06/2020
-ms.openlocfilehash: b78a8de53e315a3a2f9f546ed49c06b4bccfc682
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9cb7624b2fb9469ecd0af93cdf5251878ecec74c
+ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937591"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91517478"
 ---
 # <a name="windows-admin-center-release-history"></a>Windows 管理センターリリース履歴
 
 リリースされた最新の機能の一覧を次に示します。
 
-- バージョン[2007](https://aka.ms/wac2007)は最新の GA リリースです。新しい Azure Stack HCI と、いくつかのツールの新機能がサポートされています。
-- バージョン[1910.2](https://aka.ms/wac1910.2)には、プラットフォームのアクセシビリティの更新と多数のバグ修正が含まれています
-- バージョン[1910](https://aka.ms/wac1910)では、いくつかの新しい Azure ハイブリッドサービスが導入され、以前プレビュー段階にあった機能が GA チャネルに導入されました。
+- バージョン [2009](https://aka.ms/wac2009) は最新の GA リリースであり、Azure Stack HCI での Azure Kubernetes Service のサポートと、仮想マシン、ファイル共有、コンテナーツールのメジャー更新が含まれています。
+- バージョン [2007](https://aka.ms/wac2007) には、新しい Azure Stack HCI といくつかのツールの新機能のサポートが含まれています。
+- バージョン [1910.2](https://aka.ms/wac1910.2) には、プラットフォームのアクセシビリティの更新と多数のバグ修正が含まれています
+- バージョン [1910](https://aka.ms/wac1910) では、いくつかの新しい Azure ハイブリッドサービスが導入され、以前プレビュー段階にあった機能が GA チャネルに導入されました。
 - バージョン [1909](https://aka.ms/wac1909) では、Azure VM 固有の接続の種類が導入され、従来のフェールオーバー クラスターと HCI クラスターの接続の種類が統合されています。
 - バージョン [1908](https://aka.ms/wac1908) では、視覚的な更新、Packetmon、FlowLog Audit、クラスター用 Azure Monitor のオンボード、および HTTPS 経由の WinRM (ポート 5986) のサポートが追加されています。
 - バージョン [1907](https://aka.ms/wac1907) では、Azure コスト見積もりのリンクを追加し、仮想マシンのインポート/エクスポートとタグ付けの機能を強化しました。
@@ -38,5 +39,5 @@ ms.locfileid: "87937591"
 - バージョン [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) では、Azure AD アクセス制御、詳細なログ記録、サイズ変更できるコンテンツのサポートが追加され、多数のツールの機能が強化されました。
 - バージョン [1802](https://blogs.windows.com/windowsexperience/2018/02/13/announcing-windows-server-insider-preview-build-17093-project-honolulu-technical-preview-1802) では、アクセシビリティ、ローカライズ、高可用性展開、タグ付け、Hyper-V ホストの設定、ゲートウェイ認証のサポートが追加されました。
 - バージョン [1712](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-project-honolulu-technical-preview-1712-build-05002) では、仮想マシンの機能がさらに追加され、ツール全体のパフォーマンスが向上しました。
-- バージョン[1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/)では、さらに多くの機能強化と共に、予想されるツール (リモートデスクトップと PowerShell) が追加されました。
+- バージョン [1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/) では、さらに多くの機能強化と共に、予想されるツール (リモートデスクトップと PowerShell) が追加されました。
 - バージョン [1709](https://cloudblogs.microsoft.com/windowsserver/2017/09/22/project-honolulu-technical-preview-is-now-available-for-download/) は、最初のパブリック プレビュー リリースとして発売されました。

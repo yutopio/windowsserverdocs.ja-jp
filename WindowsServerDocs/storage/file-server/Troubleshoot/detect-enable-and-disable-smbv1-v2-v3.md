@@ -5,13 +5,13 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
-ms.date: 12/25/2019
-ms.openlocfilehash: f96302242eca58d589586fa44e6e7cd04ef98cc1
-ms.sourcegitcommit: 0b3d6661c44aa1a697087e644437279142726d84
+ms.date: 09/29/2020
+ms.openlocfilehash: 9008a3381ead368afb627bcfdcd8084a389afabb
+ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90083643"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91517548"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Windows で SMBv1、SMBv2、および SMBv3 を検出、有効化、および無効化する方法
 
@@ -425,6 +425,30 @@ SMBv1 クライアントを無効にするには、 **MRxSMB10** の開始を無
    > グループポリシー管理コンソールを使用する場合は、引用符またはコンマを使用する必要はありません。 個々の行に各エントリを入力するだけです。
 
 6. SMB v1 の無効化を完了するには、対象のシステムを再起動してください。
+
+### <a name="auditing-smbv1-usage"></a>SMBv1 の使用状況の監査
+
+SMBv1 を使用して SMB サーバーに接続しようとしているクライアントを特定するには、Windows Server 2016、Windows 10、および Windows Server 2019 で監査を有効にします。 また、Windows 7 と windows Server 2008 R2 をインストールした場合は、毎月2018月の 2017 2012 2012 Windows 8.1 更新プログラムがインストールされている場合は、windows 7 と windows server R2 で監査することもできます。 
+
+- 有効にする:
+  
+  ```PowerShell
+  Set-SmbServerConfiguration –AuditSmb1Access $true
+  ```
+
+- 切り替える 
+  
+  ```PowerShell
+  Set-SmbServerConfiguration –AuditSmb1Access $false
+  ```
+  
+- 識別 
+  
+  ```PowerShell
+  Get-SmbServerConfiguration | Select AuditSmb1Access
+  ```
+
+SMBv1 監査が有効になっている場合、"Microsoft-Windows-SMBServer\Audit" イベントログにイベント3000が表示され、SMBv1 との接続を試行する各クライアントが識別されます。
 
 ### <a name="summary"></a>まとめ
 

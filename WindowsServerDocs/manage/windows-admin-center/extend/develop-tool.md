@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: f3bf885cd86015842be26124e7374f622d38a9c2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9cf369558977c50ee0913b65e62de448959aac32
+ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954128"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91517578"
 ---
 # <a name="develop-a-tool-extension"></a>ツール拡張機能の開発
 
@@ -22,11 +22,11 @@ ms.locfileid: "87954128"
 ツール拡張機能が読み込まれると、対象サーバーまたはクラスターで WMI 呼び出しまたは PowerShell スクリプトを実行し、UI に情報を表示したり、ユーザー入力に基づいてコマンドを実行したりできます。 ツールの拡張機能では、表示するソリューションを定義します。これにより、ソリューションごとに異なるツールセットが生成されます。
 
 > [!NOTE]
-> さまざまな拡張機能の種類に慣れていない場合は、 拡張[機能のアーキテクチャと拡張機能の種類](understand-extensions.md)の詳細については、こちらを参照してください。
+> さまざまな拡張機能の種類に慣れていない場合は、 拡張 [機能のアーキテクチャと拡張機能の種類](understand-extensions.md)の詳細については、こちらを参照してください。
 
 ## <a name="prepare-your-environment"></a>環境を準備する
 
-まだインストールしていない場合は、すべてのプロジェクトに必要な依存関係とグローバルな前提条件をインストールして[環境を準備](prepare-development-environment.md)します。
+まだインストールしていない場合は、すべてのプロジェクトに必要な依存関係とグローバルな前提条件をインストールして [環境を準備](prepare-development-environment.md) します。
 
 ## <a name="create-a-new-tool-extension-with-the-windows-admin-center-cli"></a>Windows 管理センター CLI を使用して新しいツール拡張機能を作成する ##
 
@@ -64,8 +64,9 @@ Windows 管理センター CLI を使用して拡張機能を作成したので�
 - 空の[モジュール](guides/add-module.md)を追加する
 - [IFrame](guides/add-iframe.md)を追加する
 
-その他の例については、 [GITHUB SDK サイト](https://aka.ms/wacsdk)を参照してください。
--  [開発者ツール](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools)は、完全に機能する拡張機能であり、Windows 管理センターにサイドロードすることができます。また、独自の拡張機能で参照して使用できる、サンプル機能とツール例の豊富なコレクションが含まれています。
+その他の例については、開発者ガイドを参照してください。 開発者ガイドは、完全に機能するソリューションの拡張機能であり、Windows 管理センターにサイドロードすることができます。また、独自の拡張機能で参照して使用できる、サンプル機能とツール例の豊富なコレクションが含まれています。 
+
+Windows 管理センターの設定の **[詳細** 設定] ページで、開発者ガイド拡張機能を有効にします。 
 
 ## <a name="customize-your-extensions-icon"></a>拡張機能のアイコンをカスタマイズする
 
