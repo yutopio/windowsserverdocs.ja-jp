@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 82ec683f0ed4723e7905daea759965690b8adcd5
-ms.sourcegitcommit: e164aeffc01069b8f1f3248bf106fcdb7f64f894
+ms.openlocfilehash: 417a00dbb037c298784df81f9c5ed5e9c28485f8
+ms.sourcegitcommit: 881a5bd40026288afbcee5fdbf602fd55f833d47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91388308"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91586442"
 ---
 # <a name="setx"></a>setx
 
@@ -31,7 +31,7 @@ setx [/s <computer> [/u [<domain>\]<user name> [/p [<password>]]]] /f <filename>
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | [説明] |
+| パラメーター | 説明 |
 |--|--|
 | /s `<computer>` | 名前またはリモート コンピューターの IP アドレスを指定します。 円記号を使用しないでください。 既定値は、ローカル コンピューターの名前です。 |
 | /u `[<domain>\]<user name>` | 指定したユーザー アカウントの資格情報でスクリプトを実行します。 既定値は、システムのアクセス許可です。 |
@@ -47,7 +47,7 @@ setx [/s <computer> [/u [<domain>\]<user name> [/p [<password>]]]] /f <filename>
 | d `<delimiters>` | **などの**区切り記号を指定します。また、 **\\** 4 つの組み込みの区切り記号 (スペース、タブ、ENTER、およびラインフィード) に加えて使用することもできます。 有効な区切り記号には、ASCII 文字が含まれます。 区切り文字の最大数は、15、組み込みの区切り記号を含みます。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 - このコマンドは、UNIX ユーティリティ SETENV に似ています。
 
@@ -64,6 +64,14 @@ setx [/s <computer> [/u [<domain>\]<user name> [/p [<password>]]]] /f <filename>
 - REG_DWORD レジストリ値が抽出され、16 進数のモードで使用します。
 
 - ライン フィード (CRLF) のテキスト ファイルだけをファイルのモードは、キャリッジ リターンの解析をサポートします。
+
+- 既存の変数に対してこのコマンドを実行すると、変数参照が削除され、展開された値が使用されます。
+
+  たとえば、変数% PATH% に% JAVADIR% への参照が含まれていて、% PATH% が **setx**を使用して操作されている場合、% JAVADIR% が展開され、その値がターゲット変数% path% に直接割り当てられます。 これは、% JAVADIR% の今後の更新が% PATH% 変数に反映され **ない** ことを意味します。
+
+- **Setx**を使用して変数にコンテンツを割り当てる場合、1024文字の制限があることに注意してください。
+
+  これは、1024文字を超えた場合にコンテンツがトリミングされ、トリミングされたテキストが対象の変数に適用されることを意味します。 このトリミングテキストが既存の変数に適用されている場合は、対象の変数によって以前に保持されていたデータが失われる可能性があります。
 
 ## <a name="examples"></a>例
 
