@@ -7,12 +7,12 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.date: 02/19/2020
-ms.openlocfilehash: eeadbdea10f08372cd927808b4b433d8ba7ee85f
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: b0ff8f353d4536f89d698f362e2998d9682665f2
+ms.sourcegitcommit: e164aeffc01069b8f1f3248bf106fcdb7f64f894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89037830"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91389016"
 ---
 # <a name="optimizing-windows-10-version-1909-for-a-virtual-desktop-infrastructure-vdi-role"></a>仮想デスクトップ インフラストラクチャ (VDI) ロール用の Windows 10 バージョン 1909 の最適化
 
@@ -90,7 +90,7 @@ VDI には、リモート デスクトップ セッション (RDS) や最近リ�
 >```
 >
 
-非永続的 VDI の課題の 1 つは、ユーザーがログオフしたときに、オペレーティング システムのほぼすべてのアクティビティが破棄されるということです。 ユーザーのプロファイルや状態は、集中管理された場所に保存される場合がありますが、仮想マシン自体は、前回の起動以降に行われた変更内容のほぼすべてを破棄します。 したがって、セッション間で状態を保存する、Windows コンピューターを対象にした最適化は、適用できなくなります。
+非永続的 VDI の課題の 1 つは、ユーザーがログオフしたときに、オペレーティング システムのほぼすべてのアクティビティが破棄されるということです。 ユーザーのプロファイルや状態は、集中管理された場所に保存される場合がありますが、仮想マシン自体により、前回の起動以降に行われた変更内容のほぼすべてが破棄されます。 したがって、セッション間で状態を保存する、Windows コンピューターを対象にした最適化は、適用できなくなります。
 
 VDI VM の VDI のアーキテクチャによっては、PreFetch や SuperFetch などは、VM の再起動時にすべての最適化が破棄されるので、セッション間には役立ちません。 インデックス作成は、従来のデフラグなどのディスク最適化と同様に、リソースの一部を無駄にする可能性があります。
 
@@ -113,9 +113,9 @@ Windows の既定値が変更されるたびに、サポート性に関する疑
 
 既定の Windows 設定を変更する場合は、サポート性を考慮してください。 ハードニング、"ライトニング" などの名のもとに、システム サービス、ポリシー、またはスケジュールされたタスクを変更すると、困難な問題が発生する可能性があります。既定の設定の変更に関する最新の既知の問題については、Microsoft サポート技術情報を参照してください。 このドキュメントのガイダンスと GitHub 上の関連スクリプトは、既知の問題が発生した場合に備えて維持されます。 また、いくつかの方法で Microsoft に問題を報告していただくこともできます。
 
-任意の検索エンジンで “"開始値" site:support.microsoft.com” という語句を検索すると、サービスの既定の開始値に関する既知の問題を表示できます。
+任意の検索エンジンで ""開始値" site:support.microsoft.com" という語句を検索すると、サービスの既定の開始値に関する既知の問題を表示できます。
 
-このドキュメントと GitHub 上の関連するスクリプトでは、既定のアクセス許可が変更されないことに留意してください。 セキュリティ設定の強化を望まれる場合は、**AaronLocker** として知られているプロジェクトで開始してください。 詳細については、「[発表:"AaronLocker" を使用したアプリケーションのホワイトリスト登録](/archive/blogs/aaron_margosis/announcing-application-whitelisting-with-aaronlocker)」を参照してください。
+このドキュメントと GitHub 上の関連するスクリプトでは、既定のアクセス許可が変更されないことに留意してください。 セキュリティ設定の強化を望まれる場合は、**AaronLocker** として知られているプロジェクトで開始してください。 詳細については、[AaronLocker の概要](https://github.com/microsoft/AaronLocker)のページを参照してください。
 
 #### <a name="vdi-optimization-categories"></a>VDI 最適化のカテゴリ
 
@@ -143,7 +143,7 @@ Windows の既定値が変更されるたびに、サポート性に関する疑
 
 ### <a name="universal-windows-platform-uwp-application-cleanup"></a>ユニバーサル Windows プラットフォーム (UWP) アプリケーションのクリーンアップ
 
-VDI イメージの目標の 1 つは、できるだけ軽量にすることです。 イメージのサイズを減らす 1 つの方法は、その環境で使用されない UWP アプリケーションを削除することです。 UWP アプリでは、ペイロードと呼ばれる、メインのアプリケーション ファイルがあります。 アプリケーション固有の設定に関する、各ユーザーのプロファイルに格納されている少量のデータがあります。 "All Users" のプロファイルにも少量のデータがあります。
+VDI イメージの目標の 1 つは、できるだけ軽量にすることです。 イメージのサイズを減らす 1 つの方法は、その環境で使用されない UWP アプリケーションを削除することです。 UWP アプリでは、ペイロードと呼ばれる、メインのアプリケーション ファイルがあります。 アプリケーション固有の設定に関する、各ユーザーのプロファイルに格納されている少量のデータがあります。 'All Users' プロファイルにも少量のデータがあります。
 
 UWP アプリのクリーンアップには、接続とタイミングが重要な要素です。 ネットワーク接続のないデバイスに基本イメージを展開する場合、ユーザーがアプリをアンインストールしようとしている間、Windows 10 は Microsoft Store に接続してアプリをダウンロードしてインストールを試みることができません。 これは、時間をかけてイメージをカスタマイズし、イメージ作成プロセスの後の段階で残っているものを更新できるようにするための適切な戦略である可能性があります。
 
@@ -188,8 +188,8 @@ Remove-AppxProvisionedPackage -Online -PackageName
 
 それぞれの一意の環境での適用性について各 UWP アプリを評価する必要があります。 Windows 10 1909 の既定のインストール環境をインストールしてから、どのアプリが実行されていてメモリを消費しているかを確認することをお勧めします。 たとえば、自動的に起動するアプリや、 [スタート] メニューに自動的に情報を表示するアプリ (たとえば [天気とニュース] ) など、自分の環境には役に立たないものを削除することを検討できます。
 
->[!NOTE]
->GitHub のスクリプトを利用すれば、スクリプトを実行する前に、どのアプリを削除するかを簡単に制御できます。 スクリプト ファイルをダウンロードした後、"Win10_1909_AppxPackages.txt" ファイルを見つけて編集し、Microsoft 電卓や Microsoft 付箋など、残しておきたいアプリのエントリを削除します。
+> [!NOTE]
+> GitHub のスクリプトを利用すれば、スクリプトを実行する前に、どのアプリを削除するかを簡単に制御できます。 スクリプト ファイルをダウンロードした後、'AppxPackages.json' ファイルを見つけて編集し、Microsoft 電卓や Microsoft 付箋など、残しておきたいアプリのエントリを削除します。詳細については、「[カスタマイズ](https://github.com/TheVDIGuys/Windows_10_VDI_Optimize#customization)」セクションを参照してください。
 
 ### <a name="manage-windows-optional-features-using-powershell"></a>PowerShell を使用して Windows のオプション機能を管理する
 
@@ -208,7 +208,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName "DirectPlay" -All
 次の例に示すように、VDI イメージの機能を無効にすることができます。
 
 ```powershell
-Disable-WindowsOptionalFeature -Online -FeatureName “WindowsMediaPlayer”
+Disable-WindowsOptionalFeature -Online -FeatureName "WindowsMediaPlayer"
 ```
 
 次に、Windows Media Player パッケージを削除することを検討できます。 Windows 10 1909 には、次の 2 つの Windows Media Player パッケージがあります。
@@ -246,7 +246,7 @@ Windows Media Player パッケージを削除する場合 (約 60 MB のディ�
 ```powershell
  Remove-WindowsPackage -PackageName Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.18362.1 -Online
 
- Remove-WindowsPackage -PackageName Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.18362.1 -Online
+ Remove-WindowsPackage -PackageName Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.18362.449 -Online
 ```
 
 #### <a name="enable-or-disable-windows-features-using-dism"></a>DISM を使用して Windows の機能を有効または無効にする
@@ -255,7 +255,7 @@ Windows Media Player パッケージを削除する場合 (約 60 MB のディ�
 
 #### <a name="default-user-settings"></a>既定のユーザー設定
 
-"C:\Users\Default\NTUSER.DAT" という名前の Windows レジストリ ファイルにカスタマイズを行うことができます。 このファイルに対して行われたすべての設定は、このイメージを実行するデバイスから作成された後続のユーザー プロファイルに適用されます。 既定のユーザー プロファイルに適用する設定を制御するには、"Win10_1909_DefaultUserSettings.txt" ファイルを編集します。 注意して検討する必要がある設定の 1 つに、この推奨される設定の繰り返しで新規のものである **TaskbarSmallIcons** という設定があります。 この設定を実装する前に、ユーザー ベースで確認することをお勧めします。 **TaskbarSmallIcons** は、Windows タスク バーを小さくして使用する画面領域を削減し、アイコンをよりコンパクトにして検索インターフェイスを最小化します。これを適用する前と後を次の図に示します。
+'C:\Users\Default\NTUSER.DAT' という名前の Windows レジストリ ファイルにカスタマイズを行うことができます。 このファイルに対して行われたすべての設定は、このイメージを実行するデバイスから作成された後続のユーザー プロファイルに適用されます。 既定のユーザー プロファイルに適用する設定を制御するには、'DefaultUserSettings.txt' ファイルを編集します。 注意して検討する必要がある設定の 1 つに、この推奨される設定の繰り返しで新規のものである **TaskbarSmallIcons** という設定があります。 この設定を実装する前に、ユーザー ベースで確認することをお勧めします。 **TaskbarSmallIcons** は、Windows タスク バーを小さくして使用する画面領域を削減し、アイコンをよりコンパクトにして検索インターフェイスを最小化します。これを適用する前と後を次の図に示します。
 
 図 1:通常の Windows 10 バージョン 1909 タスク バー
 
@@ -273,41 +273,53 @@ Windows Media Player パッケージを削除する場合 (約 60 MB のディ�
 
 ![最適化されたシステム プロパティ、パフォーマンス オプション](media/rds-vdi-recommendations-1909/performance-options.png)
 
-パフォーマンスを最適化するために、既定のユーザー プロファイル レジストリ ハイブに適用される最適化設定を次に示します。
+Windows 10 バージョン 1909 の場合、パフォーマンスを最適化するために、既定のユーザー プロファイル レジストリ ハイブに適用される最適化設定を次に示します。
 
-```
-Delete HKLM\Temp\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v OneDriveSetup /f
+```dos
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer" /v ShellState /t REG_BINARY /d 240000003C2800000000000000000000 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v IconsOnly /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ListviewAlphaSelect /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ListviewShadow /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowCompColor /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowInfoTip /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarAnimations /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" /v VisualFXSetting /t REG_DWORD /d 3 /f
+add "HKLM\Temp\Software\Microsoft\Windows\DWM" /v EnableAeroPeek /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\DWM" /v AlwaysHiberNateThumbnails /t REG_DWORD /d 0 /f
 add "HKLM\Temp\Control Panel\Desktop" /v DragFullWindows /t REG_SZ /d 0 /f
-add "HKLM\Temp\Control Panel\Desktop" /v WallPaper /t REG_SZ /d "" /f
-add "HKLM\Temp\Control Panel\Desktop\WindowMetrics" /v MinAnimate /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\DWM /v AccentColor /t REG_DWORD /d 4292311040 /f
-add HKLM\Temp\Software\Microsoft\Windows\DWM /v ColorizationColor /t REG_DWORD /d 4292311040 /f
-add HKLM\Temp\Software\Microsoft\Windows\DWM /v AlwaysHibernateThumbnails /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\DWM /v EnableAeroPeek /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\DWM /v AlwaysHibernateThumbnails /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v AutoCheckSelect /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideIcons /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v ListviewAlphaSelect /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v ListViewShadow /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v ShowInfoTip /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarAnimations /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarSmallIcons /t REG_DWORD /d 1 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People /v PeopleBand /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\AnimateMinMax /v DefaultApplied /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\ComboBoxAnimation /v DefaultApplied /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\ControlAnimations /v DefaultApplied /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\DWMAeroPeekEnabled /v DefaultApplied /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\DWMSaveThumbnailEnabled /v DefaultApplied /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\MenuAnimation /v DefaultApplied /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\SelectionFade /v DefaultApplied /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\TaskbarAnimations /v DefaultApplied /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\TooltipAnimation /v DefaultApplied /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager /v SubscribedContent-338388Enabled /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager /v SubscribedContent-338389Enabled /t REG_DWORD /d 0 /f
-add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager /v SystemPaneSuggestionsEnabled /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Control Panel\Desktop" /v FontSmoothing /t REG_SZ /d 2 /f
+add "HKLM\Temp\Control Panel\Desktop" /v UserPreferencesMask /t REG_BINARY /d 9032078010000000 /f
+add "HKLM\Temp\Control Panel\Desktop\WindowMetrics" /v MinAnimate /t REG_SZ /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy" /v 01 /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-338393Enabled /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-353694Enabled /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-353696Enabled /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-338388Enabled /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-338389Enabled /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SystemPaneSuggestionsEnabled /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Control Panel\International\User Profile" /v HttpAcceptLanguageOptOut /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.Windows.Photos_8wekyb3d8bbwe" /v Disabled /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.Windows.Photos_8wekyb3d8bbwe" /v DisabledByUser /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.SkypeApp_kzf8qxf38zg5c" /v Disabled /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.SkypeApp_kzf8qxf38zg5c" /v DisabledByUser /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.YourPhone_8wekyb3d8bbwe" /v Disabled /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.YourPhone_8wekyb3d8bbwe" /v DisabledByUser /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.MicrosoftEdge_8wekyb3d8bbwe" /v Disabled /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.MicrosoftEdge_8wekyb3d8bbwe" /v DisabledByUser /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.PPIProjection_cw5n1h2txyewy" /v Disabled /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.PPIProjection_cw5n1h2txyewy" /v DisabledByUser /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\InputPersonalization" /v RestrictImplicitInkCollection /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\InputPersonalization" /v RestrictImplicitTextCollection /t REG_DWORD /d 1 /f
+add "HKLM\Temp\Software\Microsoft\Personalization\Settings" /v AcceptedPrivacyPolicy /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\InputPersonalization\TrainedDataStore" /v HarvestContacts /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v ScoobeSystemSettingEnabled /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v ScoobeSystemSettingEnabled /t REG_DWORD /d 0 /f
+add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v ScoobeSystemSettingEnabled /t REG_DWORD /d 0 /f
+add "HKCU\Software\Microsoft\InputPersonalization" /v RestrictImplicitInkCollection /t REG_DWORD /d 1 /f
+add "HKCU\Software\Microsoft\InputPersonalization" /v RestrictImplicitTextCollection /t REG_DWORD /d 1 /f
 ```
 
-ローカル ポリシー設定で、VDI の背景のイメージを無効にすることができます。  イメージが必要な場合は、色深度を減らしてカスタムの背景イメージを作成し、イメージ情報の送信に使用するネットワーク帯域幅を制限することができます。 ローカル ポリシーで背景イメージを指定しない場合は、ローカル ポリシーを設定する前に背景色を設定することをお勧めします。ポリシーを設定すると、ユーザーは背景色を変更できなくなるためです。 背景イメージとして "(null)" を指定する方が適切な場合があります。 次のセクションでは、リモート デスクトップ プロトコル セッションで背景を使用しない別のポリシー設定を示します。
+ローカル ポリシー設定で、VDI の背景のイメージを無効にすることができます。 イメージが必要な場合は、色深度を減らしてカスタムの背景イメージを作成し、イメージ情報の送信に使用するネットワーク帯域幅を制限することができます。 ローカル ポリシーで背景イメージを指定しない場合は、ローカル ポリシーを設定する前に背景色を設定することをお勧めします。ポリシーを設定すると、ユーザーは背景色を変更できなくなるためです。 背景イメージとして "(null)" を指定する方が適切な場合があります。 次のセクションでは、リモート デスクトップ プロトコル セッションで背景を使用しない別のポリシー設定を示します。
 
 ### <a name="local-policy-settings"></a>ローカル ポリシー設定
 
@@ -378,7 +390,7 @@ VDI 環境での Windows 10 の多数の最適化は、Windows ポリシーを�
 | 電源管理 | 現在使用されている電源プランを選択する | 高パフォーマンス | Enabled |
 | 復元 | システムの既定の状態への復元を許可する |  | 無効 |
 | *記憶域の正常性 | Allow downloading updates to the Disk Failure Prediction Model (Disk Failure Prediction Model の更新プログラムのダウンロードを許可する) |  | 無効にします。 Disk Failure Prediction Failure Model の更新プログラムはダウンロードされません。 |
-| *Windows タイム サービス\\タイム プロバイダー | Windows NTP クライアントを有効にする |  | 無効にします。 このポリシー設定を無効にするか、未構成にした場合、ローカル コンピューター時計の時刻は NTP サーバーと同期されません。 注記:この設定は慎重に検討してください。 ドメインに参加している Windows デバイスでは **NT5DS** を使用する必要があります。 DC から親ドメインの DC へは NTP を使用できます。 PDCe ロールは NTP を使用できます。 仮想マシンは、"機能強化" または "統合サービス"を使用することがあります。 |
+| *Windows タイム サービス\\タイム プロバイダー | Windows NTP クライアントを有効にする |  | 無効にします。 このポリシー設定を無効にするか、未構成にした場合、ローカル コンピューター時計の時刻は NTP サーバーと同期されません。 注記:この設定は慎重に検討してください。 ドメインに参加している Windows デバイスでは **NT5DS** を使用する必要があります。 DC から親ドメインの DC へは NTP を使用できます。 PDCe ロールは NTP を使用できます。 仮想マシンにより、"機能強化" または "統合サービス" が使用されることがあります。 |
 | トラブルシューティングと診断\\定期メンテナンス | スケジュールされたメンテナンス動作の構成 |   | 無効 |
 | トラブルシューティングと診断\\Windows ブート パフォーマンスの診断 | シナリオ実行レベルを構成する |   | 無効 |
 | トラブルシューティングと診断\\Windows メモリ リークの診断 | シナリオ実行レベルを構成する |   | 無効 |
@@ -542,13 +554,13 @@ VDI 環境での Windows 10 の多数の最適化は、Windows ポリシーを�
 
 これらの推奨事項のほとんどは、「[デスクトップ エクスペリエンス搭載 Windows Server 2016 上のシステム サービスを無効にする場合のガイダンス](../../security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server.md)」にある、デスクトップ エクスペリエンスとともにインストールされた Windows Server 2016 の推奨事項を反映しています。
 
-無効にする候補として適しているように思われるサービスの多くは、手動サービス開始の種類に設定されています。 つまり、プロセスまたはイベントが、無効化を検討しているサービスへの要求をトリガーしない限り、サービスは自動的に開始することも、開始されることもありません。 既に手動開始の種類に設定されているサービスは通常、ここには表示されません。
+無効にする候補として適しているように思われるサービスの多くは、手動サービス開始の種類に設定されています。 つまり、プロセスまたはイベントが、無効化を検討しているサービスへの要求をトリガーしない限り、サービスは自動的に開始することも、開始されることもありません。 既に開始の種類 "手動" に設定されているサービスは通常、ここには表示されません。
 
 > [!NOTE]
 > この PowerShell サンプル コードを使用して、実行中のサービスを列挙し、サービスの短い名前のみを出力することができます。
 
 ```powershell
- Get-Service | Where-Object {$_.Status -eq "Running"} | select -ExpandProperty Name
+ Get-Service | Where-Object {$_.Status -eq "Running"} | Select-Object -ExpandProperty Name
  ```
 
 | Windows サービス | Item | 備考|
@@ -575,7 +587,7 @@ VDI 環境での Windows 10 の多数の最適化は、Windows ポリシーを�
 
 [Windows 10 および Windows Server のユーザーごとのサービス](/windows/application-management/per-user-services-in-windows)
 
-サービス開始値を変更する場合は、管理者特権での .cmd プロンプトを開き、サービス コントロール マネージャー ツール "Sc.exe" を実行する方法をお勧めします。 "Sc.exe" の使用方法の詳細については、「[Sc](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc754599(v=ws.11))」を参照してください。
+サービス開始値を変更する場合は、管理者特権での .cmd プロンプトを開き、サービス コントロール マネージャー ツール 'Sc.exe' を実行する方法をお勧めします。 'Sc.exe' の使用方法の詳細については、「[Sc](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754599(v=ws.11))」を参照してください。
 
 ### <a name="scheduled-tasks"></a>スケジュールされたタスク
 
@@ -589,7 +601,7 @@ Windows での他の項目と同様に、項目を無効にすることを検討
  Get-ScheduledTask | Select-Object -Property TaskPath,TaskName,State,Description
 ```
 
->[!NOTE]
+> [!NOTE]
 > 管理者特権で実行している場合でも、スクリプトを使用して無効にできないタスクがいくつかあります。 スクリプトを使用して無効にできないタスクは無効にしないことをお勧めします。
 
 スケジュールされたタスク名:
@@ -674,7 +686,7 @@ Windows は既定で、限られた診断データを収集し保存するよう
 
 ![システム トレース](media/rds-vdi-recommendations-1909/system-traces.png)
 
-**[イベント トレース セッション]** と **[スタートアップ イベント トレース セッション]** の下に表示されるトレースの中には、停止できないものや停止すべきでないものがあります。 "WiFiSession" などの他のトレースは停止できます。 実行中のトレースを停止するには、 **[イベント トレース セッション]** の下でそのトレースを右クリックし [停止] をクリックします。 起動時にトレースが自動的に起動しないようにするには、次の手順を実行します。
+**[イベント トレース セッション]** と **[スタートアップ イベント トレース セッション]** の下に表示されるトレースの中には、停止できないものや停止すべきでないものがあります。 'WiFiSession' などの他のトレースは停止できます。 実行中のトレースを停止するには、 **[イベント トレース セッション]** の下でそのトレースを右クリックし [停止] をクリックします。 起動時にトレースが自動的に起動しないようにするには、次の手順を実行します。
 
 1. **[スタートアップ イベント トレース セッション]** フォルダーをクリックします。
 
@@ -749,9 +761,11 @@ Windows PowerShell コマンドレットの [Set-SmbClientConfiguration](/powers
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force
 ```
 
-Windows Restricted Traffic Limited Functionality Baseline ガイダンスからの追加設定。Microsoft は、インターネットに直接接続していないか、Microsoft や他のサービスに送信されるデータを軽減したい環境に対して、[Windows セキュリティ ベースライン](/powershell/module/smbshare/set-smbserverconfiguration?view=win10-ps)と同じ手順を使用して作成されたベースラインをリリースしました。
+[Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) ガイダンスからの追加設定。
 
-[Windows Restricted Traffic Limited Functionality Baseline](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) 設定は、グループ ポリシーの表でアスタリスクのマーク付きで示されます。
+Microsoft は、インターネットに直接接続していないか、Microsoft や他のサービスに送信されるデータを軽減する環境に対して、[Windows セキュリティ ベースライン](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines)と同じ手順を使用して作成されたベースラインをリリースしました。
+
+Windows Restricted Traffic Limited Functionality Baseline 設定は、グループ ポリシーの表でアスタリスクのマーク付きで示されます。
 
 #### <a name="disk-cleanup-including-using-the-disk-cleanup-wizard"></a>ディスク クリーンアップ (ディスク クリーンアップ ウィザードの使用を含む)
 
@@ -783,29 +797,28 @@ Windows Restricted Traffic Limited Functionality Baseline ガイダンスから�
 
 ### <a name="remove-onedrive-components"></a>OneDrive コンポーネントを削除する
 
-OneDrive の削除では、パッケージの削除、アンインストール、および *.lnk ファイルの削除が行われます。 次の PowerShell のサンプル コードは、イメージから OneDrive を削除するのに役立ち、GitHub VDI 最適化スクリプトに含まれています。
+OneDrive の削除では、パッケージの削除、アンインストール、および \*.lnk ファイルの削除が行われます。 次の PowerShell のサンプル コードは、イメージから OneDrive を削除するのに役立ち、GitHub VDI 最適化スクリプトに含まれています。
 
 ```azurecli
+Get-Process -Name OneDrive | Stop-Process -Force -Confirm:$false
+Get-Process -Name explorer | Stop-Process -Force -Confirm:$false
+if (Test-Path "C:\\Windows\\System32\\OneDriveSetup.exe")`
+    { Start-Process "C:\\Windows\\System32\\OneDriveSetup.exe"`
+        -ArgumentList "/uninstall"`
+        -Wait }
+if (Test-Path "C:\\Windows\\SysWOW64\\OneDriveSetup.exe")`
+    { Start-Process "C:\\Windows\\SysWOW64\\OneDriveSetup.exe"`
+        -ArgumentList "/uninstall"`
+        -Wait }
+Remove-Item -Path "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk" -Force
+Remove-Item -Path "C:\\Windows\\ServiceProfiles\\NetworkService\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk" -Force
 
-Taskkill.exe /F /IM "OneDrive.exe"
-Taskkill.exe /F /IM "Explorer.exe"`
-    if (Test-Path "C:\\Windows\\System32\\OneDriveSetup.exe")`
-     { Start-Process "C:\\Windows\\System32\\OneDriveSetup.exe"`
-         -ArgumentList "/uninstall"`
-         -Wait }
-    if (Test-Path "C:\\Windows\\SysWOW64\\OneDriveSetup.exe")`
-     { Start-Process "C:\\Windows\\SysWOW64\\OneDriveSetup.exe"`
-         -ArgumentList "/uninstall"`
-         -Wait }
-Remove-Item -Path
-"C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk" -Force
-Remove-Item -Path "C:\\Windows\\ServiceProfiles\\NetworkService\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\OneDrive.lnk" -Force \# Remove the automatic start item for OneDrive from the default user profile registry hive
+# Remove the automatic start item for OneDrive from the default user profile registry hive
+
 Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Load HKLM\\Temp C:\\Users\\Default\\NTUSER.DAT" -Wait
 Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Delete HKLM\\Temp\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run /v OneDriveSetup /f" -Wait
 Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Unload HKLM\\Temp" -Wait Start-Process -FilePath C:\\Windows\\Explorer.exe -Wait
 ```
-
-ここでの情報に関する質問または問題については、Microsoft アカウント チームに問い合わせるか、Microsoft VDI のブログを調べるか Microsoft フォーラムにメッセージを投稿するか、または質問や問題について Microsoft にお問い合わせください。
 
 ## <a name="turn-windows-update-back-on"></a>Windows Update を再度有効にする
 
@@ -825,7 +838,7 @@ Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Unload HKLM\\Temp" -
 
     - ローカル コンピューター ポリシー\\コンピューターの構成\\管理用テンプレート\\Windows コンポーネント\\Windows Update\\Windows Update for Business
 
-        - 品質更新プログラムをいつ受信するかを選択してください ([有効] から [未構成] に変更)
+        - 品質更新プログラムをいつ受信するかを選択してください ("有効" から "未構成" に変更)
 
     -   ローカル コンピューター ポリシー\\コンピューターの構成\\管理用テンプレート\\Windows コンポーネント\\Windows Update\\Windows Update for Business
 
@@ -856,6 +869,8 @@ Start-Process C:\\Windows\\System32\\Reg.exe -ArgumentList "Unload HKLM\\Temp" -
     - タスク スケジューラ ライブラリ\\Microsoft\\Windows\\InstallService\\ScanForUpdatesAsUser
 
 これらの設定をすべて有効にするには、デバイスを再起動します。 このデバイスに機能の更新プログラムを提供したくない場合は、[設定]\\[Windows Update]\\[詳細オプション]\\[更新プログラムをいつインストールするかを選択する] に移動し、オプションを手動で設定します。**機能の更新プログラムには、新機能と機能強化が含まれています。これは、180、365 などの 0 以外の値の日数まで延期できます。**
+
+ここでの情報に関する質問または問題については、Microsoft アカウント チームに問い合わせるか、Microsoft VDI のブログを調べるか Microsoft フォーラムにメッセージを投稿するか、または質問や問題について Microsoft にお問い合わせください。
 
 ### <a name="references"></a>参考資料
 

@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/16/2020
+ms.date: 09/22/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d45bfad559069f9652768ba7f89bbdd3521ab8a
-ms.sourcegitcommit: d04f8fd54fe9aa5703af2f66a7150f4a6fb5bb37
+ms.openlocfilehash: 4edd85e305d30cfe22480021b67f3c0213275926
+ms.sourcegitcommit: c0e0bdc9a1b28bd21951d68b5cfd2cce48a770ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90718626"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90999256"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows デスクトップ クライアントの新機能
 
@@ -24,16 +24,20 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 
 |ユーザー グループ |最新バージョン  |サポートされる最低バージョン |
 |-----------|----------------|--------------------------|
-|パブリック     |1.2.1272        |1.2.945                   |
-|Insider    |1.2.1357        |1.2.1357                  |
+|パブリック     |1.2.1364        |1.2.945                   |
+|Insider    |1.2.1364        |1.2.945                   |
 
-## <a name="updates-for-version-121357-insiders"></a>バージョン 1.2.1357 の更新内容 (インサイダー)
+## <a name="updates-for-version-121364"></a>バージョン 1.2.1364 の更新内容
 
-*公開日:2020 年 9 月 9 日*
+*公開日:2020 年 9 月 22 日*
 
-ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139233)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139144)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+ダウンロード:Windows [64 ビット](https://go.microsoft.com/fwlink/?linkid=2139369)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139456)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - シングル サインオン (SSO) が Windows 7 で動作しなかった問題を修正しました。
+- 別のアプリでオーディオ ストリームが排他モードで開かれている場合、および Teams のメディア最適化が有効になっている場合に、Teams の通話の呼び出しまたは参加時に発生していた接続エラーを修正しました。
+- Teams のメディア最適化が有効になっている場合に、Teams でオーディオまたはビデオ デバイスを列挙できない問題を修正しました。
+- "設定にサポートが必要ですか?" リンクをデスクトップの設定ページに追加しました。
+- ハイコントラストの濃色テーマの使用時に発生する "サブスクライブ" ボタンの問題を修正しました。
 
 ## <a name="updates-for-version-121275"></a>バージョン 1.2.1275 の更新内容
 
@@ -51,8 +55,6 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 ## <a name="updates-for-version-121186"></a>バージョン 1.2.1186 の更新内容
 
 *公開日:2020 年 7 月 28 日*
-
-ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qy)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ciex)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qx)
 
 - クライアントの上部にあるコマンド バーのオーバーフロー メニュー ( **...** ) オプションを使用して、複数のユーザー アカウントでワークスペースにサブスクライブできるようになりました。 ワークスペースを区別するために、ワークスペースのタイトルには、すべてのアプリのショートカットのタイトルと同様にユーザー名が含まれるようになりました。
 - トラブルシューティングを改善するため、サブスクリプション エラー メッセージに追加情報が追加されました。
