@@ -6,12 +6,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: 73f9ce6e88fa56a645f0ffedba4f38dec87e973b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b8410cb5804e8cbac3ce03e575c2f33c2bc61388
+ms.sourcegitcommit: 00406560a665a24d5a2b01c68063afdba1c74715
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936381"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91716862"
 ---
 # <a name="advanced-data-deduplication-settings"></a>高度なデータ重複除去の設定
 
@@ -24,10 +24,10 @@ ms.locfileid: "87936381"
 
 ### <a name="changing-a-data-deduplication-schedule"></a><a id="modifying-job-schedules-change-schedule"></a>データ重複除去のスケジュールの変更
 データ重複除去ジョブは、Windows タスク スケジューラを使用してスケジュールされ、パス Microsoft\Windows\Deduplication で表示および編集できます。 データ重複除去には、スケジュールを簡単にするいくつかのコマンドレットが含まれます。
-* [`Get-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11))現在スケジュールされているジョブを表示します。
-* [`New-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11))スケジュールされた新しいジョブを作成します。
-* [`Set-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11))既存のスケジュールされたジョブを変更します。
-* [`Remove-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11))スケジュールされたジョブを削除します。
+* [`Get-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/get-dedupschedule?view=win10-ps) 現在スケジュールされているジョブを表示します。
+* [`New-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/new-dedupschedule?view=win10-ps) スケジュールされた新しいジョブを作成します。
+* [`Set-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/set-dedupschedule?view=win10-ps) 既存のスケジュールされたジョブを変更します。
+* [`Remove-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/remove-dedupschedule?view=win10-ps) スケジュールされたジョブを削除します。
 
 データ重複除去ジョブを実行する時間を変更する最も一般的な理由は、ジョブが業務時間外に実行されるようにするためです。 次の手順の例は、週末と平日の午後 7:00 にアイドル状態となるハイパーコンバージド Hyper-V ホストの、*晴れた日*のシナリオでデータ重複除去スケジュールを変更する方法を示しています。 スケジュールを変更するには、管理者コンテキストで次の PowerShell コマンドレットを実行します。
 
@@ -74,11 +74,11 @@ ms.locfileid: "87936381"
     </thead>
     <tbody>
         <tr>
-            <td>種類</td>
+            <td>Type</td>
             <td>スケジュールする必要があるジョブの種類</td>
             <td>
                 <ul>
-                    <li>最適化</li>
+                    <li>Optimization</li>
                     <li>ガベージ コレクション</li>
                     <li>スクラブ</li>
                 </ul>
@@ -86,7 +86,7 @@ ms.locfileid: "87936381"
             <td>この値は、スケジュールされている必要があるジョブの種類であるため、必要です。 タスクをスケジュールした後は、この値を変更できません。</td>
         </tr>
         <tr>
-            <td>Priority</td>
+            <td>優先度</td>
             <td>スケジュールされたジョブのシステム優先順位</td>
             <td>
                 <ul>
@@ -160,7 +160,7 @@ ms.locfileid: "87936381"
             <td>ディスクの不適切なセクションに配置されているファイルを手動で復元する必要があります。</td>
         </tr>
         <tr>
-            <td>[開始]</td>
+            <td>開始</td>
             <td>ジョブを開始する時刻の指定</td>
             <td><code>System.DateTime</code></td>
             <td><em>date</em> <code>System.Datetime</code> を<em>開始</em>するために提供されるの日付部分は (過去の&#39;) ではなく、ジョブの開始<em>時刻</em>を指定します。</td>
@@ -243,7 +243,7 @@ ms.locfileid: "87936381"
         <tr>
             <td>NoCompress</td>
             <td>チャンクがチャンク ストアに移される前に、チャンクを圧縮するかどうか</td>
-            <td>真/偽</td>
+            <td>True または False</td>
             <td>ある種のファイル、特にマルチ メディア ファイルと既に圧縮済みのファイルの種類は、適切に圧縮されない可能性があります。 この設定では、ボリューム上のすべてのファイルの圧縮をオフにすることができます。 既に圧縮されているファイルが多数含まれるデータセットを最適化しているのが理想です。</td>
         </tr>
         <tr>
@@ -265,7 +265,7 @@ ms.locfileid: "87936381"
             <td>ワークロードが大容量で頻繁に編集される、内容はほとんどがそのままのファイルを処理する場合は、この設定を有効にします。 この設定が有効でない場合、これらのファイルは常に変更され続けるため、ファイルの内容は最適化される準備ができているにもかかわらず、ファイルが最適化されません。</td>
         </tr>
         <tr>
-            <td>検証</td>
+            <td>Verify (英語の可能性あり)</td>
             <td>有効にすると、チャンク ストア内に既にあるチャンクがチャンクのハッシュに一致する場合、これらのチャンクが等しいことが、バイトで確認されます。</td>
             <td>true または false</td>
             <td>これは、実際には同一ではないもののハッシュ値が同じである 2 つのデータのチャンクを比較することによって、チャンクを比較するハッシュ アルゴリズムが誤りを起こさないようにする整合性機能です。 実際には、このようなことが起きる可能性は極めて低くなります。 検証機能を有効にすると、最適化ジョブに大きなオーバーヘッドが追加されます。</td>
@@ -308,7 +308,7 @@ ms.locfileid: "87936381"
         </tr>
         <tr>
             <td>DeepGCInterval</td>
-            <td>この設定により、通常のガベージ コレクション ジョブが<a href="advanced-settings.md#faq-full-v-regular-gc" data-raw-source="[full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc)">完全なガベージ コレクション ジョブ</a>になる間隔が構成されます。 設定が n の場合、n <sup>回</sup>ごとにジョブがフル ガベージ コレクション ジョブになります。 <a href="understand.md#usage-type-backup" data-raw-source="[Backup Usage Type](understand.md#usage-type-backup)">バックアップ使用法の種類</a>を含むボリュームでは、常にフル ガベージ コレクションが無効になる (レジストリ値に関係なく) 点に注意してください。 <code>Start-DedupJob -Type GarbageCollection -Full</code>バックアップボリュームでフルガベージコレクションが必要な場合に使用できます。</td>
+            <td>この設定により、通常のガベージ コレクション ジョブが<a href="advanced-settings.md#faq-full-v-regular-gc" data-raw-source="[full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc)">完全なガベージ コレクション ジョブ</a>になる間隔が構成されます。 設定が n の場合、n <sup>回</sup>ごとにジョブがフル ガベージ コレクション ジョブになります。 <a href="understand.md#usage-type-backup" data-raw-source="[Backup Usage Type](understand.md#usage-type-backup)">バックアップ使用法の種類</a>を含むボリュームでは、常にフル ガベージ コレクションが無効になる (レジストリ値に関係なく) 点に注意してください。 <code>Start-DedupJob -Type GarbageCollection -Full</code> バックアップボリュームでフルガベージコレクションが必要な場合に使用できます。</td>
             <td>整数 (-1 は無効を示します)</td>
             <td><a href="advanced-settings.md#faq-why-disable-full-gc" data-raw-source="[this frequently asked question](advanced-settings.md#faq-why-disable-full-gc)">このよく寄せられる質問</a>を参照してください。</td>
         </tr>

@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f750f7487e8220c93ea30a78ee185f28a74fd512
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 71a443f4b588139a60b2330e668919a23250ba0f
+ms.sourcegitcommit: 00406560a665a24d5a2b01c68063afdba1c74715
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89622363"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91716893"
 ---
 # <a name="taskkill"></a>taskkill
 
@@ -30,14 +30,14 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 
 ### <a name="parameters"></a>パラメーター
 
-|         パラメーター         |                                                                                                                                        Description                                                                                                                                        |
+|         パラメーター         |                                                                                                                                        説明                                                                                                                                        |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |      /s \<computer>       |                                                                                    名前またはリモート コンピューターの IP アドレスを指定します (円記号を使用しない)。 既定値はローカル コンピューターです。                                                                                     |
 | /u \<Domain>\\\<UserName> | 指定されているユーザーのアカウント権限でコマンドを実行して *UserName* または *ドメイン*\\*ユーザー名*します。 **/u** 場合にのみ指定できる **/s** を指定します。 既定では、コマンドを発行しているコンピューターに現在ログオンしているユーザーのアクセス許可です。 |
 |      /p \<Password>       |                                                                                                   指定されているユーザー アカウントのパスワードを指定します、 **/u** パラメーター。                                                                                                   |
-|       /fi \<Filter>       |          タスクのセットを選択するフィルターを適用します。 複数のフィルターを使用することも、ワイルドカード文字 () を使用して **\\** \* すべてのタスクまたはイメージ名を指定することもできます。 次を参照してください [有効なフィルター名のテーブル](#filter-names-operators-and-values), 、演算子、および値。           |
+|       /fi \<Filter>       |          タスクのセットを選択するフィルターを適用します。 1 つ以上のフィルターを使用するか、ワイルドカード文字を使用して (`*`) イメージ名をすべてのタスクを指定します。 次を参照してください [有効なフィルター名のテーブル](#filter-names-operators-and-values), 、演算子、および値。           |
 |     /pid \<ProcessID>     |                                                                                                                 終了するプロセスのプロセス ID を指定します。                                                                                                                 |
-|     /im \<ImageName>      |                                                                                終了するプロセスのイメージの名前を指定します。 **\\**すべてのイメージ名を指定するには、ワイルドカード文字 ( \* ) を使用します。                                                                                |
+|     /im \<ImageName>      |                                                                                終了するプロセスのイメージの名前を指定します。 ワイルドカード文字を使用して (`*`) をすべてのイメージ名を指定します。                                                                                |
 |            /f             |                                                                    プロセスが強制的に終了することを指定します。 リモート プロセスでこのパラメーターは無視されます。すべてのリモート プロセスが強制的に終了します。                                                                     |
 |            /t             |                                                                                                          指定されたプロセスおよびそれによって開始されたすべての子プロセスを終了します。                                                                                                          |
 
@@ -52,13 +52,13 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 |   CPUtime   | eq、ne、gt、lt、ge、le | CPU 時間の形式で <em>HH</em>**:**<em>MM</em>**:**<em>SS</em>, ここで、 *MM* と *SS* 0 ~ 59 の間、および *HH* 符号なしのいずれかの数は、 |
 |  MEMUSAGE   | eq、ne、gt、lt、ge、le |                                                              メモリの使用量 (KB 単位)                                                              |
 |  USERNAME   |         eq、ne         |                                               任意の有効なユーザー名 (*ユーザー* または *ドメイン*\\*ユーザー*)                                               |
-|  サービス   |         eq、ne         |                                                                 [サービス名]                                                                 |
+|  サービス   |         eq、ne         |                                                                 サービス名                                                                 |
 | WINDOWTITLE |         eq、ne         |                                                                 ウィンドウのタイトル                                                                 |
 |   モジュール   |         eq、ne         |                                                                   DLL 名                                                                   |
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 * リモート システムが指定されているときに、WINDOWTITLE と状態のフィルターはサポートされていません。
-* ワイルドカード文字 ( **\\** ) は、フィルターが適用されている場合にのみ<em>、**/im</em>オプションに受け入れられ*ます。
+* ワイルドカード文字 (`*`) を受け入れ、 **/im** オプション、フィルターが適用される場合にのみです。
 * リモート プロセスの終了は常に実行が強制的に、かどうかに関係なく、 **/f** オプションを指定します。
 * ホスト名フィルターにコンピューター名を指定すると、シャットダウンが発生し、すべてのプロセスが停止します。
 * 使用する **tasklist** プロセスを終了するプロセス ID (PID) を確認します。
@@ -74,26 +74,26 @@ taskkill /pid 1230 /pid 1241 /pid 1253
 プロセスを強制的に終了するには、システムによって開始された場合は Notepad.exe 次のように入力します。
 
 ```
-taskkill /f /fi USERNAME eq NT AUTHORITY\SYSTEM /im notepad.exe
+taskkill /f /fi "USERNAME eq NT AUTHORITY\SYSTEM" /im notepad.exe
 ```
 
 リモートコンピューターの Srvmain で、メモで始まるイメージ名を使用してすべてのプロセスを終了し、ユーザーアカウント Hiropln の資格情報を使用するには、次のように入力します。
 
 ```
-taskkill /s srvmain /u maindom\hiropln /p p@ssW23 /fi IMAGENAME eq note* /im *
+taskkill /s srvmain /u maindom\hiropln /p p@ssW23 /fi "IMAGENAME eq note*" /im *
 ```
 
 プロセス ID 2134 とすべての子プロセスを終了するのには、開始されると、これには、管理者アカウントでこれらのプロセスが開始された場合にのみを入力したを処理します。
 
 ```
-taskkill /pid 2134 /t /fi username eq administrator
+taskkill /pid 2134 /t /fi "username eq administrator"
 ```
 
 そのイメージの名前に関係なく、1000 以上のプロセス ID を持つすべてのプロセスを終了して次のように入力します。
 
 ```
-taskkill /f /fi PID ge 1000 /im *
+taskkill /f /fi "PID ge 1000" /im *
 ```
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 - [コマンド ライン構文の記号](command-line-syntax-key.md)

@@ -7,13 +7,16 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 9f8759679865c87c11417c64ef130736de2a1e9e
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 912f0e0cb3f3b632b25eda49f6f65338e7782326
+ms.sourcegitcommit: 00406560a665a24d5a2b01c68063afdba1c74715
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89634615"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91716903"
 ---
+> [!IMPORTANT]
+> **Graftabl**コマンドは従来のコマンドであるため、古くなっています。 これは通常、最新の Windows バージョンではインストールされません。 コードページの処理については、 [chcp](https://docs.microsoft.com/windows-server/administration/windows-commands/chcp) ページを参照してください。
+
 # <a name="graftabl"></a>graftabl
 
 Windows オペレーティングシステムで、拡張文字セットをグラフィックモードで表示できるようにします。 パラメーターを指定せずに **graftabl** を使用すると、前のコードページと現在のコードページが表示されます。
@@ -33,7 +36,7 @@ graftabl /status
 | /status | このコマンドによって使用されている現在のコードページを表示します。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 - **Graftabl**コマンドは、指定したコードページの拡張文字のモニター表示にのみ影響します。 コンソールの実際の入力コードページは変更されません。 コンソールの入力コードページを変更するには、 [mode](mode.md) または [chcp](chcp.md) コマンドを使用します。
 
@@ -67,7 +70,7 @@ graftabl 437
 graftabl 850
 ```
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
 
