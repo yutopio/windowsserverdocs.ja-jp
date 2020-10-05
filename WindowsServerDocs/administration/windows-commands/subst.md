@@ -1,73 +1,71 @@
 ---
 title: subst
-description: パスをドライブ文字に関連付ける方法について説明します。
+description: Subst コマンドの参照記事。パスとドライブ文字を関連付けます。
 ms.topic: reference
 ms.assetid: 3e69234c-2312-4343-868b-afc1017c622a
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f5fd87c01f305201cfd9db50cd454da56bc99c53
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 52d45c9139c70c4f513a972f7789f872145c8b63
+ms.sourcegitcommit: 720455aad2bac78cf64997d196a13f35ea0acb73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89626855"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91718229"
 ---
 # <a name="subst"></a>subst
 
-
-
 ドライブ文字をパスに関連付けます。 パラメーターを指定せずに使用する場合 **subst** 仮想ドライブの名前が有効で表示されます。
-
-
 
 ## <a name="syntax"></a>構文
 
 ```
-subst [<Drive1>: [<Drive2>:]<Path>]
-subst <Drive1>: /d
+subst [<drive1>: [<drive2>:]<path>]
+subst <drive1>: /d
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|Description|
-|---------|-----------|
-|\<Drive1>:|パスに割り当てる仮想ドライブを指定します。|
-|[\<Drive2>:]\<Path>|物理ドライブと仮想ドライブに指定するパスを指定します。|
-|/d|置き換えられた (仮想) ドライブを削除します。|
-|/?|コマンド プロンプトにヘルプを表示します。|
+| パラメーター | 説明 |
+|--|--|
+| `<drive1>:` | パスに割り当てる仮想ドライブを指定します。 |
+| `[<drive2>:]<path>` | 物理ドライブと仮想ドライブに指定するパスを指定します。 |
+| /d | 置き換えられた (仮想) ドライブを削除します。 |
+| /? | コマンド プロンプトにヘルプを表示します。 |
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
--   次のコマンドは機能しません。 **subst** コマンドで指定されているドライブでは使用できません。
+- 次のコマンドは機能しません。 **subst** コマンドで指定されているドライブでは使用できません。
 
-    **chkdsk**
+  - [chkdsk コマンド](chkdsk.md)
 
-    **diskcomp**
+    [コマンドの実行](diskcomp.md)
 
-    **diskcopy**
+    [diskcopy コマンド](diskcopy.md)
 
-    **format**
+    [format コマンド](format.md)
 
-    **label**
+    [label コマンド](label.md)
 
-    **recover**
--   *ドライブ 1* パラメーターがで指定された範囲内である必要があります、 **リソース** コマンドです。 ない場合は、 **subst** 次のエラー メッセージが表示されます。
+    [回復コマンド](recover.md)
 
-    `Invalid parameter - drive1:`
+- パラメーターは、 `<drive1>` **リソース** コマンドで指定された範囲内である必要があります。 それ以外の場合、 **subst** によって次のエラーメッセージが表示されます。 `Invalid parameter - drive1:`
 
-## <a name="examples"></a><a name="BKMK_examples"></a>例
+## <a name="examples"></a>例
 
-仮想ドライブ Z B:\User\Betty\Forms のパスを作成するには、次のように入力します。
+パス b:\user\betty\forms の仮想ドライブ z を作成するには、次のように入力します。
+
 ```
 subst z: b:\user\betty\forms
 ```
+
 完全なパスを入力する代わりに次のように、コロンで後に仮想ドライブの文字を入力してこのディレクトリに移動することができます。
+
 ```
 z:
 ```
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
