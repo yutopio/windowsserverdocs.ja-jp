@@ -5,20 +5,20 @@ ms.date: 09/27/2018
 ms.topic: conceptual
 ms.author: damaerte
 author: maertendmsft
-ms.openlocfilehash: cb17f4289483a76efaa3f848477f47edcf4a85b3
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: c722b9fb81dde8e695d6065d7b2268f862e71d39
+ms.sourcegitcommit: 00406560a665a24d5a2b01c68063afdba1c74715
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078399"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91716883"
 ---
 # <a name="openssh-key-management"></a>OpenSSH キーの管理
 
 Windows 環境でのほとんどの認証は、ユーザー名とパスワードの組み合わせを使用して行われます。
 これは、共通ドメインを共有するシステムでは正常に機能します。
-オンプレミスのシステムとクラウドでホストされたシステムの間など、ドメインをまたがって作業する場合は、より困難になります。
+オンプレミスのシステムとクラウドでホストされたシステムの間など、ドメインをまたがって作業している場合は、ブルートフォース攻撃に対して脆弱になります。
 
-これに対し、Linux 環境では一般に、認証を促進するために公開キー/秘密キーのペアが使用されます。
+これに対し、Linux 環境では一般に、認証を促進するために公開キー/秘密キーのペアが使用されるため、推測可能なパスワードを使用する必要がありません。
 OpenSSH には、これをサポートするためのツールが含まれています。具体的には次のとおりです。
 
 * セキュリティ キーを生成するための __ssh-keygen__

@@ -5,12 +5,12 @@ ms.topic: article
 author: apdutta
 ms.author: apdutta
 ms.date: 02/20/2020
-ms.openlocfilehash: 30d81f8c36c5ba745d0af1d940d8f4f3971d37a0
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 926e28cff1815e5f6a82185ad78a3825ed188def
+ms.sourcegitcommit: ad2c13b09044710bf14236308ade8d74877c3e0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078569"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91591162"
 ---
 # <a name="netsh-mbn-commands"></a>netsh mbn コマンド
 
@@ -33,6 +33,7 @@ ms.locfileid: "90078569"
 - [help](#help)
 - [set](#set)
 - [show](#show)
+- [テスト](#test)
 
 ## <a name="add"></a>追加
 
@@ -499,57 +500,34 @@ set tracing mode=yes
 
 モバイル ブロードバンド ネットワークの情報を表示します。
 
-使用できる netsh mbn set コマンドは次のとおりです。
+使用できる netsh mbn show コマンドは次のとおりです。
 
-- [netsh mbn コマンド](#netsh-mbn-commands)
-  - [add](#add)
-    - [dmprofile](#dmprofile)
-    - [profile](#profile)
-  - [connect](#connect)
-  - [delete](#delete)
-    - [dmprofile](#dmprofile-1)
-    - [profile](#profile-1)
-  - [diagnose](#diagnose)
-  - [disconnect](#disconnect)
-  - [dump](#dump)
-  - [help](#help)
-  - [set](#set)
-    - [acstate](#acstate)
-    - [dataenablement](#dataenablement)
-    - [dataroamcontrol](#dataroamcontrol)
-    - [enterpriseapnparams](#enterpriseapnparams)
-    - [highestconncategory](#highestconncategory)
-    - [powerstate](#powerstate)
-    - [profileparameter](#profileparameter)
-    - [slotmapping](#slotmapping)
-    - [tracing](#tracing)
-  - [show](#show)
-    - [acstate](#acstate-1)
-    - [capability](#capability)
-    - [connection](#connection)
-    - [dataenablement](#dataenablement-1)
-    - [dataroamcontrol](#dataroamcontrol-1)
-    - [dmprofiles](#dmprofiles)
-    - [enterpriseapnparams](#enterpriseapnparams-1)
-    - [highestconncategory](#highestconncategory-1)
-    - [homeprovider](#homeprovider)
-    - [interfaces](#interfaces)
-    - [netlteattachinfo](#netlteattachinfo)
-    - [pin](#pin)
-    - [pinlist](#pinlist)
-    - [preferredproviders](#preferredproviders)
-    - [profiles](#profiles)
-    - [profilestate](#profilestate)
-    - [provisionedcontexts](#provisionedcontexts)
-    - [purpose](#purpose)
-    - [radio](#radio)
-    - [readyinfo](#readyinfo)
-    - [signal](#signal)
-    - [slotmapping](#slotmapping-1)
-    - [slotstatus](#slotstatus)
-    - [smsconfig](#smsconfig)
-    - [tracing](#tracing-1)
-    - [visibleproviders](#visibleproviders)
+- [acstate](#acstate-1)
+- [capability](#capability)
+- [connection](#connection)
+- [dataenablement](#dataenablement-1)
+- [dataroamcontrol](#dataroamcontrol-1)
+- [dmprofiles](#dmprofiles)
+- [enterpriseapnparams](#enterpriseapnparams-1)
+- [highestconncategory](#highestconncategory-1)
+- [homeprovider](#homeprovider)
+- [interfaces](#interfaces)
+- [netlteattachinfo](#netlteattachinfo)
+- [pin](#pin)
+- [pinlist](#pinlist)
+- [preferredproviders](#preferredproviders)
+- [profiles](#profiles)
+- [profilestate](#profilestate)
+- [provisionedcontexts](#provisionedcontexts)
+- [purpose](#purpose)
+- [radio](#radio)
+- [readyinfo](#readyinfo)
+- [signal](#signal)
+- [slotmapping](#slotmapping-1)
+- [slotstatus](#slotstatus)
+- [smsconfig](#smsconfig)
+- [tracing](#tracing-1)
+- [visibleproviders](#visibleproviders)
 
 ### <a name="acstate"></a>acstate
 
@@ -1152,4 +1130,49 @@ show visibleproviders [interface=]<string>
 
 ```powershell
 show visibleproviders interface="Cellular"
+```
+
+## <a name="test"></a>テスト
+
+ログの収集中に、特定の機能領域のテストを実行します。
+
+**構文**
+```
+test [feature=<feature area>] [testPath=<path>] [taefPath=<path>] [param=<test input params>]
+```
+
+**パラメーター**
+
+| タグ | 値 | 省略できるかどうか |
+|---|---|---|
+| **feature** | 以下に記載されたサポートされている機能領域のうちの 1 つの機能領域 | 必須 |
+| **testpath** | テスト バイナリを含むパス | HLK サーバーがインストールされている場合は省略可能 |
+| **taefpath** | TAEF バイナリを含むパス | HLK サーバーがインストールされている場合は省略可能 |
+| **param** | テストに使用するコンマ区切りのパラメーター | 特定の機能領域では必須、それ以外ではオプション |
+
+**解説**
+
+サポートされている機能領域は次のとおりです。
+- 接続
+- power
+- radio
+- esim
+- sms
+- dssa
+- lte
+- bringup
+
+一部のテストでは追加のテスト パラメーターが必要になり、`param` フィールドに指定する必要があります。
+機能に必要なパラメーターを以下に示します。
+- **connectivity**:AccessString、UserName (該当する場合)、Password (該当する場合)
+- **radio**:AccessString、UserName (該当する場合)、Password (該当する場合)
+- **esim**:ActivationCode
+- **bringup**:AccessString、UserName (該当する場合)、Password (該当する場合)
+
+**使用例**
+
+```
+test feature=connectivity param="AccessString=internet"
+test feature=lte testpath="C:\\data\\test\\bin" taefpath="C:\\data\\test\\bin"
+test feature=lte
 ```

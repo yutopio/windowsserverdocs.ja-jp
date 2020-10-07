@@ -1,17 +1,17 @@
 ---
 title: NTFS の概要
-description: NTFS の概要について説明します。
+description: NTFS は最新バージョンの Windows と Windows Server のプライマリ ファイル システムであり、セキュリティ記述子、暗号化、ディスク クォータ、リッチ メタデータなど豊富な機能を備えています。また、クラスターの共有ボリューム (CSV) と併用することで、フェールオーバー クラスターの複数のノードから同時アクセス可能であり、継続的に使用可能なボリュームを実現できます。
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 06/17/2019
+ms.date: 09/30/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: e781e8c4fda3cc3fe0af995fd26081b9b387f723
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 30fe719b7e36706e59650ab18a82276879f92830
+ms.sourcegitcommit: d04d63d48856bccf5d5a9b1df6b25e254e7eda2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954729"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91622847"
 ---
 # <a name="ntfs-overview"></a>NTFS の概要
 
@@ -19,36 +19,43 @@ ms.locfileid: "87954729"
 
 NTFS は最新バージョンの Windows と Windows Server のプライマリ ファイル システムであり、セキュリティ記述子、暗号化、ディスク クォータ、リッチ メタデータなど豊富な機能を備えています。また、クラスターの共有ボリューム (CSV) と併用することで、フェールオーバー クラスターの複数のノードから同時アクセス可能であり、継続的に使用可能なボリュームを実現できます。
 
-Windows Server 2012 R2 の NTFS の新機能と変更された機能の詳細については、[NTFS の新機能](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11))に関する記事を参照してください。 その他の機能については、このトピックの「[追加情報](#additional-information)」セクションを参照してください。 新しい Resilient File System (ReFS) の詳細については、「[Resilient File System (ReFS) の概要](../refs/refs-overview.md)」を参照してください。
+その他の機能については、このトピックの「[追加情報](#additional-information)」セクションを参照してください。 新しい Resilient File System (ReFS) については、「[Resilient File System (ReFS) の概要](../refs/refs-overview.md)」を参照してください。
 
-## <a name="practical-applications"></a>実際の適用例
-
-### <a name="increased-reliability"></a>信頼性の向上
+## <a name="increased-reliability"></a>信頼性の向上
 
 システム障害が発生してコンピューターが再起動されると、NTFS では、そのログ ファイルとチェックポイント情報を使用してファイル システムの整合性が復元されます。 不良セクター エラーが発生すると、NTFS によってその不良セクターを含むクラスターが動的に再マッピングされ、データに新しいクラスターが割り当てられ、元のクラスターが不良とマークされ、以前のクラスターは使用されなくなります。 たとえば、サーバーがクラッシュした後、NTFS ではログ ファイルを再生してデータを回復できます。
 
 NTFS を使うと、ボリュームをオフラインにしなくても、一時的な破損の問題をバックグラウンドで継続的に監視および修正できます (この機能は、Windows Server 2008 で導入され、[自己修復 NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771388(v=ws.10)) と呼ばれます)。 大規模な破損の問題の場合は、ボリュームがオンラインの間に Windows Server 2012 以降の Chkdsk ユーティリティを使ってドライブのスキャンと分析を行い、ボリューム上のデータの整合性を復元するために必要な時間まで、オフラインの時間を制限することができます。 NTFS がクラスター共有ボリュームと併用されている場合、ダウンタイムは必要ありません。 詳細については、[NTFS の正常性と Chkdsk](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11)) に関する記事を参照してください。
 
-### <a name="increased-security"></a>セキュリティの向上
+## <a name="increased-security"></a>セキュリティの向上
 
 - **ファイルとフォルダーのアクセス制御リスト (ACL) ベースのセキュリティ**: NTFS を使って、ファイルまたはフォルダーに対するアクセス許可を設定し、アクセスを制限または許可するグループとユーザーを指定し、アクセスの種類を選択することができます。
 
 - **BitLocker ドライブ暗号化のサポート**: BitLocker ドライブ暗号化によって、NTFS ボリュームに格納されている重要なシステム情報やその他のデータに対するセキュリティが強化されます。 Windows Server 2012 R2 および Windows 8.1 以降、BitLocker は、コネクト スタンバイをサポートするトラステッド プラットフォーム モジュール (TPM) を搭載した x86 および x64 ベースのコンピューターに対して、デバイス暗号化をサポートするようになりました (以前は Windows RT デバイスでのみ利用可能でした)。 デバイスの暗号化は、Windows ベースのコンピューター上のデータを保護するために役立ちます。また、悪意のあるユーザーがユーザーのパスワードを見つけるために利用するシステム ファイルにアクセスすることや、ドライブを PC から物理的に取り外して別のものに取り付けてアクセスすることをブロックするために役立ちます。 詳細については、「[BitLocker の新機能](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn306081(v%3dws.11))」を参照してください。
 
-- **大容量ボリュームのサポート**: NTFS では、256 TB のサイズのボリュームをサポートできます。 サポートされるボリュームのサイズは、クラスターのサイズとクラスターの数の影響を受けます。 (2<sup>32</sup> - 1) クラスター (NTFS がサポートするクラスターの最大数) では、次のボリューム サイズとファイル サイズがサポートされます。
+## <a name="support-for-large-volumes"></a>大量ボリュームのサポート
 
-  |クラスター サイズ|最大ボリューム|最大ファイル|
-  |---|---|---|
-  |4 KB (既定のサイズ)|16 TB|16 TB|
-  |8 KB|32 TB|32 TB|
-  |16 KB|64 TB|64 TB|
-  |32 KB|128 TB|128 TB|
-  |64 KB (最大サイズ)|256 TB|256 TB|
+NTFS では、Windows Server 2019 以降、および Windows 10 バージョン 1709 以降で、最大 8 ペタバイトまでのボリュームがサポートされます (古いバージョンでは最大 256 TB までサポート)。 サポートされるボリュームのサイズは、クラスターのサイズとクラスターの数の影響を受けます。 (2<sup>32</sup> - 1) クラスター (NTFS がサポートするクラスターの最大数) では、次のボリューム サイズとファイル サイズがサポートされます。
+
+  | クラスター サイズ         | 最大ボリュームおよびファイル |
+  | -------------------  | -------------- |
+  | 4 KB (既定のサイズ)  | 16 TB          |
+  | 8 KB                 | 32 TB          |
+  | 16 KB                | 64 TB          |
+  | 32 KB                | 128 TB         |
+  | 64 KB (以前の最大値)  | 256 TB         |
+  | 128 KB               | 512 TB         |
+  | 256 KB               | 1 PB           |
+  | 512 KB               | 2 PB           |
+  | 1024 KB              | 4 PB           |
+  | 2048 KB (最大サイズ)   | 8 PB           |
+
+使用している Windows のバージョンでサポートされる最大値を超えるクラスター サイズのボリュームをマウントしようとすると、エラー STATUS_UNRECOGNIZED_VOLUME が発生することにご注意ください。
 
 >[!IMPORTANT]
 >サービスとアプリによっては、ファイルとボリューム サイズに対して追加の制限が課される場合があります。 たとえば、以前のバージョンの機能、またはボリューム シャドウ コピー サービス (VSS) のスナップショットを利用するバックアップ アプリを使用している場合 (かつ、SAN または RAID エンクロージャを使用していない場合)、ボリューム サイズの上限は 64 TB になります。 ただし、ワークロードとストレージのパフォーマンスによっては、より小さいボリューム サイズの使用が必要になる場合があります。
 
-### <a name="formatting-requirements-for-large-files"></a>大きなファイルのフォーマットの要件
+## <a name="formatting-requirements-for-large-files"></a>大きなファイルのフォーマットの要件
 
 大きな .vhdx ファイルを適切に拡張できるようにするには、ボリュームのフォーマットについて新しい推奨事項があります。 データ重複除去で使用するボリュームをフォーマットするとき、または 1 TB を超える .vhdx ファイルなどの非常に大きなファイルをホストする場合は、Windows PowerShell で次のパラメーターを指定して **Format-Volume** コマンドレットを使用します。
 
@@ -69,7 +76,7 @@ Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 64KB -UseLarge
 format /L /A:64k
 ```
 
-### <a name="maximum-file-name-and-path"></a>ファイル名とパスの最大値
+## <a name="maximum-file-name-and-path"></a>ファイル名とパスの最大値
 
 NTFS では、長いファイル名と拡張パスがサポートされており、最大値は次のとおりです。
 
@@ -80,7 +87,7 @@ NTFS では、長いファイル名と拡張パスがサポートされており
 
 - **クラスター化されたストレージ**: フェールオーバー クラスターで使用する場合、NTFS では、クラスター共有ボリューム (CSV) ファイル システムと組み合わせて使用すると、複数のクラスター ノードから同時にアクセスできる継続的に使用可能なボリュームがサポートされます。 詳細については、「[フェールオーバー クラスターでクラスターの共有ボリュームを使用する](../../failover-clustering/failover-cluster-csvs.md)」を参照してください。
 
-### <a name="flexible-allocation-of-capacity"></a>容量の柔軟な割り当て
+## <a name="flexible-allocation-of-capacity"></a>容量の柔軟な割り当て
 
 ボリュームの領域が限られている場合、NTFS にはサーバーのストレージ容量を操作できる次の方法が用意されています。
 

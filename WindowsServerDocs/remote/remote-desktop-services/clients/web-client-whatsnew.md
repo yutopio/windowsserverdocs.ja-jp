@@ -7,12 +7,12 @@ manager: lizross
 ms.author: helohr
 ms.date: 09/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 18142988108e1eafe59ca7fd83a29dd4dfb87720
-ms.sourcegitcommit: 664ed9bb0bbac2c9c0727fc2416d8c437f2d5cbe
+ms.openlocfilehash: e2bf87c27e8e61fa4baba81f234381d342af1343
+ms.sourcegitcommit: ed2b98e06bf7f616432bf8b6ad96544a34d5ce5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89472032"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91625474"
 ---
 # <a name="whats-new-in-the-web-client"></a>Web クライアントの新機能
 
@@ -23,6 +23,9 @@ ms.locfileid: "89472032"
 
 ## <a name="updates-for-10220"></a>1\.0.22.0 の更新内容
 *公開日:2020 年 9 月 2 日*
+
+> [!IMPORTANT]
+> バージョン 1.0.22.0 では、一部の Chromebook オペレーティング システムに影響を与える回帰が発生しました。 影響を受けたオペレーティング システムのユーザーは、Web クライアントを使用してリモート セッションに接続することができません。 現在、この問題を調査中です。この回帰が修正されしだい、すぐに新しいバージョンの Web クライアントをリリースいたします。 それまでの間は、バージョン 1.0.21.0 に戻すことによって、この問題を回避できます。 
 
 - 最小化されたメニューをユーザーが移動できるようになりました。
 - 4K およびウルトラワイド モニターのサポートが強化され、大量のデータをコピーするとセッションがクラッシュする問題が修正されました。
