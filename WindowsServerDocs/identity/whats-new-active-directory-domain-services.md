@@ -6,12 +6,12 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 666b05d4a08ad72a62bffec05051ceed2155c36f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 727e3dde99c0c2e7d4aa8999a91a2b913d9a314b
+ms.sourcegitcommit: 1808ce451b9e37ec1110bd684e1b0d3812fc77e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956029"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91772402"
 ---
 # <a name="whats-new-in-active-directory-domain-services-for-windows-server-2016"></a>Windows Server 2016 の Active Directory Domain Services の新機能
 
@@ -60,20 +60,20 @@ Azure Active Directory Join を使用すると、企業や個人のデバイス�
 
 利点:
 
-- 企業所有の Windows デバイスで**最新の設定を利用**できます。 酸素 Services は、個人の Microsoft アカウントを必要としなくなりました。コンプライアンスを確保するために、ユーザーの既存の職場アカウントを使用して実行されるようになりました。 酸素 Services は、オンプレミスの Windows ドメインに参加している Pc と、Azure AD テナント ("クラウドドメイン") に "参加" している Pc とデバイスで動作します。 次のような設定があります。
+- 企業所有の Windows デバイスで**最新の設定を利用**できます。 酸素 Services は、個人の Microsoft アカウントを必要としなくなりました。コンプライアンスを確保するために、ユーザーの既存の職場アカウントを使用して実行されるようになりました。 酸素 Services は、オンプレミスの Windows ドメインに参加している Pc と、Azure AD テナント ("クラウドドメイン") に "参加" している Pc とデバイスで動作します。 設定は次のとおりです。
 
    - ローミングまたは個人用設定、ユーザー補助の設定および資格情報
    - バックアップと復元
    - 職場アカウントを使用した Microsoft Store へのアクセス
    - ライブタイルと通知
 
-- Windows ドメインに参加できないモバイルデバイス (スマートフォン、phablets) の**組織のリソースにアクセス**する (企業所有か byod かにかかわらず)
+- Windows ドメインに参加できないモバイルデバイス (携帯電話、タブレット) の**組織のリソースにアクセス**します。これは、企業所有か byod かにかかわらず、Windows ドメインに参加することはできません。
 - Office 365 およびその他の組織のアプリ、web サイト、リソースに**シングルサイン**オンします。
 - **BYOD デバイスで**は、(オンプレミスのドメインまたは Azure AD から) 個人所有のデバイスに職場アカウントを追加して、条件付きアカウント制御やデバイスの正常性構成証明などの新しい機能に確実に準拠させることができるように、アプリと web で作業リソースの SSO を利用できます。
-- **Mdm 統合**により、デバイスを mdm に自動登録できます (Intune またはサードパーティ)
-- 組織内の複数のユーザーに対して **"キオスク" モードと共有デバイスを設定**する
-- **開発者エクスペリエンス**を使用すると、共有されたプログラミングスタックで企業と個人の両方のコンテキストに対応するアプリを構築できます。
-- **イメージング**オプションを使用すると、イメージングを選択し、ユーザーが最初の実行時に企業所有のデバイスを直接構成できるようにすることができます。
+- **Mdm 統合** を使用すると、Mdm (Intune またはサードパーティ) にデバイスを自動登録できます。
+- 組織内の複数のユーザーに対して **、"キオスク" モードと共有デバイスを設定**します。
+- **開発者エクスペリエンス** を使用すると、共有されたプログラミングスタックで企業と個人の両方のコンテキストに対応するアプリを構築できます。
+- **イメージング** オプションを使用すると、イメージングを選択し、ユーザーが最初の実行時に企業所有のデバイスを直接構成できるようにすることができます。
 
 詳細については、「 [Azure Active Directory でのデバイス管理の概要](/azure/active-directory/devices/overview)」を参照してください。
 
@@ -89,7 +89,7 @@ Windows Hello for Business は、パスワード以外のキーベースの認�
 
 ファイルレプリケーションサービス (FRS) と Windows Server 2003 の機能レベルは、以前のバージョンの Windows Server では非推奨とされていましたが、Windows Server 2003 オペレーティングシステムのサポートは終了しています。 その結果として、Windows Server 2003 を実行するすべてのドメイン コントローラーを、ドメインから削除する必要があります。 以前のバージョンの Windows Server を実行しているドメインコントローラーが環境に追加されないようにするには、ドメインとフォレストの機能レベルを少なくとも Windows Server 2008 に上げる必要があります。
 
-Windows Server 2008 以上のドメイン機能レベルでは、分散ファイル サービス (DFS) レプリケーションを使用して、ドメイン コントローラー間で SYSVOL フォルダーの内容をレプリケートします。 Windows Server 2008 ドメイン機能レベル以上で新しいドメインを作成した場合、SYSVOL のレプリケートには DFS レプリケーションが自動的に使用されます。 それより低い低い機能レベルでドメイン作成した場合は、SYSVOL のレプリケーションを FRS から DFS に移行する必要があります。 移行手順については、[次の手順](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640019\(v=ws.10\))に従うか、[ストレージチームのファイルキャビネットのブログで合理化](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)された一連の手順を参照することができます。
+Windows Server 2008 以上のドメイン機能レベルでは、分散ファイル サービス (DFS) レプリケーションを使用して、ドメイン コントローラー間で SYSVOL フォルダーの内容をレプリケートします。 Windows Server 2008 ドメイン機能レベル以上で新しいドメインを作成した場合、SYSVOL のレプリケートには DFS レプリケーションが自動的に使用されます。 それより低い低い機能レベルでドメイン作成した場合は、SYSVOL のレプリケーションを FRS から DFS に移行する必要があります。 移行手順については、 [次の手順](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640019\(v=ws.10\)) に従うか、 [ストレージチームのファイルキャビネットのブログで合理化](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)された一連の手順を参照することができます。
 
 Windows Server 2003 のドメインとフォレストの機能レベルは引き続きサポートされますが、SYSVOL レプリケーションの互換性とサポートを将来的に保証するために、機能レベルを Windows Server 2008 (またはそれ以上) に引き上げる必要があります。 さらに、より高い機能レベルで利用可能な他の多くの利点と機能もあります。 詳細については、次のリソースを参照してください。
 
