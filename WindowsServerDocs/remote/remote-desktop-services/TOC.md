@@ -109,5 +109,6 @@
 #### [リモート デスクトップ クライアントが切断され、同じセッションに再接続できない](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
 #### [リモート ラップトップがワイヤレス ネットワークから切断される](troubleshoot/remote-laptop-disconnects-wireless-network.md)
 #### [リモート デスクトップ接続時のパフォーマンスの低下またはアプリケーションの問題](troubleshoot/poor-performance-or-application-problems.md)
+#### [RemoteApp シナリオでの入力方式エディターの問題](troubleshoot/input-method-editor-error.md)
 
 ## [その他のリソース](rds-get-support.md)

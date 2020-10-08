@@ -2,16 +2,16 @@
 ms.assetid: 5b5bab7a-727b-47ce-8efa-1d37a9639cba
 title: 仮想マシンの負荷分散の詳細
 ms.topic: article
-author: bhattacharyaz
 manager: eldenc
-ms.author: subhatt
+ms.author: johnmar
+author: JasonGerend
 ms.date: 09/19/2016
-ms.openlocfilehash: cebdc8c192abd737478c3b7a0c3db3e4a2bc8091
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7fc9b449b11b5faf05ac279628f093053e292e8c
+ms.sourcegitcommit: 7a8a608df059b4278a974c52ed7b865421a83aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957149"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833316"
 ---
 # <a name="virtual-machine-load-balancing-deep-dive"></a>仮想マシンの負荷分散の詳細
 
@@ -21,8 +21,8 @@ ms.locfileid: "87957149"
 
 ## <a name="heuristics-for-balancing"></a><a id="heuristics-for-balancing"></a>分散のヒューリスティック
 仮想マシンの負荷分散は、次のヒューリスティックに基づいてノードの負荷を評価します。
-1. 現在の**メモリ不足**: メモリは、hyper-v ホスト上の最も一般的なリソース制約です。
-2. ノードの CPU**使用率**が5分間で平均化されている: クラスター内のノードが過剰コミット状態になるのを軽減します。
+1. 現在の **メモリ不足**: メモリは、hyper-v ホスト上の最も一般的なリソース制約です。
+2. ノードの CPU **使用率** が5分間で平均化されている: クラスター内のノードが過剰コミット状態になるのを軽減します。
 
 ## <a name="controlling-the-aggressiveness-of-balancing"></a><a id="controlling-aggressiveness-of-balancing"></a>分散の強度を制御する
 メモリと CPU のヒューリスティックに基づく分散の強度は、クラスターの共通プロパティ ' AutoBalancerLevel ' を使用して構成できます。 強度を制御するには、PowerShell で次のように実行します。
@@ -43,7 +43,7 @@ ms.locfileid: "87957149"
 VM の負荷分散は、既定で有効になっており、負荷分散が発生したときに、クラスター共通プロパティ ' AutoBalancerMode ' によって構成できます。 ノードがクラスターを公平に分散するタイミングを制御するには、次の操作を行います。
 
 ### <a name="using-failover-cluster-manager"></a>フェールオーバークラスターマネージャーの使用:
-1. クラスター名を右クリックし、[ ![ クラスターのプロパティの選択] の [プロパティ] オプショングラフィックを選択しフェールオーバークラスターマネージャー](media/vm-load-balancing/detailed-VM-load-balancing-2.jpg)
+1. クラスター名を右クリックし、[  ![ クラスターのプロパティの選択] の [プロパティ] オプショングラフィックを選択しフェールオーバークラスターマネージャー](media/vm-load-balancing/detailed-VM-load-balancing-2.jpg)
 
 2.  から [バランサー] オプションを選択するための "バランサー" ペインのグラフィックを選択し ![ フェールオーバークラスターマネージャー](media/vm-load-balancing/detailed-VM-load-balancing-3.jpg)
 
