@@ -6,16 +6,16 @@ ms.assetid: 2d34e98c-6134-479b-8000-3eb360b8b8a3
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 12/06/2016
-ms.openlocfilehash: 2b0a7c93f5a6c6be7340c8d5b0a5bd93d21f1cec
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 1d599555750d2a2e005a3e68b0c70fddd1a54f73
+ms.sourcegitcommit: 6931830a70c5849d8f884cdc7bd4f5afc1a00cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746657"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955807"
 ---
 # <a name="remotely-manage-hyper-v-hosts-with-hyper-v-manager"></a>Hyper-V マネージャーを使用した Hyper-V ホストのリモート管理
 
->適用対象: Windows Server 2016、Windows Server 2012 R2、Windows 10、Windows 8.1
+> 適用対象: Windows Server 2016、Windows Server 2012 R2、Windows 10、Windows 8.1
 
 この記事では、Hyper-v ホストと Hyper-v マネージャーバージョンのサポートされる組み合わせの一覧を示し、リモートおよびローカルの Hyper-v ホストに接続して管理できるようにする方法について説明します。
 
@@ -27,18 +27,18 @@ Hyper-v マネージャーがインストールされていない場合は、以
 
 場合によっては、表に示すように、ホスト上の Hyper-v のバージョンとは異なるバージョンの Hyper-v マネージャーを使用できます。 この操作を行うと、管理しているホスト上の hyper-v のバージョンで使用できる機能が Hyper-v マネージャーによって提供されます。 たとえば、windows server 2012 R2 で hyper-v マネージャーのバージョンを使用して、Windows Server 2012 で Hyper-v を実行しているホストをリモートで管理している場合、その Hyper-v ホスト上の Windows Server 2012 R2 で利用可能な機能を使用することはできません。
 
-次の表に、特定のバージョンの Hyper-v マネージャーから管理できる Hyper-v ホストのバージョンを示します。 サポートされているオペレーティングシステムのバージョンのみが一覧表示されます。 特定のオペレーティングシステムバージョンのサポート状態の詳細については、 [Microsoft ライフサイクルポリシー](https://support.microsoft.com/lifecycle)ページの [ **Product ライフサイクルの検索**] ボタンを使用してください。 一般に、以前のバージョンの Hyper-v マネージャーでは、同じバージョンまたは同等の Windows Server バージョンを実行している Hyper-v ホストのみを管理できます。
+次の表に、特定のバージョンの Hyper-v マネージャーから管理できる Hyper-v ホストのバージョンを示します。 サポートされているオペレーティングシステムのバージョンのみが一覧表示されます。 特定のオペレーティングシステムのバージョンのサポート状態の詳細については、[ [Microsoft ライフサイクルポリシー](https://support.microsoft.com/lifecycle) ] ページの [**製品のライフサイクルの検索**] ボタンを使用してください。 一般に、以前のバージョンの Hyper-v マネージャーでは、同じバージョンまたは同等の Windows Server バージョンを実行している Hyper-v ホストのみを管理できます。
 
 |Hyper-v マネージャーのバージョン | Hyper-v ホストのバージョン|
 |---|---|
-|Windows 2016、Windows 10|-Windows Server 2016-Nano Server を含むすべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server <br>-Windows Server 2012 R2-すべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server <br>-Windows Server 2012-すべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server <br> - Windows 10 <br> - Windows 8.1  |
+|Windows Server 2016 の場合は Windows 10|-Windows Server 2016-Nano Server を含むすべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server <br>-Windows Server 2012 R2-すべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server <br>-Windows Server 2012-すべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server <br> - Windows 10 <br> - Windows 8.1  |
 | Windows Server 2012 R2、Windows 8.1 | -Windows Server 2012 R2-すべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server <br>-Windows Server 2012-すべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server <br>- Windows 8.1
 | Windows Server 2012 | -Windows Server 2012-すべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server
 | Windows Server 2008 R2 Service Pack 1、Windows 7 Service Pack 1 | -Windows Server 2008 R2-すべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server
 | Windows Server 2008、Windows Vista Service Pack 2 | -Windows Server 2008-すべてのエディションとインストールオプション、および対応するバージョンの Hyper-v Server
 
->[!NOTE]
->Service pack のサポートは、2016年1月12日の Windows 8 で終了しました。 詳細については、 [Windows 8.1](https://support.microsoft.com/help/18581)に関する FAQ を参照してください。
+> [!NOTE]
+> Service pack のサポートは、2016年1月12日の Windows 8 で終了しました。 詳細については、 [Windows 8.1](https://support.microsoft.com/help/18581)に関する FAQ を参照してください。
 
 ## <a name="connect-to-a-hyper-v-host"></a>Hyper-v ホストに接続する
 
@@ -66,7 +66,7 @@ Windows server でサーバーマネージャー \> **ローカルサーバー**
 
 または、いずれかのオペレーティングシステムで、管理者として Windows PowerShell を開き、次を実行します。
 
-```
+```PowerShell
 Enable-PSRemoting
 ```
 
@@ -78,7 +78,7 @@ Windows 8.1 以前では、リモート管理は、ホストが同じドメイ�
 
 Windows Server 2016 と Windows 10 の hyper-v マネージャーでは、以前のバージョンよりも多くの種類のリモート接続が提供されます。詳細については、次のセクションで説明します。
 
-### <a name="connect-to-a-windows-2016-or-windows-10-remote-host-as-a-different-user"></a>別のユーザーとして Windows 2016 または Windows 10 リモートホストに接続する
+### <a name="connect-to-a-windows-server-2016-or-windows-10-remote-host-as-a-different-user"></a>別のユーザーとして Windows Server 2016 または Windows 10 リモートホストに接続する
 
 これにより、hyper-v ホスト上の Hyper-v Administrators グループまたは Administrators グループのメンバーであるユーザーとしてローカルコンピューター上で実行されていない場合に、Hyper-v ホストに接続できます。 これを行うには、次の手順を実行します。
 
@@ -87,10 +87,10 @@ Windows Server 2016 と Windows 10 の hyper-v マネージャーでは、以前
 1. [**コンピューターの選択**] ダイアログボックスで [**別のユーザーとして接続**する] を選択します。
 1. [ **ユーザーの設定**] を選択します。
 
->[!NOTE]
+> [!NOTE]
 > これは、Windows Server 2016 または Windows 10 **リモート** ホストに対してのみ機能します。
 
-### <a name="connect-to-a-windows-2016-or-windows-10-remote-host-using-ip-address"></a>IP アドレスを使用して Windows 2016 または Windows 10 リモートホストに接続する
+### <a name="connect-to-a-windows-server-2016-or-windows-10-remote-host-using-ip-address"></a>IP アドレスを使用して Windows Server 2016 または Windows 10 リモートホストに接続する
 
 これを行うには、次の手順を実行します。
 
@@ -98,10 +98,10 @@ Windows Server 2016 と Windows 10 の hyper-v マネージャーでは、以前
 1. [ **サーバーへの接続] を**クリックします。
 1. [ **別のコンピューター** ] テキストフィールドに IP アドレスを入力します。
 
->[!NOTE]
+> [!NOTE]
 > これは、Windows Server 2016 または Windows 10 **リモート** ホストに対してのみ機能します。
 
-### <a name="connect-to-a-windows-2016-or-windows-10-remote-host-outside-your-domain-or-with-no-domain"></a>ドメインの外部またはドメインなしで Windows 2016 または Windows 10 リモートホストに接続する
+### <a name="connect-to-a-windows-server-2016-or-windows-10-remote-host-outside-your-domain-or-with-no-domain"></a>ドメインの外部またはドメインなしで Windows Server 2016 または Windows 10 リモートホストに接続する
 
 これを行うには、次の手順を実行します。
 
@@ -109,13 +109,13 @@ Windows Server 2016 と Windows 10 の hyper-v マネージャーでは、以前
 
 1. プライベートネットワークゾーンに必要なファイアウォール規則を作成します。
 
-   ```
+   ```PowerShell
    Enable-PSRemoting
    ```
 
 2. パブリックゾーンでのリモートアクセスを許可するには、CredSSP および WinRM のファイアウォール規則を有効にします。
 
-   ```
+   ```PowerShell
    Enable-WSManCredSSP -Role server
    ```
 
@@ -126,20 +126,22 @@ Windows Server 2016 と Windows 10 の hyper-v マネージャーでは、以前
 1. 管理者として Windows PowerShell セッションを開きます。
 1. これらのコマンドを実行します。
 
-     ```
-     Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"
-     ```
-     ```
-     Enable-WSManCredSSP -Role client -DelegateComputer "fqdn-of-hyper-v-host"
-     ```
+    ```PowerShell
+    Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"
+    ```
+
+    ```PowerShell
+    Enable-WSManCredSSP -Role client -DelegateComputer "fqdn-of-hyper-v-host"
+    ```
+
 1. また、次のグループポリシーを構成する必要がある場合もあります。
     * **コンピューターの構成** \>**管理用テンプレート** \>**システム** \>**資格情報の委任** \>**NTLM のみのサーバー認証で新しい資格情報の委任を許可する**
     * [ **有効化** ] をクリックし、 *wsman/fqdn*を追加します。
-1. **Hyper-v マネージャー**を開きます。
+1. **Hyper-V マネージャー**を開きます。
 1. 左側のウィンドウで、[ **Hyper-v マネージャー**] を右クリックします。
 1. [ **サーバーへの接続] を**クリックします。
 
->[!NOTE]
+> [!NOTE]
 > これは、Windows Server 2016 または Windows 10 **リモート** ホストに対してのみ機能します。
 
 コマンドレットの詳細については、「 [Set-Item](/powershell/module/microsoft.powershell.management/set-item?view=powershell-7) and [enable-wsmancredssp](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7)」を参照してください。
@@ -160,10 +162,10 @@ Windows では、hyper-v マネージャーは、 [hyper-v を含むすべての
 
 Windows PowerShell を使用するには、管理者として次のコマンドを実行します。
 
-```
+```PowerShell
 add-windowsfeature rsat-hyper-v-tools
 ```
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 [Hyper-V をインストールする](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md)
