@@ -6,14 +6,14 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/25/2020
+ms.date: 10/07/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: a44926d50fae9dea38e3f5c46db423991a414a87
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 2c34ab9c769beb25437e26442d85f75d40db163e
+ms.sourcegitcommit: ed77cfe8140a480b025907716e3635d40a5e3303
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941512"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91806637"
 ---
 # <a name="compare-the-clients"></a>クライアントの比較
 
@@ -29,7 +29,7 @@ ms.locfileid: "88941512"
 
 ### <a name="input-redirection"></a>入力のリダイレクト
 
-| リダイレクト | Windows 受信トレイ</br>(MSTSC) | Windows デスクトップ</br>(MSRDC) | Windows ストア | Android | iOS | macOS | Web クライアント    |
+| リダイレクト | Windows 受信トレイ</br>(MSTSC) | Windows デスクトップ</br>(MSRDC) | Microsoft Store クライアント</br>(URDC) | Android | iOS | macOS | Web クライアント    |
 |-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|---------------|
 | キーボード    | X                         | X                           | X             | X       | X   | X     | X             |
 | マウス       | X                         | X                           | X             | X       | X\* | X     | X             |
@@ -40,7 +40,7 @@ ms.locfileid: "88941512"
 
 ### <a name="port-redirection"></a>ポートのリダイレクト
 
-| リダイレクト | Windows 受信トレイ</br>(MSTSC) | Windows デスクトップ</br>(MSRDC) | Windows ストア | Android | iOS | macOS | Web クライアント |
+| リダイレクト | Windows 受信トレイ</br>(MSTSC) | Windows デスクトップ</br>(MSRDC) | Microsoft Store クライアント</br>(URDC) | Android | iOS | macOS | Web クライアント |
 |-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|------------|
 | シリアル ポート | X                         | X                           |               |         |     |       |            |
 | USB         | X                         | X                           |               |         |     |       |            |
@@ -49,7 +49,7 @@ USB ポートのリダイレクトを有効にすると、USB ポートに接続
 
 ### <a name="other-redirection-devices-etc"></a>その他のリダイレクト (デバイスなど)
 
-| リダイレクト         | Windows 受信トレイ</br>(MSTSC) | Windows デスクトップ</br>(MSRDC) | Windows ストア | Android | iOS         | macOS                           | Web クライアント    |
+| リダイレクト         | Windows 受信トレイ</br>(MSTSC) | Windows デスクトップ</br>(MSRDC) | Microsoft Store クライアント</br>(URDC) | Android | iOS         | macOS                           | Web クライアント    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
 | カメラ             | X                         | X                           |               |     X    |   X         | X                               |               |
 | クリップボード           | X                         | X                           | X             | テキスト    | テキスト、画像 | X                               | テキスト          |
