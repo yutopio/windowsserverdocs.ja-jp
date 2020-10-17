@@ -1,19 +1,19 @@
 ---
-title: Vssadmin リストの影
-description: Vssadmin list shadows コマンドの説明です。
+title: vssadmin list shadows
+description: 指定されたボリュームの既存のシャドウコピーをすべて一覧表示する vssadmin list shadows コマンドの説明です。
 ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: ee35fd65a6fdab68b8f4e4155d52182980b2d0c9
-ms.sourcegitcommit: 96d46c702e7a9c3a321bbbb5284f73911c7baa3c
+ms.openlocfilehash: cb7ddaa09e2da350c1c5422c6224aabd8831f763
+ms.sourcegitcommit: f45640cf4fda621b71593c63517cfdb983d1dc6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89022907"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156204"
 ---
-# <a name="vssadmin-list-shadows"></a>Vssadmin リストの影
+# <a name="vssadmin-list-shadows"></a>vssadmin list shadows
 
 > 適用対象: Windows 10、Windows 8.1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2、Windows Server 2008
 
@@ -21,18 +21,21 @@ ms.locfileid: "89022907"
 
 ## <a name="syntax"></a>構文
 
-```PowerShell
+```
 vssadmin list shadows [/for=<ForVolumeSpec>] [/shadow=<ShadowID>]
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---|---|
-|/for =\<ForVolumeSpec>|シャドウコピーが表示されるボリュームを指定します。|
-|/シャドウ =\<ShadowID>|ShadowID によって指定されたシャドウコピーの一覧を表示します。 シャドウコピー ID を取得するには、 **vssadmin list shadows** コマンドを使用します。 シャドウコピー ID を入力するときは、次の形式を使用します。各 *X* は16進文字を表します。<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-XXXX-XXXX-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
+| パラメーター | 説明 |
+|--|--|
+| /for =`<ForVolumeSpec>` | シャドウコピーが表示されるボリュームを指定します。 |
+| /シャドウ =`<ShadowID>` | ShadowID によって指定されたシャドウコピーの一覧を表示します。 シャドウコピー ID を取得するには、 [vssadmin list shadows コマンド](vssadmin-list-shadows.md)を使用します。 シャドウコピー ID を入力するときは、次の形式を使用します。各 *X* は16進文字を表します。<p>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-XXXX-XXXX-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX |
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
-* [コマンドライン構文のキー](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
-* [Vssadmin](vssadmin.md)
+- [コマンド ライン構文の記号](command-line-syntax-key.md)
+
+- [vssadmin コマンド](vssadmin.md)
+
+- [vssadmin list shadows コマンド](vssadmin-list-shadows.md)

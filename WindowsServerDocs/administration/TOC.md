@@ -62,11 +62,11 @@
 #### [ユーザー アクセス ログの管理](user-access-logging/manage-user-access-logging.md)
 
 ## Windows Server のパフォーマンスの調整
-### [パフォーマンスの調整ガイドライン](performance-tuning/index.md) 
+### [パフォーマンスの調整ガイドライン](performance-tuning/index.md)
 ### [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
 #### [Server Performance Advisor ユーザー ガイド](server-performance-advisor/server-performance-advisor-users-guide.md)
 #### [Server Performance Advisor パック開発ガイド](server-performance-advisor/server-performance-advisor-pack-development-guide.md)
 
 ## Windows Server の管理の自動化
-### [Windows PowerShell スクリプト](/powershell/scripting/powershell-scripting?view=powershell-5.1)
+### [Windows PowerShell スクリプト](/powershell/scripting/overview)
 ### [Windows コマンド](windows-commands/windows-commands.md)

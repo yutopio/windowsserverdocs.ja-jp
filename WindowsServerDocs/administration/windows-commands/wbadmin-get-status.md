@@ -1,26 +1,27 @@
 ---
 title: wbadmin get status
-description: 現在実行中のバックアップまたは回復操作の状態を報告する wbadmin get status の参照記事。
+description: Wbadmin get status コマンドの参照記事。現在実行中のバックアップまたは回復操作の状態を報告します。
 ms.topic: reference
 ms.assetid: 2911b944-7b95-46aa-8c1e-1d55a2fcc94c
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 7dcb1b59de6827500311cfd55245ac6c94a171b0
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 764c5d3dc808b12488e36af5808acf4c895c5af1
+ms.sourcegitcommit: f45640cf4fda621b71593c63517cfdb983d1dc6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89624595"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155947"
 ---
 # <a name="wbadmin-get-status"></a>wbadmin get status
 
-
-
 現在実行中のバックアップまたは回復操作の状態を報告します。
 
-このサブコマンドを使用するには、 **Backup Operators** グループまたは **Administrators** グループのメンバであるか、適切な権限が委任されている必要があります。 さらに、実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権でのコマンドプロンプトを開くには、[ **コマンドプロンプト**] を右クリックし、[ **管理者として実行**] をクリックします)。
+このコマンドを使用して現在実行中のバックアップまたは回復操作の状態を取得するには、 **Backup Operators** グループまたは **Administrators** グループのメンバーであるか、適切なアクセス許可が委任されている必要があります。 さらに、**コマンドプロンプト**を右クリックし、[**管理者として実行**] を選択して、管理者特権でのコマンドプロンプトから**wbadmin**を実行する必要があります。
+
+> [!IMPORTANT]
+> このコマンドは、バックアップまたは回復操作が完了するまで停止しません。 コマンドウィンドウを閉じても、コマンドは引き続き実行されます。 現在のバックアップまたは回復操作を停止するには、 [wbadmin stop job](wbadmin-stop-job.md) コマンドを実行します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,17 +29,12 @@ ms.locfileid: "89624595"
 wbadmin get status
 ```
 
-### <a name="parameters"></a>パラメーター
-
-このサブコマンドにはパラメーターがありません。
-
-## <a name="remarks"></a>注釈
-
--   このサブコマンドは、現在のバックアップまたは回復操作が完了するまで停止しません。コマンドウィンドウを閉じた場合でも、サブコマンドは引き続き実行されます。
--   現在のバックアップまたは回復操作を停止する場合は、 **wbadmin stop job** サブコマンドを使用します。
-
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
--   [Wbadmin](wbadmin.md)
--   [WBJob](/powershell/module/windowserverbackup/?view=winserver2012r2-ps) コマンドレット
+
+- [wbadmin コマンド](wbadmin.md)
+
+- [wbadmin stop ジョブコマンド](wbadmin-stop-job.md)
+
+- [WBJob](/powershell/module/windowserverbackup/Get-WBJob)

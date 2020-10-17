@@ -1,16 +1,17 @@
 ---
 ms.assetid: 9a06cd41-426f-4cb9-89cf-f5be730e0b79
 title: Active Directory Domain Services の新機能
+description: Active Directory Domain Services (AD DS) の新機能と改善点について説明します。
 ms.topic: article
 author: Femila
 ms.author: billmath
 ms.date: 05/31/2017
-ms.openlocfilehash: 5f91e89e94a25eff1666de05d59415a1d84d9822
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7950447d3435d050d021e4f720ac192d4fb82729
+ms.sourcegitcommit: f45640cf4fda621b71593c63517cfdb983d1dc6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938774"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155853"
 ---
 # <a name="whats-new-in-active-directory-domain-services"></a>Active Directory Domain Services の新機能
 
@@ -53,12 +54,12 @@ Privileged access management (PAM) は、ハッシュ、スピアーフィッシ
 
 -   Active Directory Windows Server 2012 R2 以降のフォレストの機能レベル。
 
-## <a name="azure-ad-join"></a><a name="BKMK_AzureADJoin"></a>Azure AD Join
+## <a name="azure-ad-join"></a><a name="BKMK_AzureADJoin"></a>Azure AD 結合
 Azure Active Directory Join を使用すると、企業や個人のデバイスの機能が向上し、enterprise、business、EDU の各顧客の id エクスペリエンスが向上します。
 
 利点:
 
--   企業所有の Windows デバイスで**最新の設定を利用**できます。 酸素 Services は、個人の Microsoft アカウントを必要としなくなりました。コンプライアンスを確保するために、ユーザーの既存の職場アカウントを使用して実行されるようになりました。 酸素 Services は、オンプレミスの Windows ドメインに参加している Pc と、Azure AD テナント ("クラウドドメイン") に "参加" している Pc とデバイスで動作します。 次のような設定があります。
+-   企業所有の Windows デバイスで**最新の設定を利用**できます。 酸素 Services は、個人の Microsoft アカウントを必要としなくなりました。コンプライアンスを確保するために、ユーザーの既存の職場アカウントを使用して実行されるようになりました。 酸素 Services は、オンプレミスの Windows ドメインに参加している Pc と、Azure AD テナント ("クラウドドメイン") に "参加" している Pc とデバイスで動作します。 設定は次のとおりです。
 
     -   ローミングまたは個人用設定、ユーザー補助の設定および資格情報
 
@@ -74,15 +75,15 @@ Azure Active Directory Join を使用すると、企業や個人のデバイス�
 
 -   **BYOD デバイスで**は、(オンプレミスのドメインまたは Azure AD から) 個人所有のデバイスに職場アカウントを追加して、条件付きアカウント制御やデバイスの正常性構成証明などの新しい機能に確実に準拠させることができるように、アプリと web で作業リソースの SSO を利用できます。
 
--   **Mdm 統合**により、デバイスを mdm に自動登録できます (Intune またはサードパーティ)
+-   **Mdm 統合** により、デバイスを mdm に自動登録できます (Intune またはサードパーティ)
 
 -   組織内の複数のユーザーに対して **"キオスク" モードと共有デバイスを設定**する
 
--   **開発者エクスペリエンス**を使用すると、共有されたプログラミングスタックで企業と個人の両方のコンテキストに対応するアプリを構築できます。
+-   **開発者エクスペリエンス** を使用すると、共有されたプログラミングスタックで企業と個人の両方のコンテキストに対応するアプリを構築できます。
 
--   **イメージング**オプションを使用すると、イメージングを選択し、ユーザーが最初の実行時に企業所有のデバイスを直接構成できるようにすることができます。
+-   **イメージング** オプションを使用すると、イメージングを選択し、ユーザーが最初の実行時に企業所有のデバイスを直接構成できるようにすることができます。
 
-詳細については、「[エンタープライズ向け Windows 10: デバイスを仕事に使用する方法](/azure/active-directory/devices/overview)」を参照してください。
+詳細については、「 [エンタープライズ向け Windows 10: デバイスを仕事に使用する方法](/azure/active-directory/devices/overview)」を参照してください。
 
 ## <a name="microsoft-passport"></a><a name="BKMK_IDLocker"></a>Microsoft Passport
 Microsoft Passport は、パスワードを超えた新しいキーベースの認証方法である組織とコンシューマーです。 この形式の認証では、侵害、盗難、phish のある資格情報に依存しています。

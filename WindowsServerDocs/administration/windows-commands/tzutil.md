@@ -1,18 +1,18 @@
 ---
 title: tzutil
-description: Windows タイムゾーンユーティリティを表示する tzutil のリファレンス記事です。
+description: Windows タイムゾーンユーティリティを表示する、tzutil コマンドの参照記事です。
 ms.topic: reference
 ms.assetid: bcf6e007-c9b6-4df5-83c5-ed7b4b1b5913
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3640da68f48944fd9d67486dface4cfd77531d57
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 8778758c2e3b72827a7dba5844539d27519a19da
+ms.sourcegitcommit: f45640cf4fda621b71593c63517cfdb983d1dc6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078459"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156335"
 ---
 # <a name="tzutil"></a>tzutil
 
@@ -39,7 +39,7 @@ tzutil [/?] [/g] [/s <timezoneID>[_dstoff]] [/l]
 
 終了コード **0** は、コマンドが正常に完了したことを示します。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 現在のタイムゾーン ID を表示するには、次のように入力します。
 
@@ -59,6 +59,6 @@ tzutil /s "Pacific Standard time"
 tzutil /s "Pacific Standard time_dstoff"
 ```
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
