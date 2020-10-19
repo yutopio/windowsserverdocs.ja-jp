@@ -2,16 +2,18 @@
 title: エニーキャスト DNS の概要
 description: このトピックでは、エニーキャスト DNS の概要について説明します。
 manager: laurawi
+ms.prod: windows-server
+ms.technology: networking-dns
 ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: greglin
 author: greg-lindsay
-ms.openlocfilehash: 2a891d2e74ec00c923808f7dde347bfd17a2b5b5
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: f43c1978e193cbb2212966ab519b002d9fed45f5
+ms.sourcegitcommit: ccd38245f1b766be005d0c257962f756ff0c4e76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078579"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175800"
 ---
 # <a name="anycast-dns-overview"></a>エニーキャスト DNS の概要
 
@@ -23,11 +25,11 @@ ms.locfileid: "90078579"
 
 エニーキャストは、それぞれが同じ IP アドレスを割り当てられたエンドポイントのグループに複数のルーティングパスを提供するテクノロジです。 グループ内の各デバイスは、ネットワーク上で同じアドレスをアドバタイズし、ルーティングプロトコルを使用して最適な宛先を選択します。
 
-エニーキャストを使用すると、DNS や HTTP などのステートレスサービスを、同じ IP アドレスの背後に複数のノードを配置し、同等コストのマルチパス (ECMP) ルーティングを使用して、これらのノード間でトラフィックを送信することで、拡張できます。 エニーキャストはユニキャストとは異なり、各エンドポイントには独自の個別の IP アドレスがあります。
+エニーキャストを使用すると、DNS や HTTP などのステートレスサービスを、同じ IP アドレスの背後に複数のノードを配置し、同等コストのマルチパス (ECMP) ルーティングを使用して、これらのノード間でトラフィックを送信することで、拡張できます。 エニーキャストはユニキャストとは異なり、各エンドポイントには独自の個別の IP アドレスがあります。 
 
 ## <a name="why-use-anycast-with-dns"></a>DNS でエニーキャストを使用する理由
 
-エニーキャスト DNS を使用すると、dns サーバーまたはサーバーのグループを有効にして、dns クライアントの地理的な場所に基づいて DNS クエリに応答できます。 これにより、DNS の応答時間が短縮され、DNS クライアントの設定が簡素化されます。 また、エニーキャスト DNS は追加の冗長性レイヤーを提供し、DNS サービス拒否攻撃から保護するのに役立ちます。
+エニーキャスト DNS を使用すると、dns サーバーまたはサーバーのグループを有効にして、dns クライアントの地理的な場所に基づいて DNS クエリに応答できます。 これにより、DNS の応答時間が短縮され、DNS クライアントの設定が簡素化されます。 また、エニーキャスト DNS は追加の冗長性レイヤーを提供し、DNS サービス拒否攻撃から保護するのに役立ちます。 
 
 ### <a name="how-anycast-dns-works"></a>エニーキャスト DNS のしくみ
 
@@ -37,15 +39,15 @@ ms.locfileid: "90078579"
 
 ![エニーキャスト DNS](../../media/Anycast/anycast.png)
 
-**図 1**: ネットワーク上の異なるサイトに配置されている4つの DNS サーバーが、ネットワークに対して同じエニーキャスト IP アドレス (黒い矢印) をアナウンスします。 DNS クライアントデバイスは、エニーキャスト IP アドレスに要求を送信します。 ネットワークデバイスは、使用可能なルートを分析し、クライアントの DNS クエリを最も近い場所 (青い矢印) に送信します。
+**図 1**: ネットワーク上の異なるサイトに配置されている4つの DNS サーバーが、ネットワークに対して同じエニーキャスト IP アドレス (黒い矢印) をアナウンスします。 DNS クライアントデバイスは、エニーキャスト IP アドレスに要求を送信します。 ネットワークデバイスは、使用可能なルートを分析し、クライアントの DNS クエリを最も近い場所 (青い矢印) に送信します。 
 
 現在、エニーキャスト DNS は、多くのグローバル DNS サービスの DNS トラフィックをルーティングするために使用されます。 たとえば、ルート DNS サーバーシステムは、エニーキャスト DNS に大きく依存します。 また、エニーキャストはさまざまなルーティングプロトコルで動作し、イントラネット上でのみ使用できます。
 
 ## <a name="windows-server-native-bgp-anycast-demo"></a>Windows Server ネイティブ BGP エニーキャストデモ
 
-次の手順では、Windows Server 上のネイティブ BGP をエニーキャスト DNS と共に使用する方法について説明します。
+次の手順では、Windows Server 上のネイティブ BGP をエニーキャスト DNS と共に使用する方法について説明します。  
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 - Hyper-v の役割がインストールされている1台の物理デバイス。
   - Windows Server 2012 R2、Windows 10 以降。
@@ -84,10 +86,14 @@ ms.locfileid: "90078579"
   - NIC1: 10.10.10.1 が
   - サブネット: 255.255.255.0
   - DNS: 10.10.10.1 が
+  - ゲートウェイ: 10.10.10.254
 4.  DC002 (Windows Server)
   - NIC1: 10.10.10.2
   - サブネット255.255.255.0
-  - DNS: 10.10.10.2
+  - DNS: 10.10.10.2 *
+  - ゲートウェイ: 10.10.10.254
+
+   * DC001 で Active Directory ドメインを特定できるように、DC002 のドメイン参加を実行するときは、まず DNS に10.10.10.1 がを使用します。
 
 ### <a name="configure-dns"></a>DNS を構成する
 
@@ -103,7 +109,7 @@ ms.locfileid: "90078579"
 
 ### <a name="configure-loopback-adapters"></a>ループバックアダプターを構成する
 
-DC001 と DC002 の管理者特権の Windows PowerShell プロンプトで次のコマンドを入力して、ループバックアダプターを構成します。
+DC001 と DC002 の管理者特権の Windows PowerShell プロンプトで次のコマンドを入力して、ループバックアダプターを構成します。 
 
 > [!NOTE]
 > **モジュールのインストール**コマンドにはインターネットアクセスが必要です。 これを行うには、Hyper-v の外部ネットワークに VM を一時的に割り当てます。
@@ -136,12 +142,15 @@ Vm で次の Windows PowerShell コマンドを使用して、ルーティング
 
 1.  Gateway
 ```PowerShell
+Install-WindowsFeature RemoteAccess -IncludeManagementTools
 Install-RemoteAccess -VpnType RoutingOnly
 Add-BgpRouter -BgpIdentifier “10.10.10.254” -LocalASN 8075
+Add-BgpPeer -Name "DC001" -LocalIPAddress 10.10.10.254 -PeerIPAddress 10.10.10.1 -PeerASN 65511 –LocalASN 8075
 ```
 
 2.  DC001
 ```PowerShell
+Install-WindowsFeature RemoteAccess -IncludeManagementTools
 Install-RemoteAccess -VpnType RoutingOnly
 Add-BgpRouter -BgpIdentifier “10.10.10.1” -LocalASN 65511
 Add-BgpPeer -Name "Labgw" -LocalIPAddress 10.10.10.1 -PeerIPAddress 10.10.10.254 -PeerASN 8075 –LocalASN 65511
@@ -150,6 +159,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
 3.  DC002
 ```PowerShell
+Install-WindowsFeature RemoteAccess -IncludeManagementTools
 Install-RemoteAccess -VpnType RoutingOnly
 Add-BgpRouter -BgpIdentifier "10.10.10.2" -LocalASN 65511
 Add-BgpPeer -Name "Labgw" -LocalIPAddress 10.10.10.2 -PeerIPAddress 10.10.10.254 -PeerASN 8075 –LocalASN 65511
@@ -167,7 +177,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
 1.  ゲートウェイサーバーで BGP ルーティングを確認する
 
-    PS C: \> BgpRouteInformation
+    PS C: \> Get-BgpRouteInformation
 
     DestinationNetwork NextHop LearnedFromPeer State LocalPref MED<br>
     ------------------ -------    --------------- ----- --------- ---<br>
@@ -189,6 +199,9 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
     おおよそのラウンドトリップ時間 (ミリ秒):<br>
     最小 = 0ms、Maximum = 0ms、Average = 0ms
 
+    > [!NOTE]
+    > Ping が失敗した場合は、ICMP をブロックしているファイアウォールルールがないことも確認します。
+
 3.  Client1 との場合は、nslookup または掘り下げを使用して TXT レコードのクエリを実行します。 両方の例を次に示します。
 
     PS C: \> TST.BVT TXT + short を掘り下げます。<br>
@@ -201,13 +214,13 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
     PS C: \> (Get NetAdapter)。指定<br>
     ループバック<br>
     イーサネット2<br>
-    PS C: \> -NetAdapter "イーサネット 2" を無効にします。<br>
+    PS C: \> Disable-NetAdapter "イーサネット 2"<br>
     確認<br>
     この操作を実行しますか?<br>
-    無効-NetAdapter ' イーサネット 2 '<br>
+    Disable-NetAdapter ' イーサネット 2 '<br>
     [Y] Yes [A] Yes to All [N] No [L] No All [S] Suspend [?]ヘルプ (既定値は "Y"):<br>
     PS C: \> (Get NetAdapter)。オンライン<br>
-    上へ<br>
+    ［上へ］<br>
     無効
 
 5.  以前に DC001 から応答を受信していた DNS クライアントが DC002 に切り替えたことを確認します。
@@ -227,7 +240,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
     "DC002"
 
-6.  ゲートウェイサーバーで Get-bgpstatistics を使用して、DC001 で BGP セッションが停止していることを確認します。
+6.  ゲートウェイサーバーで Get-BgpStatistics を使用して、DC001 で BGP セッションが停止していることを確認します。
 7.  DC001 でもう一度イーサネットアダプターを有効にし、BGP セッションが復元されたことを確認し、クライアントが DC001 から再び DNS 応答を受信することを確認します。
 
 > [!NOTE]
@@ -237,15 +250,15 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
 Q: エニーキャスト DNS はオンプレミスの DNS 環境で使用するのに適したソリューションですか。<br>
 A: エニーキャスト DNS は、オンプレミスの DNS サービスとシームレスに連携します。 ただし、DNS サービスの規模を変更するには、エニーキャストは *必要* ありません。
-
+ 
 Q: ドメインコントローラーの数が多い (例: >50) 環境にエニーキャスト DNS を実装すると、どのような影響がありますか。 <br>
 A: 機能に直接的な影響はありません。 ロードバランサーを使用する場合は、ドメインコントローラーに追加の構成は必要ありません。
-
+ 
 Q: Microsoft カスタマーサービスでサポートされているエニーキャスト DNS 構成はありますか。<br>
-A: Microsoft 以外のロードバランサーを使用して DNS クエリを転送する場合、Microsoft は、DNS サーバーサービスに関連する問題をサポートします。 DNS 転送に関連する問題については、ロードバランサーのベンダーに問い合わせてください。
-
+A: Microsoft 以外のロードバランサーを使用して DNS クエリを転送する場合、Microsoft は、DNS サーバーサービスに関連する問題をサポートします。 DNS 転送に関連する問題については、ロードバランサーのベンダーに問い合わせてください。 
+ 
 Q: ドメインコントローラーの数が多い (例: >50) ことのあるエニーキャスト DNS のベストプラクティスは何ですか。<br>
-A: 各地理的な場所でロードバランサーを使用することをお勧めします。 ロードバランサーは、通常、外部ベンダーによって提供されます。
+A: 各地理的な場所でロードバランサーを使用することをお勧めします。 ロードバランサーは、通常、外部ベンダーによって提供されます。 
 
 Q: エニーキャスト DNS と Azure DNS 同様の機能がありますか。<br>
-A: Azure DNS はエニーキャストを使用します。 Azure DNS でエニーキャストを使用するには、Azure DNS サーバーに要求を転送するようにロードバランサーを構成します。
+A: Azure DNS はエニーキャストを使用します。 Azure DNS でエニーキャストを使用するには、Azure DNS サーバーに要求を転送するようにロードバランサーを構成します。 
