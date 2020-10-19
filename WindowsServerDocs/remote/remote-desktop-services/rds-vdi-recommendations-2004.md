@@ -9,12 +9,12 @@ ms.author: helohr
 ms.topic: article
 manager: ''
 ms.date: 09/24/2020
-ms.openlocfilehash: b39207461d9ee99a2da0bdf07a9190c769b7511f
-ms.sourcegitcommit: fa74f7297855ff1c9cb7df4b784b946cdce99e22
+ms.openlocfilehash: 129bbc8387be655cca563935cb7ff891664da357
+ms.sourcegitcommit: f45640cf4fda621b71593c63517cfdb983d1dc6a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91206411"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155899"
 ---
 # <a name="optimizing-windows-10-version-2004-for-a-virtual-desktop-infrastructure-vdi-role"></a>仮想デスクトップ インフラストラクチャ (VDI) ロール用の Windows 10 バージョン 2004 の最適化
 
@@ -117,7 +117,7 @@ Windows の既定値が変更されるたびに、サポート性に関する疑
 
 任意の検索エンジンで `"start value" site:support.microsoft.com` という語句を検索すると、サービスの既定の開始値に関する既知の問題を表示できます。
 
-このドキュメントと GitHub 上の関連するスクリプトでは、既定のアクセス許可が変更されないことに留意してください。 サポートされている堅牢な方法でセキュリティ設定を強化することに関心がある場合は、**AaronLocker** というプロジェクトから始めます。これについては、「[発表: "AaronLocker" を使用したアプリケーションのホワイトリスト登録](https://blogs.msdn.microsoft.com/aaron_margosis/2018/06/26/announcing-application-whitelisting-with-aaronlocker/)」を参照してください
+このドキュメントと GitHub 上の関連するスクリプトでは、既定のアクセス許可が変更されないことに留意してください。 セキュリティ設定の強化を望まれる場合は、**AaronLocker** として知られているプロジェクトで開始してください。 詳細については、["AaronLocker" の概要](https://github.com/microsoft/AaronLocker)のページを参照してください。
 
 ### <a name="virtual-desktop-optimization-categories"></a>仮想デスクトップの最適化のカテゴリ
 
