@@ -8,12 +8,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 6dbaf3fe76ce6c2ac79a0c835a320241e47f4068
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: b10e9f74fa3ca78a3b35a4b2f9ee5c1448a0d2af
+ms.sourcegitcommit: f45640cf4fda621b71593c63517cfdb983d1dc6a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766355"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156001"
 ---
 # <a name="privileged-access-workstations"></a>Privileged Access Workstations
 
@@ -929,7 +929,7 @@ Domain Admin、Enterprise Admin、または階層 0 の同等のグループ (�
       Windows Hello for Business について詳しくは、「[Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification)」の記事をご覧ください。
    * **Azure Multi-Factor Authentication**: Azure Multi-Factor Authentication (MFA) を使うと、2 つ目の検証要素だけでなく、監視とマシン学習ベースの分析によって強化された保護も提供されます。  Azure MFA は、Azure 管理者だけでなく、Web アプリケーション、Azure Active Directory、リモート アクセスやリモート デスクトップのようなオンプレミス ソリューションを含む他の多くのソリューションも保護できます。  Azure 多要素認証の詳細については、記事「[Multi-Factor Authentication](https://azure.microsoft.com/services/multi-factor-authentication)」を参照してください。
 
-2. **Windows Defender Application Control や AppLocker を使用して、信頼されたアプリケーションをホワイトリストに登録します**。  信頼されていないコードや署名されていないコードの PAW での実行を制限することで、悪意のあるアクティビティやセキュリティ侵害が発生する可能性をさらに減らすことができます。  Windows には、アプリケーション コントロールのための次の 2 つの主なオプションが含まれています。
+2. **Windows Defender Application Control や AppLocker を使用して、信頼されたアプリケーションを許可リストに登録します**。  信頼されていないコードや署名されていないコードの PAW での実行を制限することで、悪意のあるアクティビティやセキュリティ侵害が発生する可能性をさらに減らすことができます。  Windows には、アプリケーション コントロールのための次の 2 つの主なオプションが含まれています。
 
    * **AppLocker**: AppLocker を利用することで、管理者は、特定のシステム上で実行できるアプリケーションをコントロールできます。  グループ ポリシーによって AppLocker を中央で管理し、特定のユーザーまたはグループに適用することができます (PAW ユーザーに対してアプリケーションを指定します)。  AppLocker の詳細については、「[AppLocker の技術概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831440(v=ws.11))」を参照してください。
    * **Windows Defender Application Control**: 新しい Windows Defender Application Control 機能を使うと、強化されたハードウェアベースのアプリケーション コントロールが提供されます。AppLocker とは異なり、影響を受けるデバイス上で上書きすることはできません。  AppLocker と同様に、グループ ポリシーを使用して Windows Defender Application Control をコントロールし、特定のユーザーに適用することができます。  Windows Defender Application Control を使用した、アプリケーションの使用の制限の詳細については、「[Windows Defender アプリケーション制御展開ガイド](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)」を参照してください。

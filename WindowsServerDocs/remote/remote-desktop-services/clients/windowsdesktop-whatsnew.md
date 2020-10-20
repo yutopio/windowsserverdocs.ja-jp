@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/22/2020
+ms.date: 10/14/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 4edd85e305d30cfe22480021b67f3c0213275926
-ms.sourcegitcommit: c0e0bdc9a1b28bd21951d68b5cfd2cce48a770ef
+ms.openlocfilehash: 8708f8ab6e8fb751f0ca39238574823ae5b499c4
+ms.sourcegitcommit: 45099dfe3682df1e2bc0bd5998594a79cfff16fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90999256"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92079841"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows デスクトップ クライアントの新機能
 
@@ -25,13 +25,23 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 |ユーザー グループ |最新バージョン  |サポートされる最低バージョン |
 |-----------|----------------|--------------------------|
 |パブリック     |1.2.1364        |1.2.945                   |
-|Insider    |1.2.1364        |1.2.945                   |
+|Insider    |1.2.1440        |1.2.945                   |
+
+## <a name="updates-for-version-121440-insiders"></a>バージョン 1.2.1440 の更新内容 (インサイダー)
+
+*公開日:2020 年 10 月 13 日*
+
+ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139233)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139144)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- クライアントで、接続センター内のさまざまなフィードが区別されるようになりました。
+- サブスクリプション アカウントがユーザーがサインインに使用したアカウントと一致しない問題を修正しました。
+- スマートカードのリダイレクトに関する問題を修正しました。
 
 ## <a name="updates-for-version-121364"></a>バージョン 1.2.1364 の更新内容
 
 *公開日:2020 年 9 月 22 日*
 
-ダウンロード:Windows [64 ビット](https://go.microsoft.com/fwlink/?linkid=2139369)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139456)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139369)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139456)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - シングル サインオン (SSO) が Windows 7 で動作しなかった問題を修正しました。
 - 別のアプリでオーディオ ストリームが排他モードで開かれている場合、および Teams のメディア最適化が有効になっている場合に、Teams の通話の呼び出しまたは参加時に発生していた接続エラーを修正しました。
