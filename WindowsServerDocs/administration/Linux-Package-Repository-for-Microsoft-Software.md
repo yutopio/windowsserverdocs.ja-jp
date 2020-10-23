@@ -6,12 +6,12 @@ ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: victorcheng7
 ms.author: vichen
 ms.date: 08/14/2020
-ms.openlocfilehash: 28ce502a78c58eda74d5b412fe4e4d0d3279d442
-ms.sourcegitcommit: dac52260fdcc3721daf7e32cd45760a0ced96de7
+ms.openlocfilehash: fb03201ce4f76a25b00fb37365597147e473b306
+ms.sourcegitcommit: 3c6c257526b243e876aed59e3f2dec42697f232d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91663683"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92418163"
 ---
 # <a name="linux-software-repository-for-microsoft-products"></a>Microsoft 製品用 Linux ソフトウェアリポジトリ
 
@@ -23,7 +23,7 @@ Microsoft の Linux ソフトウェアリポジトリは、次の複数のサブ
 
  - 製品–運用サブリポジトリは、運用環境での使用を目的としたパッケージに対して指定されています。 これらのパッケージは、microsoft の適用されるサポート契約またはプログラムの条件に基づいて、マイクロソフトによって販売されています。
 
- - mssql-サーバー-これらのリポジトリには Microsoft SQL Server on Linux のパッケージが含まれています。 [SQL Server on Linux](https://www.microsoft.com/sql-server/sql-server-vnext-including-Linux)も参照してください。
+ - mssql-サーバー-これらのリポジトリには Microsoft SQL Server on Linux のパッケージが含まれています。 [SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-overview)も参照してください。
 
 > [!NOTE]
 > Linux ソフトウェアリポジトリ内のパッケージには、パッケージにあるライセンス条項が適用されます。 パッケージを使用する前に、ライセンス条項をお読みください。 インストールし、パッケージを使用すると、これらの条項に同意したものと見なされます。 ライセンス条項に同意しない場合は、パッケージを使用しないでください。
@@ -66,7 +66,7 @@ Microsoft の Linux ソフトウェアリポジトリは、次の複数のサブ
 - 公開キー ID: Microsoft (リリース署名) <gpgsecurity@microsoft.com>
 - 公開キーのフィンガープリント: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
  - RHEL/CentOS 7
 
