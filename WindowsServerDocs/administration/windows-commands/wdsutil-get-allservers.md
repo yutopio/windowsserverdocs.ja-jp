@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: b60fb7710699c4fff6656a0e2a34684a538b116d
-ms.sourcegitcommit: 720455aad2bac78cf64997d196a13f35ea0acb73
+ms.openlocfilehash: 450c864bef3b3f17f3912a06aa72aa56ce6e529a
+ms.sourcegitcommit: 554d274fea48a4d47c19845d969a9ec93dec82de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91730866"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524447"
 ---
 # <a name="get-allservers"></a>取得-AllServers
 
@@ -24,7 +24,7 @@ ms.locfileid: "91730866"
 ## <a name="syntax"></a>構文
 
 ```
-WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Forest:{Yes | No}]
+wdsutil [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Forest:{Yes | No}]
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -39,11 +39,11 @@ WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Fo
 
 すべてのサーバーに関する情報を表示するには、次のように入力します。
 ```
-WDSUTIL /Get-AllServers /Show:Config
+wdsutil /Get-AllServers /Show:Config
 ```
 すべてのサーバーに関する詳細情報を表示するには、次のように入力します。
 ```
-WDSUTIL /Verbose /Get-AllServers /Show:All /Detailed /Forest:Yes
+wdsutil /Verbose /Get-AllServers /Show:All /Detailed /Forest:Yes
 ```
 
 ## <a name="additional-references"></a>その他のリファレンス

@@ -7,18 +7,18 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 42d579b7139f7ff516d9ff239c535ecd2be42474
-ms.sourcegitcommit: 720455aad2bac78cf64997d196a13f35ea0acb73
+ms.openlocfilehash: c61da4f608e825a7cb19c8fb80f8f4b3a5c26fed
+ms.sourcegitcommit: 554d274fea48a4d47c19845d969a9ec93dec82de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91730769"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524277"
 ---
 # <a name="wdsutil-initialize-server"></a>wdsutil initialize-サーバー
 
 > 適用対象: Windows Server (半期チャネル)、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-サーバーの役割をインストールした後は、初期使用のための Windows 展開サービス サーバーを構成します。 このコマンドを実行した後、 [wdsutiladd コマンド](wdsutil-add-image.md) を使用して、サーバーにイメージを追加する必要があります。
+サーバーの役割をインストールした後は、初期使用のための Windows 展開サービス サーバーを構成します。 このコマンドを実行した後、 [wdsutil add-Image コマンド](wdsutil-add-image.md) を使用して、サーバーにイメージを追加する必要があります。
 ## <a name="syntax"></a>構文
 ```
 wdsutil /Initialize-Server [/Server:<Server name>] /remInst:<Full path> [/Authorize]

@@ -1,41 +1,42 @@
 ---
 title: wbadmin stop job
-description: 現在実行中のバックアップまたは回復操作をキャンセルする wbadmin stop ジョブの参照記事。 取り消された操作は再開できません。最初から取り消されたバックアップまたは回復操作を再実行する必要があります。
+description: Wbadmin stop job コマンドの参照記事。現在実行中のバックアップまたは回復操作をキャンセルします。
 ms.topic: reference
 ms.assetid: 3b83b398-39c7-4410-bf17-5c1fb1a4f46d
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 7060fcac4c7a712695800534a23eddbcd043a4f8
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 9952f28f674da6eae295dcffc0357cade19fdd1c
+ms.sourcegitcommit: 554d274fea48a4d47c19845d969a9ec93dec82de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89633639"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524707"
 ---
 # <a name="wbadmin-stop-job"></a>wbadmin stop job
 
+現在実行中のバックアップまたは回復操作をキャンセルします。
 
+> [!IMPORTANT]
+> 取り消された操作を再開することはできません。 取り消されたバックアップまたは回復操作は、もう一度最初から実行する必要があります。
 
-現在実行中のバックアップまたは回復操作をキャンセルします。 取り消された操作は再開できません。最初から取り消されたバックアップまたは回復操作を再実行する必要があります。
-
-このサブコマンドを使用してバックアップまたは回復操作を停止するには、 **Backup Operators** グループまたは **Administrators** グループのメンバーであるか、適切な権限が委任されている必要があります。 さらに、実行する必要があります **wbadmin** 管理者特権でコマンド プロンプトからです。 (管理者特権でのコマンドプロンプトを開くには、[ **コマンドプロンプト** ] を右クリックし、[ **管理者として実行**] をクリックします)。
+このコマンドを使用してバックアップまたは回復操作を停止するには、 **Backup Operators** グループまたは **Administrators** グループのメンバーであるか、適切なアクセス許可が委任されている必要があります。 さらに、**コマンドプロンプト**を右クリックし、[**管理者として実行**] を選択して、管理者特権でのコマンドプロンプトから**wbadmin**を実行する必要があります。
 
 ## <a name="syntax"></a>構文
 
 ```
-wbadmin stop job
-[-quiet]
+wbadmin stop job [-quiet]
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------|-----------|
-|-quiet|ユーザーにプロンプトを表示せずにサブコマンドを実行します。|
+| パラメーター | 説明 |
+|--|--|
+| -quiet | ユーザーにプロンプトを表示せずにコマンドを実行します。 |
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
--   [Wbadmin](wbadmin.md)
+
+- [wbadmin コマンド](wbadmin.md)

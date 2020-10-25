@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: f85d57a81aa63f6ecb94b4b09a1614403aa19664
-ms.sourcegitcommit: 720455aad2bac78cf64997d196a13f35ea0acb73
+ms.openlocfilehash: 900fc109c52908870733d4892e6d70f4a7b84c07
+ms.sourcegitcommit: 554d274fea48a4d47c19845d969a9ec93dec82de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91730834"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524267"
 ---
 # <a name="wdsutil-get-driverpackagefile"></a>wdsutil get driverpackagefile
 
@@ -21,7 +21,7 @@ ms.locfileid: "91730834"
 ## <a name="syntax"></a>構文
 
 ```
-WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia64 | x64}] [/Show:{Drivers | Files | All}]
+wdsutil /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia64 | x64}] [/Show:{Drivers | Files | All}]
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -30,13 +30,13 @@ WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 |---------------------------|------------------------------------------------------------------------|
 | /InfFile:\<Inf File path> | ドライバー パッケージの .inf ファイルの完全パスとファイル名を指定します。 |
 |    [/アーキテクチャ: {x86    |                                  ia64                                  |
-|     [/Show: {Drivers      |                                 Files                                  |
+|     [/Show: {Drivers      |                                 ファイル                                  |
 
 ## <a name="examples"></a>例
 
 ドライバー ファイルに関する情報を表示するには、次のように入力します。
 ```
-WDSUTIL /Get-DriverPackageFile /InfFile:C:\temp\1394.inf /Architecture:x86
+wdsutil /Get-DriverPackageFile /InfFile:C:\temp\1394.inf /Architecture:x86
 ```
 
 ## <a name="additional-references"></a>その他のリファレンス
