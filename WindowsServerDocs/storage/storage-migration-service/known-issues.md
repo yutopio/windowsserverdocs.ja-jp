@@ -4,20 +4,20 @@ description: 記憶域移行サービスの既知の問題とトラブルシュ�
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 07/29/2020
+ms.date: 10/23/2020
 ms.topic: article
-ms.openlocfilehash: 6c3ca3a44665bab08c58853d569823f88c908f35
-ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
+ms.openlocfilehash: 25d0c6666e0706b1c772957d9328db43ecfc5b18
+ms.sourcegitcommit: 1b214ca5030c77900f095d77c73cedc6381eb0e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91517518"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639045"
 ---
 # <a name="storage-migration-service-known-issues"></a>記憶域移行サービスの既知の問題
 
 このトピックでは、 [Storage Migration Service](overview.md) を使用してサーバーを移行する際の既知の問題に対する回答を示します。
 
-記憶域移行サービスは、Windows Server のサービスと Windows 管理センターのユーザーインターフェイスの2つの部分でリリースされます。 このサービスは、Windows server、長期的なサービスチャネル、Windows Server、半期チャネルで利用できます。Windows 管理センターは別途ダウンロードできます。 また、Windows Server の累積的な更新プログラムに加えた変更も、Windows Update によって定期的に追加されます。
+記憶域移行サービスは、Windows Server のサービスと Windows 管理センターのユーザーインターフェイスの2つの部分でリリースされます。 このサービスは、Windows server、Long-Term サービスチャネル、および Windows Server、Semi-Annual Channel で利用できます。Windows 管理センターは別途ダウンロードできます。 また、Windows Server の累積的な更新プログラムに加えた変更も、Windows Update によって定期的に追加されます。
 
 たとえば、Windows Server バージョン1903には、記憶域移行サービスの新機能と修正プログラムが含まれています。これは、 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534)をインストールすることによって、windows server 2019 と windows server、バージョン1809でも利用できます。
 
@@ -26,7 +26,7 @@ ms.locfileid: "91517518"
 Storage Migration Service には、Orchestrator サービスとプロキシサービスのイベントログが含まれています。 Orchestrator サーバーには常に両方のイベントログが含まれ、プロキシサービスがインストールされている宛先サーバーにはプロキシログが含まれます。 これらのログは次の場所にあります。
 
 - アプリケーションとサービスログ \ Microsoft \ Windows \ StorageMigrationService
-- アプリケーションとサービスログ \ Microsoft \ Windows \ StorageMigrationService
+- アプリケーションとサービスログ \ Microsoft \ Windows \ StorageMigrationService-Proxy
 
 オフラインで表示したり Microsoft サポートに送信したりするためにこれらのログを収集する必要がある場合は、GitHub で提供されているオープンソースの PowerShell スクリプトがあります。
 
@@ -118,7 +118,7 @@ Windows Server 2019 の展開先コンピューターに Storage Migration Servi
 
 ## <a name="certain-files-dont-inventory-or-transfer-error-5-access-is-denied"></a>特定のファイルのインベントリや転送が行われない、エラー 5 "アクセスが拒否されました"
 
-転送元コンピューターから転送先コンピューターにファイルをインベントリしたり転送したりするときに、ユーザーが管理者グループのアクセス許可を削除したファイルは移行できません。 記憶域移行サービスの確認-プロキシデバッグは次のように表示されます。
+転送元コンピューターから転送先コンピューターにファイルをインベントリしたり転送したりするときに、ユーザーが管理者グループのアクセス許可を削除したファイルは移行できません。 ストレージの移行 Service-Proxy デバッグを確認するには、次のようにします。
 
 ```
 Log Name: Microsoft-Windows-StorageMigrationService-Proxy/Debug
@@ -418,13 +418,19 @@ Guidance: Confirm that the Netlogon service on the computer is reachable through
 
 1. この問題は、 [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) update によって最初に解決されました。 以前のコードの欠陥により、静的 IP アドレスがすべて使用されませんでした。
 
-2. ソースコンピューターのネットワークインターフェイスでデフォルトゲートウェイの IP アドレスを指定していない場合、KB4537818 の更新プログラムでもこの問題が発生します。 この問題を回避するには、ネットワーク接続アプレット (NCPA.CPL) または New-netroute Powershell コマンドレットを使用して、ネットワークインターフェイスに有効な既定の IP アドレスを設定します。
+2. ソースコンピューターのネットワークインターフェイスでデフォルトゲートウェイの IP アドレスを指定していない場合、KB4537818 の更新プログラムでもこの問題が発生します。 この問題を回避するには、[ネットワーク接続] アプレット (NCPA.CPL) または Set-NetRoute Powershell コマンドレットを使用して、ネットワークインターフェイスに有効な既定の IP アドレスを設定します。
 
 ## <a name="slower-than-expected-re-transfer-performance"></a>予想される再転送パフォーマンスを低下させる
 
-転送を完了し、その後同じデータの再転送を実行すると、移行元サーバー上でデータがほとんど変更されていない場合でも、転送時間が大幅に短縮されないことがあります。
+転送を完了し、その後同じデータの再転送を実行すると、移行元サーバー上でデータがほとんど変更されていない場合でも、転送時間が大幅に短縮されないことがあります。 
 
-非常に多数のファイルと入れ子になったフォルダーを転送する場合は、この動作が想定されます。 データのサイズが関連していません。 まず、 [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) でこの動作を改善し、転送のパフォーマンスを最適化しています。 パフォーマンスをさらに調整するには、「 [インベントリと転送のパフォーマンスの最適化](./faq.md#optimizing-inventory-and-transfer-performance)」を参照してください。
+この問題は、 [kb4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)によって解決されます。 パフォーマンスをさらに調整するには、「 [インベントリと転送のパフォーマンスの最適化](./faq.md#optimizing-inventory-and-transfer-performance)」を参照してください。
+
+## <a name="slower-than-expected-inventory-performance"></a>予想されるインベントリパフォーマンスよりも低速
+
+ソースサーバーをインベントリするときに、ファイルまたは入れ子になったフォルダーが多数ある場合、ファイルインベントリに非常に長い時間がかかっていることがわかります。 何百万ものファイルやフォルダーは、高速なストレージ構成であっても、多くの時間を要するインベントリにつながる可能性があります。 
+
+この問題は、 [kb4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)によって解決されます。
 
 ## <a name="data-does-not-transfer-user-renamed-when-migrating-to-or-from-a-domain-controller"></a>データが転送されず、ドメインコントローラーとの間で移行するときにユーザー名が変更される
 
@@ -535,7 +541,7 @@ Stack trace:
  - ソースコンピューターでリモートレジストリサービスが実行されていません。
  - ファイアウォールは、Orchestrator から移行元サーバーへのリモートレジストリ接続を許可しません。
  - ソース移行アカウントに、ソースコンピューターに接続するためのリモートレジストリアクセス許可がありません。
- - 移行元コンピューターのレジストリ内で、"HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion" または "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\LanmanServer" の下に読み取りアクセス許可がありません。
+ - 移行元コンピューターのレジストリ内で、"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" または "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer" の下に読み取りアクセス許可がありません。
 
 ## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>"38% のソースコンピューターのネットワークインターフェイスのマッピングが停止しています..."
 
@@ -562,7 +568,7 @@ Error Message: Unknown error (0xa00a)
 Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
 ```
 
-この問題は、ソースコンピュータで次のレジストリ値を設定するグループポリシーが原因で発生します。 "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LocalAccountTokenFilterPolicy = 0"
+この問題は、ソースコンピュータで次のレジストリ値を設定するグループポリシーが原因で発生します。 "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LocalAccountTokenFilterPolicy = 0"
 
 この設定は、標準グループポリシーの一部ではなく、 [Microsoft セキュリティコンプライアンスツールキット](https://www.microsoft.com/download/details.aspx?id=55319)を使用して構成されたアドオンです。
 
@@ -606,7 +612,7 @@ GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\com
 
 ## <a name="inventory-fails-with-element-not-found"></a>"要素が見つかりません" でインベントリが失敗する
 
-次のシナリオについて検討してください。
+次のシナリオを想定してください。
 
 DNS ホスト名を持つソースサーバーと、15文字以上の unicode 文字 ("iamalt longcomputername" など) を Active Directory 名がある。 仕様により、Windows では、従来の NetBIOS 名をこの長さに設定することはできませんでした。サーバーにという名前が付けられ、NetBIOS 名が 15 unicode ワイド文字 (例: "iamaverylongcom") に切り捨てられると、警告が表示されました。 このコンピューターのインベントリを実行しようとすると、Windows 管理センターとイベントログに次のメッセージが表示されます。
 
