@@ -1,23 +1,25 @@
 ---
-title: Windows Server バージョン 2004 の新着情報
-description: Windows Server Version 2004 の新機能
+title: Windows Server バージョン 2004 と 20H2 の新機能
+description: Windows Server バージョン 2004 と 20H2 の新機能。
 ms.topic: article
 author: Heidilohr
 ms.author: helohr
 ms.date: 05/27/2020
 ms.localizationpriority: high
-ms.openlocfilehash: 210aa06711c67af46d35a38fe4308bc4060691e8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f44dcc7a1c7fab2d99f0358794bd5b2aedb87b75
+ms.sourcegitcommit: b82dfbfdc5df1327feb8be053a760739b01e3031
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957009"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255869"
 ---
-# <a name="whats-new-in-windows-server-version-2004"></a>Windows Server バージョン 2004 の新着情報
+# <a name="whats-new-in-windows-server-version-2004-and-20h2"></a>Windows Server バージョン 2004 および 20H2 の新機能
 
 >適用先:Windows Server (半期チャネル)
 
-Windows の最新の機能については、「[Windows Server の新機能](whats-new-in-windows-server.md)」を参照してください。 このトピックでは、Windows Server Version 2004 の新機能の一部について説明します。
+Windows の最新の機能については、「[Windows Server の新機能](whats-new-in-windows-server.md)」を参照してください。 このトピックでは、Windows Server バージョン 2004 と 20H2 の新機能の一部について説明します。
+
+Windows Server バージョン 20H2 は、Windows Server バージョン 2004 の半期チャネルの次回のリリースです。 このバージョンでは、信頼性、パフォーマンス、およびその他の一般的な機能強化に焦点を当てていますが、新機能はありません。 他の半期チャネル リリースと同様に、リリースから 18 か月間サポートされます。 半期チャネル リリースのサポート日付の詳細については、「[Windows Server のリリース情報](windows-server-release-info.md)」を参照してください。
 
 ## <a name="server-core-container-improvements"></a>Server Core コンテナーの機能強化
 

@@ -2,16 +2,16 @@
 title: Windows Server のリリース情報
 description: Windows Server に関するリリース情報
 ms.topic: article
-ms.date: 04/14/2020
+ms.date: 10/20/2020
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
-ms.openlocfilehash: ba1f89fed8b1673822c5b5910b6f627483bc07cb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1be5447047b838196861107fa59bf2e5dd0c9463
+ms.sourcegitcommit: b82dfbfdc5df1327feb8be053a760739b01e3031
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950026"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255879"
 ---
 # <a name="windows-server-release-information"></a>Windows Server のリリース情報
 
@@ -23,6 +23,8 @@ ms.locfileid: "87950026"
 
 | Windows Server リリース | バージョン | OS ビルド | 可用性 | メインストリーム サポートの終了日|延長サポートの終了日 |
 |----------------|---------|----------|----------|---------|----------|
+| Windows Server バージョン 20H2 (半期チャネル) (Datacenter Core、Standard Core) | 20H2 | 19042.508.200927-1902 | 2020 年 10 月 20 日 | 2022 年 5 月 10 日 | 注意欄を参照 |
+| Windows Server バージョン 2004 (半期チャネル) (Datacenter Core、Standard Core) | 2004 | 19041.264.200508-2205 | 2020 年 5 月 27 日 | 2021 年 12 月 14 日 | 注意欄を参照 |
 | Windows Server Version 1909 (半期チャネル) (Datacenter Core、Standard Core) | 1909  | 18363.418.191007-0143 | 2019 年 11 月 12 日 | 2021 年 5 月 11 日 | 注意欄を参照 |
 | Windows Server バージョン 1903 (半期チャネル)(Datacenter Core、Standard Core) | 1903  | 18362.30.190401-1528 | 2019 年 5 月 21 日 | 2020 年 12 月 8 日 | 注意欄を参照 |
 |Windows Server 2019 (長期サービス チャネル)(Datacenter、Essentials、Standard)|1809|17763.107.1010129-1455|2018 年 11 月 13 日|2024 年 1 月 9 日|2029 年 1 月 9 日|

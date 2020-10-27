@@ -1,17 +1,17 @@
 ---
 title: Windows Server の新機能
 description: コンピューティング、ID、管理、自動化、ネットワーク、セキュリティ、記憶域の新機能は何ですか。
-ms.date: 08/22/2019
+ms.date: 10/22/2020
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: e4cfde0f4a9861f0cf215c301c45559f20b78d2c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1876c2dbfcff9c8ea653885cd12232c3c97891f3
+ms.sourcegitcommit: 5a67672c3ba9e666c29a41c7356006359c639912
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945654"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92440144"
 ---
 # <a name="whats-new-in-windows-server"></a>Windows Server の新機能
 
@@ -26,6 +26,7 @@ ms.locfileid: "87945654"
 
 半期チャネル リリース:
 
+- [Windows Server バージョン 2004 と 20H2 の新機能](whats-new-in-windows-server-2004.md)
 - [Windows Server バージョン 1903 と 1909 の新機能](../get-started-19/whats-new-in-windows-server-1903-1909.md)
 - [Windows Server バージョン 1809 の新機能](whats-new-in-windows-server-1809.md)
 - [Windows Server バージョン 1803 の新機能](whats-new-in-windows-server-1803.md) (2019 年 11 月 12 日時点でサポート終了)

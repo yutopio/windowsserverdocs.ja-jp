@@ -4,16 +4,15 @@ description: Windows Server 2016 をライセンス認証する方法を説明�
 ms.date: 09/19/2018
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a45d5cc7a54
-author: jaimeo
-ms.author: jaimeo
-manager: dougkim
+author: eross-msft
+ms.author: thierryp
 ms.localizationpriority: medium
-ms.openlocfilehash: ad46c72b664bd1cb6b0a74e353d300dfd01e9d82
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 232afbbb190227d25f7f1da2b3b9a105dbc3a312
+ms.sourcegitcommit: 554d274fea48a4d47c19845d969a9ec93dec82de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87959420"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524947"
 ---
 # <a name="windows-server-2016-activation"></a>Windows Server 2016 のライセンス認証
 
@@ -37,9 +36,9 @@ Windows 10 または Windows 8.1 上で実行されている KMS ホストは、
 
 > [!NOTE]
 > KMS サーバーが実行しているオペレーティング システムや、ライセンス認証するオペレーティング システムによっては、次の更新プログラムのいくつかをインストールすることが必要になる場合があります。
-> - Windows 10 を実行しているクライアントのライセンス認証をサポートするには、Windows 7 または Windows Server 2008 R2 にインストールされている KMS を更新する必要があります。 詳しくは、 [Windows 7 と Windows Server 2008 R2 KMS のホストで Windows 10 のライセンス認証を可能にする更新プログラム](https://support.microsoft.com/help/3079821/update-that-enables-windows-7-and-windows-server-2008-r2-kms-hosts-to-activate-windows-10)に関するページをご覧ください。 
-> - Windows 10 と Windows Server 2016、またはそれ以降のクライアントまたはサーバー オペレーティング システムを実行しているクライアントのライセンス認証をサポートするには、Windows Server 2012 にインストールされている KMS を更新する必要があります。 詳しくは、 [Windows Server 2012 の 2016 年 7 月の更新プログラムのロールアップ](https://support.microsoft.com/help/3172615/july-2016-update-rollup-for-windows-server-2012)に関するページをご覧ください。
-> - Windows 10 と Windows Server 2016、またはそれ以降のクライアントまたはサーバー オペレーティング システムを実行しているクライアントのライセンス認証をサポートするには、Windows 8.1 または Windows Server 2012 R2 にインストールされている KMS を更新する必要があります。 詳しくは、 [Windows 8.1 および Windows Server 2012 R2 の 2016 年 7 月の更新プログラムのロールアップ](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8.1-and-windows-server-2012-r2)に関するページをご覧ください。 
+> - Windows 10 を実行しているクライアントのライセンス認証をサポートするには、Windows 7 または Windows Server 2008 R2 にインストールされている KMS を更新する必要があります。 詳しくは、「[Windows 7 と Windows Server 2008 R2 KMS のホストが Windows 10 をライセンス認証できるようにするための更新プログラムに関するページ](https://support.microsoft.com/help/3079821/update-that-enables-windows-7-and-windows-server-2008-r2-kms-hosts-to-activate-windows-10)をご覧ください。 
+> - Windows 10 と Windows Server 2016、またはそれ以降のクライアントまたはサーバー オペレーティング システムを実行しているクライアントのライセンス認証をサポートするには、Windows Server 2012 にインストールされている KMS を更新する必要があります。 詳しくは、[Windows Server 2012 の 2016 年 7 月更新プログラムのロールアップに関するページ](https://support.microsoft.com/help/3172615/july-2016-update-rollup-for-windows-server-2012)をご覧ください。
+> - Windows 10 と Windows Server 2016、またはそれ以降のクライアントまたはサーバー オペレーティング システムを実行しているクライアントのライセンス認証をサポートするには、Windows 8.1 または Windows Server 2012 R2 にインストールされている KMS を更新する必要があります。 詳しくは、[Windows 8.1 および Windows Server 2012 R2 の 2016 年 7 月更新プログラムのロールアップに関するページ](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8.1-and-windows-server-2012-r2)をご覧ください。 
 > - Windows Server 2008 R2 については、Windows Server 2016 またはそれ以降のオペレーティング システムを実行しているクライアントをライセンス認証できるようにする更新プログラムはありません。
 
 1 つの KMS ホストで無制限の数の KMS クライアントをサポートできます。 50 台を超えるクライアントがある場合は、KMS ホストが使用できなくなった場合に備えて 2 台以上の KMS ホストを用意することをお勧めします。 ほとんどの組織では、2 つの KMS ホストでインフラストラクチャ全体をサポートできます。
@@ -64,4 +63,4 @@ KMS ライセンス認証では、TCP/IP 接続が必要になります。 KMS �
 
 Windows 10、Windows Server 2016、Windows 8.1、Windows Server 2012 R2、Windows Server 2012、Windows 7、Windows Server 2008 R2 のボリューム ライセンス版が実行されているコンピューターは、既定で、追加の構成が必要ない KMS クライアントとなります。
 
-コンピューターを KMS ホスト、MAK、または製品版の KMS クライアントから変換する場合は、該当する KMS クライアント セットアップ キーをインストールしてください。 詳細については、 [KMS クライアント セットアップ キー](KMSclientkeys.md)に関するページを参照してください。
+コンピューターを KMS ホスト、MAK、または製品版の KMS クライアントから変換する場合は、該当する KMS クライアント セットアップ キーをインストールしてください。 詳細については、「[KMS クライアント セットアップ キー](KMSclientkeys.md)」を参照してください。
