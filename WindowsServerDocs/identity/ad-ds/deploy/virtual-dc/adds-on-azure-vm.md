@@ -6,12 +6,12 @@ ms.author: iainfou
 manager: daveba
 ms.date: 04/11/2019
 ms.topic: article
-ms.openlocfilehash: 98725e194226f048de5bc8332c02ec54c7525ee1
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: e95aea80bea16322f66a14c12b0a1388897c1b11
+ms.sourcegitcommit: 40466c8af1fc60dfca733ea476f088549cedba65
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940122"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793589"
 ---
 # <a name="install-a-new-active-directory-forest-using-azure-cli"></a>Azure CLI を使用して新しい Active Directory フォレストをインストールする
 
@@ -148,7 +148,6 @@ az vm create \
     --data-disk-caching None \
     --nsg $NetworkSecurityGroup \
     --private-ip-address $DC2IP
-
 ```
 
 ## <a name="dns-and-active-directory"></a>DNS と Active Directory
@@ -161,15 +160,15 @@ Azure で新しいドメインコントローラーを昇格した後は、仮�
 
 ## <a name="configure-the-vms-and-install-active-directory-domain-services"></a>Vm を構成してインストール Active Directory Domain Services
 
-スクリプトが完了したら、 [Azure portal](https://portal.azure.com)を参照し、[ **仮想マシン**] をクリックします。
+スクリプトが完了したら、 [Azure portal](https://portal.azure.com)を参照し、[ **仮想マシン** ] をクリックします。
 
 ### <a name="configure-the-first-domain-controller"></a>最初のドメインコントローラーを構成する
 
 スクリプトで指定した資格情報を使用して AZDC01 に接続します。
 
 * データディスクの初期化とフォーマットを F:
-   * [スタート] メニューを開き、[**コンピューターの管理**] を参照します。
-   * **記憶域**  >  **ディスクの管理**を参照する
+   * [スタート] メニューを開き、[ **コンピューターの管理** ] を参照します。
+   * **記憶域**  >  **ディスクの管理** を参照する
    * MBR としてディスクを初期化する
    * 新しいシンプルボリュームを作成してドライブ文字を割り当てる F: 必要に応じてボリュームラベルを指定できます。
 * サーバーマネージャーを使用して Active Directory Domain Services をインストールする
@@ -177,12 +176,12 @@ Azure で新しいドメインコントローラーを昇格した後は、仮�
    * [ドメインコントローラーオプション] ページで、[ドメインネームシステム (DNS) サーバーおよびグローバルカタログ (GC)] チェックボックスをオンのままにします。
    * 組織の要件に基づいてディレクトリサービス復元モードのパスワードを指定する
    * C: のパスを、場所の入力を求められたときに作成した F: ドライブを指すように変更します。
-   * ウィザードで選択した内容を確認し、[**次へ**] をクリックします。
+   * ウィザードで選択した内容を確認し、[ **次へ** ] をクリックします。
 
 > [!NOTE]
 > 前提条件の確認では、物理ネットワークアダプターに静的 IP アドレスが割り当てられていないことが警告されます。これは、Azure 仮想ネットワークで静的 IP が割り当てられているため、無視してかまいません。
 
-* **インストール**の選択
+* **インストール** の選択
 
 ウィザードがインストールプロセスを完了すると、VM が再起動されます。
 
@@ -193,13 +192,17 @@ VM の再起動が完了したら、前に使用した資格情報を使用し�
 
 [Azure 仮想ネットワークは ipv6 をサポートするようになりまし](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) たが、ipv6 経由で IPv4 を優先するように vm を設定する場合、このタスクを実行する方法については、サポート技術情報の記事「 [Windows での高度なユーザー向けの IPv6 の構成に関するガイダンス](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users)」を参照してください。
 
+### <a name="configure-dns"></a>DNS を構成する
+
+Azure の最初のサーバーを昇格した後、仮想ネットワークのプライマリおよびセカンダリ DNS サーバーにサーバーを設定する必要があります。オンプレミスの DNS サーバーは、3番目以降に降格されます。 DNS サーバーの変更の詳細については、「 [仮想ネットワークの作成、変更、削除](/azure/virtual-network/manage-virtual-network#change-dns-servers)」を参照してください。
+
 ### <a name="configure-the-second-domain-controller"></a>2番目のドメインコントローラーを構成する
 
 スクリプトで指定した資格情報を使用して AZDC02 に接続します。
 
 * データディスクの初期化とフォーマットを F:
-   * [スタート] メニューを開き、[**コンピューターの管理**] を参照します。
-   * **記憶域**  >  **ディスクの管理**を参照する
+   * [スタート] メニューを開き、[ **コンピューターの管理** ] を参照します。
+   * **記憶域**  >  **ディスクの管理** を参照する
    * MBR としてディスクを初期化する
    * 新しいシンプルボリュームを作成し、ドライブ文字 F: を割り当てます (必要に応じてボリュームラベルを指定できます)。
 * サーバーマネージャーを使用して Active Directory Domain Services をインストールする
@@ -209,22 +212,18 @@ VM の再起動が完了したら、前に使用した資格情報を使用し�
    * C: のパスを、場所の入力を求められたときに作成した F: ドライブを指すように変更します。
    * [ドメインコントローラーオプション] ページで、[ドメインネームシステム (DNS) サーバー] および [グローバルカタログ (GC)] がオンになっていることを確認します。
    * 組織の要件に基づいてディレクトリサービス復元モードのパスワードを指定する
-   * ウィザードで選択した内容を確認し、[**次へ**] をクリックします。
+   * ウィザードで選択した内容を確認し、[ **次へ** ] をクリックします。
 
 > [!NOTE]
 > 前提条件の確認では、物理ネットワークアダプターに静的 IP アドレスが割り当てられていないことが警告されます。 Azure 仮想ネットワークに静的 Ip が割り当てられているため、これは無視しても問題ありません。
 
-* **インストール**の選択
+* **インストール** の選択
 
 ウィザードがインストールプロセスを完了すると、VM が再起動されます。
 
 VM の再起動が完了したら、前に使用した資格情報で、今度は CONTOSO.com ドメインのメンバーとして再度ログインします。
 
-[Azure 仮想ネットワークは ipv6 をサポートするようになりまし](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) たが、ipv6 経由で IPv4 を優先するように vm を設定する場合、このタスクを実行する方法については、サポート技術情報の記事「 [Windows での高度なユーザー向けの IPv6 の構成に関するガイダンス](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users)」を参照してください。
-
-### <a name="configure-dns"></a>DNS を構成する
-
-Azure で新しいドメインコントローラーを昇格した後は、仮想ネットワークのプライマリおよびセカンダリ DNS サーバーに設定する必要があります。オンプレミスの DNS サーバーは、3番目以降に降格されます。 DNS サーバーの変更の詳細については、「 [仮想ネットワークの作成、変更、削除](/azure/virtual-network/manage-virtual-network#change-dns-servers)」を参照してください。
+[Azure 仮想ネットワークは ipv6 をサポートするようになりまし](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6)たが、ipv6 経由で IPv4 を優先するように vm を設定する場合、このタスクを実行する方法については、サポート技術情報の記事「 [Windows での高度なユーザー向けの IPv6 の構成に関するガイダンス](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users)」を参照してください。
 
 ### <a name="wrap-up"></a>まとめ
 
@@ -236,7 +235,7 @@ Azure で新しいドメインコントローラーを昇格した後は、仮�
 
 ### <a name="remove-using-the-azure-portal"></a>Azure portal を使用して削除する
 
-Azure portal から、[ **リソースグループ** ] に移動し、作成したリソースグループ (この例では ADonAzureVMs) を選択し、[ **リソースグループの削除**] を選択します。 このプロセスでは、リソースグループ内に含まれるすべてのリソースを削除する前に確認メッセージが表示されます。
+Azure portal から、[ **リソースグループ** ] に移動し、作成したリソースグループ (この例では ADonAzureVMs) を選択し、[ **リソースグループの削除** ] を選択します。 このプロセスでは、リソースグループ内に含まれるすべてのリソースを削除する前に確認メッセージが表示されます。
 
 ### <a name="remove-using-the-azure-cli"></a>Azure CLI を使用して削除する
 
@@ -252,6 +251,6 @@ az group delete --name ADonAzureVMs
 * [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect-get-started-express)
 * [バックアップと回復](/azure/virtual-machines/windows/backup-recovery)
 * [サイト間 VPN 接続](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
-* [Monitoring](/azure/virtual-machines/windows/monitor)
+* [監視](/azure/virtual-machines/windows/monitor)
 * [セキュリティとポリシー](/azure/virtual-machines/windows/security-policy)
 * [メンテナンスと更新](/azure/virtual-machines/windows/maintenance-and-updates)
