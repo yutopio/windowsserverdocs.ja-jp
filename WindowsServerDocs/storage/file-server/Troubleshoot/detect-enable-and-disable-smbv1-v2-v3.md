@@ -3,24 +3,37 @@ title: Windows で SMBv1、SMBv2、および SMBv3 を検出、有効化、お�
 description: Windows のクライアント環境とサーバー環境で、サーバーメッセージブロックプロトコル (SMBv1、SMBv2、および SMBv3) を有効または無効にする方法について説明します。
 author: Deland-Han
 manager: dcscontentpm
-ms.topic: article
+ms.topic: how-to
 ms.author: delhan
-ms.date: 09/29/2020
-ms.openlocfilehash: 9008a3381ead368afb627bcfdcd8084a389afabb
-ms.sourcegitcommit: f89639d3861c61620275c69f31f4b02fd48327ab
+ms.date: 10/29/2020
+ms.openlocfilehash: ebf5617c108d959e4c4e107652f48ad4a4b53c08
+ms.sourcegitcommit: 65eef102021ed2b5abd73dca8a0ffd6eb174d705
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91517548"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035768"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Windows で SMBv1、SMBv2、および SMBv3 を検出、有効化、および無効化する方法
 
-## <a name="summary"></a>まとめ
+>適用対象: Windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012
 
-この記事では、SMB クライアントおよびサーバーコンポーネントで、サーバーメッセージブロック (SMB) バージョン 1 (SMBv1)、SMB バージョン 2 (SMBv2)、および SMB バージョン 3 (SMBv3) を有効または無効にする方法について説明します。 
+この記事では、SMB クライアントおよびサーバーコンポーネントで、サーバーメッセージブロック (SMB) バージョン 1 (SMBv1)、SMB バージョン 2 (SMBv2)、および SMB バージョン 3 (SMBv3) を有効または無効にする方法について説明します。
 
-> [!IMPORTANT]
-> SMBv2 または SMBv3 を無効にし **ない** ことをお勧めします。 一時的なトラブルシューティングメジャーとして SMBv2 または SMBv3 のみを無効にします。 SMBv2 または SMBv3 は無効のままにしないでください。  
+SMBv1 を無効にしたり削除したりすると、古いコンピューターまたはソフトウェアとの互換性の問題が発生する可能性がありますが、SMBv1 には重大なセキュリティ上の脆弱性があり、 [使用しないことを強くお勧め](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858)します。
+
+## <a name="disabling-smbv2-or-smbv3-for-troubleshooting"></a>トラブルシューティングのために SMBv2 または SMBv3 を無効にする
+
+SMBv2 と SMBv3 を有効のままにしておくことをお勧めしますが、 [Smb サーバーで状態を検出し、smb プロトコルを有効または無効にする方法](detect-enable-and-disable-smbv1-v2-v3.md#how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-server)に関するページで説明されているように、トラブルシューティングのために一時的に1つを無効にすると便利です。
+
+Windows 10、Windows 8.1、Windows 8、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、および Windows Server 2012 では、SMBv3 を無効にすると、次の機能 (および前の一覧で説明されている SMBv2 機能) が非アクティブになります。
+
+- 透過フェールオーバー-メンテナンス中またはフェールオーバー中にクラスターノードを中断することなくクライアントが再接続する    
+- Scale Out-すべてのファイルクラスターノード上の共有データへの同時アクセス     
+- マルチチャネル-クライアントとサーバーの間で複数のパスを使用できる場合のネットワーク帯域幅とフォールトトレランスの集約  
+- SMB ダイレクト–低待機時間と低い CPU 使用率で、非常に高いパフォーマンスを実現する RDMA ネットワークサポートを追加します。    
+- 暗号化–エンドツーエンドの暗号化を提供し、信頼されていないネットワークの傍受から保護します。    
+- ディレクトリリース-ブランチオフィスのキャッシュによってアプリケーションの応答時間が向上します。    
+- パフォーマンスの最適化-小規模なランダム読み取り/書き込み i/o の最適化
 
 Windows 7 と Windows Server 2008 R2 で SMBv2 を無効にすると、次の機能が非アクティブになります。 
  
@@ -35,23 +48,7 @@ Windows 7 と Windows Server 2008 R2 で SMBv2 を無効にすると、次の機
 - 大きな MTU のサポート-10 gigabye (GB) イーサネットの完全な使用    
 - エネルギー効率の向上-サーバーに対してファイルを開いているクライアントをスリープ状態にすることができます。    
 
-Windows 8、Windows 8.1、Windows 10、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016、および Windows Server 2019 では、SMBv3 を無効にすると、次の機能 (および前の一覧に記載されている SMBv2 機能) が非アクティブになります。 
- 
-- 透過フェールオーバー-メンテナンス中またはフェールオーバー中にクラスターノードを中断することなくクライアントが再接続する    
-- Scale Out-すべてのファイルクラスターノード上の共有データへの同時アクセス     
-- マルチチャネル-クライアントとサーバーの間で複数のパスを使用できる場合のネットワーク帯域幅とフォールトトレランスの集約  
-- SMB ダイレクト–低待機時間と低い CPU 使用率で、非常に高いパフォーマンスを実現する RDMA ネットワークサポートを追加します。    
-- 暗号化–エンドツーエンドの暗号化を提供し、信頼されていないネットワークの傍受から保護します。    
-- ディレクトリリース-ブランチオフィスのキャッシュによってアプリケーションの応答時間が向上します。    
-- パフォーマンスの最適化-小規模なランダム読み取り/書き込み i/o の最適化
-
-##  <a name="more-information"></a>詳細情報
-
-SMBv2 プロトコルは、Windows Vista および Windows Server 2008 で導入されました。
-
-SMBv3 プロトコルは、Windows 8 および Windows Server 2012 で導入されました。
-
-SMBv2 および SMBv3 機能の機能の詳細については、次の記事を参照してください。
+SMBv2 プロトコルは windows Vista および windows Server 2008 で導入されましたが、SMBv3 プロトコルは Windows 8 および Windows Server 2012 で導入されました。 SMBv2 および SMBv3 機能の機能の詳細については、次の記事を参照してください。
 
 [サーバー メッセージ ブロックの概要](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v=ws.11))
 
@@ -109,7 +106,7 @@ SMBv2 および SMBv3 機能の機能の詳細については、次の記事を�
   Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-##### <a name="smb-v2v3protocol-only-disables-smb-v2v3-server"></a>SMB v2/v3 プロトコル (SMB v2/v3 サーバーのみを無効にする)
+##### <a name="smb-v2v3-protocol-only-disables-smb-v2v3-server"></a>SMB v2/v3 プロトコル (SMB v2/v3 サーバーのみを無効にする)
 
 - 識別 
   
@@ -131,18 +128,18 @@ SMBv2 および SMBv3 機能の機能の詳細については、次の記事を�
 
 #### <a name="windows-81-and-windows-10-add-or-remove-programs-method"></a>Windows 8.1 と Windows 10: プログラムの追加と削除の方法
 
-![プログラムの追加と削除のクライアントメソッド](media/detect-enable-and-disable-smbv1-v2-v3-2.png)
+![Add-Remove Programs クライアントメソッド](media/detect-enable-and-disable-smbv1-v2-v3-2.png)
 
 ## <a name="how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-server"></a>SMB サーバーで状態を検出し、SMB プロトコルを有効または無効にする方法
 
 ### <a name="for-windows-8-and-windows-server-2012"></a>Windows 8 および Windows Server 2012 の場合
 
-Windows 8 と Windows Server 2012 には、新しい **SMBServerConfiguration** windows PowerShell コマンドレットが導入されています。 コマンドレットを使用すると、サーバーコンポーネントの SMBv1、SMBv2、および SMBv3 プロトコルを有効または無効にすることができます。  
+Windows 8 と Windows Server 2012 には、新しい **SMBServerConfiguration** windows PowerShell コマンドレットが導入されています。 コマンドレットを使用すると、サーバーコンポーネントの SMBv1、SMBv2、および SMBv3 プロトコルを有効または無効にすることができます。  
 
 > [!NOTE]   
 > Windows 8 または Windows Server 2012 で SMBv2 を有効または無効にすると、SMBv3 も有効または無効になります。 これらのプロトコルは同じスタックを共有するため、この動作が発生します。     
 
-**SMBServerConfiguration**コマンドレットを実行した後に、コンピューターを再起動する必要はありません。 
+**SMBServerConfiguration** コマンドレットを実行した後に、コンピューターを再起動する必要はありません。 
 
 ##### <a name="smb-v1-on-smb-server"></a>Smb サーバー上の SMB v1
 
@@ -252,7 +249,7 @@ SMB サーバーで SMBv1 を有効または無効にするには、次のレジ
 Registry entry: SMB1
 REG_DWORD: 0 = Disabled
 REG_DWORD: 1 = Enabled
-Default: 1 = Enabled (No registry key is created)
+Default: 1 = Enabled (No registry key is created)
 ```
 
 SMB サーバーで SMBv2 を有効または無効にするには、次のレジストリキーを構成します。 
@@ -263,11 +260,11 @@ SMB サーバーで SMBv2 を有効または無効にするには、次のレジ
 Registry entry: SMB2
 REG_DWORD: 0 = Disabled
 REG_DWORD: 1 = Enabled
-Default: 1 = Enabled (No registry key is created) 
+Default: 1 = Enabled (No registry key is created) 
 ```
 
 > [!NOTE]
-> これらの変更を行った後、コンピューターを再起動する必要があります。 
+> これらの変更を行った後、コンピューターを再起動する必要があります。 
 
 ## <a name="how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-client"></a>SMB クライアントで状態を検出し、SMB プロトコルを有効または無効にする方法
 
@@ -337,29 +334,29 @@ Default: 1 = Enabled (No registry key is created)
 
 グループポリシーを使用してこれを構成するには、次の手順を実行します。
  
-1. [**グループ ポリシー管理コンソール**] を開きます。 新しい基本設定項目を含むグループ ポリシー オブジェクト (GPO) を右クリックして、**[編集]** をクリックします。
+1. [ **グループ ポリシー管理コンソール** ] を開きます。 新しい基本設定項目を含むグループ ポリシー オブジェクト (GPO) を右クリックして、 **[編集]** をクリックします。
 
-2. コンソールツリーの [ **コンピューターの構成**] の下にある [ **基本設定** ] フォルダーを展開し、[ **Windows の設定** ] フォルダーを展開します。
+2. コンソールツリーの [ **コンピューターの構成** ] の下にある [ **基本設定** ] フォルダーを展開し、[ **Windows の設定** ] フォルダーを展開します。
 
-3. **レジストリ**ノードを右クリックして [**新規作成**] をポイントし、[**レジストリ項目**] を選択します。
+3. **レジストリ** ノードを右クリックして [ **新規作成** ] をポイントし、[ **レジストリ項目** ] を選択します。
 
    ![レジストリ-新規-レジストリ項目](media/detect-enable-and-disable-smbv1-v2-v3-3.png)    
  
-[ **新しいレジストリのプロパティ**] ダイアログボックスで、次のように選択します。 
+[ **新しいレジストリのプロパティ** ] ダイアログボックスで、次のように選択します。 
  
-- **操作**: 作成    
-- **Hive**: HKEY_LOCAL_MACHINE    
-- **キーのパス**: SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters    
-- **値の名前**: SMB1    
-- **値の型**:REG_DWORD    
-- **値のデータ**: 0    
+- **操作** : 作成    
+- **Hive** : HKEY_LOCAL_MACHINE    
+- **キーのパス** : SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters    
+- **値の名前** : SMB1    
+- **値の型** :REG_DWORD    
+- **値のデータ** : 0    
  
 ![[新しいレジストリのプロパティ]-[全般]](media/detect-enable-and-disable-smbv1-v2-v3-4.png)
 
 これにより、SMBv1 サーバーコンポーネントが無効になります。 このグループポリシーは、ドメイン内のすべての必要なワークステーション、サーバー、およびドメインコントローラーに適用する必要があります。
 
 > [!NOTE]
->また、サポートされていないオペレーティングシステムや、Windows XP などの選択した除外を除外するように、  [WMI フィルター](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc947846(v=ws.10))を設定することもできます。
+> また、サポートされていないオペレーティングシステムや、Windows XP などの選択した除外を除外するように、 [WMI フィルター](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc947846(v=ws.10))を設定することもできます。
 
 > [!IMPORTANT]
 > 以前のバージョンの Windows XP または以前の Linux およびサードパーティ製のシステム (SMBv2 または SMBv3 をサポートしていないシステム) に対してこれらの変更を行う場合は、SMB v1 が無効になっている SYSVOL または他のファイル共有にアクセスする必要があることに注意してください。     
@@ -370,33 +367,33 @@ SMBv1 クライアントを無効にするには、 **MRxSMB10** の開始を無
 
 これにより、レジストリ内の次の2つの項目の既定値が更新され、置き換えられます。 
 
-**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\services\mrxsmb10** 
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\mrxsmb10** 
 
-レジストリエントリ: **開始** REG_DWORD: **4**= 無効
+レジストリエントリ: **開始** REG_DWORD: **4** = 無効
 
-**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\LanmanWorkstation** 
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation** 
 
 レジストリエントリ: **依存関係 Onservice** REG_MULTI_SZ: **"ブラウザー"、"MRxSmb20"、"NSI"**   
 
 > [!NOTE]
-> 既定で含まれる MRxSMB10 は、依存関係として削除されます。
+> 既定で含まれる MRxSMB10 は、依存関係として削除されます。
 
 グループポリシーを使用してこれを構成するには、次の手順を実行します。
  
-1. [**グループ ポリシー管理コンソール**] を開きます。 新しい基本設定項目を含むグループ ポリシー オブジェクト (GPO) を右クリックして、**[編集]** をクリックします。
+1. [ **グループ ポリシー管理コンソール** ] を開きます。 新しい基本設定項目を含むグループ ポリシー オブジェクト (GPO) を右クリックして、 **[編集]** をクリックします。
 
-2. コンソールツリーの [ **コンピューターの構成**] の下にある [ **基本設定** ] フォルダーを展開し、[ **Windows の設定** ] フォルダーを展開します。
+2. コンソールツリーの [ **コンピューターの構成** ] の下にある [ **基本設定** ] フォルダーを展開し、[ **Windows の設定** ] フォルダーを展開します。
 
-3. **レジストリ**ノードを右クリックして [**新規作成**] をポイントし、[**レジストリ項目**] を選択します。    
+3. **レジストリ** ノードを右クリックして [ **新規作成** ] をポイントし、[ **レジストリ項目** ] を選択します。    
 
 4. [ **新しいレジストリのプロパティ** ] ダイアログボックスで、次のように選択します。 
  
-   - **操作**: 更新
-   - **Hive**: HKEY_LOCAL_MACHINE
-   - **キーのパス**: SYSTEM\CurrentControlSet\services\mrxsmb10
-   - **値の名前**: Start
-   - **値の型**:REG_DWORD
-   - **値のデータ**: 4
+   - **操作** : 更新
+   - **Hive** : HKEY_LOCAL_MACHINE
+   - **キーのパス** : SYSTEM\CurrentControlSet\services\mrxsmb10
+   - **値の名前** : Start
+   - **値の型** :REG_DWORD
+   - **値のデータ** : 4
  
    ![開始プロパティ-全般](media/detect-enable-and-disable-smbv1-v2-v3-5.png)
 
@@ -404,12 +401,12 @@ SMBv1 クライアントを無効にするには、 **MRxSMB10** の開始を無
 
    [ **新しいレジストリのプロパティ** ] ダイアログボックスで、次のように選択します。 
  
-   - **操作**: 置換
-   - **Hive**: HKEY_LOCAL_MACHINE
-   - **キーのパス**: SYSTEM\CurrentControlSet\Services\LanmanWorkstation
-   - **値の名前**: 依存関係 onservice
-   - **値の型**: REG_MULTI_SZ 
-   - **値のデータ**:
+   - **操作** : 置換
+   - **Hive** : HKEY_LOCAL_MACHINE
+   - **キーのパス** : SYSTEM\CurrentControlSet\Services\LanmanWorkstation
+   - **値の名前** : 依存関係 onservice
+   - **値の型** : REG_MULTI_SZ 
+   - **値のデータ** :
       - ブラウザー
       - MRxSmb20
       - NSI
@@ -419,7 +416,7 @@ SMBv1 クライアントを無効にするには、 **MRxSMB10** の開始を無
 
    ![依存関係 Onservice のプロパティ](media/detect-enable-and-disable-smbv1-v2-v3-6.png) 
 
-   既定値には、多くのバージョンの Windows の**MRxSMB10**が含まれています。したがって、この複数値の文字列で置き換えることにより、 **LanmanServer**の依存関係として**MRxSMB10**を削除し、4つの既定値から上記の3つの値だけに移動することが有効になります。
+   既定値には、多くのバージョンの Windows の **MRxSMB10** が含まれています。したがって、この複数値の文字列で置き換えることにより、 **LanmanServer** の依存関係として **MRxSMB10** を削除し、4つの既定値から上記の3つの値だけに移動することが有効になります。
 
    > [!NOTE]
    > グループポリシー管理コンソールを使用する場合は、引用符またはコンマを使用する必要はありません。 個々の行に各エントリを入力するだけです。

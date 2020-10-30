@@ -6,16 +6,16 @@ ms.author: nedpyle
 manager: siroy
 ms.date: 06/02/2020
 ms.topic: article
-ms.openlocfilehash: e8e327fcf2f9173c7fb571580280ba4d5b7389fe
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: c59be01c856cac27f4372291b52bd43419c9ac46
+ms.sourcegitcommit: 65eef102021ed2b5abd73dca8a0ffd6eb174d705
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997497"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035778"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>記憶域移行サービスに関してよく寄せられる質問 (FAQ)
 
-このトピックでは、 [Storage Migration Service](overview.md)を使用したサーバーの移行に関してよく寄せられる質問 (faq) に対する回答を示します。
+このトピックでは、 [Storage Migration Service](overview.md) を使用したサーバーの移行に関してよく寄せられる質問 (faq) に対する回答を示します。
 
 ## <a name="what-files-and-folders-are-excluded-from-transfers"></a>転送から除外されるファイルとフォルダー
 
@@ -36,11 +36,11 @@ Storage Migration Service は、Windows の操作に干渉する可能性があ�
 
 ## <a name="are-clusters-supported-as-sources-or-destinations"></a>クラスターは変換元または変換先としてサポートされていますか。
 
-記憶域移行サービスは、累積的な更新プログラム[KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534)またはそれ以降の更新プログラムのインストール後のクラスターからクラスターへの移行をサポートしています。 これには、ソースクラスターから移行先クラスターへの移行だけでなく、デバイス統合のためにスタンドアロンの移行元サーバーから移行先クラスターに移行することも含まれます。 ただし、スタンドアロンサーバーにクラスターを移行することはできません。
+記憶域移行サービスは、累積的な更新プログラム [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) またはそれ以降の更新プログラムのインストール後のクラスターからクラスターへの移行をサポートしています。 これには、ソースクラスターから移行先クラスターへの移行だけでなく、デバイス統合のためにスタンドアロンの移行元サーバーから移行先クラスターに移行することも含まれます。 ただし、スタンドアロンサーバーにクラスターを移行することはできません。
 
 ## <a name="do-local-groups-and-local-users-migrate"></a>ローカルグループとローカルユーザーを移行しますか?
 
-記憶域移行サービスでは、累積的な更新プログラム[KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534)またはそれ以降の更新プログラムのインストール後のローカルユーザーとグループの移行がサポートされています。
+記憶域移行サービスでは、累積的な更新プログラム [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) またはそれ以降の更新プログラムのインストール後のローカルユーザーとグループの移行がサポートされています。
 
 ## <a name="is-domain-controller-migration-supported"></a>ドメインコントローラーの移行はサポートされていますか?
 
@@ -53,7 +53,7 @@ Storage Migration Service は、Windows の操作に干渉する可能性があ�
 - 状態の共有
 - 可用性の種類
 - 共有の種類
-- フォルダー列挙モード *(アクセスベースの列挙型または ABE とも*呼ばれます)
+- フォルダー列挙モード *(Access-Based 列挙型または ABE とも* 呼ばれる)
 - キャッシュモード
 - リースモード
 - Smb インスタンス
@@ -65,7 +65,7 @@ Storage Migration Service は、Windows の操作に干渉する可能性があ�
 - Id リモート処理
 - インフラストラクチャ
 - 名前
-- パス
+- Path
 - スコープ
 - スコープ名
 - セキュリティ記述子
@@ -79,7 +79,7 @@ Windows Server 2019 に出荷された Storage Migration Service のバージョ
 
 ## <a name="can-i-migrate-from-sources-other-than-windows-server"></a>Windows Server 以外のソースから移行できますか?
 
-記憶域移行サービスは、累積的な更新プログラム[KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534)またはそれ以降の更新プログラムのインストール後に、Samba Linux サーバーからの移行をサポートします。 サポートされている Samba のバージョンと Linux ディストリビューションの一覧については、要件を参照してください。
+記憶域移行サービスは、累積的な更新プログラム [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) またはそれ以降の更新プログラムのインストール後に、Samba Linux サーバーからの移行をサポートします。 サポートされている Samba のバージョンと Linux ディストリビューションの一覧については、要件を参照してください。
 
 ## <a name="can-i-migrate-previous-file-versions"></a>以前のバージョンのファイルを移行できますか?
 
@@ -90,6 +90,8 @@ Windows Server 2019 に出荷された記憶域移行サービスのバージョ
 Storage Migration Service には、Storage Migration Service プロキシサービスと呼ばれるマルチスレッドの読み取りおよびコピーエンジンが含まれています。これは、多くのファイルコピーツールではなく、データの忠実性を完全に再現することを目的として設計されています。 既定の構成は多くのお客様に最適ですが、インベントリおよび転送中に SMS のパフォーマンスを向上させる方法があります。
 
 - **対象のオペレーティングシステムに Windows Server 2019 を使用します。** Windows Server 2019 には、Storage Migration Service プロキシサービスが含まれています。 この機能をインストールして Windows Server 2019 の変換先に移行すると、すべての転送は、ソースと宛先の間で直接表示されるように動作します。 対象のコンピューターが Windows Server 2012 R2 または Windows Server 2016 の場合、このサービスは、転送中に orchestrator 上で実行されます。これは、転送がダブルホップで、処理速度が大幅に低下することを意味します。 Windows Server 2012 R2 または Windows Server 2016 の変換先で複数のジョブが実行されている場合、orchestrator はボトルネックになります。
+
+- **最新の毎月の累積的な更新プログラムをインストールします。** 転送と再転送のパフォーマンスを向上させるため、およびインベントリのパフォーマンスを向上させるために、いくつかの更新プログラムで Storage Migration Service プロキシサービスを改善しました。 速度を大幅に向上させるために、 [2020 年10月の累積的な更新プログラム](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390) 以降の KB4580390 をインストールします。
 
 - **既定の転送スレッドを変更します。** 記憶域移行サービスのプロキシサービスは、指定されたジョブで8個のファイルを同時にコピーします。 Storage Migration Service プロキシを実行しているすべてのノードで、次のレジストリ REG_DWORD 値の名前を10進数で調整することにより、同時コピースレッド数を増やすことができます。
 
@@ -118,7 +120,7 @@ Storage Migration Service には、Storage Migration Service プロキシサー�
 - **SMB 3 マルチチャネルを使用します。** Windows Server 2012 以降のソースコンピューターから転送する場合、SMB 2.x では、ファイルコピーのパフォーマンスを大幅に向上させることができるマルチチャネルコピーがサポートされます。 この機能は、移行元と移行先の両方が次のことを行う限り、自動的に機能します。
 
    - 複数のネットワーク アダプター
-   - Receive Side Scaling (RSS) をサポートする1つまたは複数のネットワークアダプター
+   - Receive Side Scaling (RSS) をサポートする 1 つ以上のネットワーク アダプター
    - NIC チーミングを使用して構成されているその他のネットワークアダプターの1つ
    - RDMA をサポートしているネットワーク アダプター 1 つ以上
 
@@ -126,11 +128,11 @@ Storage Migration Service には、Storage Migration Service プロキシサー�
 
 - **高パフォーマンスの処理を有効にします。** サーバーの BIOS および UEFI の設定が、C 状態の無効化、QPI 速度の設定、NUMA の有効化、最大メモリ動作周波数の設定など、高パフォーマンスを有効にする設定であることを確認します。 Windows Server の電源管理が高パフォーマンスに設定されていることを確認します。 必要に応じて再起動します。 移行が完了したら、必ずこれらの状態を適切な状態に戻してください。
 
-- **ハードウェアの調整**Windows server 2019 と Windows Server 2016 を実行する orchestrator および対象コンピューターのチューニングについては、「 [Windows server 2016 のパフォーマンスチューニングガイドライン](../../administration/performance-tuning/index.md)」を参照してください。 [ネットワークサブシステムのパフォーマンスチューニング](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md)に関するセクションには、特に重要な情報が含まれています。
+- **ハードウェアの調整** Windows server 2019 と Windows Server 2016 を実行する orchestrator および対象コンピューターのチューニングについては、「 [Windows server 2016 のパフォーマンスチューニングガイドライン](../../administration/performance-tuning/index.md) 」を参照してください。 [ネットワークサブシステムのパフォーマンスチューニング](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md)に関するセクションには、特に重要な情報が含まれています。
 
 - **より高速なストレージを使用します。** ソースコンピューターのストレージ速度をアップグレードするのは困難な場合がありますが、転送時に不要なボトルネックが発生しないようにするために、ソースが読み取り IO パフォーマンスであるため、宛先ストレージの書き込み IO パフォーマンスが少なくとも高速であることを確認する必要があります。 移行先が VM の場合は、少なくとも移行の目的で、少なくとも移行のために、フラッシュ層、ミラー化されたすべてのフラッシュまたはハイブリッドスペースを使用する記憶域スペースダイレクト HCI クラスターなどのハイパーバイザーホストの最速のストレージ層で実行されることを確認します。 SMS の移行が完了したら、低速の層またはホストに VM をライブマイグレーションできます。
 
-- **ウイルス対策ソフトウェアを更新します。** パフォーマンスのオーバーヘッドを最小限に抑えるために、移行元と移行先がウイルス対策ソフトウェアの最新のパッチバージョンを実行していることを必ず確認してください。 テストとして、移行元サーバーと移行先サーバーでインベントリまたは移行しているフォルダーのスキャンを*一時的*に除外することができます。 転送のパフォーマンスが向上した場合は、ウイルス対策ソフトウェアベンダーに問い合わせて、ウイルス対策ソフトウェアの更新版、または予想されるパフォーマンス低下について説明してください。
+- **ウイルス対策ソフトウェアを更新します。** パフォーマンスのオーバーヘッドを最小限に抑えるために、移行元と移行先がウイルス対策ソフトウェアの最新のパッチバージョンを実行していることを必ず確認してください。 テストとして、移行元サーバーと移行先サーバーでインベントリまたは移行しているフォルダーのスキャンを *一時的* に除外することができます。 転送のパフォーマンスが向上した場合は、ウイルス対策ソフトウェアベンダーに問い合わせて、ウイルス対策ソフトウェアの更新版、または予想されるパフォーマンス低下について説明してください。
 
 ## <a name="can-i-migrate-from-ntfs-to-refs"></a>NTFS から REFS に移行できますか?
 
@@ -146,7 +148,7 @@ Storage Migration Service では、hidden c:\programdata\microsoft\storagemigrat
 4. フォルダーを orchestrator コンピューターの別のドライブに移動します。
 5. 次のレジストリ REG_SZ 値を設定します。
 
-    HKEY_Local_Machine \Software\Microsoft\SMS DatabasePath =*別のボリューム上の新しいデータベースフォルダーへのパス*
+    HKEY_Local_Machine \Software\Microsoft\SMS DatabasePath = *別のボリューム上の新しいデータベースフォルダーへのパス*
 
 6. システムがそのフォルダーのすべてのファイルとサブフォルダーに対してフルコントロールを持っていることを確認する
 7. 自分のアカウントのアクセス許可を削除します。
@@ -164,7 +166,7 @@ Storage Migration Service では、hidden c:\programdata\microsoft\storagemigrat
 
 転送 CSV ファイルで検出されたほとんどのエラーは、Windows システムエラーコードです。 各エラーの意味を確認するには、 [Win32 エラーコードのドキュメント](/windows/win32/debug/system-error-codes)を参照してください。
 
-## <a name="what-are-my-options-to-give-feedback-file-bugs-or-get-support"></a><a name="give-feedback"></a>フィードバックの提供、バグの報告、サポートを受けるためのオプションは何ですか?
+## <a name="what-are-my-options-to-give-feedback-file-bugs-or-get-support"></a><a name="give-feedback"></a> フィードバックの提供、バグの報告、サポートを受けるためのオプションは何ですか?
 
 ストレージ移行サービスに関するフィードバックを提供するには:
 
