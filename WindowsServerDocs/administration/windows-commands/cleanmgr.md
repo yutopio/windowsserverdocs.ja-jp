@@ -2,16 +2,16 @@
 title: cleanmgr
 description: 特定のファイルを自動的にクリーンアップするように、ディスククリーンアップツール (Cleanmgr.exe) を構成します。
 ms.reviewer: cosmosdarwin
-author: iangpgh
+author: JasonGerend
 ms.author: jgerend
 manager: daveba
 ms.date: 06/20/2019
-ms.openlocfilehash: 81a9283ef75ef76b14a8ee8a5ecc3ab225207560
-ms.sourcegitcommit: 0b3d6661c44aa1a697087e644437279142726d84
+ms.openlocfilehash: dd8a015ff27809d0ef960241ce9221b4215c20aa
+ms.sourcegitcommit: 7499749ce7baaf58a523cae2dd46737d635475ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90083663"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043880"
 ---
 # <a name="cleanmgr"></a>cleanmgr
 
@@ -27,19 +27,19 @@ cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | 説明 |
+| パラメーター | Description |
 | --------- | ----------- |
-| d `<driveletter>` | ディスククリーンアップをクリーニングするドライブを指定します。<p>**注:****/D**オプションは、では使用されません `/sagerun:n` 。 |
+| d `<driveletter>` | ディスククリーンアップをクリーニングするドライブを指定します。<p>**注:****/D** オプションは、では使用されません `/sagerun:n` 。 |
 | /sageset: n | [ **ディスククリーンアップの設定** ] ダイアログボックスが表示されます。また、選択した設定を保存するためのレジストリキーも作成されます。 `n`レジストリに格納されている値を使用すると、ディスククリーンアップを実行するタスクを指定できます。 `n`0 ~ 9999 の任意の整数値を指定できます。 |
-| /sagerun: n | **/Sageset**オプションを使用する場合、n 値に割り当てられている指定されたタスクを実行します。 コンピューター上のすべてのドライブが列挙され、選択したプロファイルが各ドライブに対して実行されます。 |
-| /チューンアップ: n | **/Sageset**と **/sagerun**を同じに対して実行し `n` ます。 |
+| /sagerun: n | **/Sageset** オプションを使用する場合、n 値に割り当てられている指定されたタスクを実行します。 コンピューター上のすべてのドライブが列挙され、選択したプロファイルが各ドライブに対して実行されます。 |
+| /チューンアップ: n | **/Sageset** と **/sagerun** を同じに対して実行し `n` ます。 |
 | /lowdisk | 既定の設定を使用してを実行します。 |
 | /非常に低ディスク | 既定の設定を使用してを実行します。ユーザープロンプトは表示されません。 |
 | /? | コマンド プロンプトにヘルプを表示します。 |
 
 #### <a name="options"></a>オプション
 
-**/Sageset**と **/sagerun**を使用してディスククリーンアップに指定できるファイルのオプションは次のとおりです。
+**/Sageset** と **/sagerun** を使用してディスククリーンアップに指定できるファイルのオプションは次のとおりです。
 
 - **一時セットアップファイル** -これらは、実行されなくなったセットアッププログラムによって作成されたファイルです。
 
@@ -66,7 +66,7 @@ cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/
 
 ## <a name="examples"></a>例
 
-ディスククリーンアップアプリを実行して、そのダイアログボックスを使用して後で使用するオプションを指定できるようにするには、設定をセット **1**に保存し、次のように入力します。
+ディスククリーンアップアプリを実行して、そのダイアログボックスを使用して後で使用するオプションを指定できるようにするには、設定をセット **1** に保存し、次のように入力します。
 
 ```
 cleanmgr /sageset:1
