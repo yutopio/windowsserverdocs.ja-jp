@@ -1,17 +1,17 @@
 ---
 ms.assetid: 7a7ab95c-9cb3-4a7b-985a-3fc08334cf4f
 title: 最低限の特権の管理モデルを実装する
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: ab4d6f282de88b7d55256ecd3a9ff4a82a7881fb
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 95f8158f5565c57904b7423456eb7189f9e58a2a
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941452"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069664"
 ---
 # <a name="implementing-least-privilege-administrative-models"></a>最低限の特権の管理モデルを実装する
 
@@ -86,16 +86,16 @@ Active Directory では、EA、DA、および BA グループに過剰な数の�
 
 組み込みの管理者アカウントは、メンバーサーバー上のサービスアカウントとして使用することも、ローカルコンピューターへのログオンに使用することもできません (セーフモードでは、アカウントが無効になっている場合でも許可されます)。 ここで説明する設定を実装する目的は、保護コントロールを最初に元に戻す場合を除き、各コンピューターのローカル管理者アカウントを使用できないようにすることです。 これらのコントロールを実装し、変更の管理者アカウントを監視することにより、ローカル管理者アカウントを対象とする攻撃が成功する可能性を大幅に低減できます。
 
-##### <a name="configuring-gpos-to-restrict-administrator-accounts-on-domain-joined-systems"></a>ドメインに参加しているシステムの管理者アカウントを制限するように Gpo を構成する
+##### <a name="configuring-gpos-to-restrict-administrator-accounts-on-domain-joined-systems"></a>Domain-Joined システムの管理者アカウントを制限するように Gpo を構成する
 
-1つまたは複数の Gpo を作成し、各ドメインのワークステーションとメンバーサーバー Ou にリンクするには、Administrator アカウントを **Computer Configuration\Policies\Windows**の次のユーザー権利に追加します。
+1つまたは複数の Gpo を作成し、各ドメインのワークステーションとメンバーサーバー Ou にリンクするには、Administrator アカウントを **Computer Configuration\Policies\Windows** の次のユーザー権利に追加します。
 
 - ネットワークからこのコンピューターへのアクセスを拒否
 - バッチ ジョブとしてのログオン権限を拒否する
 - サービスとしてのログオン権限を拒否する
 - リモート デスクトップ サービスを使ったログオンを拒否
 
-これらのユーザー権利に管理者アカウントを追加する場合は、アカウントのラベル付け方法によってローカル管理者アカウントとドメインの管理者アカウントのどちらを追加するかを指定します。 たとえば、これらの拒否権限に NWTRADERS ドメインの管理者アカウントを追加するには、アカウントを **NWTRADERS\Administrator**として入力するか、nwtraders ドメインの管理者アカウントを参照します。 ローカル管理者アカウントを制限するには、グループポリシーオブジェクトエディターのこれらのユーザー権利設定に「 **Administrator** 」と入力します。
+これらのユーザー権利に管理者アカウントを追加する場合は、アカウントのラベル付け方法によってローカル管理者アカウントとドメインの管理者アカウントのどちらを追加するかを指定します。 たとえば、これらの拒否権限に NWTRADERS ドメインの管理者アカウントを追加するには、アカウントを **NWTRADERS\Administrator** として入力するか、nwtraders ドメインの管理者アカウントを参照します。 ローカル管理者アカウントを制限するには、グループポリシーオブジェクトエディターのこれらのユーザー権利設定に「 **Administrator** 」と入力します。
 
 > [!NOTE]
 > ローカル管理者アカウントの名前を変更しても、ポリシーは引き続き適用されます。
@@ -108,13 +108,13 @@ Active Directory では、EA、DA、および BA グループに過剰な数の�
 
 *法 6: コンピューターは、管理者が信頼できるようにするだけで安全です。* - [セキュリティに関する10の不変法 (バージョン 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)
 
-ここで提供される情報は、Active Directory で、特権が組み込まれているビルトインアカウントとグループをセキュリティで保護するための一般的なガイドラインを提供することを目的としています。 詳細な手順については、 [「付録 D: Active Directory で組み込みの管理者アカウントをセキュリティ](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)で保護する」、 [付録 E: Active Directory で Enterprise admins](../../../ad-ds/plan/security-best-practices/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md)グループをセキュリティで保護する」、「 [付録 F: Active Directory で Domain admins](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md)グループをセキュリティで保護する」、 [「付録 G: Active Directory で管理者グループをセキュリティで保護](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md)する」を参照してください。
+ここで提供される情報は、Active Directory で、特権が組み込まれているビルトインアカウントとグループをセキュリティで保護するための一般的なガイドラインを提供することを目的としています。 詳細な手順については、 [「付録 D: Active Directory で Built-In 管理者アカウントをセキュリティ](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)で保護する」、付録 [E Active Directory:](../../../ad-ds/plan/security-best-practices/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md)「 [Active Directory で Domain admins](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md)グループをセキュリティで保護する」、および [「付録 G: Active Directory で管理者グループをセキュリティ](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md)で保護する」を参照してください。
 
 これらの設定のいずれかを実装する前に、すべての設定を十分にテストして、それらが環境に適しているかどうかを判断する必要もあります。 すべての組織でこれらの設定を実装することはできません。
 
 #### <a name="securing-built-in-administrator-accounts-in-active-directory"></a>Active Directory でのビルトイン管理者アカウントのセキュリティ保護
 
-Active Directory の各ドメインで、ドメインの作成の一環として管理者アカウントが作成されます。 既定では、このアカウントはドメインの domain Admins グループと管理者グループのメンバーであり、ドメインがフォレストのルートドメインである場合、アカウントは Enterprise Admins グループのメンバーでもあります。 ドメインのローカル管理者アカウントの使用は、最初のビルドアクティビティと、場合によってはディザスターリカバリーシナリオでのみ予約されている必要があります。 組み込みの Administrator アカウントを使用して、他のアカウントを使用できない場合に、修復に影響を与えることができるようにするには、フォレスト内のどのドメインでも、管理者アカウントの既定のメンバーシップを変更しないようにする必要があります。 代わりに、フォレスト内の各ドメインの管理者アカウントをセキュリティで保護するために、ガイドラインに従う必要があります。 これらのコントロールを実装するための詳細な手順については、 [「付録 D: Active Directory での組み込み管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」を参照してください。
+Active Directory の各ドメインで、ドメインの作成の一環として管理者アカウントが作成されます。 既定では、このアカウントはドメインの domain Admins グループと管理者グループのメンバーであり、ドメインがフォレストのルートドメインである場合、アカウントは Enterprise Admins グループのメンバーでもあります。 ドメインのローカル管理者アカウントの使用は、最初のビルドアクティビティと、場合によってはディザスターリカバリーシナリオでのみ予約されている必要があります。 組み込みの Administrator アカウントを使用して、他のアカウントを使用できない場合に、修復に影響を与えることができるようにするには、フォレスト内のどのドメインでも、管理者アカウントの既定のメンバーシップを変更しないようにする必要があります。 代わりに、フォレスト内の各ドメインの管理者アカウントをセキュリティで保護するために、ガイドラインに従う必要があります。 これらのコントロールを実装するための詳細な手順については、 [「付録 D: Active Directory で Built-In 管理者アカウントを保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)する」を参照してください。
 
 #### <a name="controls-for-built-in-administrator-accounts"></a>組み込みの Administrator アカウントのコントロール
 
@@ -128,13 +128,13 @@ Active Directory の各ドメインで、ドメインの作成の一環として
 
 アカウントの **対話型ログオン属性にスマートカードが必要な場合は** 、Windows によって、アカウントのパスワードが120文字のランダム値にリセットされます。 組み込みの管理者アカウントにこのフラグを設定することにより、アカウントのパスワードが長すぎて複雑なだけでなく、どのユーザーにも知られていないことを確認できます。 この属性を有効にする前に、アカウントのスマートカードを作成する必要はありませんが、可能な場合は、アカウント制限を構成する前に、管理者アカウントごとにスマートカードを作成する必要があります。また、スマートカードは安全な場所に保管する必要があります。
 
-**対話型ログオンフラグにスマートカード**を設定する必要がありますが、アカウントのパスワードがリセットされますが、アカウントのパスワードをリセットする権限を持つユーザーは、アカウントのパスワードを既知の値に設定し、アカウント名と新しいパスワードを使用してネットワーク上のリソースにアクセスすることができます。 このため、次の追加のコントロールをアカウントに実装する必要があります。
+**対話型ログオンフラグにスマートカード** を設定する必要がありますが、アカウントのパスワードがリセットされますが、アカウントのパスワードをリセットする権限を持つユーザーは、アカウントのパスワードを既知の値に設定し、アカウント名と新しいパスワードを使用してネットワーク上のリソースにアクセスすることができます。 このため、次の追加のコントロールをアカウントに実装する必要があります。
 
-##### <a name="configuring-gpos-to-restrict-domains-administrator-accounts-on-domain-joined-systems"></a>ドメインに参加しているシステムでドメインの管理者アカウントを制限するように Gpo を構成する
+##### <a name="configuring-gpos-to-restrict-domains-administrator-accounts-on-domain-joined-systems"></a>Domain-Joined システムでドメインの管理者アカウントを制限するように Gpo を構成する
 
 ドメインの管理者アカウントを無効にすると、アカウントが効果的に使用できなくなりますが、アカウントが誤って、または故意に有効になっている場合に備えて、アカウントに追加の制限を実装する必要があります。 これらのコントロールは最終的に管理者アカウントによって元に戻すことができますが、その目的は、攻撃者の進行を遅らせ、アカウントが被る可能性のある損害を制限するコントロールを作成することです。
 
-1つまたは複数の Gpo を作成し、各ドメインのワークステーションとメンバーサーバーの Ou にリンクする場合は、各ドメインの管理者アカウントを、 **Computer Configuration\Policies\Windows] 権利**\ ユーザー権利の割り当ての次のユーザー権利に追加します。
+1つまたは複数の Gpo を作成し、各ドメインのワークステーションとメンバーサーバーの Ou にリンクする場合は、各ドメインの管理者アカウントを、 **Computer Configuration\Policies\Windows] 権利** \ ユーザー権利の割り当ての次のユーザー権利に追加します。
 
 - ネットワークからこのコンピューターへのアクセスを拒否
 - バッチ ジョブとしてのログオン権限を拒否する
@@ -142,13 +142,13 @@ Active Directory の各ドメインで、ドメインの作成の一環として
 - リモート デスクトップ サービスを使ったログオンを拒否
 
 > [!NOTE]
-> ローカル管理者アカウントをこの設定に追加する場合は、ローカル管理者アカウントとドメイン管理者アカウントのどちらを構成するかを指定する必要があります。 たとえば、NWTRADERS ドメインのローカル管理者アカウントをこれらの拒否権限に追加するには、アカウントを **NWTRADERS\Administrator**として入力するか、または nwtraders ドメインのローカル管理者アカウントを参照する必要があります。 グループポリシーオブジェクトエディターのこれらのユーザー権利設定で「 **administrator** 」と入力すると、GPO が適用される各コンピューターのローカル管理者アカウントが制限されます。
+> ローカル管理者アカウントをこの設定に追加する場合は、ローカル管理者アカウントとドメイン管理者アカウントのどちらを構成するかを指定する必要があります。 たとえば、NWTRADERS ドメインのローカル管理者アカウントをこれらの拒否権限に追加するには、アカウントを **NWTRADERS\Administrator** として入力するか、または nwtraders ドメインのローカル管理者アカウントを参照する必要があります。 グループポリシーオブジェクトエディターのこれらのユーザー権利設定で「 **administrator** 」と入力すると、GPO が適用される各コンピューターのローカル管理者アカウントが制限されます。
 >
 > メンバーサーバーとワークステーションのローカル管理者アカウントは、ドメインベースの管理者アカウントと同じ方法で制限することをお勧めします。 そのため、通常は、フォレスト内の各ドメインの管理者アカウントと、ローカルコンピューターの管理者アカウントをこれらのユーザー権利設定に追加する必要があります。
 
 ##### <a name="configuring-gpos-to-restrict-administrator-accounts-on-domain-controllers"></a>ドメインコントローラーの管理者アカウントを制限するように Gpo を構成する
 
-フォレスト内の各ドメインにおいて、既定のドメインコントローラーポリシー、またはドメインコントローラー OU にリンクされているポリシーを変更して、各ドメインの管理者アカウントを、 **Computer Configuration\Policies\Windows] 権利の権限の割り当て**の次のユーザー権限に追加する必要があります。
+フォレスト内の各ドメインにおいて、既定のドメインコントローラーポリシー、またはドメインコントローラー OU にリンクされているポリシーを変更して、各ドメインの管理者アカウントを、 **Computer Configuration\Policies\Windows] 権利の権限の割り当て** の次のユーザー権限に追加する必要があります。
 
 - ネットワークからこのコンピューターへのアクセスを拒否
 - バッチ ジョブとしてのログオン権限を拒否する
@@ -166,13 +166,13 @@ Active Directory の各ドメインで、ドメインの作成の一環として
 
 #### <a name="securing-enterprise-admin-groups"></a>エンタープライズ管理グループをセキュリティで保護する
 
-フォレストのルートドメインに格納されている Enterprise Admins グループには、毎日のユーザーが含まれないようにする必要があります。ただし、前述のようにセキュリティで保護されている場合は、 [「付録 D: Active Directory での組み込み管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」で説明したように、ドメインのローカル管理者アカウントを除きます。
+フォレストのルートドメインに格納されている Enterprise Admins グループには、毎日のユーザーが含まれないようにする必要があります。ただし、前述のようにセキュリティで保護されている場合は、 [「付録 D: Active Directory で Built-In 管理者アカウントを保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)する」で説明したように、ドメインのローカル管理者アカウントを除きます。
 
 EA へのアクセスが必要な場合は、EA の権利とアクセス許可を必要とするアカウントを持つユーザーは、一時的に Enterprise Admins グループに配置する必要があります。 ユーザーは高い特権を持つアカウントを使用していますが、それらのアクティビティは、変更を実行した1人のユーザーと、その変更を観察するユーザーによって監査される必要があります。 活動が完了したら、アカウントを EA グループから削除する必要があります。 これは、手動の手順とドキュメント化されたプロセス、サードパーティの特権 id/アクセス管理 (PIM/PAM) ソフトウェア、またはその両方の組み合わせを使用して実現できます。 Active Directory の特権グループのメンバーシップの制御に使用できるアカウントを作成するためのガイドラインは、 [資格情報の盗難に適したアカウント](../../../ad-ds/plan/security-best-practices/Attractive-Accounts-for-Credential-Theft.md) で提供されています。詳細な手順については、 [「付録 I: Active Directory で保護されたアカウントとグループの管理アカウントを作成する](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)」を参照してください。
 
 Enterprise Admins は、既定では、フォレスト内の各ドメインの組み込みの Administrators グループのメンバーです。 各ドメインの管理者グループから Enterprise Admins グループを削除することは不適切な変更です。これは、フォレストのディザスターリカバリーシナリオでは、EA 権限が必要になる可能性があるためです。 Enterprise Admins グループがフォレスト内の管理者グループから削除されている場合は、各ドメインの Administrators グループに追加し、次の追加のコントロールを実装する必要があります。
 
-- 前述のように、Enterprise Admins グループには、1日のうちにユーザーが含まれないようにする必要があります。ただし、 [「付録 D: Active Directory での組み込み管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」の説明に従ってセキュリティで保護する必要があります。
+- 前に説明したように、Enterprise Admins グループには、1日のうちにユーザーが含まれないようにする必要があります。ただし、 [「付録 D: Active Directory で Built-In 管理者アカウントをセキュリティで保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)する」の説明に従ってセキュリティで保護する必要があります。
 - 各ドメインのメンバーサーバーとワークステーションを含む Ou にリンクされた Gpo では、EA グループを次のユーザー権利に追加する必要があります。
    - ネットワークからこのコンピューターへのアクセスを拒否
    - バッチ ジョブとしてのログオン権限を拒否する
@@ -186,7 +186,7 @@ Enterprise Admins は、既定では、フォレスト内の各ドメインの�
 
 #### <a name="securing-domain-admins-groups"></a>Domain Admins グループをセキュリティで保護する
 
-Enterprise Admins グループの場合と同様に、Domain Admins グループのメンバーシップは、ビルドまたはディザスターリカバリーのシナリオでのみ必要になります。 [「付録 D: Active Directory での組み込みの管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」の説明に従ってセキュリティ保護されている場合は、ドメインのローカル管理者アカウントを除き、日常のユーザーアカウントが DA グループに存在しないようにする必要があります。
+Enterprise Admins グループの場合と同様に、Domain Admins グループのメンバーシップは、ビルドまたはディザスターリカバリーのシナリオでのみ必要になります。 [「付録 D: Active Directory での Built-In 管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」で説明されているようにセキュリティで保護されている場合は、ドメインのローカル管理者アカウントを除き、日常のユーザーアカウントが DA グループに存在しないようにする必要があります。
 
 DA へのアクセスが必要な場合、このレベルのアクセスを必要とするアカウントは、対象のドメインの DA グループに一時的に配置される必要があります。 ユーザーは高い特権を持つアカウントを使用していますが、ユーザーが変更を実行する1人のユーザーと、不注意による誤用や不適切な構成の可能性を最小限に抑えるために変更を観察するユーザーを使用して、アクティビティを監査する必要があります。 活動が完了したら、Domain Admins グループからアカウントを削除する必要があります。 これは、サードパーティの特権 id/アクセス管理 (PIM/PAM) ソフトウェアまたはその両方の組み合わせを使用して、手動の手順とドキュメント化されたプロセスを通じて実現できます。 Active Directory の特権グループのメンバーシップの制御に使用できるアカウントを作成するためのガイドラインについては、 [「付録 I: Active Directory で保護されたアカウントおよびグループの管理アカウントを作成](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)する」をご覧ください。
 
@@ -194,7 +194,7 @@ DA へのアクセスが必要な場合、このレベルのアクセスを必�
 
 フォレスト内の各ドメインの Domain Admins グループについて、次のようにします。
 
-1. [「付録 D: Active Directory での組み込み管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」で説明されているようにセキュリティで保護されている場合、DA グループからすべてのメンバーを削除します。
+1. [「付録 D: Active Directory での Built-In 管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」で説明されているようにセキュリティで保護されていれば、DA グループからすべてのメンバーを削除します。
 2. 各ドメインのメンバーサーバーとワークステーションを含む Ou にリンクされた Gpo では、次のユーザー権利に DA グループを追加する必要があります。
    - ネットワークからこのコンピューターへのアクセスを拒否
    - バッチ ジョブとしてのログオン権限を拒否する
@@ -208,13 +208,13 @@ DA へのアクセスが必要な場合、このレベルのアクセスを必�
 
 #### <a name="securing-administrators-groups-in-active-directory"></a>Active Directory の Administrators グループをセキュリティで保護する
 
-EA および DA グループの場合と同様に、管理者 (BA) グループのメンバーシップは、ビルドまたはディザスターリカバリーのシナリオでのみ必要になります。 [「付録 D: Active Directory での組み込みの管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」の説明に従ってセキュリティ保護されている場合は、ドメインのローカル管理者アカウントを除き、管理者グループには日常的なユーザーアカウントが存在しない必要があります。
+EA および DA グループの場合と同様に、管理者 (BA) グループのメンバーシップは、ビルドまたはディザスターリカバリーのシナリオでのみ必要になります。 [「付録 D: Active Directory で Built-In 管理者アカウントを保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)する」で説明されているようにセキュリティで保護されている場合、ドメインのローカル管理者アカウントを除き、管理者グループには毎日のユーザーアカウントがない必要があります。
 
 管理者アクセスが必要な場合、このレベルのアクセスを必要とするアカウントは、対象のドメインの Administrators グループに一時的に配置される必要があります。 ユーザーは高い特権を持つアカウントを使用していますが、アクティビティを監査する必要があります。また、変更を行ったユーザーと、不注意による誤用や誤った構成の可能性を最小限に抑えるために変更を観察しているユーザーとの間で実行する必要があります。 活動が完了すると、アカウントは管理者グループから直ちに削除されます。 これは、サードパーティの特権 id/アクセス管理 (PIM/PAM) ソフトウェアまたはその両方の組み合わせを使用して、手動の手順とドキュメント化されたプロセスを通じて実現できます。
 
 管理者は、既定では、それぞれのドメイン内の AD DS オブジェクトのほとんどの所有者です。 このグループのメンバーシップは、所有権またはオブジェクトの所有権を取得する機能が必要なビルドおよびディザスターリカバリーのシナリオで必要になる場合があります。 さらに、DAs と EAs には、Administrators グループの既定のメンバーシップによって、多数の権限とアクセス許可が継承されています。 Active Directory の特権グループの既定のグループの入れ子を変更することはできません。また、 [「付録 G: Active Directory で管理者グループをセキュリティで保護](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md)する」および一般的な手順に従って、各ドメインの管理者グループをセキュリティで保護する必要があります。
 
-1. [「付録 D: Active Directory での組み込みの管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」の説明に従ってセキュリティ保護されている場合は、管理者グループからすべてのメンバーを削除します。ただし、ドメインのローカル管理者アカウントを除きます。
+1. [「付録 D: Active Directory で Built-In 管理者アカウントを保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)する」で説明されているようにセキュリティで保護されている場合は、管理者グループからすべてのメンバーを削除します。ただし、ドメインのローカル管理者アカウントを除きます。
 2. ドメインの Administrators グループのメンバーは、メンバーサーバーまたはワークステーションにログオンする必要はありません。 各ドメインのワークステーションとメンバーサーバー Ou にリンクされている1つ以上の Gpo で、Administrators グループを次のユーザー権利に追加する必要があります。
    - ネットワークからこのコンピューターへのアクセスを拒否
    - バッチジョブとしてのログオンを拒否する
@@ -233,7 +233,7 @@ EA および DA グループの場合と同様に、管理者 (BA) グループ�
 >
 > ![最小限の特権管理モデル](media/Implementing-Least-Privilege-Administrative-Models/SAD_3.gif)
 
-### <a name="role-based-access-controls-rbac-for-active-directory"></a>Active Directory 用のロールベースのアクセス制御 (RBAC)
+### <a name="role-based-access-controls-rbac-for-active-directory"></a>Active Directory 用の Role-Based アクセス制御 (RBAC)
 
 一般に、ロールベースのアクセス制御 (RBAC) は、ユーザーをグループ化し、ビジネスルールに基づいてリソースへのアクセスを提供するためのメカニズムです。 Active Directory の場合、AD DS 用の RBAC の実装は、権限とアクセス許可を委任するロールを作成するプロセスであり、ロールのメンバーは、過剰な権限を付与せずに日常的な管理タスクを実行できます。 Active Directory の RBAC は、ネイティブツールとインターフェイスを使用して設計および実装できます。これには、既に所有しているソフトウェアを利用したり、サードパーティ製品を購入したり、これらの方法を組み合わせたりすることができます。 このセクションでは、Active Directory に RBAC を実装する手順については説明しませんが、AD DS のインストールで RBAC を実装する方法を選択する際に考慮する必要がある要素について説明します。
 

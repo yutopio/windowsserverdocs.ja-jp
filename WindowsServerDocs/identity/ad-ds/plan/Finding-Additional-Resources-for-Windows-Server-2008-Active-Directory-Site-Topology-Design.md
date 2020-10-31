@@ -2,16 +2,16 @@
 ms.assetid: eca5bbf0-088e-4753-bf49-4d6c1125f689
 title: Windows Server 2008 の Active Directory サイト トポロジ設計に関するその他のリソースの検索
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f4e444eec232bb6dabfd4acfdce9f4cc7e007bf8
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: b5edda407ce85ec8024f6cc1c9a6e9ec463e7618
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939102"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068565"
 ---
 # <a name="finding-additional-resources-for-windows-server-2008-active-directory-site-topology-design"></a>Windows Server 2008 の Active Directory サイト トポロジ設計に関するその他のリソースの検索
 
@@ -25,7 +25,7 @@ Active Directory Domain Services に関する次のドキュメント (AD DS) �
 
 - ツリーと Active Directory レプリケーショントポロジの詳細については、「 [Active Directory レプリケーショントポロジのテクニカルリファレンス](/previous-versions/windows/it-pro/windows-server-2003/cc755326(v=ws.10))」を参照してください。
 
-- Adlb.exe を使用し、100以上のブランチサイトを持つ環境を管理する方法の詳細については、「 [Windows server 2008 rodc でのブリッジヘッドサーバーの負荷分散の強化](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd735927(v%3dws.10))」を参照してください。
+- Adlb.exe の使用、および100以上のブランチサイトを持つ環境の管理の詳細については、「 [Windows server 2008 rodc によるブリッジヘッドサーバー Load-Balancing の機能強化の確認](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd735927(v%3dws.10))」を参照してください。
 
 - ネットワークモニターのインストールの詳細については、「 [ネットワークトラフィックの監視](/previous-versions/windows/it-pro/windows-server-2003/cc783075(v=ws.10))」を参照してください。
 
@@ -49,6 +49,6 @@ Active Directory Domain Services に関する次のドキュメント (AD DS) �
 
 - ファイアウォールを介したレプリケーションの管理については、「 [ファイアウォールでセグメント](https://microsoft.com/download/details.aspx?familyid=c2ef3846-43f0-4caf-9767-a9166368434e)化されたネットワークでの Active Directory」を参照してください。
 
-- 読み取り専用ドメインコントローラー (RODC) の機能の詳細については、「 [AD DS: 読み取り専用ドメインコントローラー](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10))」を参照してください。
+- 読み取り専用ドメインコントローラー (RODC) の機能の詳細については、「 [AD DS: Read-Only ドメインコントローラー](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10))」を参照してください。
 
 - RODC を展開する方法の詳細については、「 [読み取り専用ドメインコントローラーのステップバイステップガイド](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772234(v=ws.10))」を参照してください。

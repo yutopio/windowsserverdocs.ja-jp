@@ -1,17 +1,17 @@
 ---
 ms.assetid: 64142026-07b5-4601-840a-c8dcf6ab9814
 title: サイト リンク ブリッジ設計の作成
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: d4b4047ccdbe32a40f512c42182d15a41709db3d
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 190ded76c03c9f38edb0a2a0400a04b3adc69179
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941132"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069122"
 ---
 # <a name="creating-a-site-link-bridge-design"></a>サイト リンク ブリッジ設計の作成
 
@@ -21,7 +21,7 @@ ms.locfileid: "88941132"
 
 既定では、すべてのサイトリンクは推移的です。 [ **すべてのサイトリンクをブリッジ** する (既定で有効)] の既定値を変更しないことで、推移性を有効にすることをお勧めします。 ただし、次の場合は、 **すべてのサイトリンクのブリッジ** を無効にし、サイトリンクブリッジのデザインを完了する必要があります。
 
-- IP ネットワークが完全にルーティングされていません。 [すべての **サイトリンクをブリッジ**する] を無効にすると、すべてのサイトリンクが非推移性と見なされ、ネットワークの実際のルーティング動作をモデル化するためのサイトリンクブリッジオブジェクトを作成および構成できます。
+- IP ネットワークが完全にルーティングされていません。 [すべての **サイトリンクをブリッジ** する] を無効にすると、すべてのサイトリンクが非推移性と見なされ、ネットワークの実際のルーティング動作をモデル化するためのサイトリンクブリッジオブジェクトを作成および構成できます。
 - Active Directory Domain Services (AD DS) で行われた変更のレプリケーションフローを制御する必要があります。 サイトリンク IP トランスポートの **すべてのサイトリンクのブリッジ** を無効にし、サイトリンクブリッジを構成することにより、サイトリンクブリッジは不整合なネットワークと同等のものになります。 サイトリンクブリッジ内のすべてのサイトリンクは推移的にルーティングできますが、サイトリンクブリッジの外部にはルーティングされません。
 
 Active Directory サイトとサービススナップインを使用して、[ **すべてのサイトリンクをブリッジ** する] 設定を無効にする方法の詳細については、「 [サイトリンクブリッジの有効化または無効化](/previous-versions/windows/it-pro/windows-server-2003/cc738789(v=ws.10))」を参照してください。

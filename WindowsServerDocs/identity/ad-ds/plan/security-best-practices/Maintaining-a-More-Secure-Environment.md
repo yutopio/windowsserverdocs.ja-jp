@@ -2,16 +2,16 @@
 ms.assetid: 8f994e2e-6c07-43f0-aef4-75f8b2c9a144
 title: セキュリティが強化された環境を維持する
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7cde4344a28888c997cfb751b2943429fbc4e686
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 14cbe8a6610a370e20e338f3a09ab24f21334169
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941412"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069584"
 ---
 # <a name="maintaining-a-more-secure-environment"></a>セキュリティが強化された環境を維持する
 
@@ -23,7 +23,7 @@ ms.locfileid: "88941412"
 
 場合によっては、IT 組織は、ビジネスユニットとの密接な関係を既に持っている可能性があります。これにより、これらの推奨事項の実装が容易になります。 IT 部門と事業単位が密接に結び付けられていない組織では、IT 部門と事業単位の間の関係をさらに詳しく理解するために、役員スポンサーを獲得することが必要になる場合があります。 [役員の概要](../../../ad-ds/manage/component-updates/Executive-Summary.md)は、役員レビューのためのスタンドアロンドキュメントとして役に立つことを目的としており、組織内の意思決定者に配布ことができます。
 
-## <a name="creating-business-centric-security-practices-for-active-directory"></a>Active Directory のためのビジネス中心のセキュリティプラクティスの作成
+## <a name="creating-business-centric-security-practices-for-active-directory"></a>Active Directory の Business-Centric セキュリティプラクティスの作成
 これまで、多くの組織内の情報技術は、サポート体制とコストセンターとして表示されていました。 多くの場合、IT 部門はビジネスユーザーから分離され、ビジネスがリソースを要求した要求/応答モデルに限定されています。
 
 テクノロジが進化し、増殖になるにつれて、"すべてのデスクトップ上のコンピューター" のビジョンは、事実上、世界中の多くのユーザーにとって成功を遂げ、現在利用可能な幅広い種類の簡単なテクノロジによって eclipsed されています。 情報技術は、サポート機能ではなくなりました。これは主要なビジネス機能です。 すべての IT サービスが利用できなくなった場合でも組織の機能を継続できない場合は、組織のビジネスが少なくとも一部の情報テクノロジになります。
@@ -39,7 +39,7 @@ Active Directory のデータには、特定されたビジネス所有者、つ
 
 Active Directory を使用してディレクトリにデータの所有権を記録するかどうか、または、IT 資産を追跡するために別のデータベースを実装するかどうかにかかわらず、ユーザーアカウントを作成する必要はありません。サーバーやワークステーションをインストールする必要はありません。また、指定した所有者のレコードを指定しないと、 運用環境に展開された後にシステムの所有権を確立しようとすると、最適ではなく、場合によっては不可能な場合があります。 したがって、データが Active Directory に導入された時点で所有権を確立する必要があります。
 
-### <a name="implement-business-driven-lifecycle-management"></a>ビジネス主導のライフサイクル管理を実装する
+### <a name="implement-business-driven-lifecycle-management"></a>Business-Driven ライフサイクル管理の実装
 Active Directory のすべてのデータに対して、ライフサイクル管理を実装する必要があります。 たとえば、新しいアプリケーションが Active Directory ドメインに導入された場合、アプリケーションのビジネスオーナーは、アプリケーションを継続的に使用することを定期的に証明する必要があります。 アプリケーションの新しいバージョンがリリースされたときに、アプリケーションのビジネス所有者に通知し、新しいバージョンが実装されるかどうかを判断する必要があります。
 
 ビジネス所有者が新しいバージョンのアプリケーションの展開を承認しないことを選択した場合、そのビジネス所有者には、現在のバージョンがサポートされなくなる日付も通知される必要があります。また、アプリケーションを使用停止または交換するかどうかを判断する必要があります。 レガシアプリケーションの実行とサポートを維持することは、オプションにしないでください。

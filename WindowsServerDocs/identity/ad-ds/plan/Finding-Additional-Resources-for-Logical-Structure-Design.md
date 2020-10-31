@@ -2,16 +2,16 @@
 ms.assetid: 8b900c2b-35b1-4c95-a73d-e5f2e9cf0adb
 title: 論理構造の設計に関するその他のリソースの検索
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 25fdb357ae4be103a6c543a6969f72f1a5df91e1
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: c2b445661fb10e03a3d764611a1a3e213613b69e
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939142"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068573"
 ---
 # <a name="finding-additional-resources-for-logical-structure-design"></a>論理構造の設計に関するその他のリソースの検索
 
@@ -53,8 +53,8 @@ ms.locfileid: "88939142"
 
 - グループポリシーインフラストラクチャの詳細については、「 [グループポリシーインフラストラクチャの設計](/previous-versions/windows/it-pro/windows-server-2003/cc786524(v=ws.10))」を参照してください。
 
-- 読み取り専用ドメインコントローラー (Rodc) の詳細については、「 [AD DS: 読み取り専用ドメインコントローラー](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10))」を参照してください。
+- 読み取り専用ドメインコントローラー (Rodc) の詳細については、「 [AD DS: Read-Only ドメインコントローラー](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10))」を参照してください。
 
-- 細かいパスワードとアカウントロックアウトのポリシーの詳細については、 [AD DS 細かいパスワードとアカウントロックアウトのポリシーに関するステップバイステップガイド](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770842(v=ws.10))を参照してください。
+- 細かいパスワードとアカウントロックアウトのポリシーの詳細については、「 [AD DS Fine-Grained パスワードとアカウントロックアウトポリシーのステップバイステップガイド](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770842(v=ws.10))」を参照してください。
 
 - AD DS での名前付け規則の詳細については、Microsoft サポート技術情報の記事909264、 [Active Directory のコンピューター、ドメイン、サイト、および ou の名前付け規則](https://support.microsoft.com/help/909264/)に関するページを参照してください。

@@ -2,16 +2,16 @@
 title: Azure の仮想マシンに Active Directory Domain Services をインストールする
 description: Azure 仮想マシン上の仮想マシン (VM) に新しい Active Directory フォレストを作成する方法について説明します。
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 04/11/2019
 ms.topic: article
-ms.openlocfilehash: e95aea80bea16322f66a14c12b0a1388897c1b11
-ms.sourcegitcommit: 40466c8af1fc60dfca733ea476f088549cedba65
+ms.openlocfilehash: fef394aaef059ec83303c903ca5e548f002775c0
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793589"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069074"
 ---
 # <a name="install-a-new-active-directory-forest-using-azure-cli"></a>Azure CLI を使用して新しい Active Directory フォレストをインストールする
 
@@ -251,6 +251,6 @@ az group delete --name ADonAzureVMs
 * [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect-get-started-express)
 * [バックアップと回復](/azure/virtual-machines/windows/backup-recovery)
 * [サイト間 VPN 接続](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
-* [監視](/azure/virtual-machines/windows/monitor)
+* [Monitoring](/azure/virtual-machines/windows/monitor)
 * [セキュリティとポリシー](/azure/virtual-machines/windows/security-policy)
 * [メンテナンスと更新](/azure/virtual-machines/windows/maintenance-and-updates)

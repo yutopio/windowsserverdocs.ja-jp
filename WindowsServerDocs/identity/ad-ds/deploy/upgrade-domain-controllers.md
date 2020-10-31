@@ -1,17 +1,17 @@
 ---
 title: Windows Server 2016 へのドメイン コントローラーのアップグレード
 description: このドキュメントでは、Windows Server 2012 R2 から Windows Server 2016 にアップグレードする方法について説明します。
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 747c71d3c0b3dd7afb0fb1dda1b922ac58330e02
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 4a00bc2c6eabd8b5419d3a0d867efba9dfc1592a
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940242"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069174"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2016"></a>Windows Server 2016 へのドメイン コントローラーのアップグレード
 
@@ -30,9 +30,9 @@ ms.locfileid: "88940242"
 1. インストールを実行するコンピューターからターゲット サーバーに接続できることを確認します。
 1. 必要な操作マスターの役割を使用できることを確認します。
    - 既存のドメインおよびフォレストで Windows Server 2016 を実行する最初の DC をインストールするには、インストールを実行するコンピューターが、adprep/forestprep を実行するために **スキーママスター** に接続し、adprep/domainprep を実行するためにインフラストラクチャマスターに接続する必要があります。
-   - フォレストスキーマが既に拡張されているドメインに最初の DC をインストールするには、 **インフラストラクチャマスター**への接続のみが必要です。
-   - 既存のフォレスト内のドメインをインストールまたは削除するには、 **ドメイン名前付けマスター**への接続が必要です。
-   - ドメインコントローラーのインストールでは、 **RID マスター**への接続も必要です。
+   - フォレストスキーマが既に拡張されているドメインに最初の DC をインストールするには、 **インフラストラクチャマスター** への接続のみが必要です。
+   - 既存のフォレスト内のドメインをインストールまたは削除するには、 **ドメイン名前付けマスター** への接続が必要です。
+   - ドメインコントローラーのインストールでは、 **RID マスター** への接続も必要です。
    - 最初の読み取り専用ドメインコントローラーを既存のフォレストにインストールする場合は、各アプリケーションディレクトリパーティションの **インフラストラクチャマスター** への接続が必要です。これは、非ドメイン名前付けコンテキストまたは ndnc とも呼ばれます。
 
 ### <a name="installation-steps-and-required-administrative-levels"></a>インストール手順と必要な管理レベル
@@ -122,45 +122,45 @@ Windows 10 のリモートサーバー管理ツールを使用して、Windows S
 
 Contoso フォレストを Windows Server 2012 R2 から Windows Server 2016 にアップグレードする簡単な例を次に示します。
 
-![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade1.png)
+![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade1.png)
 
 1. 新しい Windows Server 2016 をフォレストに参加させます。 プロンプトが表示されたら再起動します。
 
-   ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade2.png)
+   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade2.png)
 
 1. ドメイン管理者アカウントを使用して、新しい Windows Server 2016 にサインインします。
-1. **サーバーマネージャー**の [**役割と機能の追加**] で、新しい Windows Server 2016 に**Active Directory Domain Services**をインストールします。 これにより、2012 R2 フォレストとドメインで adprep が自動的に実行されます。
+1. **サーバーマネージャー** の [ **役割と機能の追加** ] で、新しい Windows Server 2016 に **Active Directory Domain Services** をインストールします。 これにより、2012 R2 フォレストとドメインで adprep が自動的に実行されます。
 
-   ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade3.png)
+   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade3.png)
 
-1. **サーバーマネージャー**で、黄色い三角形をクリックし、ドロップダウンから [サーバーを**ドメインコントローラーに昇格する**] をクリックします。
+1. **サーバーマネージャー** で、黄色い三角形をクリックし、ドロップダウンから [サーバーを **ドメインコントローラーに昇格する** ] をクリックします。
 
-   ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
+   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
 
 1. [ **展開構成** ] 画面で、[ **ドメインコントローラーを既存のフォレストに追加する** ] を選択し、[次へ] をクリックします。
 
-   ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
+   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
 
 1. [ **ドメインコントローラーオプション** ] 画面で、 **ディレクトリサービス復元モード (DSRM)** のパスワードを入力し、[次へ] をクリックします。
-1. 画面の残りの部分について、[ **次へ**] をクリックします。
-1. [ **前提条件の確認** ] 画面で、[ **インストール**] をクリックします。 再起動が完了したら、サインインし直すことができます。
-1. Windows Server 2012 R2 サーバーの **サーバーマネージャー**の [ツール] で、[ **Windows PowerShell の Active Directory モジュール**] を選択します。
+1. 画面の残りの部分について、[ **次へ** ] をクリックします。
+1. [ **前提条件の確認** ] 画面で、[ **インストール** ] をクリックします。 再起動が完了したら、サインインし直すことができます。
+1. Windows Server 2012 R2 サーバーの **サーバーマネージャー** の [ツール] で、[ **Windows PowerShell の Active Directory モジュール** ] を選択します。
 
-   ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
+   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
 
-1. PowerShell ウィンドウで、移動-ADDirectoryServerOperationMasterRole を使用して FSMO の役割を移動します。 各 OperationMasterRole の名前を入力するか、数値を使用してロールを指定できます。 詳細については[、「移動-ADDirectoryServerOperationMasterRole](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)) 」を参照してください。
+1. PowerShell ウィンドウで、Move-ADDirectoryServerOperationMasterRole を使用して FSMO の役割を移動します。 各 OperationMasterRole の名前を入力するか、数値を使用してロールを指定できます。 詳細については[、「移動-ADDirectoryServerOperationMasterRole](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)) 」を参照してください。
 
     ``` powershell
     Move-ADDirectoryServerOperationMasterRole -Identity "DC-W2K16" -OperationMasterRole 0,1,2,3,4
     ```
 
-    ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)
+    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)
 
-1. ロールが移動されたことを確認するために、Windows Server 2016 サーバーの [**ツール**] の下にある [ **windows PowerShell の Active Directory モジュール**] を**サーバーマネージャー**ます。 `Get-ADDomain`およびコマンドレットを使用して、 `Get-ADForest` FSMO の役割所有者を表示します。
+1. ロールが移動されたことを確認するために、Windows Server 2016 サーバーの [ **ツール** ] の下にある [ **windows PowerShell の Active Directory モジュール** ] を **サーバーマネージャー** ます。 `Get-ADDomain`およびコマンドレットを使用して、 `Get-ADForest` FSMO の役割所有者を表示します。
 
-    ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
+    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
 
-    ![アップグレード](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
+    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
 
 1. Windows Server 2012 R2 ドメインコントローラーを降格して削除します。 Dc の降格の詳細については、「[ドメインコントローラーと](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)ドメインの降格」を参照してください。
 1. サーバーが降格され、削除されると、フォレストの機能レベルとドメインの機能レベルを Windows Server 2016 に上げることができます。

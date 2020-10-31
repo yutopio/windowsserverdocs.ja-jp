@@ -2,16 +2,16 @@
 ms.assetid: 341614c6-72c2-444f-8b92-d2663aab7070
 title: 仮想化ドメイン コントローラーのアーキテクチャ
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 04d50961aeb6190c15ba4c772afd8767d9d24f9b
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: b644103342e94a171699efeab238453bdb583eec
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939013"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067804"
 ---
 # <a name="virtualized-domain-controller-architecture"></a>仮想化ドメイン コントローラーのアーキテクチャ
 
@@ -109,7 +109,7 @@ VM-GenerationID をサポートするハイパーバイザーに複製メディ�
 
 15. ゲストが、(既定の Windows タイム サービス階層内で、つまり、PDCE を使用して) 他のドメイン コントローラーとの NT5DS (Windows NTP) 時間同期を強制的に実行し、 PDCE に接続します。 既存の Kerberos チケットがフラッシュします。
 
-16. ゲストが、DFSR または NTFRS サービスが自動的に実行されるように構成し、 ゲストは、既存の DFSR および NTFRS データベースファイル (既定: c:\windows\ntfrs および c:\ システムボリュームの情報 \ DFSR \\ *<database_GUID>*) をすべて削除します。これにより、サービスが次に開始されたときに、権限のない SYSVOL 同期が強制的に実行されます。 SYSVOL のファイルの内容は、後で同期を開始するときに SYSVOL をプレシードできるように削除されません。
+16. ゲストが、DFSR または NTFRS サービスが自動的に実行されるように構成し、 ゲストは、既存の DFSR および NTFRS データベースファイル (既定: c:\windows\ntfrs および c:\ システムボリュームの情報 \ DFSR \\ *<database_GUID>* ) をすべて削除します。これにより、サービスが次に開始されたときに、権限のない SYSVOL 同期が強制的に実行されます。 SYSVOL のファイルの内容は、後で同期を開始するときに SYSVOL をプレシードできるように削除されません。
 
 17. ゲストの名前が変更されます。 ゲスト上の DS 役割サーバー サービスは、既存の NTDS.DIT データベース ファイルを、通常の昇格のように c:\windows\system32 に含まれているテンプレート データベースとしてではなく、ソースとして使用して、AD DS 構成 (昇格) を開始します。
 
@@ -177,9 +177,9 @@ AD DSは、ハイパーバイザー プラットフォームを使用して **VM
 > [!NOTE]
 > このイラストは、概念を説明するために簡素化されています。
 
-1.  Time T1 の時点で、ハイパーバイザー管理者は仮想 DC1 のスナップショットを取得します。 この段階の DC1 には、USN 値 (実際は **highestCommittedUsn**) 100、InvocationId (この図では ID として示されています) A (実際は GUID) が設定されています。 savedVMGID 値は、DC の DIT ファイルの VM-GenerationID です (**msDS-GenerationId** という名前の属性の DC のコンピューター オブジェクトに対して格納)。 VMGID は、仮想マシン ドライバーから使用できる VM-GenerationId の現在の値です。 この値は、ハイパーバイザーによって提供されます。
+1.  Time T1 の時点で、ハイパーバイザー管理者は仮想 DC1 のスナップショットを取得します。 この段階の DC1 には、USN 値 (実際は **highestCommittedUsn** ) 100、InvocationId (この図では ID として示されています) A (実際は GUID) が設定されています。 savedVMGID 値は、DC の DIT ファイルの VM-GenerationID です ( **msDS-GenerationId** という名前の属性の DC のコンピューター オブジェクトに対して格納)。 VMGID は、仮想マシン ドライバーから使用できる VM-GenerationId の現在の値です。 この値は、ハイパーバイザーによって提供されます。
 
-2.  次の Time T2 で、100 人のユーザーがこの DC に追加されています (ユーザーを、Time T1 と Time T2 の間にこの DC で実行された可能性のある更新の例と考えます。実際の更新では、ユーザーの作成、グループの作成、パスワードの更新、属性の更新などが混在しています)。 この例では、更新ごとに 1 つの一意の USN が使用されます (実際は、ユーザー作成により複数の USN が使用される可能性があります)。 DC1 は、これらの更新をコミットする前に、データベースの VM-GenerationID の値 (savedVMGID) が、ドライバーから使用できる現在の値 (VMGID) と同じかどうかを確認します。 同じ場合は、ロールバックがまだ行われていないため、更新はコミットされ、USN は 200 になります。これは次の更新では USN 201 が使用されることを意味します。 InvocationId、savedVMGID、または VMGID に変更はありません。 これらの更新は、次のレプリケーション サイクルで DC2 にレプリケートされます。 DC2 は、ここで表現されている高基準値 (および **UptoDatenessVector**) を、DC1 (A) = 200 として単純に更新し @USN ます。 つまり、DC2 は、USN 200 を介した nvocationId A のコンテキストでは、DC1 からのすべての更新を認識します。
+2.  次の Time T2 で、100 人のユーザーがこの DC に追加されています (ユーザーを、Time T1 と Time T2 の間にこの DC で実行された可能性のある更新の例と考えます。実際の更新では、ユーザーの作成、グループの作成、パスワードの更新、属性の更新などが混在しています)。 この例では、更新ごとに 1 つの一意の USN が使用されます (実際は、ユーザー作成により複数の USN が使用される可能性があります)。 DC1 は、これらの更新をコミットする前に、データベースの VM-GenerationID の値 (savedVMGID) が、ドライバーから使用できる現在の値 (VMGID) と同じかどうかを確認します。 同じ場合は、ロールバックがまだ行われていないため、更新はコミットされ、USN は 200 になります。これは次の更新では USN 201 が使用されることを意味します。 InvocationId、savedVMGID、または VMGID に変更はありません。 これらの更新は、次のレプリケーション サイクルで DC2 にレプリケートされます。 DC2 は、ここで表現されている高基準値 (および **UptoDatenessVector** ) を、DC1 (A) = 200 として単純に更新し @USN ます。 つまり、DC2 は、USN 200 を介した nvocationId A のコンテキストでは、DC1 からのすべての更新を認識します。
 
 3.  Time T3 の時点で、Time T1 で取得されたスナップショットが DC1 に適用されます。 DC1 がロールバックされたため、その USN は 100 にロールバックされます。これは、DC1 が USN を 101 から使用して、以降の更新と関連付ける可能性があることを示しています。 ただし、この時点で、VMGID の値は、VM-GenerationID をサポートするハイパーバイザーによって異なります。
 

@@ -2,22 +2,22 @@
 ms.assetid: ac6604b0-7459-4ff3-af1c-4936897f5d14
 title: 既定のコンテナーと OU の管理を委任する
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 0ddd4e6853dfaf08cb04157554209f6725b79936
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 8f52ca20cce86c869f66ea9d0e2e795956a0c75f
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941462"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069414"
 ---
 # <a name="delegating-administration-of-default-containers-and-ous"></a>既定のコンテナーと OU の管理を委任する
 
 >適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 
-すべての Active Directory ドメインには、Active Directory Domain Services (AD DS) のインストール中に作成されるコンテナーと組織単位 (Ou) の標準セットが含まれています。 コーディネートは次のとおりです。
+すべての Active Directory ドメインには、Active Directory Domain Services (AD DS) のインストール中に作成されるコンテナーと組織単位 (Ou) の標準セットが含まれています。 これらには、次のものが含まれます。
 
 -   階層のルートコンテナーとして機能するドメインコンテナー
 

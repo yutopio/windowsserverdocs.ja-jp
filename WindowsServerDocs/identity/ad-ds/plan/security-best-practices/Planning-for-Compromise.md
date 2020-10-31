@@ -2,16 +2,16 @@
 ms.assetid: 6f50476c-a1f1-48fb-999b-76c4c3816496
 title: 侵害対策を計画する
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9be3768f4ac0f95c1c268d9a4efb55af3f74d304
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: b4cdd6d9383a27b97d3368903fed4b41fe5b5952
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941402"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069574"
 ---
 # <a name="planning-for-compromise"></a>侵害対策を計画する
 
@@ -92,7 +92,7 @@ Active Directory フォレストの回復に関する推奨事項については
 
 5.  不自然フォレスト内のレガシオペレーティングシステムまたはアプリケーションのインストールを許可しないでください。 アプリケーションを更新して新たにインストールできない場合は、レガシフォレストに残し、クリエイティブな破棄を検討してアプリケーションの機能を置き換えます。
 
-### <a name="defining-a-limited-risk-based-migration-plan"></a>限定されたリスクベースの移行プランを定義する
+### <a name="defining-a-limited-risk-based-migration-plan"></a>限定された Risk-Based 移行計画の定義
 リスクベースの制限付き移行計画を作成することは、不自然フォレストに移行するユーザー、アプリケーション、データを決定するときに、ユーザーまたはシステムの1つが侵害された場合に組織が公開するリスクの程度に基づいて、移行ターゲットを識別する必要があることを意味します。 アカウントが攻撃者の対象となる可能性が最も高い VIP ユーザーは、不自然フォレストに配置する必要があります。 重要なビジネス機能を提供するアプリケーションは、不自然フォレスト内の新しく構築されたサーバーにインストールする必要があり、機密性の高いデータは不自然フォレスト内のセキュリティで保護されたサーバーに移動する必要があります。
 
 Active Directory 環境において、ビジネスに不可欠なユーザー、システム、アプリケーション、データをまだ明確に把握していない場合は、事業単位を使用してそれらを特定します。 重要なアプリケーションを実行するサーバーや重要なデータが格納されている場合は、ビジネスの運用に必要なアプリケーションを特定する必要があります。 組織が引き続き機能するために必要なユーザーとリソースを特定することにより、作業に専念するために、自然に優先順位付けされた資産のコレクションを作成します。

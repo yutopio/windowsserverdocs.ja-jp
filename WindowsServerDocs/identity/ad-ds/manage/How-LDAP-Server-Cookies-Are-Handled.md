@@ -2,16 +2,16 @@
 ms.assetid: 3acaa977-ed63-4e38-ac81-229908c47208
 title: LDAP サーバー Cookie の処理方法
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7e01afeeef7bb9751b4c23839569a9395fbd9c51
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: a9113dabcae5cb8732a4e8715a4b2fd057ccf312
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941352"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068974"
 ---
 # <a name="how-ldap-server-cookies-are-handled"></a>LDAP サーバー Cookie の処理方法
 
@@ -125,7 +125,7 @@ DC や LDAP サーバーにイベント 2898 が表示された場合は、MaxRe
 
 250 MB 以上のプールでイベント 2899 が変わらず表示される場合は、多くのクライアントに非常に大量のオブジェクトが返され、非常に高い頻度でクエリを実行している可能性があります。 [Active Directory のデータ コレクター セット](/archive/blogs/askds/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond)を使用して収集できるデータは、LDAP サーバーを常にビジー状態にする、反復ページング クエリを検索するのに役立ちます。 これらのクエリはすべて、使用されたページのサイズに一致する "返されたエントリ" が多数表示されます。
 
-可能であれば、アプリケーションの設計を確認し、頻度が低く、データ量が少なく、このデータを照会するクライアントインスタンスの数が少ない別のアプローチを実装する必要があります。ソースコードにアクセスできるアプリケーションの場合、  [効率的な Ad 対応アプリケーションを作成](/previous-versions/ms808539(v=msdn.10)) するためのこのガイドは、アプリケーションが ad にアクセスするための最適な方法を理解するのに役立ちます。
+可能であれば、アプリケーションの設計を確認し、頻度が低く、データ量が少なく、このデータを照会するクライアントインスタンスの数が少ない別のアプローチを実装する必要があります。ソースコードにアクセスできるアプリケーションの場合、  [効率的な AD-Enabled アプリケーションを作成](/previous-versions/ms808539(v=msdn.10)) するためのこのガイドは、アプリケーションが AD にアクセスするための最適な方法を理解するのに役立ちます。
 
 クエリの動作を変更できない場合は、必要な名前付けコンテキストのレプリケートされたインスタンスをさらに追加し、クライアントを再配布し、最終的に個々の LDAP サーバーの負荷を軽減する方法もあります。
 

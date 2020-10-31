@@ -1,17 +1,17 @@
 ---
 ms.assetid: bd64a766-5362-4f29-b963-5465c2bb79e7
 title: 操作マスターの役割の配置を計画する
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: e1117677b9d1e898a3c93850c69230e6912c20c3
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 158209ca281fdd3839747e936d1f439951cc644f
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938622"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069154"
 ---
 # <a name="planning-operations-master-role-placement"></a>操作マスターの役割の配置を計画する
 
@@ -20,7 +20,7 @@ ms.locfileid: "88938622"
 Active Directory Domain Services (AD DS) では、ディレクトリデータのマルチマスターレプリケーションがサポートされています。つまり、すべてのドメインコントローラーがディレクトリの変更を受け入れ、その変更を他のすべてのドメインコントローラーにレプリケートすることができます。 ただし、スキーマの変更などの特定の変更は、マルチマスター方式で実行するのは現実的ではありません。 このため、特定の特定の変更に対する要求の受け入れを担当する役割は、操作マスターと呼ばれる特定のドメインコントローラーに保持されます。
 
 > [!NOTE]
-> 操作マスターの役割所有者は、Active Directory データベースにいくつかの情報を書き込むことができる必要があります。 読み取り専用ドメインコントローラー (RODC) 上の Active Directory データベースの読み取り専用の性質上、 **rodc は操作マスターの役割所有者として機能できません**。
+> 操作マスターの役割所有者は、Active Directory データベースにいくつかの情報を書き込むことができる必要があります。 読み取り専用ドメインコントローラー (RODC) 上の Active Directory データベースの読み取り専用の性質上、 **rodc は操作マスターの役割所有者として機能できません** 。
 
 各ドメインには、次の3つの操作マスターの役割 (フレキシブルシングルマスター操作または FSMO とも呼ばれます) が存在します。
 

@@ -2,16 +2,16 @@
 ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Active Directory の攻撃を削減する
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 5c151f0b152fadc4c86fc7bc0a414e9a190c0080
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 8802091de7746844176a97acf5e958d55b0b1f92
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941392"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069514"
 ---
 # <a name="reducing-the-active-directory-attack-surface"></a>Active Directory の攻撃を削減する
 
@@ -19,14 +19,14 @@ ms.locfileid: "88941392"
 
 このセクションでは、Active Directory のインストールの攻撃対象領域を減らすために実装する技術コントロールについて説明します。 このセクションには、次の情報が含まれています。
 
-- [最小限の特権を持つ管理モデルを実装](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md) することは、特権アカウントが存在するリスクを軽減するための推奨事項を提供するだけでなく、日常の管理に高い特権を持つアカウントを使用するというリスクを特定することに重点を置いています。
+- [Least-Privilege 管理モデルを実装](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md) することは、特権のあるアカウントが存在するリスクを軽減するための推奨事項を提供するだけでなく、日常の管理に高い特権を持つアカウントを使用するというリスクを特定することに重点を置いています。
 
 - セキュリティで保護された管理ホストの[実装](../../../ad-ds/plan/security-best-practices/Implementing-Secure-Administrative-Hosts.md)は、セキュリティで保護された管理ホストの展開に対するいくつかのサンプルアプローチに加えて、セキュリティで保護された専用管理システムを展開するための原則について
 
 - [ドメインコントローラーの攻撃からの保護](../../../ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-Attack.md) セキュリティで保護された管理ホストの実装に関する推奨事項に似ていますが、ドメインコントローラーとそれらを管理するために使用するシステムが適切に保護されていることを確認するために、ドメインコントローラーに固有の推奨事項がいくつか含まれています。
 
 ## <a name="privileged-accounts-and-groups-in-active-directory"></a>Active Directory の特権アカウントとグループ
-このセクションでは、Active Directory の特権アカウントとグループの共通点と相違点を説明するための Active Directory の特権アカウントとグループに関する背景情報について説明します。 これらの違いを理解することで、最小限の [特権の管理モデルの実装](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md) に関する推奨事項をそのまま使用するか、組織に合わせてカスタマイズするかにかかわらず、各グループとアカウントを適切にセキュリティで保護するために必要なツールが用意されています。
+このセクションでは、Active Directory の特権アカウントとグループの共通点と相違点を説明するための Active Directory の特権アカウントとグループに関する背景情報について説明します。 これらの違いを理解することで、 [Least-Privilege 管理モデルの実装](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md) に関する推奨事項を逐語的に実装するか、組織に合わせてカスタマイズするかにかかわらず、各グループとアカウントを適切にセキュリティで保護するために必要なツールが用意されています。
 
 ### <a name="built-in-privileged-accounts-and-groups"></a>組み込みの特権アカウントとグループ
 Active Directory により、管理の委任が容易になり、権限とアクセス許可を割り当てる際の最小限の特権の原則がサポートされます。 ドメイン内にアカウントを持つ "通常の" ユーザーは、既定では、ディレクトリに格納されているものの多くを読み取ることができますが、ディレクトリ内のデータのごく一部のみを変更することができます。 追加の特権を必要とするユーザーは、ディレクトリに組み込まれているさまざまな "特権のある" グループのメンバーシップを付与することができます。これにより、ロールに関連する特定のタスクを実行できますが、職務に関係のないタスクを実行することはできません。 組織では、特定の職務に合わせて調整されたグループを作成することもできます。また、これらの機能に必要な権限やアクセス許可を付与することなく、日常の管理機能を IT スタッフが実行できるようにするための、きめ細かい権限とアクセス許可が付与されます。

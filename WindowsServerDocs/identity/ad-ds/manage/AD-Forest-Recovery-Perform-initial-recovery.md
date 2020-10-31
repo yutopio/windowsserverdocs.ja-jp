@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復-最初の回復を実行する
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: 1b63d2dc379ae4e218bca9f39aab92eb74d6f5e5
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 8b0498b30966c22ec8dca267988e109d976f6b69
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939502"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067744"
 ---
 # <a name="perform-initial-recovery"></a>初期回復の実行
 
@@ -50,7 +50,7 @@ ms.locfileid: "88939502"
 
       **HKLM\System\CurrentControlSet\Services\NTDS\Parameters\Repl 初期同期の実行**
 
-      データ型が **REG_DWORD** で、値が **0**のエントリを作成します。 フォレストが完全に回復したら、このエントリの値を **1**にリセットできます。これには、既知のレプリカパートナーとの受信および送信レプリケーションを正常に実行するために、操作マスターの役割を再起動して、クライアントへのサービスの提供を開始する前に、操作マスターの役割を正常に AD DS するために、操作マスターの役割を 初期同期要件の詳細については、サポート技術情報の記事 [305476](https://support.microsoft.com/kb/305476)を参照してください。
+      データ型が **REG_DWORD** で、値が **0** のエントリを作成します。 フォレストが完全に回復したら、このエントリの値を **1** にリセットできます。これには、既知のレプリカパートナーとの受信および送信レプリケーションを正常に実行するために、操作マスターの役割を再起動して、クライアントへのサービスの提供を開始する前に、操作マスターの役割を正常に AD DS するために、操作マスターの役割を 初期同期要件の詳細については、サポート技術情報の記事 [305476](https://support.microsoft.com/kb/305476)を参照してください。
 
       データを復元して検証してから、このコンピューターを実稼働ネットワークに参加させる前に、次の手順に進みます。
 
@@ -121,9 +121,9 @@ ms.locfileid: "88939502"
 
 検証後、Dc を運用ネットワークに参加させ、フォレストレプリケーションの正常性を確認する手順を完了します。
 
-- 名前解決を修正するには、DNS 委任レコードを作成し、必要に応じて DNS 転送とルートヒントを構成します。 **Repadmin/replsum**を実行して、dc 間のレプリケーションを確認します。
+- 名前解決を修正するには、DNS 委任レコードを作成し、必要に応じて DNS 転送とルートヒントを構成します。 **Repadmin/replsum** を実行して、dc 間のレプリケーションを確認します。
 - 復元された DC が直接レプリケーションパートナーでない場合、レプリケーションの復旧は、それらの間に一時的な接続オブジェクトを作成することによってはるかに高速になります。
-- メタデータのクリーンアップを検証するには、 **Repadmin/viewlist \\ *** を実行し、フォレスト内のすべての dc の一覧を表示します。 ドメイン内のすべての Dc の一覧を表示するには、 **Nltest/DCList:** *<domain \> *を実行します。
+- メタデータのクリーンアップを検証するには、 **Repadmin/viewlist \\** _ を実行し、フォレスト内のすべての dc の一覧を表示します。 ドメイン内のすべての dc の一覧を表示するには、_ *Nltest/DCList:* *  *\><ドメイン* を実行します。
 - DC と DNS の正常性を確認するには、DCDiag/v を実行して、フォレスト内のすべての Dc でエラーを報告します。
 
 ## <a name="add-the-global-catalog-to-a-domain-controller-in-the-forest-root-domain"></a>フォレストルートドメイン内のドメインコントローラーにグローバルカタログを追加する

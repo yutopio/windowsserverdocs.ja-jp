@@ -2,16 +2,16 @@
 ms.assetid: e6b72a80-e8b7-4305-be0c-0a290f468d36
 title: Windows Server 2003 組織への AD DS の展開
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 708e18d739933d279cb79fa28e5c420f6d2b2a58
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 2eed366cfa6c27fd444236b924537d34fb11698d
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938012"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069344"
 ---
 # <a name="deploying-ad-ds-in-a-windows-server-2003-organization"></a>Windows Server 2003 組織への AD DS の展開
 
@@ -19,7 +19,7 @@ ms.locfileid: "88938012"
 
 組織で Windows Server 2003 Active Directory が現在実行されている場合、windows server 2008 Active Directory Domain Services (AD DS) を展開するには、ドメインコントローラーのオペレーティングシステムの一部またはすべてを Windows Server 2008 にインプレースアップグレードするか、Windows Server 2008 を実行するドメインコントローラーを環境に導入します。
 
-Windows Server 2008 を実行しているドメインコントローラーを既存の Windows Server 2003 Active Directory ドメインに追加するには、その前に、コマンドラインツール **adprep**を実行する必要があります。 Adprep は AD DS スキーマを拡張し、選択したオブジェクトの既定のセキュリティ記述子を更新し、一部のアプリケーションに必要な新しいディレクトリオブジェクトを追加します。 Adprep は、Windows Server 2008 インストールディスク (\sources\adprep\adprep.exe) で使用できます。 詳細については、「 [Adprep](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731728(v=ws.11))」を参照してください。
+Windows Server 2008 を実行しているドメインコントローラーを既存の Windows Server 2003 Active Directory ドメインに追加するには、その前に、コマンドラインツール **adprep** を実行する必要があります。 Adprep は AD DS スキーマを拡張し、選択したオブジェクトの既定のセキュリティ記述子を更新し、一部のアプリケーションに必要な新しいディレクトリオブジェクトを追加します。 Adprep は、Windows Server 2008 インストールディスク (\sources\adprep\adprep.exe) で使用できます。 詳細については、「 [Adprep](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731728(v=ws.11))」を参照してください。
 
 次の図は、windows Server 2003 Active Directory を現在実行しているネットワーク環境に Windows Server 2008 AD DS を展開する手順を示しています。
 

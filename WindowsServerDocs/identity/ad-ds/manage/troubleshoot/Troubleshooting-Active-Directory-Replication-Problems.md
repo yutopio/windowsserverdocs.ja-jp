@@ -2,16 +2,16 @@
 ms.assetid: b11f7a65-ec7b-4c11-8dc4-d7cabb54cd94
 title: Active Directory レプリケーションの問題のトラブルシューティングに関するページ
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 2ceb13e3729310e01063c0c5c3694806b1565363
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: aef89bb1d57aff57b90f0eaeed67832f8778ba8c
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941492"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068964"
 ---
 # <a name="troubleshooting-active-directory-replication-problems"></a>Active Directory レプリケーションの問題のトラブルシューティングに関するページ
 
@@ -116,9 +116,9 @@ AD DS を強制的に削除する方法の詳細については、「 [ドメイ
 
 必要条件
 
-この手順を完了するには、少なくとも、**Enterprise Admins** グループ、またはそれと同等の権限を持つグループのメンバーである必要があります。
+この手順を完了するには、少なくとも、 **Enterprise Admins** グループ、またはそれと同等の権限を持つグループのメンバーである必要があります。
 
-ツールでの操作 :
+ツール:
 
 - Repadmin.exe
 - Excel (Microsoft Office)

@@ -2,16 +2,16 @@
 ms.assetid: 0f21951c-b1bf-43bb-a329-bbb40c58c876
 title: レプリケーション エラー 1753。エンドポイント マッパーから使用できるエンドポイントはこれ以上ありません
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9752425c0732c2290642d62239151f20acb99ad0
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 94e63d439217c21c1634e7f1b685267ad98178b4
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940482"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067674"
 ---
 # <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>レプリケーション エラー 1753。エンドポイント マッパーから使用できるエンドポイントはこれ以上ありません
 
@@ -193,7 +193,7 @@ NSLOOKUP -type=hostname <fully qualified computer name of source DC> <secondary 
 * サーバーアプリケーション (Active Directory et al) が RPC サーバー (ソース DC) のエンドポイントマッパーに登録されていることを確認します。
 * Active Directory は、既知と動的に登録されたポートを組み合わせて使用します。 次の表に、Active Directory ドメインコントローラーで使用される既知のポートとプロトコルを示します。
 
-| RPC サーバーアプリケーション | Port | TCP | UDP |
+| RPC サーバーアプリケーション | ポート | TCP | UDP |
 | --- | --- | --- | --- |
 | DNS サーバー | 53 | X | X |
 | Kerberos | 88 | X | X |
@@ -284,9 +284,9 @@ F# SRC    DEST    Operation
 11 x.x.1.2 x.x.1.1 EPM:Response: ept_map: 0x16C9A0D6 - EP_S_NOT_REGISTERED
 ```
 
-フレーム **10**で、宛先 dc は、ソース dc エンドポイントマッパーをポート135経由で Active Directory レプリケーションサービスクラス UUID E351... に対して照会します。
+フレーム **10** で、宛先 dc は、ソース dc エンドポイントマッパーをポート135経由で Active Directory レプリケーションサービスクラス UUID E351... に対して照会します。
 
-フレーム **11**では、ソース dc (この場合は、dc ロールをまだホストしていないため、E351...ローカル EPM を使用したレプリケーションサービスの UUID は、シンボリックエラー EP_S_NOT_REGISTERED を返します。このエラーは、10進数のエラー1753、16進数のエラー0x6d9、および "エンドポイントマッパーから使用できるエンドポイントがありません" にマップされます。
+フレーム **11** では、ソース dc (この場合は、dc ロールをまだホストしていないため、E351...ローカル EPM を使用したレプリケーションサービスの UUID は、シンボリックエラー EP_S_NOT_REGISTERED を返します。このエラーは、10進数のエラー1753、16進数のエラー0x6d9、および "エンドポイントマッパーから使用できるエンドポイントがありません" にマップされます。
 
 その後、IP アドレスが x. x. 1.2 のメンバーコンピューターは、contoso.com ドメインのレプリカ "" に昇格します。 ここでも、[ **今すぐレプリケート** ] コマンドを使用してレプリケーションを開始しますが、この時間は "ターゲットプリンシパル名が正しくありません" というエラーが表示されて失敗します。 ネットワークアダプターが割り当てられているコンピューターの IP アドレスは、ドメインコントローラーであり、現在通常モードで起動されていて、E351...レプリケーションサービスの UUID はローカルの EPM を使用しますが、DC2 の名前またはセキュリティ id を所有しておらず、DC1 から Kerberos 要求の暗号化を解除できないため、要求は "ターゲットプリンシパル名が正しくありません" というエラーで失敗するようになりました。 このエラーは、10進数のエラー-2146893022/16 進数のエラー0x80090322 にマップされます。
 
