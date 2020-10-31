@@ -2,16 +2,16 @@
 ms.assetid: 85ca191c-0cc7-4453-a72c-42060ddf2ea2
 title: 概要
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/08/2018
 ms.topic: article
-ms.openlocfilehash: ffd3cf45d276445bca36f9e01651b74468446f61
-ms.sourcegitcommit: f45640cf4fda621b71593c63517cfdb983d1dc6a
+ms.openlocfilehash: 6259883f5aaba6869c6643b30995a51f1e9df422
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155938"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070694"
 ---
 # <a name="executive-summary"></a>概要
 
@@ -61,7 +61,7 @@ ms.locfileid: "92155938"
 
     - ドメインコントローラのセキュリティを十分に管理できません。
 
-  - 通常、**特権昇格および伝達**固有のアカウント、サーバー、およびインフラストラクチャコンポーネントは、Active Directory に対する攻撃の主な対象となります。 それらのアカウントを次に示します。
+  - 通常、 **特権昇格および伝達** 固有のアカウント、サーバー、およびインフラストラクチャコンポーネントは、Active Directory に対する攻撃の主な対象となります。 それらのアカウントを次に示します。
 
     - 永続的に特権を持つアカウント
 
@@ -76,7 +76,7 @@ ms.locfileid: "92155938"
 ## <a name="reducing-the-active-directory-attack-surface"></a>Active Directory の攻撃を削減する
 このセクションでは、Active Directory インストールの攻撃対象領域を削減するための技術的コントロールについて説明します。 このセクションでは、次の項目について説明します。
 
-- **Active Directory セクションの特権アカウントとグループ**では、Active Directory 内の最上位の特権を持つアカウントとグループと、特権アカウントを保護するメカニズムについて説明します。 Active Directory では、3つの組み込みグループは、ディレクトリ内の最上位の特権グループ (Enterprise Admins、Domain Admins、および Administrators) ですが、追加のグループやアカウントも保護する必要があります。
+- **Active Directory セクションの特権アカウントとグループ** では、Active Directory 内の最上位の特権を持つアカウントとグループと、特権アカウントを保護するメカニズムについて説明します。 Active Directory では、3つの組み込みグループは、ディレクトリ内の最上位の特権グループ (Enterprise Admins、Domain Admins、および Administrators) ですが、追加のグループやアカウントも保護する必要があります。
 
 - 「 **Least-Privilege 管理モデルの実装** 」セクションでは、そのリスクを軽減するための推奨事項を提供するだけでなく、日常の管理のために高い特権を持つアカウントを使用するリスクを特定することに重点を置いています。
 
@@ -180,5 +180,5 @@ ms.locfileid: "92155938"
 | エンドユーザーのセキュリティを簡略化します。 | 戦略的 | 予防 |
 | ホストベースのファイアウォールを使用して、通信を制御し、セキュリティで保護します。 | 戦術的 | 予防 |
 | パッチデバイス。 | 戦術的 | 予防 |
-| IT 資産のためのビジネス中心のライフサイクル管理を実装します。 | 戦略的 | 該当なし |
+| IT 資産のためのビジネス中心のライフサイクル管理を実装します。 | 戦略的 | N/A |
 | インシデント復旧計画を作成または更新します。 | 戦略的 | N/A |

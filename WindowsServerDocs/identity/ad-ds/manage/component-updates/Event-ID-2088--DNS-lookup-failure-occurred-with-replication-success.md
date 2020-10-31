@@ -2,16 +2,16 @@
 ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: イベント ID 2088-レプリケーションの成功時に DNS 参照エラーが発生しました
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: a6e78c458f92e477ddeaf156370f5e254caf4679
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 41ab450c98dd607c3c849fb94a1adbb9f1708375
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941342"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070714"
 ---
 # <a name="event-id-2088-dns-lookup-failure-occurred-with-replication-success"></a>イベント ID 2088: DNS 参照エラーが発生しましたが、レプリケーションは成功しました
 
@@ -39,7 +39,7 @@ Active Directory could not use DNS to resolve the IP address of the source domai
 
 このドメインコントローラーが DNS を使用してソースドメインコントローラーの IP アドレスを解決できるように、この DNS 構成エラーを直ちに解決する必要があります。
 
-代替サーバー名: DC1 失敗した DNS ホスト名: _msdcs 4a8717eb-8e58-456c-995a-c92e4add7e8e
+代替サーバー名: DC1 失敗した DNS ホスト名: 4a87 17eb-8e58-456c-99 5a-c92e4add7e8e._msdcs. contoso .com
 
 注: 既定では、10個を超えるエラーが発生した場合でも、12時間以内に最大10個の DNS エラーのみが表示されます。  個々のエラーイベントをすべてログに記録するには、次の診断レジストリ値を1に設定します。
 
@@ -69,7 +69,7 @@ dcdiag/test: dns
     </content>
   </section>
   <section>
-    <title>解決方法</title>
+    <title>解像度</title>
     <content>
       <para>「 &quot; <link xlink:href="85b1d179-f53e-4f95-b0b8-5b1c096a8076">イベント ID 2087: dns 参照の失敗によってレプリケーションが失敗する原因となっ</link>た dns のテスト」の説明に従って、dns のテストを続行します。&quot;</para>
     </content>

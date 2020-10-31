@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復-フォレストを回復する方法を決定する
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: dda621c8b567822a882e8230aba604ce0a115835
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 2cf48d391e675507d3fc227efc4ab691b10234bb
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939792"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93071344"
 ---
 # <a name="determine-how-to-recover-the-forest"></a>フォレストを回復する方法を決定する
 
@@ -54,7 +54,7 @@ Active Directory のごみ箱が有効になっている場合、バックアッ
 
 Active Directory データベースマウントツールの使用方法の詳細については、「 [Active Directory データベースマウントツールのステップバイステップガイド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10))」を参照してください。
 
-また、 **ntdsutil snapshot** コマンドを使用して、Active Directory データベースのスナップショットを作成することもできます。 定期的にスナップショットを作成するようにタスクをスケジュールすることで、Active Directory データベースの追加のコピーを時間の経過と共に取得できます。 これらのコピーを使用して、フォレスト全体の障害が発生したことをより明確に識別し、復元する最適なバックアップを選択することができます。 スナップショットを作成するには、Windows Server 2008 に付属しているバージョンの **ntdsutil** 、または windows Vista 以降のリモートサーバー管理ツール (RSAT) を使用します。 ターゲット DC は、任意のバージョンの Windows Server を実行できます。 **Ntdsutil snapshot**コマンドの使用方法の詳細については、「 [snapshot](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10))」を参照してください。
+また、 **ntdsutil snapshot** コマンドを使用して、Active Directory データベースのスナップショットを作成することもできます。 定期的にスナップショットを作成するようにタスクをスケジュールすることで、Active Directory データベースの追加のコピーを時間の経過と共に取得できます。 これらのコピーを使用して、フォレスト全体の障害が発生したことをより明確に識別し、復元する最適なバックアップを選択することができます。 スナップショットを作成するには、Windows Server 2008 に付属しているバージョンの **ntdsutil** 、または windows Vista 以降のリモートサーバー管理ツール (RSAT) を使用します。 ターゲット DC は、任意のバージョンの Windows Server を実行できます。 **Ntdsutil snapshot** コマンドの使用方法の詳細については、「 [snapshot](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10))」を参照してください。
 
 ## <a name="determining-which-domain-controllers-to-restore"></a>復元するドメインコントローラーを決定する
 
@@ -87,7 +87,7 @@ Active Directory を含むバックアップファイルを処理または復元
 
 次の例に示すように、ドメイン内の各 DC の機能を表示するテーブルを準備します。 これにより、回復後にフォレストの障害前の構成に戻すことができます。
 
-|DC 名|オペレーティング システム|FSMO|[GC]|RODC|Backup|DNS|Server Core|VM|VM-GenID|
+|DC 名|オペレーティング システム|FSMO|[GC]|RODC|バックアップ|DNS|Server Core|VM|VM-GenID|
 |-------------|----------------------|----------|--------|----------|------------|---------|-----------------|--------|---------------|
 |DC_1|Windows Server 2012|スキーママスタ、ドメイン名前付けマスタ|はい|いいえ|はい|いいえ|いいえ|はい|はい|
 |DC_2|Windows Server 2012|なし|はい|いいえ|はい|はい|いいえ|はい|はい|

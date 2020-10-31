@@ -3,17 +3,17 @@ ms.assetid: cb834273-828a-4141-9387-37dd8270e932
 title: Winlogon 自動再起動サインオン (ARSO)
 description: Windows 自動再起動サインオンを使用すると、ユーザーの生産性を向上させることができます。
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.reviewer: cahick
 ms.date: 08/20/2019
 ms.topic: article
-ms.openlocfilehash: 3f2957d2290934505f67edbcb8a49733452939e2
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: bbeff22ce85e1c108852a0e978ad56b1e70d10c5
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939872"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070544"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>Winlogon 自動再起動サインオン (ARSO)
 
@@ -167,6 +167,6 @@ WinLogon が自動的にロックしたときに WinLogon の状態のトレー�
 
 デバイスで Credential Guard が有効になっている場合、ユーザーの派生シークレットは、現在のブートセッションに固有のキーを使用して暗号化されます。 そのため、Credential Guard が有効になっているデバイスでは、現在、ARSO はサポートされていません。
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="additional-resources"></a>その他の資料
 
 自動ログオンは、いくつかのリリースの Windows に存在した機能です。 これは、windows [http:/technet. microsoft .com/sysinternals/bb963905](/sysinternals/downloads/autologon)の自動ログオンなどのツールを含む、windows のドキュメント化された機能です。 デバイスの 1 人のユーザーの資格情報を入力しなくても自動的にサインインできます。 資格情報が構成され、暗号化された LSA シークレットとしてレジストリに格納します。 特に、メンテナンス期間がこの期間中に一般がある場合はベッドの時間とウェイク アップのアカウントのロックダウンが発生する、多くの子の例では問題にできます。

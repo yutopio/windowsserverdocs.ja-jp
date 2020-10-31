@@ -2,16 +2,16 @@
 ms.assetid: 79b9c912-ea3e-4679-ab41-893e096c4d09
 title: 付録 B-Active Directory の特権アカウントとグループ
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 22bcea1426502af83fdeeecb0005324de2d54e64
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 2f720c09ee59544376693cdb97ecf7af54e308bd
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941572"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070474"
 ---
 # <a name="appendix-b-privileged-accounts-and-groups-in-active-directory"></a>付録 B: Active Directory の特権アカウントとグループ
 
@@ -27,7 +27,7 @@ Active Directory の "Privileged" アカウントとグループは、強力な�
 権利、アクセス許可、および特権の違いは、Microsoft のドキュメント内でも、混乱を招く可能性があります。 このセクションでは、このドキュメントで使用される各の特性について説明します。 これらの説明は、これらの用語を異なる方法で使用する可能性があるため、他の Microsoft ドキュメントに対して権威を持つものとは見なさないでください。
 
 #### <a name="rights-and-privileges"></a>権限と特権
-権限と特権は、実質的には、ユーザー、サービス、コンピューター、グループなどのセキュリティプリンシパルに付与されるシステム全体の機能と同じです。 通常、IT プロフェッショナルが使用するインターフェイスでは、これらは "権限" または "ユーザー権利" と呼ばれ、グループポリシーオブジェクトによって割り当てられることがよくあります。 次のスクリーンショットは、セキュリティプリンシパルに割り当てることができる最も一般的なユーザー権利の一部を示しています (Windows Server 2012 ドメインの既定のドメインコントローラー GPO を表します)。 これらの権限の一部は Active Directory に適用されます。たとえば、[ **コンピューターアカウントとユーザーアカウントを委任に対して信頼できる** ようにする] ユーザー権利は、Windows オペレーティングシステムに適用されます ( **システム時刻の変更**など)。
+権限と特権は、実質的には、ユーザー、サービス、コンピューター、グループなどのセキュリティプリンシパルに付与されるシステム全体の機能と同じです。 通常、IT プロフェッショナルが使用するインターフェイスでは、これらは "権限" または "ユーザー権利" と呼ばれ、グループポリシーオブジェクトによって割り当てられることがよくあります。 次のスクリーンショットは、セキュリティプリンシパルに割り当てることができる最も一般的なユーザー権利の一部を示しています (Windows Server 2012 ドメインの既定のドメインコントローラー GPO を表します)。 これらの権限の一部は Active Directory に適用されます。たとえば、[ **コンピューターアカウントとユーザーアカウントを委任に対して信頼できる** ようにする] ユーザー権利は、Windows オペレーティングシステムに適用されます ( **システム時刻の変更** など)。
 
 ![特権アカウントとグループ](media/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory/SAD_8.gif)
 
@@ -54,7 +54,7 @@ Active Directory の "Privileged" アカウントとグループは、強力な�
 |[システム時刻の変更](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_10)|SeSystemtimePrivilege|
 |[タイム ゾーンの変更](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_11)|SeTimeZonePrivilege|
 |[ページ ファイルの作成](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_12)|SeCreatePagefilePrivilege|
-|[トークン オブジェクトの作成](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_13)|SeCreateTokenPrivilege|
+|[トークンオブジェクトを作成する](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_13)|SeCreateTokenPrivilege|
 |[グローバル オブジェクトの作成](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_14)|SeCreateGlobalPrivilege|
 |[永続的共有オブジェクトの作成](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_15)|SeCreatePermanentPrivilege|
 |[シンボリック リンクの作成](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_16)|SeCreateSymbolicLinkPrivilege|
@@ -64,19 +64,19 @@ Active Directory の "Privileged" アカウントとグループは、強力な�
 |[サービスとしてのログオン権限を拒否する](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_19)|SeDenyServiceLogonRight|
 |[ローカルでのログオンを拒否する](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_20)|SeDenyInteractiveLogonRight|
 |[ターミナルサービスを使用したログオンを拒否する](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_21)|SeDenyRemoteInteractiveLogonRight|
-|[コンピューターとユーザー アカウントに委任時の信頼を付与](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_22)|SeEnableDelegationPrivilege|
+|[コンピューターおよびユーザーアカウントが委任に対して信頼されるようにする](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_22)|SeEnableDelegationPrivilege|
 |[リモート コンピューターからの強制シャットダウン](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_23)|SeRemoteShutdownPrivilege|
 |[セキュリティ監査の生成](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_24)|SeAuditPrivilege|
-|[認証後にクライアントを借用する](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_25)|SeImpersonatePrivilege|
+|[認証後にクライアントを偽装する](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_25)|SeImpersonatePrivilege|
 |[プロセス ワーキング セットの増加](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_26)|SeIncreaseWorkingSetPrivilege|
 |[スケジューリング優先順位の繰り上げ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_27)|SeIncreaseBasePriorityPrivilege|
-|[デバイス ドライバーのロードとアンロード](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_28)|SeLoadDriverPrivilege|
+|[デバイスドライバーの読み込みとアンロード](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_28)|SeLoadDriverPrivilege|
 |[メモリ内のページをロックする](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_29)|SeLockMemoryPrivilege|
 |[バッチジョブとしてログオンする](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_30)|SeBatchLogonRight|
 |[サービスとしてログオン](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_31)|SeServiceLogonRight|
-|[監査ログとセキュリティ ログの管理](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_32)|SeSecurityPrivilege|
+|[監査とセキュリティログの管理](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_32)|SeSecurityPrivilege|
 |[オブジェクト ラベルの変更](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_33)|SeRelabelPrivilege|
-|[ファームウェア環境値の修正](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_34)|SeSystemEnvironmentPrivilege|
+|[ファームウェアの環境値を変更する](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_34)|SeSystemEnvironmentPrivilege|
 |[ボリュームの保守タスクを実行](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_35)|SeManageVolumePrivilege|
 |[単一プロセスのプロファイル](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_36)|SeProfileSingleProcessPrivilege|
 |[システム パフォーマンスのプロファイル](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_37)|SeSystemProfilePrivilege|
@@ -85,7 +85,7 @@ Active Directory の "Privileged" アカウントとグループは、強力な�
 |[ファイルとディレクトリの復元](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_40)|SeRestorePrivilege|
 |[システムのシャットダウン](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_41)|SeShutdownPrivilege|
 |[ディレクトリ サービス データの同期化](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_42)|SeSyncAgentPrivilege|
-|[ファイルとその他のオブジェクトの所有権の取得](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_43)|SeTakeOwnershipPrivilege|
+|[ファイルまたはその他のオブジェクトの所有権を取得する](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349804(v=ws.10)#BKMK_43)|SeTakeOwnershipPrivilege|
 
 #### <a name="permissions"></a>アクセス許可
 アクセス許可は、ファイルシステム、レジストリ、サービス、Active Directory オブジェクトなどのセキュリティ保護可能なオブジェクトに適用されるアクセス制御です。 セキュリティ保護可能な各オブジェクトには、関連付けられているアクセス制御リスト (ACL) があります。これには、オブジェクトに対してさまざまな操作を実行する権限をセキュリティプリンシパル (ユーザー、サービス、コンピューター、またはグループ) に許可または拒否するアクセス制御エントリ (Ace) が含まれています。 たとえば、Active Directory 内の多くのオブジェクトの Acl には、認証されたユーザーがオブジェクトに関する全般的な情報を読み取ることができる Ace が含まれていますが、機密情報の読み取りやオブジェクトの変更は許可されていません。
@@ -187,11 +187,11 @@ SA グループのメンバーシップを慎重に管理して監視する必�
 |RDS リモートアクセスサーバー (Windows Server 2012)|組み込みコンテナー<p>ドメインローカルセキュリティグループ|このグループのサーバーを使用すると、RemoteApp プログラムおよび個人用仮想デスクトップからこれらのリソースにアクセスできます。 インターネットに接続する展開では、通常、これらのサーバーはエッジネットワークに展開されます。 このグループは、RD 接続ブローカーを実行しているサーバーに設定する必要があります。 展開で使用されている RD ゲートウェイサーバーと RD Web アクセスサーバーは、このグループに存在する必要があります。<p>**直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
 |Read-Only Domain Controllers|users コンテナー<p>グローバルセキュリティグループ|このグループには、ドメイン内のすべての読み取り専用ドメインコントローラーが含まれます。<p>**直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
 |Remote Desktop Users|組み込みコンテナー<p>ドメインローカルセキュリティグループ|このグループのメンバーには、RDP を使用してリモートでログオンする権限が付与されます。<p>**直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
-|リモート管理ユーザー (Windows Server 2012)|組み込みコンテナー<p>ドメインローカルセキュリティグループ|このグループのメンバーは、管理プロトコル (Windows リモート管理サービスを介した WS-MANAGEMENT など) を介して WMI リソースにアクセスできます。 これは、ユーザーへのアクセスを許可する WMI 名前空間にのみ適用されます。<p>**直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
+|リモート管理ユーザー (Windows Server 2012)|組み込みコンテナー<p>ドメインローカルセキュリティグループ|このグループのメンバーは、管理プロトコル (Windows リモート管理サービスを介した WS-Management など) を介して WMI リソースにアクセスできます。 これは、ユーザーへのアクセスを許可する WMI 名前空間にのみ適用されます。<p>**直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
 |レプリケーター|組み込みコンテナー<p>ドメインローカルセキュリティグループ|では、ドメイン内のレガシファイルレプリケーションがサポートされています。<p>**直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
 |スキーマ管理者 (フォレストのルートドメインにのみ存在)|users コンテナー<p>ユニバーサルセキュリティグループ|スキーマ管理者は、スキーマの書き込みが許可されている場合にのみ、Active Directory スキーマを変更できる唯一のユーザーです。<p>**直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
 |Server Operators|組み込みコンテナー<p>ドメインローカルセキュリティグループ|このグループのメンバーは、ドメインサーバーを管理できます。<p>**直接ユーザー権限:**<p>ローカル ログオンを許可<p>ファイルとディレクトリのバックアップ<p>システム時刻の変更<p>タイム ゾーンの変更<p>リモート コンピューターからの強制シャットダウン<p>ファイルとディレクトリの復元<p>システムのシャットダウン<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
 |ターミナルサーバーライセンスサーバー|組み込みコンテナー<p>ドメインローカルセキュリティグループ|このグループのメンバーは、TS CAL (接続ユーザー数) の使用状況を追跡および報告するために、Active Directory のユーザーアカウントをライセンスの発行に関する情報で更新できます。<p>**既定の直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
 |ユーザー|組み込みコンテナー<p>ドメインローカルセキュリティグループ|ユーザーには Active Directory で多くのオブジェクトと属性の読み取りを許可するアクセス許可がありますが、ほとんどは変更できません。 ユーザーは、偶発的または意図的なシステム全体の変更を行うことができず、ほとんどのアプリケーションを実行できます。<p>**直接ユーザー権限:**<p>プロセス ワーキング セットの増加<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス|
 |Windows 認証アクセスグループ|組み込みコンテナー<p>ドメインローカルセキュリティグループ|このグループのメンバーは、ユーザーオブジェクトの計算された Tokenグループ Globalanduniversal 属性にアクセスします<p>**直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
-|WinRMRemoteWMIUsers_ (Windows Server 2012)|users コンテナー<p>ドメインローカルセキュリティグループ|このグループのメンバーは、管理プロトコル (Windows リモート管理サービスを介した WS-MANAGEMENT など) を介して WMI リソースにアクセスできます。 これは、ユーザーへのアクセスを許可する WMI 名前空間にのみ適用されます。<p>**直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|
+|WinRMRemoteWMIUsers_ (Windows Server 2012)|users コンテナー<p>ドメインローカルセキュリティグループ|このグループのメンバーは、管理プロトコル (Windows リモート管理サービスを介した WS-Management など) を介して WMI リソースにアクセスできます。 これは、ユーザーへのアクセスを許可する WMI 名前空間にのみ適用されます。<p>**直接ユーザー権限:** 存在<p>**継承されたユーザー権限:**<p>ネットワークからこのコンピューターにアクセスする<p>ドメインにワークステーションを追加<p>走査チェックのバイパス<p>プロセス ワーキング セットの増加|

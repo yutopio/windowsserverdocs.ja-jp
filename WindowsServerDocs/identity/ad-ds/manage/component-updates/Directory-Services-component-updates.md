@@ -2,22 +2,22 @@
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: ディレクトリ サービス コンポーネントの更新
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 39f13d18210a6527c5da2ccb6655150be9608a46
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 85095e1b75ca5c2ae781ffddbeed43e5bb3a3864
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939592"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070764"
 ---
 # <a name="directory-services-component-updates"></a>ディレクトリ サービス コンポーネントの更新
 
 >適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 
-**Author**: Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
+**Author** : Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
 
 > [!NOTE]
 > この内容は Microsoft カスタマー サポート エンジニアによって作成され、TechNet が通常提供しているトピックよりも詳細な Windows Server 2012 R2 の機能やソリューションの技術的説明を求めている、経験豊かな管理者とシステム設計者を対象としています。 ただし、TechNet と同様の編集過程は実施されていないため、言語によっては通常より洗練されていない文章が見られる場合があります。
@@ -53,9 +53,9 @@ ms.locfileid: "88939592"
 
 ### <a name="the-windows-server-2012-r2-domain-functional-level-enables-support-for-the-following"></a>Windows Server 2012 R2 ドメインの機能レベルにより、次のサポートが有効になります。
 
-1.  *保護されたユーザー*の DC 側の保護
+1.  *保護されたユーザー* の DC 側の保護
 
-    *保護されたユーザー* が Windows Server 2012 R2 ドメインに対する認証を行うことができ **なくなり**ます。
+    *保護されたユーザー* が Windows Server 2012 R2 ドメインに対する認証を行うことができ **なくなり** ます。
 
     -   NTLM 認証で認証を行う
 
@@ -95,7 +95,7 @@ Windows PowerShell を使用してフォレストの機能レベルを上げた�
 Set-ADForestMode -ForestMode Windows2008Forest -Identity contoso.com
 ```
 
-Windows PowerShell を使用してドメインの機能レベルを上げたり下げたりするには、Set ADDomainMode コマンドレットを使用します。
+Windows PowerShell を使用してドメインの機能レベルを上げたり下げたりするには、Set-ADDomainMode コマンドレットを使用します。
 
 **Contoso.com DFL を Windows Server 2008 モードに設定するには、次のようにします。**
 
@@ -112,7 +112,7 @@ Windows Server 2012 R2 を実行している DC を、2003 DFL を実行して�
 ### <a name="adprep"></a>ADPREP
 このリリースでは、新しいフォレストまたはドメインの操作はありません。
 
-これらの .ldf ファイルには、 **デバイス登録サービス**のスキーマ変更が含まれています。
+これらの .ldf ファイルには、 **デバイス登録サービス** のスキーマ変更が含まれています。
 
 1.  Sch59
 
@@ -147,7 +147,7 @@ Windows Server 2012 R2 を実行している DC を、2003 DFL を実行して�
 ### <a name="overview"></a>概要
 FRS は、Windows Server 2012 R2 で非推奨とされます。  FRS の廃止は、Windows Server 2008 の最小ドメイン機能レベル (DFL) を適用することで実現されます。  この強制は、サーバーマネージャーまたは Windows PowerShell を使用して新しいドメインが作成された場合にのみ存在します。
 
-ドメインの機能レベルを指定するには、-DomainMode パラメーターを Install-ADDSForest または Install-Addsforest コマンドレットと共に使用します。  このパラメーターでサポートされる値は、有効な整数または対応する列挙文字列値のいずれかです。 たとえば、ドメインモードレベルを Windows Server 2008 R2 に設定するには、値として4または "Win2008R2" を指定します。  これらのコマンドレットをサーバー 2012 R2 から実行する場合、有効な値には、windows server 2008 (3、Win2008) windows server 2008 R2 (4、Win2008R2) windows server 2012 (5、Win2012) および Windows Server 2012 R2 (6、Win2012R2) が含まれます。 ドメインの機能レベルは、フォレストの機能レベルより低くすることはできませんが、それより高くすることはできます。  このリリースでは FRS が非推奨とされているため、windows server 2012 R2 から実行すると、Windows Server 2003 (2, Win2003) はこれらのコマンドレットで認識されるパラメーターではなくなりました。
+ドメインの機能レベルを指定するには、Install-ADDSForest または Install-ADDSDomain コマンドレットと共に-DomainMode パラメーターを使用します。  このパラメーターでサポートされる値は、有効な整数または対応する列挙文字列値のいずれかです。 たとえば、ドメインモードレベルを Windows Server 2008 R2 に設定するには、値として4または "Win2008R2" を指定します。  これらのコマンドレットをサーバー 2012 R2 から実行する場合、有効な値には、windows server 2008 (3、Win2008) windows server 2008 R2 (4、Win2008R2) windows server 2012 (5、Win2012) および Windows Server 2012 R2 (6、Win2012R2) が含まれます。 ドメインの機能レベルは、フォレストの機能レベルより低くすることはできませんが、それより高くすることはできます。  このリリースでは FRS が非推奨とされているため、windows server 2012 R2 から実行すると、Windows Server 2003 (2, Win2003) はこれらのコマンドレットで認識されるパラメーターではなくなりました。
 
 ![ディレクトリサービスの更新](media/Directory-Services-component-updates/GTR_ADDS_PS_Install2003DFL.gif)
 
@@ -269,13 +269,13 @@ Log Record Bytes Generated: 0
 
 1.  LDP.exe を開き、ドメインコントローラーに接続してバインドします。
 
-2.  [ **オプション** ] メニューの [ **コントロール**] をクリックします。
+2.  [ **オプション** ] メニューの [ **コントロール** ] をクリックします。
 
-3.  [コントロール] ダイアログボックスで、[ **事前定義済み** ] プルダウンメニューを展開し、[ **検索統計** ] をクリックして、[ **OK**] をクリックします。
+3.  [コントロール] ダイアログボックスで、[ **事前定義済み** ] プルダウンメニューを展開し、[ **検索統計** ] をクリックして、[ **OK** ] をクリックします。
 
     ![ディレクトリサービスの更新](media/Directory-Services-component-updates/GTR_ADDS_Controls.gif)
 
-4.  [**参照**] メニューの [**検索**] をクリックします。
+4.  [ **参照** ] メニューの [ **検索** ] をクリックします。
 
 5.  [検索] ダイアログボックスで、[ **オプション** ] ボタンを選択します。
 
@@ -301,7 +301,7 @@ Log Record Bytes Generated: 0
 
 [Active Directory 検索のしくみ](/previous-versions/windows/it-pro/windows-server-2003/cc755809(v=ws.10))
 
-[より効率的な Microsoft Active Directory 対応アプリケーションの作成](/previous-versions/ms808539(v=msdn.10))
+[より効率的な Microsoft Active Directory-Enabled アプリケーションの作成](/previous-versions/ms808539(v=msdn.10))
 
 [951581](https://support.microsoft.com/kb/951581) AD または LDS/ADAM ディレクトリサービスでの LDAP クエリの実行速度が予想よりも遅く、イベント ID 1644 がログに記録されることがある
 
@@ -323,7 +323,7 @@ Log Record Bytes Generated: 0
 
 -   開始ノード
 
--   Assert
+-   フィルター
 
 -   検索範囲
 

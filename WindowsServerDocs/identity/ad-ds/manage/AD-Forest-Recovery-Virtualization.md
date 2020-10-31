@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復の仮想化
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
-ms.openlocfilehash: aa6598c2a033147928d05c8175886c1c2425b4cd
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 61c28bf5edce2855320669f446e0ade559d10716
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938052"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070774"
 ---
 # <a name="active-directory-forest-recovery-virtualization"></a>Active Directory フォレスト回復の仮想化
 
@@ -25,7 +25,7 @@ ms.locfileid: "88938052"
 
 仮想化 DC の複製の要件は次のとおりです。
 
-- ハイパーバイザーは Vm-generationid をサポートする必要があります。 Windows Server 2016、2012、および Windows 8 の hyper-v は、Vm-generationid をサポートするハイパーバイザーの一例です。 Vm-generationid がサポートされている場合は、ハイパーバイザーベンダーに確認してください。
+- ハイパーバイザーは Vm-generationid をサポートする必要があります。 Windows Server 2016、2012、および Windows 8 の hyper-v は、Vm-generationid をサポートするハイパーバイザーの一例です。 VM-GenerationID がサポートされている場合は、ハイパーバイザーベンダーに確認してください。
 - 複製のソースとして使用される仮想化 DC は、Windows Server 2016 または2012を実行し、複製可能なドメインコントローラーグループのメンバーである必要があります。
 - PDC エミュレーターは、Windows Server 2016 または2012を実行している必要があります。 PDC エミュレーターが仮想化されている場合は、複製できます。
 

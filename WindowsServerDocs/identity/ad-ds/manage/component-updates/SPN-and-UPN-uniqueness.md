@@ -2,22 +2,22 @@
 ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: SPN と UPN の一意性
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: cafbc577bd025fc30f409385f51f6981fb3ab81d
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: c41b532b6be241a937500485aca723e391ff9210
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941382"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070724"
 ---
 # <a name="spn-and-upn-uniqueness"></a>SPN と UPN の一意性
 
 >適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 
-**Author**: Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
+**Author** : Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
 
 > [!NOTE]
 > この内容は Microsoft カスタマー サポート エンジニアによって作成され、TechNet が通常提供しているトピックよりも詳細な Windows Server 2012 R2 の機能やソリューションの技術的説明を求めている、経験豊かな管理者とシステム設計者を対象としています。 ただし、TechNet と同様の編集過程は実施されていないため、言語によっては通常より洗練されていない文章が見られる場合があります。
@@ -34,7 +34,7 @@ Windows Server 2012 R2 のブロックの作成を実行しているドメイン
 
 **テーブル SEQ テーブル \\ \* アラビア語 1: UPN と SPN の一意性**
 
-|特徴量|コメント|
+|機能|コメント|
 |-----------|-----------|
 |UPN の一意性|重複する Upn 中断同期の内部設置型 Windows Azure AD ベースのサービスと Office 365 などの AD アカウントです。|
 |SPN の一意性|Kerberos では、相互認証用の Spn が必要です。  Spn が重複すると、認証エラーが発生します。|
@@ -179,11 +179,11 @@ DN: CN=Dianne Hunt2\0ADEL:dd3ab8a4-3005-4f2f-814f-d6fc54a1a1c0,CN=Deleted Object
 
 -   選択、 **LDAP に変換** オプション ボタン
 
--   型 **(userPrincipalName =*競合*** している upn)
+-   型 **(userPrincipalName = *競合*** している upn)
 
-    -   置換 ***ConflictingUPN*** 競合している実際の UPN を持つ
+    -   * Conflict *_Tingupn_* _ を競合している実際の upn に置き換えます。
 
--   **適用**を選択
+-   _ *適用* を選択*
 
 ![SPN と UPN の一意性](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig13_GlobalSearch.gif)
 
@@ -209,7 +209,7 @@ Windows PowerShell を使用する UserPrincipalName 属性を null。
 
 **シーケンス図 \\ \* アラビア語の重複する SPN の追加がブロックされたときに ADSIEdit に表示されるエラーメッセージ**
 
-ディレクトリ サービス イベント ログに記録する **ActiveDirectory_DomainService** イベント ID **2974**します。
+ディレクトリ サービス イベント ログに記録する **ActiveDirectory_DomainService** イベント ID **2974** します。
 
 ```
 Operation failed. Error code: 0x21c7
@@ -229,9 +229,9 @@ servicePrincipalName Value=<SPN>
 
     -   Offbox 呼び出しは必要ありません、クエリはローカルで満たすことができます。
 
-    -   ***Upn***
+    -   **_UPN ケース_* _
 
-        -   クエリ ローカル フォレスト全体の UPN インデックスの指定した UPN (*userPrincipalName はグローバル インデックス*)
+        -   指定された UPN (_userPrincipalName、グローバルインデックス *) のローカルフォレスト全体の UPN インデックスを照会します
 
             -   エントリが返される場合は = = 0 が書き込み処理を ->
 
@@ -245,9 +245,9 @@ servicePrincipalName Value=<SPN>
 
                         *ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST*
 
-    -   ***SPN の場合***
+    -   ***SPN ケース** _
 
-        -   クエリ ローカル フォレスト全体の SPN インデックス指定された SPN に (*サービス プリンシパル名はグローバル インデックス*)
+        -   指定された SPN (_servicePrincipalName、グローバルインデックス *) のローカルフォレスト全体の SPN インデックスを照会します
 
             -   エントリが返される場合は = = 0 が書き込み処理を ->
 
@@ -269,9 +269,9 @@ servicePrincipalName Value=<SPN>
 
         -   このようなを示すために記録されたイベント
 
-    -   ***Upn***
+    -   **_UPN ケース_* _
 
-        -   最も近い GC に対して LDAP クエリを送信するにはありますか。 指定した UPN のクエリの GC のフォレスト全体に関わる UPN インデックス (*userPrincipalName はグローバル インデックス*)
+        -   最も近い GC に対して LDAP クエリを送信するにはありますか。 指定された UPN のクエリ GC のフォレスト全体に対する UPN インデックス (_userPrincipalName、グローバルインデックス *)
 
             -   エントリが返される場合は = = 0 が書き込み処理を ->
 
@@ -285,9 +285,9 @@ servicePrincipalName Value=<SPN>
 
                         *ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST*
 
-    -   ***SPN の場合***
+    -   ***SPN ケース** _
 
-        -   最も近い GC に対して LDAP クエリを送信するにはありますか。 指定された SPN にクエリ GC のフォレスト全体に関わる SPN インデックス (*サービス プリンシパル名はグローバル インデックス*)
+        -   最も近い GC に対して LDAP クエリを送信するにはありますか。 指定された SPN のクエリ GC のフォレスト全体に対する SPN インデックス (_servicePrincipalName、グローバルインデックス *)
 
             -   エントリが返される場合は = = 0 が書き込み処理を ->
 
@@ -320,10 +320,10 @@ servicePrincipalName Value=<SPN>
 重複する SPN の新しい値のいずれかの場合は、変更が失敗します。 上記の一覧の重要な属性は、ATT_DNS_HOST_NAME (コンピューター名) と ATT_SAM_ACCOUNT_NAME (SAM アカウント名) です。
 
 ### <a name="try-this-exploring-spn-and-upn-uniqueness"></a>SPN と UPN の一意性の表示にしてください。
-これは、最初のいくつかの"**実際に使ってみる**"、モジュール内の活動です。  このモジュールの別のラボ ガイドではありません。  **実際に使ってみる** アクティビティは、本質的に自由に使用できるアクティビティがラボ環境のレッスンの内容を表示します。  次のプロンプトまたはスクリプトのオプションを独自のアクティビティを思い付くなりません。
+これは、最初のいくつかの" **実際に使ってみる** "、モジュール内の活動です。  このモジュールの別のラボ ガイドではありません。  **実際に使ってみる** アクティビティは、本質的に自由に使用できるアクティビティがラボ環境のレッスンの内容を表示します。  次のプロンプトまたはスクリプトのオプションを独自のアクティビティを思い付くなりません。
 
 > [!NOTE]
-> -   これは、最初のいくつかの"**実際に使ってみる**"アクティビティ。
+> -   これは、最初のいくつかの" **実際に使ってみる** "アクティビティ。
 > -   このモジュールの別のラボ ガイドではありません。
 > -   **実際に使ってみる** アクティビティは、本質的に自由に使用できるアクティビティがラボ環境のレッスンの内容を表示します。
 > -   次のプロンプトまたはスクリプトのオプションを独自のアクティビティを思い付くなりません。

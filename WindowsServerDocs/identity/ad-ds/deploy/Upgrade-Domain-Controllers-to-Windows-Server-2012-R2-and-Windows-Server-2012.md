@@ -1,17 +1,17 @@
 ---
 ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: ドメイン コントローラーを Windows Server 2012 R2 または Windows Server 2012 にアップグレードする
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 4034ea96fbe1f758d6948b2bc52ba9786158b0ba
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: edffa7869aa1895a09e7007c375b8973f68e4eed
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940562"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93069904"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012"></a>ドメイン コントローラーを Windows Server 2012 R2 または Windows Server 2012 にアップグレードする
 
@@ -69,7 +69,7 @@ Windows Update は Windows 8 および Windows Server 2012 の自動メンテナ
 
 次の表は、Windows Server 2012 R2 のAD DS 関連の新機能をまとめたものです。詳細情報がある場合は、リンクも示しています。 一部の機能に関する詳細 (要件など) については、「 [Windows Server の Active Directory の新機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn268294(v=ws.11))」を参照してください。
 
-|特徴量|説明|
+|機能|説明|
 |-----------|---------------|
 |[社内参加](../../ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications.md)|インフォメーション ワーカーが企業のリソースとサービスにアクセスするために、個人のデバイスを社内コンピューターの一部として参加させることができるようにします。|
 |[Web アプリケーション プロキシ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280942(v=ws.11))|新しいリモート アクセス役割サービスを使って Web アプリケーションへのアクセスを提供します。|
@@ -88,7 +88,7 @@ Windows Update は Windows 8 および Windows Server 2012 の自動メンテナ
 
 次の表は、Windows Server 2012 のAD DS 関連の新機能をまとめたものです。詳細情報がある場合は、リンクも示しています。 一部の機能 (要件を含む) の詳細については、「 [Active Directory Domain Services の新機能」 (AD DS)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831477(v=ws.11))を参照してください。
 
-|特徴量|説明|
+|機能|説明|
 |-----------|---------------|
 |Active Directory によるライセンス認証 (AD BA) (「 [ボリューム ライセンス認証の概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831612(v=ws.11))」を参照)|ボリューム ソフトウェア ライセンスの配布と管理を構成するタスクが簡略化されます。|
 |[Active Directory フェデレーション サービス (AD FS)](../../active-directory-federation-services.md)|サーバー マネージャー経由のサーバーの役割のインストール、信頼のセットアップの単純化、自動的な信頼管理、SAML プロトコルのサポートなどが追加されます。|
@@ -122,9 +122,9 @@ Windows Update は Windows 8 および Windows Server 2012 の自動メンテナ
 |||
 |-|-|
 |**シナリオ**|**推奨構成**|
-|**WSUS 管理**<p>-1 週間に1回更新プログラムをインストールする<br />-午後11時で金曜日を再起動します|コンピューターを自動インストールに設定し、希望の時間まで自動再起動を禁止する<p>**ポリシー**:自動更新を構成する (有効)<p>自動更新の構成: 4-自動ダウンロードし、インストールをスケジュールする<p>**ポリシー**: ログオンしているユーザーがいる場合は自動再起動しない (無効)<p>**WSUS 期限**: 金曜日の 23:00 に設定する|
+|**WSUS 管理**<p>-1 週間に1回更新プログラムをインストールする<br />-午後11時で金曜日を再起動します|コンピューターを自動インストールに設定し、希望の時間まで自動再起動を禁止する<p>**ポリシー** :自動更新を構成する (有効)<p>自動更新の構成: 4-自動ダウンロードし、インストールをスケジュールする<p>**ポリシー** : ログオンしているユーザーがいる場合は自動再起動しない (無効)<p>**WSUS 期限** : 金曜日の 23:00 に設定する|
 |**WSUS 管理**<p>-異なる時間/日にインストールをずらす|一緒に更新する必要のあるさまざまなコンピューター グループのターゲット グループを設定する<p>前のシナリオに対して上記の手順を使用する<p>さまざまなターゲット グループに対して異なる期限を設定する|
-|**WSUS で管理されていない-期限のサポートなし**<p>-異なるタイミングでインストールをずらす|**ポリシー**:自動更新を構成する (有効)<p>自動更新の構成: 4-自動ダウンロードし、インストールをスケジュールする<p>**レジストリ キー:** Microsoft サポート技術情報の記事 [2835627](https://support.microsoft.com/kb/2835627)<p>**ポリシー:** 自動メンテナンス ランダム遅延 (有効)<p>次の動作になるように、[**定期メンテナンス ランダム遅延**] を [PT6H] (6 時間のランダム遅延) に設定する。<p>-更新プログラムは、構成されたメンテナンス時間とランダムな遅延でインストールされます<p>-各マシンの再起動は、3日後に正確に実行されます。<p>または、コンピューターのグループごとに異なるメンテナンス時刻を設定する|
+|**WSUS で管理されていない-期限のサポートなし**<p>-異なるタイミングでインストールをずらす|**ポリシー** :自動更新を構成する (有効)<p>自動更新の構成: 4-自動ダウンロードし、インストールをスケジュールする<p>**レジストリ キー:** Microsoft サポート技術情報の記事 [2835627](https://support.microsoft.com/kb/2835627)<p>**ポリシー:** 自動メンテナンス ランダム遅延 (有効)<p>次の動作になるように、[ **定期メンテナンス ランダム遅延** ] を [PT6H] (6 時間のランダム遅延) に設定する。<p>-更新プログラムは、構成されたメンテナンス時間とランダムな遅延でインストールされます<p>-各マシンの再起動は、3日後に正確に実行されます。<p>または、コンピューターのグループごとに異なるメンテナンス時刻を設定する|
 
 Windows エンジニアリング チームがこれらの変更点を実装した理由の詳細については、 [Windows Update での自動更新後の再起動の最小化](https://blogs.msdn.com/b/b8/archive/2011/11/14/minimizing-restarts-after-automatic-updating-in-windows-update.aspx)に関する投稿を参照してください。
 
@@ -156,7 +156,7 @@ Windows Server 2008 以降のドメインコントローラーでは、Windows S
 |--|--|--|--|
 | AllowNT4Crypto | 無効 | 無効 | サード パーティ製のサーバー メッセージ ブロック (SMB) クライアントは、ドメイン コントローラー上の既定のセキュリティ設定と互換性がない場合があります。 どのような場合でも、これらの設定を緩和して相互運用を可能にすることもできますが、その際はセキュリティが低下します。 詳細については、Microsoft サポート技術情報の [記事 942564](https://go.microsoft.com/fwlink/?LinkId=164558) () を参照してください https://go.microsoft.com/fwlink/?LinkId=164558) 。 |
 | DES | Enabled | 無効 | Microsoft サポート技術情報の[記事 977321](https://go.microsoft.com/fwlink/?LinkId=177717) (https://go.microsoft.com/fwlink/?LinkId=177717) |
-| 統合認証のための CBT/拡張保護 | 該当なし | Enabled | Microsoft [セキュリティアドバイザリ (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) ( https://go.microsoft.com/fwlink/?LinkId=164559) および Microsoft サポート技術情報の [記事 976918](https://go.microsoft.com/fwlink/?LinkId=178251) () を参照してください https://go.microsoft.com/fwlink/?LinkId=178251) 。<p>必要に応じて、Microsoft サポート技術情報の [記事 977073](https://go.microsoft.com/fwlink/?LinkId=186394) の修正プログラムを確認してインストールし https://go.microsoft.com/fwlink/?LinkId=186394) ます。 |
+| 統合認証のための CBT/拡張保護 | N/A | Enabled | Microsoft [セキュリティアドバイザリ (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) ( https://go.microsoft.com/fwlink/?LinkId=164559) および Microsoft サポート技術情報の [記事 976918](https://go.microsoft.com/fwlink/?LinkId=178251) () を参照してください https://go.microsoft.com/fwlink/?LinkId=178251) 。<p>必要に応じて、Microsoft サポート技術情報の [記事 977073](https://go.microsoft.com/fwlink/?LinkId=186394) の修正プログラムを確認してインストールし https://go.microsoft.com/fwlink/?LinkId=186394) ます。 |
 | LMv2 | Enabled | 無効 | Microsoft サポート技術情報の[記事 976918](https://go.microsoft.com/fwlink/?LinkId=178251) (https://go.microsoft.com/fwlink/?LinkId=178251) |
 
 ## <a name="operating-system-requirements"></a><a name="BKMK_SysReqs"></a>オペレーティング システムの要件
@@ -223,7 +223,7 @@ Windows 2000 のドメイン コントローラーは、フォレストに Windo
 4. Windows Server 2012 を実行するドメイン コントローラーをインストールします。
 5. 以前のバージョンの Windows Server を実行するドメイン コントローラーを削除することはできません。
 
-新しい Windows Server 2012 ドメインの機能レベルでは、1つの新機能が有効になります。 **kdc で信頼性情報、複合認証、および Kerberos 防御をサポート** する kdc 管理用テンプレートポリシーには、Windows Server 2012 ドメインの機能レベルを必要とする2つの設定 (**常に** 要求を提供し、 **防御認証を要求**します) があります。
+新しい Windows Server 2012 ドメインの機能レベルでは、1つの新機能が有効になります。 **kdc で信頼性情報、複合認証、および Kerberos 防御をサポート** する kdc 管理用テンプレートポリシーには、Windows Server 2012 ドメインの機能レベルを必要とする2つの設定 ( **常に** 要求を提供し、 **防御認証を要求** します) があります。
 
 Windows Server 2012 フォレストの機能レベルでは新しい機能は提供されませんが、フォレスト内に作成された新しいドメインは、Windows Server 2012 ドメインの機能レベルで自動的に動作するようになります。 Windows Server 2012 ドメインの機能レベルでは、KDC が信頼性情報、複合認証、および Kerberos 防御をサポートする以外に、他の新機能は提供されません。 ただし、ドメイン内のすべてのドメインコントローラーが Windows Server 2012 を実行していることを確認します。 別の機能レベルで使用できる他の機能の詳細については、「 [AD DS の機能レベルとは](../active-directory-functional-levels.md)」を参照してください。
 

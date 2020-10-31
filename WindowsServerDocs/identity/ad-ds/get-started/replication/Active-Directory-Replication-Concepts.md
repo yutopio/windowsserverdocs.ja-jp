@@ -2,16 +2,16 @@
 ms.assetid: 4cc9c16c-1928-4dce-a3a8-6229be28eb65
 title: Active Directory レプリケーションの概念
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 403a8be3d6b7fc6330395bf6e4d20141e01b76ba
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 6acd9d1974395cdd4c07df3b09d47ffb104a16ef
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940322"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070994"
 ---
 # <a name="active-directory-replication-concepts"></a>Active Directory レプリケーションの概念
 
@@ -65,9 +65,9 @@ Windows Server 2003 ドメインコントローラーでは、Windows Server 200
 
 Windows Server 2008 Rodc の場合、KCC の通常の機能によっていくつかの再調整が提供されるため、Adlb.exe などの追加ツールを使用する必要がなくなります。 新しい機能は既定で有効になっています。 RODC に次のレジストリキーセットを追加することで、無効にすることができます。
 
-**HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\NTDS\Parameters**
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters**
 
-**"ランダムな BH 負荷分散が許可され**ています" 
+**"ランダムな BH 負荷分散が許可され** ています" 
 **1 = 有効 (既定)、0 = 無効**
 
 これらの KCC の機能強化のしくみの詳細については、「ブランチオフィスの Active Directory Domain Services の計画と展開」 () を参照してください [https://go.microsoft.com/fwlink/?LinkId=107114](https://go.microsoft.com/fwlink/?LinkId=107114) 。
@@ -75,7 +75,7 @@ Windows Server 2008 Rodc の場合、KCC の通常の機能によっていくつ
 ## <a name="failover-functionality"></a><a name="BKMK_3"></a>フェールオーバー機能
 サイトでは、ネットワーク障害やオフラインドメインコントローラーに対してレプリケーションがルーティングされるようにします。 KCC は、指定した間隔で実行され、新しいドメインコントローラーが追加され、新しいサイトが作成されたときなど、AD DS で発生する変更のレプリケーショントポロジを調整します。 KCC は、既存の接続のレプリケーションステータスを確認して、接続が機能していないかどうかを判断します。 ドメインコントローラーに障害が発生したために接続が機能していない場合は、他のレプリケーションパートナーへの一時的な接続が KCC によって自動的に作成され、レプリケーションが確実に行われます。 サイト内のすべてのドメインコントローラが使用できない場合は、KCC によって、別のサイトのドメインコントローラ間のレプリケーション接続が自動的に作成されます。
 
-## <a name="subnet"></a><a name="BKMK_4"></a>・
+## <a name="subnet"></a><a name="BKMK_4"></a>サブネット
 サブネットは、一連の論理 IP アドレスが割り当てられる TCP/IP ネットワークのセグメントです。 サブネットは、ネットワーク上の物理的な距離を識別するようにコンピューターをグループ化します。 AD DS のサブネットオブジェクトは、コンピューターをサイトにマップするために使用されるネットワークアドレスを識別します。
 
 ## <a name="site"></a><a name="BKMK_5"></a>サイト

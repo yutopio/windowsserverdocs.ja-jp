@@ -1,15 +1,15 @@
 ---
 ms.assetid: 709353b0-b913-4367-8580-44745183e2bc
 title: ディレクトリ レプリケーションをサポートする DNS 機能を確認する
-ms.author: iainfou
+ms.author: daveba
 ms.date: 05/31/2017
 author: Femila
-ms.openlocfilehash: c59160cb3242a91ef8a86d9e8247e0f2d376395b
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 0a79a4b73a9e3d610408076c8e7526f504055d53
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938062"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93071254"
 ---
 # <a name="verify-dns-functionality-to-support-directory-replication"></a>ディレクトリ レプリケーションをサポートする DNS 機能を確認する
 
@@ -40,7 +40,7 @@ ms.locfileid: "88938062"
 ### <a name="to-verify-basic-dns-functionality"></a>基本的な DNS 機能を確認するには:
 
 
-1. テストするドメインコントローラー、または Active Directory Domain Services (AD DS) ツールがインストールされているドメインメンバーコンピューターで、管理者としてコマンドプロンプトを開きます。 管理者としてコマンド プロンプトを開くには、[**スタート**] ボタンをクリックします。
+1. テストするドメインコントローラー、または Active Directory Domain Services (AD DS) ツールがインストールされているドメインメンバーコンピューターで、管理者としてコマンドプロンプトを開きます。 管理者としてコマンド プロンプトを開くには、[ **スタート** ] ボタンをクリックします。
 2. [検索開始] で、「コマンド プロンプト」と入力します。
 3. [スタート] メニューの上部で [コマンド プロンプト] を右クリックしてから [管理者として実行] をクリックします。 [ユーザー アカウント制御] ダイアログ ボックスが表示されたら、表示された操作が正しいことを確認し、[続行] をクリックします。
 4. コマンドプロンプトで、次のコマンドを入力し、enter キーを押します。 `dcdiag /test:dns /v /s:<DCName> /DnsBasic /f:dcdiagreport.txt`
@@ -73,8 +73,8 @@ ms.locfileid: "88938062"
 - **エイリアス (CNAME):** レプリケーションパートナーを検索するグローバル一意識別子 (GUID) ベースのリソースレコード
 - **ホスト (A):**  ドメインコントローラーの IP アドレスを含むホストリソースレコード
 - **LDAP SRV:** ldap サーバーを検索するサービス (SRV) リソースレコード
-- **GC SRV**: グローバルカタログサーバーを検索するサービス (SRV) リソースレコード
-- **PDC SRV**: プライマリドメインコントローラー (pdc) エミュレーターの操作マスターを検索するサービス (srv) リソースレコード
+- **GC SRV** : グローバルカタログサーバーを検索するサービス (SRV) リソースレコード
+- **PDC SRV** : プライマリドメインコントローラー (pdc) エミュレーターの操作マスターを検索するサービス (srv) リソースレコード
 
 エイリアス (CNAME) リソースレコードの登録だけを確認するには、次の手順に従います。
 
@@ -83,7 +83,7 @@ ms.locfileid: "88938062"
 1. DNS スナップインを開きます。 DNS を開くには、[開始] をクリックします。 [検索の開始] に「dnsmgmt.msc」と入力し、enter キーを押します。 [ユーザーアカウント制御] ダイアログボックスが表示されたら、目的の操作が表示されていることを確認し、[続行] をクリックします。
 2. Dns スナップインを使用して、dns サーバーサービスを実行しているドメインコントローラーを検索します。このサーバーは、ドメインコントローラーの Active Directory ドメインと同じ名前の DNS ゾーンをホストします。
 3. コンソールツリーで、_msdcs という名前のゾーンをクリックします。Dns_Domain_Name。
-4. 詳細ウィンドウで、次のリソースレコードが存在することを確認します。 Dsa_Guid という名前のエイリアス (CNAME) リソースレコードが _msdcs です。<placeholder>Dns_Domain_Name</placeholder> と、Dns サーバーの名前に対応するホスト (a) リソースレコードです。
+4. 詳細ウィンドウで、次のリソースレコードが存在することを確認します。 Dsa_Guid という名前のエイリアス (CNAME) リソースレコード。<placeholder>Dns_Domain_Name</placeholder> と、Dns サーバーの名前に対応するホスト (a) リソースレコードです。
 
 エイリアス (CNAME) リソースレコードが登録されていない場合は、動的更新が正常に機能していることを確認します。 動的更新を確認するには、次のセクションのテストを使用します。
 

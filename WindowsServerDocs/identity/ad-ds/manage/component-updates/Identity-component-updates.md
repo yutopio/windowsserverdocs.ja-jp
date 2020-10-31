@@ -2,16 +2,16 @@
 ms.assetid: 7e87ce2b-062e-479f-bcf2-585b6c42026a
 title: コンポーネントの更新を識別する
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 0a10e39b6bbf2fcefc57cbd7e3566db74bef52e3
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 8187be75c8f7ab537e6ae6e140d099c8f2a95d9b
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941312"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070674"
 ---
 # <a name="identity-component-updates"></a>コンポーネントの更新を識別する
 
@@ -28,7 +28,7 @@ ms.locfileid: "88941312"
 
     -   [SPN と UPN の一意性](../../../ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md)
 
-    -   [Winlogon の自動再起動サインオン &#40;ARSO&#41;](../../../ad-ds/manage/component-updates/Winlogon-Automatic-Restart-Sign-On--ARSO-.md)
+    -   [Winlogon 自動再起動 Sign-On &#40;ARSO&#41;](../../../ad-ds/manage/component-updates/Winlogon-Automatic-Restart-Sign-On--ARSO-.md)
 
     -   [TPM キーの構成証明](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md)
 
@@ -38,7 +38,7 @@ ms.locfileid: "88941312"
 
     -   [資格情報の保護と管理](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11))
 
-**Author**: Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
+**Author** : Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
 
 > [!NOTE]
 > この内容は Microsoft カスタマー サポート エンジニアによって作成され、TechNet が通常提供しているトピックよりも詳細な Windows Server 2012 R2 の機能やソリューションの技術的説明を求めている、経験豊かな管理者とシステム設計者を対象としています。 ただし、TechNet と同様の編集過程は実施されていないため、言語によっては通常より洗練されていない文章が見られる場合があります。

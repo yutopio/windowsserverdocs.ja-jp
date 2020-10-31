@@ -2,16 +2,16 @@
 ms.assetid: 13fe87d9-75cf-45bc-a954-ef75d4423839
 title: 付録 I-Active Directory で保護されたアカウントとグループの管理アカウントを作成する
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: c77abee124f67f28ae94ab4969d145fac64e8154
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 85c738a34f70f1912ff97b853166e720b1b0d435
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939992"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070884"
 ---
 # <a name="appendix-i-creating-management-accounts-for-protected-accounts-and-groups-in-active-directory"></a>付録 I: Active Directory の保護されたアカウントとグループの管理アカウントを作成する
 
@@ -49,7 +49,7 @@ ms.locfileid: "88939992"
 
 管理アカウントを有効または無効にするグループを作成するには、次の手順を実行します。
 
-1.  管理アカウントを格納する OU 構造で、グループを作成する OU を右クリックし、[ **新規** ] をクリックして、[ **グループ**] をクリックします。
+1.  管理アカウントを格納する OU 構造で、グループを作成する OU を右クリックし、[ **新規** ] をクリックして、[ **グループ** ] をクリックします。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_115.png)
 
@@ -57,7 +57,7 @@ ms.locfileid: "88939992"
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_116.png)
 
-3.  作成したグループを右クリックし、[ **プロパティ**] をクリックして、[ **オブジェクト** ] タブをクリックします。グループの [ **オブジェクトのプロパティ** ] ダイアログボックスで、[誤って削除されないように **保護**する] を選択します。これにより、他の権限のあるユーザーがグループを削除できなくなるだけでなく、属性を最初にオフにしない限り、別の OU に移動することもできません。
+3.  作成したグループを右クリックし、[ **プロパティ** ] をクリックして、[ **オブジェクト** ] タブをクリックします。グループの [ **オブジェクトのプロパティ** ] ダイアログボックスで、[誤って削除されないように **保護** する] を選択します。これにより、他の権限のあるユーザーがグループを削除できなくなるだけでなく、属性を最初にオフにしない限り、別の OU に移動することもできません。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_117.png)
 
@@ -68,11 +68,11 @@ ms.locfileid: "88939992"
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_118.png)
 
-5.  まだ行っていない場合は、 **Active Directory ユーザーとコンピューター** ] コンソールで、[ **表示** ] をクリックし、[ **高度な機能**] を選択します。 作成したグループを右クリックし、[ **プロパティ**] をクリックして、[ **セキュリティ** ] タブをクリックします。[ **セキュリティ** ] タブで、[ **詳細設定**] をクリックします。
+5.  まだ行っていない場合は、 **Active Directory ユーザーとコンピューター** ] コンソールで、[ **表示** ] をクリックし、[ **高度な機能** ] を選択します。 作成したグループを右クリックし、[ **プロパティ** ] をクリックして、[ **セキュリティ** ] タブをクリックします。[ **セキュリティ** ] タブで、[ **詳細設定** ] をクリックします。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_119.png)
 
-6.  **[グループ] の [セキュリティの詳細設定**] ダイアログボックスで、[**継承を無効にする**] をクリックします。 メッセージが表示されたら、[継承された **アクセス許可をこのオブジェクトの明示的なアクセス許可に変換**] をクリックし、[ **OK** ] をクリックして、グループの [ **セキュリティ** ] ダイアログボックスに戻ります。
+6.  **[グループ] の [セキュリティの詳細設定** ] ダイアログボックスで、[ **継承を無効にする** ] をクリックします。 メッセージが表示されたら、[継承された **アクセス許可をこのオブジェクトの明示的なアクセス許可に変換** ] をクリックし、[ **OK** ] をクリックして、グループの [ **セキュリティ** ] ダイアログボックスに戻ります。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_120.png)
 
@@ -116,19 +116,19 @@ Active Directory のインストールで特権グループのメンバーシッ
 
 2. **Active Directory ユーザーとコンピューター** ] を起動し、管理アカウントを作成する OU に移動します。
 
-3. OU を右クリックし、[ **新規** ] をクリックして、[ **ユーザー**] をクリックします。
+3. OU を右クリックし、[ **新規** ] をクリックして、[ **ユーザー** ] をクリックします。
 
-4. [ **新しいオブジェクト-ユーザー** ] ダイアログボックスで、アカウントの名前を入力し、[ **次へ**] をクリックします。
+4. [ **新しいオブジェクト-ユーザー** ] ダイアログボックスで、アカウントの名前を入力し、[ **次へ** ] をクリックします。
 
    ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_122.png)
 
-5. ユーザーアカウントの初期パスワードを指定し、[ **ユーザーは次回ログオン時にパスワードの変更が必要**]、[ **ユーザーはパスワードを変更できない** ]、[ **アカウントは無効**] の順に選択し、[ **次へ**] をクリックします。
+5. ユーザーアカウントの初期パスワードを指定し、[ **ユーザーは次回ログオン時にパスワードの変更が必要** ]、[ **ユーザーはパスワードを変更できない** ]、[ **アカウントは無効** ] の順に選択し、[ **次へ** ] をクリックします。
 
    ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_123.png)
 
-6. アカウントの詳細が正しいことを確認し、[ **完了**] をクリックします。
+6. アカウントの詳細が正しいことを確認し、[ **完了** ] をクリックします。
 
-7. 作成したユーザーオブジェクトを右クリックし、[ **プロパティ**] をクリックします。
+7. 作成したユーザーオブジェクトを右クリックし、[ **プロパティ** ] をクリックします。
 
 8. **[アカウント]** タブをクリックします。
 
@@ -145,7 +145,7 @@ Active Directory のインストールで特権グループのメンバーシッ
    >
    > これらの設定は、Windows Server 2012、Windows Server 2008 R2、Windows 8、または Windows 7 を実行しているコンピューターでのみサポートされます。
 
-10. [ **オブジェクト** ] タブで、[誤って削除されないように **オブジェクトを保護**する] を選択します。 これにより、オブジェクトが (承認されたユーザーによっても) 削除されるのを防ぐだけでなく、属性を変更する権限を持つユーザーが最初にチェックボックスをオフにしない限り、AD DS 階層内の別の OU に移動できなくなります。
+10. [ **オブジェクト** ] タブで、[誤って削除されないように **オブジェクトを保護** する] を選択します。 これにより、オブジェクトが (承認されたユーザーによっても) 削除されるのを防ぐだけでなく、属性を変更する権限を持つユーザーが最初にチェックボックスをオフにしない限り、AD DS 階層内の別の OU に移動できなくなります。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_125.png)
 
@@ -168,7 +168,7 @@ Active Directory のインストールで特権グループのメンバーシッ
 
 15. [ **ダイヤル** イン] タブをクリックします。
 
-16. [ **ネットワークアクセス許可** ] フィールドで、[ **アクセスの拒否**] を選択します。このアカウントは、リモート接続経由で接続する必要はありません。
+16. [ **ネットワークアクセス許可** ] フィールドで、[ **アクセスの拒否** ] を選択します。このアカウントは、リモート接続経由で接続する必要はありません。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_128.png)
 
@@ -181,44 +181,44 @@ Active Directory のインストールで特権グループのメンバーシッ
 
 18. **[追加]** をクリックします。
 
-19. [**ユーザー、連絡先、コンピューターの選択**] ダイアログボックスで「**拒否済み RODC パスワードレプリケーショングループ**」と入力し、[**名前の確認**] をクリックします。 オブジェクトピッカーでグループの名前に下線が表示されたら、[ **OK]** をクリックして、アカウントが次のスクリーンショットに表示される2つのグループのメンバになっていることを確認します。 保護されているグループにアカウントを追加しないでください。
+19. [ **ユーザー、連絡先、コンピューターの選択** ] ダイアログボックスで「 **拒否済み RODC パスワードレプリケーショングループ** 」と入力し、[ **名前の確認** ] をクリックします。 オブジェクトピッカーでグループの名前に下線が表示されたら、[ **OK]** をクリックして、アカウントが次のスクリーンショットに表示される2つのグループのメンバになっていることを確認します。 保護されているグループにアカウントを追加しないでください。
 
 20. **[OK]** をクリックします。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_129.png)
 
-21. [ **セキュリティ** ] タブをクリックし、[ **詳細設定**] をクリックします。
+21. [ **セキュリティ** ] タブをクリックし、[ **詳細設定** ] をクリックします。
 
-22. [ **セキュリティの詳細設定** ] ダイアログボックスで、[ **継承の無効化** ] をクリックし、継承されたアクセス許可を明示的なアクセス許可としてコピーして、[ **追加**] をクリックします
+22. [ **セキュリティの詳細設定** ] ダイアログボックスで、[ **継承の無効化** ] をクリックし、継承されたアクセス許可を明示的なアクセス許可としてコピーして、[ **追加** ] をクリックします
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_130.png)
 
-23. **[アカウント] ダイアログボックスの [アクセス許可エントリ**] で、[**プリンシパルの選択**] をクリックし、前の手順で作成したグループを追加します。 ダイアログボックスの一番下までスクロールし、[ **すべてクリア** ] をクリックして、すべての既定のアクセス許可を削除します。
+23. **[アカウント] ダイアログボックスの [アクセス許可エントリ** ] で、[ **プリンシパルの選択** ] をクリックし、前の手順で作成したグループを追加します。 ダイアログボックスの一番下までスクロールし、[ **すべてクリア** ] をクリックして、すべての既定のアクセス許可を削除します。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_131.png)
 
-24. [ **アクセス許可エントリ** ] ダイアログボックスの一番上までスクロールします。 [ **種類** ] ドロップダウンリストが [ **許可**] に設定されていることを確認し、[ **適用先** ] ドロップダウンリストで [ **このオブジェクトのみ**] を選択します。
+24. [ **アクセス許可エントリ** ] ダイアログボックスの一番上までスクロールします。 [ **種類** ] ドロップダウンリストが [ **許可** ] に設定されていることを確認し、[ **適用先** ] ドロップダウンリストで [ **このオブジェクトのみ** ] を選択します。
 
-25. [ **権限** ] フィールドで、 **[すべてのプロパティの読み取り**]、[ **読み取りアクセス許可**]、[ **パスワードのリセット**] を選択します。
+25. [ **権限** ] フィールドで、 **[すべてのプロパティの読み取り** ]、[ **読み取りアクセス許可** ]、[ **パスワードのリセット** ] を選択します。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_132.png)
 
-26. [ **プロパティ** ] フィールドで、[ **useraccountcontrol を読み取り** 、useraccountcontrol を **書き込む**] を選択します。
+26. [ **プロパティ** ] フィールドで、[ **useraccountcontrol を読み取り** 、useraccountcontrol を **書き込む** ] を選択します。
 
-27. [**セキュリティの詳細設定**] ダイアログボックスで、**もう一度 [** **ok**] をクリックします。
+27. [ **セキュリティの詳細設定** ] ダイアログボックスで、 **もう一度 [** **ok** ] をクリックします。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_133.png)
 
     > [!NOTE]
-    > **UserAccountControl**属性では、複数のアカウント構成オプションを制御します。 属性に書き込み権限を付与する場合、一部の構成オプションのみを変更する権限を付与することはできません。
+    > **UserAccountControl** 属性では、複数のアカウント構成オプションを制御します。 属性に書き込み権限を付与する場合、一部の構成オプションのみを変更する権限を付与することはできません。
 
-28. [**セキュリティ**] タブの [**グループ名またはユーザー名**] フィールドで、アカウントへのアクセスまたは管理を許可しないグループをすべて削除します。 Everyone グループや自己計算されるアカウントなど、拒否 Ace を使用して構成されているグループは削除しないでください (この ACE は、アカウントの作成時に [ **ユーザーがパスワードを変更できない** ] フラグが有効になっていた場合に設定されていました)。 また、追加したばかりのグループ、システムアカウント、または EA、DA、BA、Windows 認証アクセスグループなどのグループを削除しないようにしてください。
+28. [ **セキュリティ** ] タブの [ **グループ名またはユーザー名** ] フィールドで、アカウントへのアクセスまたは管理を許可しないグループをすべて削除します。 Everyone グループや自己計算されるアカウントなど、拒否 Ace を使用して構成されているグループは削除しないでください (この ACE は、アカウントの作成時に [ **ユーザーがパスワードを変更できない** ] フラグが有効になっていた場合に設定されていました)。 また、追加したばかりのグループ、システムアカウント、または EA、DA、BA、Windows 認証アクセスグループなどのグループを削除しないようにしてください。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_134.png)
 
 29. [ **詳細** 設定] をクリックし、[セキュリティの詳細設定] ダイアログボックスが次のスクリーンショットのように表示されることを確認します。
 
-30. [ **Ok**] を **もう一度** クリックして、アカウントの [プロパティ] ダイアログボックスを閉じます。
+30. [ **Ok** ] を **もう一度** クリックして、アカウントの [プロパティ] ダイアログボックスを閉じます。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_135.png)
 
@@ -230,7 +230,7 @@ Active Directory のインストールで特権グループのメンバーシッ
 
 代わりに、保護されたグループを設定および設定解除する権限を委任するグループを作成できますが、グループとそのグループに配置するアカウントをセキュリティで保護する必要があります。 保護されたグループのメンバーシップを管理する権限が付与されているディレクトリ内のアカウントはほとんどないため、個別のアカウントを作成するのが最も簡単な方法である可能性があります。
 
-管理アカウントを配置するグループをどのように作成するかにかかわらず、前に説明したように、各アカウントがセキュリティで保護されていることを確認する必要があります。 また、 [「付録 D: Active Directory での組み込み管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」で説明されているような GPO 制限の実装も検討してください。
+管理アカウントを配置するグループをどのように作成するかにかかわらず、前に説明したように、各アカウントがセキュリティで保護されていることを確認する必要があります。 また、 [「付録 D: Active Directory での Built-In 管理者アカウントのセキュリティ保護](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)」で説明されているような GPO 制限の実装を検討する必要もあります。
 
 ##### <a name="auditing-management-accounts"></a>管理アカウントの監査
 
@@ -252,7 +252,7 @@ SIEM ソリューションでは、関連するセキュリティソース (イ�
 
    ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_136.png)
 
-2. [ **コマンドプロンプト** ] を右クリックし、[ **管理者として実行**] をクリックして、管理者特権でのコマンドプロンプトを開きます。
+2. [ **コマンドプロンプト** ] を右クリックし、[ **管理者として実行** ] をクリックして、管理者特権でのコマンドプロンプトを開きます。
 
    ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_137.gif)
 
@@ -263,7 +263,7 @@ SIEM ソリューションでは、関連するセキュリティソース (イ�
    > [!NOTE]
    > Windows での昇格とユーザーアカウント制御 (UAC) の詳細については、TechNet web サイトの「 [uac のプロセスと対話](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd835561(v=ws.10)) 」を参照してください。
 
-4. コマンドプロンプトで、「」と入力します (ドメイン固有の情報に置き換えてください) **Dsacls [ドメイン内の AdminSDHolder オブジェクトの識別名]/g [management ACCOUNT UPN]: RPQ wp; メンバー**。
+4. コマンドプロンプトで、「」と入力します (ドメイン固有の情報に置き換えてください) **Dsacls [ドメイン内の AdminSDHolder オブジェクトの識別名]/g [management ACCOUNT UPN]: RPQ wp; メンバー** 。
 
    ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_139.gif)
 
@@ -281,21 +281,21 @@ SIEM ソリューションでは、関連するセキュリティソース (イ�
 
    - メンバーは、権限を設定するプロパティ (属性) の名前です。
 
-   **Dsacls**の使用方法の詳細については、コマンドプロンプトで「dsacls」と入力してください。
+   **Dsacls** の使用方法の詳細については、コマンドプロンプトで「dsacls」と入力してください。
 
    ドメインに対して複数の管理アカウントを作成した場合は、アカウントごとに Dsacls コマンドを実行する必要があります。 AdminSDHolder オブジェクトの ACL 構成が完了したら、SDProp を強制的に実行するか、スケジュールされた実行が完了するまで待機する必要があります。 SDProp を強制的に実行する方法の詳細については、「 [付録 C: Active Directory の保護されたアカウントとグループ](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)」の「SDProp の手動実行」を参照してください。
 
    SDProp を実行すると、AdminSDHolder オブジェクトに対して行った変更がドメイン内の保護されたグループに適用されていることを確認できます。 これを確認するには、前述の理由により AdminSDHolder オブジェクトの ACL を表示しますが、保護されたグループの Acl を表示して、アクセス許可が適用されていることを確認できます。
 
-5. [ **Active Directory ユーザーとコンピューター**] で、 **[高度な機能**] が有効になっていることを確認します。 これを行うには、[ **表示**] をクリックし、 **domain Admins** グループを見つけて、グループを右クリックし、[ **プロパティ**] をクリックします。
+5. [ **Active Directory ユーザーとコンピューター** ] で、 **[高度な機能** ] が有効になっていることを確認します。 これを行うには、[ **表示** ] をクリックし、 **domain Admins** グループを見つけて、グループを右クリックし、[ **プロパティ** ] をクリックします。
 
 6. [ **セキュリティ** ] タブをクリックし、[ **詳細** 設定] をクリックして、[ **ドメイン管理者のセキュリティの詳細設定** ] ダイアログボックスを開きます。
 
    ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_140.gif)
 
-7. [ **管理アカウントの ACE を許可する** ] を選択し、[ **編集**] をクリックします。 このアカウントに、DA グループに対する **"メンバーの読み取り** " アクセス許可と " **メンバーの書き込み** " アクセス許可が付与されていることを確認し、[ **OK]** をクリックします。
+7. [ **管理アカウントの ACE を許可する** ] を選択し、[ **編集** ] をクリックします。 このアカウントに、DA グループに対する **"メンバーの読み取り** " アクセス許可と " **メンバーの書き込み** " アクセス許可が付与されていることを確認し、[ **OK]** をクリックします。
 
-8. [**セキュリティの詳細設定**] ダイアログボックスで [ **ok** ] をクリックし、もう一度 [ **ok** ] をクリックして、[DA] グループの [プロパティ] ダイアログボックスを閉じます。
+8. [ **セキュリティの詳細設定** ] ダイアログボックスで [ **ok** ] をクリックし、もう一度 [ **ok** ] をクリックして、[DA] グループの [プロパティ] ダイアログボックスを閉じます。
 
    ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_141.gif)
 
@@ -318,7 +318,7 @@ SIEM ソリューションでは、関連するセキュリティソース (イ�
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_142.gif)
 
-2.  **Active Directory ユーザーとコンピューター**] を開き、管理アカウントを右クリックして、[**アカウントの有効化**] をクリックします。
+2.  **Active Directory ユーザーとコンピューター** ] を開き、管理アカウントを右クリックして、[ **アカウントの有効化** ] をクリックします。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_143.gif)
 
@@ -326,7 +326,7 @@ SIEM ソリューションでは、関連するセキュリティソース (イ�
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_144.gif)
 
-4.  次に、管理アカウントのパスワードをリセットします。 これを行うには、アカウントをもう一度右クリックし、[ **パスワードのリセット**] をクリックします。
+4.  次に、管理アカウントのパスワードをリセットします。 これを行うには、アカウントをもう一度右クリックし、[ **パスワードのリセット** ] をクリックします。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_145.gif)
 
@@ -338,9 +338,9 @@ SIEM ソリューションでは、関連するセキュリティソース (イ�
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_147.gif)
 
-7.  次に、管理アカウントの追加のプロパティを変更します。 アカウントを右クリックし、[ **プロパティ**] をクリックして、[ **リモートコントロール** ] タブをクリックします。
+7.  次に、管理アカウントの追加のプロパティを変更します。 アカウントを右クリックし、[ **プロパティ** ] をクリックして、[ **リモートコントロール** ] タブをクリックします。
 
-8.  [ **リモートコントロールを有効にする** ] を選択し、[ **適用**] をクリックします。 操作は失敗し、 **アクセス拒否** エラーメッセージが表示されます。
+8.  [ **リモートコントロールを有効にする** ] を選択し、[ **適用** ] をクリックします。 操作は失敗し、 **アクセス拒否** エラーメッセージが表示されます。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_148.gif)
 
@@ -348,14 +348,14 @@ SIEM ソリューションでは、関連するセキュリティソース (イ�
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_149.gif)
 
-10. 保護されたグループ (DA グループなど) に管理グループを追加します。 [ **OK**] をクリックすると、グループを変更するアクセス許可がないことを知らせるメッセージが表示されます。
+10. 保護されたグループ (DA グループなど) に管理グループを追加します。 [ **OK** ] をクリックすると、グループを変更するアクセス許可がないことを知らせるメッセージが表示されます。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_150.gif)
 
 11. 必要に応じて追加のテストを実行し、 **userAccountControl** 設定とパスワードのリセットを除く管理アカウントで何も構成できないことを確認します。
 
     > [!NOTE]
-    > **UserAccountControl**属性では、複数のアカウント構成オプションを制御します。 属性に書き込み権限を付与する場合、一部の構成オプションのみを変更する権限を付与することはできません。
+    > **UserAccountControl** 属性では、複数のアカウント構成オプションを制御します。 属性に書き込み権限を付与する場合、一部の構成オプションのみを変更する権限を付与することはできません。
 
 ##### <a name="test-the-management-accounts"></a>管理アカウントをテストする
 
@@ -365,25 +365,25 @@ SIEM ソリューションでは、関連するセキュリティソース (イ�
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_151.gif)
 
-2.  **Active Directory ユーザーとコンピューター** ] を起動し、 **domain Admins グループ**を見つけます。
+2.  **Active Directory ユーザーとコンピューター** ] を起動し、 **domain Admins グループ** を見つけます。
 
-3.  **Domain Admins**グループを右クリックし、[**プロパティ**] をクリックします。
+3.  **Domain Admins** グループを右クリックし、[ **プロパティ** ] をクリックします。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_152.gif)
 
-4.  **Domain Admins のプロパティ**で、[**メンバー** ] タブをクリックし、[追加] を**クリック**します。 一時的なドメイン管理者の特権が付与されるアカウントの名前を入力し、[ **名前の確認**] をクリックします。 アカウントの名前に下線が引かれたら、[ **OK** ] をクリックして [ **メンバー** ] タブに戻ります。
+4.  **Domain Admins のプロパティ** で、[ **メンバー** ] タブをクリックし、[追加] を **クリック** します。 一時的なドメイン管理者の特権が付与されるアカウントの名前を入力し、[ **名前の確認** ] をクリックします。 アカウントの名前に下線が引かれたら、[ **OK** ] をクリックして [ **メンバー** ] タブに戻ります。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_153.gif)
 
-5.  [ **Domain Admins のプロパティ**] ダイアログボックスの [**メンバー** ] タブで、[**適用**] をクリックします。 [ **適用**] をクリックすると、アカウントが DA グループのメンバーになり、エラーメッセージが表示されなくなります。
+5.  [ **Domain Admins のプロパティ** ] ダイアログボックスの [ **メンバー** ] タブで、[ **適用** ] をクリックします。 [ **適用** ] をクリックすると、アカウントが DA グループのメンバーになり、エラーメッセージが表示されなくなります。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_154.gif)
 
-6.  [ **Domain Admins のプロパティ**] ダイアログボックスの [**管理者**] タブをクリックし、フィールドにテキストを入力できず、すべてのボタンがグレー表示されていることを確認します。
+6.  [ **Domain Admins のプロパティ** ] ダイアログボックスの [ **管理者** ] タブをクリックし、フィールドにテキストを入力できず、すべてのボタンがグレー表示されていることを確認します。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_155.gif)
 
-7.  [ **Domain Admins のプロパティ**] ダイアログボックスの [**全般**] タブをクリックし、そのタブに関する情報を変更できないことを確認します。
+7.  [ **Domain Admins のプロパティ** ] ダイアログボックスの [ **全般** ] タブをクリックし、そのタブに関する情報を変更できないことを確認します。
 
     ![管理アカウントの作成](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_156.gif)
 

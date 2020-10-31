@@ -2,16 +2,16 @@
 ms.assetid: 73a4deba-7da6-4eae-8fdd-2a4d369f9cbb
 title: 仮想化ドメイン コントローラーのテクニカル リファレンスの付録
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 6387abbe150630d2fd8f6f14724618a6ab32b94a
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: f387fd0e87887ea8e69732efa405299fb18fe800
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940282"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070904"
 ---
 # <a name="virtualized-domain-controller-technical-reference-appendix"></a>仮想化ドメイン コントローラーのテクニカル リファレンスの付録
 
@@ -23,7 +23,7 @@ ms.locfileid: "88940282"
 
 -   [FixVDCPermissions.ps1](../../../ad-ds/reference/virtual-dc/../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_FixPDCPerms)
 
-## <a name="terminology"></a><a name="BKMK_Terms"></a>用語
+## <a name="terminology"></a><a name="BKMK_Terms"></a>用語集
 
 -   **Snapshot** -特定の時点における仮想マシンの状態。 これは、作成された以前のスナップショットのチェーン、ハードウェア、および仮想化プラットフォームに依存します。
 
@@ -33,11 +33,11 @@ ms.locfileid: "88940282"
 
 -   **差分ディスク** -親仮想マシンと仮想ディスクを継続的に共有する仮想マシンのコピー。 これにより、通常、ディスク領域が節約され、複数の仮想マシンが同じソフトウェアインストールを使用できるようになります。
 
--   **VM コピー**-仮想マシンのすべての関連ファイルとフォルダーのファイルシステムコピー。
+-   **VM コピー** -仮想マシンのすべての関連ファイルとフォルダーのファイルシステムコピー。
 
 -   **Vhd ファイルのコピー** -仮想マシンの vhd のコピー
 
--   **VM 生成 ID** -ハイパーバイザーによって仮想マシンに指定された128ビットの整数。 この ID はメモリに格納され、スナップショットが適用されるたびにリセットされます。 この設計では、仮想マシンで VM 生成 ID を提示するために、ハイパーバイザーに依存しないメカニズムを使用します。 Hyper-v 実装は、仮想マシンの ACPI テーブルで ID を公開します。
+-   **VM 生成 ID** -ハイパーバイザーによって仮想マシンに指定された128ビットの整数。 この ID はメモリに格納され、スナップショットが適用されるたびにリセットされます。 この設計では、仮想マシンで VM-Generation ID を提示するために、ハイパーバイザーに依存しないメカニズムを使用します。 Hyper-v 実装は、仮想マシンの ACPI テーブルで ID を公開します。
 
 -   **Import/Export** -仮想マシン全体 (VM ファイル、VHD、およびマシン構成) を保存することをユーザーに許可する hyper-v の機能。 その後、ユーザーはそのファイルセットを使用して、同じ VM (復元) と同じマシン上にコンピューターを戻すことができます。また、同じ VM (移動)、または新しい VM (コピー) としてコンピューターを戻すことができます。
 

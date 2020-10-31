@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復-操作マスターの役割の強制
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 7e6bb370-f840-4416-b5e2-86b0ba715f4f
-ms.openlocfilehash: 7d7b1abfaf7e3ed4f3780ff2d819340ba8fe98c0
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 76e32be8db1647a209f94b49484898cf88333040
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941532"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070804"
 ---
 # <a name="ad-forest-recovery---seizing-an-operations-master-role"></a>AD フォレストの回復-操作マスターの役割の強制
 
@@ -42,12 +42,12 @@ ms.locfileid: "88941532"
 4. **サーバー接続:** プロンプトで、次のコマンドを入力し、enter キーを押します。
 
    ```
-   Connect to server ServerFQDN
+   Connect to server ServerFQDN
    ```
 
-   ここで、 *Serverfqdn* はこの DC の完全修飾ドメイン名 (FQDN) です。たとえば、 **server nycdc01.example.com に接続**します。
+   ここで、 *Serverfqdn* はこの DC の完全修飾ドメイン名 (FQDN) です。たとえば、 **server nycdc01.example.com に接続** します。
 
-   *Serverfqdn*が成功しない場合は、DC の NetBIOS 名を使用します。
+   *Serverfqdn* が成功しない場合は、DC の NetBIOS 名を使用します。
 
 5. **サーバー接続:** プロンプトで、次のコマンドを入力し、enter キーを押します。
 

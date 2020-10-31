@@ -2,22 +2,22 @@
 ms.assetid: 7e195f5b-b194-40f3-a26d-5cf4ade5fc4d
 title: CA のバックアップと復元の Windows PowerShell コマンドレット
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b008ec74adfc3a4b6c63ec29f719c45483412b1d
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 1a36e72858e5ea2ae95cc0f1730e5906b3c85866
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88939562"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070734"
 ---
 # <a name="ca-backup-and-restore-windows-powershell-cmdlets"></a>CA のバックアップと復元の Windows PowerShell コマンドレット
 
 > 適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 >
-> **Author**: Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
+> **Author** : Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
 >
 > [!NOTE]
 > この内容は Microsoft カスタマー サポート エンジニアによって作成され、TechNet が通常提供しているトピックよりも詳細な Windows Server 2012 R2 の機能やソリューションの技術的説明を求めている、経験豊かな管理者とシステム設計者を対象としています。 ただし、TechNet と同様の編集過程は実施されていないため、言語によっては通常より洗練されていない文章が見られる場合があります。
@@ -36,16 +36,16 @@ ADCSAdministration Windows PowerShell モジュールは、Windows Server 2012 �
 
 |引数- **太字** の引数が必要です|説明|
 |------------------------------------------------|---------------|
-|**-Path**|-String-バックアップを保存する場所<br />-唯一の名前のないパラメーターです。<br />-位置指定パラメーター<p>**例:**<p>Backup-caroleservice.-Path c:\ adcsbackup1<p>バックアップ-Backup-caroleservice c:\ adcsbackup2|
-|-KeyOnly|-データベースを使用せずに CA 証明書をバックアップする<p>**例:**<p>バックアップ-Backup-caroleservice c:\ adcsbackup3-KeyOnly|
-|-Password|-CA 証明書と秘密キーを保護するためのパスワードを指定します。<br />-セキュリティで保護された文字列である必要があります<br />--DatabaseOnly パラメーターと共に使用することはできません。<p>例:<p>バックアップ-Backup-caroleservice c:\ adcsbackup4-Password (読み取りホスト-プロンプト "Password:"-AsSecureString)<p>バックアップ-Backup-caroleservice c:\ adcsbackup5-Password (Convertto-html-SecureString "Pa55w0rd!" -AsPlainText-Force)|
-|-DatabaseOnly|-CA 証明書を使用せずにデータベースをバックアップします。<p>バックアップ-Backup-caroleservice c:\ adcsbackup6-DatabaseOnly|
-|-Force|1.-Path パラメーターで指定された場所に存在するバックアップを上書きすることを許可します。<p>バックアップ-Backup-caroleservice c:\ adcsbackup1-Force|
-|-増分|-増分バックアップを実行します<p>バックアップ-Backup-caroleservice c:\ adcsbackup7-増分|
-|-KeepLog|1. ログファイルを保持するようにコマンドに指示します。 スイッチが指定されていない場合、増分のシナリオ以外では、ログファイルは既定で切り捨てられます。<p>バックアップ-Backup-caroleservice c:\ adcsbackup7-KeepLog|
+|**-Path**|-String-バックアップを保存する場所<br />-唯一の名前のないパラメーターです。<br />-位置指定パラメーター<p>**例:**<p>Backup-caroleservice.-Path c:\ adcsbackup1<p>Backup-CARoleService c:\ adcsbackup2|
+|-KeyOnly|-データベースを使用せずに CA 証明書をバックアップする<p>**例:**<p>Backup-CARoleService c:\ adcsbackup3-KeyOnly|
+|-Password|-CA 証明書と秘密キーを保護するためのパスワードを指定します。<br />-セキュリティで保護された文字列である必要があります<br />--DatabaseOnly パラメーターと共に使用することはできません。<p>例:<p>Backup-CARoleService c:\ adcsbackup4-Password (AsSecureString) パスワード: "-)<p>Backup-CARoleService c:\ adcsbackup5-Password (Convertto-html-SecureString "Pa55w0rd!" -AsPlainText-Force)|
+|-DatabaseOnly|-CA 証明書を使用せずにデータベースをバックアップします。<p>Backup-CARoleService c:\ adcsbackup6-DatabaseOnly|
+|-Force|1.-Path パラメーターで指定された場所に存在するバックアップを上書きすることを許可します。<p>Backup-CARoleService c:\ adcsbackup1-Force|
+|-増分|-増分バックアップを実行します<p>Backup-CARoleService c:\ adcsbackup7-増分|
+|-KeepLog|1. ログファイルを保持するようにコマンドに指示します。 スイッチが指定されていない場合、増分のシナリオ以外では、ログファイルは既定で切り捨てられます。<p>Backup-CARoleService c:\ adcsbackup7-KeepLog|
 
 ### <a name="-password-secure-string"></a>-Password <Secure String>
--Password パラメーターを使用する場合、指定するパスワードはセキュリティで保護された文字列である必要があります。  **Read Host**コマンドレットを使用して、セキュリティで保護されたパスワードの入力を求める対話型プロンプトを起動するか、 **convertto-html**コマンドレットを使用してパスワードをインラインで指定します。
+-Password パラメーターを使用する場合、指定するパスワードはセキュリティで保護された文字列である必要があります。  **Read Host** コマンドレットを使用して、セキュリティで保護されたパスワードの入力を求める対話型プロンプトを起動するか、 **convertto-html** コマンドレットを使用してパスワードをインラインで指定します。
 
 次の例を確認します。
 
@@ -66,14 +66,14 @@ Backup-CARoleService c:\adcsbackup5 -Password (ConvertTo-SecureString "Pa55w0rd!
 
 |引数- **太字** の引数が必要です|説明|
 |------------------------------------------------|---------------|
-|**-Path**|-文字列-バックアップの復元元の場所<br />-唯一の名前のないパラメーターです。<br />-位置指定パラメーター<p>**例:**<p>Backup-caroleservice.-Path c:\ adcsbackup1-Force<p>復元-Backup-caroleservice c:\ adcsbackup2-Force|
-|-KeyOnly|-データベースを使用せずに CA 証明書を復元する<br />--KeyOnly オプションを使用してバックアップを実行した場合は、を指定する必要があります。<p>**例:**<p>Backup-caroleservice c:\ adcsbackup3-KeyOnly-Force|
-|-Password|-CA 証明書と秘密キーのパスワードを指定します。<br />-セキュリティで保護された文字列である必要があります<p>**例:**<p>Backup-caroleservice c:\ adcsbackup4-Password (read-host-prompt "Password:"-AsSecureString)-Force<p>Backup-caroleservice c:\ adcsbackup5-Password (Convertto-html-SecureString "Pa55w0rd!" -AsPlainText-Force)-Force|
-|-DatabaseOnly|-CA 証明書を使用せずにデータベースを復元します。<p>復元-Backup-caroleservice c:\ adcsbackup6-DatabaseOnly|
-|-Force|-既存のキーを上書きすることを許可します。<br />-省略可能なパラメーターですが、インプレースで復元する場合は、<p>復元-Backup-caroleservice c:\ adcsbackup1-Force|
+|**-Path**|-文字列-バックアップの復元元の場所<br />-唯一の名前のないパラメーターです。<br />-位置指定パラメーター<p>**例:**<p>Backup-caroleservice.-Path c:\ adcsbackup1-Force<p>Restore-CARoleService c:\ adcsbackup2-Force|
+|-KeyOnly|-データベースを使用せずに CA 証明書を復元する<br />--KeyOnly オプションを使用してバックアップを実行した場合は、を指定する必要があります。<p>**例:**<p>Restore-CARoleService c:\ adcsbackup3-KeyOnly-Force|
+|-Password|-CA 証明書と秘密キーのパスワードを指定します。<br />-セキュリティで保護された文字列である必要があります<p>**例:**<p>Restore-CARoleService c:\ adcsbackup4-Password (読み取りホスト-プロンプト "Password:"-AsSecureString)-Force<p>Restore-CARoleService c:\ adcsbackup5-Password (Convertto-html-SecureString "Pa55w0rd!" -AsPlainText-Force)-Force|
+|-DatabaseOnly|-CA 証明書を使用せずにデータベースを復元します。<p>Restore-CARoleService c:\ adcsbackup6-DatabaseOnly|
+|-Force|-既存のキーを上書きすることを許可します。<br />-省略可能なパラメーターですが、インプレースで復元する場合は、<p>Restore-CARoleService c:\ adcsbackup1-Force|
 
-### <a name="issues"></a>issue
-パスワードで保護されていないバックアップは、Convertto-html SecureString 関数が-Password パラメーターを指定して Backup-caroleservice を使用して失敗した場合に実行されます。
+### <a name="issues"></a>発行
+パスワードで保護されていないバックアップは、Backup-CARoleService を-Password パラメーターと共に使用しているときに ConvertTo-SecureString 関数が失敗した場合に実行されます。
 
 ![CA のバックアップと復元](media/CA-Backup-and-Restore-Windows-PowerShell-cmdlets/GTR_ADDS_BackupCARole.gif)
 
@@ -81,11 +81,11 @@ Backup-CARoleService c:\adcsbackup5 -Password (ConvertTo-SecureString "Pa55w0rd!
 
 |アクション|エラー|コメント|
 |----------|---------|-----------|
-|**復元-Backup-caroleservice C:\ adcsbackup**|Backup-caroleservice: プロセスは、別のプロセスによって使用されているため、ファイルにアクセスできません。 (HRESULT からの例外:<p>0x80070020|Backup-caroleservice コマンドレットを実行する前に、Active Directory Certificate Services サービスを停止します。|
-|**復元-Backup-caroleservice C:\ adcsbackup**|Backup-caroleservice: ディレクトリが空ではありません。 (HRESULT からの例外: 0x80070091)|-Force パラメーターを使用して、既存のキーを上書きする|
-|**Backup-caroleservice C:\ adcsbackup-Password (Read-Host-Prompt "Password:"-AsSecureString)-DatabaseOnly**|Backup-caroleservice: 指定された名前付きパラメーターを使用してパラメーターセットを解決することはできません。|-Password パラメーターは、秘密キーをパスワードで保護するためにのみ使用されます。したがって、バックアップしていない場合は無効になります。|
-|**Backup-caroleservice C:\ adcsback15-Password (読み取りホスト-プロンプト "Password:"-AsSecureString)-DatabaseOnly**|Backup-caroleservice: 指定された名前付きパラメーターを使用してパラメーターセットを解決することはできません。|-Password パラメーターは、秘密キーのパスワード保護にのみ使用されます。そのため、パスワードを復元しない場合は無効になります。|
-|**Backup-caroleservice C:\ adcsback14-Password (読み取りホスト-プロンプト "Password:"-AsSecureString)**|Backup-caroleservice: 指定されたファイルが見つかりません。 (HRESULT からの例外: 0x80070002)|指定されたパスには、有効なデータベースバックアップが含まれていません。  パスが無効であるか、または-KeysOnly オプションを使用してバックアップが実行された可能性があります。|
+|**復元-Backup-caroleservice C:\ adcsbackup**|Restore-CARoleService: 別のプロセスによって使用されているため、プロセスはファイルにアクセスできません。 (HRESULT からの例外:<p>0x80070020|Restore-CARoleService コマンドレットを実行する前に Active Directory Certificate Services サービスを停止します|
+|**復元-Backup-caroleservice C:\ adcsbackup**|Restore-CARoleService: ディレクトリが空ではありません。 (HRESULT からの例外: 0x80070091)|-Force パラメーターを使用して、既存のキーを上書きする|
+|**Backup-caroleservice C:\ adcsbackup-Password (Read-Host-Prompt "Password:"-AsSecureString)-DatabaseOnly**|Backup-CARoleService: 指定された名前付きパラメーターを使用してパラメーターセットを解決することはできません。|-Password パラメーターは、秘密キーをパスワードで保護するためにのみ使用されます。したがって、バックアップしていない場合は無効になります。|
+|**Backup-caroleservice C:\ adcsback15-Password (読み取りホスト-プロンプト "Password:"-AsSecureString)-DatabaseOnly**|Restore-CARoleService: 指定された名前付きパラメーターを使用してパラメーターセットを解決することはできません。|-Password パラメーターは、秘密キーのパスワード保護にのみ使用されます。そのため、パスワードを復元しない場合は無効になります。|
+|**Backup-caroleservice C:\ adcsback14-Password (読み取りホスト-プロンプト "Password:"-AsSecureString)**|Restore-CARoleService: 指定されたファイルが見つかりません。 (HRESULT からの例外: 0x80070002)|指定されたパスには、有効なデータベースバックアップが含まれていません。  パスが無効であるか、または-KeysOnly オプションを使用してバックアップが実行された可能性があります。|
 
 ## <a name="additional-resources"></a>その他のリソース
 [Active Directory 証明書サービス移行ガイド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee126170(v=ws.10))

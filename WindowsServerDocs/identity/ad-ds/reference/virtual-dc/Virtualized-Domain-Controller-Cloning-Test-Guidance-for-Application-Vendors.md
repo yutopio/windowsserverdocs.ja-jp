@@ -2,16 +2,16 @@
 ms.assetid: fde99b44-cb9f-49bf-b888-edaeabe6b88d
 title: アプリケーション ベンダー向けの仮想化ドメイン コントローラー複製のテスト ガイダンス
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f8a108226f0aff37cd730a477bd6ee5d865399df
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 03272c7dc3afaccac9fb48d591f4f17d84bcccd4
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940262"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070914"
 ---
 # <a name="virtualized-domain-controller-cloning-test-guidance-for-application-vendors"></a>アプリケーション ベンダー向けの仮想化ドメイン コントローラー複製のテスト ガイダンス
 
@@ -43,13 +43,13 @@ ms.locfileid: "88940262"
 ### <a name="customdccloneallowlistxml"></a>CustomDCCloneAllowList.xml
 アプリケーションまたはサービスを実行するドメインコントローラーは、次のいずれかの方法で複製することはできません。
 
--   Get-addccloningexcludedapplicationlist Windows PowerShell コマンドレットを使用して CustomDCCloneAllowList.xml ファイルに追加されます。
+-   Get-ADDCCloningExcludedApplicationList Windows PowerShell コマンドレットを使用して CustomDCCloneAllowList.xml ファイルに追加されます。
 
-または
+-または-
 
 -   ドメインコントローラーから削除されました
 
-ユーザーが最初に Get-addccloningexcludedapplicationlist コマンドレットを実行すると、ドメインコントローラーで実行されているサービスとアプリケーションの一覧が返されますが、複製がサポートされているサービスとアプリケーションの既定の一覧には含まれていません。 既定では、サービスまたはアプリケーションは表示されません。 安全に複製できるアプリケーションとサービスの一覧にサービスまたはアプリケーションを追加するには、ユーザーは-GenerateXML オプションを指定して Get-addccloningexcludedapplicationlist コマンドレットを再度実行し、それを CustomDCCloneAllowList.xml ファイルに追加します。 詳細については、「 [手順 2: get-addccloningexcludedapplicationlist コマンドレットを実行](/powershell/module/addsadministration/get-addccloningexcludedapplicationlist)する」を参照してください。
+ユーザーが初めて Get-ADDCCloningExcludedApplicationList コマンドレットを実行すると、ドメインコントローラーで実行されているサービスとアプリケーションの一覧が返されますが、複製がサポートされているサービスとアプリケーションの既定の一覧には含まれていません。 既定では、サービスまたはアプリケーションは表示されません。 安全に複製できるアプリケーションとサービスの一覧にサービスまたはアプリケーションを追加するには、ユーザーは-GenerateXML オプションを指定して再度 Get-ADDCCloningExcludedApplicationList コマンドレットを実行し、CustomDCCloneAllowList.xml ファイルに追加します。 詳細については、「 [手順 2: コマンドレットの実行 Get-ADDCCloningExcludedApplicationList](/powershell/module/addsadministration/get-addccloningexcludedapplicationlist)」を参照してください。
 
 ### <a name="distributed-system-interactions"></a>分散システムの相互作用
 通常、ローカルコンピューターに分離されたサービスは、複製に参加するときに成功または失敗します。 分散サービスでは、ネットワーク上にホストコンピューターの2つのインスタンスを短時間に同時に配置することを考慮する必要があります。 これは、複製が id の新しいベンダーとして登録されているパートナーシステムから情報を取得しようとしているサービスインスタンスとしてマニフェストを作成することができます。 また、サービスの両方のインスタンスは、異なる結果を使用して AD DS データベースに情報をプッシュする場合があります。 たとえば、Windows テストテクノロジ (WTT) サービスがインストールされている2台のコンピューターがドメインコントローラーとネットワーク上にある場合、どのコンピューターに通信するかを決定することはできません。

@@ -1,17 +1,17 @@
 ---
 ms.assetid: 4d21d27d-5523-4993-ad4f-fbaa43df7576
 title: Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 567798afaa50604df737fe4ad119ff1cd13d31ae
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 255cb3da2056ed69d13cfd5814bb038420d9adc5
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88940382"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070704"
 ---
 # <a name="advanced-ad-ds-management-using-active-directory-administrative-center-level-200"></a>Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 
@@ -61,7 +61,7 @@ Active Directory のごみ箱には、Windows Server 2008 R2 フォレストの�
 
 ### <a name="enabling-active-directory-recycle-bin-using-active-directory-administrative-center"></a>Active Directory 管理センターを使用して Active Directory のごみ箱を有効化する
 
-Active Directory のごみ箱を有効化するには、**Active Directory 管理センター**を開いて、ナビゲーション ウィンドウでフォレストの名前をクリックします。 **[タスク]** ウィンドウで、**[ごみ箱の有効化]** をクリックします。
+Active Directory のごみ箱を有効化するには、 **Active Directory 管理センター** を開いて、ナビゲーション ウィンドウでフォレストの名前をクリックします。 **[タスク]** ウィンドウで、 **[ごみ箱の有効化]** をクリックします。
 
 ![高度な AD DS 管理](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBin.png)
 
@@ -83,13 +83,13 @@ Windows PowerShell を使用して Active Directory のごみ箱を有効化す�
 
 ### <a name="managing-active-directory-recycle-bin-using-active-directory-administrative-center"></a>Active Directory 管理センターを使用して Active Directory のごみ箱を管理する
 
-このセクションでは、**corp.contoso.com** という名前の既存のドメインを例として使用します。 このドメインでは、ユーザーを **UserAccounts** という名前の親 OU にまとめています。 **UserAccounts** OU には部門の名前が付いた 3 つの子 OU が含まれており、それぞれの子 OU にはさらに OU、ユーザー、およびグループが含まれています。
+このセクションでは、 **corp.contoso.com** という名前の既存のドメインを例として使用します。 このドメインでは、ユーザーを **UserAccounts** という名前の親 OU にまとめています。 **UserAccounts** OU には部門の名前が付いた 3 つの子 OU が含まれており、それぞれの子 OU にはさらに OU、ユーザー、およびグループが含まれています。
 
 ![高度な AD DS 管理](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBinExampleOU.png)
 
 #### <a name="storage-and-filtering"></a>ストレージとフィルター
 
-Active Directory のごみ箱には、フォレストで削除されたすべてのオブジェクトが保存されます。 これらのオブジェクトは **msDS-deletedObjectLifetime** 属性に基づいて保存されます。既定では、この属性はフォレストの **tombstoneLifetime** 属性と同じ値に設定されています。 Windows Server 2003 SP1 以降を使用して作成されたフォレストでは、**tombstoneLifetime** の値は、既定では 180 日に設定されています。 Windows 2000 からアップグレードしたフォレスト、または Windows Server 2003 (Service Pack なし) がインストールされたフォレストでは、既定の tombstoneLifetime 属性は設定されていないため、Windows 内部の既定値である 60 日が使用されます。 これらの設定はすべて構成可能です。Active Directory 管理センターを使用して、フォレストのドメイン パーティションから削除された任意のオブジェクトを復元できます。 構成パーティションなど、他のパーティションで削除されたオブジェクトを復元するには、引き続き **Restore-ADObject** コマンドレットを使用する必要があります。Active Directory のごみ箱を有効化すると、Active Directory 管理センターのすべてのドメイン パーティションに、**[削除済みオブジェクト]** コンテナーが表示されます。
+Active Directory のごみ箱には、フォレストで削除されたすべてのオブジェクトが保存されます。 これらのオブジェクトは **msDS-deletedObjectLifetime** 属性に基づいて保存されます。既定では、この属性はフォレストの **tombstoneLifetime** 属性と同じ値に設定されています。 Windows Server 2003 SP1 以降を使用して作成されたフォレストでは、 **tombstoneLifetime** の値は、既定では 180 日に設定されています。 Windows 2000 からアップグレードしたフォレスト、または Windows Server 2003 (Service Pack なし) がインストールされたフォレストでは、既定の tombstoneLifetime 属性は設定されていないため、Windows 内部の既定値である 60 日が使用されます。 これらの設定はすべて構成可能です。Active Directory 管理センターを使用して、フォレストのドメイン パーティションから削除された任意のオブジェクトを復元できます。 構成パーティションなど、他のパーティションで削除されたオブジェクトを復元するには、引き続き **Restore-ADObject** コマンドレットを使用する必要があります。Active Directory のごみ箱を有効化すると、Active Directory 管理センターのすべてのドメイン パーティションに、 **[削除済みオブジェクト]** コンテナーが表示されます。
 
 ![高度な AD DS 管理](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_DeletedObjectsContainer.png)
 
@@ -119,8 +119,8 @@ Active Directory 管理センターは、強力な条件およびフィルター
 - Name
 - 削除するとき
 - 最後に確認された親
-- 種類
-- 説明
+- 型
+- [説明]
 - City
 - 国/地域
 - 部署
@@ -147,7 +147,7 @@ Active Directory 管理センターは、強力な条件およびフィルター
 削除済みオブジェクトの復旧は、常に 1 回の操作で行われていました。  Active Directory 管理センターでは、この操作がさらに簡単になります。 単一ユーザーなど、1 つの削除済みオブジェクトを復旧するには、次の手順を実行します。
 
 1. Active Directory 管理センターのナビゲーション ウィンドウで、ドメイン名をクリックします。
-2. 管理の一覧で、**[削除済みオブジェクト]** をダブルクリックします。
+2. 管理の一覧で、 **[削除済みオブジェクト]** をダブルクリックします。
 3. オブジェクトを右クリックして **[復元]** をクリックするか、または **[タスク]** ウィンドウの **[復元]** をクリックします。
 
 オブジェクトが元の場所に復元されます。
@@ -177,11 +177,11 @@ Active Directory 管理センターでは、削除済みオブジェクトの入
 
 **オブジェクトの親のインスタンスが作成されていないか削除されているため、操作は実行できませんでした。**
 
-**[最後に確認された親]** 属性には、各オブジェクトの親との関係が表示されます。 親オブジェクトを復元した後に Active Directory 管理センターを更新すると、**[最後に確認された親]** 属性の値が、削除された場所から復元された場所に変更されます。 そのため、親オブジェクトの場所に削除済みオブジェクトコンテナーの識別名が表示されなくなったときに、その子オブジェクトを復元できます。
+**[最後に確認された親]** 属性には、各オブジェクトの親との関係が表示されます。 親オブジェクトを復元した後に Active Directory 管理センターを更新すると、 **[最後に確認された親]** 属性の値が、削除された場所から復元された場所に変更されます。 そのため、親オブジェクトの場所に削除済みオブジェクトコンテナーの識別名が表示されなくなったときに、その子オブジェクトを復元できます。
 
 管理者が誤って Sales OU を削除してしまった場合を考えてみましょう。Sales OU には、子 OU およびユーザーが含まれています。
 
-最初に、削除されたすべてのユーザーの **最後の既知の親** 属性の値と、その読み取り方法 **OU = Sales\0ADEL:*<guid + 削除済みオブジェクトコンテナーの識別名> * * * を確認します。
+最初に、削除されたすべてのユーザーの **最後の既知の親** 属性の値と、その読み取り方法 * *OU = Sales\0ADEL:* <guid + 削除済みオブジェクトコンテナーの識別名> * * * を確認します。
 
 ![高度な AD DS 管理](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)
 
@@ -213,8 +213,8 @@ Restore-adobject
 
 中規模および大規模なエンタープライズ環境では、時間が経つと、[削除済みオブジェクト] コンテナーに 20,000 (場合によっては 100,000) を超えるオブジェクトが蓄積され、すべてのオブジェクトを表示することが困難になる可能性があります。 Active Directory 管理センターのフィルター メカニズムでは、クライアント側のフィルターを使用しているため、上限を超えたオブジェクトを表示することはできません。 この制限を回避するには、次の手順に従ってサーバー側の検索を実行します。
 
-1. **[削除済みオブジェクト]** コンテナーを右クリックし、**[このノード配下の検索]** をクリックします。
-2. シェブロンをクリックして **[+条件の追加]** メニューを表示し、**[最後の変更が指定の期間内]** を選択して追加します。 最終更新時刻 (**whenChanged** 属性) は、削除時間に非常に近い値であり、ほとんどの環境では同一になります。 このクエリでは、サーバー側の検索が実行されます。
+1. **[削除済みオブジェクト]** コンテナーを右クリックし、 **[このノード配下の検索]** をクリックします。
+2. シェブロンをクリックして **[+条件の追加]** メニューを表示し、 **[最後の変更が指定の期間内]** を選択して追加します。 最終更新時刻 ( **whenChanged** 属性) は、削除時間に非常に近い値であり、ほとんどの環境では同一になります。 このクエリでは、サーバー側の検索が実行されます。
 3. 結果に対し、さらに表示フィルターや並べ替えなどを使用して、復元する削除済みオブジェクトを特定し、通常の手順で復元を実行します。
 
 ## <a name="configuring-and-managing-fine-grained-password-policies-using-active-directory-administrative-center"></a><a name="BKMK_FGPP"></a>Active Directory 管理センターを使用して細かい設定が可能なパスワード ポリシーを構成および管理する
@@ -225,17 +225,17 @@ Active Directory 管理センターを使用すると、細かい設定が可能
 
 細かい設定が可能なパスワード ポリシーの詳細については、「[ステップ バイ ステップ ガイド - 細かい設定が可能なパスワードおよびアカウント ロックアウトのポリシー設定 (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770842(v=ws.10))」を参照してください。
 
-ナビゲーション ウィンドウで、ツリー ビューからドメインをクリックし、**[システム]**、**[パスワード設定コンテナー]** を順にクリックします。次に、[タスク] ウィンドウで、**[新規]**、**[パスワードの設定]** を順にクリックします。
+ナビゲーション ウィンドウで、ツリー ビューからドメインをクリックし、 **[システム]** 、 **[パスワード設定コンテナー]** を順にクリックします。次に、[タスク] ウィンドウで、 **[新規]** 、 **[パスワードの設定]** を順にクリックします。
 
 ![高度な AD DS 管理](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_PasswordSettings.png)
 
 ### <a name="managing-fine-grained-password-policies"></a>細かい設定が可能なパスワード ポリシーを管理する
 
-新しい FGPP を作成するか、または既存の FGPP の編集を選択すると、**[パスワードの設定]** エディターが表示されます。 この画面で、必要なすべてのパスワード ポリシーを構成します。Windows Server 2008 や Windows Server 2008 R2 で行うのと同様の内容ですが、ここでは専用のエディターを使用するという点のみ異なります。
+新しい FGPP を作成するか、または既存の FGPP の編集を選択すると、 **[パスワードの設定]** エディターが表示されます。 この画面で、必要なすべてのパスワード ポリシーを構成します。Windows Server 2008 や Windows Server 2008 R2 で行うのと同様の内容ですが、ここでは専用のエディターを使用するという点のみ異なります。
 
 ![高度な AD DS 管理](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_CreatePasswordSettings.png)
 
-すべての必須フィールド (赤いアスタリスク付き) と、必要に応じて省略可能なフィールドに入力します。次に、**[追加]** をクリックし、このポリシーを適用するユーザーまたはグループを設定します。 FGPP は、指定されたセキュリティ プリンシパルの既定のドメイン ポリシー設定をオーバーライドします。 上の画面では、セキュリティを保護するために、制限が非常に厳しいポリシーを組み込みの Administrator アカウントのみに適用しています。 このポリシーは、通常のユーザーに適用するには複雑すぎる内容ですが、IT プロフェッショナルのみが使用する危険度の高いアカウントには最適です。
+すべての必須フィールド (赤いアスタリスク付き) と、必要に応じて省略可能なフィールドに入力します。次に、 **[追加]** をクリックし、このポリシーを適用するユーザーまたはグループを設定します。 FGPP は、指定されたセキュリティ プリンシパルの既定のドメイン ポリシー設定をオーバーライドします。 上の画面では、セキュリティを保護するために、制限が非常に厳しいポリシーを組み込みの Administrator アカウントのみに適用しています。 このポリシーは、通常のユーザーに適用するには複雑すぎる内容ですが、IT プロフェッショナルのみが使用する危険度の高いアカウントには最適です。
 
 また、優先順位を設定し、指定したドメイン内でポリシーを適用するユーザーおよびグループも設定します。
 
@@ -261,7 +261,7 @@ Active Directory 管理センターを使用して、特定のユーザーに適
 
 ![高度な AD DS 管理](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RSOP.png)
 
-任意のユーザーまたはグループの **[プロパティ]** を確認すると、**[直接関連付けられたパスワードの設定]** が表示されます。これは、明示的に割り当てられた FGPP です。
+任意のユーザーまたはグループの **[プロパティ]** を確認すると、 **[直接関連付けられたパスワードの設定]** が表示されます。これは、明示的に割り当てられた FGPP です。
 
 ![高度な AD DS 管理](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPPSettings.gif)
 
@@ -287,7 +287,7 @@ Active Directory 管理センターの Windows PowerShell 履歴ビューアー�
 
 ![高度な AD DS 管理](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ViewArgs.png)
 
-Active Directory 管理センターを使用してオブジェクトを作成、変更、または削除する前に、**[タスクの開始]** メニューをクリックして、手動で注釈を作成します。 実行する内容を入力します。  Active Directory 管理センターによる作業が完了したら、**[タスクの終了]** を選択します。 このタスク メモを使用すると、実行されたすべての操作が折りたたみ可能なメモにグループ化され、実行した内容を理解しやすくなります。
+Active Directory 管理センターを使用してオブジェクトを作成、変更、または削除する前に、 **[タスクの開始]** メニューをクリックして、手動で注釈を作成します。 実行する内容を入力します。  Active Directory 管理センターによる作業が完了したら、 **[タスクの終了]** を選択します。 このタスク メモを使用すると、実行されたすべての操作が折りたたみ可能なメモにグループ化され、実行した内容を理解しやすくなります。
 
 たとえば、ユーザーのパスワードを変更し、そのユーザーをグループから削除するために使用された Windows PowerShell コマンドを、次のようなメモで確認できます。
 
@@ -345,7 +345,7 @@ Active Directory 管理センターには、トレース構成ファイルの一
 </system.diagnostics>
 ```
 
-**DsacLogLevel** の詳細レベルは、**None**、**Error**、**Warning**、**Info**、および **Verbose** です。 出力ファイル名は構成可能で、dsac.exe と同じフォルダーに書き込まれます。 出力には、ADAC の状態、接続しているドメイン コントローラー、実行された Windows PowerShell コマンドとその応答内容などの詳細情報が記録されます。
+**DsacLogLevel** の詳細レベルは、 **None** 、 **Error** 、 **Warning** 、 **Info** 、および **Verbose** です。 出力ファイル名は構成可能で、dsac.exe と同じフォルダーに書き込まれます。 出力には、ADAC の状態、接続しているドメイン コントローラー、実行された Windows PowerShell コマンドとその応答内容などの詳細情報が記録されます。
 
 たとえば、INFO レベルを使用している場合、トレース レベルの詳細を除く、次のすべての結果が返されます。
 

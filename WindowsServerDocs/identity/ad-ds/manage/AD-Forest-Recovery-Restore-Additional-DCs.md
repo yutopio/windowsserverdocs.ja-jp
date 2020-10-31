@@ -1,17 +1,17 @@
 ---
 title: AD フォレストの回復-残りの Dc の再デプロイ
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: d75a379ea9e413bd0555e1bee81b4bbe0c201650
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: d3d826e0ec587289671723a4bd78d0d669189428
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938912"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070814"
 ---
 # <a name="ad-forest-recovery---redeploy-remaining-dcs"></a>AD フォレストの回復-残りの Dc の再デプロイ
 
@@ -29,7 +29,7 @@ ms.locfileid: "88938912"
    - Windows Server 2012 を実行する仮想化環境では、多数の Dc を回復するための最も高速で簡単な方法が複製されます。 1つの仮想化 DC をバックアップから復元した後で、ドメイン内のすべての仮想化 Dc の回復を自動化できます。
    - 複製と前提条件の詳細については、「 [Active Directory Domain Services (AD DS) の仮想化 (レベル 100) の概要](./managing-rid-issuance.md)」を参照してください。
 - Windows Server 2012 を実行しているサーバー (また Dcpromo.exe は以前のバージョンの Windows Server を実行しているサーバー) またはユーザーインターフェイスを使用して、Windows PowerShell を使用して AD DS を再インストールします。
-   - AD DS の再インストールを迅速に実行するには、[メディアからのインストール (IFM)] オプションを使用して、インストール中のレプリケーショントラフィックを削減します。 **Ntdsutil ifm**コマンドを使用してインストールメディアを作成する方法の詳細については、「[メディアからの AD DS のインストール](./managing-rid-issuance.md)」を参照してください。
+   - AD DS の再インストールを迅速に実行するには、[メディアからのインストール (IFM)] オプションを使用して、インストール中のレプリケーショントラフィックを削減します。 **Ntdsutil ifm** コマンドを使用してインストールメディアを作成する方法の詳細については、「 [メディアからの AD DS のインストール](./managing-rid-issuance.md)」を参照してください。
 
 仮想化 DC 複製によって、または (バックアップからの復元ではなく) AD DS をインストールして、フォレスト内で回復された各レプリカ DC について、次の点を考慮してください。
 
@@ -38,7 +38,7 @@ ms.locfileid: "88938912"
 - 複製された仮想化 DC のホスト名または AD DS をインストールするサーバーのホスト名に制限はありません。 以前に使用されていた新しいホスト名またはホスト名を使用できます。 DNS ホスト名の構文の詳細については、「 [Dns コンピューター名の作成](/previous-versions/windows/it-pro/windows-server-2003/cc785282(v=ws.10)) 」 () を参照してください [https://go.microsoft.com/fwlink/?LinkId=74564](https://go.microsoft.com/fwlink/?LinkId=74564) 。
 - ネットワークアダプターの TCP/IP プロパティで優先 DNS サーバーとして、フォレスト内の最初の DNS サーバー (ルートドメインに復元された最初の DC) を使用して各サーバーを構成します。 詳細については、「 [DNS を使用するための tcp/ip の構成](/previous-versions/windows/it-pro/windows-server-2003/cc779282(v=ws.10))」を参照してください。
 - 1つの場所に複数の Rodc が展開されている場合は、仮想化された DC の複製によって、またはブランチオフィスなどの分離された場所に個別に展開されている場合に AD DS を削除して再インストールすることによって、ドメイン内のすべての Rodc を再展開します。
-   - Rodc を再構築すると、残留オブジェクトが含まれていないことが保証されるため、レプリケーションの競合が後で発生するのを防ぐことができます。 RODC から AD DS を削除する場合は、 *DC メタデータを保持するオプションを選択*します。 このオプションを使用すると、RODC の krbtgt アカウントが保持され、委任された RODC 管理者アカウントとパスワードレプリケーションポリシー (PRP) のアクセス許可が保持され、RODC で AD DS を削除および再インストールするためにドメイン管理者の資格情報を使用する必要がなくなります。 また、最初に RODC にインストールされている場合は、DNS サーバーとグローバルカタログのロールも保持されます。
+   - Rodc を再構築すると、残留オブジェクトが含まれていないことが保証されるため、レプリケーションの競合が後で発生するのを防ぐことができます。 RODC から AD DS を削除する場合は、 *DC メタデータを保持するオプションを選択* します。 このオプションを使用すると、RODC の krbtgt アカウントが保持され、委任された RODC 管理者アカウントとパスワードレプリケーションポリシー (PRP) のアクセス許可が保持され、RODC で AD DS を削除および再インストールするためにドメイン管理者の資格情報を使用する必要がなくなります。 また、最初に RODC にインストールされている場合は、DNS サーバーとグローバルカタログのロールも保持されます。
    - Dc (Rodc または書き込み可能 Dc) を再構築すると、再インストール中にレプリケーショントラフィックが増加する可能性があります。 影響を軽減するために、RODC インストールのスケジュールをずらすことができます。また、[メディアからのインストール (IFM)] オプションを使用することもできます。 IFM オプションを使用する場合は、破損したデータがないことを信頼している書き込み可能 DC で **ntdsutil IFM** コマンドを実行します。 これにより、AD DS の再インストールが完了した後に、RODC で破損が発生するのを防ぐことができます。 IFM の詳細については、「 [メディアからの AD DS のインストール](./managing-rid-issuance.md)」を参照してください。
    - Rodc の再構築の詳細については、「 [rodc の削除と再インストール](/previous-versions/windows/it-pro/windows-server-2003/cc779282(v=ws.10))」を参照してください。
 - DC が誤動作する前に DNS サーバーサービスを実行していた場合は、AD DS のインストール中に DNS サーバーサービスをインストールして構成します。 それ以外の場合は、その前の DNS クライアントを他の DNS サーバーで構成します。

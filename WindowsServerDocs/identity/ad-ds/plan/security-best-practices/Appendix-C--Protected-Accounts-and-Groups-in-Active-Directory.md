@@ -2,16 +2,16 @@
 ms.assetid: 5b2876ac-fe7d-4054-bfba-b692e57bc0d2
 title: 付録 C-Active Directory の保護されたアカウントとグループ
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7a62ad9ecd14d4f4a3126d0294c56082e8a5f701
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: 9421038f90bc91d5d4f52c6e1811aec70c1a9727
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88941619"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070534"
 ---
 # <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>付録 C: Active Directory の保護されたアカウントとグループ
 
@@ -74,8 +74,8 @@ AdminSDHolder の変更をテストするには、手動で SDProp を実行し�
 
 Ldp.exe を使用するか、LDAP 変更スクリプトを実行して、強制的に SDProp を実行することができます。 Ldp.exe を使用して SDProp を実行するには、ドメイン内の AdminSDHolder オブジェクトに変更を加えた後で、次の手順を実行します。
 
-1. **Ldp.exe**を起動します。
-2. [Ldp] ダイアログボックスの [ **接続** ] をクリックし、[ **接続**] をクリックします。
+1. **Ldp.exe** を起動します。
+2. [Ldp] ダイアログボックスの [ **接続** ] をクリックし、[ **接続** ] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_9.gif)
 
@@ -83,7 +83,7 @@ Ldp.exe を使用するか、LDAP 変更スクリプトを実行して、強制�
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_10.png)
 
-4. 次のスクリーンショットの **Dn: (RootDSE)** で示されているように、正常に接続したことを確認します。 [ **接続** ] をクリックし、[ **バインド**] をクリックします。
+4. 次のスクリーンショットの **Dn: (RootDSE)** で示されているように、正常に接続したことを確認します。 [ **接続** ] をクリックし、[ **バインド** ] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_11.png)
 
@@ -91,11 +91,11 @@ Ldp.exe を使用するか、LDAP 変更スクリプトを実行して、強制�
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_12.png)
 
-6. バインド操作が完了したら、[ **参照**] をクリックし、[ **変更**] をクリックします。
+6. バインド操作が完了したら、[ **参照** ] をクリックし、[ **変更** ] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_13.png)
 
-7. [ **変更** ] ダイアログボックスで、 **DN** フィールドを空白のままにします。 [ **エントリ属性の編集** ] フィールドに「 **fixupinheritance**」と入力し、[ **値** ] フィールドに「 **Yes」** と入力します。 **Enter キーを押し**て、次のスクリーンショットに示すように入力**リスト**を設定します。
+7. [ **変更** ] ダイアログボックスで、 **DN** フィールドを空白のままにします。 [ **エントリ属性の編集** ] フィールドに「 **fixupinheritance** 」と入力し、[ **値** ] フィールドに「 **Yes」** と入力します。 **Enter キーを押し** て、次のスクリーンショットに示すように入力 **リスト** を設定します。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_14.gif)
 
@@ -112,9 +112,9 @@ LDIFDE またはスクリプトを使用して手動で SDProp を実行する�
 
 Ldp.exe を使用するか、LDAP 変更スクリプトを実行して、強制的に SDProp を実行することもできます。 Ldp.exe を使用して SDProp を実行するには、ドメイン内の AdminSDHolder オブジェクトに変更を加えた後で、次の手順を実行します。
 
-1. **Ldp.exe**を起動します。
+1. **Ldp.exe** を起動します。
 
-2. [ **Ldp** ] ダイアログボックスで、[ **接続**] をクリックし、[ **接続**] をクリックします。
+2. [ **Ldp** ] ダイアログボックスで、[ **接続** ] をクリックし、[ **接続** ] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_16.gif)
 
@@ -122,23 +122,23 @@ Ldp.exe を使用するか、LDAP 変更スクリプトを実行して、強制�
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_17.gif)
 
-4. 次のスクリーンショットの **Dn: (RootDSE)** で示されているように、正常に接続したことを確認します。 [ **接続** ] をクリックし、[ **バインド**] をクリックします。
+4. 次のスクリーンショットの **Dn: (RootDSE)** で示されているように、正常に接続したことを確認します。 [ **接続** ] をクリックし、[ **バインド** ] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_18.gif)
 
-5. [ **バインド** ] ダイアログボックスで、rootDSE オブジェクトを変更するアクセス許可を持つユーザーアカウントの資格情報を入力します。 (そのユーザーとしてログオンしている場合は、[ **現在のログオンユーザーとしてバインド**する] を選択できます)。[ **OK]** をクリックします。
+5. [ **バインド** ] ダイアログボックスで、rootDSE オブジェクトを変更するアクセス許可を持つユーザーアカウントの資格情報を入力します。 (そのユーザーとしてログオンしている場合は、[ **現在のログオンユーザーとしてバインド** する] を選択できます)。[ **OK]** をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_19.gif)
 
-6. バインド操作が完了したら、[ **参照**] をクリックし、[ **変更**] をクリックします。
+6. バインド操作が完了したら、[ **参照** ] をクリックし、[ **変更** ] をクリックします。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_20.gif)
 
-7. [ **変更** ] ダイアログボックスで、 **DN** フィールドを空白のままにします。 [ **エントリ属性の編集** ] フィールドに「 **RunProtectAdminGroupsTask**」と入力し、[ **値** ] フィールドに「 **1**」と入力します。 **Enter キーを押し**て、次に示すように入力リストを設定します。
+7. [ **変更** ] ダイアログボックスで、 **DN** フィールドを空白のままにします。 [ **エントリ属性の編集** ] フィールドに「 **RunProtectAdminGroupsTask** 」と入力し、[ **値** ] フィールドに「 **1** 」と入力します。 **Enter キーを押し** て、次に示すように入力リストを設定します。
 
    ![保護されたアカウントとグループ](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_21.gif)
 
-8. [設定された **変更** ] ダイアログボックスで、[ **実行**] をクリックし、AdminSDHolder オブジェクトに対して行った変更がそのオブジェクトに表示されていることを確認します。
+8. [設定された **変更** ] ダイアログボックスで、[ **実行** ] をクリックし、AdminSDHolder オブジェクトに対して行った変更がそのオブジェクトに表示されていることを確認します。
 
 LDIFDE またはスクリプトを使用して手動で SDProp を実行する場合は、次に示すように、変更エントリを作成できます。
 

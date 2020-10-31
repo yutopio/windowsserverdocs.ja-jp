@@ -2,16 +2,16 @@
 ms.assetid: 2a2f493a-9796-454a-9721-e223b799dfa7
 title: フォレスト ルート ドメイン コントローラーの配置を計画する
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 16779bc5f5e0aa20a9824854f572a691af5bf561
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: ab34eb19c880fbe22b9da74a6745d9277a564cb4
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938732"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93071064"
 ---
 # <a name="planning-forest-root-domain-controller-placement"></a>フォレスト ルート ドメイン コントローラーの配置を計画する
 

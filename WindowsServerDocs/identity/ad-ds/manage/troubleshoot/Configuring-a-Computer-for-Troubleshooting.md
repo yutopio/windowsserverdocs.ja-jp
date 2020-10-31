@@ -1,17 +1,17 @@
 ---
 ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: トラブルシューティング用コンピューターを構成する
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 049addf848e231104e844c06627997c71b335d20
-ms.sourcegitcommit: 1dc35d221eff7f079d9209d92f14fb630f955bca
+ms.openlocfilehash: f340cd9608eec21110efe7d10e936c5320d6e303
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88938742"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93070464"
 ---
 # <a name="configuring-a-computer-for-troubleshooting"></a>トラブルシューティング用コンピューターを構成する
 
@@ -39,11 +39,11 @@ Windows Server には、Windows 信頼性とパフォーマンスモニターが
 
 ### <a name="set-logging-levels"></a>ログ レベルの設定
 
-イベントビューアーディレクトリサービスのログに記録された情報がトラブルシューティングに十分ではない場合は、 **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\ntds\diagnostics**で適切なレジストリエントリを使用してログレベルを上げます。
+イベントビューアーディレクトリサービスのログに記録された情報がトラブルシューティングに十分ではない場合は、 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics** の適切なレジストリエントリを使用してログレベルを上げます。
 
-既定では、すべてのエントリのログ記録レベルは **0**に設定されます。これにより、最小限の情報が提供されます。 最も高いログ記録レベルは **5**です。 エントリのレベルを上げると、ディレクトリサービスのイベントログに追加のイベントが記録されます。
+既定では、すべてのエントリのログ記録レベルは **0** に設定されます。これにより、最小限の情報が提供されます。 最も高いログ記録レベルは **5** です。 エントリのレベルを上げると、ディレクトリサービスのイベントログに追加のイベントが記録されます。
 
-診断エントリのログ記録レベルを変更するには、次の手順に従います。 この手順を完了するには、少なくとも、**Domain Admins** グループ、またはそれと同等の権限を持つグループのメンバである必要があります。
+診断エントリのログ記録レベルを変更するには、次の手順に従います。 この手順を完了するには、少なくとも、 **Domain Admins** グループ、またはそれと同等の権限を持つグループのメンバである必要があります。
 
 > [!WARNING]
 > 他の手段がない限り、レジストリは直接編集しないことをお勧めします。 レジストリの変更は、レジストリエディターまたは Windows によって適用される前には検証されず、その結果、間違った値が格納される可能性があります。 これにより、システムで回復不能なエラーが発生する可能性があります。 可能であれば、グループポリシーまたは MMC スナップインなどの他の Windows ツールを使用して、レジストリを直接編集するのではなく、タスクを実行します。 レジストリを編集する必要がある場合は、細心の注意が必要です。
@@ -51,8 +51,8 @@ Windows Server には、Windows 信頼性とパフォーマンスモニターが
 
 診断エントリのログ記録レベルを変更するには
 
-1. [ **Start**  >  **実行**の開始] をクリックし > **regedit** > [ **OK**] をクリックします。
+1. [ **Start**  >  **実行** の開始] をクリックし > **regedit** > [ **OK** ] をクリックします。
 2. ログインを設定するエントリに移動します。
    * 例: HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesNTDSDiagnostics
-3. エントリをダブルクリックし、[ **Base**] で [ **Decimal**] をクリックします。
-4. [ **値**] に **0** ~ **5**の整数を入力し、[ **OK]** をクリックします。
+3. エントリをダブルクリックし、[ **Base** ] で [ **Decimal** ] をクリックします。
+4. [ **値** ] に **0** ~ **5** の整数を入力し、[ **OK]** をクリックします。
