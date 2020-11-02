@@ -1,19 +1,19 @@
 ---
 ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Windows Server 2016 の機能レベル
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/25/2020
 ms.topic: article
 ms.custom: it-pro
 ms.reviewer: maheshu
-ms.openlocfilehash: 8a990e5ab19a5f5cd30d23d0d31e28249801040b
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: b74bb786b3d1a6ec8a1f96054b2d74ca93bd9bcf
+ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90765943"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93068375"
 ---
 # <a name="forest-and-domain-functional-levels"></a>フォレストとドメインの機能レベル
 
@@ -127,7 +127,7 @@ Windows Server 2019 ドメイン コントローラーを追加する最小要�
 * Windows Server 2012 R2
 * Windows Server 2012
 * Windows Server 2008 R2
-* Windows Server 2008
+* Windows Server 2008
 
 ### <a name="windows-server-2008-forest-functional-level-features"></a>Windows Server 2008 フォレストの機能レベルの機能
 
@@ -166,7 +166,7 @@ Windows Server 2019 ドメイン コントローラーを追加する最小要�
 * Windows Server 2012 R2
 * Windows Server 2012
 * Windows Server 2008 R2
-* Windows Server 2008
+* Windows Server 2008
 * Windows Server 2003
 
 ### <a name="windows-server-2003-forest-functional-level-features"></a>Windows Server 2003 フォレストの機能レベルの機能
@@ -207,7 +207,7 @@ Windows Server 2019 ドメイン コントローラーを追加する最小要�
 サポートされるドメイン コントローラーのオペレーティング システム:
 
 * Windows Server 2008 R2
-* Windows Server 2008
+* Windows Server 2008
 * Windows Server 2003
 * Windows 2000
 
