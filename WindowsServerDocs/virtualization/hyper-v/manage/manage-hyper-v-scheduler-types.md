@@ -7,12 +7,12 @@ ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: low
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
-ms.openlocfilehash: 1aa270adc30f72f8efcdbbea2162e3c6b925dade
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 8dc2fec785771db4ccefb08e2359506932e11620
+ms.sourcegitcommit: 8c0a419ae5483159548eb0bc159f4b774d4c3d85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746427"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235869"
 ---
 # <a name="managing-hyper-v-hypervisor-scheduler-types"></a>Hyper-v ハイパーバイザーのスケジューラの種類の管理
 
@@ -23,7 +23,7 @@ ms.locfileid: "90746427"
 > [!NOTE]
 > このドキュメントで説明されているハイパーバイザースケジューラ機能を使用するには、更新プログラムが必要です。 詳細については、「 [必須の更新プログラム](#required-updates)」を参照してください。
 
-## <a name="background"></a>背景
+## <a name="background"></a>バックグラウンド
 
 Hyper-v 仮想プロセッサスケジュールの背後にあるロジックと制御について説明する前に、この記事で説明されている基本的な概念を確認することをお勧めします。
 
@@ -34,7 +34,7 @@ SMT をサポートするプロセッサは、Intel と AMD の両方から使�
 
 この記事では、SMT の説明と Hyper-v での使用方法について、Intel と AMD の両方のシステムに均等に適用します。
 
-* Intel HT テクノロジの詳細については、「 [Intel ハイパースレッディングテクノロジ](https://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html)」を参照してください。
+* Intel HT テクノロジの詳細については、「 [intel Hyper-Threading テクノロジ](https://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html)」を参照してください。
 
 * AMD SMT の詳細については、 [「Zen (コアアーキテクチャ](https://www.amd.com/en/technologies/zen-core))」を参照してください。
 
@@ -135,14 +135,14 @@ Windows Server 2016 Hyper-v では、従来のハイパーバイザースケジ�
 
 ## <a name="windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler"></a>Windows Server 2019 Hyper-v は、既定でコアスケジューラを使用する
 
-最適なセキュリティ構成で Hyper-v ホストを確実に展開できるように、Windows Server 2019 Hyper-v では、既定でコアハイパーバイザースケジューラモデルが使用されるようになりました。 ホスト管理者は、必要に応じて、従来のクラシックスケジューラを使用するようにホストを構成することができます。 管理者は、スケジューラの種類の既定の設定を上書きする前に、各スケジューラの種類が仮想化ホストのセキュリティとパフォーマンスに与える影響を慎重に確認し、理解し、考慮する必要があります。  詳細については [、「hyper-v scheduler の種類の選択につい](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/understanding-hyper-v-scheduler-type-selection) て」を参照してください。
+最適なセキュリティ構成で Hyper-v ホストを確実に展開できるように、Windows Server 2019 Hyper-v では、既定でコアハイパーバイザースケジューラモデルが使用されるようになりました。 ホスト管理者は、必要に応じて、従来のクラシックスケジューラを使用するようにホストを構成することができます。 管理者は、スケジューラの種類の既定の設定を上書きする前に、各スケジューラの種類が仮想化ホストのセキュリティとパフォーマンスに与える影響を慎重に確認し、理解し、考慮する必要があります。 詳細については [、「hyper-v ハイパーバイザースケジューラの種類の選択につい](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/about-hyper-v-scheduler-type-selection) て」を参照してください。
 
 ### <a name="required-updates"></a>必要な更新プログラム
 
 > [!NOTE]
 > このドキュメントで説明されているハイパーバイザースケジューラ機能を使用するには、次の更新プログラムが必要です。 これらの更新プログラムには、 `hypervisorschedulertype` ホストの構成に必要な新しい BCD オプションをサポートするための変更が含まれています。
 
-| Version | Release  | 更新が必要 | KB Article |
+| Version | リリース  | 更新が必要 | KB Article |
 |--------------------|------|---------|-------------:|
 |Windows Server 2016 | 1607 | 2018.07 C | [KB4338822](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822) |
 |Windows Server 2016 | 1703 | 2018.07 C | [KB4338827](https://support.microsoft.com/help/4338827/windows-10-update-kb4338827) |
@@ -161,7 +161,7 @@ bcdedit /set hypervisorschedulertype type
 
 `type`は次のいずれかです。
 
-* クラシック
+* Classic (クラシック)
 * コア
 * Root
 

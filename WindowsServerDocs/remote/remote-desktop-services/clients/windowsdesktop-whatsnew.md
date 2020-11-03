@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/14/2020
+ms.date: 10/27/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 8708f8ab6e8fb751f0ca39238574823ae5b499c4
-ms.sourcegitcommit: 45099dfe3682df1e2bc0bd5998594a79cfff16fe
+ms.openlocfilehash: 9f14d93176fd1bd7b97d90550701f79b55774297
+ms.sourcegitcommit: 40466c8af1fc60dfca733ea476f088549cedba65
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92079841"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793609"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows デスクトップ クライアントの新機能
 
@@ -24,24 +24,26 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 
 |ユーザー グループ |最新バージョン  |サポートされる最低バージョン |
 |-----------|----------------|--------------------------|
-|パブリック     |1.2.1364        |1.2.945                   |
-|Insider    |1.2.1440        |1.2.945                   |
+|パブリック     |1.2.1446        |1.2.945                   |
+|Insider    |1.2.1446        |1.2.945                   |
 
-## <a name="updates-for-version-121440-insiders"></a>バージョン 1.2.1440 の更新内容 (インサイダー)
+## <a name="updates-for-version-121446"></a>バージョン 1.2.1446 の更新内容
 
-*公開日:2020 年 10 月 13 日*
+*公開日:2020 年 10 月 27 日*
 
-ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139233)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139144)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139369)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139456)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
+- 自動更新機能が追加されました。これにより、クライアントは最新の更新プログラムを自動的にインストールできます。
 - クライアントで、接続センター内のさまざまなフィードが区別されるようになりました。
 - サブスクリプション アカウントがユーザーがサインインに使用したアカウントと一致しない問題を修正しました。
+- 一部のユーザーがダウンロードされたファイルを使用してリモート アプリにアクセスできなかった問題を修正しました。
 - スマートカードのリダイレクトに関する問題を修正しました。
 
 ## <a name="updates-for-version-121364"></a>バージョン 1.2.1364 の更新内容
 
 *公開日:2020 年 9 月 22 日*
 
-ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139369)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139456)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMK)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4G1t9)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMI)
 
 - シングル サインオン (SSO) が Windows 7 で動作しなかった問題を修正しました。
 - 別のアプリでオーディオ ストリームが排他モードで開かれている場合、および Teams のメディア最適化が有効になっている場合に、Teams の通話の呼び出しまたは参加時に発生していた接続エラーを修正しました。
@@ -52,8 +54,6 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 ## <a name="updates-for-version-121275"></a>バージョン 1.2.1275 の更新内容
 
 *公開日:2020 年 8 月 25 日*
-
-ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FpYR)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FpYS)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Fg3H)
 
 - ユーザーの ID からソブリン クラウドを自動検出する機能が追加されました。
 - すべてのユーザーに対してカスタム URL サブスクリプションを有効にする機能が追加されました。
@@ -76,7 +76,7 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 
 *公開日:2020 年 6 月 23 日*
 
-- Windows Virtual Desktop の Azure Resource Manager 統合バージョンをサポートするために、**サブスクライブ** オプションの自動検出ロジックを更新しました。 Windows Virtual Desktop リソースのみを使用しているお客様は、Windows Virtual Desktop (クラシック) への同意を提供する必要はなりました。
+- Windows Virtual Desktop の Azure Resource Manager 統合バージョンをサポートするために、 **サブスクライブ** オプションの自動検出ロジックを更新しました。 Windows Virtual Desktop リソースのみを使用しているお客様は、Windows Virtual Desktop (クラシック) への同意を提供する必要はなりました。
 - スケール ファクターが最大 400% の高 DPI デバイスのサポートが強化されました。
 - 切断ダイアログが表示されない問題が修正されました。
 - コマンド バーのヒントが予想よりも長く表示される問題を修正しました。
@@ -88,9 +88,9 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 *公開日:2020 年 5 月 27 日*
 
 - サブスクライブするときに、メール アドレスを入力する代わりに、アカウントを選択できるようになりました。
-- 新しい **[Subscribe with URL]\(URL でサブスクライブ\)** オプションが追加されました。これを使用すると、リソースを自動的に検出できない場合に、サブスクライブするワークスペースの URL を指定したり、[メール検出](../rds-email-discovery.md) (使用可能な場合) を利用したりすることができます。 これは、他のリモート デスクトップ クライアントでのサブスクリプション プロセスに似ています。 これを使用して、Windows Virtual Desktop ワークスペースに直接サブスクライブできます。
+- 新しい **[Subscribe with URL]\(URL でサブスクライブ\)** オプションが追加されました。これを使用すると、リソースを自動的に検出できない場合に、サブスクライブするワークスペースの URL を指定したり、 [メール検出](../rds-email-discovery.md) (使用可能な場合) を利用したりすることができます。 これは、他のリモート デスクトップ クライアントでのサブスクリプション プロセスに似ています。 これを使用して、Windows Virtual Desktop ワークスペースに直接サブスクライブできます。
 - 新しい [URI スキーム](remote-desktop-uri.md) を使用してワークスペースをサブスクライブするためのサポートが追加されました。これは、電子メールでユーザーに送信したり、サポート Web サイトに追加したりすることができます。
-- デスクトップとアプリ セッションのクライアント、ネットワーク、およびサーバーの詳細を提供する新しい**接続情報**ダイアログが追加されました。 このダイアログには、全画面表示モードの場合は接続バーから、ウィンドウの場合は [システム] メニューからアクセスできます。
+- デスクトップとアプリ セッションのクライアント、ネットワーク、およびサーバーの詳細を提供する新しい **接続情報** ダイアログが追加されました。 このダイアログには、全画面表示モードの場合は接続バーから、ウィンドウの場合は [システム] メニューからアクセスできます。
 - ウィンドウ モードで起動したデスクトップ セッションは、ウィンドウを最大化するときに、全画面表示ではなく常に最大化されるようになりました。 全画面表示にするには、システム メニューの **[全画面表示]** オプションを使用します。
 - [サブスクリプションの解除] プロンプトに警告アイコンが表示され、ワークスペース名が箇条書きとして表示されるようになりました。
 - 問題の診断に役立つ詳細セクションを追加のエラー ダイアログに追加しました。

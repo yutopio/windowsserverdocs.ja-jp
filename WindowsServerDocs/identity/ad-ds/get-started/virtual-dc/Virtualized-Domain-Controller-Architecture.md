@@ -6,12 +6,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b644103342e94a171699efeab238453bdb583eec
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 8d8a200881b8b1acf21afb8eb0b41cff6e390d88
+ms.sourcegitcommit: 8c0a419ae5483159548eb0bc159f4b774d4c3d85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067804"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235859"
 ---
 # <a name="virtualized-domain-controller-architecture"></a>仮想化ドメイン コントローラーのアーキテクチャ
 
@@ -30,7 +30,7 @@ ms.locfileid: "93067804"
 
 VM-GenerationID をサポートするハイパーバイザーと、サポートしないハイパーバイザーが混在する環境では、VM-GenerationID をサポートしないハイパーバイザーに複製メディアが誤ってデプロイされる可能性があります。 DCCloneConfig.xml ファイルの存在は、DC の複製を管理しようとしていることを示します。 したがって、ブート時に DCCloneConfig.xml ファイルが見つかったのに、VM-GenerationID がホストから提供されていない場合は、環境のその他の部分が影響を受けないように、複製 DC はディレクトリ サービス復元モード (DSRM) でブートされます。 その後、VM-GenerationID をサポートするハイパーバイザーに複製メディアを移動し、複製を再試行できます。
 
-VM-GenerationID をサポートするハイパーバイザーに複製メディアがデプロイされているにもかかわらず、DCCloneConfig.xml ファイルが提供されていない場合、その DIT と新しい VM の VM-GenerationID が異なることが DC によって検出され、USN の再利用と SID の重複を防ぐためにセーフガードがトリガーされます。 ただし、複製が開始されないため、セカンダリ DC は、ソース DC と同じ ID で引き続き実行されます。 このセカンダリ DC は、環境内での不整合を避けるためにできるだけ早くネットワークから削除する必要があります。 更新プログラムが送信時にレプリケートされることを確認しながら、このセカンダリ DC を再利用する方法の詳細については、マイクロソフトサポート技術情報の記事 [2742970](https://support.microsoft.com/kb/2742970)を参照してください。
+VM-GenerationID をサポートするハイパーバイザーに複製メディアがデプロイされているにもかかわらず、DCCloneConfig.xml ファイルが提供されていない場合、その DIT と新しい VM の VM-GenerationID が異なることが DC によって検出され、USN の再利用と SID の重複を防ぐためにセーフガードがトリガーされます。 ただし、複製が開始されないため、セカンダリ DC は、ソース DC と同じ ID で引き続き実行されます。 このセカンダリ DC は、環境内での不整合を避けるためにできるだけ早くネットワークから削除する必要があります。
 
 ### <a name="cloning-detailed-processing"></a><a name="BKMK_CloneProcessDetails"></a>複製プロセスの詳細
 次の図は、初期の複製操作および複製再試行操作のアーキテクチャを示しています。 これらのプロセスについては、このトピックでさらに詳しく後述します。
@@ -59,7 +59,7 @@ VM-GenerationID をサポートするハイパーバイザーに複製メディ�
 
     2.  2 つの ID が一致しない場合、これは、以前のドメイン コントローラーの NTDS.DIT が含まれる新しい仮想マシン (または、復元されたスナップショット) です。 DCCloneConfig.xml ファイルが存在する場合は、複製操作が続行されます。 存在しない場合は、スナップショット復元操作が引き続き行われます。 「[仮想化ドメイン コントローラーの安全な復元のアーキテクチャ](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch)」を参照してください。
 
-    3.  ハイパーバイザーが比較のための VM-Generation ID を提供していないのに、DCCloneConfig.xml ファイルが存在する場合は、ネットワークでドメイン コントローラーが重複しないようにファイル名が変更され、ゲストは DSRM でブートされます。 dccloneconfig.xml ファイルがない場合、ゲストは正常にブートされます (ネットワーク上に重複ドメイン コントローラーが存在する可能性があります)。 この重複ドメインコントローラーを再利用する方法の詳細については、Microsoft サポート技術情報の記事 [2742970](https://support.microsoft.com/kb/2742970)を参照してください。
+    3.  ハイパーバイザーが比較のための VM-Generation ID を提供していないのに、DCCloneConfig.xml ファイルが存在する場合は、ネットワークでドメイン コントローラーが重複しないようにファイル名が変更され、ゲストは DSRM でブートされます。 dccloneconfig.xml ファイルがない場合、ゲストは正常にブートされます (ネットワーク上に重複ドメイン コントローラーが存在する可能性があります)。
 
 3.  NTDS サービスによって、(HKEY_Local_Machine\System\CurrentControlSet\Services\Ntds\Parameters の) VDCisCloning DWORD レジストリ値の名前がチェックされます。
 

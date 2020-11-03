@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 19da2b6ec2a7a3ca31c479388c087850c77d9c23
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 8a6e0ff7e0ba412ff3f8241465a71ab8b81f7d80
+ms.sourcegitcommit: 8c0a419ae5483159548eb0bc159f4b774d4c3d85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638054"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235849"
 ---
 # <a name="getting-started-with-group-managed-service-accounts"></a>Getting Started with Group Managed Service Accounts
 
@@ -52,12 +52,12 @@ ms.locfileid: "89638054"
 
 |プリンシパル|Scope|サポートされるサービス|パスワード管理|
 |-------|-----|-----------|------------|
-|Windows システムのコンピューター アカウント|Domain|ドメインに参加している 1 つのサーバーに限定|コンピューターによる管理|
-|Windows システムなしのコンピューター アカウント|Domain|ドメインに参加している任意のサーバー|なし|
+|Windows システムのコンピューター アカウント|ドメイン|ドメインに参加している 1 つのサーバーに限定|コンピューターによる管理|
+|Windows システムなしのコンピューター アカウント|ドメイン|ドメインに参加している任意のサーバー|なし|
 |仮想アカウント|ローカル|1 つのサーバーに限定|コンピューターによる管理|
-|Windows 7 スタンドアロンの管理されたサービス アカウント|Domain|ドメインに参加している 1 つのサーバーに限定|コンピューターによる管理|
-|ユーザー アカウント|Domain|ドメインに参加している任意のサーバー|なし|
-|グループの管理されたサービス アカウント|Domain|任意の Windows Server 2012 ドメインに参加しているサーバー|ドメイン コントローラーによる管理、ホストによる取得|
+|Windows 7 スタンドアロンの管理されたサービス アカウント|ドメイン|ドメインに参加している 1 つのサーバーに限定|コンピューターによる管理|
+|ユーザー アカウント|ドメイン|ドメインに参加している任意のサーバー|なし|
+|グループの管理されたサービス アカウント|ドメイン|任意の Windows Server 2012 ドメインに参加しているサーバー|ドメイン コントローラーによる管理、ホストによる取得|
 
 Windows コンピューター アカウント、Windows 7 スタンドアロンの管理されたサービス アカウント (sMSA)、または仮想アカウントを複数のシステムで共有することはできません。 1 つのアカウントをサーバー ファームのサービスで共有するように構成する場合は、Windows システムとは別にユーザー アカウントまたはコンピューター アカウントを選択する必要があります。 いずれにしても、これらのアカウントには、シングルポイントコントロールでパスワードを管理する機能はありません。 このため問題が生じます。各組織は Active Directory のサービスのキーを更新してそのキーを該当するすべてのサービスのインスタンスに配布するために、コストの高いソリューションを作成する必要があります。
 
@@ -139,7 +139,7 @@ gMSA 機能を使用するサーバー ファームのライフサイクルは�
 ### <a name="step-1-provisioning-group-managed-service-accounts"></a><a name="BKMK_Step1"></a>手順 1:グループの管理されたサービス アカウントのプロビジョニング
 GMSA を作成できるのは、フォレストのスキーマが Windows Server 2012 に更新されていて、Active Directory のマスタールートキーが展開されており、gMSA が作成されるドメインに少なくとも1つの Windows Server 2012 DC がある場合のみです。
 
-次の手順を完了するには、[**Domain Admins**] または [**Account Operators**] のメンバーシップ、あるいは msDS-GroupManagedServiceAccount オブジェクトを作成する機能が最低限必要です。
+次の手順を実行するには、 **Domain Admins** のメンバーシップ、または、次の手順を完了するために必要な最小限の権限が必要です。
 
 > [!NOTE]
 > -Name パラメーターの値は常に必須です (-Name を指定するかどうかにかかわらず)。-DNSHostName、-RestrictToSingleComputer、および-RestrictToOutboundAuthentication は、3つの展開シナリオでセカンダリ要件となります。
@@ -174,7 +174,7 @@ GMSA を作成できるのは、フォレストのスキーマが Windows Server
     New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$ -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
     ```
 
-この手順を完了するには、[**Domain Admins**] または [**Account Operators**] のメンバーシップ、あるいは msDS-GroupManagedServiceAccount オブジェクトを作成する機能が最低限必要です。 適切なアカウントおよびグループ メンバーシップの使用方法の詳細については、「[ローカルおよびドメインの既定のグループ](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10))」を参照してください。
+この手順を完了するには、[ **Domain Admins** ] または [ **Account Operators** ] のメンバーシップ、あるいは msDS-GroupManagedServiceAccount オブジェクトを作成する機能が最低限必要です。 適切なアカウントおよびグループ メンバーシップの使用方法の詳細については、「[ローカルおよびドメインの既定のグループ](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10))」を参照してください。
 
 ##### <a name="to-create-a-gmsa-for-outbound-authentication-only-using-the-new-adserviceaccount-cmdlet"></a>New-ADServiceAccount コマンドレットを使用して、送信の認証のみに gMSA を作成するには
 
@@ -219,7 +219,7 @@ gMSA をサポートするサービスが他に存在する場合があります
 ## <a name="adding-member-hosts-to-an-existing-server-farm"></a><a name="BKMK_AddMemberHosts"></a>既存のサーバー ファームへのメンバー ホストの追加
 メンバーホストの管理にセキュリティグループを使用する場合は、次のいずれかの方法を使用して、新しいメンバーホストのコンピューターアカウントをセキュリティグループ (gMSA のメンバーホストがメンバーである) に追加します。
 
-これらの手順を完了するには、[**Domain Admins**] のメンバーシップか、またはセキュリティ グループ オブジェクトにメンバーを追加する機能が最低限必要です。
+これらの手順を完了するには、[ **Domain Admins** ] のメンバーシップか、またはセキュリティ グループ オブジェクトにメンバーを追加する機能が最低限必要です。
 
 -   方法 1:Active Directory ユーザーとコンピューター
 
@@ -235,7 +235,7 @@ gMSA をサポートするサービスが他に存在する場合があります
 
 コンピューター アカウントを使用する場合は、既存のアカウントを検索し、新しいコンピューター アカウントを追加します。
 
-この手順を完了するには、[**Domain Admins**] または [**Account Operators**] のメンバーシップ、あるいは msDS-GroupManagedServiceAccount オブジェクトを管理する権利が最低限必要です。 適切なアカウントおよびグループ メンバーシップの使用方法の詳細については、「ローカルおよびドメインの既定のグループ」を参照してください。
+この手順を完了するには、[ **Domain Admins** ] または [ **Account Operators** ] のメンバーシップ、あるいは msDS-GroupManagedServiceAccount オブジェクトを管理する権利が最低限必要です。 適切なアカウントおよびグループ メンバーシップの使用方法の詳細については、「ローカルおよびドメインの既定のグループ」を参照してください。
 
 #### <a name="to-add-member-hosts-using-the-set-adserviceaccount-cmdlet"></a>Set-ADServiceAccount コマンドレットを使用してメンバー ホストを追加するには
 
@@ -267,14 +267,14 @@ Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPass
 ```
 
 ## <a name="updating-the-group-managed-service-account-properties"></a><a name="BKMK_Update_gMSA"></a>グループの管理されたサービスアカウントのプロパティを更新しています
-これらの手順を完了するには、[**Domain Admins**] または [**Account Operators**] のメンバーシップ、あるいは msDS-GroupManagedServiceAccount オブジェクトを書き込む権利が最低限必要です。
+これらの手順を完了するには、[ **Domain Admins** ] または [ **Account Operators** ] のメンバーシップ、あるいは msDS-GroupManagedServiceAccount オブジェクトを書き込む権利が最低限必要です。
 
 Windows PowerShell 用の Active Directory モジュールを開き、Set-ADServiceAccount コマンドレットを使用してプロパティを設定します。
 
 これらのプロパティの設定方法の詳細については、TechNet ライブラリの「 [Set-ADServiceAccount](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617252(v=technet.10)) 」を参照してください。または、Windows PowerShell の Active Directory モジュールのコマンド プロンプトに「 **Get-Help Set-ADServiceAccount** 」と入力し、ENTER キーを押してください。
 
 ## <a name="decommissioning-member-hosts-from-an-existing-server-farm"></a><a name="BKMK_DecommMemberHosts"></a>既存のサーバー ファームからのメンバー ホストの使用停止
-これらの手順を完了するには、[**Domain Admins**] のメンバーシップか、またはセキュリティ グループ オブジェクトからメンバーを削除する権利が最低限必要です。
+これらの手順を完了するには、[ **Domain Admins** ] のメンバーシップか、またはセキュリティ グループ オブジェクトからメンバーを削除する権利が最低限必要です。
 
 ### <a name="step-1-remove-member-host-from-gmsa"></a>手順 1:gMSA からメンバー ホストを削除する
 メンバーホストの管理にセキュリティグループを使用する場合は、次のいずれかの方法を使用して、gMSA のメンバーホストがメンバーとなっているセキュリティグループから使用停止されたメンバーホストのコンピューターアカウントを削除します。
@@ -293,7 +293,7 @@ Windows PowerShell 用の Active Directory モジュールを開き、Set-ADServ
 
 コンピューター アカウントを一覧する場合は、既存のコンピューター アカウントを検索し、削除されたものを除くすべてのコンピューター アカウントを追加します。
 
-この手順を完了するには、[**Domain Admins**] または [**Account Operators**] のメンバーシップ、あるいは msDS-GroupManagedServiceAccount オブジェクトを管理する権利が最低限必要です。 適切なアカウントおよびグループ メンバーシップの使用方法の詳細については、「ローカルおよびドメインの既定のグループ」を参照してください。
+この手順を完了するには、[ **Domain Admins** ] または [ **Account Operators** ] のメンバーシップ、あるいは msDS-GroupManagedServiceAccount オブジェクトを管理する権利が最低限必要です。 適切なアカウントおよびグループ メンバーシップの使用方法の詳細については、「ローカルおよびドメインの既定のグループ」を参照してください。
 
 ##### <a name="to-remove-member-hosts-using-the-set-adserviceaccount-cmdlet"></a>Set-ADServiceAccount コマンドレットを使用してメンバー ホストを削除するには
 
@@ -327,7 +327,7 @@ Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPass
 ### <a name="step-2-removing-a-group-managed-service-account-from-the-system"></a><a name="BKMK_RemoveGMSA"></a>手順 2:グループの管理されたサービス アカウントをシステムから削除する
 ホスト システム上で Uninstall-ADServiceAccount または NetRemoveServiceAccount API を使用して、キャッシュされた gMSA 資格情報をメンバー ホストから削除します。
 
-これらの手順を完了するには、[**Administrators**] のメンバーシップ、またはそれと同等のメンバーシップが最低限必要です。
+これらの手順を完了するには、[ **Administrators** ] のメンバーシップ、またはそれと同等のメンバーシップが最低限必要です。
 
 ##### <a name="to-remove-a-gmsa-using-the-uninstall-adserviceaccount-cmdlet"></a>Uninstall-ADServiceAccount コマンドレットを使用して gMSA を削除するには
 
@@ -345,7 +345,7 @@ Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPass
     Uninstall-ADServiceAccount ITFarm1
     ```
 
-Uninstall-ADServiceAccount コマンドレットの詳細については、Windows PowerShell の Active Directory モジュールのコマンド プロンプトで、「 **Get-Help Uninstall-ADServiceAccount**」と入力し、ENTER キーを押すか、または TechNet Web の「 [Uninstall-ADServiceAccount](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617202(v=technet.10))」に掲載された情報を参照してください。
+Uninstall-ADServiceAccount コマンドレットの詳細については、Windows PowerShell の Active Directory モジュールのコマンド プロンプトで、「 **Get-Help Uninstall-ADServiceAccount** 」と入力し、ENTER キーを押すか、または TechNet Web の「 [Uninstall-ADServiceAccount](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617202(v=technet.10))」に掲載された情報を参照してください。
 
 
 
