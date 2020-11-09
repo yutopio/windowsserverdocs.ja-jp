@@ -5,12 +5,12 @@ ms.date: 09/27/2018
 ms.topic: conceptual
 ms.author: damaerte
 author: maertendmsft
-ms.openlocfilehash: c7bdb2f31be8656ac6e136f7bbfaf5f69ba123ad
-ms.sourcegitcommit: 6931830a70c5849d8f884cdc7bd4f5afc1a00cce
+ms.openlocfilehash: bef4bc7a8ab5bcb2738a96edf797f42b23ba2894
+ms.sourcegitcommit: 8c0a419ae5483159548eb0bc159f4b774d4c3d85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955753"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235809"
 ---
 # <a name="openssh-key-management"></a>OpenSSH キーの管理
 
@@ -53,6 +53,9 @@ SSH サーバーでのキー認証を簡単に行うには、管理者特権の 
 
 # Install the OpenSSHUtils module to the server. This will be valuable when deploying user keys.
 Install-Module -Force OpenSSHUtils -Scope AllUsers
+
+# By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
 
 # Start the ssh-agent service to preserve the server keys
 Start-Service ssh-agent
@@ -135,7 +138,7 @@ ssh-add ~\.ssh\id_ed25519
 これらの手順を完了すると、このクライアントからの認証に秘密キーが必要になるたびに、ssh-agent によってローカルの秘密キーが自動的に取得されて、SSH クライアントに渡されます。
 
 > [!NOTE]
-> 秘密キーを ssh-agent に追加した "*後*"、セキュリティで保護された場所にバックアップしてから、ローカル システムから削除することを強くお勧めします。
+> 秘密キーを ssh-agent に追加した " *後* "、セキュリティで保護された場所にバックアップしてから、ローカル システムから削除することを強くお勧めします。
 > 秘密キーをエージェントから取得することはできません。
 > 秘密キーにアクセスできなくなった場合は、新しいキー ペアを作成し、操作するすべてのシステム上で公開キーを更新する必要があります。
 
