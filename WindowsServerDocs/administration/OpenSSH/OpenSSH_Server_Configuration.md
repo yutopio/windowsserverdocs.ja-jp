@@ -5,12 +5,12 @@ ms.date: 09/27/2018
 ms.topic: conceptual
 ms.author: damaerte
 author: maertendmsft
-ms.openlocfilehash: e24ba7d0cef92d700b9078422069c8c0461cf516
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 99947390b698da22d4ab2ba497ae02222b523eb7
+ms.sourcegitcommit: 8c0a419ae5483159548eb0bc159f4b774d4c3d85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078329"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235799"
 ---
 # <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Windows 10 1809 および Server 2019 用 OpenSSH Server 構成
 
@@ -108,7 +108,7 @@ Windows では適用されません。 管理者のログインを防ぐには�
 ### <a name="syslogfacility"></a>SyslogFacility
 
 ファイルベースのログ記録が必要な場合は、LOCAL0 を使用します。 ログは、%programdata%\ssh\logs に生成されます。
-既定値の AUTH を含むその他の値では、ETW にログが記録されます。 詳細については、Windows のログ機能を参照してください。
+既定値の AUTH を含むその他の値は、ETW にログが記録されます。 詳細については、[Windows のログ機能](https://github.com/PowerShell/Win32-OpenSSH/wiki/Logging-Facilities)に関する記事を参照してください。
 
 ### <a name="not-supported"></a>サポートされていません。
 
