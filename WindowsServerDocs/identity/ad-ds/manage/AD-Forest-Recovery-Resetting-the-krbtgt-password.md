@@ -6,12 +6,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 3bd6c1d0-d316-4b03-b7b4-557d4537635c
-ms.openlocfilehash: 1c42ab160f0d467cab10edeea1a5284614401b3c
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 62416758d373423246ccb030ea6baf325515fb49
+ms.sourcegitcommit: b39ea3b83280f00e5bb100df0dc8beaf1fb55be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070834"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520435"
 ---
 # <a name="ad-forest-recovery---resetting-the-krbtgt-password"></a>AD フォレストの回復-krbtgt パスワードのリセット
 
@@ -35,6 +35,9 @@ ms.locfileid: "93070834"
 
 > [!NOTE]
 > この操作は2回実行する必要があります。 Krbtgt アカウントのパスワードの履歴は2です。つまり、最新の2つのパスワードが含まれています。 パスワードを2回リセットすると、履歴から古いパスワードが実質的にクリアされるため、別の DC がこの DC で古いパスワードを使用してレプリケートする方法はありません。
+
+> [!NOTE]
+> キー配布センターサービスアカウントのパスワードを2回リセットすると、リセットの間に10時間の待機期間が必要になります。
 
 ## <a name="next-steps"></a>次の手順
 

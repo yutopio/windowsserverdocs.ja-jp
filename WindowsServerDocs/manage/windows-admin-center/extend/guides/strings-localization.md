@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 565e4da69466549538c380457269304c7f1cdd5a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a59e6e1d12844e809f5e4d9f85109c601dabfe26
+ms.sourcegitcommit: b39ea3b83280f00e5bb100df0dc8beaf1fb55be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87944922"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520495"
 ---
 # <a name="strings-and-localization-in-windows-admin-center"></a>Windows 管理センターでの文字列とローカライズ #
 
@@ -40,7 +40,7 @@ MsftSme.resourcesStrings<Strings>().HelloWorld.cim.title;
 
 他の言語にローカライズする場合は、各言語に対して文字列. resjson ファイルを作成する必要があります。 これらのファイルは、に配置する必要があり ```\loc\output\{!ExtensionName}\{!LanguageFolder}\strings.resjson``` ます。 対応するフォルダーで使用できる言語は次のとおりです。
 
-| Language      | フォルダー      |
+| Language      | Folder      |
 | ------------- |-------------|
 | Čeština | cs-CZ |
 | Deutsch | de-DE |
@@ -69,7 +69,7 @@ MsftSme.resourcesStrings<Strings>().HelloWorld.cim.title;
 ```json
 "HelloWorld_cim_title": "CIM Componente",
 ```
-ローカライズされた文字列を追加した場合は、gulp の生成を再度実行して、表示されるようにする必要があります。 次のコマンドを実行します。
+ローカライズされた文字列を追加した場合は、gulp の生成を再度実行して、表示されるようにする必要があります。 次を実行します。
 ``` cmd
 gulp generate
 ```

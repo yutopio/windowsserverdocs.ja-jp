@@ -6,20 +6,21 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: edffa7869aa1895a09e7007c375b8973f68e4eed
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: ebbbefebc420d83f8f74466698729c26395bdbec
+ms.sourcegitcommit: b39ea3b83280f00e5bb100df0dc8beaf1fb55be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069904"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520505"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012"></a>ドメイン コントローラーを Windows Server 2012 R2 または Windows Server 2012 にアップグレードする
 
->適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
+> 適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 
 このトピックでは、windows server 2012 R2 および Windows Server 2012 の Active Directory Domain Services に関する背景情報を提供し、Windows Server 2008 または Windows Server 2008 R2 からドメインコントローラーをアップグレードするプロセスについて説明します。
 
 ## <a name="domain-controller-upgrade-steps"></a><a name="BKMK_UpgradeWorkflow"></a>ドメイン コントローラーのアップグレード手順
+
 ドメインをアップグレードするのに推奨される方法は、新しいバージョンの Windows Server を実行するドメイン コントローラーを昇格させる一方で、必要に応じて古いドメイン コントローラーを降格させる方法です。 この方法は、既存のドメイン コントローラーのオペレーティング システムをアップグレードする方法としてお勧めします。 この一覧では、新しいバージョンの Windows Server を実行するドメインコントローラーを昇格する前に実行する一般的な手順について説明します。
 
 1. 対象サーバーが [システム要件](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303418(v=ws.11))を満たしていることを確認します。
@@ -126,7 +127,7 @@ Windows Update は Windows 8 および Windows Server 2012 の自動メンテナ
 |**WSUS 管理**<p>-異なる時間/日にインストールをずらす|一緒に更新する必要のあるさまざまなコンピューター グループのターゲット グループを設定する<p>前のシナリオに対して上記の手順を使用する<p>さまざまなターゲット グループに対して異なる期限を設定する|
 |**WSUS で管理されていない-期限のサポートなし**<p>-異なるタイミングでインストールをずらす|**ポリシー** :自動更新を構成する (有効)<p>自動更新の構成: 4-自動ダウンロードし、インストールをスケジュールする<p>**レジストリ キー:** Microsoft サポート技術情報の記事 [2835627](https://support.microsoft.com/kb/2835627)<p>**ポリシー:** 自動メンテナンス ランダム遅延 (有効)<p>次の動作になるように、[ **定期メンテナンス ランダム遅延** ] を [PT6H] (6 時間のランダム遅延) に設定する。<p>-更新プログラムは、構成されたメンテナンス時間とランダムな遅延でインストールされます<p>-各マシンの再起動は、3日後に正確に実行されます。<p>または、コンピューターのグループごとに異なるメンテナンス時刻を設定する|
 
-Windows エンジニアリング チームがこれらの変更点を実装した理由の詳細については、 [Windows Update での自動更新後の再起動の最小化](https://blogs.msdn.com/b/b8/archive/2011/11/14/minimizing-restarts-after-automatic-updating-in-windows-update.aspx)に関する投稿を参照してください。
+Windows エンジニアリングチームがこれらの変更を実装した理由の詳細については、「 [コンピューターの再起動を求めるメッセージが表示される可能性を低くする方法](https://docs.microsoft.com/troubleshoot/windows-server/deployment/why-prompted-restart-computer#how-to-reduce-your-chances-of-being-prompted-to-restart-your-computer)」を参照してください。
 
 ## <a name="ad-ds-server-role-installation-changes"></a><a name="BKMK_InstallationChanges"></a>AD DS サーバー役割のインストールの変更
 
@@ -148,15 +149,15 @@ AD DS に関連する変更がいくつかあります。
 - **Dcpromo.exe の廃止**
    - Dcpromo は非推奨とされます。ただし、Windows Server 2012 では、応答ファイルまたはコマンドラインパラメーターを使用して引き続き実行できます。これにより、組織は既存の自動化を新しい Windows PowerShell インストールオプションに移行する時間を確保できます。
 - **ユーザー アカウントに対する LMHash の無効化**
-  - Windows Server 2008、Windows Server 2008 R2、および Windows Server 2012 のセキュリティ テンプレートに用意されているセキュリティの既定値では、Windows 2000 および Windows Server 2003 ドメイン コントローラーのセキュリティ テンプレートで無効になっている NoLMHash ポリシーが有効になります。 LMHash に依存するクライアントについては、サポート技術情報の記事 [946405](https://support.microsoft.com/kb/946405)に記載されている手順に従い、必要に応じて NoLMHash ポリシーを無効にしてください。
+  - Windows Server 2008、Windows Server 2008 R2、および Windows Server 2012 のセキュリティ テンプレートに用意されているセキュリティの既定値では、Windows 2000 および Windows Server 2003 ドメイン コントローラーのセキュリティ テンプレートで無効になっている NoLMHash ポリシーが有効になります。 必要に応じて、Lm ハッシュに依存するクライアントの NoLMHash ポリシーを無効にします。ページで説明されている手順に従って、 [Windows が LAN manager のパスワードのハッシュを Active Directory およびローカルの SAM データベースに格納しないように](https://docs.microsoft.com/troubleshoot/windows-server/windows-security/prevent-windows-store-lm-hash-password)します。
 
 Windows Server 2008 以降のドメインコントローラーでは、Windows Server 2003 または Windows 2000 を実行するドメインコントローラーと比較して、次のセキュリティで保護された既定の設定も使用できます。
 
-| 暗号化の種類またはポリシー | Windows Server 2008 の既定値 | Windows Server 2012 および Windows Server 2008 R2 の既定値 | コメント |
+| 暗号化の種類またはポリシー | Windows Server 2008 の既定値 | Windows Server 2012 および Windows Server 2008 R2 の既定値 | 解説 |
 |--|--|--|--|
 | AllowNT4Crypto | 無効 | 無効 | サード パーティ製のサーバー メッセージ ブロック (SMB) クライアントは、ドメイン コントローラー上の既定のセキュリティ設定と互換性がない場合があります。 どのような場合でも、これらの設定を緩和して相互運用を可能にすることもできますが、その際はセキュリティが低下します。 詳細については、Microsoft サポート技術情報の [記事 942564](https://go.microsoft.com/fwlink/?LinkId=164558) () を参照してください https://go.microsoft.com/fwlink/?LinkId=164558) 。 |
 | DES | Enabled | 無効 | Microsoft サポート技術情報の[記事 977321](https://go.microsoft.com/fwlink/?LinkId=177717) (https://go.microsoft.com/fwlink/?LinkId=177717) |
-| 統合認証のための CBT/拡張保護 | N/A | Enabled | Microsoft [セキュリティアドバイザリ (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) ( https://go.microsoft.com/fwlink/?LinkId=164559) および Microsoft サポート技術情報の [記事 976918](https://go.microsoft.com/fwlink/?LinkId=178251) () を参照してください https://go.microsoft.com/fwlink/?LinkId=178251) 。<p>必要に応じて、Microsoft サポート技術情報の [記事 977073](https://go.microsoft.com/fwlink/?LinkId=186394) の修正プログラムを確認してインストールし https://go.microsoft.com/fwlink/?LinkId=186394) ます。 |
+| 統合認証のための CBT/拡張保護 | 該当なし | Enabled | Microsoft [セキュリティアドバイザリ (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) ( https://go.microsoft.com/fwlink/?LinkId=164559) および Microsoft サポート技術情報の [記事 976918](https://go.microsoft.com/fwlink/?LinkId=178251) () を参照してください https://go.microsoft.com/fwlink/?LinkId=178251) 。<p>必要に応じて、Microsoft サポート技術情報の [記事 977073](https://go.microsoft.com/fwlink/?LinkId=186394) の修正プログラムを確認してインストールし https://go.microsoft.com/fwlink/?LinkId=186394) ます。 |
 | LMv2 | Enabled | 無効 | Microsoft サポート技術情報の[記事 976918](https://go.microsoft.com/fwlink/?LinkId=178251) (https://go.microsoft.com/fwlink/?LinkId=178251) |
 
 ## <a name="operating-system-requirements"></a><a name="BKMK_SysReqs"></a>オペレーティング システムの要件
@@ -164,7 +165,7 @@ Windows Server 2008 以降のドメインコントローラーでは、Windows S
 次の表に、Windows Server 2012 の最小システム要件を示します。 システム要件とプレインストール情報の詳細については、「 [Windows Server 2012 のインストール](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11))」を参照してください。 新しい Active Directory フォレストをインストールするための追加システム要件はありませんが、ドメイン コントローラー、LDAP クライアント要求、および Active Directory 対応アプリケーションのパフォーマンスを向上させるには、Active Directory データベースの内容をキャッシュするための十分なメモリを追加する必要があります。 既存のドメイン コントローラーをアップグレードするか、新しいドメイン コントローラーを既存のフォレストに追加する場合は、次のセクションを参照して、サーバーがディスク領域の要件を満たしていることを確認してください。
 
 | 要件 | 値 |
-|--|--|
+| ---------- | ----- |
 | プロセッサ | 1.4 Ghz 64 ビット プロセッサ |
 | RAM | 512 MB |
 | 空きディスク領域の要件 | 32 GB |
@@ -200,10 +201,10 @@ Windows Server 2008 または Windows Server 2008 R2 の64ビットバージョ�
 
 | 使用しているエディション | アップグレード先のエディション |
 |--|--|
-| Windows Server 2008 Standard SP2<p>OR<p>Windows Server 2008 Enterprise SP2 | Windows Server 2012 Standard<p>OR<p>Windows Server 2012 Datacenter |
+| Windows Server 2008 Standard SP2<p>または<p>Windows Server 2008 Enterprise SP2 | Windows Server 2012 Standard<p>または<p>Windows Server 2012 Datacenter |
 | Windows Server 2008 Datacenter SP2 | Windows Server 2012 Datacenter |
 | Windows Web Server 2008 | Windows Server 2012 Standard |
-| Windows Server 2008 R2 Standard SP1<p>OR<p>Windows Server 2008 R2 Enterprise SP1 | Windows Server 2012 Standard<p>OR<p>Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 Standard SP1<p>または<p>Windows Server 2008 R2 Enterprise SP1 | Windows Server 2012 Standard<p>または<p>Windows Server 2012 Datacenter |
 | Windows Server 2008 R2 Datacenter SP1 | Windows Server 2012 Datacenter |
 | Windows Web Server 2008 R2 | Windows Server 2012 Standard |
 
@@ -295,7 +296,7 @@ Windows [8 のリモートサーバー管理ツール](https://www.microsoft.com
 
 ## <a name="known-issues"></a><a name="BKMK_KnownIssues"></a>既知の問題
 
-AD DS のインストールに関する既知の問題を次の表に示します。
+次の表に、AD DS のインストールに関連する既知の問題を示します。
 
 | サポート技術情報の記事番号とタイトル | 影響を受けるテクノロジ エリア | 問題点/説明 |
 |--|--|--|
