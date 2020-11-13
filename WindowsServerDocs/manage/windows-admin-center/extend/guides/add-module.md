@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: e7875f8aa2320d7292b314cb18f3e17894e76fa0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 06331c23730cfdbf1752961f7867b0bebf45cacb
+ms.sourcegitcommit: 01b3140f79f5614ce566e8036474feefafbeddc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945045"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94581416"
 ---
 # <a name="add-a-module-to-a-tool-extension"></a>ツール拡張機能にモジュールを追加する
 
@@ -21,7 +21,7 @@ ms.locfileid: "87945045"
 
 ## <a name="prepare-your-environment"></a>環境を準備する
 
-まだ行っていない場合は、「[ツール](../develop-tool.md)(または[ソリューション](../develop-solution.md)) の拡張機能の開発」の指示に従って、環境を準備し、新しい空のツール拡張を作成します。
+まだ行っていない場合は、「 [ツール](../develop-tool.md) (または [ソリューション](../develop-solution.md)) の拡張機能の開発」の指示に従って、環境を準備し、新しい空のツール拡張を作成します。
 
 ## <a name="use-the-angular-cli-to-create-a-module-and-component"></a>角 CLI を使用してモジュール (およびコンポーネント) を作成する
 
@@ -31,10 +31,10 @@ Angular を初めて使用する場合は、Angular.Io Web サイトのドキュ
 * Angular CLI での新しいコンポーネントの生成の詳細については、https://github.com/angular/angular-cli/wiki/generate-component を参照してください。
 
 
-コマンドプロンプトを開き、プロジェクトのディレクトリを-src\ app に変更してから、次のコマンドを実行します ```{!ModuleName}``` 。をモジュール名 (スペースが削除されたもの) に置き換えます。
+コマンドプロンプトを開き、プロジェクトのディレクトリを .\src\app に変更し、次のコマンドを実行します ```{!ModuleName}``` 。をモジュール名に置き換えます (スペースは削除します)。
 
 ```
-cd \src\app
+cd .\src\app
 ng generate module {!ModuleName}
 ng generate component {!ModuleName}
 ```
@@ -45,7 +45,7 @@ ng generate component {!ModuleName}
 
 使用例:
 ```
-cd \src\app
+cd .\src\app
 ng generate module ManageFooWorksPortal
 ng generate component ManageFooWorksPortal
 ```
@@ -155,7 +155,7 @@ public ngOnInit() {
 ```
 ### <a name="update-app-routingmodulets"></a>App-v を更新します。
 
-ファイル ```app-routing.module.ts``` を開き、作成した新しいモジュールが読み込まれるように、既定のパスを変更します。  のエントリを検索 ```path: ''``` し、を更新して、既定のモジュールで ```loadChildren``` はなくモジュールを読み込みます。
+ファイル ```app-routing.module.ts``` を開き、作成した新しいモジュールが読み込まれるように、既定のパスを変更します。  のエントリを検索 ```path: ''``` し、を更新して、既定のモジュールで  ```loadChildren``` はなくモジュールを読み込みます。
 
 | 値 | 説明 | 例 |
 | ----- | ----------- | ------- |
@@ -179,4 +179,4 @@ public ngOnInit() {
 
 ## <a name="build-and-side-load-your-extension"></a>拡張機能をビルドしてサイドロードする
 
-これで、拡張機能にモジュールを追加しました。  次に、Windows 管理センターで拡張機能を[ビルドしてサイドロード](../develop-tool.md#build-and-side-load-your-extension)し、結果を確認することができます。
+これで、拡張機能にモジュールを追加しました。  次に、Windows 管理センターで拡張機能を [ビルドしてサイドロード](../develop-tool.md#build-and-side-load-your-extension) し、結果を確認することができます。

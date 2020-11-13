@@ -4,14 +4,14 @@ description: 記憶域移行サービスの既知の問題とトラブルシュ�
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 10/23/2020
+ms.date: 11/12/2020
 ms.topic: article
-ms.openlocfilehash: 25d0c6666e0706b1c772957d9328db43ecfc5b18
-ms.sourcegitcommit: 1b214ca5030c77900f095d77c73cedc6381eb0e4
+ms.openlocfilehash: 41cfbc5b5a8f91e97af330243015ecc1fcf749f6
+ms.sourcegitcommit: 6a245fefdf958bfc0aeb69f7a887d11a07bdcd23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639045"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570327"
 ---
 # <a name="storage-migration-service-known-issues"></a>記憶域移行サービスの既知の問題
 
@@ -612,7 +612,7 @@ GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\com
 
 ## <a name="inventory-fails-with-element-not-found"></a>"要素が見つかりません" でインベントリが失敗する
 
-次のシナリオを想定してください。
+以下のシナリオについて考えてみます。
 
 DNS ホスト名を持つソースサーバーと、15文字以上の unicode 文字 ("iamalt longcomputername" など) を Active Directory 名がある。 仕様により、Windows では、従来の NetBIOS 名をこの長さに設定することはできませんでした。サーバーにという名前が付けられ、NetBIOS 名が 15 unicode ワイド文字 (例: "iamaverylongcom") に切り捨てられると、警告が表示されました。 このコンピューターのインベントリを実行しようとすると、Windows 管理センターとイベントログに次のメッセージが表示されます。
 
@@ -653,6 +653,18 @@ Remote exception : a parameter cannot be found that matches parameter name 'Incl
 
 解決するには、Windows 管理センターで、Storage Migration Service 拡張機能を少なくともバージョン1.113.0 に更新します。 更新プログラムがフィードに自動的に表示され、インストールを求めるメッセージが表示されます。
 
+## <a name="storage-migration-service-transfer-validation-returns-error-hresult-e_fail-has-been-returned-from-a-call-to-a-com-component"></a>ストレージ移行サービスの転送検証で、COM コンポーネントへの呼び出しから ' エラー HRESULT E_FAIL が返されました。 '
+
+Windows Server 2019 の累積的な更新プログラム [KB4586793](https://support.microsoft.com/office/november-10-2020%E2%80%94kb4586793-os-build-17763-1577-e6a24f90-5659-8b80-5a50-8752de3d90b7)をインストールした後、一部の転送検証が次のように失敗する場合があります。
+
+```
+Error HRESULT E_FAIL has been returned from a call to a COM component
+```
+
+すべてのソースコンピューターで必ずしも発生するわけではありません。 この問題を診断するために取り組んでいます。 回避策として、近日中に Windows 管理センターで記憶域移行サービスツールの更新プログラムを探します。 更新プログラムが自動的に Windows 管理センターフィードに表示され、インストールを確認するメッセージが表示されます。このエラーを無視して続行することができます。
+
+> [!IMPORTANT]
+> [KB4586793](https://support.microsoft.com/office/november-10-2020%E2%80%94kb4586793-os-build-17763-1577-e6a24f90-5659-8b80-5a50-8752de3d90b7)はアンインストールしないでください。 この更新プログラムは、Storage Migration Service データベースをアップグレードし、更新プログラムを削除するには、データベースを削除する必要があります。
 
 ## <a name="see-also"></a>関連項目
 

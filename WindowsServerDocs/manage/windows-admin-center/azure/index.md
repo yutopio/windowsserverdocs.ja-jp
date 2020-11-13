@@ -6,12 +6,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/31/2019
-ms.openlocfilehash: 04776c46d321a7a5aef19edd2866637c26d79125
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: eb53a01d4b82bd800b6cc87d2f5d3c36bfa7ff85
+ms.sourcegitcommit: 01b3140f79f5614ce566e8036474feefafbeddc3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766325"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94581436"
 ---
 # <a name="connecting-windows-server-to-azure-hybrid-services"></a>Azure ハイブリッド サービスへの Windows Server の接続
 
@@ -47,7 +47,7 @@ Azure ハイブリッド サービス ツールから、次の操作を実行で
 - [サーバー向け Azure Arc](/azure/azure-arc/servers/overview) を使用して Azure Policy を通じてオンプレミスのサーバーにガバナンス ポリシーを適用する
 - [Azure Security Center](/azure/security-center/windows-admin-center-integration) を使用して、サーバーをセキュリティで保護し、高度な脅威防止を利用する
 - [Azure ネットワーク アダプター](https://aka.ms/WACNetworkAdapter)を使用してオンプレミス サーバーを Azure Virtual Network に接続する
-- [Azure の拡張されたネットワーク](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)を使用して、Azure VM をお使いのオンプレミス ネットワークのようにする
+- [Azure の拡張されたネットワーク](https://docs.microsoft.com/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)を使用して、Azure VM をお使いのオンプレミス ネットワークのようにする
 
 ## <a name="back-up-and-protect-your-on-premises-servers-and-vms"></a>オンプレミスのサーバーと VM のバックアップと保護
 
@@ -81,7 +81,7 @@ Azure ハイブリッド サービス ツールから、次の操作を実行で
 
 - **[Azure ネットワーク アダプター](https://aka.ms/WACNetworkAdapter)を使用してオンプレミスのサーバーを Azure 仮想ネットワークに接続する** Windows Admin Center を使用すると、オンプレミスのサーバーから Azure 仮想ネットワークへのポイント対サイト VPN のセットアップが簡単になります。
 
-- **[Azure の拡張されたネットワーク](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)を使用して、Azure VM をお使いのオンプレミス ネットワークのようにする** Windows Admin Center では、サイト間 VPN を設定し、オンプレミスの IP アドレスを Azure vNet に拡張して、IP アドレスの依存関係を損なうことなく、ワークロードを Azure により簡単に移行できます。
+- **[Azure の拡張されたネットワーク](https://docs.microsoft.com/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)を使用して、Azure VM をお使いのオンプレミス ネットワークのようにする** Windows Admin Center では、サイト間 VPN を設定し、オンプレミスの IP アドレスを Azure vNet に拡張して、IP アドレスの依存関係を損なうことなく、ワークロードを Azure により簡単に移行できます。
 
 ## <a name="centrally-manage-your-hybrid-environment-from-azure"></a>Azure からのハイブリッド環境の一元的管理
 
@@ -115,7 +115,7 @@ Azure ハイブリッド サービスは、次の構成で Windows サーバー�
 - [サーバー向け Azure Arc](/azure/azure-arc/servers/overview) を使用して Azure Policy を通じてオンプレミスのサーバーにガバナンス ポリシーを適用する
 - [Azure Security Center](/azure/security-center/windows-admin-center-integration) を使用して、サーバーをセキュリティで保護し、高度な脅威防止を利用する
 - [Azure ネットワーク アダプター](https://aka.ms/WACNetworkAdapter)を使用してオンプレミス サーバーを Azure Virtual Network に接続する
-- [Azure の拡張されたネットワーク](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)を使用して、Azure VM をお使いのオンプレミス ネットワークのようにする
+- [Azure の拡張されたネットワーク](https://docs.microsoft.com/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)を使用して、Azure VM をお使いのオンプレミス ネットワークのようにする
 
 ### <a name="services-for-clusters"></a>クラスターのためのサービス
 
