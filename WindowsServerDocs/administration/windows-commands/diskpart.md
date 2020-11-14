@@ -1,15 +1,16 @@
 ---
 title: diskpart
 description: Diskpart コマンドインタープリターのリファレンス記事。コンピューターのドライブを管理するのに役立ちます。
+ms.topic: reference
 author: jasongerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 627f9254606b1ed70b198f6dd0096ccbff424c45
-ms.sourcegitcommit: 53d526bfeddb89d28af44210a23ba417f6ce0ecf
+ms.openlocfilehash: 1d2f4cc814dad4313e7eb0925b60f44ec0348a30
+ms.sourcegitcommit: de207e887575757f3389ccf940c2e0ad2dc70bd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87890925"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94617202"
 ---
 # <a name="diskpart"></a>diskpart
 
@@ -17,21 +18,21 @@ ms.locfileid: "87890925"
 
 Diskpart コマンドインタープリターを使用すると、コンピューターのドライブ (ディスク、パーティション、ボリューム、または仮想ハードディスク) を管理できます。
 
-**Diskpart**コマンドを使用するには、まず、オブジェクトを一覧表示してから、フォーカスを与えるオブジェクトを選択する必要があります。 オブジェクトにフォーカスがあると、入力した diskpart コマンドがそのオブジェクトに対して動作します。
+**Diskpart** コマンドを使用するには、まず、オブジェクトを一覧表示してから、フォーカスを与えるオブジェクトを選択する必要があります。 オブジェクトにフォーカスがあると、入力した diskpart コマンドがそのオブジェクトに対して動作します。
 
 ## <a name="list-available-objects"></a>使用可能なオブジェクトの一覧表示
 
 次のように使用して、使用可能なオブジェクトの一覧を表示し、オブジェクトの番号またはドライブ文字を特定することができます。
 
-- `list disk`-コンピューター上のすべてのディスクを表示します。
+- `list disk` -コンピューター上のすべてのディスクを表示します。
 
-- `list volume`-コンピューター上のすべてのボリュームを表示します。
+- `list volume` -コンピューター上のすべてのボリュームを表示します。
 
-- `list partition`-コンピューターにフォーカスがあるディスク上のパーティションを表示します。
+- `list partition` -コンピューターにフォーカスがあるディスク上のパーティションを表示します。
 
-- `list vdisk`-コンピューター上のすべての仮想ディスクを表示します。
+- `list vdisk` -コンピューター上のすべての仮想ディスクを表示します。
 
-**リスト**コマンドを実行すると、フォーカスがあるオブジェクトの横にアスタリスク (*) が表示されます。
+**リスト** コマンドを実行すると、フォーカスがあるオブジェクトの横にアスタリスク (*) が表示されます。
 
 ## <a name="determine-focus"></a>フォーカスの決定
 
@@ -50,13 +51,13 @@ diskpart <parameter>
 ```
 
 > [!IMPORTANT]
-> Diskpart を実行するには、ローカルの**Administrators**グループ、または同様のアクセス許可を持つグループに存在する必要があります。
+> Diskpart を実行するには、ローカルの **Administrators** グループ、または同様のアクセス許可を持つグループに存在する必要があります。
 
 ### <a name="parameters"></a>パラメーター
 
 Diskpart コマンドインタープリターから次のコマンドを実行できます。
 
-| command | 説明 |
+| コマンド | 説明 |
 | ------- | ----------- |
 | [active](active.md) | フォーカスがあるディスクのパーティションをアクティブとしてマークします。 |
 | [add](add.md) | フォーカスのあるシンプル ボリュームを、指定されたディスクにミラー化します。 |

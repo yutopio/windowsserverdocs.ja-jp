@@ -6,12 +6,12 @@ ms.author: nedpyle
 manager: tiaascs
 ms.date: 11/12/2020
 ms.topic: article
-ms.openlocfilehash: 41cfbc5b5a8f91e97af330243015ecc1fcf749f6
-ms.sourcegitcommit: 6a245fefdf958bfc0aeb69f7a887d11a07bdcd23
+ms.openlocfilehash: 84a531b1026215484619bc5bc9fbb3ce74899bea
+ms.sourcegitcommit: de207e887575757f3389ccf940c2e0ad2dc70bd3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570327"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94617192"
 ---
 # <a name="storage-migration-service-known-issues"></a>記憶域移行サービスの既知の問題
 
@@ -661,7 +661,11 @@ Windows Server 2019 の累積的な更新プログラム [KB4586793](https://sup
 Error HRESULT E_FAIL has been returned from a call to a COM component
 ```
 
-すべてのソースコンピューターで必ずしも発生するわけではありません。 この問題を診断するために取り組んでいます。 回避策として、近日中に Windows 管理センターで記憶域移行サービスツールの更新プログラムを探します。 更新プログラムが自動的に Windows 管理センターフィードに表示され、インストールを確認するメッセージが表示されます。このエラーを無視して続行することができます。
+すべてのソースコンピューターで必ずしも発生するわけではありません。 この問題を診断するために取り組んでいます。 回避策として、1.115 以降のストレージ移行サービスツールを Windows 管理センターにインストールします。 更新プログラムが自動的に Windows 管理センターフィードに表示され、インストールを確認するメッセージが表示され、このエラーを無視できます。 Workarond するには、次のようにします。
+
+1. 転送フェーズの [設定の調整] ステップに移動します。 
+2. [転送の検証を上書きする] を有効にする
+3. "Validate" を実行しないか、実行して E_FAIL エラーを無視して、転送を続行します。
 
 > [!IMPORTANT]
 > [KB4586793](https://support.microsoft.com/office/november-10-2020%E2%80%94kb4586793-os-build-17763-1577-e6a24f90-5659-8b80-5a50-8752de3d90b7)はアンインストールしないでください。 この更新プログラムは、Storage Migration Service データベースをアップグレードし、更新プログラムを削除するには、データベースを削除する必要があります。
