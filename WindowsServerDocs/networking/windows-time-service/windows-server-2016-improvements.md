@@ -5,12 +5,12 @@ author: dahavey
 ms.author: dahavey
 ms.date: 10/17/2018
 ms.topic: article
-ms.openlocfilehash: f7593b085dd07694bf7d51d2712501bea612e9af
-ms.sourcegitcommit: b5b040a47cf48c94852de9aad8b91475f891d2f7
+ms.openlocfilehash: a09022cf1ad2929dfdffa244b86c211970b53aae
+ms.sourcegitcommit: a7fb96c0b1d186baeb29349befbbd6bd3b955813
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563402"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94522525"
 ---
 # <a name="time-accuracy-improvements-for-windows-server-2016"></a>Windows Server 2016 の時間精度の向上
 
@@ -52,13 +52,13 @@ Windows 2016 では、Hyper-V TimeSync サービスが強化されました。 �
 | |ポーリング頻度|64 - 1024 秒|N/A|週 1 回|
 | |"クロック更新頻度"|1 秒間に 1 回|N/A|1 時間に 1 回|
 |**スタンドアロン クライアント**||||
-| |"タイム サーバー"|N/A|time.windows.com|time.windows.com|
-| |ポーリング頻度|N/A|1 日 1 回|週 1 回|
-| |"クロック更新頻度"|N/A|1 日 1 回|週 1 回|
+| |"*タイム サーバー*"|N/A|time.windows.com|time.windows.com|
+| |"*ポーリング頻度*"|N/A|1 日 1 回|週 1 回|
+| |"*クロック更新頻度*"|N/A|1 日 1 回|1 時間に 1 回|
 |**ドメイン コントローラー**||||
-| |"タイム サーバー"|PDC/GTIMESERV|N/A|PDC/GTIMESERV|
-| |ポーリング頻度|64 - 1024 秒|N/A|1024 - 32768 秒|
-| |"クロック更新頻度"|1 日 1 回|N/A|週 1 回|
+| |"*タイム サーバー*"|PDC/GTIMESERV|N/A|PDC/GTIMESERV|
+| |"*ポーリング頻度*"|64 - 1024 秒|N/A|1024 - 32768 秒|
+| |"*クロック更新頻度*"|1 秒間に 1 回|N/A|1 時間に 1 回|
 |**ドメイン メンバー サーバー**||||
 | |"タイム サーバー"|DC|N/A|DC|
 | |ポーリング頻度|64 - 1024 秒|N/A|1024 - 32768 秒|
@@ -361,7 +361,7 @@ Windows Server 2016 の Windows タイム サービスでは、監査用のロ�
 ### <a name="windows-traceability-example"></a>Windows の追跡可能性の例
 w32tm ログ ファイルから、2 つの情報を検証することができます。 1 つ目は、ログ ファイルが現在調整時刻であることを示す情報です。 これにより、その時刻が、問題の時点で Windows タイム サービスによって調整されていたことが証明されます。
 
- 151802 20:18:32.9821765s - ClockDispln Discipline:*SKEW*TIME* - PhCRR:223 CR:156250 UI:100 phcT:65 KPhO:14307 151802 20:18:33.9898460s - ClockDispln Discipline:*SKEW*TIME* - PhCRR:1 CR:156250 UI:100 phcT:64 KPhO:41 151802 20:18:44.1090410s - ClockDispln Discipline:*SKEW*TIME* - PhCRR:1 CR:156250 UI:100 phcT:65 KPhO:38
+ 151802 20:18:32.9821765s - ClockDispln Discipline:*SKEW* TIME* - PhCRR:223 CR:156250 UI:100 phcT:65 KPhO:14307 151802 20:18:33.9898460s - ClockDispln Discipline:*SKEW* TIME* - PhCRR:1 CR:156250 UI:100 phcT:64 KPhO:41 151802 20:18:44.1090410s - ClockDispln Discipline:*SKEW* TIME* - PhCRR:1 CR:156250 UI:100 phcT:65 KPhO:38
 
 重要な点は、メッセージに "ClockDispln Discipline" というプレフィックスが付いていることです。これは w32time がシステム クロックと対話していることを証明しています。
 

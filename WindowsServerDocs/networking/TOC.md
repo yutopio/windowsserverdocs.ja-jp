@@ -225,6 +225,13 @@
 ### [ホスト コンピューターまたは VM 上に新しい NIC チームを作成する](technologies/nic-teaming/create-a-New-NIC-Team-on-a-Host-computer-or-VM.md)
 ### [NIC チーミングのトラブルシューティング](technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
 
+## [Packet Monitor (Pktmon)](technologies/pktmon/pktmon.md)
+### [Pktmon コマンドの構文と書式設定](technologies/pktmon/pktmon-syntax.md)
+### [Windows Admin Center のパケット モニタリング拡張機能](technologies/pktmon/pktmon-wac-extension.md)
+### [Windows Admin Center の SDN データパス診断拡張機能](technologies/pktmon/pktmon-sdn-data-path-wac-extension.md)
+### [Microsoft Network Monitor (Netmon) のサポート](technologies/pktmon/pktmon-netmon-support.md)
+### [Wireshark (pcapng 形式) のサポート](technologies/pktmon/pktmon-pcapng-support.md)
+
 ## [サービス品質 (QoS) ポリシー](technologies/qos/qos-policy-top.md)
 ### [QoS ポリシーの概要](technologies/qos/qos-policy-get-started.md)
 #### [QoS ポリシーのしくみ](technologies/qos/qos-policy-works.md)

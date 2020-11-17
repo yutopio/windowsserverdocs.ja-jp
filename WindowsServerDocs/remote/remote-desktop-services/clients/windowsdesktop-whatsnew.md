@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/27/2020
+ms.date: 11/10/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f14d93176fd1bd7b97d90550701f79b55774297
-ms.sourcegitcommit: 40466c8af1fc60dfca733ea476f088549cedba65
+ms.openlocfilehash: b5ee2f76acad471533c615ef2e5c68e7f827dbf6
+ms.sourcegitcommit: 7420c7c2ef14154f27e5bb810e774783a594b8e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793609"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94497417"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows デスクトップ クライアントの新機能
 
@@ -25,7 +25,16 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 |ユーザー グループ |最新バージョン  |サポートされる最低バージョン |
 |-----------|----------------|--------------------------|
 |パブリック     |1.2.1446        |1.2.945                   |
-|Insider    |1.2.1446        |1.2.945                   |
+|Insider    |1.2.1520        |1.2.945                   |
+
+## <a name="updates-for-version-121520-insider"></a>バージョン 1.2.1520 の更新内容 (Insider)
+
+*公開日:2020 年 11 月 10 日*
+
+ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139233)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139144)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- 長いアプリ名が読みやすくなるように、リモート アプリのリスト ビューを作成しました。
+- クライアントの更新プログラムが入手可能になったときに表示されるアイコンを変更しました。
 
 ## <a name="updates-for-version-121446"></a>バージョン 1.2.1446 の更新内容
 
@@ -76,7 +85,7 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 
 *公開日:2020 年 6 月 23 日*
 
-- Windows Virtual Desktop の Azure Resource Manager 統合バージョンをサポートするために、 **サブスクライブ** オプションの自動検出ロジックを更新しました。 Windows Virtual Desktop リソースのみを使用しているお客様は、Windows Virtual Desktop (クラシック) への同意を提供する必要はなりました。
+- Windows Virtual Desktop の Azure Resource Manager 統合バージョンをサポートするために、**サブスクライブ** オプションの自動検出ロジックを更新しました。 Windows Virtual Desktop リソースのみを使用しているお客様は、Windows Virtual Desktop (クラシック) への同意を提供する必要はなりました。
 - スケール ファクターが最大 400% の高 DPI デバイスのサポートが強化されました。
 - 切断ダイアログが表示されない問題が修正されました。
 - コマンド バーのヒントが予想よりも長く表示される問題を修正しました。
@@ -88,7 +97,7 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 *公開日:2020 年 5 月 27 日*
 
 - サブスクライブするときに、メール アドレスを入力する代わりに、アカウントを選択できるようになりました。
-- 新しい **[Subscribe with URL]\(URL でサブスクライブ\)** オプションが追加されました。これを使用すると、リソースを自動的に検出できない場合に、サブスクライブするワークスペースの URL を指定したり、 [メール検出](../rds-email-discovery.md) (使用可能な場合) を利用したりすることができます。 これは、他のリモート デスクトップ クライアントでのサブスクリプション プロセスに似ています。 これを使用して、Windows Virtual Desktop ワークスペースに直接サブスクライブできます。
+- 新しい **[Subscribe with URL]\(URL でサブスクライブ\)** オプションが追加されました。これを使用すると、リソースを自動的に検出できない場合に、サブスクライブするワークスペースの URL を指定したり、[メール検出](../rds-email-discovery.md) (使用可能な場合) を利用したりすることができます。 これは、他のリモート デスクトップ クライアントでのサブスクリプション プロセスに似ています。 これを使用して、Windows Virtual Desktop ワークスペースに直接サブスクライブできます。
 - 新しい [URI スキーム](remote-desktop-uri.md) を使用してワークスペースをサブスクライブするためのサポートが追加されました。これは、電子メールでユーザーに送信したり、サポート Web サイトに追加したりすることができます。
 - デスクトップとアプリ セッションのクライアント、ネットワーク、およびサーバーの詳細を提供する新しい **接続情報** ダイアログが追加されました。 このダイアログには、全画面表示モードの場合は接続バーから、ウィンドウの場合は [システム] メニューからアクセスできます。
 - ウィンドウ モードで起動したデスクトップ セッションは、ウィンドウを最大化するときに、全画面表示ではなく常に最大化されるようになりました。 全画面表示にするには、システム メニューの **[全画面表示]** オプションを使用します。

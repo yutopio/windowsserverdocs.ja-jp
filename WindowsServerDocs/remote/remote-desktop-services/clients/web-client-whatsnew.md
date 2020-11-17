@@ -7,12 +7,12 @@ manager: lizross
 ms.author: helohr
 ms.date: 09/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: e2bf87c27e8e61fa4baba81f234381d342af1343
-ms.sourcegitcommit: ed2b98e06bf7f616432bf8b6ad96544a34d5ce5c
+ms.openlocfilehash: 8519d69c39cb86f10c66b3c28410a285ca06252d
+ms.sourcegitcommit: 14c9526b1c74821341d4b66de92adce9bee92f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91625474"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94558279"
 ---
 # <a name="whats-new-in-the-web-client"></a>Web クライアントの新機能
 
@@ -29,9 +29,9 @@ ms.locfileid: "91625474"
 
 - 最小化されたメニューをユーザーが移動できるようになりました。
 - 4K およびウルトラワイド モニターのサポートが強化され、大量のデータをコピーするとセッションがクラッシュする問題が修正されました。
-- リモート セッションで入力方式エディターを使用するサポートが強化されました。 Web クライアントで入力方式エディターを使用する方法の詳細については、「[Web クライアントを使用して Windows Virtual Desktop に接続する](/azure-docs/articles/virtual-desktop/connect-web.md)」をご覧ください。
+- リモート セッションで入力方式エディターを使用するサポートが強化されました。 Web クライアントで入力方式エディターを使用する方法の詳細については、「[Web クライアントを使用して Windows Virtual Desktop に接続する](/azure/virtual-desktop/connect-web.md)」をご覧ください。
 - **[すべてのリソース]** ページの UI が変更されました。
-- Web クライアントで*一般プロトコル エラー*が返される、いくつかの接続シーケンスのエラーが修正されました。
+- Web クライアントで *一般プロトコル エラー* が返される、いくつかの接続シーケンスのエラーが修正されました。
 - 特定のキー シーケンスが適切に処理されないというキーボード入力の問題が修正されました。
 - アクセシビリティが改善されました。
 
@@ -91,7 +91,7 @@ ms.locfileid: "91625474"
 ## <a name="updates-for-version-101"></a>バージョン 1.0.1 での更新
 *公開日:2018 年 10 月 29 日*
 
-- [バージョン情報] ページに、問題を診断するための**サポート情報をキャプチャする**オプションが追加されました。
+- [バージョン情報] ページに、問題を診断するための **サポート情報をキャプチャする** オプションが追加されました。
 - InPrivate モードがサポートされるようになりました。
 - 英語以外のキーボードのサポートが強化されました。
 - ツール ヒントで英語以外の文字が正しく表示されない問題が修正されました。
