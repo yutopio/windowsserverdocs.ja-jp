@@ -5,12 +5,12 @@ ms.topic: article
 author: RobHindman
 ms.author: robhind
 ms.date: 09/15/2016
-ms.openlocfilehash: 7fad43cb5f3de5c10ed815fa802b6168c15850d1
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1abaf439a25e5175aba7290c0600c0f5b56db0d4
+ms.sourcegitcommit: 6c53a7d37b4884212469c38dc97c192cd767e49b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990745"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94919384"
 ---
 # <a name="simplified-smb-multichannel-and-multi-nic-cluster-networks"></a>簡略化された SMB マルチチャネルと複数 NIC のクラスター ネットワーク
 
@@ -25,7 +25,7 @@ ms.locfileid: "87990745"
 - 既定では、各クラスターアクセスポイント (CAP) のネットワーク名 (NN) に1つの IP アドレスリソースが構成されます。
 - 同じサブネットに複数の Nic が存在する場合、クラスター検証で警告メッセージが発行されなくなりました。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 -   サーバーごとに複数の Nic。同じスイッチ/サブネットを使用します。
 
 ## <a name="how-to-take-advantage-of-multi-nic-clusters-networks-and-simplified-smb-multichannel"></a>マルチ NIC クラスターネットワークと簡略化された SMB マルチチャネルを活用する方法
@@ -39,13 +39,13 @@ ms.locfileid: "87990745"
 
 ### <a name="use-multiple-nics-across-clusters"></a>クラスター間で複数の Nic を使用する
 
-簡略化された SMB マルチチャネルの最大の利点は、複数の Nic がクラスター間で使用されている場合に、記憶域と記憶域の両方のワークロードクラスターで実現されます。 これにより、ワークロードクラスター (Hyper-v、SQL Server フェールオーバークラスターインスタンス、記憶域レプリカなど) で SMB マルチチャネルを使用できるようになり、ネットワークをより効率的に使用できるようになります。 スケールアウトファイルサーバークラスターを使用して Hyper-v または SQL Server フェールオーバークラスターインスタンスクラスターのワークロードデータを格納する、収束 (非集約) クラスター構成では、このネットワークは "北南部サブネット"/ネットワークと呼ばれることがよくあります。 多くのお客様は、RDMA 対応の NIC カードとスイッチに投資することで、このネットワークのスループットを最大化します。
+簡略化された SMB マルチチャネルの最大の利点は、複数の Nic がクラスター間で使用されている場合に、記憶域と記憶域の両方のワークロードクラスターで実現されます。 これにより、ワークロードクラスター (Hyper-v、SQL Server フェールオーバークラスターインスタンス、記憶域レプリカなど) で SMB マルチチャネルを使用できるようになり、ネットワークをより効率的に使用できるようになります。 スケールアウトファイルサーバークラスターを使用して Hyper-v または SQL Server フェールオーバークラスターインスタンスクラスターのワークロードデータを格納する、収束 (非集約) クラスター構成では、このネットワークは "North-South サブネット"/ネットワークと呼ばれることがよくあります。 多くのお客様は、RDMA 対応の NIC カードとスイッチに投資することで、このネットワークのスループットを最大化します。
 
-![北南部の SMB サブネットの図 ](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig2.png)
- **2: 最大のネットワークスループットを実現するには、スケールアウトファイルサーバークラスターと hyper-v または SQL Server フェールオーバークラスターインスタンスクラスターの両方で、複数の nic を使用します。これは、北南のサブネットを共有**します。
+![North-South SMB サブネットの図 ](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig2.png)
+ **2: 最大のネットワークスループットを実現するには、スケールアウトファイルサーバークラスターと、North-South サブネットを共有する hyper-v または SQL Server のフェールオーバークラスターインスタンスクラスターの両方で複数の nic を使用します。**
 
 ![SMB マルチチャネルを活用するために同じサブネット内の複数の Nic を使用する2つのクラスターのスクリーンショット ](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig3.png)
- **図 3: 2 つのクラスター (記憶域のスケールアウトファイルサーバー SQL Server、 <abbr title=" "> ワークロード用のフェールオーバークラスタリングインスタンス fci) は、 </abbr> 同じサブネット内の複数の NIC を使用して smb マルチチャネルを活用し、ネットワークスループットを向上**させます
+ **図 3: 2 つのクラスター (記憶域のスケールアウトファイルサーバー SQL Server、 <abbr title=" "> ワークロード用のフェールオーバークラスタリングインスタンス fci) は、 </abbr> 同じサブネット内の複数の NIC を使用して smb マルチチャネルを活用し、ネットワークスループットを向上** させます
 
 ## <a name="automatic-recognition-of-ipv6-link-local-private-networks"></a>IPv6 リンクローカルプライベートネットワークの自動認識
 複数の Nic を持つプライベート (クラスターのみ) ネットワークが検出されると、クラスターは各サブネットの各 NIC について、IPv6 リンクローカル (fe80) の IP アドレスを自動的に認識します。 これにより、管理者は IPv6 リンクローカル (fe80) の IP アドレスリソースを手動で構成する必要がなくなるため、管理者の時間を節約できます。
@@ -56,10 +56,10 @@ ms.locfileid: "87990745"
  **図 4: 自動 IPv6 リンクローカル (Fe80) アドレスリソースの構成**
 
 ## <a name="throughput-and-fault-tolerance"></a>スループットとフォールトトレランス
-Windows Server 2019 および Windows Server 2016 は自動的に NIC 機能を検出し、可能な限り最速の構成で各 NIC を使用しようとします。 チーミングされた Nic、RSS を使用した nic、および RDMA 機能を備えた nic のすべてを使用できます。 次の表は、これらのテクノロジを使用する場合のトレードオフの概要を示しています。 複数の RDMA 対応 Nic を使用する場合は、最大スループットが達成されます。 詳細については、「 [SMB Mutlichannel の基本](/archive/blogs/josebda/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0)」を参照してください。
+Windows Server 2019 および Windows Server 2016 は自動的に NIC 機能を検出し、可能な限り最速の構成で各 NIC を使用しようとします。 チーミングされた Nic、RSS を使用した nic、および RDMA 機能を備えた nic のすべてを使用できます。 次の表は、これらのテクノロジを使用する場合のトレードオフの概要を示しています。 複数の RDMA 対応 Nic を使用する場合は、最大スループットが達成されます。 詳細については、「 [SMB マルチチャネルの基本](/archive/blogs/josebda/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0)」を参照してください。
 
 ![さまざまな NIC 構成のスループットとフォールトトレランスの図 ](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig5.png)
- **5: さまざまな Nic のスループットとフォールトトレランス**
+ **5: さまざまな nic 構成のスループットとフォールトトレランス**
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 **マルチ NIC ネットワーク内のすべての Nic は、クラスターのハートビートに使用されますか。**
@@ -72,7 +72,7 @@ Windows Server 2019 および Windows Server 2016 は自動的に NIC 機能を�
 はい。既定では、すべてのクラスターおよび CSV トラフィックで、使用可能なマルチ NIC ネットワークが使用されます。 管理者は、フェールオーバークラスタリングの PowerShell コマンドレットまたはフェールオーバークラスターマネージャー UI を使用して、ネットワークの役割を変更できます。
 
 **SMB マルチチャネルの設定を表示するにはどうすればよいですか。**
-**SMBServerConfiguration**コマンドレットを使用して、EnableMultiChannel プロパティの値を探します。
+**SMBServerConfiguration** コマンドレットを使用して、 **EnableMultiChannel** プロパティの値を探します。
 
 **クラスター共通プロパティは、マルチ NIC ネットワークで PlumbAllCrossSubnetRoutes 尊重されていますか。**
 はい。
