@@ -67,7 +67,7 @@ Windows 8 および Windows Server 2012 以降では、管理者は、オフラ�
 
 常時オフライン モードでは、 **[低速リンク モードを構成する]** グループ ポリシーが構成されており、かつ **[待機時間]** のしきい値パラメーターが 1 ミリ秒に設定されていると、コンピューターはオンライン モードに切り替わりません。 既定では、変更はバックグラウンドで 120 分ごとに同期されますが、 **[Configure Background Sync]** グループ ポリシー設定を使えば同期を構成できます。
 
-詳細については、「 [Enable the Always Offline Mode to Provide Faster Access to Files](enable-always-offline.md)」を参照してください。
+詳細については、「[常時オフライン モードを有効にしてファイルへのアクセス時間を短縮する](enable-always-offline.md)」を参照してください。
 
 ## <a name="cost-aware-synchronization"></a>コスト意識型同期
 
