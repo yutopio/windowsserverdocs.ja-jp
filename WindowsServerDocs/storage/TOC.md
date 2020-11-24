@@ -109,6 +109,7 @@
 ## ストレージ移行サービス
 ### [概要](storage-migration-service/overview.md)
 ### [サーバーの移行](storage-migration-service/migrate-data.md)
+### [カットオーバーのしくみ](storage-migration-service/cutover.md)
 ### [よく寄せられる質問 (FAQ)](storage-migration-service/faq.md)
 ### [既知の問題](storage-migration-service/known-issues.md)
 
