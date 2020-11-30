@@ -6,12 +6,12 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 525db4b22e0408847e4a52659d06ecddf5b1df8f
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: aeb8161ec5250856cb932035cc1acc28a9e9baf6
+ms.sourcegitcommit: 6d720d4ddaf6362fad1ab04364563cfa6590e3af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078669"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96332092"
 ---
 # <a name="troubleshoot-storage-spaces-direct"></a>記憶域スペースダイレクトのトラブルシューティング
 
@@ -35,10 +35,10 @@ ms.locfileid: "90078669"
 
 |FriendlyName|ResiliencySettingName| OperationalStatus| HealthStatus| IsManualAttach|サイズ| PSComputerName|
 |------------|---------------------| -----------------| ------------| --------------|-----| --------------|
-|Disk4| ミラー| OK|  Healthy| ○|  10 TB|  ノード-01...|
-|Disk3         |ミラー                 |OK                          |Healthy       |○            |10 TB | ノード-01...|
-|Disk2         |ミラー                 |冗長性なし               |Unhealthy     |○            |10 TB | ノード-01...|
-|Disk1         |ミラー                 |{冗長性なし、InService}  |Unhealthy     |○            |10 TB | ノード-01...|
+|Disk4| ミラー| [OK]|  Healthy| True|  10 TB|  ノード-01...|
+|Disk3         |ミラー                 |[OK]                          |Healthy       |True            |10 TB | ノード-01...|
+|Disk2         |ミラー                 |冗長性なし               |異常     |True            |10 TB | ノード-01...|
+|Disk1         |ミラー                 |{冗長性なし、InService}  |異常     |True            |10 TB | ノード-01...|
 
 さらに、仮想ディスクをオンラインにしようとすると、次の情報がクラスターログ (DiskRecoveryAction) に記録されます。
 
@@ -68,8 +68,8 @@ ms.locfileid: "90078669"
    Start-ClusterResource -Name "VdiskName"
    ```
 4. 修復が自動的に開始されます。 修復が完了するまで待ちます。 中断状態になり、再び開始される可能性があります。 進行状況を監視するには:
-    - **Get StorageJob**を実行して、修復の状態を監視し、いつ完了したかを確認します。
-    - **VirtualDisk**を実行し、そのスペースが正常な HealthStatus を返していることを確認します。
+    - **Get StorageJob** を実行して、修復の状態を監視し、いつ完了したかを確認します。
+    - **VirtualDisk** を実行し、そのスペースが正常な HealthStatus を返していることを確認します。
 5. 修復が完了し、仮想ディスクが正常な状態になったら、仮想ディスクのパラメーターを再び変更します。
 
    ```powershell
@@ -92,16 +92,16 @@ ms.locfileid: "90078669"
 
 ## <a name="detached-status-in-a-cluster"></a>クラスターでのデタッチされた状態
 
-**VirtualDisk**コマンドレットを実行すると、1つまたは複数の記憶域スペースダイレクトの仮想ディスクの OperationalStatus が切断されます。 ただし **、HealthStatus コマンドレット** によって報告されるのは、すべての物理ディスクが正常な状態であることを示しています。
+**VirtualDisk** コマンドレットを実行すると、1つまたは複数の記憶域スペースダイレクトの仮想ディスクの OperationalStatus が切断されます。 ただし **、HealthStatus コマンドレット** によって報告されるのは、すべての物理ディスクが正常な状態であることを示しています。
 
-**VirtualDisk**コマンドレットからの出力の例を次に示します。
+**VirtualDisk** コマンドレットからの出力の例を次に示します。
 
 |FriendlyName|  ResiliencySettingName|  OperationalStatus|   HealthStatus|  IsManualAttach|  サイズ|   PSComputerName|
 |-|-|-|-|-|-|-|
-|Disk4|         ミラー|                 OK|                  Healthy|       ○|            10 TB|  ノード-01...|
-|Disk3|         ミラー|                 OK|                  Healthy|       ○|            10 TB|  ノード-01...|
-|Disk2|         ミラー|                 デタッチ|            Unknown|       ○|            10 TB|  ノード-01...|
-|Disk1|         ミラー|                 デタッチ|            Unknown|       ○|            10 TB|  ノード-01...|
+|Disk4|         ミラー|                 [OK]|                  Healthy|       True|            10 TB|  ノード-01...|
+|Disk3|         ミラー|                 [OK]|                  Healthy|       True|            10 TB|  ノード-01...|
+|Disk2|         ミラー|                 デタッチ|            不明|       True|            10 TB|  ノード-01...|
+|Disk1|         ミラー|                 デタッチ|            不明|       True|            10 TB|  ノード-01...|
 
 
 さらに、ノードに次のイベントが記録される場合があります。
@@ -168,8 +168,8 @@ Volume Name:
    Get-ScheduledTask -TaskName "Data Integrity Scan for Crash Recovery" | Start-ScheduledTask
    ```
    このタスクは、デタッチされたボリュームがオンラインになっているすべてのノードで開始する必要があります。 修復が自動的に開始されます。 修復が完了するまで待ちます。 中断状態になり、再び開始される可能性があります。 進行状況を監視するには:
-   - **Get StorageJob**を実行して、修復の状態を監視し、いつ完了したかを確認します。
-   - **VirtualDisk**を実行し、スペースが正常な HealthStatus を返していることを確認します。
+   - **Get StorageJob** を実行して、修復の状態を監視し、いつ完了したかを確認します。
+   - **VirtualDisk** を実行し、スペースが正常な HealthStatus を返していることを確認します。
      - "クラッシュ回復のデータ整合性スキャン" は、記憶域ジョブとして表示されないタスクであり、進行状況インジケーターはありません。 タスクが実行中であると表示されている場合は、実行されています。 完了すると、[完了] と表示されます。
 
        また、次のコマンドレットを使用すると、実行中のスケジュールタスクの状態を表示できます。
@@ -203,7 +203,7 @@ Volume Name:
 ## <a name="event-5120-with-status_io_timeout-c00000b5"></a>STATUS_IO_TIMEOUT c00000b5 のイベント5120
 
 > [!Important]
-> **Windows Server 2016 の場合:** 修正プログラムを適用している間にこのような現象が発生する可能性を減らすために、以下のストレージメンテナンスモードの手順を使用して、2018年5月[2018 8](https://support.microsoft.com/help/4103723)日から[10 月 2018 9](https://support.microsoft.com/help/KB4462917)日にリリースされた windows server 2016 の累積的な更新プログラムがノードにインストールされている場合に、 [windows server 2016 以降の累積的な更新プログラム](https://support.microsoft.com/help/4462928)
+> **Windows Server 2016 の場合:** 修正プログラムを適用している間にこのような現象が発生する可能性を減らすために、以下のストレージメンテナンスモードの手順を使用して、2018年5月 [2018 8](https://support.microsoft.com/help/4103723)日から [10 月 2018 9](https://support.microsoft.com/help/KB4462917)日にリリースされた windows server 2016 の累積的な更新プログラムがノードにインストールされている場合に、 [windows server 2016 以降の累積的な更新プログラム](https://support.microsoft.com/help/4462928)
 
 Windows Server 2016 上のノードを再起動した後、5120年5月8日から [2018 kb 4103723](https://support.microsoft.com/help/4103723) から [10 月9日の 2018 kb](https://support.microsoft.com/help/4462917) c00000b5 にリリースされた累積的な更新プログラムを使用して、イベント STATUS_IO_TIMEOUT を受け取る場合があります。
 
@@ -231,7 +231,7 @@ Description: Cluster node 'NODENAME'was removed from the active failover cluster
 
 ### <a name="shutdown-process-flow"></a>シャットダウンプロセスフロー:
 
-1. VirtualDisk コマンドレットを実行し、HealthStatus の値が健全であることを確認します。
+1. Get-VirtualDisk コマンドレットを実行し、HealthStatus の値が健全であることを確認します。
 2. 次のコマンドレットを実行して、ノードをドレインします。
 
    ```powershell
@@ -242,7 +242,7 @@ Description: Cluster node 'NODENAME'was removed from the active failover cluster
    ```powershell
    Get-StorageFaultDomain -type StorageScaleUnit | Where-Object {$_.FriendlyName -eq "<NodeName>"} | Enable-StorageMaintenanceMode
    ```
-4. **Get PhysicalDisk**コマンドレットを実行し、OperationalStatus 値がメンテナンスモードであることを確認します。
+4. **Get PhysicalDisk** コマンドレットを実行し、OperationalStatus 値がメンテナンスモードであることを確認します。
 5. コンピューターの **再** 起動コマンドレットを実行して、ノードを再起動します。
 6. ノードが再起動した後、次のコマンドレットを実行して、そのノードのディスクをストレージメンテナンスモードから削除します。
 
@@ -326,23 +326,23 @@ IO パフォーマンスの低下が見られる場合は、記憶域スペー�
     {d543f90c-798b-d2fe-7f0a-cb226c77eeed},10,false,false,1,20,{00000000-0000-0000-0000-000000000000},CacheDiskStateIneligibleDataPartition,0,0,0,false,false,NVMe    ,INTEL SSDPE7KX02,  PHLF7330004V2P0LGN,0170,{79b4d631-976f-4c94-a783-df950389fd38},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 2. SDDCDiagnosticInfo からの Get-PhysicalDisk.xml の使用
-    1. "$D = Export-clixml GetPhysicalDisk.XML" を使用して XML ファイルを開きます。
+    1. "$D = Import-Clixml GetPhysicalDisk.XML" を使用して XML ファイルを開きます。
     2. "Ipmo ストレージ" の実行
     3. "$d" を実行します。 使用法は自動選択であり、Journal ではなく、次のような出力が表示されることに注意してください。
 
    |FriendlyName|  SerialNumber| MediaType| CanPool| OperationalStatus| HealthStatus| 使用法| サイズ|
    |-----------|------------|---------| -------| -----------------| ------------| -----| ----|
-   |NVMe INTEL SSDPE7KX02| PHLF733000372P0LGN| SSD| ×|   OK|                Healthy|      1.82 TB を自動選択|
-   |NVMe INTEL SSDPE7KX02 |PHLF7504008J2P0LGN| SSD|  ×|    OK|                Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02| PHLF7504005F2P0LGN| SSD|  ×|  OK|                Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02 |PHLF7504002A2P0LGN| SSD| ×| OK|    Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02| PHLF7504004T2P0LGN |SSD| ×|OK|       Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02 |PHLF7504002E2P0LGN| SSD| ×| OK|      Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02 |PHLF7330002Z2P0LGN| SSD| ×| OK|      Healthy|自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02 |PHLF733000272P0LGN |SSD| ×| OK|  Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02 |PHLF7330001J2P0LGN |SSD| ×| OK| Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02| PHLF733000302P0LGN |SSD| ×| OK|Healthy| 自動選択| 1.82 TB|
-   |NVMe INTEL SSDPE7KX02| PHLF7330004D2P0LGN |SSD| ×| OK| Healthy| 自動選択 |1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF733000372P0LGN| SSD| False|   [OK]|                Healthy|      1.82 TB を自動選択|
+   |NVMe INTEL SSDPE7KX02 |PHLF7504008J2P0LGN| SSD|  False|    [OK]|                Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF7504005F2P0LGN| SSD|  False|  [OK]|                Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02 |PHLF7504002A2P0LGN| SSD| False| [OK]|    Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF7504004T2P0LGN |SSD| False|[OK]|       Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02 |PHLF7504002E2P0LGN| SSD| False| [OK]|      Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02 |PHLF7330002Z2P0LGN| SSD| False| [OK]|      Healthy|自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02 |PHLF733000272P0LGN |SSD| False| [OK]|  Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02 |PHLF7330001J2P0LGN |SSD| False| [OK]| Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF733000302P0LGN |SSD| False| [OK]|Healthy| 自動選択| 1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF7330004D2P0LGN |SSD| False| [OK]| Healthy| 自動選択 |1.82 TB|
 
 ## <a name="how-to-destroy-an-existing-cluster-so-you-can-use-the-same-disks-again"></a>同じディスクを再び使用できるように既存のクラスターを破棄する方法
 
@@ -353,9 +353,9 @@ IO パフォーマンスの低下が見られる場合は、記憶域スペー�
    Get-ClusterResource -Name "Cluster Pool 1" | Remove-ClusterResource
    ```
 
-これで、いずれかのノードで **Get-PhysicalDisk** を実行すると、プール内にあったすべてのディスクが表示されます。 たとえば、4つの SAS ディスクを搭載した4ノードクラスターを備えたラボでは、各ノードに 100 GB が表示されます。 この場合、記憶域スペースダイレクトを無効にすると、SBL (記憶域バスレイヤー) が削除されますが、フィルターは解除されます。この場合、 **Get PhysicalDisk**を実行すると、ローカル OS ディスクを除く4つのディスクを報告する必要があります。 代わりに、16を報告しました。 これは、クラスター内のすべてのノードで同じです。 **Get Disk**コマンドを実行すると、次のサンプル出力に示すように、ローカルに接続されているディスクの番号が0、1、2などになります。
+これで、いずれかのノードで **Get-PhysicalDisk** を実行すると、プール内にあったすべてのディスクが表示されます。 たとえば、4つの SAS ディスクを搭載した4ノードクラスターを備えたラボでは、各ノードに 100 GB が表示されます。 この場合、記憶域スペースダイレクトを無効にすると、SBL (記憶域バスレイヤー) が削除されますが、フィルターは解除されます。この場合、 **Get PhysicalDisk** を実行すると、ローカル OS ディスクを除く4つのディスクを報告する必要があります。 代わりに、16を報告しました。 これは、クラスター内のすべてのノードで同じです。 **Get Disk** コマンドを実行すると、次のサンプル出力に示すように、ローカルに接続されているディスクの番号が0、1、2などになります。
 
-|Number| フレンドリ名| シリアル番号|HealthStatus|OperationalStatus|総サイズ| パーティションの形式|
+|数値| フレンドリ名| シリアル番号|HealthStatus|OperationalStatus|総サイズ| パーティションの形式|
 |-|-|-|-|-|-|-|-|
 |0|Msft Virtu...  ||Healthy | オンライン|  127 GB| GPT|
 ||Msft Virtu... ||Healthy| オフライン| 100 GB| RAW|
@@ -375,15 +375,15 @@ IO パフォーマンスの低下が見られる場合は、記憶域スペー�
 ||Msft Virtu... ||Healthy| オフライン| 100 GB| RAW|
 ||Msft Virtu... ||Healthy| オフライン| 100 GB| RAW|
 
-## <a name="error-message-about-unsupported-media-type-when-you-create-an-storage-spaces-direct-cluster-using-enable-clusters2d"></a>Enable-clusters2d を使用して記憶域スペースダイレクトクラスターを作成するときの "サポートされていないメディアの種類" に関するエラーメッセージ
+## <a name="error-message-about-unsupported-media-type-when-you-create-an-storage-spaces-direct-cluster-using-enable-clusters2d"></a>を使用して記憶域スペースダイレクトクラスターを作成する場合の "サポートされていないメディアの種類" に関するエラーメッセージ Enable-ClusterS2D
 
-**Enable-clusters2d**コマンドレットを実行すると、次のようなエラーが表示されることがあります。
+**Enable-clusters2d** コマンドレットを実行すると、次のようなエラーが表示されることがあります。
 
 ![シナリオ6のエラーメッセージ](media/troubleshooting/scenario-error-message.png)
 
 この問題を解決するには、hba アダプターが HBA モードで構成されていることを確認します。 RAID モードで構成する必要がある HBA はありません。
 
-## <a name="enable-clusterstoragespacesdirect-hangs-at-waiting-until-sbl-disks-are-surfaced-or-at-27"></a>"SBL ディスクが表示されるまでの待機中" または27% で ClusterStorageSpacesDirect がハングする
+## <a name="enable-clusterstoragespacesdirect-hangs-at-waiting-until-sbl-disks-are-surfaced-or-at-27"></a>"SBL ディスクが表示されるまで待機しています" または27% で Enable-ClusterStorageSpacesDirect がハングする
 
 検証レポートには、次の情報が表示されます。
 
@@ -397,11 +397,11 @@ Intel SSD DC P4600 シリーズデバイスが、次の例のように、0100000
 
 |               uniqueid               | deviceid | MediaType | BusType |               serialnumber               |      サイズ      | canpool | フレンドリ | OperationalStatus |
 |--------------------------------------|----------|-----------|---------|------------------------------------------|----------------|---------|--------------|-------------------|
-|           5000CCA251D12E30           |    0     |    HDD    |   SAS   |                 7PKR197G                 | 10000831348736 |  ×  |     HGST     |  HUH721010AL4200  |
-| 0100000001000000E4D25C000014E214 |    4     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214。 | 1600321314816  |  ○   |    INTEL     |   SSDPE2KE016T7   |
-| 0100000001000000E4D25C000014E214 |    5     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214。 | 1600321314816  |  ○   |    INTEL     |   SSDPE2KE016T7   |
-| 0100000001000000E4D25C0000EEE214 |    6     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214。 | 1600321314816  |  ○   |    INTEL     |   SSDPE2KE016T7   |
-| 0100000001000000E4D25C0000EEE214 |    7     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214。 | 1600321314816  |  ○   |    INTEL     |   SSDPE2KE016T7   |
+|           5000CCA251D12E30           |    0     |    HDD    |   SAS   |                 7PKR197G                 | 10000831348736 |  False  |     HGST     |  HUH721010AL4200  |
+| 0100000001000000E4D25C000014E214 |    4     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214。 | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
+| 0100000001000000E4D25C000014E214 |    5     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214。 | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
+| 0100000001000000E4D25C0000EEE214 |    6     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214。 | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
+| 0100000001000000E4D25C0000EEE214 |    7     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214。 | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
 
 この問題を解決するには、Intel ドライブのファームウェアを最新バージョンに更新します。  2018年5月のファームウェアバージョン QDV101B1 は、この問題を解決することがわかっています。
 
@@ -415,17 +415,18 @@ Windows Server 2016 記憶域スペースダイレクトクラスターでは、
 "プールからの削除" は、 **remove-PhysicalDisk** が呼び出されて状態を維持するために正常性に格納され、削除操作が失敗した場合に回復を許可する場合に設定されます。 次のいずれかの方法を使用して、OperationalStatus を手動で健全に変更できます。
 
 - 物理ディスクをプールから削除してから、もう一度追加してください。
+- Import-Module Clear-PhysicalDiskHealthData.ps1
 - [Clear-PhysicalDiskHealthData.ps1 スクリプト](https://go.microsoft.com/fwlink/?linkid=2034205)を実行して目的をクリアします。 (としてダウンロードできます。TXT ファイル。 これをとして保存する必要があります。PS1 ファイルを実行する前に実行してください)。
 
 スクリプトの実行方法を示すいくつかの例を次に示します。
 
-- "健全" に設定する必要があるディスクを指定するには、[ **シリアル** 状態のパラメーターを使用します。 シリアル番号は、 **WMI MSFT_PhysicalDisk** または **-PhysicalDisk**から取得できます。 (以下のシリアル番号には0を使用しています)。
+- "健全" に設定する必要があるディスクを指定するには、[ **シリアル** 状態のパラメーターを使用します。 シリアル番号は、 **WMI MSFT_PhysicalDisk** または **-PhysicalDisk** から取得できます。 (以下のシリアル番号には0を使用しています)。
 
    ```powershell
    Clear-PhysicalDiskHealthData -Intent -Policy -SerialNumber 000000000000000 -Verbose -Force
     ```
 
-- **UniqueId**パラメーターを使用して、ディスクを指定します ( **WMI MSFT_PhysicalDisk**または**get-help**)。
+- **UniqueId** パラメーターを使用して、ディスクを指定します ( **WMI MSFT_PhysicalDisk** または **get-help**)。
 
    ```powershell
    Clear-PhysicalDiskHealthData -Intent -Policy -UniqueId 00000000000000000 -Verbose -Force
