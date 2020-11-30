@@ -7,15 +7,15 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 07/23/2019
-ms.openlocfilehash: 55d08b426ace5cf6cd0dfc0a0928536bfb751124
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 754211824208e582382cb9c6ad196483c6506708
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077819"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330380"
 ---
 # <a name="manage-a-server-core-server"></a>Server Core サーバーの管理
- 
+ 
 > 適用対象: Windows Server 2019、Windows Server 2016、および Windows Server (半期チャネル)
 
 Server Core サーバーは、次の方法で管理できます。
@@ -30,14 +30,14 @@ Server Core サーバーは、次の方法で管理できます。
 
 Server Core を使用する場合は、注意すべき重要な制限事項とヒントがいくつかあります。
 
-- すべてのコマンドプロンプトウィンドウを閉じて新しいコマンドプロンプトウィンドウを開く場合は、タスクマネージャーから実行できます。 CTRL キーを押しながら ** \+ \+ del**キーを押し、[ **タスクマネージャーの起動**] をクリックし、[詳細] をクリックして **> ファイル > 実行**] をクリックし、「 **cmd.exe**」と入力します。 (「 **Powershell.exe** 」と入力して、PowerShell コマンドウィンドウを開きます)。または、サインアウトしてからもう一度サインインすることもできます。
+- すべてのコマンドプロンプトウィンドウを閉じて新しいコマンドプロンプトウィンドウを開く場合は、タスクマネージャーから実行できます。 CTRL キーを押しながら **\+ \+ del** キーを押し、[ **タスクマネージャーの起動**] をクリックし、[詳細] をクリックして **> ファイル > 実行**] をクリックし、「 **cmd.exe**」と入力します。 (「 **Powershell.exe** 」と入力して、PowerShell コマンドウィンドウを開きます)。または、サインアウトしてからもう一度サインインすることもできます。
 - エクスプローラーを起動しようとするコマンドまたはツールは機能しません。 たとえば、start を実行 **します。** コマンドプロンプトからは機能しません。
 - Server Core では、HTML 表示や HTML ヘルプはサポートされていません。
 - Server Core は、Windows インストーラーファイルからツールとユーティリティをインストールできるように、quiet モードでの Windows インストーラーをサポートしています。 Server Core に Windows インストーラーパッケージをインストールする場合は、 **/qb** オプションを使用して基本的なユーザーインターフェイスを表示します。
 - タイムゾーンを変更するには、[ **Set-Date**] を実行します。
-- インターナショナル設定を変更するには、 **コントロール intl.cpl**を実行します。
-- **Control.exe** は、それ自体では実行されません。 **Timedate.cpl**または**Intl.cpl**のいずれかを使用して実行する必要があります。
-- **Winver.exe** は、Server Core では使用できません。 バージョン情報を取得するには、 **Systeminfo.exe**を使用します。
+- インターナショナル設定を変更するには、 **コントロール intl.cpl** を実行します。
+- **Control.exe** は、それ自体では実行されません。 **Timedate.cpl** または **Intl.cpl** のいずれかを使用して実行する必要があります。
+- **Winver.exe** は、Server Core では使用できません。 バージョン情報を取得するには、 **Systeminfo.exe** を使用します。
 
 ## <a name="managing-server-core-with-windows-admin-center"></a>Windows 管理センターを使用した Server Core の管理
 [Windows Admin Center](../../manage/windows-admin-center/overview.md) は、Azure やクラウドに依存せずに、Windows サーバーのオンプレミス管理を実現する、ブラウザー ベースの管理アプリです。 Windows Admin Center では、サーバー インフラストラクチャのあらゆる側面を完全に管理できます。特に、インターネットに接続されていないプライベート ネットワークでの管理に便利です。 Windows 管理センターは、windows 10、ゲートウェイサーバー、またはデスクトップエクスペリエンスを搭載した Windows Server のインストールにインストールし、管理する Server Core システムに接続できます。
@@ -46,7 +46,7 @@ Server Core を使用する場合は、注意すべき重要な制限事項と�
 
 サーバーマネージャーは、Windows Server の管理コンソールです。これを使用すると、サーバーに物理的にアクセスしたり、各サーバーへのリモートデスクトッププロトコル (RDP) 接続を有効にしたりすることなく、デスクトップからローカルとリモートの両方の Windows ベースのサーバーをプロビジョニングして管理することができます。 サーバーマネージャーは、リモートのマルチサーバー管理をサポートします。
 
-リモートサーバーで実行されているサーバーマネージャーでローカルサーバーを管理できるようにするには、Windows PowerShell コマンドレット **Configure-SMRemoting.exe-enable**を実行します。
+リモートサーバーで実行されているサーバーマネージャーでローカルサーバーを管理できるようにするには、Windows PowerShell コマンドレット **Configure-SMRemoting.exe-enable** を実行します。
 
 ## <a name="managing-with-microsoft-management-console"></a>Microsoft 管理コンソールを使用した管理
 
@@ -78,7 +78,7 @@ MMC スナップインを使用して、ドメインメンバーでは *ない* 
 すべての MMC スナップインが接続できるようにするには、次のコマンドを実行します。
 
 ```PowerShell
-Enable-NetFirewallRule -DisplayGroup "Remote Administration"
+Enable-NetFirewallRule -DisplayGroup "Windows Remote Management"
 ```
 
 特定の MMC スナップインだけが接続できるようにするには、次のように実行します。
@@ -105,7 +105,7 @@ Enable-NetFirewallRule -DisplayGroup "<rulegroup>"
 > さらに、スナップインの中には、次のように、Windows ファイアウォール経由で接続する前に追加の構成が必要なものがあります。
 >
 > - ディスクの管理 :最初に Server Core コンピューターで仮想ディスク サービス (VDS) を開始する必要があります。 また、MMC スナップインを実行しているコンピューターで、ディスク管理規則を正しく構成する必要もあります。
-> - IP セキュリティ モニター :最初にこのスナップインのリモート管理を有効にする必要があります。 これを行うには、コマンドプロンプトで「 **Cscript \windows\system32\scregedit.wsf/im 1** 」と入力します。
+> - IP セキュリティ モニター :最初にこのスナップインのリモート管理を有効にする必要があります。 これを行うには、コマンドプロンプトで「 **cscript c:\windows\system32\scregedit.wsf/im 1** 」と入力します。
 > - 信頼性とパフォーマンス :このスナップインは追加の構成を必要としませんが、このスナップインを使用して Server Core コンピューターを監視するときには、パフォーマンス データしか監視できません。 信頼性データは使用できません。
 
 ## <a name="managing-with-remote-desktop-services"></a>リモートデスクトップサービスを使用した管理
@@ -149,4 +149,4 @@ sc query type= driver
 sc delete <service_name>
 ```
 
-ここで *service_name* は、 **sc query type = driver**を実行したときに入手したサービスの名前です。
+ここで *service_name* は、 **sc query type = driver** を実行したときに入手したサービスの名前です。

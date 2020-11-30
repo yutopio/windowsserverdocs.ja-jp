@@ -6,12 +6,12 @@ manager: femila
 ms.date: 04/09/2018
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: cf8a12957621ce86492cc4216c56d9a159f1ee5c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 683a9ce88c9809dfecf5669b41758187504634b9
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940568"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330514"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>WID データベースを使用した、Windows Server 2016 での AD FS へのアップグレード
 
@@ -93,7 +93,7 @@ Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}
 
 ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)
 
-実行が完了したら`adprep/domainprep`
+実行が完了したら `adprep /domainprep`
 
 > [!NOTE]
 > 次の手順を実行する前に、[設定] から Windows Update を実行して、Windows Server が最新であることを確認します。 更新の必要がなくなるまで、このプロセスを続けます。
@@ -120,7 +120,7 @@ Invoke-AdfsFarmBehaviorLevelRaise
 
 ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)
 
-11. 同様に、PowerShell コマンドレットを使用して、 `Get-AdfsFarmInformation` 現在の FBL を表示できます。
+11. 同様に、PowerShell コマンドレットを使用して、  `Get-AdfsFarmInformation` 現在の FBL を表示できます。
 
 ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)
 
@@ -137,7 +137,7 @@ Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -Fed
 Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
 ```
 
-Get WebApplicationProxyConfiguration コマンドレットを実行して、WAP の構成を確認します。 ConnectedServersName には、前のコマンドからのサーバー実行が反映されます。
+Get-WebApplicationProxyConfiguration コマンドレットを実行して、WAP の構成を確認します。 ConnectedServersName には、前のコマンドからのサーバー実行が反映されます。
 
 ```PowerShell
 Get-WebApplicationProxyConfiguration

@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: 392065ac9fe9e32e84550e14cd9ef39349ac8d67
-ms.sourcegitcommit: 664ed9bb0bbac2c9c0727fc2416d8c437f2d5cbe
+ms.openlocfilehash: 43762e34e2987473954e3f9408ddd6e74b0de3cb
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89472022"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330364"
 ---
 # <a name="obtain-certificates-for-hgs"></a>HGS の証明書を取得する
 
@@ -81,13 +81,13 @@ Remove-Item -Path "Cert:\LocalMachine\CA\$($encCert.Thumbprint)"
 ## <a name="request-an-ssl-certificate"></a>SSL 証明書を要求する
 
 Hyper-v ホストと HGS の間で送信されるすべてのキーと機密情報はメッセージレベルで暗号化されます。つまり、この情報は、HGS または Hyper-v に知られているキーを使用して暗号化されるので、だれかがネットワークトラフィックをスニッフィングして Vm にキーを盗むことを防ぐことができます。
-ただし、コンプライアンス reqiurements がある場合、または Hyper-v と HGS 間のすべての通信を暗号化する場合は、トランスポートレベルですべてのデータを暗号化する SSL 証明書を使用して HGS を構成することができます。
+ただし、コンプライアンス要件がある場合、または Hyper-v と HGS 間のすべての通信を暗号化する場合は、トランスポートレベルですべてのデータを暗号化する SSL 証明書を使用して HGS を構成することができます。
 
 Hyper-v ホストと HGS ノードはどちらも、指定した SSL 証明書を信頼する必要があるため、エンタープライズ証明機関から SSL 証明書を要求することをお勧めします。 証明書を要求するときは、次のものを指定してください。
 
 SSL 証明書のプロパティ | 必須値
 -------------------------|---------------
-サブジェクト名             | Hgs クライアント (つまり、Guraded ホスト) が HGS サーバーへのアクセスに使用するアドレス。 これは通常、分散ネットワーク名または仮想コンピューターオブジェクト (VCO) と呼ばれる HGS クラスターの DNS アドレスです。 これは、に指定された HGS サービス名と HGS ドメイン名を連結したものになり `Initialize-HgsServer` ます。
+サブジェクト名             | Hgs クライアント (つまり、保護されたホスト) が HGS サーバーへのアクセスに使用するアドレスを指定します。 これは通常、分散ネットワーク名または仮想コンピューターオブジェクト (VCO) と呼ばれる HGS クラスターの DNS アドレスです。 これは、に指定された HGS サービス名と HGS ドメイン名を連結したものになり `Initialize-HgsServer` ます。
 サブジェクト代替名 | 別の DNS 名を使用して HGS クラスターに接続する場合は (たとえば、ロードバランサーの背後にある場合や、複雑なトポロジ内のノードのサブセットに対して異なるアドレスを使用する場合)、証明書要求の SAN フィールドにこれらの DNS 名を含めてください。 SAN 拡張機能が設定されている場合、サブジェクト名は無視されるため、SAN には、通常はサブジェクト名に入力した値を含むすべての値を含める必要があることに注意してください。
 
 HGS サーバーを初期化するときにこの証明書を指定するためのオプションについては、「 [最初の hgs ノードの構成](guarded-fabric-initialize-hgs.md)」を対象としています。

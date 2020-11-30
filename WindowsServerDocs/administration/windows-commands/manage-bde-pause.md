@@ -1,20 +1,20 @@
 ---
-title: manage-bde pause
-description: BitLocker の暗号化または暗号化解除を一時停止する manage-bde pause コマンドのリファレンス記事です。
+title: manage-bde-pause
+description: BitLocker の暗号化または暗号化解除を一時停止する manage-bde-pause コマンドのリファレンス記事です。
 ms.topic: reference
 ms.assetid: efda0e08-b9ff-4e71-83d8-bb666b3032bd
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: ca15aa1b48e0b06a036eaf8906c7d5b7d43b881b
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: b4f4255c544f6881ea7d023bbf03c92dc817ab34
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89639646"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330381"
 ---
-# <a name="manage-bde-pause"></a>manage-bde pause
+# <a name="manage-bde--pause"></a>manage-bde-pause
 
 一時停止します。 BitLocker の暗号化または復号化します。
 
@@ -38,8 +38,8 @@ manage-bde -pause [<volume>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 
 ドライブ C で BitLocker 暗号化を一時停止するには、次のように入力します。
 
-```
-manage-bde pause C:
+```Output
+manage-bde -pause C:
 ```
 
 ## <a name="additional-references"></a>その他の参照情報

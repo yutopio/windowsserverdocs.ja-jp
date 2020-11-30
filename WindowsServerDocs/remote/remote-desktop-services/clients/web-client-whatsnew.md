@@ -7,12 +7,12 @@ manager: lizross
 ms.author: helohr
 ms.date: 09/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 8519d69c39cb86f10c66b3c28410a285ca06252d
-ms.sourcegitcommit: 14c9526b1c74821341d4b66de92adce9bee92f10
+ms.openlocfilehash: ae5c0af5f434b73b9b4590c2a5c53c9551b76b6c
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558279"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330404"
 ---
 # <a name="whats-new-in-the-web-client"></a>Web クライアントの新機能
 
@@ -29,7 +29,7 @@ ms.locfileid: "94558279"
 
 - 最小化されたメニューをユーザーが移動できるようになりました。
 - 4K およびウルトラワイド モニターのサポートが強化され、大量のデータをコピーするとセッションがクラッシュする問題が修正されました。
-- リモート セッションで入力方式エディターを使用するサポートが強化されました。 Web クライアントで入力方式エディターを使用する方法の詳細については、「[Web クライアントを使用して Windows Virtual Desktop に接続する](/azure/virtual-desktop/connect-web.md)」をご覧ください。
+- リモート セッションで入力方式エディターを使用するサポートが強化されました。 Web クライアントで入力方式エディターを使用する方法の詳細については、「[Web クライアントを使用して Windows Virtual Desktop に接続する](https://docs.microsoft.com/azure/virtual-desktop/connect-web)」をご覧ください。
 - **[すべてのリソース]** ページの UI が変更されました。
 - Web クライアントで *一般プロトコル エラー* が返される、いくつかの接続シーケンスのエラーが修正されました。
 - 特定のキー シーケンスが適切に処理されないというキーボード入力の問題が修正されました。

@@ -5,14 +5,14 @@ description: AD FS に関してよく寄せられる質問
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/29/2020
+ms.date: 11/02/2020
 ms.topic: article
-ms.openlocfilehash: 50767d5b1941e397583f6c2bfa1d6b2ae3f253cf
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d4b1130de67d4e4d7f57065dac307cddc0aef369
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949686"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330484"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>AD FS についてよく寄せられる質問 (FAQ)
 
@@ -87,6 +87,7 @@ Microsoft に通知したベンダーの一覧は、[AD FS 対応 MFA プロバ�
 Microsoft が把握しているサードパーティ プロバイダーの一覧を次に示します。  Microsoft が把握していない利用可能なプロバイダーは常に存在する可能性があり、わかったら一覧を更新します。
 
 - [F5 Access Policy Manager](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-third-party-integration-13-1-0/12.html#guid-1ee8fbb3-1b33-4982-8bb3-05ae6868d9ee)
+- [Citrix アプリケーション デリバリー コントローラー (ADC)](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/adfs-proxy-wsfed.html)
 
 
 ### <a name="where-is-the-capacity-planning-sizing-spreadsheet-for-ad-fs-2016"></a>AD FS 2016 用のキャパシティ プランニング サイズ決定スプレッドシートはどこにありますか?
@@ -235,12 +236,12 @@ AD FS の userinfo エンドポイントでは、常に、OpenID 標準で指定
 ### <a name="why-am-i-seeing-a-warning-for-failure-to-add-the-ad-fs-service-account-to-the-enterprise-key-admins-group"></a>Enterprise Key Admins グループに AD FS サービス アカウントを追加できないという警告が表示されるのはなぜですか?
 このグループは、FSMO PDC の役割を持つ Windows 2016 ドメイン コントローラーがドメイン内に存在する場合にのみ作成されます。 このエラーを解決するには、グループを手動で作成し、以下の手順に従って、サービス アカウントをグループのメンバーとして追加した後、必要なアクセス許可を付与します。
 1.    **[Active Directory ユーザーとコンピューター]** を開きます。
-2.    ナビゲーション ペインでドメイン名を**右クリック**し、[プロパティ] を**クリック**します。
-3.    [セキュリティ] を**クリック**します ([セキュリティ] タブが表示されない場合は、[表示] メニューから [高度な機能] をオンにします)。
-4.    [詳細設定] を**クリック**します。 [追加] を**クリック**します。 [プリンシパルの選択] を**クリック**します。
+2.    ナビゲーション ペインでドメイン名を **右クリック** し、[プロパティ] を **クリック** します。
+3.    [セキュリティ] を **クリック** します ([セキュリティ] タブが表示されない場合は、[表示] メニューから [高度な機能] をオンにします)。
+4.    [詳細設定] を **クリック** します。 [追加] を **クリック** します。 [プリンシパルの選択] を **クリック** します。
 5.    [ユーザー、コンピューター、サービス アカウントまたはグループの選択] ダイアログ ボックスが表示されます。  [選択するオブジェクト名を入力してください] ボックスに「Key Admin Group」と入力します。  ［OK］をクリックします。
 6.    [適用先] ボックスで、 **[Descendant User objects]\(子ユーザー オブジェクト\)** を選択します。
-7.    スクロール バーを使用してページの下部までスクロールし、[すべてクリア] を**クリック**します。
+7.    スクロール バーを使用してページの下部までスクロールし、[すべてクリア] を **クリック** します。
 8.    **[プロパティ]** セクションで、 **[Read msDS-KeyCredentialLink]\(msDS-KeyCredentialLink の読み取り\)** および **[Write msDS-KeyCredentialLink]\(msDS-KeyCredentialLink の書き込み\)** を選択します。
 
 ### <a name="why-does-modern-authentication-from-android-devices-fail-if-the-server-does-not-send-all-the-intermediate-certificates-in-the-chain-with-the-ssl-cert"></a>サーバーが SSL 証明書と共にチェーン内のすべての中間証明書を送信しない場合、Android デバイスからの先進認証が失敗するのはなぜですか?
