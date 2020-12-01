@@ -2,15 +2,16 @@
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows タイム サービスのツールと設定
 author: Teresa-Motiv
+description: Windows タイム サービス (W32Time) で使用できる設定と、それらの設定を構成するために使用できるツールについて説明します
 ms.author: v-tea
-ms.date: 02/24/2020
+ms.date: 11/20/2020
 ms.topic: article
-ms.openlocfilehash: 60aae8d96107b45ca3ef101780a3f1fec9c5f364
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 3a9f079160f3af2b175b16654ce5aa77b4dd323e
+ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766585"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330504"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Windows タイム サービスのツールと設定
 
@@ -55,7 +56,7 @@ W32tm.exe を使用して、Windows タイム サービスの設定を構成し�
 |**w32tm /?** |W32tm のコマンドラインのヘルプを表示します |
 |**w32tm /register** |タイム サービスをサービスとして実行するように登録し、レジストリに既定の構成情報を追加します。 |
 |**w32tm /unregister** |タイム サービスの登録を解除し、その構成情報をすべてレジストリから削除します。 |
-|**w32tm /monitor [/domain:\<*domain name*>] [/computers:\<*name*>[,\<*name*>[,\<*name*>...]]] [/threads:\<*num*>]** |Windows タイム サービスを監視します。<p>**/domain**:監視するドメインを指定します。 ドメイン名が指定されていない場合、または **/domain** と **/computers** のどちらのオプションも指定されていない場合は、既定のドメインが使用されます。 このオプションは複数回使用される場合があります。<p>**/computers**:指定されたコンピューターの一覧を監視します。 コンピューター名はコンマで区切り、スペースは使用しません。 名前にプレフィックス **\*** が付いている場合は、PDC として扱われます。 このオプションは複数回使用される場合があります。<p>**/threads**:同時に分析するコンピューターの数を指定します。 既定値は 3 です。 許容範囲は 1 から 50 です。 |
+|**w32tm /monitor [/domain:\<*domain name*>] [/computers:\<*name*>[,\<*name*>[,\<*name*>...]]] [/threads:\<*num*>]** |Windows タイム サービスを監視します。<p>**/domain**:監視するドメインを指定します。 ドメイン名が指定されていない場合、または **/domain** と **/computers** のどちらのオプションも指定されていない場合は、既定のドメインが使用されます。 このオプションは複数回使用される場合があります。<p>**/computers**:指定されたコンピューターの一覧を監視します。 コンピューター名はコンマで区切り、スペースは使用しません。 名前にプレフィックス **\* *_が付いている場合は、PDC として扱われます。このオプションは複数回使用される場合があります。<p>_*/threads**:同時に分析するコンピューターの数を指定します。 既定値は 3 です。 許容範囲は 1 から 50 です。 |
 |**w32tm /ntte \<NT *time epoch*>** |Windows NT のシステム時刻 (0h 1-Jan 1601 から始まり 10<sup>-7</sup> 秒間隔で計測される) を、読み取り可能な形式に変換します。 |
 |**w32tm /ntpte \<NTP *time epoch*>** |NTP 時刻 (0h 1-Jan 1900 から始まり 2<sup>-32</sup> 秒間隔で計測される) を、読み取り可能な形式に変換します。 |
 |**w32tm /resync [/computer:\<*computer*>] [/nowait] [/rediscover] [/soft]** |蓄積したエラー統計をすべて削除して、直ちに時刻を再同期するようにコンピュータに指示します。<p>**/computer:\<*computer*>** :再同期する必要があるコンピューターを指定します。 指定しない場合、ローカル コンピューターが再同期されます。<p>**/nowait**: 同期の再実行を待たずにすぐに返します。 指定がない場合は、同期の再実行の完了を待ってから返します。<p>**/rediscover**:ネットワーク構成を再検出し、ネットワーク ソースを再検出してから、再同期します。<p>**/soft**:既存のエラー統計を使って再同期します。 互換性のために用意されたもので、あまり有効ではありません。 |
@@ -75,8 +76,6 @@ W32tm.exe を使用して、Windows タイム サービスの設定を構成し�
 ```cmd
 w32tm /config /manualpeerlist:"ntpserver.contoso.com clock.adatum.com" /syncfromflags:manual /update
 ```
-
-外部時刻同期のためにインターネットで使用できる有効な NTP サーバーの一覧については、「[インターネット上で利用可能な簡易ネットワーク タイム プロトコル (SNTP) タイム サーバーの一覧](https://go.microsoft.com/fwlink/?linkid=60401)」を参照してください。
 
 CONTOSOW1 というホスト名を持つ Windows ベースのクライアント コンピューターから Windows タイム クライアント構成を確認する場合は、次のコマンドを実行します。
 
@@ -107,7 +106,7 @@ Windows では、**Computer Configuration\Administrative Templates\System\Window
 > [!IMPORTANT]
 > GPO のプリセット設定の中には、対応する既定のレジストリ エントリとは異なるものがあります。 GPO を使用して Windows タイム設定を構成する場合は、[Windows タイムサービスのグループ ポリシー設定のプリセット値が、Windows Server 2003 の対応する Windows タイム サービスのレジストリ エントリと異なること](https://go.microsoft.com/fwlink/?LinkId=186066)を確認してください。 この問題は、Windows Server 2008 R2、Windows Server 2008、Windows Server 2003 R2、および Windows Server 2003 に当てはまります。
 
-たとえば、**Windows NTP クライアントを構成する**ポリシーのポリシー設定を編集するとします。
+たとえば、**Windows NTP クライアントを構成する** ポリシーのポリシー設定を編集するとします。
 
 変更内容は、管理用テンプレートの次の場所に保存されます。
 
@@ -295,7 +294,7 @@ Windows タイム サービスでは、次のレジストリ サブキーの下�
 | レジストリ エントリ | バージョン | 説明 |
 | --- | --- | --- |
 |**AllowNonstandardModeCombinations** |すべてのバージョン |ピア間の同期で非標準モードの組み合わせが許可されることを示します。 ドメイン メンバーに対する既定値は **1** です。 スタンドアロン クライアントとサーバーに対する既定値は **1** です。 |
-|**NtpServer** |すべてのバージョン |コンピューターでのタイムスタンプの取得元になる、スペースで区切られたピアのリストを指定します。これは、1 行に 1 つ以上の DNS 名または IP アドレスで構成されます。 リストされる各 DNS 名または IP アドレスは一意である必要があります。 ドメインに接続されているコンピューターは、正式な米国の時刻など、より信頼性の高いタイム ソースと同期する必要があります。  <ul><li>0x01 SpecialInterval </li><li>0x02 UseAsFallbackOnly</li><li>0x04 SymmetricActive:このモードの詳細については、「[Windows タイムサーバー:3.3 動作モード](https://go.microsoft.com/fwlink/?LinkId=208012)」を参照してください。</li><li>0x08 Client</li></ul><br />ドメイン メンバーには、このレジストリ エントリの既定値はありません。 スタンドアロン クライアントとサーバーに対する既定値は time.windows.com,0x1 です。<p>**注:**<br />使用できる NTP サーバーの詳細については、KB 262680 の「[インターネット上で利用可能な簡易ネットワーク タイム プロトコル (SNTP) タイム サーバーの一覧](https://support.microsoft.com/help/262680/a-list-of-the-simple-network-time-protocol-sntp-time-servers-that-are)」を参照してください。 |
+|**NtpServer** |すべてのバージョン |コンピューターでのタイムスタンプの取得元になる、スペースで区切られたピアのリストを指定します。これは、1 行に 1 つ以上の DNS 名または IP アドレスで構成されます。 リストされる各 DNS 名または IP アドレスは一意である必要があります。 ドメインに接続されているコンピューターは、正式な米国の時刻など、より信頼性の高いタイム ソースと同期する必要があります。  <ul><li>0x01 SpecialInterval </li><li>0x02 UseAsFallbackOnly</li><li>0x04 SymmetricActive:このモードの詳細については、「[Windows タイムサーバー:3.3 動作モード](https://go.microsoft.com/fwlink/?LinkId=208012)」を参照してください。</li><li>0x08 Client</li></ul><br />ドメイン メンバーには、このレジストリ エントリの既定値はありません。 スタンドアロン クライアントとサーバーに対する既定値は **time.windows.com,0x1** です。 |
 |**ServiceDll** |すべてのバージョン |W32Time によって管理されます。 これには Windows オペレーティング システムで使用される予約済みのデータが含まれています。この設定を変更すると、予期しない結果が発生する可能性があります。 ドメイン メンバーとスタンドアロン クライアントおよびサーバーの両方において、この DLL の既定の場所は、%windir%\System32\W32Time.dll です。 |
 |**ServiceMain** |すべてのバージョン |W32Time によって管理されます。 これには Windows オペレーティング システムで使用される予約済みのデータが含まれています。この設定を変更すると、予期しない結果が発生する可能性があります。 ドメイン メンバーに対する既定値は **SvchostEntry_W32Time** です。 スタンドアロン クライアントとサーバーに対する既定値は **SvchostEntry_W32Time** です。 |
 |**Type** |すべてのバージョン |どのピアからの同期を受け入れるかを示します。  <ul><li>**NoSync**: タイム サービスは他のソースと同期しません。</li><li>**NTP**: タイム サービスは、**NtpServer** レジストリ エントリで指定されたサーバーと同期します。</li><li>**NT5DS**: タイム サービスはドメイン階層から同期します。  </li><li>**AllSync**: タイム サービスは、使用可能なすべての同期メカニズムを使用します。  </li></ul>ドメイン メンバーに対する既定値は **NT5DS** です。 スタンドアロン クライアントとサーバーに対する既定値は **NTP** です。 |
@@ -328,7 +327,7 @@ Windows タイム サービスでは、次のレジストリ サブキーの下�
 
 ## <a name="reference-pre-set-values-for-the-windows-time-service-gpo-settings"></a>参照 :Windows タイム サービス GPO 設定のプリセット値
 
-次の表に、Windows タイム サービスに関連付けられているグローバル グループ ポリシー設定と、各設定に関連付けられたプリセット値の一覧を示します。 各設定の詳細については、この記事の最初の方にある「[参照 :Windows タイム サービスのレジストリ エントリ](#reference-windows-time-service-registry-entries)」を参照してください。 次の設定は、**グローバル構成設定**と呼ばれる 1 つの GPO に含まれています。
+次の表に、Windows タイム サービスに関連付けられているグローバル グループ ポリシー設定と、各設定に関連付けられたプリセット値の一覧を示します。 各設定の詳細については、この記事の最初の方にある「[参照 :Windows タイム サービスのレジストリ エントリ](#reference-windows-time-service-registry-entries)」を参照してください。 次の設定は、**グローバル構成設定** と呼ばれる 1 つの GPO に含まれています。
 
 ### <a name="pre-set-values-for-global-group-policy-settings"></a>"グローバルグループポリシー" 設定のプリセット値
 
