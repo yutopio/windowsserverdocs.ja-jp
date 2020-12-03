@@ -6,12 +6,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 0b361c99486f61a3aee4651a743eb83ab4127e40
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f5e38ad5b3bcf81774ae5d6ae8908d5103455385
+ms.sourcegitcommit: b47bed17c2b1c6b61e904b8deb374e2c60e692e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947395"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96526079"
 ---
 # <a name="ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication"></a>AD FS での証明書認証のための代替ホスト名バインドのサポート
 
@@ -31,13 +31,13 @@ Windows Server 2016 の AD FS では、これが変更されました。 2つの
 同様に、Windows Server 2016 で AD FS が展開されたら、PowerShell コマンドレット AdfsAlternateTlsClientBinding を使用できます。
 
 ```powershell
-Set-AdfsAlternateTlsClientBinding -Member DC1.contoso.com -Thumbprint '<thumbprint of cert>'
+Set-AdfsAlternateTlsClientBinding -Member ADFS1.contoso.com -Thumbprint '<thumbprint of cert>'
 ```
 
 メッセージが表示されたら、[はい] をクリックして確定します。  そうですね。
 
 ![代替ホスト名のバインド](media/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication/ADFS_CA_3.png)
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 * [Windows Server 2016 の AD FS と WAP で SSL 証明書を管理する](./manage-ssl-certificates-ad-fs-wap.md)
