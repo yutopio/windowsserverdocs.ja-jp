@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 7d5c7b971d2ca77308c24210ee50c17c4b3a0c95
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: dd605283396757f1ef0de05d620583c895f71f1a
+ms.sourcegitcommit: f18097c21e50a09aef2f1937f52608b0042ef0e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640346"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755309"
 ---
 # <a name="mklink"></a>mklink
 
@@ -37,7 +37,7 @@ mklink [[/d] | [/h] | [/j]] <link> <target>
 
 ### <a name="examples"></a>例
 
-、MyFolder、および \Users\User1\Documents という名前のシンボリックリンクを作成し、ディレクトリ内にあるファイルの例をルートディレクトリから削除するには、次のように入力します。
+MyFolder という名前のシンボリックリンクを作成し、ルートディレクトリから \Users\User1\Documents ディレクトリに削除し、Myfile.txt という名前のハードリンクをディレクトリ内のファイルファイルに保存するには、次のように入力します。
 
 ```
 mklink /d \MyFolder \Users\User1\Documents

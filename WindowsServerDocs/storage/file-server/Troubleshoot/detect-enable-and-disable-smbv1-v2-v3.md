@@ -7,12 +7,12 @@ ms.topic: how-to
 ms.author: delhan
 ms.date: 10/29/2020
 ms.custom: contperfq2
-ms.openlocfilehash: e38bbc5a80f80747ae3cb90c91123d91ed4e5e25
-ms.sourcegitcommit: 28b5ab74cb0b40539ccc1a83998d6391e87fe51f
+ms.openlocfilehash: a465a7e777dae0473966b6185470dbb6d563e2b7
+ms.sourcegitcommit: f18097c21e50a09aef2f1937f52608b0042ef0e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96614954"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755399"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Windows で SMBv1、SMBv2、および SMBv3 を検出、有効化、および無効化する方法
 
@@ -94,7 +94,7 @@ Windows 10、Windows 8.1、Windows Server 2019、Windows Server 2016、および
 - 識別
 
   ```PowerShell
-  Get-WindowsOptionalFeature –Online –FeatureName SMB1Protocol
+  Get-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
 - 切り替える
@@ -120,13 +120,13 @@ Windows 10、Windows 8.1、Windows Server 2019、Windows Server 2016、および
 - 切り替える
 
   ```PowerShell
-  Set-SmbServerConfiguration –EnableSMB2Protocol $false
+  Set-SmbServerConfiguration -EnableSMB2Protocol $false
   ```
 
 - 有効にする:
 
   ```PowerShell
-  Set-SmbServerConfiguration –EnableSMB2Protocol $true
+  Set-SmbServerConfiguration -EnableSMB2Protocol $true
   ```
 
 #### <a name="windows-81-and-windows-10-add-or-remove-programs-method"></a>Windows 8.1 と Windows 10: プログラムの追加と削除の方法
@@ -206,13 +206,13 @@ Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEa
 切り替える
 
 ```PowerShell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 –Force
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 -Force
 ```
 
 有効にする:
 
 ```PowerShell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 –Force
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 -Force
 ```
 
 **メモ** これらの変更を行った後、コンピューターを再起動する必要があります。
@@ -228,13 +228,13 @@ Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 切り替える
 
 ```PowerShell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 –Force
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 -Force
 ```
 
 有効にする:
 
 ```PowerShell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 –Force
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 -Force
 ```
 
 > [!NOTE]
@@ -434,13 +434,13 @@ SMBv1 を使用して SMB サーバーに接続しようとしているクライ
 - 有効にする:
 
   ```PowerShell
-  Set-SmbServerConfiguration –AuditSmb1Access $true
+  Set-SmbServerConfiguration -AuditSmb1Access $true
   ```
 
 - 切り替える
 
   ```PowerShell
-  Set-SmbServerConfiguration –AuditSmb1Access $false
+  Set-SmbServerConfiguration -AuditSmb1Access $false
   ```
 
 - 識別
