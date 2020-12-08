@@ -6,12 +6,12 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 02/15/2019
-ms.openlocfilehash: e5ea882347a0605d814682b50c2ec71e24047472
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 11cfe250bd08a04f1577a5537389885718a755a3
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766975"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96787901"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Windows 管理センターを使ってみる
 
@@ -32,17 +32,17 @@ Windows 10 で windows 管理センターを初めて開くときは、必ず *W
 
 Microsoft Edge で、このダイアログボックスが表示されたら、次のように入力します。
 
-1. **その他の選択肢**をクリック
+1. **その他の選択肢** をクリック
 
     ![その他の選択肢が強調表示されている証明書ボックスを選択します](../media/launch-cert-1.png)
 
-2. **Windows 管理センタークライアント**という名前の証明書を選択し、[ **OK]** をクリックします。
+2. **Windows 管理センタークライアント** という名前の証明書を選択し、[ **OK]** をクリックします。
 
     ![使用可能な証明書が表示されている証明書ボックスを選択します](../media/launch-cert-2.png)
 
-3. **常にアクセスを許可する**ことを確認し、[**許可**] をクリックします。
+3. **常にアクセスを許可する** ことを確認し、[**許可**] をクリックします。
 
-    ![資格情報が必要] ダイアログボックス] (../media/launch-cert-3.png)
+    ![[資格情報が必要です] ダイアログボックス](../media/launch-cert-3.png)
 
 ## <a name="connecting-to-managed-nodes-and-clusters"></a>管理対象ノードとクラスターへの接続
 

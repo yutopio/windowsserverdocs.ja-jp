@@ -7,12 +7,12 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 07/15/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: d124e26f0605b8e1a4678abebb9039b597f1c18a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c21570d964db48e4336031315a13657f3777cc72
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971059"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788071"
 ---
 # <a name="using-storage-spaces-direct-in-guest-virtual-machine-clusters"></a>ゲスト仮想マシンクラスターでの記憶域スペースダイレクトの使用
 
@@ -73,7 +73,7 @@ Azure[テンプレート](https://github.com/robotechredmond/301-storage-spaces-
 
     16進数の7530に相当する10進数は、3万です。これは30秒です。 既定値は 1770 16 進数、つまり、6秒の 6000 Decimal であることに注意してください。
 
-## <a name="not-supported"></a>サポートなし
+## <a name="not-supported"></a>サポートされていません
 
 - ホストレベルの仮想ディスクのスナップショット/復元
 

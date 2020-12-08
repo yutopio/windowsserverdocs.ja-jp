@@ -5,12 +5,12 @@ ms.author: delhan
 manager: dcscontentpm
 ms.date: 11/12/2019
 ms.topic: article
-ms.openlocfilehash: 5e8618853e28c6deef4a15e84361e339c70bf052
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 92ca0c028d1275bf2d884a7c89be6ae2b351b78f
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940336"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788149"
 ---
 # <a name="configuring-certificate-enrollment-web-service-for-certificate-key-based-renewal-on-a-custom-port"></a>カスタム ポート上で証明書キーベースの書き換え用の証明書の登録 Web サービスを構成する
 
@@ -72,18 +72,18 @@ Windows グループを使用した ankit Tyagi サポートエンジニア
 
 既存のコンピューターテンプレートを複製し、テンプレートの次の設定を構成することができます。
 
-1. 証明書テンプレートの [サブジェクト名] タブで、[**自動登録更新要求に対して既存の証明書のサブジェクト情報**を**要求**して使用する] オプションが選択されていることを確認します。
+1. 証明書テンプレートの [サブジェクト名] タブで、[**自動登録更新要求に対して既存の証明書のサブジェクト情報** を **要求** して使用する] オプションが選択されていることを確認します。
    ![新しいテンプレート](media/certificate-enrollment-certificate-key-based-renewal-2.png)
 
-2. [発行の**要件**] タブに切り替えて、[ **CA 証明書マネージャーの承認**] チェックボックスをオンにします。
+2. [発行の **要件** ] タブに切り替えて、[ **CA 証明書マネージャーの承認** ] チェックボックスをオンにします。
    ![発行の要件](media/certificate-enrollment-certificate-key-based-renewal-3.png)
 
-3. **読み取り**と**登録**のアクセス許可を、このテンプレートの**cepの vc**サービスアカウントに割り当てます。
+3. **読み取り** と **登録** のアクセス許可を、このテンプレートの **cepの vc** サービスアカウントに割り当てます。
 
 4. CA で新しいテンプレートを発行します。
 
 > [!Note]
-> 互換性が Windows Server 2016 以降のバージョンに設定されている場合、テンプレートが表示されないという既知の問題があるため、テンプレートの互換性設定が**Windows server 2012 R2**に設定されていることを確認してください。 詳細については、「windows server [2016 またはそれ以降の ca または CEP サーバーから Windows server 2016 CA 互換証明書テンプレートを選択できません](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016)詳細」を参照してください。
+> 互換性が Windows Server 2016 以降のバージョンに設定されている場合、テンプレートが表示されないという既知の問題があるため、テンプレートの互換性設定が **Windows server 2012 R2** に設定されていることを確認してください。 詳細については、「windows server [2016 またはそれ以降の ca または CEP サーバーから Windows server 2016 CA 互換証明書テンプレートを選択できません](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016)詳細」を参照してください。
 
 
 #### <a name="configure-the-cepces01-instance"></a>CEPCES01 インスタンスを構成する
@@ -101,7 +101,7 @@ CEPCES01 インスタンスをインストールするには、次のいずれ�
 [証明書の登録 Web サービスガイダンス](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)#configure-a-ca-for-the-certificate-enrollment-web-service)
 
 > [!Note]
-> CEP と CES の両方のインスタンスのユーザー名とパスワードの認証を構成する場合は、[キーベースの書き換えを有効にする] オプションを選択しないようにしてください。
+> CEP と CES の両方のインスタンスのユーザー名とパスワードの認証を構成する場合は、[Key-Based の更新を有効にする] オプションを選択していないことを確認してください。
 
 **方法 2**
 
@@ -126,16 +126,16 @@ Install-AdcsEnrollmentPolicyWebService -AuthenticationType Username -SSLCertThum
 Install-AdcsEnrollmentWebService -ApplicationPoolIdentity -CAConfig "CA1.contoso.com\contoso-CA1-CA" -SSLCertThumbprint "sslCertThumbPrint" -AuthenticationType Username
 ```
 
-このコマンドは、証明書の登録 Web サービス (CES) をインストールして、 **CA1.contoso.com**のコンピューター名の証明機関と**CA1**の ca 共通名を使用します。 CES の id は、既定のアプリケーションプール id として指定されます。 認証の種類は**username**です。 SSLCertThumbPrint は、IIS のバインドに使用される証明書の拇印です。
+このコマンドは、証明書の登録 Web サービス (CES) をインストールして、 **CA1.contoso.com** のコンピューター名の証明機関と **CA1** の ca 共通名を使用します。 CES の id は、既定のアプリケーションプール id として指定されます。 認証の種類は **username** です。 SSLCertThumbPrint は、IIS のバインドに使用される証明書の拇印です。
 
 ##### <a name="step-2-check-the-internet-information-services-iis-manager-console"></a>手順2インターネットインフォメーションサービス (IIS) マネージャーコンソールを確認する
 
 インストールが正常に完了すると、インターネットインフォメーションサービス (IIS) マネージャーコンソールに次の表示が表示されます。
 ![IIS マネージャー](media/certificate-enrollment-certificate-key-based-renewal-4.png)
 
-[**既定の Web サイト**] で、[ **ADPolicyProvider_CEP_UsernamePassword**] を選択し、[**アプリケーションの設定**] を開きます。 **ID**と**URI**をメモしておきます。
+[ **既定の Web サイト**] で、[ **ADPolicyProvider_CEP_UsernamePassword**] を選択し、[ **アプリケーションの設定**] を開きます。 **ID** と **URI** をメモしておきます。
 
-管理用の**フレンドリ名**を追加できます。
+管理用の **フレンドリ名** を追加できます。
 
 #### <a name="configure-the-cepces02-instance"></a>CEPCES02 インスタンスを構成する
 
@@ -158,21 +158,21 @@ Install-AdcsEnrollmentPolicyWebService -AuthenticationType Certificate -SSLCertT
 Install-AdcsEnrollmentWebService -CAConfig "CA1.contoso.com\contoso-CA1-CA" -SSLCertThumbprint "sslCertThumbPrint" -AuthenticationType Certificate -ServiceAccountName "Contoso\cepcessvc" -ServiceAccountPassword (read-host "Set user password" -assecurestring) -RenewalOnly -AllowKeyBasedRenewal
 ```
 
-このコマンドは、証明書の登録 Web サービス (CES) をインストールして、 **CA1.contoso.com**のコンピューター名の証明機関と**CA1**の ca 共通名を使用します。
+このコマンドは、証明書の登録 Web サービス (CES) をインストールして、 **CA1.contoso.com** のコンピューター名の証明機関と **CA1** の ca 共通名を使用します。
 
-このコマンドでは、証明書の登録 Web サービスの id が、 **cepの vc**サービスアカウントとして指定されています。 認証の種類は**certificate**です。 **Sslcertthumbprint**は、IIS のバインドに使用される証明書の拇印です。
+このコマンドでは、証明書の登録 Web サービスの id が、 **cepの vc** サービスアカウントとして指定されています。 認証の種類は **certificate** です。 **Sslcertthumbprint** は、IIS のバインドに使用される証明書の拇印です。
 
-**RenewalOnly**コマンドレットを使用すると、CES を更新専用モードで実行できます。 **Allowkeybased 書き換え**コマンドレットは、CES が登録サーバーに対するキーベースの更新要求を受け入れることも指定します。 これらは、セキュリティプリンシパルに直接マップされない認証用の有効なクライアント証明書です。
+**RenewalOnly** コマンドレットを使用すると、CES を更新専用モードで実行できます。 **Allowkeybased 書き換え** コマンドレットは、CES が登録サーバーに対するキーベースの更新要求を受け入れることも指定します。 これらは、セキュリティプリンシパルに直接マップされない認証用の有効なクライアント証明書です。
 
 > [!Note]
-> サービスアカウントは、サーバー上の**Iisusers**グループに属している必要があります。
+> サービスアカウントは、サーバー上の **Iisusers** グループに属している必要があります。
 
 ##### <a name="step-2-check-the-iis-manager-console"></a>手順 2. IIS マネージャーコンソールを確認する
 
 インストールが正常に完了すると、IIS マネージャーコンソールに次の表示が表示されます。
 ![IIS マネージャー](media/certificate-enrollment-certificate-key-based-renewal-5.png)
 
-[既定の**Web サイト**] の [ **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate** ] を選択し、[**アプリケーションの設定**] を開きます。 **ID**と**URI**をメモしておきます。 管理用の**フレンドリ名**を追加できます。
+[既定の **Web サイト**] の [ **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate** ] を選択し、[**アプリケーションの設定**] を開きます。 **ID** と **URI** をメモしておきます。 管理用の **フレンドリ名** を追加できます。
 
 > [!Note]
 > インスタンスが新しいサーバーにインストールされている場合は、id を確認して、CEPCES01 インスタンスで生成されたものと同じ ID であることを確認してください。 値が異なる場合は、値を直接コピーして貼り付けることができます。
@@ -222,7 +222,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
    CN = ENTCA、CN = Enrollment Services、CN = Public Key Services、CN = Services、CN = Configuration、DC = contoso、DC = com
 
-3. CA オブジェクトを右クリックして編集します。 アプリケーション設定で見つかった CEP および CES サーバー Uri でカスタムポートを使用して、 **mspki-site-name**属性を変更します。 例:
+3. CA オブジェクトを右クリックして編集します。 アプリケーション設定で見つかった CEP および CES サーバー Uri でカスタムポートを使用して、 **mspki-site-name** 属性を変更します。 例:
 
    ```
    140https://cepces.contoso.com:49999/ENTCA_CES_UsernamePassword/service.svc/CES0
@@ -233,22 +233,22 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
 #### <a name="configure-the-client-computer"></a>クライアント コンピューターの構成
 
-クライアントコンピューターで、登録ポリシーと自動登録ポリシーを設定します。 そのためには、次の手順に従います。
+クライアントコンピューターで、登録ポリシーと自動登録ポリシーを設定します。 その手順は次のとおりです。
 
-1. [実行の**開始**] を選択し、「  >  **Run** **gpedit.msc**」と入力します。
+1. [実行の **開始**] を選択し、「  >  **Run** **gpedit.msc**」と入力します。
 
 2. [**コンピューターの構成**] [  >  **Windows の設定**  >  ] [**セキュリティ設定**] の順に選択し、[**公開キーのポリシー**] をクリックします。
 
-3. 次のスクリーンショットの設定と一致するように、[**証明書サービスクライアント-自動登録] ポリシー**を有効にします。
+3. 次のスクリーンショットの設定と一致するように、[ **証明書サービスクライアント-自動登録] ポリシー** を有効にします。
    ![証明書グループポリシー](media/certificate-enrollment-certificate-key-based-renewal-9.png)
 
-4. **証明書サービスクライアント証明書の登録ポリシー**を有効にします。
+4. **証明書サービスクライアント証明書の登録ポリシー** を有効にします。
 
-   a. [**追加**] をクリックして登録ポリシーを追加し、ADSI で編集した**USERNAMEPASSWORD**で CEP URI を入力します。
+   a. [ **追加** ] をクリックして登録ポリシーを追加し、ADSI で編集した **USERNAMEPASSWORD** で CEP URI を入力します。
 
-   b. [**認証の種類**] で、[**ユーザー名/パスワード**] を選択します。
+   b. [ **認証の種類**] で、[ **ユーザー名/パスワード**] を選択します。
 
-   c. 優先順位を**10**に設定し、ポリシーサーバーを検証します。
+   c. 優先順位を **10** に設定し、ポリシーサーバーを検証します。
       ![登録ポリシー](media/certificate-enrollment-certificate-key-based-renewal-10.png)
 
    > [!Note]
@@ -260,11 +260,11 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
    KBR テンプレートを選択し、証明書を登録します。
    ![登録ポリシー](media/certificate-enrollment-certificate-key-based-renewal-12.png)
 
-6. **Gpedit.msc を**再度開きます。 [**証明書サービスクライアント-証明書の登録ポリシー**] を編集し、キーに基づく更新登録ポリシーを追加します。
+6. **Gpedit.msc を** 再度開きます。 [ **証明書サービスクライアント-証明書の登録ポリシー**] を編集し、キーに基づく更新登録ポリシーを追加します。
 
-   a. [**追加**] をクリックし、ADSI で編集した**証明書**を含む CEP URI を入力します。
+   a. [ **追加**] をクリックし、ADSI で編集した **証明書** を含む CEP URI を入力します。
 
-   b. 優先度を**1**に設定し、ポリシーサーバーを検証します。 最初に登録した証明書を認証して選択するよう求められます。
+   b. 優先度を **1** に設定し、ポリシーサーバーを検証します。 最初に登録した証明書を認証して選択するよう求められます。
 
    ![登録ポリシー](media/certificate-enrollment-certificate-key-based-renewal-13.png)
 
@@ -275,7 +275,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
 自動更新が機能していることを確認するには、mmc を使用して同じキーを使用して証明書を更新することで、手動更新が機能することを確認します。 また、更新中に証明書を選択するように求めるメッセージが表示されます。 先ほど登録した証明書を選択できます。 プロンプトが必要です。
 
-コンピューターの個人証明書ストアを開き、[アーカイブ済み証明書] ビューを追加します。 これを行うには、ローカルコンピューターアカウントスナップインを mmc.exe に追加し、[**証明書 (ローカルコンピューター)** ] をクリックして強調表示します。 mmc の右側または上部にある [**操作] タブ**で [**表示**] をクリックし **、[** アーカイブされた**証明書**] をクリックして、[ **OK**] をクリックします。
+コンピューターの個人証明書ストアを開き、[アーカイブ済み証明書] ビューを追加します。 これを行うには、ローカルコンピューターアカウントスナップインを mmc.exe に追加し、[**証明書 (ローカルコンピューター)** ] をクリックして強調表示します。 mmc の右側または上部にある [**操作] タブ** で [**表示**] をクリックし **、[** アーカイブされた **証明書**] をクリックして、[ **OK**] をクリックします。
 
 ### <a name="method-1"></a>方法 1
 
@@ -302,7 +302,7 @@ certreq -machine -q -enroll -cert <thumbprint> renew
 > [!Note]
 > 前のスクリーンショットは、CA の日付が18に設定されているため、自動登録エンジンが想定どおりに動作することを示す例です。 そのため、証明書の発行は続行されます。 実際の状況では、この大量の更新は行われません。
 
-## <a name="references"></a>References
+## <a name="references"></a>参考資料
 
 [Test Lab Guide: Demonstrating Certificate Key-Based Renewal](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj590165(v%3dws.11))
 

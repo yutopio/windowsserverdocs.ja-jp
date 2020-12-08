@@ -6,18 +6,18 @@ author: JasonGerend
 ms.author: jgerend
 manager: lizross
 ms.date: 01/14/2020
-ms.openlocfilehash: 17d61291822586013fa77bb1c7c399ab87dfef17
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 83d422ba603173a24667f848398c1c5bc3b4034b
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957159"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788051"
 ---
 # <a name="failover-clustering-system-log-events"></a>フェールオーバークラスタリングのシステムログイベント
 
 > 適用先:Windows Server 2019、Windows Server 2016
 
-このトピックでは、Windows Server システムログのフェールオーバークラスタリングイベントの一覧を示します (イベントビューアーで見ることができます)。 これらのイベントはすべて**FailoverClustering**のイベントソースを共有し、クラスターのトラブルシューティングを行うときに役立ちます。
+このトピックでは、Windows Server システムログのフェールオーバークラスタリングイベントの一覧を示します (イベントビューアーで見ることができます)。 これらのイベントはすべて **FailoverClustering** のイベントソースを共有し、クラスターのトラブルシューティングを行うときに役立ちます。
 
 ## <a name="critical-events"></a>重大なイベント
 
@@ -269,15 +269,15 @@ RPC サービスにインターフェイスを登録できなかったため、�
 
 ### <a name="event-1069-rcm_resource_failure_with_typename"></a>イベント 1069: RCM_RESOURCE_FAILURE_WITH_TYPENAME
 
-クラスター化された役割 ' %2 ' の種類 ' %3 ' のクラスターリソース ' %1 ' が失敗しました。<br><br>リソースと役割の障害ポリシーに基づき、クラスターサービスは、このノードのリソースをオンラインにするか、またはグループをクラスターの別のノードに移動してから再起動することがあります。 フェールオーバークラスターマネージャーまたは Get ClusterResource Windows PowerShell コマンドレットを使用して、リソースとグループの状態を確認します。
+クラスター化された役割 ' %2 ' の種類 ' %3 ' のクラスターリソース ' %1 ' が失敗しました。<br><br>リソースと役割の障害ポリシーに基づき、クラスターサービスは、このノードのリソースをオンラインにするか、またはグループをクラスターの別のノードに移動してから再起動することがあります。 フェールオーバークラスターマネージャーまたは Get-ClusterResource Windows PowerShell コマンドレットを使用して、リソースとグループの状態を確認します。
 
 ### <a name="event-1069-rcm_resource_failure_with_cause"></a>イベント 1069: RCM_RESOURCE_FAILURE_WITH_CAUSE
 
-クラスター化された役割 ' %2 ' の種類 ' %3 ' のクラスターリソース ' %1 ' が失敗しました。 エラーコードは ' %5 ' (' %4 ') でした。<br><br>リソースと役割の障害ポリシーに基づき、クラスターサービスは、このノードのリソースをオンラインにするか、またはグループをクラスターの別のノードに移動してから再起動することがあります。 フェールオーバークラスターマネージャーまたは Get ClusterResource Windows PowerShell コマンドレットを使用して、リソースとグループの状態を確認します。
+クラスター化された役割 ' %2 ' の種類 ' %3 ' のクラスターリソース ' %1 ' が失敗しました。 エラーコードは ' %5 ' (' %4 ') でした。<br><br>リソースと役割の障害ポリシーに基づき、クラスターサービスは、このノードのリソースをオンラインにするか、またはグループをクラスターの別のノードに移動してから再起動することがあります。 フェールオーバークラスターマネージャーまたは Get-ClusterResource Windows PowerShell コマンドレットを使用して、リソースとグループの状態を確認します。
 
 ### <a name="event-1069-rcm_resource_failure_with_error_code"></a>イベント 1069: RCM_RESOURCE_FAILURE_WITH_ERROR_CODE
 
-クラスター化された役割 ' %2 ' の種類 ' %3 ' のクラスターリソース ' %1 ' が失敗しました。 エラーコードは ' %4 ' でした。<br><br>リソースと役割の障害ポリシーに基づき、クラスターサービスは、このノードのリソースをオンラインにするか、またはグループをクラスターの別のノードに移動してから再起動することがあります。 フェールオーバークラスターマネージャーまたは Get ClusterResource Windows PowerShell コマンドレットを使用して、リソースとグループの状態を確認します。
+クラスター化された役割 ' %2 ' の種類 ' %3 ' のクラスターリソース ' %1 ' が失敗しました。 エラーコードは ' %4 ' でした。<br><br>リソースと役割の障害ポリシーに基づき、クラスターサービスは、このノードのリソースをオンラインにするか、またはグループをクラスターの別のノードに移動してから再起動することがあります。 フェールオーバークラスターマネージャーまたは Get-ClusterResource Windows PowerShell コマンドレットを使用して、リソースとグループの状態を確認します。
 
 ### <a name="event-1069-rcm_resource_failure_due_to_veto"></a>イベント 1069: RCM_RESOURCE_FAILURE_DUE_TO_VETO
 
@@ -598,7 +598,7 @@ IPv6 トンネルアドレスリソース ' %1 ' をオンラインにできま�
 
 ### <a name="event-1567-service_failed_to_change_log_size"></a>イベント 1567: SERVICE_FAILED_TO_CHANGE_LOG_SIZE
 
-トレースログのサイズを変更できませんでしたクラスターサービス。 ' ClusterLogSize ' という \| PowerShell コマンドレットを使用して、設定を確認してください \* 。 また、パフォーマンスモニタースナップインを使用して、FailoverClustering のイベントトレースセッション設定を確認します。
+トレースログのサイズを変更できませんでしたクラスターサービス。 ClusterLogSize 設定を確認してください。 ' Get Cluster \| Format-List \* ' PowerShell コマンドレットを使用してください。 また、パフォーマンスモニタースナップインを使用して、FailoverClustering のイベントトレースセッション設定を確認します。
 
 ### <a name="event-1567-res_vipaddr_address_interface_failed"></a>イベント 1567: RES_VIPADDR_ADDRESS_INTERFACE_FAILED
 
@@ -622,7 +622,7 @@ IP インターフェイス ' %1 ' (アドレス ' %2 ') の正常性チェッ�
 
 #### <a name="guidance"></a>ガイダンス
 
-ストレージアカウントのアクセスキーが無効になっている可能性があります。 フェールオーバークラスターマネージャーまたは Set ClusterQuorum Windows PowerShell コマンドレットでクラスタークォーラム構成ウィザードを使用して、更新されたストレージアカウントアクセスキーを使用してクラウド監視リソースを構成します。
+ストレージアカウントのアクセスキーが無効になっている可能性があります。 フェールオーバークラスターマネージャーまたは Set-ClusterQuorum Windows PowerShell コマンドレットでクラスタークォーラム構成ウィザードを使用して、更新されたストレージアカウントアクセスキーを使用してクラウド監視リソースを構成します。
 
 ### <a name="event-1573-service_form_witness_failed"></a>イベント 1573: SERVICE_FORM_WITNESS_FAILED
 
@@ -710,7 +710,7 @@ IP インターフェイス ' %1 ' (アドレス ' %2 ') の正常性チェッ�
 
 ### <a name="event-1664-cluster_upgrade_incomplete"></a>イベント 1664: CLUSTER_UPGRADE_INCOMPLETE
 
-クラスターの機能レベルをアップグレードできませんでした。 クラスターのすべてのノードが現在実行中で、同じバージョンの Windows Server であることを確認してから、ClusterFunctionalLevel Windows PowerShell コマンドレットをもう一度実行してください。
+クラスターの機能レベルをアップグレードできませんでした。 クラスターのすべてのノードが現在実行されていて、同じバージョンの Windows Server であることを確認してから、Update-ClusterFunctionalLevel Windows PowerShell コマンドレットを再実行してください。
 
 ### <a name="event-1676-event_local_node_quarantined"></a>イベント 1676: EVENT_LOCAL_NODE_QUARANTINED
 
@@ -1024,7 +1024,7 @@ Chkdsk の出力がファイル ' %3 ' に記録されます。<br> Chkdsk で�
 
 ### <a name="event-1548-service_connect_version_compatible"></a>イベント 1548: SERVICE_CONNECT_VERSION_COMPATIBLE
 
-ノード ' %1 ' がノード ' %2 ' との通信を確立し、互換性のある別のバージョンのオペレーティングシステムを実行していることを検出しました。 すべてのノードで同じバージョンのオペレーティングシステムを実行することをお勧めします。 すべてのノードをアップグレードした後、ClusterFunctionalLevel Windows PowerShell コマンドレットを実行して、クラスターのアップグレードを完了します。
+ノード ' %1 ' がノード ' %2 ' との通信を確立し、互換性のある別のバージョンのオペレーティングシステムを実行していることを検出しました。 すべてのノードで同じバージョンのオペレーティングシステムを実行することをお勧めします。 すべてのノードをアップグレードした後、Update-ClusterFunctionalLevel Windows PowerShell コマンドレットを実行して、クラスターのアップグレードを完了します。
 
 ### <a name="event-1550-service_connect_novercheck"></a>イベント 1550: SERVICE_CONNECT_NOVERCHECK
 

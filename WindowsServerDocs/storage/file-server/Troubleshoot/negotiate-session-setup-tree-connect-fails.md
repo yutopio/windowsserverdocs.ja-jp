@@ -6,12 +6,12 @@ manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 2bad602f934d844074ee96df06bf9234fdbf943f
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 6b310f08757f100dfc005a631e54d0a58d61025c
+ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86961164"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96787735"
 ---
 # <a name="negotiate-session-setup-and-tree-connect-failures"></a>ネゴシエーション、セッション設定、ツリー接続のエラー
 
@@ -86,7 +86,7 @@ SMBv3 以降を使用している場合は、サーバーと共有に暗号化�
 
 - Samba とサードパーティデバイスは、暗号化をサポートしていない可能性があります。 詳細については、製品ドキュメントを参照してください。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>参考資料
 
 詳細については、次の記事を参照してください。
 
