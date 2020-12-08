@@ -7,12 +7,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 04/04/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 109f60ec099606dfc031fc07a8f457287f8fb50d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a9cf5f32a2cffb52b56e619e42b22483e7cbe48a
+ms.sourcegitcommit: f18097c21e50a09aef2f1937f52608b0042ef0e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946435"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755389"
 ---
 # <a name="remote-desktop---allow-access-to-your-pc-from-outside-your-pcs-network"></a>リモート デスクトップ - PC のネットワーク外部から PC へのアクセスを許可する
 
@@ -28,7 +28,7 @@ ms.locfileid: "87946435"
 
 ポートをマップする前に、次の項目が必要になります。
 
-- PC の内部 IP アドレス: **[設定] > [ネットワークとインターネット] > [ステータス] > [ネットワークのプロパティを表示]** を調べます。 [Operational] (操作可能) ステータスでネットワーク構成を検索し、**IPv4 アドレス**を取得します。
+- PC の内部 IP アドレス: **[設定] > [ネットワークとインターネット] > [ステータス] > [ネットワークのプロパティを表示]** を調べます。 [Operational] (操作可能) ステータスでネットワーク構成を検索し、**IPv4 アドレス** を取得します。
 
    ![運用ネットワーク構成](../media/rdclient-operational-network.png)
 
@@ -45,7 +45,7 @@ ms.locfileid: "87946435"
 
 ほとんどのルーターで、どのソース IP またはソース ネットワークがポート マッピングを使用できるかを定義できます。 したがって、社内からのみ接続することがわかっている場合は、社内ネットワークの IP アドレスを追加できます。これにより、パブリック インターネット全体にポートを開かずにすみます。 接続に使用しているホストが動的 IP アドレスを使用する場合、その特定の ISP の範囲全体からのアクセスを許可するように、ソースの制限を設定します。
 
-内部 IP アドレスが変更されないように、PC 上で[静的 IP アドレス](/windows-hardware/customize/mobile/mcsf/enable-static-ip)を設定することも検討できます。 これを行うと、ルーターのポート フォワーディングが常に正しい IP アドレスをポイントするようになります。
+内部 IP アドレスが変更されないように、PC 上で静的 IP アドレスを設定することも検討できます。 これを行うと、ルーターのポート フォワーディングが常に正しい IP アドレスをポイントするようになります。
 
 
 ## <a name="use-a-vpn"></a>VPN を使用する
