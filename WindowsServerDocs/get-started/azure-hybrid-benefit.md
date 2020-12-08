@@ -6,21 +6,20 @@ ms.topic: article
 author: eross-msft
 ms.author: chrisrin
 ms.localizationpriority: high
-ms.openlocfilehash: 7ad0b2e2d45a0bd74484c253cb0f92a7b5e491f3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a997f60d4b36d85a895dedd567560be4edcd4d98
+ms.sourcegitcommit: fa325ef993e62fba59de803d8998922db1cb1dc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972339"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96482583"
 ---
 # <a name="azure-hybrid-benefit-for-windows-server"></a>Windows Server 向け Azure ハイブリッド特典
 
->適用先:Windows Server
+> 適用対象:Windows Server 2019、Windows Server 2016、Windows Server 2012 R2
 
 ## <a name="benefit-description-rules-and-use-cases"></a>特典の説明、ルール、使用事例
 
-Windows Server 向け Azure ハイブリッド特典を利用すると、オンプレミスのソフトウェア アシュアランス付き Windows Server ライセンスを使用して、Azure で Windows Server VM のコストを最大 40% 節減できます。  この特典では、Windows Server のライセンス料金がソフトウェア アシュアランス特典でカバーされるため、お客様が支払うのは仮想マシンのインフラストラクチャのコストに対してのみです。  この特典は、Windows Server 2008R2、2012、2012R2、2016 リリースの Standard エディションと Datacenter エディションの両方に適用されます。  この特典は、すべての地域とソブリン クラウドで利用できます。
-
+Windows Server 向け Azure ハイブリッド特典を利用すると、オンプレミスのソフトウェア アシュアランス付き Windows Server ライセンスを使用して、Azure で Windows Server VM のコストを最大 40% 節減できます。  この特典では、Windows Server のライセンス料金がソフトウェア アシュアランス特典でカバーされるため、お客様が支払うのは仮想マシンのインフラストラクチャのコストに対してのみです。  特典は、Windows Server 2012 R2、Windows Server 2016、および Windows Server 2019 リリースの Standard エディションと Datacenter エディションの両方に適用されます。 この特典は、すべての地域とソブリン クラウドで利用できます。
 
 ![画像 1](media/ahb01.png)
 
