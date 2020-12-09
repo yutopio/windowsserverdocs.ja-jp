@@ -5,12 +5,12 @@ ms.author: billmath
 manager: daveba
 ms.date: 01/20/2020
 ms.topic: article
-ms.openlocfilehash: c306f901aba2991a238fb994117789d4a9a81a67
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fac086cdcc08cb8941eba1dda9f4c41058d1b5d2
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967129"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865071"
 ---
 # <a name="setting-up-an-ad-fs-deployment-with-alwayson-availability-groups"></a>AlwaysOn 可用性グループを使用した AD FS 展開の設定
 高可用性の geo 分散トポロジでは、次のことが実現されます。
@@ -22,7 +22,7 @@ AD FS は、高可用性の geo 分散シナリオ用に構成できます。
 
 ## <a name="overview---alwayson-availability-groups"></a>概要-AlwaysOn 可用性グループ
 
-AlwaysOn 可用性グループの詳細については、「 [AlwaysOn 可用性グループの概要」 (SQL Server)](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver15)を参照してください。
+AlwaysOn 可用性グループの詳細については、「 [AlwaysOn 可用性グループの概要」 (SQL Server)](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)を参照してください。
 
 AD FS SQL Server ファームのノードの観点からは、AlwaysOn 可用性グループは、1つの SQL Server インスタンスをポリシー/アーティファクトデータベースとして置き換えます。可用性グループリスナーは、クライアント (AD FS Security Token Service) が SQL に接続するために使用するものです。
 次の図は、AlwaysOn 可用性グループを使用したファーム SQL Server AD FS を示しています。
@@ -38,30 +38,30 @@ Always On 可用性グループ (AG) は、一緒にフェールオーバーす�
 > [!NOTE]
 > マシンが Azure 上で実行されている場合は、Azure 仮想マシンを設定して、リスナー構成が AlwaysOn 可用性グループと通信できるようにします。 詳細については、「 [Virtual Machines: SQL Always On リスナー](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener)」を参照してください。
 
-AlwaysOn 可用性グループの概要については、「 [Always On 可用性グループの概要 (SQL Server)](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver15)」を参照してください。
+AlwaysOn 可用性グループの概要については、「 [Always On 可用性グループの概要 (SQL Server)](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)」を参照してください。
 
 > [!NOTE]
-> 組織が複数のデータセンターでフェールオーバーを必要とする場合は、各データセンターにアーティファクトデータベースを作成し、要求の処理中の待機時間を短縮するバックグラウンドキャッシュを有効にすることをお勧めします。 指示に従って[SQL を微調整し、待機時間を短縮](./adfs-sql-latency.md)します。
+> 組織が複数のデータセンターでフェールオーバーを必要とする場合は、各データセンターにアーティファクトデータベースを作成し、要求の処理中の待機時間を短縮するバックグラウンドキャッシュを有効にすることをお勧めします。 指示に従って [SQL を微調整し、待機時間を短縮](./adfs-sql-latency.md)します。
 
 ## <a name="deployment-guidance"></a>展開のガイダンス
 
-1. <b>AD FS デプロイの目標に適したデータベースを検討してください。</b>AD FS は、データベースを使用して構成を格納します。また、場合によっては、フェデレーションサービスに関連するトランザクションデータを格納します。 AD FS ソフトウェアを使用すると、フェデレーションサービスにデータを格納するために、Windows Internal Database (WID) または Microsoft SQL Server 2008 以降のバージョンのいずれかを選択できます。
+1. <b> AD FS デプロイの目標に適したデータベースを検討してください。 </b> AD FS は、データベースを使用して構成を格納します。また、場合によっては、フェデレーションサービスに関連するトランザクションデータを格納します。 AD FS ソフトウェアを使用すると、フェデレーションサービスにデータを格納するために、Windows Internal Database (WID) または Microsoft SQL Server 2008 以降のバージョンのいずれかを選択できます。
 次の表では、WID と SQL データベース間でサポートされる機能の違いについて説明します。
 
 
-| カテゴリ      | 機能       | WID でサポート  | サポート対象 (SQL) |
+| カテゴリ      | 特徴量       | WID でサポート  | サポート対象 (SQL) |
 | ------------------ |:-------------:| :---:|:---: |
-| AD FS 機能     | フェデレーション サーバー ファーム展開 | はい  | はい |
+| AD FS 機能     | フェデレーション サーバー ファーム展開 | はい  | Yes |
 | AD FS 機能     | SAML アーティファクト解決。 注: これは、SAML アプリケーションでは一般的ではありません。     |   いいえ | はい  |
 | AD FS 機能 | SAML/WS-FEDERATION トークンリプレイ検出。 注: AD FS が外部 IDPs からトークンを受信する場合にのみ必要です。 AD FS がフェデレーションパートナーとして機能していない場合は、この操作は必要ありません。      |    いいえ  | はい |
 | データベース機能     |   プルレプリケーションを使用した基本的なデータベース冗長化 (データベースの読み取り専用コピーをホストしている1つ以上のサーバーが、データベースの読み取り/書き込みコピーをホストする、ソースサーバーで変更を要求する)    |   いいえ | いいえ  |
 | データベース機能 | クラスター化やミラーリング (データベース層での) などの高可用性ソリューションを使用したデータベースの冗長性      |    いいえ  | はい |
-| 追加機能 | OAuth Authcode のシナリオ     |   はい  | はい |
+| 追加機能 | OAuth Authcode のシナリオ     |   はい  | Yes |
 
 100を超える信頼関係を持つ大規模な組織で、内部ユーザーと外部ユーザーの両方にフェデレーションアプリケーションまたはサービスへのシングルサインオンアクセスを提供する必要がある場合は、SQL を使用することをお勧めします。
 
 構成されている信頼関係が100以下の組織の場合、WID はデータとフェデレーションサービスの冗長性を提供します (各フェデレーションサーバーは、同じファーム内の他のフェデレーションサーバーに変更をレプリケートします)。 WID は、トークンリプレイ検出またはアーティファクトの解決をサポートしておらず、最大で30個のフェデレーションサーバーをサポートしています。
-デプロイの計画の詳細については、[こちら](../design/planning-your-deployment.md)を参照してください。
+デプロイの計画の詳細については、 [こちら](../design/planning-your-deployment.md)を参照してください。
 
 ## <a name="sql-server-high-availability-solutions"></a>高可用性ソリューションの SQL Server
 SQL Server を AD FS 構成データベースとして使用している場合は、SQL Server レプリケーションを使用して、AD FS ファームの geo 冗長性を設定できます。 Geo 冗長性は、アプリケーションがあるサイトから別のサイトに切り替えることができるように、地理的に離れた2つのサイト間でデータをレプリケートします。 これにより、1つのサイトで障害が発生した場合でも、2番目のサイトですべての構成データを使用できるようになります。 
@@ -94,7 +94,7 @@ SQL が配置の目標に適したデータベースの場合は、このデプ�
 
 ## <a name="configuring-ad-fs-to-use-an-alwayson-availability-group"></a>AlwaysOn 可用性グループを使用するように AD FS を構成する
 
-AlwaysOn 可用性グループを使用して AD FS ファームを構成するには、AD FS の展開手順を少し変更する必要があります。 各サーバーインスタンスで、同じバージョンの SQL が実行されていることを確認します。 Always On 可用性グループの前提条件、制限事項、および推奨事項の完全な一覧については、[こちら](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-2017#PrerequisitesForDbs)を参照してください。
+AlwaysOn 可用性グループを使用して AD FS ファームを構成するには、AD FS の展開手順を少し変更する必要があります。 各サーバーインスタンスで、同じバージョンの SQL が実行されていることを確認します。 Always On 可用性グループの前提条件、制限事項、および推奨事項の完全な一覧については、 [こちら](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-2017#PrerequisitesForDbs)を参照してください。
 
 1.  バックアップするデータベースは、AlwaysOn 可用性グループを構成する前に作成しておく必要があります。  AD FS は、新しい AD FS SQL Server ファームの最初のフェデレーションサービスノードのセットアップと初期構成の一部としてデータベースを作成します。  SQL server を使用して、既存のファームのデータベースホスト名を指定します。 AD FS 構成の一部として、SQL 接続文字列を指定する必要があります。そのため、最初の AD FS ファームが SQL インスタンスに直接接続するように構成する必要があります (これは一時的なものです)。 SQL server 接続文字列を使用した AD FS ファームノードの構成など、AD FS ファームの構成に関する具体的なガイダンスについては、「 [Configure a Federation server](../deployment/configure-a-federation-server.md)」を参照してください。
 
@@ -146,7 +146,7 @@ Windows server フェールオーバークラスターの役割では、Windows 
 6. [確認] ページで、[次へ] を選択します。
 検証ページに、実行されているテストのステータスが表示されます。
 7. [概要] ページで、次のいずれかの操作を実行します。
-- テストが正常に完了し、構成がクラスタリングに適していることを確認し、クラスターをすぐに作成する場合は、[検証されたノードを使用してクラスターを今すぐ作成する] チェックボックスがオンになっていることを確認し、[完了] を選択します。 次に、「[フェールオーバークラスターの作成](../../../failover-clustering/create-failover-cluster.md#create-the-failover-cluster)」の手順4に進みます。
+- テストが正常に完了し、構成がクラスタリングに適していることを確認し、クラスターをすぐに作成する場合は、[検証されたノードを使用してクラスターを今すぐ作成する] チェックボックスがオンになっていることを確認し、[完了] を選択します。 次に、「 [フェールオーバークラスターの作成](../../../failover-clustering/create-failover-cluster.md#create-the-failover-cluster)」の手順4に進みます。
 
 ![構成画像の検証](media/ad-fs-always-on/clusterValidationResults.png)
 
@@ -171,7 +171,7 @@ Windows server フェールオーバークラスターの役割では、Windows 
 > [!NOTE]
 > [構成の検証手順](../../../failover-clustering/create-failover-cluster.md#validate-the-configuration)で検証を実行した直後にクラスターを作成することを選択した場合、[サーバーの選択] ページは表示されません。 検証済みのノードはクラスターの作成ウィザードに自動的に追加されるため、それらをもう一度入力する必要はありません。
 
-6.  検証を省略した場合、[検証の警告] ページが表示されます。 クラスター検証を実行することを強くお勧めします。 Microsoft によってサポートされるのは、すべての検証テストに合格したクラスターのみです。 検証テストを実行するには、[はい] を選択し、[次へ] を選択します。 「[構成の検証](../../../failover-clustering/create-failover-cluster.md#validate-the-configuration)」の説明に従って、構成の検証ウィザードを完了します。
+6.  検証を省略した場合、[検証の警告] ページが表示されます。 クラスター検証を実行することを強くお勧めします。 Microsoft によってサポートされるのは、すべての検証テストに合格したクラスターのみです。 検証テストを実行するには、[はい] を選択し、[次へ] を選択します。 「 [構成の検証](../../../failover-clustering/create-failover-cluster.md#validate-the-configuration)」の説明に従って、構成の検証ウィザードを完了します。
 7.  [クラスター管理用のアクセス ポイント] ページで、次の手順に従います。
 -   [クラスター名] ボックスに、クラスターを管理するために使用する名前を入力します。 この操作の前に、次の情報を参照してください。
  -  クラスターの作成中に、この名前はクラスター コンピューター オブジェクト ( クラスター名オブジェクト または CNOとも呼ぶ) として AD DS に登録されます。 クラスターの NetBIOS 名を指定した場合、CNO はクラスター ノードのコンピューター オブジェクトが存在する場所に作成されます。 これは既定のコンピューター コンテナーまたは OU です。
@@ -216,18 +216,18 @@ ADFS アーティファクトと構成データベースをバックアップし
 3.  新しい可用性グループ ウィザードを起動するには、[新しい可用性グループ ウィザード] をクリックします。
 4.  このウィザードの初回実行時には、[説明] ページが表示されます。 今後このページを省略するには、[次回からこのページを表示しない] をクリックします。 このページの内容を確認してから、[次へ] をクリックします。
 5.  [可用性グループ オプションの指定] ページの [可用性グループ名] フィールドに、新しい可用性グループの名前を入力します。 この名前は、クラスターおよびドメイン全体で一意の有効な SQL Server 識別子である必要があります。 可用性グループ名の最大文字数は 128 文字です。 e
-6.  次に、クラスター タイプを指定します。 使用できるクラスターの種類は、SQL Server のバージョンとオペレーティングシステムによって異なります。 WSFC、EXTERNAL、NONE のいずれかを選択してください。 詳細については、「[可用性グループ名の指定](/sql/database-engine/availability-groups/windows/specify-availability-group-name-page?view=sql-server-ver15)」ページを参照してください。
+6.  次に、クラスター タイプを指定します。 使用できるクラスターの種類は、SQL Server のバージョンとオペレーティングシステムによって異なります。 WSFC、EXTERNAL、NONE のいずれかを選択してください。 詳細については、「 [可用性グループ名の指定](/sql/database-engine/availability-groups/windows/specify-availability-group-name-page) 」ページを参照してください。
 
 ![名前 AoA グループとクラスター](media/ad-fs-always-on/createAoAName.png)
 
 7.  [データベースの選択] ページのグリッドに、接続されているサーバー インスタンス上の可用性データベースとして利用できるユーザー データベースが一覧表示されます。 新しい可用性グループに追加する 1 つまたは複数のデータベースを一覧から選択します。 これらのデータベースが初期プライマリ データベースとなります。
-一覧の各データベースの [サイズ] 列には、データベースのサイズが表示されます (わかっている場合)。 Status 列は、指定されたデータベースが可用性データベースの[前提条件](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-ver15)を満たしているかどうかを示します。 前提条件が満たされていない場合は、簡単な状態説明によって、データベースが不適格である理由が示されます (完全復旧モデルを使用していない、など)。 詳細については、状態の説明をクリックしてください。
+一覧の各データベースの [サイズ] 列には、データベースのサイズが表示されます (わかっている場合)。 Status 列は、指定されたデータベースが可用性データベースの [前提条件](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability) を満たしているかどうかを示します。 前提条件が満たされていない場合は、簡単な状態説明によって、データベースが不適格である理由が示されます (完全復旧モデルを使用していない、など)。 詳細については、状態の説明をクリックしてください。
 要件を満たすようにデータベースを変更した場合は、[更新] をクリックして、データベース グリッドを最新の情報に更新します。
 データベースにデータベース マスター キーが含まれている場合、[パスワード] 列にデータベース マスター キーのパスワードを入力します。
 
 ![AoA のデータベースの選択](media/ad-fs-always-on/createAoASelectDb.png)
 
-8. [レプリカの指定] ページで、新しい可用性グループの1つまたは複数のレプリカを指定して構成します。 このページには、4 つのタブがあります。 次の表では、これらのタブについて説明します。 詳細については、「[[レプリカの指定] ページ (新しい可用性グループウィザード: レプリカの追加ウィザード)](/sql/database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard?view=sql-server-ver15) 」を参照してください。
+8. [レプリカの指定] ページで、新しい可用性グループの1つまたは複数のレプリカを指定して構成します。 このページには、4 つのタブがあります。 次の表では、これらのタブについて説明します。 詳細については、「[ [レプリカの指定] ページ (新しい可用性グループウィザード: レプリカの追加ウィザード)](/sql/database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard) 」を参照してください。
 
 | タブ      | 簡単な説明       |
 | ------------------ |:-------------:|
@@ -240,15 +240,15 @@ ADFS アーティファクトと構成データベースをバックアップし
 
 9. [最初のデータの同期を選択] ページで、新しいセカンダリ データベースを作成して可用性グループに参加させる方法を選択します。 次のいずれかのオプションを選択します。
 -   自動シード処理
- - グループの各データベースのセカンダリ レプリカが SQL Server で自動的に作成されます。 自動シード処理には、データとログ ファイルのパスが、グループに参加しているすべての SQL Server インスタンスで同じである必要があります。 SQL Server 2016 (13. x) 以降で使用できます。 「 [Always On 可用性グループを自動的に初期化](/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group?view=sql-server-ver15)する」を参照してください。
+ - グループの各データベースのセカンダリ レプリカが SQL Server で自動的に作成されます。 自動シード処理には、データとログ ファイルのパスが、グループに参加しているすべての SQL Server インスタンスで同じである必要があります。 SQL Server 2016 (13. x) 以降で使用できます。 「 [Always On 可用性グループを自動的に初期化](/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)する」を参照してください。
 - [完全なデータベースとログ バックアップ]
- - 環境が初期データの同期を自動的に開始するための要件を満たしている場合は、このオプションを選択します (詳細については、[このトピックの「前提条件、制限事項、および推奨事項](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio?view=sql-server-ver15#Prerequisites)」を参照してください)。
+ - 環境が初期データの同期を自動的に開始するための要件を満たしている場合は、このオプションを選択します (詳細については、 [このトピックの「前提条件、制限事項、および推奨事項](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio#Prerequisites)」を参照してください)。
 [完全]を選択すると、可用性グループを作成後、ウィザードはすべてのプライマリ データベースとそのトランザクション ログをネットワーク共有にバックアップし、セカンダリ レプリカをホストするすべてのサーバー インスタンスでそのバックアップを復元します。 その後、ウィザードは、すべてのセカンダリ データベースを可用性グループに参加させます。
 [すべてのレプリカからアクセス可能な共有ネットワーク場所を指定] フィールドで、レプリカをホストするサーバー インスタンスが読み取り/書き込み権限を持つバックアップ共有を指定します。 詳細については、このトピックの「前提条件」をご覧ください。 検証手順で、指定されたネットワークの場所が有効であることを確認するテストが行われます。このテストにより、プライマリ レプリカにデータベースが作成されますが、その名前は "BackupLocDb_" に GUID を続ける方式で付けられます。さらに、指定されたネットワークの場所にバックアップが実行され、セカンダリ レプリカでそれが復元されます。 このデータベースがウィザードで削除できなかった場合、そのバックアップ履歴とバックアップ ファイルと共に削除しておくことをお勧めします。
 - [参加のみ]
  - セカンダリ レプリカをホストするサーバー インスタンス上のセカンダリ データベースを手動で準備した場合は、このオプションを選択できます。 ウィザードは、既存のセカンダリ データベースを可用性グループに参加させます。
 - [最初のデータの同期をスキップ]
- - プライマリ データベースの独自のデータベースとログ バックアップを使用する場合は、このオプションを選択します。 詳細については、「 [Always On セカンダリデータベースでのデータ移動の開始」 (SQL Server)](/sql/database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server?view=sql-server-ver15)を参照してください。
+ - プライマリ データベースの独自のデータベースとログ バックアップを使用する場合は、このオプションを選択します。 詳細については、「 [Always On セカンダリデータベースでのデータ移動の開始」 (SQL Server)](/sql/database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server)を参照してください。
 
 ![データ同期オプションの選択](media/ad-fs-always-on/createAoADataSync.png)
 

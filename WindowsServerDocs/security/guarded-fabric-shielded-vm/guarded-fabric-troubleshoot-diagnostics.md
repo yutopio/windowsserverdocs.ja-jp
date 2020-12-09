@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/14/2020
-ms.openlocfilehash: 40381a08c22c8b559fbf2b7da8e8151e91c77718
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 5aa8b0f93a98e9cbf142476e6b05056d9a47eefd
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995368"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864811"
 ---
 # <a name="troubleshooting-using-the-guarded-fabric-diagnostic-tool"></a>保護されたファブリック診断ツールを使用したトラブルシューティング
 
@@ -19,7 +19,7 @@ ms.locfileid: "87995368"
 
 このトピックでは、保護されたファブリックのインフラストラクチャのデプロイ、構成、および実行中の操作の一般的なエラーを特定して修復するための、保護されたファブリック診断ツールの使用方法について説明します。 これには、ホストガーディアンサービス (HGS)、保護されたすべてのホスト、および DNS や Active Directory などのサポートサービスが含まれます。 診断ツールを使用すると、保護されていないファブリックの方針に従って、管理者が障害を解決し、正しく構成されていない資産を特定できるようになります。 このツールは、保護されたファブリックの運用を音で区別するためのものではなく、日常の操作中に発生した最も一般的な問題を迅速に検証するためにのみ機能します。
 
-この記事で使用されているコマンドレットの完全なドキュメントについては、 [HgsDiagnostics モジュールリファレンスを参照](/powershell/module/hgsdiagnostics/?view=win10-ps)してください。
+この記事で使用されているコマンドレットの完全なドキュメントについては、 [HgsDiagnostics モジュールリファレンスを参照](/powershell/module/hgsdiagnostics/)してください。
 
 [!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)]
 
@@ -44,7 +44,7 @@ Get-HgsTrace -RunDiagnostics -Detailed
 3. Fabric Management 用の VM シールド ツール
 4. リモート サーバー管理ツール (RSAT)
 
-つまり、診断ツールは、すべての保護されたホスト、HGS ノード、特定のファブリック管理サーバー、 [RSAT](https://www.microsoft.com/download/details.aspx?id=45520)がインストールされているすべての Windows 10 ワークステーションで使用できるようになります。  保護されたファブリックの保護されたホストまたは HGS ノードを診断する目的で、上記のいずれかのコンピューターから診断を呼び出すことができます。リモートトレースターゲットを使用すると、診断を実行しているコンピューター以外のホストを検出して接続できます。
+つまり、診断ツールは、すべての保護されたホスト、HGS ノード、特定のファブリック管理サーバー、 [RSAT](https://www.microsoft.com/download/details.aspx?id=45520) がインストールされているすべての Windows 10 ワークステーションで使用できるようになります。  保護されたファブリックの保護されたホストまたは HGS ノードを診断する目的で、上記のいずれかのコンピューターから診断を呼び出すことができます。リモートトレースターゲットを使用すると、診断を実行しているコンピューター以外のホストを検出して接続できます。
 
 診断の対象となるすべてのホストは、"トレースターゲット" と呼ばれます。  トレースターゲットは、ホスト名とロールによって識別されます。  ロールは、保護されたファブリックで特定のトレースターゲットが実行する関数を記述します。  現在、トレースターゲットは `HostGuardianService` との役割をサポートして `GuardedHost` います。  注ホストは一度に複数のロールを占有することができ、これは診断でもサポートされますが、これは運用環境では実行できません。  HGS ホストと Hyper-v ホストは常に個別に保持する必要があります。
 
@@ -66,14 +66,14 @@ Get-HgsTrace -RunDiagnostics -Detailed
 
 診断では、特定のエラーの原因となっているトレースターゲット、診断セット、および個々の診断を示す階層形式で結果が得られます。  エラーには、次に実行するアクションを決定する際に、修復と解決策に関する推奨事項が含まれます。  既定では、渡された結果と無関係の結果は非表示になります。  診断によってテストされたすべてを表示するには、スイッチを指定し `-Detailed` ます。  これにより、状態に関係なくすべての結果が表示されます。
 
-パラメーターを使用して実行される診断のセットを制限することができ `-Diagnostic` ます。  これにより、トレースターゲットに対して実行する診断のクラスを指定し、他のすべての診断を抑制することができます。  使用可能な診断クラスの例としては、ネットワーク、ベストプラクティス、クライアントハードウェアなどがあります。  使用可能な診断の最新の一覧については、[コマンドレットのドキュメント](https://technet.microsoft.com/library/mt718831.aspx)を参照してください。
+パラメーターを使用して実行される診断のセットを制限することができ `-Diagnostic` ます。  これにより、トレースターゲットに対して実行する診断のクラスを指定し、他のすべての診断を抑制することができます。  使用可能な診断クラスの例としては、ネットワーク、ベストプラクティス、クライアントハードウェアなどがあります。  使用可能な診断の最新の一覧については、 [コマンドレットのドキュメント](https://technet.microsoft.com/library/mt718831.aspx) を参照してください。
 
 > [!WARNING]
 > 診断は、強力な監視とインシデント対応のパイプラインに代わるものではありません。  保護されたファブリックの監視に使用できる System Center Operations Manager パッケージと、問題を早期に検出するために監視できるさまざまなイベントログチャネルがあります。  診断を使用して、これらの障害を迅速にトリアージし、一連の措置を取ることができます。
 
 ## <a name="targeting-diagnostics"></a>診断のターゲット設定
 
-`Get-HgsTrace`トレースターゲットに対して動作します。  トレースターゲットは、保護されたファブリック内の HGS ノードまたは保護されたホストに対応するオブジェクトです。  これは、 `PSSession` ファブリック内のホストの役割などの診断でのみ必要な情報を含む、の拡張機能と考えることができます。  ターゲットは、暗黙的に生成する (ローカル診断や手動診断など) ことも、コマンドを使用して明示的に生成することもでき `New-HgsTraceTarget` ます。
+`Get-HgsTrace` トレースターゲットに対して動作します。  トレースターゲットは、保護されたファブリック内の HGS ノードまたは保護されたホストに対応するオブジェクトです。  これは、 `PSSession` ファブリック内のホストの役割などの診断でのみ必要な情報を含む、の拡張機能と考えることができます。  ターゲットは、暗黙的に生成する (ローカル診断や手動診断など) ことも、コマンドを使用して明示的に生成することもでき `New-HgsTraceTarget` ます。
 
 ### <a name="local-diagnosis"></a>ローカル診断
 
@@ -94,7 +94,7 @@ New-HgsTraceTarget -Local | Get-HgsTrace
 ```
 
 > [!TIP]
-> `Get-HgsTrace`は、パイプライン経由で、またはパラメーターを使用して直接、ターゲットを受け入れることができ `-Target` ます。  2つの運用の間に違いはありません。
+> `Get-HgsTrace` は、パイプライン経由で、またはパラメーターを使用して直接、ターゲットを受け入れることができ `-Target` ます。  2つの運用の間に違いはありません。
 
 ### <a name="remote-diagnosis-using-trace-targets"></a>トレースターゲットを使用したリモート診断
 
@@ -103,12 +103,12 @@ New-HgsTraceTarget -Local | Get-HgsTrace
 $server = New-HgsTraceTarget -HostName "hgs-01.secure.contoso.com" -Role HostGuardianService -Credential (Enter-Credential)
 Get-HgsTrace -RunDiagnostics -Target $server
 ```
-この例では、リモートユーザーの資格情報を収集するためのプロンプトが生成されます。その後、のリモートホストを使用して診断が実行され、 `hgs-01.secure.contoso.com` トレースコレクションが完了します。  結果のトレースは localhost にダウンロードされ、診断されます。  診断の結果は、[ローカル診断](#local-diagnosis)を実行する場合と同じように表示されます。  同様に、役割は、リモートシステムにインストールされている Windows PowerShell モジュールに基づいて推論できるため、指定する必要はありません。
+この例では、リモートユーザーの資格情報を収集するためのプロンプトが生成されます。その後、のリモートホストを使用して診断が実行され、 `hgs-01.secure.contoso.com` トレースコレクションが完了します。  結果のトレースは localhost にダウンロードされ、診断されます。  診断の結果は、 [ローカル診断](#local-diagnosis)を実行する場合と同じように表示されます。  同様に、役割は、リモートシステムにインストールされている Windows PowerShell モジュールに基づいて推論できるため、指定する必要はありません。
 
-リモート診断では、リモートホストへのすべてのアクセスに Windows PowerShell リモート処理を利用します。  そのため、トレースターゲットで Windows PowerShell リモート処理が有効に[なっている](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7)ことと、ターゲットへの接続を開始するために localhost が適切に構成されていることが前提条件となります。
+リモート診断では、リモートホストへのすべてのアクセスに Windows PowerShell リモート処理を利用します。  そのため、トレースターゲットで Windows PowerShell リモート処理が有効に [なっている](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7)ことと、ターゲットへの接続を開始するために localhost が適切に構成されていることが前提条件となります。
 
 > [!NOTE]
-> ほとんどの場合、localhost は同じ Active Directory フォレストの一部であり、有効な DNS ホスト名が使用されている必要があります。  環境でより複雑なフェデレーションモデルを使用している場合、または接続に直接 IP アドレスを使用する場合は、WinRM の[信頼さ](/previous-versions/technet-magazine/ff700227(v=msdn.10))れたホストの設定など、追加の構成を実行することが必要になる場合があります。
+> ほとんどの場合、localhost は同じ Active Directory フォレストの一部であり、有効な DNS ホスト名が使用されている必要があります。  環境でより複雑なフェデレーションモデルを使用している場合、または接続に直接 IP アドレスを使用する場合は、WinRM の [信頼さ](/previous-versions/technet-magazine/ff700227(v=msdn.10))れたホストの設定など、追加の構成を実行することが必要になる場合があります。
 
 コマンドレットを使用して、トレースターゲットが適切にインスタンス化され、接続を受け入れるように構成されていることを確認でき `Test-HgsTraceTarget` ます。
 ```PowerShell
@@ -122,7 +122,7 @@ $server | Test-HgsTraceTarget
 トレースターゲットにリモート接続するための十分な特権を持つユーザーからリモート診断を実行する場合、資格情報をに指定する必要はありません `New-HgsTraceTarget` 。  コマンドレットで `Get-HgsTrace` は、接続を開くときに、コマンドレットを呼び出したユーザーの資格情報が自動的に再利用されます。
 
 > [!WARNING]
-> 特に "2 番目のホップ" と呼ばれるものを実行する場合、資格情報の再利用にはいくつかの制限が適用されます。  このエラーは、リモートセッション内から別のコンピューターに資格情報を再利用しようとした場合に発生します。  このシナリオをサポートするには[CredSSP をセットアップ](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7)する必要がありますが、これは、保護されたファブリック管理とトラブルシューティングの範囲外です。
+> 特に "2 番目のホップ" と呼ばれるものを実行する場合、資格情報の再利用にはいくつかの制限が適用されます。  このエラーは、リモートセッション内から別のコンピューターに資格情報を再利用しようとした場合に発生します。  このシナリオをサポートするには [CredSSP をセットアップ](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7) する必要がありますが、これは、保護されたファブリック管理とトラブルシューティングの範囲外です。
 
 #### <a name="using-windows-powershell-just-enough-administration-jea-and-diagnostics"></a>Windows PowerShell を使用するだけで十分な管理 (JEA) と診断
 
@@ -162,7 +162,7 @@ Get-HgsTrace -Target $hgs01,$hgs02,$gh01,$gh02 -RunDiagnostics
 
 手動診断を実行する手順は次のとおりです。
 
-1. 各ホスト管理者に対して、 `Get-HgsTrace` `-Path` 結果として生成されるトレースに対して実行する診断の既知の一覧と、そのリストを指定して実行するよう要求します。  例:
+1. 各ホスト管理者に対して、 `Get-HgsTrace` `-Path` 結果として生成されるトレースに対して実行する診断の既知の一覧と、そのリストを指定して実行するよう要求します。  次に例を示します。
 
    ```PowerShell
    Get-HgsTrace -Path C:\Traces -Diagnostic Networking,BestPractices
@@ -188,7 +188,7 @@ Get-HgsTrace -Target $hgs01,$hgs02,$gh01,$gh02 -RunDiagnostics
          |- [..]
       ```
 
-4. 診断を実行します。パラメーターでアセンブルされたトレースフォルダーへのパスを `-Path` 指定し、 `-RunDiagnostics` スイッチと、トレースの収集を管理者に依頼した診断を指定します。  診断では、パス内に存在するホストにアクセスできないと見なし、事前に収集されたトレースのみを使用しようとします。  トレースが見つからないか破損している場合、診断は影響を受けるテストのみを失敗として正常に続行します。  例:
+4. 診断を実行します。パラメーターでアセンブルされたトレースフォルダーへのパスを `-Path` 指定し、 `-RunDiagnostics` スイッチと、トレースの収集を管理者に依頼した診断を指定します。  診断では、パス内に存在するホストにアクセスできないと見なし、事前に収集されたトレースのみを使用しようとします。  トレースが見つからないか破損している場合、診断は影響を受けるテストのみを失敗として正常に続行します。  次に例を示します。
 
    ```PowerShell
    Get-HgsTrace -RunDiagnostics -Diagnostic Networking,BestPractices -Path ".\FabricTraces"

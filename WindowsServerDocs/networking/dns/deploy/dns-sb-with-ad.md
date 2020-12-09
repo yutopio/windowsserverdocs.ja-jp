@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: f9533204-ad7e-4e49-81c1-559324a16aeb
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 4aa18e3f93cdb0a50cac3db697a10dd40c1f05e0
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 423debd6538e2de8de7e2919e18e7da39fe8c733
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996912"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865331"
 ---
 # <a name="use-dns-policy-for-split-brain-dns-in-active-directory"></a>Active Directory でスプリット ブレイン DNS に DNS ポリシーを使用する
 
@@ -25,7 +25,7 @@ Windows Server 2016 では、DNS ポリシーのサポートは、統合され�
 
 > [!NOTE]
 > - DNS 展開は \- 、1つのゾーンに2つのバージョンがあり、組織のイントラネット上の内部ユーザーに1つのバージョンと、外部ユーザー (通常はインターネット上のユーザー) の1つのバージョンがある場合に分割されます。
-> - トピック「[スプリットブレイン Dns 展開に Dns ポリシーを使用](split-brain-DNS-deployment.md)する」では、dns ポリシーとゾーンスコープを使用して、SPLIT \- ブレイン dns システムを単一の WINDOWS server 2016 DNS サーバーに展開する方法について説明します。
+> - トピック「 [Split-Brain dns の展開に Dns ポリシーを使用](split-brain-DNS-deployment.md) する」では、dns ポリシーとゾーンのスコープを使用して、 \- 単一の WINDOWS server 2016 dns サーバーに分割ブレイン dns システムを展開する方法について説明します。
 
 ## <a name="example-split-brain-dns-in-active-directory"></a>\-Active Directory での分割ブレイン DNS の例
 
@@ -48,7 +48,7 @@ Dns 管理者は、次の IP アドレスを使用して DNS サーバーイン�
 
 次の図は、このシナリオを示しています。
 
-![スプリットブレイン AD 統合 DNS の展開](../../media/DNS-SB-AD/DNS-SB-AD.jpg)
+![AD 統合 DNS 展開の Split-Brain](../../media/DNS-SB-AD/DNS-SB-AD.jpg)
 
 ## <a name="how-dns-policy-for-split-brain-dns-in-active-directory-works"></a>Active Directory の Split ブレイン DNS の DNS ポリシーの \- しくみ
 
@@ -75,12 +75,12 @@ $policies |  Add-DnsServerQueryResolutionPolicy -ZoneName "contoso.com" -Compute
 
 詳細については、次の Windows PowerShell のリファレンストピックを参照してください。
 
-- [DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/get-dnsserverqueryresolutionpolicy?view=win10-ps)
-- [DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)
+- [DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/get-dnsserverqueryresolutionpolicy)
+- [DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy)
 
 ## <a name="how-to-configure-dns-policy-for-split-brain-dns-in-active-directory"></a>\-Active Directory で Split ブレイン dns の Dns ポリシーを構成する方法
 
-Dns ポリシーを使用して DNS スプリットブレイン展開を構成するには、次のセクションを使用する必要があります。これらのセクションでは、詳細な構成手順を説明します。
+Dns ポリシーを使用して DNS Split-Brain の展開を構成するには、次のセクションを使用する必要があります。詳細な構成手順については、「」を参照してください。
 
 ### <a name="add-the-active-directory-integrated-zone"></a>Active Directory 統合ゾーンを追加する
 
@@ -90,7 +90,7 @@ Dns ポリシーを使用して DNS スプリットブレイン展開を構成�
 Add-DnsServerPrimaryZone -Name "contoso.com" -ReplicationScope "Domain" -PassThru
 ```
 
-詳細については、「[デモンストレーション](/powershell/module/dnsserver/add-dnsserverprimaryzone?view=win10-ps)」を参照してください。
+詳細については、「 [デモンストレーション](/powershell/module/dnsserver/add-dnsserverprimaryzone)」を参照してください。
 
 ### <a name="create-the-scopes-of-the-zone"></a>ゾーンのスコープを作成します。
 
@@ -108,7 +108,7 @@ Add-DnsServerPrimaryZone -Name "contoso.com" -ReplicationScope "Domain" -PassThr
 Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "external"
 ```
 
-詳細については、「 [DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)」を参照してください。
+詳細については、「 [DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope)」を参照してください。
 
 ### <a name="add-records-to-the-zone-scopes"></a>レコードをゾーンのスコープに追加します。
 
@@ -116,7 +116,7 @@ Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "external"
 
 既定の内部ゾーンスコープでは、レコード www.career.contoso.com は、プライベート IP アドレスである IP アドレス10.0.0.39 を使用して追加されます。外部ゾーンスコープでは、同じレコード \( www.career.contoso.com \) がパブリック IP アドレス65.55.39.10 と共に追加されます。
 
-既定の \( 内部ゾーンスコープと外部ゾーンスコープの両方のレコードは、 \) それぞれのゾーンスコープと共にドメイン全体に自動的にレプリケートされます。
+既定の \( 内部ゾーンスコープと外部ゾーンスコープの両方のレコードは、 \)  それぞれのゾーンスコープと共にドメイン全体に自動的にレプリケートされます。
 
 次のコマンド例を使用すると、DNS サーバーのゾーンスコープにレコードを追加できます。
 
@@ -126,9 +126,9 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 ```
 
 > [!NOTE]
-> レコードが既定のゾーンのスコープに追加される場合、 **–ゾーン範囲ゾーン**パラメーターは含まれません。 この操作は、通常のゾーンにレコードを追加することと同じです。
+> レコードが既定のゾーンのスコープに追加される場合、 **–ゾーン範囲ゾーン** パラメーターは含まれません。 この操作は、通常のゾーンにレコードを追加することと同じです。
 
-詳細については、次を参照してください。 [追加 DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord)します。
 
 ### <a name="create-the-dns-policies"></a>DNS のポリシーを作成します。
 
@@ -149,7 +149,7 @@ Add-DnsServerQueryResolutionPolicy -Name "SplitBrainZonePolicy" -Action ALLOW -S
 > [!NOTE]
 > 208.84.0.53 は、パブリックネットワークインターフェイスの IP アドレスです。
 
-詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy)します。
 
 これで、Active Directory 統合された DNS ゾーンを持つスプリットブレインネームサーバーに必要な DNS ポリシーを使用して、DNS サーバーが構成されました。
 

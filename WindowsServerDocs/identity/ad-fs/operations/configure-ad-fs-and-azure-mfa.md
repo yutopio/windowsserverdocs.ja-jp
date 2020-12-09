@@ -6,12 +6,12 @@ author: billmath
 manager: mtillman
 ms.date: 01/28/2019
 ms.topic: article
-ms.openlocfilehash: 5847b2fe6846fb4f89dcb0239167ea2ce55af1e0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dc2ab294e0e42bf640b5fb9b0159314a0373fe0d
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966839"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864921"
 ---
 # <a name="configure-azure-mfa-as-authentication-provider-with-ad-fs"></a>AD FS を使用して Azure MFA を認証プロバイダーとして構成する
 
@@ -74,8 +74,8 @@ AD FS での認証に Azure MFA を使用する場合は、次の前提条件が
    - サーバーは、ポート443経由で次の Url と通信できる必要があります。
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
-- オンプレミス環境は[Azure AD とフェデレーションされます。](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs)
-- Windows [PowerShell 用 windows Azure Active Directory モジュール](/powershell/module/azuread/?view=azureadps-2.0)。
+- オンプレミス環境は [Azure AD とフェデレーションされます。](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs)
+- Windows [PowerShell 用 windows Azure Active Directory モジュール](/powershell/module/azuread/)。
 - Azure AD PowerShell を使用して構成する Azure AD インスタンスのグローバル管理者のアクセス許可。
 - Azure MFA の AD FS ファームを構成するためのエンタープライズ管理者の資格情報。
 
@@ -84,7 +84,7 @@ AD FS での認証に Azure MFA を使用する場合は、次の前提条件が
 AD FS のために Azure MFA の構成を完了するには、説明されている手順を使用して各 AD FS サーバーを構成する必要があります。
 
 >[!NOTE]
->ファーム内の**すべて**の AD FS サーバーでこれらの手順が実行されていることを確認します。 ファーム内に複数の AD FS サーバーがある場合は Azure AD PowerShell を使用して必要な構成をリモートで実行できます。
+>ファーム内の **すべて** の AD FS サーバーでこれらの手順が実行されていることを確認します。 ファーム内に複数の AD FS サーバーがある場合は Azure AD PowerShell を使用して必要な構成をリモートで実行できます。
 
 ### <a name="step-1-generate-a-certificate-for-azure-mfa-on-each-ad-fs-server-using-the-new-adfsazuremfatenantcertificate-cmdlet"></a>手順 1: コマンドレットを使用して、各 AD FS サーバーで Azure MFA の証明書を生成する `New-AdfsAzureMfaTenantCertificate`
 
@@ -116,9 +116,9 @@ AD FS サーバーが Azure Multi-factor Auth クライアントと通信でき�
 
 ## <a name="configure-the-ad-fs-farm"></a>AD FS ファームの構成
 
-各 AD FS サーバーで前のセクションを完了したら、 [AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata)コマンドレットを使用して Azure テナント情報を設定します。 このコマンドレットは、AD FS ファームに対して1回だけ実行する必要があります。
+各 AD FS サーバーで前のセクションを完了したら、 [AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) コマンドレットを使用して Azure テナント情報を設定します。 このコマンドレットは、AD FS ファームに対して1回だけ実行する必要があります。
 
-PowerShell プロンプトを開き、 [AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata)コマンドレットを使用して独自の*tenantId*を入力します。 Microsoft Azure Government cloud を使用しているお客様の場合は、パラメーターを追加し `-Environment USGov` ます。
+PowerShell プロンプトを開き、 [AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata)コマンドレットを使用して独自の *tenantId* を入力します。 Microsoft Azure Government cloud を使用しているお客様の場合は、パラメーターを追加し `-Environment USGov` ます。
 
 > [!NOTE]
 > これらの変更を反映するには、ファーム内の各サーバーで AD FS サービスを再起動する必要があります。 影響を最小限に抑えるには、各 AD FS サーバーを1つずつ NLB ローテーションから取り出し、すべての接続がドレインされるのを待ちます。
@@ -129,9 +129,9 @@ Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f
 
 ![AD FS と MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)
 
-最新の Service Pack のない Windows Server では、 `-Environment` [AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata)コマンドレットのパラメーターはサポートされていません。 Azure Government cloud を使用していて、前の手順で、不足しているパラメーターのために Azure テナントを構成できなかった場合は `-Environment` 、次の手順を実行してレジストリエントリを手動で作成します。 前のコマンドレットでテナント情報が正しく登録されているか、Azure Government クラウドに登録されていない場合は、この手順をスキップします。
+最新の Service Pack のない Windows Server では、 `-Environment` [AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) コマンドレットのパラメーターはサポートされていません。 Azure Government cloud を使用していて、前の手順で、不足しているパラメーターのために Azure テナントを構成できなかった場合は `-Environment` 、次の手順を実行してレジストリエントリを手動で作成します。 前のコマンドレットでテナント情報が正しく登録されているか、Azure Government クラウドに登録されていない場合は、この手順をスキップします。
 
-1. AD FS サーバーで**レジストリエディター**を開きます。
+1. AD FS サーバーで **レジストリエディター** を開きます。
 1. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ADFS` に移動します。 次のレジストリキー値を作成します。
 
     | レジストリ キー       | 値 |

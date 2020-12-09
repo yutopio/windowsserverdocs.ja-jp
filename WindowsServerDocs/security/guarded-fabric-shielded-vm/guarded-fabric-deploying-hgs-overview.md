@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/14/2020
-ms.openlocfilehash: 8fb0bb3596635a7879b7fff784ced977043f1d5c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 4267acb6058a1e39ed42e986f195f8f9d4c8d17b
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996424"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864151"
 ---
 # <a name="deploying-the-host-guardian-service"></a>ホストガーディアンサービスの展開
 
@@ -30,20 +30,20 @@ ms.locfileid: "87996424"
 | コンテンツへのステップアンドリンク | Image |
 |--|--|--|
 | 1- [HGS の前提条件を確認](guarded-fabric-prepare-for-hgs.md)する | ![手順 1. 前提条件を確認する](../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png) |
-| 2-[最初の HGS ノードを構成する](guarded-fabric-choose-where-to-install-hgs.md) | ![手順 2. 最初の HGS ノードを構成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-first-hgs-node.png) |
-| 3-[追加の HGS ノードを構成する](guarded-fabric-configure-additional-hgs-nodes.md) | ![手順 3. 追加の HGS ノードを構成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-secondary-hgs-nodes.png) |
-| 4-[ファブリック DNS を構成する](guarded-fabric-configuring-fabric-dns.md) | ![手順 4. ファブリック DNS を構成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-fabric-dns.png) |
-| 5-[ホストの前提条件 (キー) を確認](guarded-fabric-guarded-host-prerequisites.md#host-key-attestation)し、[ホストの前提条件を確認する (TPM)](guarded-fabric-guarded-host-prerequisites.md#tpm-trusted-attestation) | ![手順 5. ホストの前提条件のキーとホストの前提条件となる TPM を確認する](../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png) |
+| 2- [最初の HGS ノードを構成する](guarded-fabric-choose-where-to-install-hgs.md) | ![手順 2. 最初の HGS ノードを構成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-first-hgs-node.png) |
+| 3- [追加の HGS ノードを構成する](guarded-fabric-configure-additional-hgs-nodes.md) | ![手順 3. 追加の HGS ノードを構成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-secondary-hgs-nodes.png) |
+| 4- [ファブリック DNS を構成する](guarded-fabric-configuring-fabric-dns.md) | ![手順 4. ファブリック DNS を構成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-fabric-dns.png) |
+| 5- [ホストの前提条件 (キー) を確認](guarded-fabric-guarded-host-prerequisites.md#host-key-attestation) し、 [ホストの前提条件を確認する (TPM)](guarded-fabric-guarded-host-prerequisites.md#tpm-trusted-attestation) | ![手順 5. ホストの前提条件のキーとホストの前提条件となる TPM を確認する](../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png) |
 | 6-[ホストキー (キー) を作成](guarded-fabric-create-host-key.md)し、[ホスト情報 (TPM) を収集](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)する | ![手順 6. ホストキーを作成してホスト情報を収集する](../media/Guarded-Fabric-Shielded-VM/guarded-host-collect-info-from-hosts.png) |
 | 7- [HGS にホスト情報を構成する](guarded-fabric-add-host-information-to-hgs.md) | ![手順 7. HGS にホスト情報を追加する](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-hgs-with-host-info.png) |
-| 8-[ホストが証明できることを確認する](guarded-fabric-confirm-hosts-can-attest-successfully.md) | ![手順 8. ホストが証明できることを確認する](../media/Guarded-Fabric-Shielded-VM/guarded-host-confirm-hosts-attest.png) |
-| 9- [VMM を構成する (省略可能)](/system-center/vmm/deploy-guarded-host-fabric?view=sc-vmm-2019) | ![手順 9. VMM を構成する (省略可能)](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-vmm.png) |
-| 10-[テンプレートディスクを作成する](guarded-fabric-create-a-shielded-vm-template.md) | ![手順 10. テンプレートディスクを作成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-create-template-disk.png) |
+| 8-  [ホストが証明できることを確認する](guarded-fabric-confirm-hosts-can-attest-successfully.md) | ![手順 8. ホストが証明できることを確認する](../media/Guarded-Fabric-Shielded-VM/guarded-host-confirm-hosts-attest.png) |
+| 9- [VMM を構成する (省略可能)](/system-center/vmm/deploy-guarded-host-fabric) | ![手順 9. VMM を構成する (省略可能)](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-vmm.png) |
+| 10- [テンプレートディスクを作成する](guarded-fabric-create-a-shielded-vm-template.md) | ![手順 10. テンプレートディスクを作成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-create-template-disk.png) |
 | 11- [VMM 用の VM シールドヘルパーディスクを作成する (省略可能)](guarded-fabric-vm-shielding-helper-vhd.md) | ![手順 11. VMM 用の VM シールドヘルプディスクを作成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-create-helper-disk.png) |
 | 12- [Windows Azure Pack の設定 (省略可能)](guarded-fabric-shielded-vm-windows-azure-pack.md) | ![手順 12. Windows Azure Pack を設定する (省略可能)](../media/Guarded-Fabric-Shielded-VM/guarded-host-windows-azure-pack.png) |
-| 13-[シールドデータファイルを作成する](guarded-fabric-tenant-creates-shielding-data.md) | ![手順 13. シールドデータファイルを作成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-file.png) |
+| 13- [シールドデータファイルを作成する](guarded-fabric-tenant-creates-shielding-data.md) | ![手順 13. シールドデータファイルを作成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-file.png) |
 | 14- [Windows Azure Pack を使用してシールドされた vm を作成する](guarded-fabric-shielded-vm-windows-azure-pack.md) | ![手順 14. Windows Azure Pack を使用してシールドされた Vm を作成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
-| 15- [VMM を使用してシールドされた vm を作成する](/system-center/vmm/guarded-deploy-vm?view=sc-vmm-2019) | ![手順 15. VMM を使用してシールドされた Vm を作成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
+| 15- [VMM を使用してシールドされた vm を作成する](/system-center/vmm/guarded-deploy-vm) | ![手順 15. VMM を使用してシールドされた Vm を作成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
 
 ## <a name="additional-references"></a>その他の参照情報
 

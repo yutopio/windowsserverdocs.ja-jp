@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 293138a35400613faacb3988add652ec17c97783
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 90eabbcaa878f65a6df087d6eaeded6c279eb039
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640600"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865011"
 ---
 # <a name="mqbkup"></a>mqbkup
 
@@ -43,7 +43,7 @@ mqbkup {/b | /r} <folder path_to_storage_device>
 
 - バックアップ操作または復元操作の実行中に指定されたフォルダーが存在しない場合、そのフォルダーはユーティリティによって自動的に作成されます。
 
-- 既存のフォルダーを指定する場合は、空にする必要があります。 空ではないフォルダーを指定すると、ユーティリティは、その中に含まれるすべてのファイルとサブフォルダーを削除します。 この場合、既存のファイルとサブフォルダーを削除する権限を付与するように求められます。 **/Y**パラメーターを使用して、指定したフォルダー内の既存のすべてのファイルとサブフォルダーの削除に対して事前に同意したことを示すことができます。
+- 既存のフォルダーを指定する場合は、空にする必要があります。 空ではないフォルダーを指定すると、ユーティリティは、その中に含まれるすべてのファイルとサブフォルダーを削除します。 この場合、既存のファイルとサブフォルダーを削除する権限を付与するように求められます。 **/Y** パラメーターを使用して、指定したフォルダー内の既存のすべてのファイルとサブフォルダーの削除に対して事前に同意したことを示すことができます。
 
 - MSMQ メッセージファイルの格納に使用されるフォルダーの場所は、レジストリに格納されます。 このため、ユーティリティは、復元操作の前に使用されていたストレージフォルダーではなく、レジストリで指定されているフォルダーに MSMQ メッセージファイルを復元します。
 
@@ -71,4 +71,4 @@ mqbkup /r c:\msmqbkup
 
 - [コマンド ライン構文の記号](command-line-syntax-key.md)
 
-- [MSMQ Powershell リファレンス](/powershell/module/msmq/?view=win10-ps)
+- [MSMQ Powershell リファレンス](/powershell/module/msmq/)

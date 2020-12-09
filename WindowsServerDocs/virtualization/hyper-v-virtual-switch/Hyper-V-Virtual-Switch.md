@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 1e2db53f28ff5262778b36b8a5cb91e6062ca9c0
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 296369e50c4bd58f5e6db980e8caede055016420
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995710"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865110"
 ---
 # <a name="hyper-v-virtual-switch"></a>Hyper-V 仮想スイッチ
 
@@ -26,7 +26,7 @@ ms.locfileid: "87995710"
 >
 > - [Hyper-V 仮想スイッチを管理する](Manage-Hyper-V-Virtual-Switch.md)
 > - [リモート ダイレクト メモリ アクセス (RDMA) とスイッチ埋め込みチーミング (SET)](RDMA-and-Switch-Embedded-Teaming.md)
-> - [Windows PowerShell のネットワーク スイッチ チームのコマンドレット](/powershell/module/netswitchteam/new-netswitchteam?view=win10-ps)
+> - [Windows PowerShell のネットワーク スイッチ チームのコマンドレット](/powershell/module/netswitchteam/new-netswitchteam)
 > - [VMM 2016 の新機能](/system-center/vmm/whats-new#networking)
 > - [VMM ネットワーク ファブリックのセットアップ](/system-center/vmm/manage-networks)
 > - [Hyper-V フォーラム](/answers/topics/windows-server-hyper-v.html)
@@ -52,7 +52,7 @@ Network Device Interface Specification \( NDIS \) フィルタードライバー
 Hyper-v 仮想スイッチの機能を使用すると、テナントの分離の強制、ネットワークトラフィックの整形と制御、および悪意のある Vm に対する保護対策の使用を行うための、より多くのオプションが提供されます。
 
 >[!NOTE]
-> Windows Server 2016 では、仮想 NIC を持つ VM は、仮想 NIC の最大スループットを正確に表示します。 **ネットワーク接続**の仮想 nic 速度を表示するには、目的の仮想 nic アイコンを右クリックし、[**状態**] をクリックします。 [仮想 NIC の**状態**] ダイアログボックスが開きます。 [**接続**] の [**速度**] の値は、サーバーにインストールされている物理 NIC の速度と一致します。
+> Windows Server 2016 では、仮想 NIC を持つ VM は、仮想 NIC の最大スループットを正確に表示します。 **ネットワーク接続** の仮想 nic 速度を表示するには、目的の仮想 nic アイコンを右クリックし、[**状態**] をクリックします。 [仮想 NIC の **状態** ] ダイアログボックスが開きます。 [ **接続**] の [ **速度** ] の値は、サーバーにインストールされている物理 NIC の速度と一致します。
 
 ## <a name="uses-for-hyper-v-virtual-switch"></a><a name="bkmk_apps"></a>Hyper-v 仮想スイッチの使用
 
@@ -64,7 +64,7 @@ Hyper-v 仮想スイッチのいくつかのユースケースシナリオを次
 
 **スイッチ拡張機能の順序の管理**: 企業では、トラフィックの監視と侵入検出の報告の両方を行うために、hyper-v ホストに拡張機能をインストールしています。 メンテナンス中に、いくつかの拡張機能が更新されることで、拡張機能の順序が変更される場合があります。 単純なスクリプト プログラムの実行により、更新後に拡張機能の順序を再設定します。
 
-**転送拡張機能は、VLAN ID を管理**します。主要なスイッチ会社は、ネットワークのすべてのポリシーを適用する転送拡張機能を構築しています。 管理される要素の 1 つに、仮想ローカル エリア ネットワーク (VLAN) ID があります。 仮想スイッチは、VLAN の制御を転送拡張機能に渡します。 会社のインストールをプログラムによって呼び出す Windows Management Instrumentation (WMI) アプリケーションプログラミングインターフェイス (API) を呼び出して、透過性をオンにし、Hyper-v 仮想スイッチに対して、VLAN タグに対する操作を実行しないように指示します。
+**転送拡張機能は、VLAN ID を管理** します。主要なスイッチ会社は、ネットワークのすべてのポリシーを適用する転送拡張機能を構築しています。 管理される要素の 1 つに、仮想ローカル エリア ネットワーク (VLAN) ID があります。 仮想スイッチは、VLAN の制御を転送拡張機能に渡します。 会社のインストールをプログラムによって呼び出す Windows Management Instrumentation (WMI) アプリケーションプログラミングインターフェイス (API) を呼び出して、透過性をオンにし、Hyper-v 仮想スイッチに対して、VLAN タグに対する操作を実行しないように指示します。
 
 ## <a name="hyper-v-virtual-switch-functionality"></a><a name="bkmk_func"></a>Hyper-v 仮想スイッチの機能
 

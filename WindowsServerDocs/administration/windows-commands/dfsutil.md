@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 9fb3883403dd0f4a88b612655247c4f4a2df7de7
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 7ea0cd5c73ad9b415d121fb7f6e3ffee317b07b3
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89635041"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864221"
 ---
 # <a name="dfsutil"></a>dfsutil
 
@@ -22,7 +22,7 @@ Dfsutil コマンドは、DFS 名前空間、サーバー、およびクライ�
 
 ## <a name="functionality-available-in-powershell"></a>PowerShell で使用可能な機能
 
-[DFSN](/powershell/module/dfsn/?view=win10-ps) PowerShell モジュールは、次の dfsutil パラメーターと同等の機能を提供します。
+[DFSN](/powershell/module/dfsn/) PowerShell モジュールは、次の dfsutil パラメーターと同等の機能を提供します。
 
 | パラメーター | 説明 |
 | --------- | ----------- |

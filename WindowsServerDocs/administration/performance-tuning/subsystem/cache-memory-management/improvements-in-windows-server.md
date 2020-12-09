@@ -5,12 +5,12 @@ ms.topic: article
 ms.author: pavel
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 799598223812f5992db0354780424f7da13033ea
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 31cc9f964ac7ea2d95d5240376ea2ce7fb46fcee
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078009"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864331"
 ---
 # <a name="cache-and-memory-manager-improvements"></a>キャッシュとメモリマネージャーの機能強化
 
@@ -18,7 +18,7 @@ ms.locfileid: "90078009"
 
 ## <a name="cache-manager-improvements-in-windows-server-2016"></a>Windows Server 2016 でのキャッシュマネージャーの機能強化
 キャッシュマネージャーでは、真の非同期キャッシュ読み取りのサポートも追加されました。
-これにより、非同期のキャッシュされた読み取りに大きく依存しているアプリケーションのパフォーマンスが向上する可能性があります。ほとんどのインボックスのファイルシステムでは、非同期キャッシュの読み取りがサポートされていますが、多くの場合、スレッドプールとファイルシステムの内部作業キューの処理に関連するさまざまな設計の選択により、パフォーマンスが制限されていました。カーネルが適切にサポートされるようになったため、Cache Manager では、ファイルシステムからのスレッドプールとワークキュー管理の複雑さがすべて非表示になり、非同期的にキャッシュされた読み取りを処理しやすくなりました。キャッシュマネージャーには、並列処理を最大化するために (システムでサポートされる最大値) の VHD 入れ子レベルに対して、1つのコントロール datastructures があります。
+これにより、非同期のキャッシュされた読み取りに大きく依存しているアプリケーションのパフォーマンスが向上する可能性があります。  ほとんどのインボックスのファイルシステムでは、非同期キャッシュの読み取りがサポートされていますが、多くの場合、スレッドプールとファイルシステムの内部作業キューの処理に関連するさまざまな設計の選択により、パフォーマンスが制限されていました。  カーネルが適切にサポートされるようになったため、Cache Manager では、ファイルシステムからのスレッドプールとワークキュー管理の複雑さがすべて非表示になり、非同期的にキャッシュされた読み取りを処理しやすくなりました。キャッシュマネージャーには、並列処理を最大化するために (システムでサポートされる最大値) の VHD 入れ子レベルに対して、1つのコントロール datastructures があります。
 
 
 ## <a name="cache-manager-improvements-in-windows-server-2012"></a>Windows Server 2012 でのキャッシュマネージャーの機能強化
@@ -33,4 +33,4 @@ ms.locfileid: "90078009"
 
 -   AWE または大規模なページを使用するように構成されている Microsoft SQL Server (ほとんどのメモリはプライベートであり、ページング不可能)
 
-ページの結合は既定で無効になっていますが、 [Enable-MMAgent](/powershell/module/mmagent/enable-mmagent?view=win10-ps) Windows PowerShell コマンドレットを使用して有効にすることができます。 ページの結合が Windows Server 2012 で追加されました。
+ページの結合は既定で無効になっていますが、 [Enable-MMAgent](/powershell/module/mmagent/enable-mmagent) Windows PowerShell コマンドレットを使用して有効にすることができます。 ページの結合が Windows Server 2012 で追加されました。

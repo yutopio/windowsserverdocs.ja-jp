@@ -6,18 +6,18 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 3d6af6e6dea584485e2517d8e54c107c5cc2af90
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 0bf64e363226be582c24d644491dcbf4f85ac52e
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996270"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863960"
 ---
 # <a name="shielded-vms---hosting-service-provider-sets-up-windows-azure-pack"></a>シールドされた VM - ホスティング サービス プロバイダーで Windows Azure Pack をセットアップする
 
 このトピックでは、ホスティングサービスプロバイダーが Windows Azure Pack を構成して、テナントがシールドされた Vm をデプロイできるようにする方法について説明します。 Windows Azure Pack は、System Center Virtual Machine Manager の機能を拡張する web ポータルで、テナントが簡単な web インターフェイスを使用して独自の Vm をデプロイして管理できるようにします。 Windows Azure Pack は、シールドされた Vm を完全にサポートし、テナントがシールドデータファイルを作成および管理することをさらに容易にします。
 
-このトピックがシールドされた Vm のデプロイプロセス全体にどのように適合するかを理解するには、「保護された[ホストとシールドされた vm のホスティングサービスプロバイダーの構成手順](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)」を参照してください。
+このトピックがシールドされた Vm のデプロイプロセス全体にどのように適合するかを理解するには、「保護された [ホストとシールドされた vm のホスティングサービスプロバイダーの構成手順](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)」を参照してください。
 
 ## <a name="setting-up-windows-azure-pack"></a>Windows Azure Pack の設定
 
@@ -25,7 +25,7 @@ ms.locfileid: "87996270"
 
 1. ホストしているファブリックの System Center 2016-Virtual Machine Manager (VMM) の構成を完了します。 これには、VM テンプレートと VM クラウドの設定が含まれます。これは Windows Azure Pack を通じて公開されます。
 
-    [シナリオ - VMM で保護されたホストとシールドされた仮想マシンを展開する](/system-center/vmm/deploy-guarded-host-fabric?view=sc-vmm-2019)
+    [シナリオ - VMM で保護されたホストとシールドされた仮想マシンを展開する](/system-center/vmm/deploy-guarded-host-fabric)
 
 2. System Center 2016-Service Provider Foundation (SPF) をインストールして構成します。 このソフトウェアを使用すると、Windows Azure Pack が VMM サーバーと通信できるようになります。
 
@@ -33,12 +33,12 @@ ms.locfileid: "87996270"
 
 3. Windows Azure Pack をインストールし、SPF と通信するように構成します。
 
-    - [Windows Azure Pack のインストール](#install-windows-azure-pack)(このトピック)
-    - [Windows Azure Pack を構成する](#configure-windows-azure-pack)(このトピック)
+    - [Windows Azure Pack のインストール](#install-windows-azure-pack) (このトピック)
+    - [Windows Azure Pack を構成する](#configure-windows-azure-pack) (このトピック)
 
 4. Windows Azure Pack に1つ以上のホスティングプランを作成して、テナントが VM クラウドにアクセスできるようにします。
 
-    [Windows Azure Pack でプランを作成](#create-a-plan-in-windows-azure-pack)する (このトピック)
+    [Windows Azure Pack でプランを作成](#create-a-plan-in-windows-azure-pack) する (このトピック)
 
 ## <a name="install-windows-azure-pack"></a>Windows Azure Pack のインストール
 
@@ -46,9 +46,9 @@ ms.locfileid: "87996270"
 
 1.  [WAP のシステム要件](/previous-versions/azure/windows-server-azure-pack/dn296442(v=technet.10))を確認し、[前提条件](/previous-versions/azure/windows-server-azure-pack/dn469335(v=technet.10))となるソフトウェアをインストールします。
 
-2.  [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)をダウンロードしてインストールします。 コンピューターがインターネットに接続されていない場合は、[オフラインインストールの手順](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release)に従います。
+2.  [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)をダウンロードしてインストールします。 コンピューターがインターネットに接続されていない場合は、 [オフラインインストールの手順](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release)に従います。
 
-3.  Web Platform Installer を開き、[Products] \ (**製品**\) タブで**Windows Azure Pack: ポータルと API Express**を見つけます。 [**追加**] をクリックし、ウィンドウの下部にある [**インストール**] をクリックします。
+3.  Web Platform Installer を開き、[Products] (**製品**) タブの下にある **Windows Azure Pack: ポータルと API Express** を見つけます。[**追加**] をクリックし、ウィンドウの下部に [**インストール**] をクリックします。
 
 4.  インストールを続行します。 インストールが完了すると、構成サイト (*https:// &lt; wapserver &gt; : 30101/*) が web ブラウザーで開きます。 この web サイトで、SQL server に関する情報を提供し、WAP の構成を完了します。
 
@@ -61,7 +61,7 @@ Windows Azure Pack の設定の詳細については、「 [Windows Azure Pack �
 
 Windows Azure Pack を使用する前に、インフラストラクチャ用にインストールして構成しておく必要があります。
 
-1.  *Https:// &lt; wapserver &gt; : 30091*の Windows Azure Pack 管理ポータルに移動し、管理者の資格情報を使用してログインします。
+1.  *Https:// &lt; wapserver &gt; : 30091* の Windows Azure Pack 管理ポータルに移動し、管理者の資格情報を使用してログインします。
 
 2.  左側のウィンドウで、[ **VM クラウド**] をクリックします。
 
@@ -75,11 +75,11 @@ Windows Azure Pack を使用する前に、インフラストラクチャ用に�
 
 テナントが WAP で Vm を作成できるようにするには、まず、テナントがサブスクライブできるホスティングプランを作成する必要があります。 プランでは、テナントに許可されている VM クラウド、テンプレート、ネットワーク、および課金エンティティを定義します。
 
-1. ポータルの下のペインで、[ **+ 新しい**プラン] [プランの作成] の順にクリックし &gt; **PLAN** &gt; **CREATE PLAN**ます。
+1. ポータルの下のペインで、[ **+ 新しい** プラン] [プランの作成] の順にクリックし &gt; **PLAN** &gt; **CREATE PLAN** ます。
 
 2. ウィザードの最初の手順で、プランの名前を選択します。 これは、テナントがサブスクライブするときに表示される名前です。
 
-3. 2番目の手順では、プランで提供するサービスの1つとして [**仮想マシンクラウド**] を選択します。
+3. 2番目の手順では、プランで提供するサービスの1つとして [ **仮想マシンクラウド** ] を選択します。
 
 4. プランのアドオンの選択に関する手順をスキップします。
 
@@ -89,27 +89,27 @@ Windows Azure Pack を使用する前に、インフラストラクチャ用に�
 
 6. プランの構成を開始するには、その名前をクリックします。
 
-7. 次のページの [**プランサービス**] で、[**仮想マシンクラウド**] をクリックします。 これにより、このプランのクォータを構成できるページが開きます。
+7. 次のページの [ **プランサービス**] で、[ **仮想マシンクラウド**] をクリックします。 これにより、このプランのクォータを構成できるページが開きます。
 
-8. [**基本**] で、テナントに提供する VMM 管理サーバーと仮想マシンクラウドを選択します。 シールドされた Vm を提供できるクラウドは、名前の横に **(シールドがサポートされている)** と共に表示されます。
+8. [ **基本**] で、テナントに提供する VMM 管理サーバーと仮想マシンクラウドを選択します。 シールドされた Vm を提供できるクラウドは、名前の横に **(シールドがサポートされている)** と共に表示されます。
 
-9. この計画で適用するクォータを選択します。 (たとえば、CPU コアおよび RAM 使用率の制限)。 [ **Virtual Machines がシールドされることを許可する**] チェックボックスはオンのままにしてください。
+9. この計画で適用するクォータを選択します。 (たとえば、CPU コアおよび RAM 使用率の制限)。 [ **Virtual Machines がシールドされることを許可する** ] チェックボックスはオンのままにしてください。
 
    ![Windows Azure Pack の仮想マシンクラウドの設定](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-03-virtual-machine-clouds.png)
 
-10. [**テンプレート**] というセクションまで下にスクロールし、テナントに提供する1つ以上のテンプレートを選択します。 シールドされたテンプレートとシールドされていないテンプレートの両方をテナントに提供できますが、VM とそのシークレットの整合性に関してテナントのエンドツーエンドの保証を提供するには、シールドされたテンプレートを用意する必要があります。
+10. [ **テンプレート**] というセクションまで下にスクロールし、テナントに提供する1つ以上のテンプレートを選択します。 シールドされたテンプレートとシールドされていないテンプレートの両方をテナントに提供できますが、VM とそのシークレットの整合性に関してテナントのエンドツーエンドの保証を提供するには、シールドされたテンプレートを用意する必要があります。
 
-11. [**ネットワーク**] セクションで、テナント用に1つまたは複数のネットワークを追加します。
+11. [ **ネットワーク** ] セクションで、テナント用に1つまたは複数のネットワークを追加します。
 
-12. プランのその他の設定またはクォータを設定したら、下部にある [**保存**] をクリックします。
+12. プランのその他の設定またはクォータを設定したら、下部にある [ **保存** ] をクリックします。
 
-13. 画面の左上にある矢印をクリックして、[**プラン**] ページに戻ります。
+13. 画面の左上にある矢印をクリックして、[ **プラン** ] ページに戻ります。
 
-14. 画面の下部で、テナントがプランにサブスクライブできるように、プランを**プライベート**から**パブリック**に変更します。
+14. 画面の下部で、テナントがプランにサブスクライブできるように、プランを **プライベート** から **パブリック** に変更します。
 
     ![Windows Azure Pack でプランのアクセス権を変更する](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-04-change-access.png)
 
-    この時点で、Windows Azure Pack が構成され、テナントは作成したプランにサブスクライブして、シールドされた Vm をデプロイできるようになります。 テナントの完了に必要な追加の手順については、「[テナントのシールドされた vm-Windows Azure Pack を使用](guarded-fabric-shielded-vm-windows-azure-pack.md)したシールドされた Vm のデプロイ」を参照してください。
+    この時点で、Windows Azure Pack が構成され、テナントは作成したプランにサブスクライブして、シールドされた Vm をデプロイできるようになります。 テナントの完了に必要な追加の手順については、「 [テナントのシールドされた vm-Windows Azure Pack を使用](guarded-fabric-shielded-vm-windows-azure-pack.md)したシールドされた Vm のデプロイ」を参照してください。
 
 ## <a name="additional-references"></a>その他の参照情報
 

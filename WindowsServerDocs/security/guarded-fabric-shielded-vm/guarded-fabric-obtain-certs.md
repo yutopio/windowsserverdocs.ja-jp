@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: 43762e34e2987473954e3f9408ddd6e74b0de3cb
-ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
+ms.openlocfilehash: c6f20ebdf2bedd74af98e075ccf6f6ff60f96767
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330364"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864161"
 ---
 # <a name="obtain-certificates-for-hgs"></a>HGS の証明書を取得する
 
@@ -91,7 +91,7 @@ SSL 証明書のプロパティ | 必須値
 サブジェクト代替名 | 別の DNS 名を使用して HGS クラスターに接続する場合は (たとえば、ロードバランサーの背後にある場合や、複雑なトポロジ内のノードのサブセットに対して異なるアドレスを使用する場合)、証明書要求の SAN フィールドにこれらの DNS 名を含めてください。 SAN 拡張機能が設定されている場合、サブジェクト名は無視されるため、SAN には、通常はサブジェクト名に入力した値を含むすべての値を含める必要があることに注意してください。
 
 HGS サーバーを初期化するときにこの証明書を指定するためのオプションについては、「 [最初の hgs ノードの構成](guarded-fabric-initialize-hgs.md)」を対象としています。
-また、 [HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps) コマンドレットを使用して、後で SSL 証明書を追加または変更することもできます。
+また、 [HgsServer](/powershell/module/hgsserver/set-hgsserver) コマンドレットを使用して、後で SSL 証明書を追加または変更することもできます。
 
 ## <a name="next-step"></a>次のステップ
 

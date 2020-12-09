@@ -7,12 +7,12 @@ ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
 ms.author: lizross
 author: eross-msft
 ms.date: 06/20/2018
-ms.openlocfilehash: 04498a73c04df8f9bce091c8ba583c323f28bbf1
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 815bc9d01f8e5e8b85cfeecb9beb70963b18d14f
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990409"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865481"
 ---
 # <a name="network-policy-server-nps"></a>ネットワーク ポリシー サーバー (NPS)
 
@@ -27,9 +27,9 @@ ms.locfileid: "87990409"
 > - [ネットワーク ポリシー サーバーの計画](nps-plan-top.md)
 > - [ネットワーク ポリシー サーバーの展開](nps-deploy.md)
 > - [ネットワーク ポリシー サーバーの管理](nps-manage-top.md)
-> - Windows Server 2016 および Windows 10 用[Windows PowerShell のネットワークポリシーサーバー (NPS) コマンドレット](/powershell/module/nps/?view=win10-ps)
-> - Windows Server 2012 R2 および Windows 8.1 用[Windows PowerShell のネットワークポリシーサーバー (NPS) コマンドレット](/powershell/module/nps/?view=win10-ps)
-> - Windows Server 2012 および windows 8 用[Windows PowerShell の NPS コマンドレット](/powershell/module/nps/?view=win10-ps)
+> - Windows Server 2016 および Windows 10 用[Windows PowerShell のネットワークポリシーサーバー (NPS) コマンドレット](/powershell/module/nps/)
+> - Windows Server 2012 R2 および Windows 8.1 用[Windows PowerShell のネットワークポリシーサーバー (NPS) コマンドレット](/powershell/module/nps/)
+> - Windows Server 2012 および windows 8 用[Windows PowerShell の NPS コマンドレット](/powershell/module/nps/)
 
 ネットワーク ポリシー サーバー (NPS) を使用すると、接続要求の認証と承認を行うための組織全体のネットワーク アクセス ポリシーを作成して適用できます。
 
@@ -69,7 +69,7 @@ NPS は、RADIUS サーバー、RADIUS プロキシ、またはその両方と�
 NPS は、 \( \) rfc 2865 および2866のインターネット技術標準化委員会によって指定された RADIUS 規格を Microsoft が実装したものです。 RADIUS サーバーとして、NPS は、ワイヤレス、認証スイッチ、ダイヤルアップおよび仮想プライベートネットワーク \( VPN リモートアクセス、ルーター間接続など、さまざまな種類のネットワークアクセスに対して、一元的な接続認証、承認、およびアカウンティングを実行し \) ます。
 
 > [!NOTE]
-> NPS を RADIUS サーバーとして展開する方法の詳細については、「[ネットワークポリシーサーバーの展開](nps-deploy.md)」を参照してください。
+> NPS を RADIUS サーバーとして展開する方法の詳細については、「 [ネットワークポリシーサーバーの展開](nps-deploy.md)」を参照してください。
 
 NPS では、ワイヤレス、スイッチ、リモート アクセス、または VPN など異なる種類の機器を組み合わせて使用できます。 NPS は、Windows Server 2016 で利用可能なリモートアクセスサービスと共に使用できます。
 
@@ -156,7 +156,7 @@ NPS を RADIUS サーバーとして構成するには、NPS コンソールま�
 
 詳細構成を使用する場合は、NPS を RADIUS サーバーまたは RADIUS プロキシとして手動で構成します。
 
-詳細構成を使用して NPS を構成するには、NPS コンソールを開き、[**詳細構成**] の横にある矢印をクリックして、このセクションを展開します。
+詳細構成を使用して NPS を構成するには、NPS コンソールを開き、[ **詳細構成** ] の横にある矢印をクリックして、このセクションを展開します。
 
 次の詳細な設定項目が表示されます。
 
@@ -186,4 +186,4 @@ NPS のログ記録は、RADIUS アカウンティングとも呼ばれます。
 
 NPS のログ記録を構成するには、イベントビューアーでログに記録して表示するイベントを構成してから、ログに記録する他の情報を決定する必要があります。 さらに、ローカル コンピューターに保存されるテキストのログ ファイル、またはローカル コンピューターとリモート コンピューターのどちらかにある SQL Server データベースに、ユーザー認証およびアカウント情報を記録するかどうかを指定する必要があります。
 
-詳細については、「[ネットワークポリシーサーバーアカウンティングの構成](nps-accounting-configure.md)」を参照してください。
+詳細については、「 [ネットワークポリシーサーバーアカウンティングの構成](nps-accounting-configure.md)」を参照してください。

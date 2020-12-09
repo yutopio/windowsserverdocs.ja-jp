@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 0aeb1f4b-2e75-430b-9557-fe64738c4992
 ms.date: 8/16/2016
-ms.openlocfilehash: 68953fe3efaba64c853e4da83d4ca47ff13ca00a
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 2771a9814fb9061756626466f446ca6131580dc2
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745817"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864661"
 ---
 # <a name="replica-servers-should-be-configured-to-identify-specific-primary-servers-authorized-to-send-replication-traffic"></a>レプリカ サーバーは、特定のプライマリ サーバーがレプリケーション トラフィックを送信する権限を特定するように構成する必要があります。
 
@@ -34,7 +34,7 @@ ms.locfileid: "90745817"
 ### <a name="impact"></a>影響
 *すべてのプライマリ サーバーからのすべてのレプリケーションは、プライバシーやセキュリティ上の問題を招く可能性がありますが、1 つの場所に格納されます。*
 
-## <a name="resolution"></a>解決策
+## <a name="resolution"></a>解決方法
 *Hyper-v マネージャーを使用して、特定のプライマリサーバーの新しい承認エントリを作成し、それぞれに個別の記憶域の場所を指定します。ワイルドカード文字を使用すると、各承認エントリのセットにプライマリサーバーをグループ化できます。*
 
 #### <a name="create-authorization-entries-using-hyper-v-manager"></a>HYPER-V マネージャーを使用して承認エントリを作成します。
@@ -65,7 +65,7 @@ ms.locfileid: "90745817"
 
 1.  Windows PowerShell を開きます。 (デスクトップから [スタート] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
-2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
+2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行** します。
 
 3.  次のようなコマンドを実行して、を置き換えます。
 
@@ -80,4 +80,4 @@ New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMSt
 ```
 
 ## <a name="see-also"></a>関連項目
-[新しい VMReplicationAuthorizationEntry](/powershell/module/hyper-v/new-vmreplicationauthorizationentry?view=win10-ps)
+[新しい VMReplicationAuthorizationEntry](/powershell/module/hyper-v/new-vmreplicationauthorizationentry)

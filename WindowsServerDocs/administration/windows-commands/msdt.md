@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 3e2a28ce747df9223e609392ab46abe2e947bb92
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 0270039fcbc9f99ff2569635ddd75918baed783e
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89640617"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865411"
 ---
 # <a name="msdt"></a>msdt
 
@@ -29,7 +29,7 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 | パラメーター | 説明 |
 | --------- | ----------- |
 | /id `<packagename>` | 実行する診断パッケージを指定します。 利用可能なパッケージの一覧については、「 [使用可能なトラブルシューティングパック](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs)」を参照してください。 |
-| /path `<directory|.diagpkg file|.diagcfg file>` | 診断パッケージへの完全パスを指定します。 ディレクトリを指定する場合は、ディレクトリに診断パッケージが含まれている必要があります。 * */Id * *、 **/dci**、/ **cab**の各パラメーターと共に、 **/path**パラメーターを使用することはできません。 |                                                                                   |
+| /path `<directory|.diagpkg file|.diagcfg file>` | 診断パッケージへの完全パスを指定します。 ディレクトリを指定する場合は、ディレクトリに診断パッケージが含まれている必要があります。 * */Id * *、 **/dci**、/ **cab** の各パラメーターと共に、 **/path** パラメーターを使用することはできません。 |                                                                                   |
 | /dci `<passkey>` | パスキーフィールドをプリセットします。 このパラメーターは、サポートプロバイダーがパスキーを指定した場合にのみ使用されます。 |
 | /dt `<directory>` | 指定されたディレクトリのトラブルシューティングの履歴を表示します。 診断結果は、ユーザーの **%LOCALAPPDATA%\Diagnostics** または **%LOCALAPPDATA%\ElevatedDiagnostics** ディレクトリに格納されます。 |
 | /af `<answerfile>` | 1つ以上の診断対話に対する応答を含む応答ファイルを XML 形式で指定します。 |
@@ -56,4 +56,4 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 
 - [利用可能なトラブルシューティングパック](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs)
 
-- [トラブルシューティングパック Powershell リファレンス](/powershell/module/troubleshootingpack/?view=win10-ps)
+- [トラブルシューティングパック Powershell リファレンス](/powershell/module/troubleshootingpack/)

@@ -6,12 +6,12 @@ ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 08/29/2020
-ms.openlocfilehash: cc59a9c45a1dee797196c8a12550945d3d834cd7
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 40064ac11b9e6d27ea864ba286278179a2ebd4bf
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746577"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864022"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>HYPER-V でサポートされている Ubuntu 仮想マシン
 
@@ -32,7 +32,7 @@ ms.locfileid: "90746577"
 |**可用性**||組み込み|組み込み|組み込み|組み込み|
 |**[コア](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 の正確な時刻|2019、2016|&#10004;|&#10004;|&#10004;||
-|**[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||
+|**[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||
 |Jumbo Frame|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |VLAN のタグ付けとトランキング|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |ライブ マイグレーション|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -46,13 +46,13 @@ ms.locfileid: "90746577"
 |仮想マシンのライブバックアップ|2019、2016、2012 R2|& #10004 です。3, 4, 5 に注意してください。|& #10004 です。3, 4, 5 に注意してください。|& #10004 です。3, 4, 5 に注意してください。|& #10004 です。3, 4, 5 に注意してください。|
 |トリムのサポート|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |SCSI WWN|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|**[メモリ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|||||
+|**[[メモリ]](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|||||
 |PAE カーネルサポート|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |MMIO ギャップの構成|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |動的メモリでホット アド|2019、2016、2012 R2|&#10004; ノート6、7、8|&#10004; ノート6、7、8|&#10004; ノート6、7、8|&#10004; ノート6、7、8|
 |動的メモリ - バルーニング|2019、2016、2012 R2|&#10004; ノート6、7、8|&#10004; ノート6、7、8|&#10004; ノート6、7、8|&#10004; ノート6、7、8|
 |ランタイムのメモリのサイズ変更|2019、2016|&#10004;|&#10004;|&#10004;|&#10004;|
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||
+|**[ビデオ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||
 |HYPER-V で特定のビデオ デバイス|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[その他](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|||||
 |キーと値のペア|2019、2016、2012 R2|&#10004; メモ5、9|&#10004; メモ5、9|&#10004; メモ5、9|&#10004; メモ5、9|
@@ -65,7 +65,7 @@ ms.locfileid: "90746577"
 |UEFI を使用したブート|2019、2016、2012 R2|&#10004; メモ10、11|&#10004; メモ10、11|&#10004; メモ10、11|&#10004; メモ10、11|
 |セキュア ブート|2019、2016|&#10004;|&#10004;|&#10004;|&#10004;|
 
-## <a name="notes"></a>メモ
+## <a name="notes"></a>Notes
 
 1. 静的 IP インジェクションが機能しなくなる **ネットワーク マネージャー** が仮想マシン上の指定したハイパー V 固有ネットワーク アダプターに対して構成されています。 静的 IP の円滑に機能することを確認するインジェクションを確認してくださいネットワーク マネージャーが完全にオフや、オフになっているを使って特定のネットワーク アダプターにその **ifcfg ethX** ファイルです。
 
@@ -95,7 +95,7 @@ ms.locfileid: "90746577"
 
 9. Windows Server 2019、Windows Server 2016、または Windows Server 2012 R2 では、Linux ソフトウェア更新プログラムがないと、キー/値ペアのインフラストラクチャが正しく機能しない可能性があります。 この機能の問題が確認された場合に、ソフトウェア更新プログラムを取得するディストリビューションのベンダーに問い合わせてください。
 
-10. Windows Server 2012 R2 では、[第 2 世代仮想マシンは、セキュア ブート オプションが無効にしない限り、仮想マシンは起動しません Linux 既定で有効になり、セキュア ブートがあります。 **Hyper-v マネージャー**で仮想マシンの設定の [**ファームウェア**] セクションでセキュアブートを無効にするか、Powershell を使用して無効にすることができます。
+10. Windows Server 2012 R2 では、[第 2 世代仮想マシンは、セキュア ブート オプションが無効にしない限り、仮想マシンは起動しません Linux 既定で有効になり、セキュア ブートがあります。 **Hyper-v マネージャー** で仮想マシンの設定の [**ファームウェア**] セクションでセキュアブートを無効にするか、Powershell を使用して無効にすることができます。
 
     ```Powershell
     Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
@@ -143,6 +143,6 @@ ms.locfileid: "90746577"
 
 * [HYPER-V で Linux を実行するためのベスト プラクティス](Best-Practices-for-running-Linux-on-Hyper-V.md)
 
-* [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+* [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 * [ジェネレーション 2 の Ubuntu 14.04 VM - Ben Armstrong の仮想化のブログ](/archive/blogs/virtual_pc_guy/ubuntu-14-04-in-a-generation-2-vm)

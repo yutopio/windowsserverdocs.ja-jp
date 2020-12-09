@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 79e0a0c0e99c49fc251d8aebc3fc76e68603e45c
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 4f309a304e4457b27eec0ae41d581c5a7bf9bd50
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996918"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865341"
 ---
 # <a name="use-dns-policy-for-applying-filters-on-dns-queries"></a>DNS クエリへのフィルターの適用に DNS ポリシーを使用する
 
@@ -25,7 +25,7 @@ Dns ポリシーのクエリフィルターを使用すると、dns クエリを
 
 別の例として、特定のクライアントセットだけが特定の名前を解決できるようにするクエリフィルター許可リストを作成します。
 
-## <a name="query-filter-criteria"></a><a name="bkmk_criteria"></a>クエリのフィルター条件
+## <a name="query-filter-criteria"></a><a name="bkmk_criteria"></a> クエリのフィルター条件
 次の条件の論理的な組み合わせ (またはその両方) を使用して、クエリフィルターを作成できます。
 
 |名前|説明|
@@ -41,7 +41,7 @@ Dns ポリシーのクエリフィルターを使用すると、dns クエリを
 次の例は、dns 名前解決のクエリをブロックまたは許可する DNS ポリシーのフィルターを作成する方法を示しています。
 
 >[!NOTE]
->このトピックのコマンド例では、Windows PowerShell コマンド**DnsServerQueryResolutionPolicy**を使用します。 詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)します。
+>このトピックのコマンド例では、Windows PowerShell コマンド **DnsServerQueryResolutionPolicy** を使用します。 詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy)します。
 
 ## <a name="block-queries-from-a-domain"></a><a name="bkmk_block1"></a>ドメインからのクエリをブロックする
 
@@ -49,21 +49,21 @@ Dns ポリシーのクエリフィルターを使用すると、dns クエリを
 
 この例で構成したポリシーは、特定のゾーンでは作成されません。代わりに、DNS サーバーで構成されているすべてのゾーンに適用されるサーバーレベルのポリシーを作成します。 サーバーレベルのポリシーは最初に評価されるため、DNS サーバーがクエリを受信したときに最初に照合されます。
 
-次のコマンド例では、ドメイン**サフィックス contosomalicious.com**を使用してクエリをブロックするようにサーバーレベルポリシーを構成します。
+次のコマンド例では、ドメイン **サフィックス contosomalicious.com** を使用してクエリをブロックするようにサーバーレベルポリシーを構成します。
 
 `
 Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicy" -Action IGNORE -FQDN "EQ,*.contosomalicious.com" -PassThru
 `
 
 >[!NOTE]
->**Action**パラメーターの値を**IGNORE**に設定すると、DNS サーバーは応答なしのクエリを削除するように構成されます。 これにより、悪意のあるドメインの DNS クライアントがタイムアウトします。
+>**Action** パラメーターの値を **IGNORE** に設定すると、DNS サーバーは応答なしのクエリを削除するように構成されます。 これにより、悪意のあるドメインの DNS クライアントがタイムアウトします。
 
 ## <a name="block-queries-from-a-subnet"></a><a name="bkmk_block2"></a>サブネットからのクエリをブロックする
 この例では、一部のマルウェアに感染していて、DNS サーバーを使用して悪意のあるサイトに接続しようとしていることが検出された場合、サブネットからのクエリをブロックできます。
 
-' DnsServerClientSubnet-Name "MaliciousSubnet06"-IPv4Subnet 172.0.33.0/24-PassThru
+' Add-DnsServerClientSubnet-Name "MaliciousSubnet06"-IPv4Subnet 172.0.33.0/24-PassThru
 
-DnsServerQueryResolutionPolicy-Name "BlockListPolicyMalicious06"-Action IGNORE-ClientSubnet "EQ, MaliciousSubnet06"-PassThru "
+Add-DnsServerQueryResolutionPolicy-Name "BlockListPolicyMalicious06"-Action IGNORE-ClientSubnet "EQ, MaliciousSubnet06"-PassThru "
 
 次の例では、サブネット条件を FQDN 条件と組み合わせて使用して、感染したサブネットから特定の悪意のあるドメインのクエリをブロックする方法を示します。
 

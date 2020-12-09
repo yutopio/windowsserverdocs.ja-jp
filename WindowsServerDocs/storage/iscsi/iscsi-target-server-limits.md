@@ -6,12 +6,12 @@ author: JasonGerend
 manager: dougkim
 ms.author: jgerend
 ms.date: 09/11/2018
-ms.openlocfilehash: 3be878629d19542629cc3cbb849ac46fe14de0bd
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 14ef17f96138c23aeac8e38b93a50b562ca69bba
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766835"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865171"
 ---
 # <a name="iscsi-target-server-scalability-limits"></a>iSCSI ターゲットサーバーのスケーラビリティの制限
 
@@ -30,7 +30,7 @@ ms.locfileid: "90766835"
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>Item</p></th>
+<th><p>アイテム</p></th>
 <th><p>サポートの制限</p></th>
 <th><p>リレーションシップ?</p></th>
 <th><p>コメント</p></th>
@@ -52,19 +52,19 @@ ms.locfileid: "90766835"
 <tr class="odd">
 <td><p>iscsi ターゲットインスタンスあたりの iSCSI Lu または仮想ディスク</p></td>
 <td><p>256 (Windows Server 2012 の 128)</p></td>
-<td><p>はい</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>ISCSI ターゲットインスタンスに同時に接続できるセッション</p></td>
 <td><p>544 (Windows Server 2012 の 512)</p></td>
-<td><p>はい</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>LU あたりのスナップショット数</p></td>
 <td><p>512</p></td>
-<td><p>はい</p></td>
+<td><p>Yes</p></td>
 <td><p>独立した iSCSI アプリケーションボリュームあたり512のスナップショットの制限があります。</p></td>
 </tr>
 <tr class="even">
@@ -87,7 +87,7 @@ ms.locfileid: "90766835"
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>Item</p></th>
+<th><p>アイテム</p></th>
 <th><p>サポートの制限</p></th>
 <th><p>リレーションシップ?</p></th>
 <th><p>コメント</p></th>
@@ -157,7 +157,7 @@ ms.locfileid: "90766835"
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>Item</p></th>
+<th><p>アイテム</p></th>
 <th><p>サポートの制限</p></th>
 <th><p>リレーションシップ?</p></th>
 <th><p>コメント</p></th>
@@ -238,7 +238,7 @@ ms.locfileid: "90766835"
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>Item</p></th>
+<th><p>アイテム</p></th>
 <th><p>サポートの制限</p></th>
 <th><p>リレーションシップ?</p></th>
 <th><p>コメント</p></th>
@@ -262,28 +262,28 @@ ms.locfileid: "90766835"
 <td><p>VHD の最小フォーマットサイズ</p></td>
 <td><p>.vhdx: 3 MB</p>
 <p>.vhd: 8 MB</p></td>
-<td><p>はい</p></td>
+<td><p>Yes</p></td>
 <td><p>サポートされているすべての VHD の種類 (親、差分、固定) に適用されます。</p></td>
 </tr>
 <tr class="even">
 <td><p>親 VHD の最大サイズ</p></td>
 <td><p>.vhdx:64 TB</p>
 <p>.vhd: 2 TB</p></td>
-<td><p>はい</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>VHD の最大サイズを修正</p></td>
 <td><p>.vhdx:64 TB</p>
 <p>.vhd:16 TB</p></td>
-<td><p>はい</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>差分 VHD の最大サイズ</p></td>
 <td><p>.vhdx:64 TB</p>
 <p>.vhd: 2 TB</p></td>
-<td><p>はい</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -308,7 +308,7 @@ ms.locfileid: "90766835"
 <td><p>VHD の動的形式</p></td>
 <td><p>.vhdx: はい</p>
 <p>.vhd: はい (Windows Server 2012 ではいいえ)</p></td>
-<td><p>はい</p></td>
+<td><p>Yes</p></td>
 <td><p>マップ解除はサポートされていません&#39;。</p></td>
 </tr>
 <tr class="odd">
@@ -344,13 +344,13 @@ ms.locfileid: "90766835"
 <tr class="even">
 <td><p>仮想プロビジョニング</p></td>
 <td><p>いいえ</p></td>
-<td><p>N/A</p></td>
+<td><p>該当なし</p></td>
 <td><p>動的 Vhd はサポートされていますが、マップ解除はサポートされていません&#39;。</p></td>
 </tr>
 <tr class="odd">
 <td><p>論理ユニットの圧縮</p></td>
 <td><p>はい (Windows Server 2012 R2 以降のみ)</p></td>
-<td><p>N/A</p></td>
+<td><p>該当なし</p></td>
 <td><p>LUN を圧縮するには、 <a href="/powershell/module/iscsitarget/resize-iscsivirtualdisk">convert-iscsivirtualdisk</a> を使用します。</p></td>
 </tr>
 <tr class="even">
@@ -372,7 +372,7 @@ ms.locfileid: "90766835"
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>Item</p></th>
+<th><p>アイテム</p></th>
 <th><p>サポートの制限</p></th>
 <th><p>コメント</p></th>
 </tr>
@@ -442,7 +442,7 @@ ISCSI ターゲット記憶域プロバイダーは、Windows Server 2016、Wind
 
 ISCSI ターゲットサーバーが Windows Server 2012 R2 以降を実行しているサーバーでホストされていて、リモートサーバーから VSS または VDS を使用する場合は、リモートサーバーが同じバージョンの Windows Server を実行し、iSCSI ターゲット記憶域プロバイダーの役割サービスがインストールされていることに注意してください。 また、Windows のすべてのバージョンで、iSCSI ターゲット記憶域プロバイダーの役割サービスの1つのバージョンのみをインストールする必要があることに注意してください。
 
-ISCSI ターゲット記憶域プロバイダーの詳細については、「 [Iscsi ターゲット記憶域 (VDS/VSS) プロバイダー](/powershell/module/iscsi/?view=win10-ps)」を参照してください。
+ISCSI ターゲット記憶域プロバイダーの詳細については、「 [Iscsi ターゲット記憶域 (VDS/VSS) プロバイダー](/powershell/module/iscsi/)」を参照してください。
 
 ## <a name="tested-compatibility-with-iscsi-initiators"></a>ISCSI イニシエーターとの互換性テスト
 
@@ -460,7 +460,7 @@ ISCSI ターゲット記憶域プロバイダーの詳細については、「 [
 <td><p>Initiator</p></td>
 <td><p>Windows Server 2012 R2</p></td>
 <td><p>Windows Server 2012</p></td>
-<td><p>コメント</p></td>
+<td><p>説明</p></td>
 </tr>
 <tr class="even">
 <td><p>Windows Server 2012 R2</p></td>

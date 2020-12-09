@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/14/2020
-ms.openlocfilehash: 16a8ada942f4fcae80085058c92a14bd33ed6e79
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 97e3860d96fe87414fba9d4965bfde62208c01be
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997195"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864821"
 ---
 # <a name="configure-additional-hgs-nodes"></a>追加の HGS ノードを構成する
 
@@ -67,7 +67,7 @@ ms.locfileid: "87997195"
 ## <a name="existing-bastion-forest-with-pfx-certificates"></a>PFX 証明書を持つ既存の要塞フォレスト
 
 1. ノードを既存のドメインに参加させる
-2. GMSA パスワードを取得するためのコンピューターの権限を付与し、Install-ADServiceAccount を実行します。
+2. GMSA パスワードを取得して実行するためのコンピューターの権利を付与し Install-ADServiceAccount
 3. HGS サーバーを初期化する
 
 ### <a name="join-the-node-to-the-existing-domain"></a>ノードを既存のドメインに参加させる
@@ -75,7 +75,7 @@ ms.locfileid: "87997195"
 1. 最初の HGS サーバーで DNS サーバーを使用するように、ノードに少なくとも1つの NIC が構成されていることを確認します。
 2. 新しい HGS ノードを最初の HGS ノードと同じドメインに参加させます。
 
-### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>GMSA パスワードを取得するためのコンピューターの権限を付与し、Install-ADServiceAccount を実行します。
+### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>GMSA パスワードを取得して実行するためのコンピューターの権利を付与し Install-ADServiceAccount
 
 [!INCLUDE [Grant the machine rights to retrieve the group MSA](../../../includes/guarded-fabric-grant-machine-rights-to-retrieve-gmsa.md)]
 
@@ -86,7 +86,7 @@ ms.locfileid: "87997195"
 ## <a name="existing-bastion-forest-with-certificate-thumbprints"></a>証明書の拇印がある既存の要塞フォレスト
 
 1. ノードを既存のドメインに参加させる
-2. GMSA パスワードを取得するためのコンピューターの権限を付与し、Install-ADServiceAccount を実行します。
+2. GMSA パスワードを取得して実行するためのコンピューターの権利を付与し Install-ADServiceAccount
 3. HGS サーバーを初期化する
 4. 証明書の秘密キーをインストールする
 
@@ -95,7 +95,7 @@ ms.locfileid: "87997195"
 1. 最初の HGS サーバーで DNS サーバーを使用するように、ノードに少なくとも1つの NIC が構成されていることを確認します。
 2. 新しい HGS ノードを最初の HGS ノードと同じドメインに参加させます。
 
-### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>GMSA パスワードを取得するためのコンピューターの権限を付与し、Install-ADServiceAccount を実行します。
+### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>GMSA パスワードを取得して実行するためのコンピューターの権利を付与し Install-ADServiceAccount
 
 [!INCLUDE [Grant the machine rights to retrieve the group MSA](../../../includes/guarded-fabric-grant-machine-rights-to-retrieve-gmsa.md)]
 
@@ -112,10 +112,10 @@ ms.locfileid: "87997195"
 ## <a name="configure-hgs-for-https-communications"></a>HTTPS 通信用に HGS を構成する
 
 SSL 証明書を使用して HGS エンドポイントをセキュリティで保護する場合は、このノード、および HGS クラスター内の他のすべてのノードで SSL 証明書を構成する必要があります。
-SSL 証明書は HGS によってレプリケートさ*れず*、すべてのノードに同じキーを使用する必要はありません (つまり、ノードごとに異なる ssl 証明書を持つことができます)。
+SSL 証明書は HGS によってレプリケートさ *れず* 、すべてのノードに同じキーを使用する必要はありません (つまり、ノードごとに異なる ssl 証明書を持つことができます)。
 
 SSL 証明書を要求するときは、クラスターの完全修飾ドメイン名 (の出力に示されているとおり `Get-HgsServer` ) が、証明書のサブジェクト共通名であるか、サブジェクト代替 DNS 名として含まれていることを確認します。
-証明機関から証明書を取得したら、 [HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps)で使用するように HGS を構成できます。
+証明機関から証明書を取得したら、 [HgsServer](/powershell/module/hgsserver/set-hgsserver)で使用するように HGS を構成できます。
 
 ```powershell
 $sslPassword = Read-Host -AsSecureString -Prompt "SSL Certificate Password"
@@ -143,4 +143,4 @@ HGS ノードを使用停止にするには:
    HGS が要塞フォレスト (既定) に展開されている場合、これは唯一の手順です。
    必要に応じて、ドメインからコンピューターの参加を解除し、Active Directory から gMSA アカウントを削除できます。
 
-2. HGS によって独自のドメインが作成された場合は、 [hgs をアンインストール](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration)してドメインを切断し、ドメインコントローラーを降格する必要もあります。
+2. HGS によって独自のドメインが作成された場合は、 [hgs をアンインストール](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration) してドメインを切断し、ドメインコントローラーを降格する必要もあります。

@@ -6,12 +6,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 2ae5c2f389c4fb32503dbd28ab4a3667a17f7466
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d283cc3ed8b848ba705a4e7773c1cd0861da1095
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945508"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864631"
 ---
 # <a name="legacy-ad-fs-federation-server-farm-using-sql-server"></a>SQL Server を使用した従来の AD FS フェデレーションサーバーファーム
 
@@ -44,7 +44,7 @@ Active Directory フェデレーションサービス (AD FS) AD FS のこのト
     > [!NOTE]
     > SQL Server は、フェールオーバークラスタリング、データベースミラーリング、およびさまざまな種類の SQL Server レプリケーションなど、さまざまなデータおよびアプリケーション冗長オプションをサポートしています。
 
-Microsoft の \( it 部門は、 \) 安全性の高い同期モードおよびフェールオーバークラスタリングで SQL Server データベースミラーリングを使用して、 \- \( \) \- SQL Server インスタンスの高可用性をサポートしています。 SQL Server \( のトランザクションピアツー \- \- ピア \) とマージレプリケーションは、Microsoft の AD FS 製品チームによってテストされていません。 SQL Server の詳細については、「[高可用性ソリューションの概要](https://go.microsoft.com/fwlink/?LinkId=179853)」または[適切な種類のレプリケーションの選択](https://go.microsoft.com/fwlink/?LinkId=214648)に関するトピックを参照してください。
+Microsoft の \( it 部門は、 \) 安全性の高い同期モードおよびフェールオーバークラスタリングで SQL Server データベースミラーリングを使用して、 \- \( \) \- SQL Server インスタンスの高可用性をサポートしています。 SQL Server \( のトランザクションピアツー \- \- ピア \) とマージレプリケーションは、Microsoft の AD FS 製品チームによってテストされていません。 SQL Server の詳細については、「 [高可用性ソリューションの概要](https://go.microsoft.com/fwlink/?LinkId=179853) 」または [適切な種類のレプリケーションの選択](https://go.microsoft.com/fwlink/?LinkId=214648)に関するトピックを参照してください。
 
 ### <a name="supported-sql-server-versions"></a>サポートされている SQL Server バージョン
 次のバージョンの SQL server は、Windows Server 2012 R2 の AD FS でサポートされています。
@@ -62,7 +62,7 @@ WID トポロジを持つフェデレーションサーバーファームと同�
 
 ![SQL を使用したサーバーファーム](media/SQLFarmADFSBlue.gif)
 
-フェデレーションサーバーまたは web アプリケーションプロキシで使用するためのネットワーク環境を構成する方法の詳細については、「AD FS の[要件](AD-FS-Requirements.md)」の「名前解決の要件」セクションを参照して、 [Web アプリケーションプロキシインフラストラクチャ (WAP) を計画](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))してください。
+フェデレーションサーバーまたは web アプリケーションプロキシで使用するためのネットワーク環境を構成する方法の詳細については、「AD FS の [要件](AD-FS-Requirements.md) 」の「名前解決の要件」セクションを参照して、 [Web アプリケーションプロキシインフラストラクチャ (WAP) を計画](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))してください。
 
 ## <a name="high-availability-options-for-sql-server-farms"></a>SQL Server ファームの高可用性オプション
 Windows Server 2012 R2 では、SQL Server を使用して AD FS ファームで高可用性をサポートするための2つの新しいオプションが AD FS ます。
@@ -74,7 +74,7 @@ Windows Server 2012 R2 では、SQL Server を使用して AD FS ファームで
 ここでは、これらの各オプションについて、それぞれの問題の解決方法と、展開するオプションを決定するための重要な考慮事項について説明します。
 
 > [!NOTE]
-> Windows Internal Database WID を使用するファーム AD FS、 \( \) \/ プライマリフェデレーションサーバーノードでの読み取り/書き込みアクセスと、セカンダリノードでの読み取り専用アクセスを備えた基本的なデータ冗長性を提供し \- ます。これは、地理的にローカルまたは地理的に分散したトポロジで使用できます。
+> Windows Internal Database WID を使用するファーム AD FS、 \( \) \/ プライマリフェデレーションサーバーノードでの読み取り/書き込みアクセスと、セカンダリノードでの読み取り専用アクセスを備えた基本的なデータ冗長性を提供し \- ます。  これは、地理的にローカルまたは地理的に分散したトポロジで使用できます。
 >
 > WID を使用する場合は、次の制限事項に注意してください。
 >
@@ -91,11 +91,11 @@ WID ファームの使用の概要を次の表に示します。
 ### <a name="alwayson-availability-groups"></a>AlwaysOn 可用性グループ
 **概要**
 
-AlwaysOn 可用性グループは SQL Server 2012 で導入され、高可用性 SQL Server インスタンスを作成するための新しい方法を提供しています。AlwaysOn 可用性グループは、クラスターとデータベースミラーリングの要素を組み合わせて、SQL インスタンス層とデータベース層の両方で冗長性とフェールオーバーを実現します。以前の高可用性オプションとは異なり、AlwaysOn 可用性グループは、 \( データベース層で共通の記憶域またはストレージエリアネットワークを必要としません \) 。
+AlwaysOn 可用性グループは SQL Server 2012 で導入され、高可用性 SQL Server インスタンスを作成するための新しい方法を提供しています。  AlwaysOn 可用性グループは、クラスターとデータベースミラーリングの要素を組み合わせて、SQL インスタンス層とデータベース層の両方で冗長性とフェールオーバーを実現します。  以前の高可用性オプションとは異なり、AlwaysOn 可用性グループは、 \( データベース層で共通の記憶域またはストレージエリアネットワークを必要としません \) 。
 
-可用性グループは、 \( 一連の読み取り \- 書き込みプライマリデータベース \) と、 \( 対応するセカンダリデータベースの 1 ~ 4 個の可用性レプリカセットで構成され \) ます。可用性グループは、 \- \( プライマリレプリカ \) と 1 ~ 4 個の読み取り専用可用性レプリカの1つの読み取り書き込みコピーをサポートし \- ます。各可用性レプリカは、1つの Windows Server フェールオーバークラスタリング WSFC クラスターの別のノードに存在する必要があり \( \) ます。AlwaysOn 可用性グループの詳細については、「 [AlwaysOn 可用性グループ \( SQL Server \) の概要](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver15)」を参照してください。
+可用性グループは、 \( 一連の読み取り \- 書き込みプライマリデータベース \) と、 \( 対応するセカンダリデータベースの 1 ~ 4 個の可用性レプリカセットで構成され \) ます。  可用性グループは、 \- \( プライマリレプリカ \) と 1 ~ 4 個の読み取り専用可用性レプリカの1つの読み取り書き込みコピーをサポートし \- ます。  各可用性レプリカは、1つの Windows Server フェールオーバークラスタリング WSFC クラスターの別のノードに存在する必要があり \( \) ます。  AlwaysOn 可用性グループの詳細については、「 [AlwaysOn 可用性グループ \( SQL Server \) の概要](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)」を参照してください。
 
-AD FS SQL Server ファームのノードの観点からは、1つの SQL Server インスタンスがポリシーアーティファクトデータベースとして、AlwaysOn 可用性グループに置き換えられ \/ ます。可用性グループリスナーは、 \( AD FS Security Token Service が \) SQL への接続に使用するクライアントです。
+AD FS SQL Server ファームのノードの観点からは、1つの SQL Server インスタンスがポリシーアーティファクトデータベースとして、AlwaysOn 可用性グループに置き換えられ \/ ます。  可用性グループリスナーは、 \( AD FS Security Token Service が \) SQL への接続に使用するクライアントです。
 
 次の図は、AlwaysOn 可用性グループを使用したファーム SQL Server AD FS を示しています。
 
@@ -109,15 +109,15 @@ AD FS SQL Server ファームのノードの観点からは、1つの SQL Server
 
 **展開に関する主な考慮事項**
 
-AlwaysOn 可用性グループを SQL Server マージレプリケーションと組み合わせて使用する場合は、以下の「SQL Server マージレプリケーションで AD FS を使用するための展開に関する主な考慮事項」で説明されている問題を確認してください。特に、レプリケーションサブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーションサブスクリプションが失敗します。 レプリケーションを再開するためには、レプリケーション管理者が手動でそのサブスクライバーを再構成する必要があります。レプリケーション[、Change Tracking、変更データ \( \) キャプチャ、AlwaysOn 可用性グループ](/sql/database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability?view=sql-server-ver15)SQL Server のレプリケーションオプションを使用して、レプリケーション[サブスクライバーと AlwaysOn 可用性グループ \( SQL Server \) ](/sql/database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server?view=sql-server-ver15)および AlwaysOn 可用性グループの全体的なサポートステートメントに関する特定の問題の SQL Server 説明を参照してください。
+AlwaysOn 可用性グループを SQL Server マージレプリケーションと組み合わせて使用する場合は、以下の「SQL Server マージレプリケーションで AD FS を使用するための展開に関する主な考慮事項」で説明されている問題を確認してください。  特に、レプリケーションサブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーションサブスクリプションが失敗します。 レプリケーションを再開するためには、レプリケーション管理者が手動でそのサブスクライバーを再構成する必要があります。  レプリケーション[、Change Tracking、変更データ \( \) キャプチャ、AlwaysOn 可用性グループ](/sql/database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability)SQL Server のレプリケーションオプションを使用して、レプリケーション[サブスクライバーと AlwaysOn 可用性グループ \( SQL Server \) ](/sql/database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server)および AlwaysOn 可用性グループの全体的なサポートステートメントに関する特定の問題の SQL Server 説明を参照してください。
 
 **AlwaysOn 可用性グループを使用するように AD FS を構成する**
 
 AlwaysOn 可用性グループを使用して AD FS ファームを構成するには、AD FS の展開手順を少し変更する必要があります。
 
-1. バックアップするデータベースは、AlwaysOn 可用性グループを構成する前に作成しておく必要があります。AD FS は、新しい AD FS SQL Server ファームの最初のフェデレーションサービスノードのセットアップと初期構成の一部としてデータベースを作成します。AD FS 構成の一部として、SQL 接続文字列を指定する必要があります。そのため、最初の AD FS ファームノードが SQL インスタンスに直接接続するように構成する必要があり \( ます。これは一時的なものです \) 。 SQL server 接続文字列を使用した AD FS ファームノードの構成など、AD FS ファームの構成に関する具体的なガイダンスについては、「 [Configure a Federation server](../../ad-fs/deployment/Configure-a-Federation-Server.md)」を参照してください。
+1. バックアップするデータベースは、AlwaysOn 可用性グループを構成する前に作成しておく必要があります。  AD FS は、新しい AD FS SQL Server ファームの最初のフェデレーションサービスノードのセットアップと初期構成の一部としてデータベースを作成します。  AD FS 構成の一部として、SQL 接続文字列を指定する必要があります。そのため、最初の AD FS ファームノードが SQL インスタンスに直接接続するように構成する必要があり \( ます。これは一時的なものです \) 。   SQL server 接続文字列を使用した AD FS ファームノードの構成など、AD FS ファームの構成に関する具体的なガイダンスについては、「 [Configure a Federation server](../../ad-fs/deployment/Configure-a-Federation-Server.md)」を参照してください。
 
-2. AD FS データベースを作成したら、そのデータベースを AlwaysOn 可用性グループに割り当てて、SQL Server ツールとプロセスを使用して、 [ \( \) SQL Server の可用性グループの作成と構成](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15)を行い、共通の TCPIP リスナーを作成します。
+2. AD FS データベースを作成したら、そのデータベースを AlwaysOn 可用性グループに割り当てて、SQL Server ツールとプロセスを使用して、 [ \( \) SQL Server の可用性グループの作成と構成](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server)を行い、共通の TCPIP リスナーを作成します。
 
 3. 最後に、PowerShell を使用して AD FS のプロパティを編集し、AlwaysOn 可用性グループのリスナーの DNS アドレスを使用するように SQL 接続文字列を更新します。
 
@@ -149,13 +149,13 @@ AlwaysOn 可用性グループを使用して AD FS ファームを構成する�
 
 **SQL Server マージレプリケーションでの AD FS の使用に関する主な考慮事項について \( は、上の図のメモ番号を確認してください。\)**
 
-- AlwaysOn 可用性グループまたはデータベースミラーリングでのディストリビューターデータベースの使用はサポートされていません。レプリケーション[、Change Tracking、変更データキャプチャ、および AlwaysOn 可用性グループ \( SQL Server \) ](/sql/database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability?view=sql-server-ver15)でのレプリケーションオプションを使用した AlwaysOn 可用性グループのサポートステートメントについては、「SQL Server」を参照してください。
+- AlwaysOn 可用性グループまたはデータベースミラーリングでのディストリビューターデータベースの使用はサポートされていません。  レプリケーション[、Change Tracking、変更データキャプチャ、および AlwaysOn 可用性グループ \( SQL Server \) ](/sql/database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability)でのレプリケーションオプションを使用した AlwaysOn 可用性グループのサポートステートメントについては、「SQL Server」を参照してください。
 
-- レプリケーション サブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーション サブスクリプションは失敗します。 レプリケーションを再開するためには、レプリケーション管理者が手動でそのサブスクライバーを再構成する必要があります。レプリケーション[、Change Tracking、変更データキャプチャ \( \) 、および AlwaysOn 可用性グループ](/sql/database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability?view=sql-server-ver15)SQL Server を使用して、レプリケーション[サブスクライバーと AlwaysOn 可用性グループ \( SQL Server \) ](/sql/database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server?view=sql-server-ver15)および AlwaysOn 可用性グループの全体的なサポートステートメントに関する特定の問題の SQL Server 説明を参照してください。
+- レプリケーション サブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーション サブスクリプションは失敗します。 レプリケーションを再開するためには、レプリケーション管理者が手動でそのサブスクライバーを再構成する必要があります。  レプリケーション[、Change Tracking、変更データキャプチャ \( \) 、および AlwaysOn 可用性グループ](/sql/database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability)SQL Server を使用して、レプリケーション[サブスクライバーと AlwaysOn 可用性グループ \( SQL Server \) ](/sql/database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server)および AlwaysOn 可用性グループの全体的なサポートステートメントに関する特定の問題の SQL Server 説明を参照してください。
 
 SQL Server マージレプリケーションを使用するように AD FS を構成する方法の詳細については、「 [SQL Server レプリケーションを使用した地理的冗長性のセットアップ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn632406(v=ws.11))」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [AD FS の展開トポロジ](Plan-Your-AD-FS-Deployment-Topology.md) 
  を計画する[Windows Server 2012 R2 の AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
 

@@ -6,12 +6,12 @@ ms.date: 03/16/2018
 ms.topic: article
 author: kaushika-msft
 ms.author: elizapo
-ms.openlocfilehash: ba9654fd60534e53211d65cfd2006320cea20383
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 7bc533063c52af2087d822a428458ba8efab94fc
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997276"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864671"
 ---
 # <a name="top-support-solutions-for-windows-server-2016"></a>Windows Server 2016 向けの上位のサポート ソリューション
 
@@ -28,7 +28,7 @@ Microsoft では Windows Server 用の更新プログラムとソリューショ
 - [Windows 10 バージョン 1607 および Windows Server 2016 のサービス スタック更新プログラム: 2017 年 8 月 8 日](https://support.microsoft.com/help/4035631)
 - [Windows 10 バージョン 1607 および Windows Server 2016 アップグレード用互換性更新プログラム: 2017 年 8 月 3 日](https://support.microsoft.com/help/4033524)
 - [Windows ベースの Azure VM では、システムのインプレース アップグレードはサポートされていません](https://support.microsoft.com/help/4014997)
-- [Windows Server 2016 のアップグレード オプションと変換オプション](../get-started/supported-upgrade-paths.md)
+- [Windows Server 2016 のアップグレードと変換オプション](../get-started/supported-upgrade-paths.md)
 - [Windows Server 2016 向けのサーバーの役割のアップグレードと移行に関する一覧表](../get-started/server-role-upgradeability-table.md)
 - [Windows Server のインストールとアップグレード](../get-started/installation-and-upgrade.md)
 - [リリース ノート:Windows Server 2016 に関する重要な問題](../get-started/windows-server-2016-ga-release-notes.md)
@@ -46,7 +46,7 @@ Microsoft では Windows Server 用の更新プログラムとソリューショ
 ## <a name="solutions-related-to-dcpromo-and-installing-domain-controllers"></a>DCPromo とドメイン コントローラーのインストールに関連するソリューション
 - [Active Directory および Active Directory Domain Services のポートの要件](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10))
 - [Active Directory ファイアウォールのポート-単純にする](http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/)
-- [Exchange Server による Windows Server 2016 のサポート](/Exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019)
+- [Exchange Server による Windows Server 2016 のサポート](/Exchange/plan-and-deploy/supportability-matrix)
 - [Ntdsutil.exe を使用してドメイン コントローラーに FSMO の役割を転送または停止する](https://support.microsoft.com/kb/255504)
 - [ドメイン コントローラーの展開のトラブルシューティング](../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md)
 - [Active Directory インストール ウィザードの問題のトラブルシューティング](/previous-versions/windows/it-pro/windows-2000-server/bb727058(v=technet.10))

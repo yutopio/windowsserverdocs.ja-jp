@@ -6,19 +6,19 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/29/2019
-ms.openlocfilehash: 713f52a935f59ca1fea35ce386ab29adb4b64080
-ms.sourcegitcommit: 2365a7b23e2eccd13be350306c622d2ad9d36bc8
+ms.openlocfilehash: 43d03727195e942c68e5ec3a982ddc6b7f756dbc
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96788095"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864431"
 ---
 # <a name="create-a-windows-shielded-vm-template-disk"></a>Windows のシールドされた VM テンプレートディスクを作成する
 
 >適用対象: Windows Server (半期チャネル)、Windows Server 2016、Windows Server 2019
 
 
-通常の Vm と同様に、VM テンプレート (たとえば、 [Virtual Machine Manager (VMM) の vm テンプレート](/system-center/vmm/library-vm-templates?view=sc-vmm-2019)) を作成して、テナントと管理者がテンプレートディスクを使用してファブリックに新しい vm を簡単に展開できるようにすることができます。 シールドされた Vm はセキュリティが重要な資産であるため、シールドをサポートする VM テンプレートを作成するための追加の手順があります。 このトピックでは、VMM でシールドされたテンプレートディスクと VM テンプレートを作成する手順について説明します。
+通常の Vm と同様に、VM テンプレート (たとえば、 [Virtual Machine Manager (VMM) の vm テンプレート](/system-center/vmm/library-vm-templates)) を作成して、テナントと管理者がテンプレートディスクを使用してファブリックに新しい vm を簡単に展開できるようにすることができます。 シールドされた Vm はセキュリティが重要な資産であるため、シールドをサポートする VM テンプレートを作成するための追加の手順があります。 このトピックでは、VMM でシールドされたテンプレートディスクと VM テンプレートを作成する手順について説明します。
 
 このトピックがシールドされた Vm のデプロイプロセス全体にどのように適合するかを理解するには、「保護された [ホストとシールドされた vm のホスティングサービスプロバイダーの構成手順](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)」を参照してください。
 
@@ -138,7 +138,7 @@ VMM ライブラリの準備済みテンプレートディスクを使用して�
 
 ## <a name="prepare-and-protect-the-vhdx-using-powershell"></a>PowerShell を使用して VHDX を準備して保護する
 
-テンプレートディスクウィザードを実行する代わりに、RSAT を実行しているコンピューターにテンプレートディスクと証明書をコピーし、 [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) を実行して署名プロセスを開始することもできます。
+テンプレートディスクウィザードを実行する代わりに、RSAT を実行しているコンピューターにテンプレートディスクと証明書をコピーし、 [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk) を実行して署名プロセスを開始することもできます。
 次の例では、 _TemplateName_ および _version_ パラメーターで指定された名前とバージョン情報を使用します。
 パラメーターに指定した VHDX は、更新された `-Path` テンプレートディスクで上書きされます。そのため、コマンドを実行する前にコピーを作成してください。
 

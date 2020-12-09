@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 8aa8a9a5-e3fa-4c9b-8331-ba5a3de22429
 ms.date: 8/16/2016
-ms.openlocfilehash: b6099410d4d5e043387594022e8bb376d5fb52f7
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 00312413c8da02ce5221767667ecd941f0095776
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746677"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865161"
 ---
 # <a name="the-wfp-virtual-switch-extension-should-be-enabled-if-it-is-required-by-third-party-extensions"></a>The WFP virtual switch extension should be enabled if it is required by third party extensions (Hyper-V: サード パーティ製の拡張機能で必要とされている場合、WFP 仮想スイッチ拡張機能を有効にする必要がある)
 
@@ -43,7 +43,7 @@ ms.locfileid: "90746677"
 
 1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
-2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
+2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行** します。
 
 3.  外部スイッチの名前の外部を交換した後、このコマンドを実行します。
 
@@ -52,4 +52,4 @@ Enable-VMSwitchExtension -VMSwitchName External -Name Microsoft Windows Filterin
 ```
 
 ## <a name="see-also"></a>関連項目
-[有効にする VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension?view=win10-ps)
+[有効にする VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension)

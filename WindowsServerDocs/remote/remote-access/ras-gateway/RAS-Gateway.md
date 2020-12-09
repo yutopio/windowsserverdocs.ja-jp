@@ -7,12 +7,12 @@ ms.assetid: acaa46b7-09b1-4707-9562-116df8db17eb
 ms.author: lizross
 author: eross-msft
 ms.date: 05/23/2018
-ms.openlocfilehash: 7ea0c7fab5ef605ae4cb92c01a235154e7e8f9b3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9e8dfd54fc919fa857ad360eb86baf47f8c3e274
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939873"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865211"
 ---
 # <a name="ras-gateway"></a>RAS ゲートウェイ
 
@@ -20,9 +20,9 @@ ms.locfileid: "87939873"
 
 RAS ゲートウェイは、シングルテナントモードまたはマルチテナントモードで使用できるソフトウェアルーターとゲートウェイです。
 
-- **シングルテナント**モードでは、任意のサイズの組織でゲートウェイを外部またはインターネットに接続されたエッジ仮想プライベートネットワーク (VPN) および DirectAccess サーバーとしてデプロイできます。 シングルテナントモードでは、Windows Server 2016 を実行している物理サーバーまたは仮想マシン (VM) に RAS ゲートウェイを展開できます。
+- **シングルテナント** モードでは、任意のサイズの組織でゲートウェイを外部またはインターネットに接続されたエッジ仮想プライベートネットワーク (VPN) および DirectAccess サーバーとしてデプロイできます。 シングルテナントモードでは、Windows Server 2016 を実行している物理サーバーまたは仮想マシン (VM) に RAS ゲートウェイを展開できます。
 
-- マルチ**テナントモード**では、クラウドサービスプロバイダー (csp) および企業は、RAS ゲートウェイを使用して、仮想ネットワークと物理ネットワーク (インターネットを含む) の間でデータセンターとクラウドネットワークのトラフィックをルーティングすることができます。 マルチテナントモードの場合は、Windows Server 2016 を実行している Vm に RAS ゲートウェイを展開することをお勧めします。
+- マルチ **テナントモード** では、クラウドサービスプロバイダー (csp) および企業は、RAS ゲートウェイを使用して、仮想ネットワークと物理ネットワーク (インターネットを含む) の間でデータセンターとクラウドネットワークのトラフィックをルーティングすることができます。 マルチテナントモードの場合は、Windows Server 2016 を実行している Vm に RAS ゲートウェイを展開することをお勧めします。
 
 > [!NOTE]
 > RAS ゲートウェイでは、ipv4 と ipv6 の転送を含む IPv4 と IPv6 がサポートされています。 ネットワークアドレス変換 (NAT) を使用して RAS ゲートウェイを構成する場合、NAT44 のみがサポートされます。
@@ -87,7 +87,7 @@ Windows Server 2016 では、RAS ゲートウェイは、リソースが配置�
 
 別の例として、仮想ネットワークがクラウド内に存在する場合、CSP は、VPN サーバーと CSP の RAS ゲートウェイの間に仮想プライベートネットワーク (VPN) サイト間接続を作成できるように、RAS ゲートウェイを展開できます。このリンクが確立されると、VPN 接続経由でクラウド内の仮想リソースに接続できるようになります。
 
-詳細については、「 [RAS Gateway の高可用性](../../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)」を参照してください。
+詳細については、「[RAS ゲートウェイの高可用性](../../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)」を参照してください。
 
 ## <a name="clustering-ras-gateway-for-high-availability"></a><a name="bkmk_clustering"></a>高可用性を実現するための RAS ゲートウェイのクラスタリング
 RAS ゲートウェイは、Hyper-v を実行し、1つの VM で構成される専用のコンピューターに展開されます。 その後、VM が RAS ゲートウェイとして構成されます。
@@ -122,9 +122,9 @@ RAS ゲートウェイの推奨される展開シナリオを次に示します�
 ## <a name="ras-gateway-management-tools"></a><a name="bkmk_manage"></a>RAS ゲートウェイ管理ツール
 RAS ゲートウェイの管理ツールを次に示します。
 
--   Windows Server 2016 では、RAS ゲートウェイルーターを展開するには、Windows PowerShell コマンドを使用する必要があります。 詳細については、「Windows Server 2016 および Windows 10 用の[リモートアクセスコマンドレット](/powershell/module/remoteaccess)」を参照してください。
+-   Windows Server 2016 では、RAS ゲートウェイルーターを展開するには、Windows PowerShell コマンドを使用する必要があります。 詳細については、「Windows Server 2016 および Windows 10 用の  [リモートアクセスコマンドレット](/powershell/module/remoteaccess) 」を参照してください。
 
--   System Center 2012 R2 Virtual Machine Manager (VMM) では、RAS ゲートウェイには Windows Server ゲートウェイという名前が付けられます。 VMM ソフトウェアインターフェイスでは、**ローカル BGP Ip アドレス**と**自律システム番号 (ASN)**、 **bgp ピア ip アドレスのリスト**、および**asn 値**など、一部の Border Gateway Protocol (bgp) 構成オプションを使用できます。 ただし、リモート アクセスの Windows PowerShell BGP コマンドを使用して、Windows Server ゲートウェイのその他の機能をすべて構成できます。 詳細については、「 [Virtual Machine Manager (VMM)](/system-center/vmm/overview?view=sc-vmm-2019) 」および「windows Server 2016 および windows 10 用の[リモートアクセスコマンドレット](/system-center/vmm/overview?view=sc-vmm-2019)」を参照してください。
+-   System Center 2012 R2 Virtual Machine Manager (VMM) では、RAS ゲートウェイには Windows Server ゲートウェイという名前が付けられます。 VMM ソフトウェアインターフェイスでは、 **ローカル BGP Ip アドレス** と **自律システム番号 (ASN)**、 **bgp ピア ip アドレスのリスト**、および **asn 値** など、一部の Border Gateway Protocol (bgp) 構成オプションを使用できます。 ただし、リモート アクセスの Windows PowerShell BGP コマンドを使用して、Windows Server ゲートウェイのその他の機能をすべて構成できます。 詳細については、「  [Virtual Machine Manager (VMM)](/system-center/vmm/overview) 」および「windows Server 2016 および windows 10 用の [リモートアクセスコマンドレット](/system-center/vmm/overview) 」を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 - [RAS ゲートウェイの高可用性](../../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)

@@ -5,12 +5,12 @@ ms.topic: article
 ms.author: phstee
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 8659a836d3ad3bd3e5e61f2849e2327e57536c76
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 99cdb71478b4cf607ddc8971bf376c7ff3de3087
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992358"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864362"
 ---
 # <a name="additional-performance-tuning-resources"></a>その他のパフォーマンスチューニングリソース
 
@@ -39,11 +39,11 @@ ms.locfileid: "87992358"
 
 -   [Windows フィルタリング プラットフォーム](/windows-hardware/drivers/network/porting-packet-processing-drivers-and-apps-to-wfp)
 
--   [ネットワーク展開ガイド: 高速ネットワーク機能の展開](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/gg162681(v=ws.10))
+-   [ネットワーク展開ガイド: High-Speed ネットワーク機能の展開](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/gg162681(v=ws.10))
 
 ## <a name="storage-subsystem-tuning-resources"></a>記憶域サブシステムのチューニングに関するリソース
 
--   [Windows 用ディスクサブシステムのパフォーマンス分析](https://download.microsoft.com/download/e/b/a/eba1050f-a31d-436b-9281-92cdfeae4b45/subsys_perf.doc)(このドキュメントの一部は最新ではありませんが、キャプチャされた一般的な観測とガイドラインの多くは、引き続き正確であり、関連しています)。
+-   [Windows 用ディスクサブシステムのパフォーマンス分析](https://download.microsoft.com/download/e/b/a/eba1050f-a31d-436b-9281-92cdfeae4b45/subsys_perf.doc) (このドキュメントの一部は最新ではありませんが、キャプチャされた一般的な観測とガイドラインの多くは、引き続き正確であり、関連しています)。
 
 ## <a name="file-server-tuning-resources"></a>ファイルサーバーのチューニングに関するリソース
 
@@ -99,7 +99,7 @@ ms.locfileid: "87992358"
 
 -   [NUMA ノードに TCP/IP ポートをマッピングする方法](https://go.microsoft.com/fwlink/?LinkId=98293)
 
--   [ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql?view=sql-server-ver15)
+-   [ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)
 
 
 ## <a name="server-tuning-tools"></a>サーバーチューニングツール

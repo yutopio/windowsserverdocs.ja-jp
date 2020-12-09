@@ -6,12 +6,12 @@ ms.author: arduppal
 ms.date: 12/19/2018
 ms.topic: article
 manager: mchad
-ms.openlocfilehash: cb1b712e62b3b77def304526c7b65fd5187b56d5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f0658434f8a14080b56efa5cacbd20ebeb11438d
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939361"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864795"
 ---
 # <a name="cluster-to-cluster-storage-replica-cross-region-in-azure"></a>Azure リージョンを超えてクラスター間の記憶域レプリカを構成する
 
@@ -27,25 +27,25 @@ Azure でリージョンをまたがるアプリケーションのストレー�
 > 参照されるすべての例は、上記の図に固有です。
 
 
-1. Azure portal で、2つの異なるリージョンに[リソースグループ](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup)を作成します。
+1. Azure portal で、2つの異なるリージョンに [リソースグループ](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup)  を作成します。
 
-    たとえば、上の例のように、**米国西部 2**および**sr-iov**の**AZ2AZ** **は米国中西部にあり**ます。
+    たとえば、上の例のように、**米国西部 2** および **sr-iov** の **AZ2AZ** **は米国中西部にあり** ます。
 
-2. 各クラスターの各リソースグループに1つずつ、2つの[可用性セット](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM)を作成します。
+2. 各クラスターの各リソースグループに1つずつ、2つの [可用性セット](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM)を作成します。
     - の可用性セット (**az2azAS1**) (**AZ2AZ**)
     - の可用性セット (**azcross**) (**sr-iov クロス**)
 
 3. 2 つの仮想ネットワークを作成する
-   - 1つのサブネットと1つのゲートウェイサブネットを持つ、1つ目のリソースグループ (**az2az**) に[仮想ネットワーク](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM)(**az2az**) を作成します。
-   - 2つ目のリソースグループ (**SR-IOV クロス**) に[仮想ネットワーク](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM)(**azcross VNET**) を作成し、1つのサブネットと1つのゲートウェイサブネットを作成します。
+   - 1つのサブネットと1つのゲートウェイサブネットを持つ、1つ目のリソースグループ (**az2az**) に [仮想ネットワーク](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM)(**az2az**) を作成します。
+   - 2つ目のリソースグループ (**SR-IOV クロス**) に [仮想ネットワーク](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM)(**azcross VNET**) を作成し、1つのサブネットと1つのゲートウェイサブネットを作成します。
 
 4. 2つのネットワークセキュリティグループを作成する
-   - 最初のリソースグループ (**az2az**) に[ネットワークセキュリティグループ](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM)(**az2az-nsg**) を作成します。
-   - 2つ目のリソースグループ (**SR-IOV クロス**) に[ネットワークセキュリティグループ](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM)(**azcross nsg**) を作成します。
+   - 最初のリソースグループ (**az2az**) に [ネットワークセキュリティグループ](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM)(**az2az-nsg**) を作成します。
+   - 2つ目のリソースグループ (**SR-IOV クロス**) に [ネットワークセキュリティグループ](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM)(**azcross nsg**) を作成します。
 
    RDP: 3389 の1つの受信セキュリティ規則を両方のネットワークセキュリティグループに追加します。 セットアップが完了したら、この規則を削除することを選択できます。
 
-5. 以前に作成したリソースグループに Windows Server[仮想マシン](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM)を作成します。
+5. 以前に作成したリソースグループに Windows Server [仮想マシン](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) を作成します。
 
    ドメインコントローラー (**az2azDC**)。 ドメインコントローラーの3つ目の可用性セットを作成するか、2つの可用性セットのいずれかにドメインコントローラーを追加するかを選択できます。 2つのクラスター用に作成された可用性セットにこれを追加する場合は、VM の作成時に標準のパブリック IP アドレスを割り当てます。
       - Active Directory ドメインサービスをインストールします。
@@ -63,7 +63,7 @@ Azure でリージョンをまたがるアプリケーションのストレー�
    すべてのノードをドメインに接続し、以前に作成したユーザーに管理者特権を付与します。
 
    仮想ネットワークの DNS サーバーをドメインコントローラーのプライベート IP アドレスに変更します。
-   - この例では、ドメインコントローラー **az2azDC**にプライベート IP アドレス (10.3.0.8) があります。 Virtual Network (**az2az**と**azcross vnet**) で、DNS サーバー10.3.0.8 を変更します。
+   - この例では、ドメインコントローラー **az2azDC** にプライベート IP アドレス (10.3.0.8) があります。 Virtual Network (**az2az** と **azcross vnet**) で、DNS サーバー10.3.0.8 を変更します。
 
      この例では、すべてのノードを "contoso.com" に接続し、管理者特権を "contosoadmin" に指定します。
    - すべてのノードから contosoadmin としてログインします。
@@ -101,7 +101,7 @@ Azure でリージョンをまたがるアプリケーションのストレー�
       - 正常性プローブの作成: ポート59999
       - 負荷分散規則の作成: 有効な Floating IP を使用して HA ポートを許可します。
 
-9. Vnet 間接続用の[仮想ネットワークゲートウェイ](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM)を作成します。
+9. Vnet 間接続用の [仮想ネットワークゲートウェイ](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM) を作成します。
 
    - 1つ目のリソースグループに最初の仮想ネットワークゲートウェイ (**az2az-VNetGateway**) を作成する (**az2az**)
    - ゲートウェイの種類 = VPN、VPN の種類 = ルートベース
@@ -125,7 +125,7 @@ Azure でリージョンをまたがるアプリケーションのストレー�
 
     クラスターの1つのノードからクラスターごとに1回実行します。
 
-    この例では、構成値に応じて "ILBIP" を変更してください。 任意の1つのノード**az2az1** / **az2az2**から次のコマンドを実行します。
+    この例では、構成値に応じて "ILBIP" を変更してください。 任意の1つのノード **az2az1** / **az2az2** から次のコマンドを実行します。
 
     ```PowerShell
      $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
@@ -135,7 +135,7 @@ Azure でリージョンをまたがるアプリケーションのストレー�
      Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}
     ```
 
-12. 任意の1つのノード**azcross1** / **azcross2**から次のコマンドを実行します。
+12. 任意の1つのノード **azcross1** / **azcross2** から次のコマンドを実行します。
     ```PowerShell
      $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
@@ -156,14 +156,14 @@ Azure でリージョンをまたがるアプリケーションのストレー�
       Get-Cluster -Name SRAZCross (ran from az2az1)
     ```
 
-13. 両方のクラスターのクラウド監視を作成します。 Azure に2つの[ストレージアカウント](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM)(**az2azcw**、**azクロス sa**) を作成します。各リソースグループの各クラスターに1つずつ (**AZ2AZ**、 **sr-iov クロス**) 作成します。
+13. 両方のクラスターのクラウド監視を作成します。 Azure に2つの [ストレージアカウント](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**、**azクロス sa**) を作成します。各リソースグループの各クラスターに1つずつ (**AZ2AZ**、 **sr-iov クロス**) 作成します。
 
     - "アクセスキー" からストレージアカウントの名前とキーをコピーします。
     - "フェールオーバークラスターマネージャー" からクラウド監視を作成し、上記のアカウント名とキーを使用して作成します。
 
-14. 次の手順に進む前に、[クラスター検証テスト](../../failover-clustering/create-failover-cluster.md#validate-the-configuration)を実行してください
+14. 次の手順に進む前に、 [クラスター検証テスト](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) を実行してください
 
-15. Windows PowerShell を起動し、[Test-SRTopology](/powershell/module/storagereplica/test-srtopology?view=win10-ps) コマンドレットを使用して、記憶域レプリカのすべての要件を満たしているかどうかを判別します。 このコマンドレットは、簡単なテストのために要件のみモードで使用することも、実行時間の長いパフォーマンス評価モードで使用することもできます。
+15. Windows PowerShell を起動し、[Test-SRTopology](/powershell/module/storagereplica/test-srtopology) コマンドレットを使用して、記憶域レプリカのすべての要件を満たしているかどうかを判別します。 このコマンドレットは、簡単なテストのために要件のみモードで使用することも、実行時間の長いパフォーマンス評価モードで使用することもできます。
 
 16. クラスター間の記憶域レプリカを構成します。
     あるクラスターから別のクラスターへのアクセスを双方向に許可します。
@@ -178,12 +178,12 @@ Azure でリージョンをまたがるアプリケーションのストレー�
      Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
     ```
 
-17. 2つのクラスターのための SR パートナーシップを作成します。</ol>
+17. 2つのクラスターの SR-Partnership を作成します。</ol>
 
-    - Cluster **SRAZC1**の場合
+    - Cluster **SRAZC1** の場合
       - ボリュームの場所:-c:\ClusterStorage\DataDisk1
       - ログの場所:-g:
-    - Cluster **SRAZCross**の場合
+    - Cluster **SRAZCross** の場合
       - ボリュームの場所:-c:\ClusterStorage\DataDiskCross
       - ログの場所:-g:
 

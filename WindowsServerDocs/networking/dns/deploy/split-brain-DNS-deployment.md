@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e8b19df2313bd0f3f6599aae8a23a18233f469e7
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 5e9187fd549f9982ab8d0bea5ffa9b45d6e1e3c7
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766925"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865281"
 ---
 # <a name="use-dns-policy-for-split-brain-dns-deployment"></a>Split ブレイン DNS 展開に DNS ポリシーを使用する \-
 
@@ -20,7 +20,7 @@ ms.locfileid: "90766925"
 このトピックを使用して、Windows server DNS のポリシーを構成する方法について&reg; 2016 スプリット ブレイン DNS 展開では、1 つの 2 つのバージョンが存在するゾーンの組織のイントラネット上の内部ユーザーと外部のユーザーは、通常、インターネット上のユーザーに対して使用します。
 
 >[!NOTE]
->Active Directory 統合 DNS ゾーン数を使用したスプリットブレイン DNS 展開に DNS ポリシーを使用する方法の詳細につい \- ては、 [Active Directory でのスプリットブレイン DNS の dns ポリシーの使用](dns-sb-with-ad.md)に関する説明を参照してください。
+>Active Directory 統合 DNS ゾーン数を使用したスプリットブレイン DNS 展開に DNS ポリシーを使用する方法につい \- ては、「 [Active Directory で Split-Brain DNS の dns ポリシーを使用](dns-sb-with-ad.md)する」を参照してください。
 
 以前は、このシナリオは、DNS 管理者の管理 2 台の DNS サーバー、各内部および外部のユーザーのセットごとにサービスを提供することが必要です。 ゾーン内の少数のレコードだけが分割されている場合、 \- またはゾーンの両方のインスタンス (内部および外部) が同じ親ドメインに委任されていた場合は、管理難問になります。
 
@@ -86,7 +86,7 @@ DNS のポリシーを使用して DNS Split-Brain 展開を構成するには�
 
 `Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "internal"`
 
-詳細については、次を参照してください [追加 DnsServerZoneScope。](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
+詳細については、次を参照してください [追加 DnsServerZoneScope。](/powershell/module/dnsserver/add-dnsserverzonescope)
 
 ### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records"></a>レコードをゾーンのスコープに追加します。
 
@@ -103,7 +103,7 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4Address "10.0.0.39” -ZoneScope "internal"
 `
 
-詳細については、次を参照してください。 [追加 DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord)します。
 
 ### <a name="create-the-dns-policies"></a><a name="bkmk_policies"></a>DNS のポリシーを作成します。
 
@@ -121,7 +121,7 @@ DNS サーバーは、プライベート インターフェイスでクエリを
 
 `Add-DnsServerQueryResolutionPolicy -Name "SplitBrainZonePolicy" -Action ALLOW -ServerInterface "eq,10.0.0.56" -ZoneScope "internal,1" -ZoneName contoso.com`
 
-詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy)します。
 
 ## <a name="example-of-dns-selective-recursion-control"></a><a name="bkmk_recursion"></a>DNS オプションを選択再帰コントロールの例
 
@@ -155,7 +155,7 @@ Contoso の DNS サーバーが権限のないクエリを受信した場合 (�
 
 ポリシー レベル、ゾーンのため、これらのクエリは、任意のゾーンにも属さない、 \(スプリット ブレインの例で定義されている\) は評価されません。
 
-DNS サーバーは、再帰ポリシーとプライベート インターフェイスの一致に受信したクエリを評価、 **SplitBrainRecursionPolicy**します。 このポリシーは、再帰が有効になっている再帰スコープを指しています。
+DNS サーバーは、再帰ポリシーとプライベート インターフェイスの一致に受信したクエリを評価、 **SplitBrainRecursionPolicy** します。 このポリシーは、再帰が有効になっている再帰スコープを指しています。
 
 次に、DNS サーバーは再帰を実行して、インターネットからの応答を取得 https://www.microsoft.com し、応答をローカルにキャッシュします。
 
@@ -183,7 +183,7 @@ Set-DnsServerRecursionScope -Name . -EnableRecursion $False
 Add-DnsServerRecursionScope -Name "InternalClients" -EnableRecursion $True
 ```
 
-詳細については、次を参照してください [追加 DnsServerRecursionScope。](/powershell/module/dnsserver/add-dnsserverrecursionscope?view=win10-ps)
+詳細については、次を参照してください [追加 DnsServerRecursionScope。](/powershell/module/dnsserver/add-dnsserverrecursionscope)
 
 #### <a name="create-dns-recursion-policies"></a><a name="bkmk_recpolicy"></a>DNS の再帰ポリシーを作成します。
 
@@ -199,7 +199,7 @@ DNS サーバーがいくつかのクエリの権限を持っていない場合�
 Add-DnsServerQueryResolutionPolicy -Name "SplitBrainRecursionPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP "EQ,10.0.0.39"
 ```
 
-詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy)します。
 
 今すぐ選択的な再帰制御の内部クライアントの有効化と、スプリット ブレイン ネーム サーバーまたは DNS サーバーのいずれかの必要な DNS ポリシーで、DNS サーバーを構成します。
 

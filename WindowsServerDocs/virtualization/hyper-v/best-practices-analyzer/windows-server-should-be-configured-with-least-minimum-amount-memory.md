@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: d324af73-af73-40b0-bd5b-8003ba3e921b
 ms.date: 8/16/2016
-ms.openlocfilehash: 7b1aeb2a8fcc6ac499946a5c9364775222b34d26
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: c9d39fbb0ecb3864c3a0456e334d0257dfac9d8c
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746107"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864581"
 ---
 # <a name="windows-server-2016-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Windows Server 2016 にする必要があります最小メモリ量以上で構成
 
@@ -55,7 +55,7 @@ ms.locfileid: "90746107"
 
 1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
-2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
+2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行** します。
 
 3.  交換した後にこのコマンドを実行 \<MyVM> 、仮想マシンの名前に置き換えます。
 
@@ -64,4 +64,4 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ```
 
 ## <a name="see-also"></a>関連項目
-[設定-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[設定-VMMemory](/powershell/module/hyper-v/set-vmmemory)

@@ -7,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f2cdc1123595dae9c0c72bcdc77c2f55382c760
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: c5b82b490abb5564392be3a26db5c47a5a372f6e
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89629948"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864282"
 ---
 # <a name="certreq"></a>certreq
 
@@ -40,7 +40,7 @@ certreq –enroll –cert certId [options] renew [reusekeys]
 
 ### <a name="parameters"></a>パラメーター
 
-| パラメーター | Description |
+| パラメーター | 説明 |
 | -------- | ----------- |
 | -submit | 証明機関に要求を送信します。 |
 | -取得 `<requestid>` | 証明機関からの前の要求に対する応答を取得します。 |
@@ -65,13 +65,13 @@ certreq –submit certrequest.req certnew.cer certnew.pfx
 
 #### <a name="remarks"></a>注釈
 
-- これは、既定の certreq.exe パラメーターです。 コマンドラインプロンプトでオプションが指定されていない場合、certreq.exe は証明機関に証明書要求を送信しようとします。 **– Submit**オプションを使用する場合は、証明書の要求ファイルを指定する必要があります。 このパラメーターを省略すると、一般的な [ **ファイルを開く** ] ウィンドウが表示され、適切な証明書要求ファイルを選択できます。
+- これは、既定の certreq.exe パラメーターです。 コマンドラインプロンプトでオプションが指定されていない場合、certreq.exe は証明機関に証明書要求を送信しようとします。 **– Submit** オプションを使用する場合は、証明書の要求ファイルを指定する必要があります。 このパラメーターを省略すると、一般的な [ **ファイルを開く** ] ウィンドウが表示され、適切な証明書要求ファイルを選択できます。
 
 - SAN 属性を指定して証明書を要求するには、マイクロソフトサポート技術情報の記事931351「[セキュリティで保護された LDAP 証明書にサブジェクトの別名を追加する方法](https://support.microsoft.com/kb/931351)」の「 *certreq.exe ユーティリティを使用して証明書の要求を作成および送信する方法*」セクションを参照してください。
 
 ### <a name="certreq--retrieve"></a>certreq-取得
 
-証明書 ID 20 を取得し、 *Mycertificate*という名前の証明書ファイル (.cer) を作成するには、次のようにします。
+証明書 ID 20 を取得し、 *Mycertificate* という名前の証明書ファイル (.cer) を作成するには、次のようにします。
 
 ```
 certreq -retrieve 20 MyCertificate.cer
@@ -99,7 +99,7 @@ subject = CN=W2K8-BO-DC.contoso2.com
 
 INF ファイルのこの領域は、新しい証明書要求テンプレートでは必須です。値を持つパラメーターを少なくとも1つ含める必要があります。
 
-| キー<sup>1</sup> | Description | 値<sup>2</sup> | 例 |
+| キー<sup>1</sup> | 説明 | 値<sup>2</sup> | 例 |
 | --- | ---------- | ----- | ------- |
 | サブジェクト | いくつかのアプリは、証明書のサブジェクト情報に依存しています。 このキーの値を指定することをお勧めします。 サブジェクトがここで設定されていない場合は、サブジェクトの別名証明書の拡張機能の一部としてサブジェクト名を含めることをお勧めします。 | 相対識別名の文字列値 | Subject = CN = computer1 Subject = CN = John Smith, CN = Users, DC = Contoso, DC = com |
 | Exportable | TRUE に設定すると、秘密キーを証明書と共にエクスポートできます。 高いレベルのセキュリティを確保するため、秘密キーをエクスポートすることはできません。ただし、場合によっては、複数のコンピューターまたはユーザーが同じ秘密キーを共有する必要がある場合に必要になることがあります。 | `true | false` | `Exportable = TRUE`. CNG キーは、この形式のエクスポート可能なプレーンテキストを区別できます。 CAPI1 キーを使うことはできません。 |
@@ -119,7 +119,7 @@ INF ファイルのこの領域は、新しい証明書要求テンプレート�
 | EncryptionLength | 使用する暗号化アルゴリズムの長さ。 | 指定した EncryptionAlgorithm で許可されている任意の長さ。 | `EncryptionLength = 128` |
 | ProviderName | プロバイダー名は、CSP の表示名です。 | 使用している CSP のプロバイダー名がわからない場合は、 `certutil –csplist` コマンドラインからを実行します。 このコマンドは、ローカルシステムで使用可能なすべての Csp の名前を表示します。 | `ProviderName = Microsoft RSA SChannel Cryptographic Provider` |
 | ProviderType | プロバイダーの種類は、RSA Full などの特定のアルゴリズム機能に基づいて特定のプロバイダーを選択するために使用されます。 | 使用している CSP のプロバイダーの種類がわからない場合は、 `certutil –csplist` コマンドラインプロンプトからを実行します。 このコマンドは、ローカルシステムで使用可能なすべての Csp のプロバイダーの種類を表示します。 | `ProviderType = 1` |
-| RenewalCert | 証明書の要求が生成されたシステム上に存在する証明書を更新する必要がある場合は、その証明書のハッシュをこのキーの値として指定する必要があります。 | 証明書要求が作成されたコンピューターで使用可能な証明書の証明書ハッシュ。 証明書のハッシュがわからない場合は、証明書 MMC スナップインを使用して、更新する必要がある証明書を確認します。 証明書のプロパティを開き、 `Thumbprint` 証明書の属性を確認します。 証明書の更新に `PKCS#7` は、またはのいずれかの要求形式が必要です `CMC` 。 | `RenewalCert = 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D` |
+| RenewalCert | 証明書の要求が生成されたシステム上に存在する証明書を更新する必要がある場合は、その証明書のハッシュをこのキーの値として指定する必要があります。 | 証明書要求が作成されたコンピューターで使用可能な証明書の証明書ハッシュ。 証明書のハッシュがわからない場合は Snap-In [証明書] MMC を使用して、更新する証明書を確認します。 証明書のプロパティを開き、 `Thumbprint` 証明書の属性を確認します。 証明書の更新に `PKCS#7` は、またはのいずれかの要求形式が必要です `CMC` 。 | `RenewalCert = 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D` |
 | RequesterName | 別のユーザー要求の代理として登録するように要求を作成します。また、登録エージェント証明書を使用して要求に署名する必要があります。これを行わないと、CA は要求を拒否します。 オプションを使用して、 `-cert` 登録エージェントの証明書を指定します。 `RequestType`がまたはに設定されている場合、証明書の要求に対して要求者名を指定でき `PKCS#7` `CMC` ます。 がに設定されている場合 `RequestType` `PKCS#10` 、このキーは無視されます。 は、 `Requestername` 要求の一部としてのみ設定できます。 保留中の要求でを操作することはできません `Requestername` 。 | `Domain\User` | `Requestername = Contoso\BSmith` |
 | RequestType | 証明書要求を生成して送信するために使用される標準を決定します。 | <ul><li>`PKCS10 -- 1`</li><li>`PKCS7 -- 2`</li><li>`CMC -- 3`</li><li>`Cert -- 4`</li><li>`SCEP -- fd00 (64768)`</li></ul>**ヒント:** このオプションは、自己署名または自己発行の証明書を示します。 要求を生成するのではなく、新しい証明書を作成してから、証明書をインストールします。 "自己署名" は既定値です。 – Cert オプションを使用して署名証明書を指定し、自己署名されていない自己発行の証明書を作成します。 | `RequestType = CMC` |
 | SecurityDescriptor | セキュリティ保護可能なオブジェクトに関連付けられたセキュリティ情報を格納します。 ほとんどのセキュリティ保護可能なオブジェクトでは、オブジェクトを作成する関数呼び出しでオブジェクトのセキュリティ記述子を指定できます。 [セキュリティ記述子定義言語](/windows/win32/secauthz/security-descriptor-definition-language)に基づく文字列。<p>**ヒント:** これは、コンピューターコンテキストのスマートカード以外のキーにのみ関連します。 | `SecurityDescriptor = D:P(A;;GA;;;SY)(A;;GA;;;BA)` |
@@ -130,7 +130,7 @@ INF ファイルのこの領域は、新しい証明書要求テンプレート�
 | KeyProtection | 秘密キーを使用する前に保護する方法を示す値を指定します。 | <ul><li>`XCN_NCRYPT_UI_NO_PROTCTION_FLAG -- 0`</li><li>`XCN_NCRYPT_UI_PROTECT_KEY_FLAG -- 1`</li><li>`XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG -- 2`</li></ul> | `KeyProtection = NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG` |
 | SuppressDefaults | 既定の拡張機能と属性が要求に含まれるかどうかを示すブール値を指定します。 既定値は、オブジェクト識別子 (Oid) によって表されます。 | `true | false` | `SuppressDefaults = true` |
 | FriendlyName | 新しい証明書のフレンドリ名。 | Text | `FriendlyName = Server1` |
-| ValidityPeriodUnits | ValidityPeriod で使用する単位の数を指定します。 注: これは、がの場合にのみ使用され `request type=cert` ます。 | 数値 | `ValidityPeriodUnits = 3` |
+| ValidityPeriodUnits | ValidityPeriod で使用する単位の数を指定します。 注: これは、がの場合にのみ使用され `request type=cert` ます。 | Numeric | `ValidityPeriodUnits = 3` |
 | ValidityPeriod | ValidityPeriod は米国英語の複数形の期間である必要があります。 注: これは、要求の種類が cert の場合にのみ使用されます。 | `Years |  Months | Weeks | Days | Hours | Minutes | Seconds` | `ValidityPeriod = Years` |
 
 <sup>1</sup>等号 (=) の左側のパラメーター
@@ -160,7 +160,7 @@ INF ファイルのこの領域は、新しい証明書要求テンプレート�
 | *continue* | | `continue = 1.3.6.1.5.5.7` |
 | *continue* | | `continue = 1.3.6.1.5.5.7.3.1` |
 | 2.5.29.19 | | `{text}ca=0pathlength=3` |
-| Critical | | `Critical=2.5.29.19` |
+| 重大 | | `Critical=2.5.29.19` |
 | KeySpec | | <ul><li>`AT_NONE -- 0`</li><li>`AT_SIGNATURE -- 2`</li><li>`AT_KEYEXCHANGE -- 1`</ul></li> |
 | RequestType | | <ul><li>`PKCS10 -- 1`</li><li>`PKCS7 -- 2`</li><li>`CMC -- 3`</li><li>`Cert -- 4`</li><li>`SCEP -- fd00 (64768)`</li></ul> |
 | KeyUsage | | <ul><li>`CERT_DIGITAL_SIGNATURE_KEY_USAGE -- 80 (128)`</li><li>`CERT_NON_REPUDIATION_KEY_USAGE -- 40 (64)`</li><li>`CERT_KEY_ENCIPHERMENT_KEY_USAGE -- 20 (32)`</li><li>`CERT_DATA_ENCIPHERMENT_KEY_USAGE -- 10 (16)`</li><li>`CERT_KEY_AGREEMENT_KEY_USAGE -- 8`</li><li>`CERT_KEY_CERT_SIGN_KEY_USAGE -- 4`</li><li>`CERT_OFFLINE_CRL_SIGN_KEY_USAGE -- 2`</li><li>`CERT_CRL_SIGN_KEY_USAGE -- 2`</li><li>`CERT_ENCIPHER_ONLY_KEY_USAGE -- 1`</li><li>`CERT_DECIPHER_ONLY_KEY_USAGE -- 8000 (32768)`</li></ul> |
@@ -172,11 +172,11 @@ INF ファイルのこの領域は、新しい証明書要求テンプレート�
 > [!NOTE]
 > `SubjectNameFlags` 現在のユーザーまたは現在のコンピューターのプロパティ (DNS 名、UPN など) に基づいて、certreq によって自動的に設定される **サブジェクト** と **SubjectAltName** の拡張フィールドを INF ファイルで指定できるようにします。 Literal テンプレートを使用することは、代わりにテンプレート名フラグが使用されることを意味します。 これにより、1つの INF ファイルを複数のコンテキストで使用して、コンテキスト固有のサブジェクト情報を含む要求を生成できます。
 >
-> `X500NameFlags``CertStrToName`値が asn.1 エンコードされた `Subject INF keys` 識別**名**に変換されるときに、API に直接渡されるフラグを指定します。
+> `X500NameFlags``CertStrToName`値が asn.1 エンコードされた `Subject INF keys` 識別 **名** に変換されるときに、API に直接渡されるフラグを指定します。
 
 #### <a name="example"></a>例
 
-ポリシーファイル (.inf) をメモ帳で作成し、 *requestconfig .inf*として保存するには、次のようにします。
+ポリシーファイル (.inf) をメモ帳で作成し、 *requestconfig .inf* として保存するには、次のようにします。
 
 ```
 [NewRequest]
@@ -295,7 +295,7 @@ certreq –enroll -machine –cert 61 2d 3c fe 00 00 00 00 00 05 renew
 | オプション | 説明 |
 | ------- | ----------- |
 | -任意 | `Force ICertRequest::Submit` エンコードの種類を確認します。|
-| -attrib `<attributestring>` | **名前**と**値**の文字列のペアをコロンで区切って指定します。<p>( **Name**例: **Value** `\n` Name1: value1\nName2: value2) を使用して、名前と値の文字列ペアを区切ります。 |
+| -attrib `<attributestring>` | **名前** と **値** の文字列のペアをコロンで区切って指定します。<p>( **Name** 例: **Value** `\n` Name1: value1\nName2: value2) を使用して、名前と値の文字列ペアを区切ります。 |
 | -バイナリ | 出力ファイルを base64 でエンコードされた形式ではなくバイナリとして書式設定します。 |
 | -policyserver `<policyserver>` | ldap `<path>`<br>証明書の登録ポリシー web サービスを実行しているコンピューターの URI または一意の ID を挿入します。<p>参照によって要求ファイルを使用するように指定するには、にマイナス記号 (-) を使用し `<policyserver>` ます。 |
 | -config `<ConfigString>` | 構成文字列で指定された CA ( **cahostame caname**) を使用して操作を処理します。 Https: \ 接続の場合は \\ 、登録サーバーの URI を指定します。 ローカルコンピューターストアの CA の場合は、マイナス記号 (-) を使用します。 |
@@ -317,7 +317,7 @@ certreq –enroll -machine –cert 61 2d 3c fe 00 00 00 00 00 05 renew
 
 ## <a name="formats"></a>形式
 
-| 形式 | Description |
+| 形式 | 説明 |
 | ------- | ----------- |
 | requestfilein | Base64 でエンコードされたまたはバイナリ入力ファイル名: PKCS #10 証明書の要求、CMS 証明書の要求、PKCS #7 証明書の更新要求、x.509 証明書をクロス認定にする、または Ssh-keygen タグ形式の証明書要求。 |
 | requestfileout | Base64 でエンコードされた出力ファイル名。 |
@@ -339,7 +339,7 @@ certreq –enroll -machine –cert 61 2d 3c fe 00 00 00 00 00 05 renew
 
 - [Web サーバーの SSL 証明書を手動で作成する方法](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-create-a-web-server-ssl-certificate-manually/ba-p/1128529)
 
-- [System Center Operations Manager エージェントの証明書の登録](/system-center/scom/plan-planning-agent-deployment?view=sc-om-2019)
+- [System Center Operations Manager エージェントの証明書の登録](/system-center/scom/plan-planning-agent-deployment)
 
 - [Active Directory 証明書サービスの概要](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
 

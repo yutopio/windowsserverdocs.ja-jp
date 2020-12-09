@@ -5,12 +5,12 @@ ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc08039ba1d
 ms.author: benarm
 author: BenjaminArmstrong
-ms.openlocfilehash: 882e63b2119a2c6483234ef7993b47f0aeaf7915
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 7efa404450ffed20cd2a531f5e91905e1a2fcd2b
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90744057"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863991"
 ---
 # <a name="cmdlets-for-configuring-persistent-memory-devices-for-hyper-v-vms"></a>Hyper-v Vm 用の永続メモリデバイスを構成するためのコマンドレット
 
@@ -20,13 +20,13 @@ ms.locfileid: "90744057"
 
 ## <a name="create-a-persistent-memory-device-for-a-vm"></a>VM の永続メモリデバイスを作成する
 
-VM の永続メモリデバイスを作成するには、 **[新しい VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps)** コマンドレットを使用します。 デバイスは、既存の NTFS DAX ボリューム上に作成する必要があります。  新しいファイル名拡張子 (. vhdpmem) は、デバイスが永続的なメモリデバイスであることを指定するために使用されます。 固定の VHD ファイル形式のみがサポートされています。
+VM の永続メモリデバイスを作成するには、 **[新しい VHD](/powershell/module/hyper-v/new-vhd)** コマンドレットを使用します。 デバイスは、既存の NTFS DAX ボリューム上に作成する必要があります。  新しいファイル名拡張子 (. vhdpmem) は、デバイスが永続的なメモリデバイスであることを指定するために使用されます。 固定の VHD ファイル形式のみがサポートされています。
 
 **例:** `New-VHD d:\VMPMEMDevice1.vhdpmem -Fixed -SizeBytes 4GB`
 
 ## <a name="create-a-vm-with-a-persistent-memory-controller"></a>永続的なメモリコントローラーを備えた VM を作成する
 
-**新しい vm コマンドレット**を使用して、指定されたメモリサイズと VHDX イメージへのパスを持つ第2世代 vm を作成します。 次に、 **VMPmemController** を使用して、永続的なメモリコントローラーを VM に追加します。
+**新しい vm コマンドレット** を使用して、指定されたメモリサイズと VHDX イメージへのパスを持つ第2世代 vm を作成します。 次に、 **VMPmemController** を使用して、永続的なメモリコントローラーを VM に追加します。
 
 **例:**
 
@@ -38,7 +38,7 @@ Add-VMPmemController ProductionVM1x
 
 ## <a name="attach-a-persistent-memory-device-to-a-vm"></a>永続メモリデバイスを VM に接続する
 
-**[Add-vmharddiskdrive](/powershell/module/hyper-v/add-vmharddiskdrive?view=win10-ps)** を使用して永続メモリデバイスを VM に接続する
+**[Add-vmharddiskdrive](/powershell/module/hyper-v/add-vmharddiskdrive)** を使用して永続メモリデバイスを VM に接続する
 
 **例:** `Add-VMHardDiskDrive ProductionVM1 PMEM -ControllerLocation 1 -Path D:\VPMEMDevice1.vhdpmem`
 

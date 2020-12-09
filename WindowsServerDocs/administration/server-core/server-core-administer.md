@@ -7,12 +7,12 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 12/18/2018
-ms.openlocfilehash: 089d6437bd8c246bae3da5898870ea9cdd442656
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 2cdddf706d03aa5b1aa1239b58fd4d8a9f4beed2
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90077869"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864321"
 ---
 # <a name="administer-a-server-core-server"></a>Server Core サーバーの管理
 
@@ -26,14 +26,14 @@ Windows PowerShell コマンドレットを使用して基本的な管理タス�
 ### <a name="set-a-static-ip-address"></a>静的 IP アドレスを設定する
 Server Core サーバーをインストールすると、既定では DHCP アドレスが使用されます。 静的 IP アドレスが必要な場合は、次の手順を使用して設定できます。
 
-現在のネットワーク構成を表示するには、 **Get Ne? configuration**を使用します。
+現在のネットワーク構成を表示するには、 **Get Ne? configuration** を使用します。
 
-既に使用している IP アドレスを表示するには、 **new-netipaddress**を使用します。
+既に使用している IP アドレスを表示するには、 **new-netipaddress** を使用します。
 
 静的 IP アドレスを設定するには、次の手順を実行します。
 
-1. **Get Ne? インターフェイス**を実行します。
-2. IP インターフェイスまたは**Interfacedescription**文字列の**IfIndex**列の番号に注意してください。 複数のネットワークアダプターがある場合は、静的 IP アドレスを設定するインターフェイスに対応する数値または文字列をメモします。
+1. **Get Ne? インターフェイス** を実行します。
+2. IP インターフェイスまたは **Interfacedescription** 文字列の **IfIndex** 列の番号に注意してください。 複数のネットワークアダプターがある場合は、静的 IP アドレスを設定するインターフェイスに対応する数値または文字列をメモします。
 3. 次のコマンドレットを実行して、静的 IP アドレスを設定します。
 
    ```powershell
@@ -62,29 +62,29 @@ Server Core サーバーをインストールすると、既定では DHCP ア�
 
    この例では、 **192.0.2.4 と 192.0.2.5** と **です。** は両方とも DNS サーバーの IP アドレスです。
 
-DHCP の使用に切り替える必要がある場合は、 **Set-DnsClientServerAddress – InterfaceIndex 12 – ResetServerAddresses**を実行します。
+DHCP の使用に切り替える必要がある場合は、 **Set-DnsClientServerAddress – InterfaceIndex 12 – ResetServerAddresses** を実行します。
 
 ### <a name="join-a-domain"></a>ドメインに参加する
 コンピューターをドメインに参加させるには、次のコマンドレットを使用します。
 
-1. **コンピューターの追加**を実行します。 ドメインに参加するための資格情報とドメイン名の両方を入力するように求められます。
+1. **コンピューターの追加** を実行します。 ドメインに参加するための資格情報とドメイン名の両方を入力するように求められます。
 2. ローカルの Administrators グループにドメインユーザーアカウントを追加する必要がある場合は、コマンドプロンプトで次のコマンドを実行します (PowerShell ウィンドウではありません)。
 
    ```
    net localgroup administrators /add <DomainName>\<UserName>
    ```
-3. コンピューターを再起動します。 これを行うには、 **コンピューターの再起動**を実行します。
+3. コンピューターを再起動します。 これを行うには、 **コンピューターの再起動** を実行します。
 
 ### <a name="rename-the-server"></a>サーバー名を変更する
 サーバーの名前を変更するには、次の手順に従います。
 
 1. **hostname** または **ipconfig** コマンドで現在のサーバー名を確認します。
-2. コンピューター名の** \<new_name\> 変更を**実行します。
+2. コンピューター名の **\<new_name\> 変更を** 実行します。
 3. コンピューターを再起動します。
 
 ### <a name="activate-the-server"></a>サーバーのライセンス認証をする
 
-**Slmgr.vbs – ipk \<productkey\> **を実行します。 次に、 **slmgr.vbs – ato**を実行します。 アクティブ化が成功した場合、メッセージは表示されません。
+**slmgr.vbs – ipk \<productkey\>** を実行します。 次に、 **slmgr.vbs – ato** を実行します。 アクティブ化が成功した場合、メッセージは表示されません。
 
 > [!NOTE]
 > また、 [キー管理サービス (KMS) サーバー](../../get-started/server-2016-activation.md)を使用して、またはリモートで、サーバーを電話でアクティブ化することもできます。 リモートからライセンス認証するには、リモートコンピューターから次のコマンドレットを実行します。
@@ -95,11 +95,11 @@ DHCP の使用に切り替える必要がある場合は、 **Set-DnsClientServe
 
 ### <a name="configure-windows-firewall"></a>Windows ファイアウォールの構成
 
-Windows PowerShell コマンドレットとスクリプトを使用して、Windows ファイアウォールを Server Core コンピューターにローカルに構成できます。 Windows ファイアウォールの構成に使用できるコマンドレットについては、「 [Netsecurity](/powershell/module/netsecurity/?view=win10-ps) 」を参照してください。
+Windows PowerShell コマンドレットとスクリプトを使用して、Windows ファイアウォールを Server Core コンピューターにローカルに構成できます。 Windows ファイアウォールの構成に使用できるコマンドレットについては、「 [Netsecurity](/powershell/module/netsecurity/) 」を参照してください。
 
 ### <a name="enable-windows-powershell-remoting"></a>Windows PowerShell のリモート処理を有効にする
 
-Windows PowerShell のリモート処理を有効にすることができます。Windows PowerShell のリモート処理では、あるコンピューターで入力したコマンドが別のコンピューターで実行されます。 **Enable-psremoting**を使用して Windows PowerShell リモート処理を有効にします。
+Windows PowerShell のリモート処理を有効にすることができます。Windows PowerShell のリモート処理では、あるコンピューターで入力したコマンドが別のコンピューターで実行されます。 **Enable-psremoting** を使用して Windows PowerShell リモート処理を有効にします。
 
 詳細については、「 [リモートの FAQ につい](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1)て」を参照してください。
 
@@ -122,13 +122,13 @@ Windows PowerShell のリモート処理を有効にすることができます�
 |                 新しいコンピューター名を確認する                 |                                                                                                                                                                                                                 **set**                                                                                                                                                                                                                 |
 |         ワーク グループ内のコンピューターの名前を変更する         |                                                                                                                                                                **netdom renamecomputer \<currentcomputername\> /newname:\<newcomputername\>** <br>コンピューターを再起動します。                                                                                                                                                                 |
 |                ページング ファイルの管理を無効にする                 |                                                                                                                                                                        **wmic computersystem (name = " \<computername\> ") set 自動ページファイル = False**                                                                                                                                                                         |
-|                   ページング ファイルを構成する                   |                                                            **wmic pagefileset where name = " \<path/filename\> " Set = \<initialsize\> , MaximumSize =\<maxsize\>** <br>*Path/filename*はページングファイルのパスと名前、 *initialsize*はページングファイルの開始サイズ (バイト単位)、 *maxsize*はページファイルの最大サイズ (バイト単位) です。                                                             |
-|                 静的 IP アドレスに変更する                 | **ipconfig/all** <br>関連する情報を記録するか、テキストファイルにリダイレクトします (**ipconfig/all >ipconfig.txt**)。<br>**netsh interface ipv4 show インターフェイス**<br>インターフェイスリストがあることを確認します。<br>**netsh インターフェイス ipv4 set アドレス \<Name ID from interface list\> ソース = 静的アドレス = \<preferred IP address\> ゲートウェイ =\<gateway address\>**<br>**Ipconfig/all**を実行して、DHCP Enabled が**No**に設定されていることを確認します。 |
-|                   静的 DNS アドレスを設定します。                   |   <strong>netsh interface ipv4 add dnsserver name = \<name or ID of the network interface card\> address = \<IP address of the primary DNS server\> index = 1 <br></strong>netsh interface ipv4 add dnsserver name = \<name of secondary DNS server\> address = \<IP address of the secondary DNS server\> index = 2\*\* <br> 必要に応じて、サーバーを追加します。<br>**Ipconfig/all**を実行して、アドレスが正しいことを確認します。   |
-| 静的 IP アドレスから DHCP によって提供された IP アドレスに変更する |                                                                                                                                      **netsh interface ipv4 set address name = \<IP address of local system\> source = DHCP** <br>**Ipconfig/all**を実行して、DCHP Enabled が**Yes**に設定されていることを確認します。                                                                                                                                      |
+|                   ページング ファイルを構成する                   |                                                            **wmic pagefileset where name = " \<path/filename\> " Set = \<initialsize\> , MaximumSize =\<maxsize\>** <br>*Path/filename* はページングファイルのパスと名前、 *initialsize* はページングファイルの開始サイズ (バイト単位)、 *maxsize* はページファイルの最大サイズ (バイト単位) です。                                                             |
+|                 静的 IP アドレスに変更する                 | **ipconfig/all** <br>関連する情報を記録するか、テキストファイルにリダイレクトします (**ipconfig/all >ipconfig.txt**)。<br>**netsh interface ipv4 show インターフェイス**<br>インターフェイスリストがあることを確認します。<br>**netsh インターフェイス ipv4 set アドレス \<Name ID from interface list\> ソース = 静的アドレス = \<preferred IP address\> ゲートウェイ =\<gateway address\>**<br>**Ipconfig/all** を実行して、DHCP Enabled が **No** に設定されていることを確認します。 |
+|                   静的 DNS アドレスを設定します。                   |   <strong>netsh interface ipv4 add dnsserver name = \<name or ID of the network interface card\> address = \<IP address of the primary DNS server\> index = 1 <br></strong>netsh interface ipv4 add dnsserver name = \<name of secondary DNS server\> address = \<IP address of the secondary DNS server\> index = 2\*\* <br> 必要に応じて、サーバーを追加します。<br>**Ipconfig/all** を実行して、アドレスが正しいことを確認します。   |
+| 静的 IP アドレスから DHCP によって提供された IP アドレスに変更する |                                                                                                                                      **netsh interface ipv4 set address name = \<IP address of local system\> source = DHCP** <br>**Ipconfig/all** を実行して、DCHP Enabled が **Yes** に設定されていることを確認します。                                                                                                                                      |
 |                      プロダクト キーを入力する                      |                                                                                                                                                                                                   **slmgr.vbs – ipk \<product key\>**                                                                                                                                                                                                    |
 |                  サーバーをローカルにライセンス認証する                  |                                                                                                                                                                                                           **slmgr.vbs-ato**                                                                                                                                                                                                            |
-|                 サーバーをリモートからライセンス認証する                  |                                            **cscript slmgr.vbs-ipk \<product key\>\<server name\>\<username\>\<password\>** <br>**cscript slmgr.vbs-ato \<servername\> \<username\>\<password\>** <br>**Cscript slmgr.vbs**を実行してコンピューターの GUID を取得する <br> **Cscript slmgr.vbs の実行 \<GUID\> -dli** <br>ライセンスステータスが "ライセンス済み **(アクティブ化済み)**" に設定されていることを確認します。                                             |
+|                 サーバーをリモートからライセンス認証する                  |                                            **cscript slmgr.vbs – ipk \<product key\>\<server name\>\<username\>\<password\>** <br>**cscript slmgr.vbs-ato \<servername\> \<username\>\<password\>** <br>**Cscript slmgr.vbs** を実行してコンピューターの GUID を取得する <br> **Cscript slmgr.vbs の実行 \<GUID\> -dli** <br>ライセンスステータスが "ライセンス済み **(アクティブ化済み)**" に設定されていることを確認します。                                             |
 
 ### <a name="networking-and-firewall"></a>ネットワークとファイアウォール
 
@@ -165,11 +165,11 @@ Windows PowerShell のリモート処理を有効にすることができます�
 |                               タスク                               |                                                                                                                                                                                                             command                                                                                                                                                                                                              |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                    実行中のサービスを一覧表示する                     |                                                                                                                                                                                                  **sc クエリ** または **net start**                                                                                                                                                                                                   |
-|                         サービスを開始する                          |                                                                                                                                                                                 **sc の \<service name\> 開始**または**net \<service name\> start**                                                                                                                                                                                  |
-|                          サービスを停止する                          |                                                                                                                                                                                  **sc の \<service name\> 停止**または**net \<service name\> stop**                                                                                                                                                                                   |
+|                         サービスを開始する                          |                                                                                                                                                                                 **sc の \<service name\> 開始** または **net \<service name\> start**                                                                                                                                                                                  |
+|                          サービスを停止する                          |                                                                                                                                                                                  **sc の \<service name\> 停止** または **net \<service name\> stop**                                                                                                                                                                                   |
 | 実行中のアプリケーションと関連するプロセスの一覧を取得する |                                                                                                                                                                                                           **tasklist**                                                                                                                                                                                                           |
 |                        タスク マネージャーを開始する                        |                                                                                                                                                                                                           **taskmgr-networking**                                                                                                                                                                                                            |
-|    イベントトレースセッションとパフォーマンスログの作成と管理    | カウンター、トレース、構成データの収集、API を作成するには **、次のように**します。 <br>データコレクターのプロパティを照会するには: **logman クエリ** <br>データ収集を開始または停止するには: **logman start \| stop** <br>コレクターを削除するには: **logman delete** <br> コレクターのプロパティを更新するには: **logman update** <br>XML ファイルからデータコレクターセットをインポートする、または XML ファイルにエクスポートするには: **logman インポート \| エクスポート** |
+|    イベントトレースセッションとパフォーマンスログの作成と管理    | カウンター、トレース、構成データの収集、API を作成するには **、次のように** します。 <br>データコレクターのプロパティを照会するには: **logman クエリ** <br>データ収集を開始または停止するには: **logman start \| stop** <br>コレクターを削除するには: **logman delete** <br> コレクターのプロパティを更新するには: **logman update** <br>XML ファイルからデータコレクターセットをインポートする、または XML ファイルにエクスポートするには: **logman インポート \| エクスポート** |
 
 ### <a name="event-logs"></a>イベント ログ
 
@@ -201,4 +201,4 @@ Windows PowerShell のリモート処理を有効にすることができます�
 |タスク|command|
 |----|-------|
 |新しいハードウェア デバイスのドライバーを追加する|% Homedrive% のフォルダーにドライバーをコピーし \\ \<driver folder\> ます。 Pnputil の実行 **-i-a% homedrive% \\ \<driver folder\> \\ \<driver\> .inf**|
-|ハードウェア デバイスのドライバーを削除する|読み込まれたドライバーの一覧を表示するには、 **sc query type = driver**を実行します。 その後、 **sc \<service_name\> delete**を実行します。|
+|ハードウェア デバイスのドライバーを削除する|読み込まれたドライバーの一覧を表示するには、 **sc query type = driver** を実行します。 その後、 **sc \<service_name\> delete** を実行します。|

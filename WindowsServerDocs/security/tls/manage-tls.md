@@ -6,12 +6,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic
 ms.date: 05/16/2018
-ms.openlocfilehash: 8f5f18452c158b2e1c8d14173d80193465ead17f
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: a6af172f515345a18bbd16f37b8007302ffbab70
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994799"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864032"
 ---
 # <a name="manage-transport-layer-security-tls"></a>トランスポート層セキュリティ (TLS) を管理する
 
@@ -19,10 +19,10 @@ ms.locfileid: "87994799"
 
 ## <a name="configuring-tls-cipher-suite-order"></a>TLS 暗号スイートの順序の構成
 
-Windows のバージョンによって、さまざまな TLS 暗号スイートと優先順位がサポートされます。 さまざまな Windows バージョンの Microsoft Schannel プロバイダーでサポートされている既定の順序については、「 [TLS/SSL (SCHANNEL SSP) の暗号スイート](/windows/win32/secauthn/cipher-suites-in-schannel)」を参照してください。
+Windows のバージョンによって、さまざまな TLS 暗号スイートと優先順位がサポートされます。 さまざまな Windows バージョンの Microsoft Schannel プロバイダーでサポートされている既定の順序については、「 [TLS/SSL (SCHANNEL SSP) の暗号スイート](/windows/win32/secauthn/cipher-suites-in-schannel) 」を参照してください。
 
 > [!NOTE]
-> CNG 関数を使用して暗号スイートの一覧を変更することもできます。詳細については、「 [Schannel Cipher suite の優先順位付け](/windows/win32/secauthn/prioritizing-schannel-cipher-suites)」を参照してください。
+> CNG 関数を使用して暗号スイートの一覧を変更することもできます。詳細については、「 [Schannel Cipher suite の優先順位付け](/windows/win32/secauthn/prioritizing-schannel-cipher-suites) 」を参照してください。
 
 TLS 暗号スイートの順序の変更は、次回の起動時に有効になります。 再起動またはシャットダウンまでは、既存の順序が有効になります。
 
@@ -33,13 +33,13 @@ TLS 暗号スイートの順序の変更は、次回の起動時に有効にな�
 
 SSL 暗号スイートの順序グループポリシー設定を使用して、既定の TLS 暗号スイートの順序を構成できます。
 
-1. グループポリシー管理コンソールから、[コンピューターの**構成**] 管理用テンプレート [ネットワーク] [SSL 構成の設定] の各ページにアクセス  >  **Administrative Templates**  >  **Network**  >  **SSL Configuration Settings**します。
-2. [ **SSL 暗号スイートの順序**] をダブルクリックし、[**有効**] オプションをクリックします。
-3. [ **SSL 暗号スイート**] を右クリックし、ポップアップメニューから [**すべて選択**] を選択します。
+1. グループポリシー管理コンソールから、[コンピューターの **構成**] 管理用テンプレート [ネットワーク] [SSL 構成の設定] の各ページにアクセス  >  **Administrative Templates**  >  **Network**  >  **SSL Configuration Settings** します。
+2. [ **SSL 暗号スイートの順序**] をダブルクリックし、[ **有効** ] オプションをクリックします。
+3. [ **SSL 暗号スイート** ] を右クリックし、ポップアップメニューから [ **すべて選択** ] を選択します。
 
    ![グループ ポリシー設定](../media/Transport-Layer-Security-protocol/ssl-cipher-suite-order-gp-setting.png)
 
-4. 選択したテキストを右クリックし、ポップアップメニューから [**コピー** ] を選択します。
+4. 選択したテキストを右クリックし、ポップアップメニューから [ **コピー** ] を選択します。
 5. テキストを notepad.exe などのテキストエディターに貼り付け、新しい暗号スイートの順序の一覧を使用して更新します。
 
    > [!NOTE]
@@ -47,16 +47,16 @@ SSL 暗号スイートの順序グループポリシー設定を使用して、�
    >
    > また、暗号スイートの一覧は、1023文字までに制限されています。
 
-6. **SSL 暗号スイート**の一覧を更新された順序付きリストに置き換えます。
+6. **SSL 暗号スイート** の一覧を更新された順序付きリストに置き換えます。
 7. **[OK]** または **[適用]** をクリックします。
 
 ### <a name="configuring-tls-cipher-suite-order-by-using-mdm"></a>MDM を使用した TLS 暗号スイートの順序の構成
 
-Windows 10 ポリシー CSP は、TLS 暗号スイートの構成をサポートしています。 詳細については[、「Cryptography/TLSCipherSuites](/windows/client-management/mdm/policy-csp-cryptography#cryptography-tlsciphersuites) 」を参照してください。
+Windows 10 ポリシー CSP は、TLS 暗号スイートの構成をサポートしています。 詳細については [、「Cryptography/TLSCipherSuites](/windows/client-management/mdm/policy-csp-cryptography#cryptography-tlsciphersuites) 」を参照してください。
 
 ### <a name="configuring-tls-cipher-suite-order-by-using-tls-powershell-cmdlets"></a>Tls PowerShell コマンドレットを使用した TLS 暗号スイートの順序の構成
 
-TLS PowerShell モジュールでは、TLS 暗号スイートの順序付きリストの取得、暗号スイートの無効化、および暗号スイートの有効化をサポートしています。 詳細については、「 [TLS モジュール](/powershell/module/tls/?view=win10-ps)」を参照してください。
+TLS PowerShell モジュールでは、TLS 暗号スイートの順序付きリストの取得、暗号スイートの無効化、および暗号スイートの有効化をサポートしています。 詳細については、「 [TLS モジュール](/powershell/module/tls/) 」を参照してください。
 
 ## <a name="configuring-tls-ecc-curve-order"></a>TLS ECC 曲線の順序の構成
 
@@ -93,10 +93,10 @@ Windows でこれらの新しい曲線を使用する場合、管理者は曲線
 Certutil —addEccCurue curveName curveParameters [curveOID] [curveType]
 ```
 
-- **Curの ame**引数は、曲線パラメーターが追加された曲線の名前を表します。
-- **Curveparameters**引数は、追加する曲線のパラメーターを含む証明書のファイル名を表します。
-- **Curveoid**引数は、追加する曲線パラメーターの OID を含む証明書のファイル名を表します (省略可能)。
-- **Curvetype**引数は、 [EC 名前付き曲線レジストリ](https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-8)からの名前付き曲線の10進値を表します (省略可能)。
+- **Curの ame** 引数は、曲線パラメーターが追加された曲線の名前を表します。
+- **Curveparameters** 引数は、追加する曲線のパラメーターを含む証明書のファイル名を表します。
+- **Curveoid** 引数は、追加する曲線パラメーターの OID を含む証明書のファイル名を表します (省略可能)。
+- **Curvetype** 引数は、 [EC 名前付き曲線レジストリ](https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-8)からの名前付き曲線の10進値を表します (省略可能)。
 
 ![Certutil 曲線の追加](../media/Transport-Layer-Security-protocol/certutil-add-curves.png)
 
@@ -117,10 +117,10 @@ Certutil.exe –deleteEccCurve curveName
 組織は、グループポリシーとグループポリシー設定のレジストリ拡張を使用して、企業、ドメインに参加しているコンピューター、およびユーザー設定のレジストリ拡張を使用して、曲線パラメーターを配布できます。
 曲線を分散するプロセスは次のとおりです。
 
-1. Windows 10 および Windows Server 2016 では、 **certutil.exe**を使用して、登録されている新しい名前付き曲線を windows に追加します。
+1. Windows 10 および Windows Server 2016 では、 **certutil.exe** を使用して、登録されている新しい名前付き曲線を windows に追加します。
 2. 同じコンピューターから、グループポリシー管理コンソール (GPMC) を開き、新しいグループポリシーオブジェクトを作成して編集します。
-3. [コンピューターの構成] に移動します。 **基本設定 |Windows の設定 |レジストリ**。  [**レジストリ**] を右クリックします。 [**新規**] をポイントし、[**コレクションアイテム**] を選択します。 曲線の名前に一致するように、コレクションアイテムの名前を変更します。 *HKEY_LOCAL_MACHINE \currentcontrolset\control\cryptography\eccparameters*の下にあるレジストリキーごとに1つのレジストリコレクション項目を作成します。
-4. *HKEY_LOCAL_MACHINE \Currentcontrolset\control\cryptography\eccparameters \[ cur ame]* の下に一覧表示されている各レジストリ値に新しい**レジストリ項目**を追加して、新しく作成されたグループポリシー基本設定レジストリコレクションを構成します。
+3. [コンピューターの構成] に移動します。 **基本設定 |Windows の設定 |レジストリ**。  [ **レジストリ**] を右クリックします。 [ **新規** ] をポイントし、[ **コレクションアイテム**] を選択します。 曲線の名前に一致するように、コレクションアイテムの名前を変更します。 *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters* の下で、レジストリキーごとに1つのレジストリコレクション項目を作成します。
+4. [ *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters\[ cur]* の下に一覧表示されている各レジストリ値に新しい **レジストリ項目** を追加して、新しく作成されたグループポリシー基本設定レジストリコレクションを構成します。
 5. グループポリシーレジストリコレクション項目を含むグループポリシーオブジェクトを、新しい名前付き曲線を受け取る必要がある Windows 10 および Windows Server 2016 コンピューターに展開します。
 
     ![GPP 分散曲線](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)

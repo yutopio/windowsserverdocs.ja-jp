@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 745d296fdeecef5eddd45648c3cfc132f901cdf0
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: fa415f6c1b7065b0e5da6e83999ed425d9f6b28e
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996925"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865358"
 ---
 # <a name="use-dns-policy-for-application-load-balancing"></a>アプリケーションの負荷分散に DNS ポリシーを使用する
 
@@ -27,7 +27,7 @@ ms.locfileid: "87996925"
 
 次に、アプリケーションの負荷分散に DNS ポリシーを使用する方法の例を示します。
 
-この例では、架空の会社である Contoso ギフトサービスを使用します。これは、オンライン gifing サービスを提供し、 **contosogiftservices.com**という名前の Web サイトを持っています。
+この例では、架空の会社である Contoso ギフトサービスを使用します。これは、オンライン gifing サービスを提供し、 **contosogiftservices.com** という名前の Web サイトを持っています。
 
 Contosogiftservices.com web サイトは、それぞれが異なる IP アドレスを持つ複数のデータセンターでホストされています。
 
@@ -75,17 +75,17 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DallasZoneScop
 Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "ChicagoZoneScope"
 ```
 
-詳細については、次を参照してください [追加 DnsServerZoneScope。](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
+詳細については、次を参照してください [追加 DnsServerZoneScope。](/powershell/module/dnsserver/add-dnsserverzonescope)
 
 #### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records"></a>レコードをゾーンのスコープに追加します。
 
 次に、web サーバーホストを表すレコードをゾーンのスコープに追加する必要があります。
 
-**SeattleZoneScope**では、シアトルのデータセンターにある IP address 192.0.0.1 を使用して、レコード www.contosogiftservices.com を追加できます。
+**SeattleZoneScope** では、シアトルのデータセンターにある IP address 192.0.0.1 を使用して、レコード www.contosogiftservices.com を追加できます。
 
-**ChicagoZoneScope**では、 \( シカゴの \) データセンターに IP アドレス182.0.0.1 を持つ同じレコード www.contosogiftservices.com を追加できます。
+**ChicagoZoneScope** では、 \( シカゴの \) データセンターに IP アドレス182.0.0.1 を持つ同じレコード www.contosogiftservices.com を追加できます。
 
-同様に、 **DallasZoneScope**では、シカゴの \( \) データセンターに IP アドレス162.0.0.1 のレコード www.contosogiftservices.com を追加できます。
+同様に、 **DallasZoneScope** では、シカゴの \( \) データセンターに IP アドレス162.0.0.1 のレコード www.contosogiftservices.com を追加できます。
 
 次の Windows PowerShell コマンドを使用して、レコードをゾーンのスコープに追加することができます。
 
@@ -95,7 +95,7 @@ Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -
 Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "162.0.0.1" -ZoneScope "DallasZoneScope"
 ```
 
-詳細については、次を参照してください。 [追加 DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord)します。
 
 #### <a name="create-the-dns-policies"></a><a name="bkmk_policies"></a>DNS のポリシーを作成します。
 
@@ -110,7 +110,7 @@ Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -
 Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1;DallasZoneScope,1" -ZoneName "contosogiftservices.com"
 ```
 
-詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy)します。
 
 これで、3つの異なるデータセンター内の Web サーバー間でのアプリケーションの負荷分散を実現する DNS ポリシーが作成されました。
 

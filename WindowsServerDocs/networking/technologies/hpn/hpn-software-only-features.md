@@ -7,30 +7,30 @@ manager: dougkim
 ms.author: lizross
 author: eross-msft
 ms.date: 09/20/2018
-ms.openlocfilehash: 94b7a4b87a74c24acc97289516f6835be9b90ef7
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: ec4867b0c2ca760babd2b07062c9b8ee3d73e8f7
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990319"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96864881"
 ---
 # <a name="software-only-so-features-and-technologies"></a>ソフトウェアのみ (SO) の機能とテクノロジ
 ソフトウェアのみの機能は OS の一部として実装され、基になる NIC からは独立しています。 場合によっては、最適な操作のために NIC のチューニングが必要になることがあります。 これらの例としては、仮想マシンのサービス品質 (vmQoS)、Access Control リスト (Acl)、NIC チーミングなどの Hyper-v 以外の機能などの Hyper-v 機能が挙げられます。
 
 ## <a name="access-control-lists-acls"></a>アクセス制御リスト (ACL)
 
-VM のセキュリティを管理するための Hyper-v と SDNv1 の機能。 この機能は、仮想化されていない Hyper-v スタックと HVNv1 スタックに適用されます。 [Get-vmnetworkadapteracl](/powershell/module/hyper-v/add-vmnetworkadapteracl?view=win10-ps)と[get-vmnetworkadapteracl](/powershell/module/hyper-v/remove-vmnetworkadapteracl?view=win10-ps) PowerShell コマンドレットを使用して、hyper-v スイッチ acl を管理できます。
+VM のセキュリティを管理するための Hyper-v と SDNv1 の機能。 この機能は、仮想化されていない Hyper-v スタックと HVNv1 スタックに適用されます。 [Get-vmnetworkadapteracl](/powershell/module/hyper-v/add-vmnetworkadapteracl)と[get-vmnetworkadapteracl](/powershell/module/hyper-v/remove-vmnetworkadapteracl) PowerShell コマンドレットを使用して、hyper-v スイッチ acl を管理できます。
 
 ## <a name="extended-acls"></a>拡張 Acl
 
 Hyper-v 仮想スイッチ拡張 Acl を使用すると、Hyper-v 仮想スイッチ拡張ポート Acl を構成して、ファイアウォールによる保護を提供し、データセンター内のテナント Vm にセキュリティポリシーを適用することができます。 ポート Acl は Vm 内ではなく Hyper-v 仮想スイッチで構成されるため、管理者はマルチテナント環境のすべてのテナントのセキュリティポリシーを管理できます。
 
-[Add-vmnetworkadapterextendedacl](/powershell/module/hyper-v/add-vmnetworkadapterextendedacl?view=win10-ps)と[add-vmnetworkadapterextendedacl](/powershell/module/hyper-v/remove-vmnetworkadapteracl?view=win10-ps) PowerShell コマンドレットを使用して、hyper-v スイッチ拡張 acl を管理できます。
+[Add-vmnetworkadapterextendedacl](/powershell/module/hyper-v/add-vmnetworkadapterextendedacl)と[add-vmnetworkadapterextendedacl](/powershell/module/hyper-v/remove-vmnetworkadapteracl) PowerShell コマンドレットを使用して、hyper-v スイッチ拡張 acl を管理できます。
 
 >[!TIP]
 >この機能は HNVv1 スタックに適用されます。 SDN スタックの Acl については、以下の「Software Defined Network SDN) Acl」を参照してください。
 
-このライブラリの拡張ポート Access Control リストの詳細については、「[拡張ポート Access Control リストを使用したセキュリティポリシーの作成](../../../virtualization/hyper-v-virtual-switch/create-security-policies-with-extended-port-access-control-lists.md)」を参照してください。
+このライブラリの拡張ポート Access Control リストの詳細については、「 [拡張ポート Access Control リストを使用したセキュリティポリシーの作成](../../../virtualization/hyper-v-virtual-switch/create-security-policies-with-extended-port-access-control-lists.md)」を参照してください。
 
 ## <a name="nic-teaming"></a>NIC チーミング
 
@@ -57,11 +57,11 @@ Windows Server 2016 の SDN 拡張機能では、5組の帯域幅制御 (送信�
 
 ## <a name="switch-embedded-teaming-set"></a>スイッチが埋め込まれたチーミング (設定)
 
-セットは、Hyper-v ホストと、ソフトウェアによるネットワーク制御 (SDN) スタックを Windows Server 2016 に含まれる環境で使用できる代替 NIC チーミング ソリューションです。 セットは、HYPER-V 仮想スイッチにいくつかの NIC チーミング機能を統合します。 このライブラリのスイッチ埋め込みチーミングの詳細については、「[リモートダイレクトメモリアクセス (RDMA)」と「スイッチ埋め込みチーミング (SET)](../../../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md)」を参照してください。
+セットは、Hyper-v ホストと、ソフトウェアによるネットワーク制御 (SDN) スタックを Windows Server 2016 に含まれる環境で使用できる代替 NIC チーミング ソリューションです。 セットは、HYPER-V 仮想スイッチにいくつかの NIC チーミング機能を統合します。 このライブラリのスイッチ埋め込みチーミングの詳細については、「 [リモートダイレクトメモリアクセス (RDMA)」と「スイッチ埋め込みチーミング (SET)](../../../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md)」を参照してください。
 
 ## <a name="virtual-receive-side-scaling-vrss"></a>Virtual Receive Side Scaling (vRSS)
 
-ソフトウェア vRSS は、vm の複数の論理プロセッサ (LPs) にわたって、VM の着信トラフィックを分散するために使用されます。 ソフトウェア vRSS は、1つの LP が処理できるよりも多くのネットワークトラフィックを VM に処理する機能を提供します。 詳細については、「[仮想 Receive Side Scaling (vRSS)](../vrss/vrss-top.md)」を参照してください。
+ソフトウェア vRSS は、vm の複数の論理プロセッサ (LPs) にわたって、VM の着信トラフィックを分散するために使用されます。 ソフトウェア vRSS は、1つの LP が処理できるよりも多くのネットワークトラフィックを VM に処理する機能を提供します。 詳細については、「 [仮想 Receive Side Scaling (vRSS)](../vrss/vrss-top.md)」を参照してください。
 
 ## <a name="virtual-machine-quality-of-service-vmqos"></a>バーチャルマシンのサービスの品質 (vmQoS)
 
@@ -69,17 +69,17 @@ Windows Server 2016 の SDN 拡張機能では、5組の帯域幅制御 (送信�
 
 vmQoS では、送信制限と送信予約を設定できます。 Hyper-v スイッチを作成する前に、送信予約モード (相対的な重みまたは絶対帯域幅) を決定する必要があります。
 
--  新しい VMSwitch PowerShell コマンドレットの– MinimumBandwidthMode パラメーターを使用して、送信予約モードを決定します。
+-  New-VMSwitch PowerShell コマンドレットの– MinimumBandwidthMode パラメーターを使用して、送信予約モードを決定します。
 
--  VMNetworkAdapter PowerShell コマンドレットの– MaximumBandwidth 幅パラメーターを使用して、送信制限の値を設定します。
+-  Set-VMNetworkAdapter PowerShell コマンドレットで– MaximumBandwidth 幅パラメーターを使用して、送信制限の値を設定します。
 
 -  Set VMNetworkAdapter PowerShell コマンドレットの次のいずれかのパラメーターを使用して、送信予約の値を設定します。
 
-   -  新しい VMSwitch コマンドレットの– MinimumBandwidthMode パラメーターが Absolute の場合は、Set VMNetworkAdapter コマンドレットで– MinimumBandwidthAbsolute パラメーターを設定します。
+   -  New-VMSwitch コマンドレットの– MinimumBandwidthMode パラメーターが Absolute の場合は、Set VMNetworkAdapter コマンドレットで– MinimumBandwidthAbsolute パラメーターを設定します。
 
-   -  新しい VMSwitch コマンドレットの– MinimumBandwidthMode パラメーターが Weight の場合は、Set VMNetworkAdapter コマンドレットで– MinimumBandwidthWeight パラメーターを設定します。
+   -  New-VMSwitch コマンドレットの– MinimumBandwidthMode パラメーターが Weight の場合は、Set VMNetworkAdapter コマンドレットで– MinimumBandwidthWeight パラメーターを設定します。
 
-この機能で使用されるアルゴリズムには制限があるため、最大の重みまたは絶対帯域幅を最小の重みまたは絶対的な帯域幅の20倍以下にすることをお勧めします。 より詳細な制御が必要な場合は、SDN スタックと SDN QoS 機能の使用を検討してください。
+この機能で使用されるアルゴリズムには制限があるため、最大の重みまたは絶対帯域幅を最小の重みまたは絶対的な帯域幅の20倍以下にすることをお勧めします。 より詳細な制御が必要な場合は、SDN スタックと SDN-QoS 機能の使用を検討してください。
 
 
 ---
