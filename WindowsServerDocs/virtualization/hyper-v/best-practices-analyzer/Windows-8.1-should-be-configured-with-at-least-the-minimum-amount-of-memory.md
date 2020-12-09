@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 84d7edab-610e-4265-87d0-9869f64b0039
 ms.date: 8/16/2016
-ms.openlocfilehash: dd711757fd50dc2ec7bde71c2073d91fa4ded825
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: b7fa050d45d5430cd4ed98f48c29f4bd3c823dd2
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90745787"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865900"
 ---
 # <a name="windows-81-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Windows 8.1 は、少なくとも最小メモリ容量で構成する必要があります
 
@@ -55,7 +55,7 @@ ms.locfileid: "90745787"
 
 1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
-2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
+2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行** します。
 
 3.  交換した後にこのコマンドを実行 \<MyVM> 、仮想マシンの名前に置き換えます。
 
@@ -64,4 +64,4 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ```
 
 ## <a name="see-also"></a>関連項目
-[設定-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[設定-VMMemory](/powershell/module/hyper-v/set-vmmemory)

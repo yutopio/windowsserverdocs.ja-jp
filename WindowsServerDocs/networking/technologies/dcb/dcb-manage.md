@@ -6,12 +6,12 @@ ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9732be4cb0f9301e7011075a663f5499bcf8a277
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2ca7e336b0949e6dbc0bf1359e463f01605e38bf
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993975"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865582"
 ---
 # <a name="manage-data-center-bridging-dcb"></a>データセンターブリッジング (DCB) の管理
 
@@ -95,7 +95,7 @@ Traffic クラスを管理するための Windows PowerShell コマンドの例�
 
 ### <a name="create-a-traffic-class"></a>Traffic クラスを作成する
 
-**Get-netqostrafficclass**コマンドを使用して、traffic クラスを作成できます。
+**Get-netqostrafficclass** コマンドを使用して、traffic クラスを作成できます。
 
 ```powershell
     New-NetQosTrafficClass -Name SMB -Priority 4 -BandwidthPercentage 30 -Algorithm ETS
@@ -105,7 +105,7 @@ Traffic クラスを管理するための Windows PowerShell コマンドの例�
     SMB  ETS   30   4Global
 ```
 
-既定では、すべての 802.1 p 値は、物理リンクの帯域幅の100% を持つ既定の traffic クラスにマップされます。 **Get-netqostrafficclass**コマンドは、802.1 p 優先順位値4のタグが付けられているパケットをマップする新しい traffic クラスを作成します。 伝送選択アルゴリズム \( TSA \) は30% の帯域幅を使用します。
+既定では、すべての 802.1 p 値は、物理リンクの帯域幅の100% を持つ既定の traffic クラスにマップされます。 **Get-netqostrafficclass** コマンドは、802.1 p 優先順位値4のタグが付けられているパケットをマップする新しい traffic クラスを作成します。 伝送選択アルゴリズム \( TSA \) は30% の帯域幅を使用します。
 
 最大7つの新しいトラフィッククラスを作成できます。 既定の traffic クラスを含め、システムに最大8つのトラフィッククラスを含めることができます。 ただし、DCB 対応のネットワークアダプターでは、ハードウェアの多くのトラフィッククラスをサポートしていない場合があります。 ネットワークアダプターでは対応できない数のトラフィッククラスを作成し、そのネットワークアダプターで DCB を有効にすると、ミニポートドライバーはオペレーティングシステムにエラーを報告します。 このエラーは、イベントログに記録されます。
 
@@ -113,7 +113,7 @@ Traffic クラスを管理するための Windows PowerShell コマンドの例�
 
 ### <a name="display-traffic-classes"></a>トラフィッククラスを表示する
 
-**Get-netqostrafficclass**コマンドを使用して、トラフィッククラスを表示できます。
+**Get-netqostrafficclass** コマンドを使用して、トラフィッククラスを表示できます。
 
 ```powershell
     Get-NetQosTrafficClass
@@ -126,13 +126,13 @@ Traffic クラスを管理するための Windows PowerShell コマンドの例�
 
 ### <a name="modify-a-traffic-class"></a>Traffic クラスを変更する
 
-**Get-netqostrafficclass**コマンドを使用して、traffic クラスを作成できます。
+**Get-netqostrafficclass** コマンドを使用して、traffic クラスを作成できます。
 
 ```powershell
     Set-NetQosTrafficClass -Name SMB -BandwidthPercentage 50
 ```
 
-その後、 **get-netqostrafficclass**コマンドを使用して設定を表示できます。
+その後、 **get-netqostrafficclass** コマンドを使用して設定を表示できます。
 
 ```powershell
     Get-NetQosTrafficClass
@@ -153,7 +153,7 @@ Traffic クラスを作成したら、その設定を個別に変更できます
 
 ### <a name="remove-a-traffic-class"></a>Traffic クラスを削除します。
 
-**Get-netqostrafficclass**コマンドを使用して、traffic クラスを削除できます。
+**Get-netqostrafficclass** コマンドを使用して、traffic クラスを削除できます。
 
 >[!IMPORTANT]
 >既定の traffic クラスを削除することはできません。
@@ -172,7 +172,7 @@ You can then use the **Get-NetQosTrafficClass** command to view settings.
 
 Traffic クラスを削除すると、その traffic クラスにマップされた 802.1 p 値が既定の traffic クラスに再マップされます。 Traffic クラス用に予約されていた帯域幅は、traffic クラスが削除されると、既定のトラフィッククラスの割り当てに返されます。
 
-## <a name="per-network-interface-policies"></a>ネットワークごとのインターフェイスのポリシー
+## <a name="per-network-interface-policies"></a>Per-Network インターフェイスのポリシー
 
 上記のすべての例では、グローバルポリシーを設定します。 次に、NIC ごとのポリシーを設定して取得する方法の例を示します。
 
@@ -464,10 +464,10 @@ Windows Server 2016 と Windows Server 2012 R2 の両方に対応する DCB Wind
 
 Windows Server 2016 の次のトピックでは、Windows PowerShell コマンドレットの説明と構文を提供しており、すべてのデータセンターブリッジング \( DCB Quality Of Service QoS 固有のコマンドレットについて説明して \) \( \) \- います。 コマンドレットの先頭の動詞に基づいて、アルファベット順に記載しています。
 
-- [DcbQoS モジュール](/powershell/module/dcbqos/?view=win10-ps)
+- [DcbQoS モジュール](/powershell/module/dcbqos/)
 
 ### <a name="windows-server-2012-r2-windows-powershell-commands-for-dcb"></a>DCB 用の windows Server 2012 R2 Windows PowerShell コマンド
 
 Windows Server 2012 R2 の次のトピックでは、Windows PowerShell コマンドレットの説明と構文を提供しており、すべてのデータセンターブリッジング \( DCB \) Quality of Service QoS 固有のコマンドレットについて説明し \( \) \- ます。 コマンドレットの先頭の動詞に基づいて、アルファベット順に記載しています。
 
-- [Windows PowerShell のデータ センター ブリッジング (DCB) サービス品質 (QoS) コマンドレット](/powershell/module/dcbqos/?view=win10-ps&viewFallbackFrom=winserverr2-ps)
+- [Windows PowerShell のデータ センター ブリッジング (DCB) サービス品質 (QoS) コマンドレット](/powershell/module/dcbqos/)

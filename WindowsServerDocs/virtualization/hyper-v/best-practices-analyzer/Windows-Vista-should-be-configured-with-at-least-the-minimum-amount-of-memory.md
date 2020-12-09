@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 49f6f9b6-c290-4b1b-b6f3-cc9a0acd8fb2
 ms.date: 8/16/2016
-ms.openlocfilehash: d0ba0edaf57becfda16c5a55aab6e3f4c10febf9
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: dc69592d8b71c761c710fc55f7d3117164cb430f
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90744078"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865811"
 ---
 # <a name="windows-vista-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Windows Vista をする必要があります最小メモリ量以上で構成
 
@@ -38,7 +38,7 @@ ms.locfileid: "90744078"
 
 \<list of virtual machine names>
 
-## <a name="resolution"></a>解決策
+## <a name="resolution"></a>解決方法
 
 *Hyper-v マネージャーを使用して、この仮想マシンに割り当てられているメモリを少なくとも 512 MB に増やします。*
 
@@ -58,7 +58,7 @@ ms.locfileid: "90744078"
 
 1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
-2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
+2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行** します。
 
 3.  交換した後にこのコマンドを実行 \<MyVM> 、仮想マシンの名前に置き換えます。
 
@@ -67,4 +67,4 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ```
 
 ## <a name="see-also"></a>関連項目
-[設定-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[設定-VMMemory](/powershell/module/hyper-v/set-vmmemory)

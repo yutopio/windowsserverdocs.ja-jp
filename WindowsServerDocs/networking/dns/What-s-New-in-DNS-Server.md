@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 05daf36ebf875269906b0c287204e4ff131a678e
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 31fdb8921bcb896cb009dcd4d67d57c6c503efa6
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996944"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865611"
 ---
 # <a name="whats-new-in-dns-server-in-windows-server"></a>Windows Server の DNS サーバーの新機能
 
@@ -23,16 +23,16 @@ Windows Server 2016 では、DNS サーバーは次の領域で拡張サポー�
 
 |機能|新機能か強化された機能か|説明|
 |-----------------|-------------------|---------------|
-|DNS ポリシー|新規|Dns ポリシーを構成して、dns サーバーが DNS クエリにどのように応答するかを指定できます。 DNS 応答は、クライアントの IP アドレス (場所)、時刻、およびその他のいくつかのパラメーターに基づいています。 DNS ポリシーを使用すると、場所を認識する DNS、トラフィック管理、負荷分散、スプリットブレイン DNS などのシナリオが可能になります。|
-|応答率の制限 (RRL)|新規|DNS サーバーで応答率の制限を有効にすることができます。 これにより、dns サーバーを使用している悪意のあるシステムが、DNS クライアントでサービス拒否攻撃を開始する可能性を回避できます。|
-|名前付きエンティティ (DANE) の DNS ベースの認証|新規|TLSA (トランスポート層のセキュリティ認証) レコードを使用して、DNS クライアントに対して、証明書を要求する CA をドメイン名として指定する情報を提供できます。 これにより、他のユーザーが DNS キャッシュを破損して独自の web サイトを参照し、別の CA から発行された証明書を提供する man-in-the-middle 攻撃を防ぐことができます。|
-|不明なレコードのサポート|新規|不明なレコード機能を使用して、Windows DNS サーバーで明示的にサポートされていないレコードを追加することができます。|
-|IPv6 のルートヒント|新規|IPV6 ルートサーバーを使用して、インターネットの名前解決を実行するには、ネイティブ IPV6 ルートヒントのサポートを使用できます。|
+|DNS ポリシー|新規作成|Dns ポリシーを構成して、dns サーバーが DNS クエリにどのように応答するかを指定できます。 DNS 応答は、クライアントの IP アドレス (場所)、時刻、およびその他のいくつかのパラメーターに基づいています。 DNS ポリシーを使用すると、場所を認識する DNS、トラフィック管理、負荷分散、スプリットブレイン DNS などのシナリオが可能になります。|
+|応答率の制限 (RRL)|新規作成|DNS サーバーで応答率の制限を有効にすることができます。 これにより、dns サーバーを使用している悪意のあるシステムが、DNS クライアントでサービス拒否攻撃を開始する可能性を回避できます。|
+|名前付きエンティティ (DANE) の DNS ベースの認証|新規作成|TLSA (トランスポート層のセキュリティ認証) レコードを使用して、DNS クライアントに対して、証明書を要求する CA をドメイン名として指定する情報を提供できます。 これにより、他のユーザーが DNS キャッシュを破損して独自の web サイトを参照し、別の CA から発行された証明書を提供する man-in-the-middle 攻撃を防ぐことができます。|
+|不明なレコードのサポート|新規作成|不明なレコード機能を使用して、Windows DNS サーバーで明示的にサポートされていないレコードを追加することができます。|
+|IPv6 のルートヒント|新規作成|IPV6 ルートサーバーを使用して、インターネットの名前解決を実行するには、ネイティブ IPV6 ルートヒントのサポートを使用できます。|
 |Windows PowerShell のサポート|強化しました|DNS サーバーでは、新しい Windows PowerShell コマンドレットを使用できます。|
 
 ## <a name="dns-policies"></a>DNS ポリシー
 
-Geo ロケーションベースのトラフィック管理に DNS ポリシーを使用したり、時間に基づくインテリジェント DNS 応答を使用して、分割ブレイン展開用に構成された単一の DNS サーバーを管理したり \- 、dns クエリにフィルターを適用したりできます。 これらの機能の詳細については、次の項目を参照してください。
+Geo-Location ベースのトラフィック管理に DNS ポリシーを使用したり、時刻に基づくインテリジェント DNS 応答を使用して、分割ブレイン展開用に構成された単一の DNS サーバーを管理したり \- 、dns クエリにフィルターを適用したりすることができます。 これらの機能の詳細については、次の項目を参照してください。
 
 -   **アプリケーションの負荷分散。** 異なる場所にアプリケーションの複数のインスタンスをデプロイした場合は、DNS ポリシーを使用して、異なるアプリケーションインスタンス間でトラフィックの負荷を分散し、アプリケーションのトラフィック負荷を動的に割り当てることができます。
 
@@ -91,7 +91,7 @@ Windows Server 2016 では、次の新しい Windows PowerShell コマンドレ�
 
 -   **DnsServerRecursionScope**。 このコマンドレットは、DNS サーバー上に新しい再帰スコープを作成します。 Dns ポリシーでは、dns クエリで使用されるフォワーダーの一覧を指定するために、再帰スコープが使用されます。
 
--   **DnsServerRecursionScope を削除**します。 このコマンドレットは、既存の再帰スコープを削除します。
+-   **DnsServerRecursionScope を削除** します。 このコマンドレットは、既存の再帰スコープを削除します。
 
 -   **DnsServerRecursionScope**。 このコマンドレットは、既存の再帰スコープの設定を変更します。
 
@@ -99,7 +99,7 @@ Windows Server 2016 では、次の新しい Windows PowerShell コマンドレ�
 
 -   **DnsServerClientSubnet**。 このコマンドレットは、新しい DNS クライアントサブネットを作成します。 サブネットは、dns クライアントが置かれている場所を識別するために、DNS ポリシーによって使用されます。
 
--   **DnsServerClientSubnet を削除**します。 このコマンドレットは、既存の DNS クライアントサブネットを削除します。
+-   **DnsServerClientSubnet を削除** します。 このコマンドレットは、既存の DNS クライアントサブネットを削除します。
 
 -   **DnsServerClientSubnet**。 このコマンドレットは、既存の DNS クライアントサブネットの設定を変更します。
 
@@ -107,19 +107,19 @@ Windows Server 2016 では、次の新しい Windows PowerShell コマンドレ�
 
 -   **DnsServerQueryResolutionPolicy**。 このコマンドレットは、新しい DNS クエリ解決ポリシーを作成します。 DNS クエリ解決ポリシーは、さまざまな条件に基づいてクエリの応答方法を指定するために使用されます。
 
--   **DnsServerQueryResolutionPolicy を削除**します。 このコマンドレットは、既存の DNS ポリシーを削除します。
+-   **DnsServerQueryResolutionPolicy を削除** します。 このコマンドレットは、既存の DNS ポリシーを削除します。
 
 -   **DnsServerQueryResolutionPolicy**。 このコマンドレットは、既存の DNS ポリシーの設定を変更します。
 
 -   **DnsServerQueryResolutionPolicy**。 このコマンドレットは、既存の DNS ポリシーに関する情報を取得します。
 
--   **DnsServerPolicy を有効に**します。 このコマンドレットは、既存の DNS ポリシーを有効にします。
+-   **DnsServerPolicy を有効に** します。 このコマンドレットは、既存の DNS ポリシーを有効にします。
 
--   **DnsServerPolicy を無効に**します。 このコマンドレットは、既存の DNS ポリシーを無効にします。
+-   **DnsServerPolicy を無効に** します。 このコマンドレットは、既存の DNS ポリシーを無効にします。
 
 -   **DnsServerZoneTransferPolicy**。 このコマンドレットは、新しい DNS サーバーゾーン転送ポリシーを作成します。 DNS ゾーン転送ポリシーでは、異なる条件に基づいてゾーン転送を拒否するか無視するかを指定します。
 
--   **DnsServerZoneTransferPolicy を削除**します。 このコマンドレットは、既存の DNS サーバーゾーン転送ポリシーを削除します。
+-   **DnsServerZoneTransferPolicy を削除** します。 このコマンドレットは、既存の DNS サーバーゾーン転送ポリシーを削除します。
 
 -   **DnsServerZoneTransferPolicy**。 このコマンドレットは、既存の DNS サーバーゾーン転送ポリシーの設定を変更します。
 
@@ -131,7 +131,7 @@ Windows Server 2016 では、次の新しい Windows PowerShell コマンドレ�
 
 -   **DnsServerResponseRateLimitingExceptionlist**。 このコマンドレットは、RRL excception リストを取得します。
 
--   **DnsServerResponseRateLimitingExceptionlist を削除**します。 このコマンドレットは、既存の RRL 例外リストを削除します。
+-   **DnsServerResponseRateLimitingExceptionlist を削除** します。 このコマンドレットは、既存の RRL 例外リストを削除します。
 
 -   **DnsServerResponseRateLimitingExceptionlist**。 このコマンドレットは、RRL 例外リストを変更します。
 
@@ -139,14 +139,14 @@ Windows Server 2016 では、次の新しい Windows PowerShell コマンドレ�
 
 -   **DnsServerResourceRecord**。 このコマンドレットは、不明なレコードの種類をサポートするように更新されました。
 
--   **DnsServerResourceRecord を削除**します。 このコマンドレットは、不明なレコードの種類をサポートするように更新されました。
+-   **DnsServerResourceRecord を削除** します。 このコマンドレットは、不明なレコードの種類をサポートするように更新されました。
 
 -   **DnsServerResourceRecord**。 このコマンドレットは、不明なレコードの種類をサポートするように更新されました
 
 詳細については、Windows Server 2016 Windows PowerShell コマンドリファレンスの次のトピックを参照してください。
 
-- [DnsServer モジュール](/powershell/module/dnsserver/?view=win10-ps)
-- [DnsClient モジュール](/powershell/module/dnsclient/?view=win10-ps)
+- [DnsServer モジュール](/powershell/module/dnsserver/)
+- [DnsClient モジュール](/powershell/module/dnsclient/)
 
 ## <a name="additional-references"></a>その他の参照情報
 

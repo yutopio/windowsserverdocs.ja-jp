@@ -7,12 +7,12 @@ ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/23/2018
-ms.openlocfilehash: 4e3ebcae7696d1b16930e50aacff4f0edc198ce7
-ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
+ms.openlocfilehash: 244f18baefa0be9b9b392682e48931e7d4e195b8
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330394"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865621"
 ---
 # <a name="deploy-a-software-defined-network-infrastructure-using-scripts"></a>スクリプトを使用してソフトウェア定義ネットワーク インフラストラクチャを展開する
 
@@ -22,7 +22,7 @@ ms.locfileid: "96330394"
 
 テナントのワークロードが仮想ネットワークの外部で通信できるようにする場合は、SLB NAT 規則、サイト間ゲートウェイトンネル、またはレイヤー3転送を設定して、仮想ワークロードと物理ワークロード間をルーティングできます。
 
-Virtual Machine Manager (VMM) を使用して SDN インフラストラクチャを展開することもできます。 詳細については、「 [VMM ファブリックでのソフトウェア定義ネットワーク (SDN) インフラストラクチャのセットアップ](/system-center/vmm/deploy-sdn?view=sc-vmm-2019)」を参照してください。
+Virtual Machine Manager (VMM) を使用して SDN インフラストラクチャを展開することもできます。 詳細については、「 [VMM ファブリックでのソフトウェア定義ネットワーク (SDN) インフラストラクチャのセットアップ](/system-center/vmm/deploy-sdn)」を参照してください。
 
 ## <a name="pre-deployment"></a>デプロイ前準備
 
@@ -67,7 +67,7 @@ Virtual Machine Manager (VMM) を使用して SDN インフラストラクチャ
 
 5. Optionalバーチャルマシンをホスト Active Directory Domain Services に展開します ([Active Directory Domain Services (レベル 100)](../../../identity/ad-ds/deploy/install-active-directory-domain-services--level-100-.md) と DNS サーバーをインストールします。
 
-    a。 Active Directory/DNS サーバー仮想マシンを管理 VLAN に接続します。
+    a. Active Directory/DNS サーバー仮想マシンを管理 VLAN に接続します。
 
     ```PowerShell
     Set-VMNetworkAdapterIsolation -VMName "<VM Name>" -Access -VlanId <Management VLAN> -AllowUntaggedTraffic $True
@@ -84,7 +84,7 @@ Virtual Machine Manager (VMM) を使用して SDN インフラストラクチャ
    Set-DnsClientServerAddress -InterfaceAlias "vEthernet (<switch name>)" -ServerAddresses <DNS Server IP>
    ```
 
-   a。 [ **スタート**] ボタンを右クリックし、[ **システム**] をクリックして、[ **設定の変更**] をクリックします。
+   a. [ **スタート**] ボタンを右クリックし、[ **システム**] をクリックして、[ **設定の変更**] をクリックします。
    b. **[変更]** をクリックします。
    c. [ **ドメイン** ] をクリックし、ドメイン名を指定します。  "" "" d. **[OK]** をクリックします。
    e. プロンプトが表示されたら、ユーザー名とパスワードの資格情報を入力します。
@@ -182,13 +182,13 @@ SDN Express スクリプトがエラーを報告せずに完了するように�
 
 1. << を変更して SDNExpress\scripts\TenantConfig.psd1 ファイルをカスタマイズします。 >>タグは特定の値に **置き換え** てください (たとえば、FabricConfig.psd1 ファイルで定義されているように、VHD イメージ名、ネットワークコントローラー REST 名、vSwitch 名など)。
 
-2. スクリプトを実行します。 たとえば、次のように入力します。
+2. スクリプトを実行します。 次に例を示します。
 
    ```
    SDNExpress\scripts\SDNExpressTenant.ps1 -ConfigurationDataFile TenantConfig.psd1 -Verbose
    ```
 
-3. 構成を元に戻すには、 **undo** パラメーターを指定して同じスクリプトを実行します。 たとえば、次のように入力します。
+3. 構成を元に戻すには、 **undo** パラメーターを指定して同じスクリプトを実行します。 次に例を示します。
 
    ```
    SDNExpress\scripts\SDNExpressTenant.ps1 -Undo -ConfigurationDataFile TenantConfig.psd1 -Verbose

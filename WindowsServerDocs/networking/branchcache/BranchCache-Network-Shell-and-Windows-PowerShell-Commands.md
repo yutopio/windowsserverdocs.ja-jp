@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: a0726752-0a78-472b-9667-2f91636c1b3b
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 13c62fd1c21cce98e5de2f6cc16f0edb6ee06a99
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1a58057937b46452cfae78965cb89b0838b5b652
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993797"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866091"
 ---
 # <a name="branchcache-network-shell-and-windows-powershell-commands"></a>BranchCache ネットワーク シェルと Windows PowerShell のコマンド
 
@@ -25,7 +25,7 @@ Windows PowerShell と Netsh コマンドの参照は次の場所にあります
 
 -   [Windows Server 2008 R2 の BranchCache の Netsh コマンド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd979561(v=ws.10))
 
--   [Windows PowerShell の BranchCache コマンドレット](/powershell/module/branchcache/?view=win10-ps)
+-   [Windows PowerShell の BranchCache コマンドレット](/powershell/module/branchcache/)
 
 > [!TIP]
 > Windows PowerShell プロンプトで BranchCache の Windows PowerShell コマンドの一覧を参照するには、Windows PowerShell プロンプトで `Get-Command -Module BranchCache` を入力して、Enter キーを押します。

@@ -7,12 +7,12 @@ ms.topic: article
 author: JasonGerend
 ms.date: 06/25/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: ab69c6959fb6710d5020a73546975fc56a3b4cde
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b97263c0cc1fefd71eebd6eb4d7b66ca66741a04
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961046"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865931"
 ---
 # <a name="storage-class-memory-nvdimm-n-health-management-in-windows"></a>Windows での記憶域クラス メモリ (NVDIMM-N) の正常性管理
 
@@ -25,13 +25,13 @@ Windows での記憶域クラス メモリ デバイスのサポートについ�
 - [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in Windows Server 2016 (Windows Server 2016 で非揮発性メモリ (NVDIMM-N) をバイト単位のアクセスが可能な記憶域として使用する)](https://channel9.msdn.com/Events/Build/2016/P470)
 - [Windows Server 2016 で永続メモリを使用して SQL Server 2016 のパフォーマンスを向上させる](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
 
-「[記憶域スペースダイレクトでの永続メモリの理解と配置](deploy-pmem.md)」も参照してください。
+「 [記憶域スペースダイレクトでの永続メモリの理解と配置](deploy-pmem.md)」も参照してください。
 
 JEDEC 準拠 NVDIMM-N 記憶域クラス メモリ デバイスは、Windows Server 2016 および Windows 10 (バージョン 1607) 以降の Windows において、ネイティブ ドライバーでサポートされます。 これらのデバイスの動作は他のディスク (HDD や SSD) に似ていますが、いくつかの違いがあります。
 
 ここに記載されているすべての状態は、めったに発生しないと思われますが、ハードウェアが使用されている状態に依存します。
 
-以下のさまざまなケースで、記憶域スペース構成を参照することがあります。 特に注目するのは、記憶域スペースでミラー化されたライトバック キャッシュとして 2 つの NVDIMM-N デバイスを使用する構成です。 そのような構成をセットアップするには、「[NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成](/sql/relational-databases/performance/configuring-storage-spaces-with-a-nvdimm-n-write-back-cache?view=sql-server-ver15)」を参照してください。
+以下のさまざまなケースで、記憶域スペース構成を参照することがあります。 特に注目するのは、記憶域スペースでミラー化されたライトバック キャッシュとして 2 つの NVDIMM-N デバイスを使用する構成です。 そのような構成をセットアップするには、「[NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成](/sql/relational-databases/performance/configuring-storage-spaces-with-a-nvdimm-n-write-back-cache)」を参照してください。
 
 Windows Server 2016 では、記憶域スペースの GUI に、NVDIMM-N バスの種類が "不明" として表示されます。 これは機能が失われたわけでも、プール、記憶域 VD が作成できないことを示すものでもはありません。 バスの種類は、次のコマンドを実行して確認できます。
 
@@ -51,7 +51,7 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 
 | SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
 | --- | --- | --- | --- |
-| 802c-01-1602-117cb5fc | Healthy | [OK] | |
+| 802c-01-1602-117cb5fc | Healthy | OK | |
 | 802c-01-1602-117cb64f | 警告 | 予測される障害 | {Threshold Exceeded,NVDIMM\_N Error} |
 
 > [!NOTE]
@@ -61,11 +61,11 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 
 ## <a name="warning-health-status"></a>"Warning" (警告) の正常性状態
 
-これは、記憶域クラス メモリ デバイスの正常性を確認すると、以下の出力例が示すように正常性状態として**警告**が表示される状態です。
+これは、記憶域クラス メモリ デバイスの正常性を確認すると、以下の出力例が示すように正常性状態として **警告** が表示される状態です。
 
 | SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
 | --- | --- | --- | --- |
-| 802c-01-1602-117cb5fc | Healthy | [OK] | |
+| 802c-01-1602-117cb5fc | Healthy | OK | |
 | 802c-01-1602-117cb64f | 警告 | 予測される障害 | {Threshold Exceeded,NVDIMM\_N Error} |
 
 次の表は、この状態についての情報を示しています。
@@ -77,15 +77,15 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 | 通常の動作 | デバイスは引き続き完全に動作します。 これは警告であり、エラーではありません。 |
 | 記憶域スペースの動作 | デバイスは引き続き完全に動作します。 これは警告であり、エラーではありません。 |
 | 詳細情報 | PhysicalDisk オブジェクトの OperationalStatus フィールド。 EventLog – Microsoft-Windows-ScmDisk0101/Operational |
-| 操作 | 警告しきい値の違反によっては、NVDIMM-N のすべてまたは特定部分の交換を検討することが賢明である場合があります。 たとえば、NVM の有効期間しきい値の違反が発生した場合に、NVDIMM-N を交換することが合理的である場合があります。 |
+| 対処 | 警告しきい値の違反によっては、NVDIMM-N のすべてまたは特定部分の交換を検討することが賢明である場合があります。 たとえば、NVM の有効期間しきい値の違反が発生した場合に、NVDIMM-N を交換することが合理的である場合があります。 |
 
 ## <a name="writes-to-an-nvdimm-n-fail"></a>NVDIMM-N への書き込みが失敗する
 
-これは、記憶域クラス メモリ デバイスの正常性を確認すると、以下の出力例が示すように正常性状態として**異常**が表示されて、操作状態として **IO エラー**が表示される状態です。
+これは、記憶域クラス メモリ デバイスの正常性を確認すると、以下の出力例が示すように正常性状態として **異常** が表示されて、操作状態として **IO エラー** が表示される状態です。
 
 | SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
 | --- | --- | --- | --- |
-| 802c-01-1602-117cb5fc | Healthy | [OK] | |
+| 802c-01-1602-117cb5fc | Healthy | OK | |
 | 802c-01-1602-117cb64f | 異常 | {Stale Metadata, IO Error, Transient Error} | {Lost Data Persistence, Lost Data, NV...} |
 
 次の表は、この状態についての情報を示しています。
@@ -97,15 +97,15 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 |通常の動作|NTFS ボリュームのマウントが解除されます。<br>PhysicalDisk の正常性状態フィールドには、影響を受けているすべての NVDIMM-N デバイスについて "Unhealthy" (異常)が表示されます。|
 |記憶域スペースの動作|影響を受けている NVDIMM-N が 1 つだけである限り、記憶域スペースは操作可能であり続けます。 複数のデバイスが影響を受けている場合、記憶域スペースへの書き込みは失敗します。 <br>PhysicalDisk の正常性状態フィールドには、影響を受けているすべての NVDIMM-N デバイスについて "Unhealthy" (異常)が表示されます。|
 |詳細情報|PhysicalDisk オブジェクトの OperationalStatus フィールド。<br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
-|操作|影響を受けている NVDIMM-N のデータをバックアップすることをお勧めします。 読み取りアクセスを可能にするには、ディスクを手動でオンライン化します (ディスクは読み取り専用の NTFS ボリュームとして表されます)。<br><br>この状態を完全に解消するには、根本原因を解決する必要があります (すなわち、問題に応じて、電源を修理するか、または NVDIMM-N を交換します)。NVDIMM-N 上のボリュームは、オフライン化してから再びオンライン化するか、またはシステムを再起動する必要があります。<br><br>記憶域スペースで NVDIMM-N を再び使用できるようにするには、**Reset-PhysicalDisk** コマンドレットを使用します。これにより、デバイスが再統合されて、修復プロセスが開始されます。|
+|対処|影響を受けている NVDIMM-N のデータをバックアップすることをお勧めします。 読み取りアクセスを可能にするには、ディスクを手動でオンライン化します (ディスクは読み取り専用の NTFS ボリュームとして表されます)。<br><br>この状態を完全に解消するには、根本原因を解決する必要があります (すなわち、問題に応じて、電源を修理するか、または NVDIMM-N を交換します)。NVDIMM-N 上のボリュームは、オフライン化してから再びオンライン化するか、またはシステムを再起動する必要があります。<br><br>記憶域スペースで NVDIMM-N を再び使用できるようにするには、**Reset-PhysicalDisk** コマンドレットを使用します。これにより、デバイスが再統合されて、修復プロセスが開始されます。|
 
 ## <a name="nvdimm-n-is-shown-with-a-capacity-of-0-bytes-or-as-a-generic-physical-disk"></a>NVDIMM-N が、"0" バイトの容量として表示されるか、または "Generic Physical Disk" (汎用物理ディスク) と表示される
 
-これは、記憶域クラス メモリ デバイスが 0 バイトの容量として表示されて初期化できない状態であるか、または記憶域クラス メモリ デバイスが "汎用物理ディスク" オブジェクトとして公開されて、以下の出力例が示すように操作状態として**通信の切断**が表示される状態です。
+これは、記憶域クラス メモリ デバイスが 0 バイトの容量として表示されて初期化できない状態であるか、または記憶域クラス メモリ デバイスが "汎用物理ディスク" オブジェクトとして公開されて、以下の出力例が示すように操作状態として **通信の切断** が表示される状態です。
 
 | SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
 | --- | --- | --- | --- |
-|802c-01-1602-117cb5fc|Healthy|[OK]||
+|802c-01-1602-117cb5fc|Healthy|OK||
 ||警告|通信の切断||
 
 次の表は、この状態についての情報を示しています。
@@ -117,15 +117,15 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 |通常の動作|NVDIMM-N は 0 バイトの容量で未初期化として表示されて、読み取りまたは書き込みは不可能です。|
 |記憶域スペースの動作|(影響を受けている NVDIMM-N が 1 つだけである場合) 記憶域スペースは操作可能であり続けます。<br>NVDIMM-N PhysicalDisk オブジェクトは、正常性状態が "警告" である "汎用物理ディスク" として表示されます。|
 |詳細情報|PhysicalDisk オブジェクトの OperationalStatus フィールド。 <br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
-|操作|サーバー プラットフォームが NVDIMM-N デバイスをホスト OS に再び公開するように、NVDIMM-N デバイスを交換またはサニタイズする必要があります。 他の修正不可能なエラーが発生する可能性もあることから、デバイスの交換をお推めします。 代替デバイスを記憶域スペース構成に追加するには、**Add-Physicaldisk** コマンドレットを使用します。|
+|対処|サーバー プラットフォームが NVDIMM-N デバイスをホスト OS に再び公開するように、NVDIMM-N デバイスを交換またはサニタイズする必要があります。 他の修正不可能なエラーが発生する可能性もあることから、デバイスの交換をお推めします。 代替デバイスを記憶域スペース構成に追加するには、**Add-Physicaldisk** コマンドレットを使用します。|
 
 ## <a name="nvdimm-n-is-shown-as-a-raw-or-empty-disk-after-a-reboot"></a>NVDIMM-N は、再起動後に RAW または空のディスクとして表示されます。
 
-これは、記憶域クラス メモリ デバイスの正常性を確認すると、以下の出力例が示すように正常性状態として**異常**が表示されて、操作状態として**認識されないメタデータ**が表示される状態です。
+これは、記憶域クラス メモリ デバイスの正常性を確認すると、以下の出力例が示すように正常性状態として **異常** が表示されて、操作状態として **認識されないメタデータ** が表示される状態です。
 
 | SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
 | --- | --- | --- | --- |
-|802c-01-1602-117cb5fc|Healthy|[OK]|{Unknown}|
+|802c-01-1602-117cb5fc|Healthy|OK|{Unknown}|
 |802c-01-1602-117cb64f|異常|{Unrecognized Metadata, Stale Metadata}|{Unknown}|
 
 次の表は、この状態についての情報を示しています。
@@ -137,7 +137,7 @@ PS C:\> Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, Health
 |通常の動作|NVDIMM-N は、読み取り専用モードになります。 再使用を開始するには、明示的なユーザー対処が必要です。|
 |記憶域スペースの動作|影響を受けている NVDIMM が 1 つだけである場合は、記憶域スペースは操作可能であり続けます。<br>NVDIMM-N 物理ディスク オブジェクトは、正常性状態が "Unhealthy" (異常) と表示され、記憶域スペースで使用されることはありません。|
 |詳細情報|PhysicalDisk オブジェクトの OperationalStatus フィールド。<br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
-|操作|ユーザーが、影響を受けたデバイスを交換したくない場合は、**Reset-PhysicalDisk** コマンドレットを使用して、影響を受けている NVDIMM-N の読み取り専用状態を解消することができます。 記憶域スペースの環境では、これにより、記憶域スペースへの NVDIMM-N の再統合と修復プロセスの開始も試行されます。|
+|対処|ユーザーが、影響を受けたデバイスを交換したくない場合は、**Reset-PhysicalDisk** コマンドレットを使用して、影響を受けている NVDIMM-N の読み取り専用状態を解消することができます。 記憶域スペースの環境では、これにより、記憶域スペースへの NVDIMM-N の再統合と修復プロセスの開始も試行されます。|
 
 ## <a name="interleaved-sets"></a>インターリーブ セット
 

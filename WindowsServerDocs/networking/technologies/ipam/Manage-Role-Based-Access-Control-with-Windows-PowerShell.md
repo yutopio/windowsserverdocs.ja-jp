@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 61daa0e76fdd5f8db5d81a9709d3bc8ee31c78e2
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 99859a1e9f43baa969475628e743975c78ef8bff
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997575"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866471"
 ---
 # <a name="manage-role-based-access-control-with-windows-powershell"></a>Windows PowerShell で役割ベースのアクセス制御を管理する
 
@@ -20,21 +20,21 @@ ms.locfileid: "87997575"
 このトピックでは、Windows PowerShell を使用してロールベースのアクセス制御を管理するために IPAM を使用する方法について説明します。
 
 >[!NOTE]
->IPAM Windows PowerShell コマンドリファレンスについては、 [Windows powershell の IpamServer コマンドレット](/powershell/module/ipamserver/?view=win10-ps)を参照してください。
+>IPAM Windows PowerShell コマンドリファレンスについては、 [Windows powershell の IpamServer コマンドレット](/powershell/module/ipamserver/)を参照してください。
 
 新しい Windows PowerShell IPAM コマンドを使用すると、DNS および DHCP オブジェクトのアクセススコープを取得したり、変更したりできます。 次の表は、各 IPAM オブジェクトに対して使用する正しいコマンドを示しています。
 
-|IPAM オブジェクト|command|説明|
+|IPAM オブジェクト|コマンド|説明|
 |---------------|-----------|---------------|
-|DNS サーバー|IpamDnsServer|このコマンドレットは、IPAM 内の DNS サーバーオブジェクトを返します。|
-|DNS ゾーン|IpamDnsZone|このコマンドレットは、IPAM 内の DNS ゾーンオブジェクトを返します。|
-|DNS リソースレコード|IpamResourceRecord|このコマンドレットは、IPAM 内の DNS リソースレコードオブジェクトを返します。|
-|DNS 条件付きフォワーダー|IpamDnsConditionalForwarder|このコマンドレットは、IPAM 内の DNS 条件付きフォワーダーオブジェクトを返します。|
-|DHCP サーバー|IpamDhcpServer|このコマンドレットは、IPAM 内の DHCP サーバーオブジェクトを返します。|
-|DHCP スーパースコープ|IpamDhcpSuperscope|このコマンドレットは、IPAM 内の DHCP スーパースコープオブジェクトを返します。|
-|DHCP スコープ|IpamDhcpScope|このコマンドレットは、IPAM 内の DHCP スコープオブジェクトを返します。|
+|DNS サーバー|Get-IpamDnsServer|このコマンドレットは、IPAM 内の DNS サーバーオブジェクトを返します。|
+|DNS ゾーン|Get-IpamDnsZone|このコマンドレットは、IPAM 内の DNS ゾーンオブジェクトを返します。|
+|DNS リソースレコード|Get-IpamResourceRecord|このコマンドレットは、IPAM 内の DNS リソースレコードオブジェクトを返します。|
+|DNS 条件付きフォワーダー|Get-IpamDnsConditionalForwarder|このコマンドレットは、IPAM 内の DNS 条件付きフォワーダーオブジェクトを返します。|
+|DHCP サーバー|Get-IpamDhcpServer|このコマンドレットは、IPAM 内の DHCP サーバーオブジェクトを返します。|
+|DHCP スーパースコープ|Get-IpamDhcpSuperscope|このコマンドレットは、IPAM 内の DHCP スーパースコープオブジェクトを返します。|
+|DHCP スコープ|Get-IpamDhcpScope|このコマンドレットは、IPAM 内の DHCP スコープオブジェクトを返します。|
 
-コマンド出力の次の例では、コマンド `Get-IpamDnsZone` レットは**dublin.contoso.com** DNS ゾーンを取得します。
+コマンド出力の次の例では、コマンド `Get-IpamDnsZone` レットは **dublin.contoso.com** DNS ゾーンを取得します。
 
 ```
 PS C:\Users\Administrator.CONTOSO> Get-IpamDnsZone -ZoneType Forward -ZoneName dublin.contoso.com
@@ -110,7 +110,7 @@ SYNTAX
     Set-IpamAccessScope [-IpamBlock] -InputObject <ciminstance[]> [-AccessScopePath <string>] [-IsInheritedAccessScope] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
-次の例では、DNS ゾーン**dublin.contoso.com**のアクセススコープが**ダブリン**から**ヨーロッパ**に変更されています。
+次の例では、DNS ゾーン **dublin.contoso.com** のアクセススコープが **ダブリン** から **ヨーロッパ** に変更されています。
 
 ```
 PS C:\Users\Administrator.CONTOSO> Get-IpamDnsZone -ZoneType Forward -ZoneName dublin.contoso.com

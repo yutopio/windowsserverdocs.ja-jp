@@ -6,12 +6,12 @@ ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 9/30/2016
-ms.openlocfilehash: 98a7dbdfa0bb89ba8c857e171b513c00ba297896
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: aa192a9447bdcc49f3943534b53a3523e905f1c8
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746067"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866171"
 ---
 # <a name="set-up-hosts-for-live-migration-without-failover-clustering"></a>フェールオーバー クラスタ リングのないライブ マイグレーションのためのホストの設定します。
 
@@ -64,9 +64,9 @@ ms.locfileid: "90746067"
 
 6.  **[追加]** をクリックします。
 
-7.  **サービスの追加**, 、クリックして **ユーザーまたはコンピューター**します。
+7.  **サービスの追加**, 、クリックして **ユーザーまたはコンピューター** します。
 
-8.  **[ユーザーまたはコンピューター**, 、移行先サーバーの名前を入力します。 をクリックして **名前の確認** 、それを確認する **OK**します。
+8.  **[ユーザーまたはコンピューター**, 、移行先サーバーの名前を入力します。 をクリックして **名前の確認** 、それを確認する **OK** します。
 
 9. **サービスの追加**, で、使用可能なサービスの一覧で、次の操作をクリックして **OK**:
 
@@ -90,9 +90,9 @@ ms.locfileid: "90746067"
 
 1.  Hyper-V マネージャーを開きます。 (サーバーマネージャーから、[**ツール**  >> ] をクリックします。**Hyper-v マネージャー**)
 
-2.  ナビゲーション ウィンドウで、サーバーのいずれかを選択します。 (表示されていない場合は右クリック **HYPER-V マネージャーで**, 、] をクリックして **サーバーへの接続**, サーバー名を入力し、クリックして、 **OK**します。 繰り返してサーバーを追加します。)
+2.  ナビゲーション ウィンドウで、サーバーのいずれかを選択します。 (表示されていない場合は右クリック **HYPER-V マネージャーで**, 、] をクリックして **サーバーへの接続**, サーバー名を入力し、クリックして、 **OK** します。 繰り返してサーバーを追加します。)
 
-3.  **アクション** ] ウィンドウで、をクリックして **HYPER-V 設定** >>**ライブ マイグレーション**します。
+3.  **アクション** ] ウィンドウで、をクリックして **HYPER-V 設定** >>**ライブ マイグレーション** します。
 
 4.  **[ライブ マイグレーション]** ウィンドウで、**[ライブ マイグレーションでの送受信を有効にする]** をオンにします。
 
@@ -100,9 +100,9 @@ ms.locfileid: "90746067"
 
 6.  ライブ マイグレーション トラフィックを受け入れるために特定のネットワーク接続を使用する場合は、**[ライブ マイグレーションの受信]** で **[追加]** をクリックし、IP アドレス情報を入力します。 それ以外の場合は、**[使用可能な任意のネットワークをライブ マイグレーションに使用する]** をクリックします。 **[OK]** をクリックします。
 
-7.  Kerberos とパフォーマンスのオプションを選択するには展開 **ライブ マイグレーション** し、[ **高度な機能**です。
+7.  Kerberos とパフォーマンスのオプションを選択するには展開 **ライブ マイグレーション** し、[ **高度な機能** です。
 
-    - [制約付き委任を構成した場合 **認証プロトコル**, [ **Kerberos**します。
+    - [制約付き委任を構成した場合 **認証プロトコル**, [ **Kerberos** します。
     - **パフォーマンス オプション**, 、詳細を確認し、各自の環境である場合は、別のオプションを選択します。
 
 8. **[OK]** をクリックします。
@@ -111,7 +111,7 @@ ms.locfileid: "90746067"
 
 ### <a name="use-windows-powershell-to-set-up-the-source-and-destination-computers-for-live-migration"></a>Windows PowerShell を使用して、ライブ マイグレーションのため元とコピー先のコンピューターを設定するには
 
-3 つのコマンドレットを非クラスター化ホスト上のライブ マイグレーションを構成するには: [Enable-vmmigration](/powershell/module/hyper-v/enable-vmmigration?view=win10-ps), 、[Set-vmmigrationnetwork](/powershell/module/hyper-v/set-vmmigrationnetwork?view=win10-ps), 、および [Set-vmhost](/powershell/module/hyper-v/set-vmhost?view=win10-ps)します。 この例では、3 つすべてを使用しは、次の処理します。
+3 つのコマンドレットを非クラスター化ホスト上のライブ マイグレーションを構成するには: [Enable-vmmigration](/powershell/module/hyper-v/enable-vmmigration), 、[Set-vmmigrationnetwork](/powershell/module/hyper-v/set-vmmigrationnetwork), 、および [Set-vmhost](/powershell/module/hyper-v/set-vmhost)します。 この例では、3 つすべてを使用しは、次の処理します。
   - ローカル ホストでのライブ マイグレーションを構成します。
   - により、特定のネットワークでのみマイグレーション トラフィックを受信
   - 認証プロトコルとして Kerberos を選択します。
@@ -137,7 +137,7 @@ PS C:\> Set-VMHost -VirtualMachineMigrationPerformanceOption SMB
 |オプション|説明|
 |----------|---------------|
     |TCP/IP|TCP/IP 接続経由で仮想マシンのメモリを移行先サーバーにコピーします。|
-    |圧縮|TCP/IP 接続を介して移行先サーバーにコピーする前に、仮想マシンのメモリの内容を圧縮します。 **注:** これは、 **既定** 設定します。|
+    |[圧縮]|TCP/IP 接続を介して移行先サーバーにコピーする前に、仮想マシンのメモリの内容を圧縮します。 **注:** これは、 **既定** 設定します。|
     |SMB|SMB 3.0 接続を介して移行先サーバーに仮想マシンのメモリをコピーします。<p>SMB ダイレクトが使用元と移行先サーバー上のネットワーク アダプターがあるリモート ダイレクト メモリ アクセス (RDMA) 機能が有効な場合にします。<br />SMB マルチ チャネルは自動的に検出し、適切な SMB マルチ チャネル構成が識別されると、複数の接続を使用します。<p>詳細については、「[SMB ダイレクトを使用してファイル サーバーのパフォーマンスを向上させる](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134210(v=ws.11))」を参照してください。|
 
  ## <a name="next-steps"></a>次のステップ

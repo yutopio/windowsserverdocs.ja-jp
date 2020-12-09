@@ -6,12 +6,12 @@ ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: danihalfin
 ms.author: vichen
 ms.date: 04/06/2020
-ms.openlocfilehash: 46372029bb31a8b76f564dca9851a8ce473240ea
-ms.sourcegitcommit: 82fe3e79ea14c51ae3c445d8fa3ed43843597314
+ms.openlocfilehash: 654af785cfdd9c3a5bd054c75d6712d547ada991
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098501"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866431"
 ---
 <a name="supported-centos-and-red-hat-enterprise-linux-virtual-machines-on-hyper-v"></a>CentOS をサポートし、HYPER-V 上の Red Hat Enterprise Linux 仮想マシン
 =========================================================================
@@ -243,7 +243,7 @@ Red Hat、この web ページで構成を表示できる認定: [Red Hat 証明
 
 8.  ホット アド サポートは、この配布に既定では無効です。 ホット アド サポートを有効にするには、/etc/udev/rules.d/ 下にある udev ルールを次のように追加する必要があります。
 
-9.  ファイルを作成する **/etc/udev/rules.d/100-balloon.rules**します。 ファイルの他の目的の名前を使用することがあります。
+9.  ファイルを作成する **/etc/udev/rules.d/100-balloon.rules** します。 ファイルの他の目的の名前を使用することがあります。
 
 10. 次の内容をファイルに追加します。 `SUBSYSTEM=="memory", ACTION=="add",
     ATTR{state}="online"`
@@ -267,7 +267,7 @@ Linux Integration Services ダウンロードは、インストールでこの�
 
 4.  Linux ソフトウェア更新プログラムがないは、キー/値ペア (KVP) インフラストラクチャが正しく機能しない可能性があります。 この機能の問題が確認された場合に、ソフトウェア更新プログラムを取得するディストリビューションのベンダーに問い合わせてください。
 
-5.  Windows Server 2012 R2 第2世代仮想マシンでは、セキュアブートオプションが無効になっていない限り、既定でセキュアブートが有効になっており、一部の Linux 仮想マシンは起動しません。 **Hyper-v マネージャー**で仮想マシンの設定の [**ファームウェア**] セクションでセキュアブートを無効にするか、Powershell を使用して無効にすることができます。
+5.  Windows Server 2012 R2 第2世代仮想マシンでは、セキュアブートオプションが無効になっていない限り、既定でセキュアブートが有効になっており、一部の Linux 仮想マシンは起動しません。 **Hyper-v マネージャー** で仮想マシンの設定の [**ファームウェア**] セクションでセキュアブートを無効にするか、Powershell を使用して無効にすることができます。
 
 -   Set-VMFirmware-VMName "VMname"-EnableSecureBoot Off
 
@@ -275,9 +275,9 @@ Linux Integration Services ダウンロードは、インストールでこの�
 
 1.  Red Hat Enterprise Linux または CentOS 5.2、5.3、5.4、filesystem 固定機能は使用できません、ためライブ仮想マシンのバックアップも使用できませんに。
 
-参照
+関連項目
 
--   [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+-   [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 -   [Debian の仮想マシンを HYPER-V でサポートされています。](Supported-Debian-virtual-machines-on-Hyper-V.md)
 

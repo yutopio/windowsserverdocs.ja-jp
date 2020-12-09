@@ -6,12 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 06/13/2018
 ms.topic: article
-ms.openlocfilehash: c615bd6426098e00854e873d3e1eb2cfbfaa0734
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9e26d558755b0ae37ac07fb21ff42360693e4303
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970939"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865711"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>OAuth を使用し、AD FS 2016 以降の ADAL.JS で単一ページ web アプリケーションを構築する
 
@@ -23,7 +23,7 @@ ms.locfileid: "87970939"
 >ここで作成できる例は、学習のみを目的としています。 これらの手順は、モデルの必須要素を公開するために使用できる、最も単純で最小の実装用です。 この例には、エラー処理やその他の関連機能のすべての側面を含めることはできません。
 
 >[!NOTE]
->このチュートリアルは AD FS Server 2016 以降に**のみ**適用されます。
+>このチュートリアルは AD FS Server 2016 以降に **のみ** 適用されます。
 
 ## <a name="overview"></a>概要
 このサンプルでは、バックエンドの WebAPI リソースへのアクセスをセキュリティで保護するために、単一ページアプリケーションクライアントが AD FS に対して認証を行う認証フローを作成します。 全体の認証フローを次に示します。
@@ -35,7 +35,7 @@ ms.locfileid: "87970939"
 ADAL が認証用のトリガーを確認すると、アプリケーションによって提供される情報が使用され、認証が AD FS STS に送られます。  AD FS にパブリッククライアントとして登録されているシングルページアプリケーションは、暗黙的な許可フローに対して自動的に構成されます。 承認要求は、#fragment を介してアプリケーションに返される ID トークンになります。 さらに、バックエンド WebAPI を呼び出すと、この ID トークンがヘッダーのベアラートークンとして処理され、WebAPI にアクセスできるようになります。
 
 ## <a name="setting-up-the-development-box"></a>開発ボックスの設定
-このチュートリアルでは、Visual Studio 2015 を使用します。 プロジェクトは ADAL JS ライブラリを使用します。 ADAL の詳細については[Active Directory 認証ライブラリ .net](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet)をご覧ください。
+このチュートリアルでは、Visual Studio 2015 を使用します。 プロジェクトは ADAL JS ライブラリを使用します。 ADAL の詳細については[Active Directory 認証ライブラリ .net](/dotnet/api/microsoft.identitymodel.clients.activedirectory)をご覧ください。
 
 ## <a name="setting-up-the-environment"></a>環境のセットアップ
 このチュートリアルでは、次の基本的なセットアップを使用します。
@@ -74,28 +74,28 @@ git clone https://github.com/Azure-Samples/active-directory-angularjs-singlepage
 **Startup.Auth.cs** -ベアラー認証に Active Directory フェデレーションサービスを使用するための構成が含まれています。
 
 ## <a name="registering-the-public-client-in-ad-fs"></a>AD FS にパブリッククライアントを登録しています
-このサンプルでは、WebAPI はでリッスンするように構成されてい https://localhost:44326/ ます。 **Web アプリケーションにアクセス**するアプリケーショングループ web ブラウザーは、暗黙的な許可フローアプリケーションを構成するために使用できます。
+このサンプルでは、WebAPI はでリッスンするように構成されてい https://localhost:44326/ ます。 **Web アプリケーションにアクセス** するアプリケーショングループ web ブラウザーは、暗黙的な許可フローアプリケーションを構成するために使用できます。
 
-1. AD FS 管理コンソールを開き、[**アプリケーショングループの追加**] をクリックします。 **アプリケーショングループの追加ウィザード**で、アプリケーションの名前と説明を入力し、次に示すように、[**クライアント-サーバーアプリケーション**] セクションから**web アプリケーションテンプレートにアクセスする web ブラウザー**を選択します。
+1. AD FS 管理コンソールを開き、[ **アプリケーショングループの追加**] をクリックします。 **アプリケーショングループの追加ウィザード** で、アプリケーションの名前と説明を入力し、次に示すように、[**クライアント-サーバーアプリケーション**] セクションから **web アプリケーションテンプレートにアクセスする web ブラウザー** を選択します。
 
     ![新しいアプリケーショングループの作成](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
 
-2. 次のページの**ネイティブアプリケーション**で、次に示すように、アプリケーションクライアント識別子とリダイレクト URI を指定します。
+2. 次のページの **ネイティブアプリケーション** で、次に示すように、アプリケーションクライアント識別子とリダイレクト URI を指定します。
 
     ![新しいアプリケーショングループの作成](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
 
-3. 次のページで**Access Control ポリシーを適用**します。アクセス許可は [*すべて許可*] のままにします。
+3. 次のページで **Access Control ポリシーを適用** します。アクセス許可は [*すべて許可*] のままにします。
 
 4. 概要ページは次のようになります。
 
     ![新しいアプリケーショングループの作成](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
 
-5. [**次**へ] をクリックして、アプリケーショングループの追加を完了し、ウィザードを閉じます。
+5. [ **次** へ] をクリックして、アプリケーショングループの追加を完了し、ウィザードを閉じます。
 
 ## <a name="modifying-the-sample"></a>サンプルの変更
 ADAL JS の構成
 
-**app.js**ファイルを開き、 **adalProvider.init**定義を次のように変更します。
+**app.js** ファイルを開き、 **adalProvider.init** 定義を次のように変更します。
 
 ```
     adalProvider.init(
@@ -111,12 +111,12 @@ ADAL JS の構成
 
 |構成|説明|
 |--------|--------|
-|instance|STS の URL (例:https://fs.contoso.com/|
+|インスタンス|STS の URL (例: https://fs.contoso.com/|
 |tenant|' Adfs ' として保持する|
 |clientID|これは、シングルページアプリケーションのパブリッククライアントを構成するときに指定したクライアント ID です。|
 
 ## <a name="configure-webapi-to-use-ad-fs"></a>AD FS を使用するように WebAPI を構成する
-サンプルの**Startup.Auth.cs**ファイルを開き、先頭に次のコードを追加します。
+サンプルの **Startup.Auth.cs** ファイルを開き、先頭に次のコードを追加します。
 
 ```
     using System.IdentityModel.Tokens;

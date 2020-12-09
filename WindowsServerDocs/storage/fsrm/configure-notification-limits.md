@@ -6,12 +6,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 969c950d3a925afac400d128ac21ed0923f07ffa
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 625fb9c6a36717e57f3c6fd6da696b8df07fe8c3
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950656"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866061"
 ---
 # <a name="configure-notification-limits"></a>通知の制限を構成する
 
@@ -21,7 +21,7 @@ ms.locfileid: "87950656"
 
 -   電子メール
 -   イベント ログ
--   command
+-   コマンド
 -   レポート
 
 これらの各制限により、構成対象の種類の通知は、最初の通知が生成された後、指定した時間が経過するまで同一の問題についての 2 回目の通知は生成されません。
@@ -37,7 +37,7 @@ ms.locfileid: "87950656"
 3.  **[OK]** をクリックします。
 
 > [!Note]
-> 特定のクォータまたはファイル スクリーンの通知に関連付けられている時間制限をカスタマイズするには、[ファイル サーバー リソース マネージャー](/powershell/module/fileserverresourcemanager/?view=win10-ps)のコマンド ライン ツールである **Dirquota.exe** と **Filescrn.exe** を使用できます。
+> 特定のクォータまたはファイル スクリーンの通知に関連付けられている時間制限をカスタマイズするには、[ファイル サーバー リソース マネージャー](/powershell/module/fileserverresourcemanager/)のコマンド ライン ツールである **Dirquota.exe** と **Filescrn.exe** を使用できます。
 
 ## <a name="additional-references"></a>その他の参照情報
 

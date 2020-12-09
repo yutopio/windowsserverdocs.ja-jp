@@ -7,12 +7,12 @@ ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
 ms.author: lizross
 author: eross-msft
 ms.date: 09/13/2018
-ms.openlocfilehash: 4417748504a0458396cd02e965547c2573f2c44f
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 2edcd046958854698fbcc61d96f2716a26de3367
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990081"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866271"
 ---
 # <a name="network-load-balancing"></a>ネットワーク負荷分散
 
@@ -25,7 +25,7 @@ ms.locfileid: "87990081"
 
 ネットワーク負荷分散 \(NLB\) 機能、TCP を使用して複数のサーバーのトラフィックでは分散\/IP ネットワーク プロトコルです。 1 つの仮想クラスターにアプリケーションを実行している 2 つ以上のコンピューターを組み合わせることで NLB では、信頼性とパフォーマンスの web サーバーとその他のミッション\-重要なサーバーです。
 
-NLB クラスター内のサーバーは*ホスト*と呼ばれ、各ホストでは、サーバー アプリケーションの個別のコピーが実行されます。 送られてきたクライアント要求は NLB によってクラスター内の各ホストに配分されます。 各ホストで処理される負荷は構成可能です。 負荷の増加に対応して、クラスターにホストを動的に追加することもできます。 NLB では指定された 1 つのホストにすべてのトラフィックを送信することも可能です。このホストは*既定のホスト*と呼ばれます。
+NLB クラスター内のサーバーは *ホスト* と呼ばれ、各ホストでは、サーバー アプリケーションの個別のコピーが実行されます。 送られてきたクライアント要求は NLB によってクラスター内の各ホストに配分されます。 各ホストで処理される負荷は構成可能です。 負荷の増加に対応して、クラスターにホストを動的に追加することもできます。 NLB では指定された 1 つのホストにすべてのトラフィックを送信することも可能です。このホストは *既定のホスト* と呼ばれます。
 
 NLB では、クラスター内のすべてのコンピューターに対し、同じ IP アドレス セットを使ってアドレス指定できます。このとき、各ホスト固有の専用 IP アドレス セットは維持されます。 負荷の\-ホストが失敗したかがオフラインになった、負荷が稼働しているコンピューター間で自動的に再配分ときに、アプリケーションを分散します。 オフラインのコンピューターで準備が整うと、そのコンピューターは透過的にクラスターに戻され、ワークロードの分担に加わるようになります。これにより、クラスター内の他のコンピューターのトラフィックが軽減されます。
 
@@ -141,7 +141,7 @@ Install-WindowsFeature NLB -IncludeManagementTools
 
 インストールが完了したら、コンピューターの再起動は必要ありません。
 
-詳細については、次を参照してください。 [Install-windowsfeature](/powershell/module/servermanager/install-windowsfeature?view=win10-ps)します。
+詳細については、次を参照してください。 [Install-windowsfeature](/powershell/module/servermanager/install-windowsfeature)します。
 
 ### <a name="network-load-balancing-manager"></a>ネットワーク負荷分散マネージャー
 サーバー マネージャーでネットワーク負荷分散マネージャーを開くには、**[ツール]** をクリックし、**[ネットワーク負荷分散マネージャー]** をクリックします。
@@ -155,4 +155,4 @@ Install-WindowsFeature NLB -IncludeManagementTools
 |操作|[ネットワーク負荷分散クラスターを管理する](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753954(v=ws.10)) & #124; [ネットワーク負荷分散パラメーターの設定](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731619(v=ws.10)) & #124; [ネットワーク負荷分散クラスター上のホストを制御します。](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770870(v=ws.10))|
 |トラブルシューティング|[ネットワーク負荷分散クラスターのトラブルシューティング](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732592(v=ws.10)) & #124; [NLB クラスターのイベントとエラー](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731678(v=ws.10))|
 |ツールと設定|[ネットワーク負荷分散の Windows PowerShell コマンドレット](https://go.microsoft.com/fwlink/p/?LinkId=238123)|
-|コミュニティ リソース|[高可用性 \( クラスタリングの \) フォーラム](https://go.microsoft.com/fwlink/p/?LinkId=230641)
+|コミュニティのリソース|[高可用性 \( クラスタリングの \) フォーラム](https://go.microsoft.com/fwlink/p/?LinkId=230641)

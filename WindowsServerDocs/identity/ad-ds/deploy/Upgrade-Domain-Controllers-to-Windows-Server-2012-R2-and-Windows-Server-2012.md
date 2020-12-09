@@ -6,12 +6,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: ebbbefebc420d83f8f74466698729c26395bdbec
-ms.sourcegitcommit: b39ea3b83280f00e5bb100df0dc8beaf1fb55be2
+ms.openlocfilehash: be94260946c696eed060b9b2d85f5042ed737a1f
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520505"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866351"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012"></a>ドメイン コントローラーを Windows Server 2012 R2 または Windows Server 2012 にアップグレードする
 
@@ -70,7 +70,7 @@ Windows Update は Windows 8 および Windows Server 2012 の自動メンテナ
 
 次の表は、Windows Server 2012 R2 のAD DS 関連の新機能をまとめたものです。詳細情報がある場合は、リンクも示しています。 一部の機能に関する詳細 (要件など) については、「 [Windows Server の Active Directory の新機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn268294(v=ws.11))」を参照してください。
 
-|機能|説明|
+|特徴量|説明|
 |-----------|---------------|
 |[社内参加](../../ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications.md)|インフォメーション ワーカーが企業のリソースとサービスにアクセスするために、個人のデバイスを社内コンピューターの一部として参加させることができるようにします。|
 |[Web アプリケーション プロキシ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280942(v=ws.11))|新しいリモート アクセス役割サービスを使って Web アプリケーションへのアクセスを提供します。|
@@ -89,7 +89,7 @@ Windows Update は Windows 8 および Windows Server 2012 の自動メンテナ
 
 次の表は、Windows Server 2012 のAD DS 関連の新機能をまとめたものです。詳細情報がある場合は、リンクも示しています。 一部の機能 (要件を含む) の詳細については、「 [Active Directory Domain Services の新機能」 (AD DS)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831477(v=ws.11))を参照してください。
 
-|機能|説明|
+|特徴量|説明|
 |-----------|---------------|
 |Active Directory によるライセンス認証 (AD BA) (「 [ボリューム ライセンス認証の概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831612(v=ws.11))」を参照)|ボリューム ソフトウェア ライセンスの配布と管理を構成するタスクが簡略化されます。|
 |[Active Directory フェデレーション サービス (AD FS)](../../active-directory-federation-services.md)|サーバー マネージャー経由のサーバーの役割のインストール、信頼のセットアップの単純化、自動的な信頼管理、SAML プロトコルのサポートなどが追加されます。|
@@ -123,9 +123,9 @@ Windows Update は Windows 8 および Windows Server 2012 の自動メンテナ
 |||
 |-|-|
 |**シナリオ**|**推奨構成**|
-|**WSUS 管理**<p>-1 週間に1回更新プログラムをインストールする<br />-午後11時で金曜日を再起動します|コンピューターを自動インストールに設定し、希望の時間まで自動再起動を禁止する<p>**ポリシー** :自動更新を構成する (有効)<p>自動更新の構成: 4-自動ダウンロードし、インストールをスケジュールする<p>**ポリシー** : ログオンしているユーザーがいる場合は自動再起動しない (無効)<p>**WSUS 期限** : 金曜日の 23:00 に設定する|
+|**WSUS 管理**<p>-1 週間に1回更新プログラムをインストールする<br />-午後11時で金曜日を再起動します|コンピューターを自動インストールに設定し、希望の時間まで自動再起動を禁止する<p>**ポリシー**:自動更新を構成する (有効)<p>自動更新の構成: 4-自動ダウンロードし、インストールをスケジュールする<p>**ポリシー**: ログオンしているユーザーがいる場合は自動再起動しない (無効)<p>**WSUS 期限**: 金曜日の 23:00 に設定する|
 |**WSUS 管理**<p>-異なる時間/日にインストールをずらす|一緒に更新する必要のあるさまざまなコンピューター グループのターゲット グループを設定する<p>前のシナリオに対して上記の手順を使用する<p>さまざまなターゲット グループに対して異なる期限を設定する|
-|**WSUS で管理されていない-期限のサポートなし**<p>-異なるタイミングでインストールをずらす|**ポリシー** :自動更新を構成する (有効)<p>自動更新の構成: 4-自動ダウンロードし、インストールをスケジュールする<p>**レジストリ キー:** Microsoft サポート技術情報の記事 [2835627](https://support.microsoft.com/kb/2835627)<p>**ポリシー:** 自動メンテナンス ランダム遅延 (有効)<p>次の動作になるように、[ **定期メンテナンス ランダム遅延** ] を [PT6H] (6 時間のランダム遅延) に設定する。<p>-更新プログラムは、構成されたメンテナンス時間とランダムな遅延でインストールされます<p>-各マシンの再起動は、3日後に正確に実行されます。<p>または、コンピューターのグループごとに異なるメンテナンス時刻を設定する|
+|**WSUS で管理されていない-期限のサポートなし**<p>-異なるタイミングでインストールをずらす|**ポリシー**:自動更新を構成する (有効)<p>自動更新の構成: 4-自動ダウンロードし、インストールをスケジュールする<p>**レジストリ キー:** Microsoft サポート技術情報の記事 [2835627](https://support.microsoft.com/kb/2835627)<p>**ポリシー:** 自動メンテナンス ランダム遅延 (有効)<p>次の動作になるように、[**定期メンテナンス ランダム遅延**] を [PT6H] (6 時間のランダム遅延) に設定する。<p>-更新プログラムは、構成されたメンテナンス時間とランダムな遅延でインストールされます<p>-各マシンの再起動は、3日後に正確に実行されます。<p>または、コンピューターのグループごとに異なるメンテナンス時刻を設定する|
 
 Windows エンジニアリングチームがこれらの変更を実装した理由の詳細については、「 [コンピューターの再起動を求めるメッセージが表示される可能性を低くする方法](https://docs.microsoft.com/troubleshoot/windows-server/deployment/why-prompted-restart-computer#how-to-reduce-your-chances-of-being-prompted-to-restart-your-computer)」を参照してください。
 
@@ -153,7 +153,7 @@ AD DS に関連する変更がいくつかあります。
 
 Windows Server 2008 以降のドメインコントローラーでは、Windows Server 2003 または Windows 2000 を実行するドメインコントローラーと比較して、次のセキュリティで保護された既定の設定も使用できます。
 
-| 暗号化の種類またはポリシー | Windows Server 2008 の既定値 | Windows Server 2012 および Windows Server 2008 R2 の既定値 | 解説 |
+| 暗号化の種類またはポリシー | Windows Server 2008 の既定値 | Windows Server 2012 および Windows Server 2008 R2 の既定値 | コメント |
 |--|--|--|--|
 | AllowNT4Crypto | 無効 | 無効 | サード パーティ製のサーバー メッセージ ブロック (SMB) クライアントは、ドメイン コントローラー上の既定のセキュリティ設定と互換性がない場合があります。 どのような場合でも、これらの設定を緩和して相互運用を可能にすることもできますが、その際はセキュリティが低下します。 詳細については、Microsoft サポート技術情報の [記事 942564](https://go.microsoft.com/fwlink/?LinkId=164558) () を参照してください https://go.microsoft.com/fwlink/?LinkId=164558) 。 |
 | DES | Enabled | 無効 | Microsoft サポート技術情報の[記事 977321](https://go.microsoft.com/fwlink/?LinkId=177717) (https://go.microsoft.com/fwlink/?LinkId=177717) |
@@ -201,10 +201,10 @@ Windows Server 2008 または Windows Server 2008 R2 の64ビットバージョ�
 
 | 使用しているエディション | アップグレード先のエディション |
 |--|--|
-| Windows Server 2008 Standard SP2<p>または<p>Windows Server 2008 Enterprise SP2 | Windows Server 2012 Standard<p>または<p>Windows Server 2012 Datacenter |
+| Windows Server 2008 Standard SP2<p>OR<p>Windows Server 2008 Enterprise SP2 | Windows Server 2012 Standard<p>OR<p>Windows Server 2012 Datacenter |
 | Windows Server 2008 Datacenter SP2 | Windows Server 2012 Datacenter |
 | Windows Web Server 2008 | Windows Server 2012 Standard |
-| Windows Server 2008 R2 Standard SP1<p>または<p>Windows Server 2008 R2 Enterprise SP1 | Windows Server 2012 Standard<p>または<p>Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 Standard SP1<p>OR<p>Windows Server 2008 R2 Enterprise SP1 | Windows Server 2012 Standard<p>OR<p>Windows Server 2012 Datacenter |
 | Windows Server 2008 R2 Datacenter SP1 | Windows Server 2012 Datacenter |
 | Windows Web Server 2008 R2 | Windows Server 2012 Standard |
 
@@ -224,7 +224,7 @@ Windows 2000 のドメイン コントローラーは、フォレストに Windo
 4. Windows Server 2012 を実行するドメイン コントローラーをインストールします。
 5. 以前のバージョンの Windows Server を実行するドメイン コントローラーを削除することはできません。
 
-新しい Windows Server 2012 ドメインの機能レベルでは、1つの新機能が有効になります。 **kdc で信頼性情報、複合認証、および Kerberos 防御をサポート** する kdc 管理用テンプレートポリシーには、Windows Server 2012 ドメインの機能レベルを必要とする2つの設定 ( **常に** 要求を提供し、 **防御認証を要求** します) があります。
+新しい Windows Server 2012 ドメインの機能レベルでは、1つの新機能が有効になります。 **kdc で信頼性情報、複合認証、および Kerberos 防御をサポート** する kdc 管理用テンプレートポリシーには、Windows Server 2012 ドメインの機能レベルを必要とする2つの設定 (**常に** 要求を提供し、 **防御認証を要求** します) があります。
 
 Windows Server 2012 フォレストの機能レベルでは新しい機能は提供されませんが、フォレスト内に作成された新しいドメインは、Windows Server 2012 ドメインの機能レベルで自動的に動作するようになります。 Windows Server 2012 ドメインの機能レベルでは、KDC が信頼性情報、複合認証、および Kerberos 防御をサポートする以外に、他の新機能は提供されません。 ただし、ドメイン内のすべてのドメインコントローラーが Windows Server 2012 を実行していることを確認します。 別の機能レベルで使用できる他の機能の詳細については、「 [AD DS の機能レベルとは](../active-directory-functional-levels.md)」を参照してください。
 
@@ -287,7 +287,7 @@ Windows [8 のリモートサーバー管理ツール](https://www.microsoft.com
 |Forefront Threat Management Gateway (TMG)|TMG の実行がサポートされているのは、Windows Server 2008 および Windows Server 2008 R2 のみです。 詳細については、「 [Forefront TMG のシステム要件](/previous-versions/tn-archive/dd896981(v=technet.10))」を参照してください。|
 |Windows Server Update Services|このリリースの WSUS では既に、Windows 8 ベースのコンピューターまたは Windows Server 2012 コンピューターがクライアントとしてサポートされています。|
 |Windows Server Update Services 3.0|更新プログラムサポート技術情報の記事 [2734608](https://support.microsoft.com/kb/2734608) では、WINDOWS SERVER UPDATE SERVICES (wsus) 3.0 SP2 を実行しているサーバーで、windows 8 または windows server 2012 を実行しているコンピューターの更新プログラムを提供します。 **注:** スタンドアロンの wsus 3.0 sp2 環境がある場合、または wsus 2007 sp2 を使用する Configuration Manager 3.0 Service Pack 2 環境の場合 [は、windows](https://support.microsoft.com/kb/2734608) 8 ベース|
-|[Exchange 2013](/Exchange/plan-and-deploy/prerequisites?view=exchserver-2019)|Windows Server 2012 Standard および Datacenter は、次の役割に対してサポートされています: スキーマ マスター、グローバル カタログ サーバー、ドメイン コントローラー、メールボックス サーバー、クライアント アクセス サーバー<p>フォレストの機能レベル:Windows Server 2003 以降<p>ソース:Exchange 2013 のシステム要件|
+|[Exchange 2013](/Exchange/plan-and-deploy/prerequisites)|Windows Server 2012 Standard および Datacenter は、次の役割に対してサポートされています: スキーマ マスター、グローバル カタログ サーバー、ドメイン コントローラー、メールボックス サーバー、クライアント アクセス サーバー<p>フォレストの機能レベル:Windows Server 2003 以降<p>ソース:Exchange 2013 のシステム要件|
 |Exchange 2010|[ソース:Exchange 2010 Service Pack 3](https://techcommunity.microsoft.com/t5/exchange-team-blog/bg-p/Exchange)<p>Exchange 2010 Service Pack 3 は、Windows Server 2012 メンバー サーバーにインストールできます。<p>[Exchange 2010 のシステム要件](/previous-versions/office/exchange-server-2010/aa996719(v=exchg.141)) には、サポートされている最新のスキーマ マスター、グローバル カタログ、およびドメイン コントローラーとして Windows Server 2008 R2 が記載されています。<p>フォレストの機能レベル:Windows Server 2003 以降|
 |SQL Server 2012|ソース:サポート技術情報 [2681562](https://support.microsoft.com/kb/2681562)<p>Windows Server 2012 では SQL Server 2012 RTM がサポートされています。|
 |SQL Server 2008 R2|ソース:サポート技術情報 [2681562](https://support.microsoft.com/kb/2681562)<p>Windows Server 2012 にインストールするには、SQL Server 2008 R2 Service Pack 1 以上が必要です。|
@@ -334,7 +334,7 @@ Windows [8 のリモートサーバー管理ツール](https://www.microsoft.com
 | [2747974](https://support.microsoft.com/kb/2747974):ドメイン コントローラーの複製イベント 2224 で不適切なガイダンスが表示される | 仮想 DC の複製 | イベント ID 2224 で表示される、管理されたサービス アカウントは複製前に削除する必要があるというメッセージは不適切です。 スタンドアロンの MSA は削除する必要がありますが、グループの MSA は複製をブロックしません。 |
 | [2748266](https://support.microsoft.com/kb/2748266):Windows 8 へのアップグレード後、BitLocker の暗号化されたドライブのロックを解除できない | BitLocker | Windows 7 からアップグレードされたコンピューターでドライブのロックを解除しようとすると、"アプリケーションが見つかりません" というエラーが表示されます。 |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Windows Server 2012 評価](https://www.microsoft.com/en-us/evalcenter/)のためのリソース 
 [Windows Server 2012 評価ガイド](https://download.microsoft.com/download/5/B/2/5B254183-FA53-4317-B577-7561058CEF42/WS%202012%20Evaluation%20Guide.pdf) 

@@ -7,12 +7,12 @@ ms.author: jgerend
 manager: lizross
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ff6b6cfa6f8af87310970d9adab10d5df14c90d
-ms.sourcegitcommit: 0b3d6661c44aa1a697087e644437279142726d84
+ms.openlocfilehash: cf4b9a5196c6cf92d4f075d25e03ab719b341422
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90083693"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865730"
 ---
 # <a name="configure-and-manage-quorum"></a>クォーラムを構成および管理する
 
@@ -66,9 +66,9 @@ Windows Server のクォーラムモデルは柔軟です。 クラスターの�
 
 特定の障害回復構成では、ノードから投票を削除できます。 たとえば、マルチサイト クラスターでは、バックアップ サイトのノードから投票を削除して、それらのノードがクォーラムの計算に影響しないようにできます。 この構成は、サイト間の手動のフェールオーバーでのみ推奨されます。 詳細については、このトピックの後半の「[障害回復構成で使用するクォーラムに関する考慮事項](#quorum-considerations-for-disaster-recovery-configurations)」を参照してください。
 
-ノードの構成された投票を確認するには、 [Start-clusternode](https://technet.microsoft.com/library/hh847268.aspx) Windows PowerShell コマンドレットを使用して、クラスターノードの**nodeweight**共通プロパティを検索します。 0 の値は、ノードにクォーラム投票が構成されていないことを示しています。 1 の値は、ノードのクォーラム投票が割り当てられ、クラスターによって管理されていることを示しています。 ノードの投票の管理については、このトピックの後半の「[動的なクォーラム管理](#dynamic-quorum-management)」を参照してください。
+ノードの構成された投票を確認するには、 [Start-clusternode](https://technet.microsoft.com/library/hh847268.aspx) Windows PowerShell コマンドレットを使用して、クラスターノードの **nodeweight** 共通プロパティを検索します。 0 の値は、ノードにクォーラム投票が構成されていないことを示しています。 1 の値は、ノードのクォーラム投票が割り当てられ、クラスターによって管理されていることを示しています。 ノードの投票の管理については、このトピックの後半の「[動的なクォーラム管理](#dynamic-quorum-management)」を参照してください。
 
-すべてのクラスター ノードに対する投票の割り当ては、**クラスター クォーラムの検証**テストによって検証できます。
+すべてのクラスター ノードに対する投票の割り当ては、**クラスター クォーラムの検証** テストによって検証できます。
 
 #### <a name="additional-considerations-for-node-vote-assignment"></a>ノードの投票の割り当てに関するその他の考慮事項
 
@@ -81,9 +81,9 @@ Windows Server 2012 では、高度なクォーラム構成オプションとし
 
 動的なクォーラム管理では、クラスターは正常に動作している最後のクラスター ノードで動作できます。 クォーラムの過半数の要件を動的に調整することによって、クラスターは連続的なノードのシャットダウンに最後の 1 つのノードまで耐えることができます。
 
-クラスターによって割り当てられたノードの動的な投票は、 [Start-clusternode](/powershell/module/failoverclusters/get-clusternode?view=win10-ps) Windows PowerShell コマンドレットを使用して、クラスターノードの**dynamicweight**共通プロパティで検証できます。 0 の値は、ノードにクォーラム投票が割り当てられていないことを示しています。 1 の値は、ノードにクォーラム投票が割り当てられていることを示しています。
+クラスターによって割り当てられたノードの動的な投票は、 [Start-clusternode](/powershell/module/failoverclusters/get-clusternode) Windows PowerShell コマンドレットを使用して、クラスターノードの **dynamicweight** 共通プロパティで検証できます。 0 の値は、ノードにクォーラム投票が割り当てられていないことを示しています。 1 の値は、ノードにクォーラム投票が割り当てられていることを示しています。
 
-すべてのクラスター ノードに対する投票の割り当ては、**クラスター クォーラムの検証**テストによって検証できます。
+すべてのクラスター ノードに対する投票の割り当ては、**クラスター クォーラムの検証** テストによって検証できます。
 
 #### <a name="additional-considerations-for-dynamic-quorum-management"></a>動的なクォーラム管理に関するその他の考慮事項
 
@@ -94,9 +94,9 @@ Windows Server 2012 では、高度なクォーラム構成オプションとし
 
 ## <a name="general-recommendations-for-quorum-configuration"></a>クォーラム構成に関する一般的な推奨事項
 
-クラスター ソフトウェアは、構成されているノードの数と共有記憶域の可用性に基づいて、新しいクラスターのクォーラムを自動的に構成します。 これは通常、そのクラスターに最適なクォーラム構成です。 しかし、クラスターが作成されたら、そのクラスターを運用環境に展開する前にクォーラム構成を確認することをお勧めします。 詳細なクラスタークォーラム構成を表示するには、構成の検証ウィザードまたは [テストクラスター](/powershell/module/failoverclusters/test-cluster?view=win10-ps) の Windows PowerShell コマンドレットを使用して、 **クォーラム構成の検証** テストを実行します。 フェールオーバークラスターマネージャーでは、基本クォーラム構成は選択したクラスターの概要情報に表示されます。または、 [Get clusterquorum](/powershell/module/failoverclusters/get-clusterquorum?view=win10-ps) Windows PowerShell コマンドレットを実行したときにが返すクォーラムリソースに関する情報を確認することもできます。
+クラスター ソフトウェアは、構成されているノードの数と共有記憶域の可用性に基づいて、新しいクラスターのクォーラムを自動的に構成します。 これは通常、そのクラスターに最適なクォーラム構成です。 しかし、クラスターが作成されたら、そのクラスターを運用環境に展開する前にクォーラム構成を確認することをお勧めします。 詳細なクラスタークォーラム構成を表示するには、構成の検証ウィザードまたは [テストクラスター](/powershell/module/failoverclusters/test-cluster) の Windows PowerShell コマンドレットを使用して、 **クォーラム構成の検証** テストを実行します。 フェールオーバークラスターマネージャーでは、基本クォーラム構成は選択したクラスターの概要情報に表示されます。または、 [Get clusterquorum](/powershell/module/failoverclusters/get-clusterquorum) Windows PowerShell コマンドレットを実行したときにが返すクォーラムリソースに関する情報を確認することもできます。
 
-**クォーラム構成の検証**テストを実行すると、クォーラム構成がクラスターに最適であることをいつでも検証できます。 テストの出力は、クォーラム構成の変更が推奨されるかどうか、および設定が最適かどうかを示します。 変更が推奨される場合は、クラスター クォーラム構成ウィザードを使用して推奨設定を適用できます。
+**クォーラム構成の検証** テストを実行すると、クォーラム構成がクラスターに最適であることをいつでも検証できます。 テストの出力は、クォーラム構成の変更が推奨されるかどうか、および設定が最適かどうかを示します。 変更が推奨される場合は、クラスター クォーラム構成ウィザードを使用して推奨設定を適用できます。
 
 クラスターを運用環境に展開したら、変更がクラスターに適していると判断した場合を除いて、クォーラム構成を変更しないでください。 クォーラム構成の変更を検討する必要があるのは、次のような場合です。
 
@@ -128,7 +128,7 @@ Windows Server 2012 では、高度なクォーラム構成オプションとし
 3. **[クォーラム構成オプションの選択]** ページで、3 つの構成オプションの 1 つを選択し、そのオプションの手順を完了します。 クォーラム設定を構成する前に、選択内容を確認できます。 オプションの詳細については、このトピックの「 [クォーラム](#understanding-quorum)について」を参照してください。
 
     - クラスターが現在のクラスター構成に最適なクォーラム設定を自動的にリセットできるようにするには、[ **既定のクォーラム構成を使用する** ] を選択し、ウィザードを完了します。
-    - クォーラム監視を追加または変更するには、[ **クォーラム監視を選択**する] を選択し、次の手順を実行します。 クォーラム監視に関する情報と考慮事項については、このトピックの前半の「[監視の構成](#witness-configuration)」を参照してください。
+    - クォーラム監視を追加または変更するには、[ **クォーラム監視を選択** する] を選択し、次の手順を実行します。 クォーラム監視に関する情報と考慮事項については、このトピックの前半の「[監視の構成](#witness-configuration)」を参照してください。
 
       1. **[クォーラム監視の選択]** ページで、ディスク監視またはファイル共有監視を構成するオプションを選択します。 ウィザードには、対象のクラスターに対して推奨される監視選択オプションが示されます。
 
@@ -165,14 +165,14 @@ Windows Server 2012 では、高度なクォーラム構成オプションとし
 
 4. **[次へ]** を選択します。 表示される確認ページで選択内容を確認し、[ **次へ**] を選択します。
 
-ウィザードを実行して [ **概要** ] ページが表示されたら、[ **レポートの表示**] を選択して、ウィザードで実行したタスクのレポートを表示します。 最新のレポートは、 **quorumconfiguration.mht という**という名前の<em>systemroot</em>** \\ Cluster \\ Reports**フォルダーに残ります。
+ウィザードを実行して [ **概要** ] ページが表示されたら、[ **レポートの表示**] を選択して、ウィザードで実行したタスクのレポートを表示します。 最新のレポートは、 **quorumconfiguration.mht という** という名前の <em>systemroot</em>**\\ Cluster \\ Reports** フォルダーに残ります。
 
 > [!NOTE]
 > クラスター クォーラムを構成したら、**クォーラム構成の検証** テストを実行して、更新されたクォーラム設定を検証することをお勧めします。
 
 ### <a name="windows-powershell-equivalent-commands"></a>Windows PowerShell の同等のコマンド
 
-次の例は、 [Set ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum?view=win10-ps) コマンドレットとその他の Windows PowerShell コマンドレットを使用して、クラスタークォーラムを構成する方法を示しています。
+次の例は、 [Set ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum) コマンドレットとその他の Windows PowerShell コマンドレットを使用して、クラスタークォーラムを構成する方法を示しています。
 
 次の例では、クラスター *CONTOSO-FC1* のクォーラム構成を、クォーラム監視がない単純なノード マジョリティ構成に変更します。
 
@@ -186,7 +186,7 @@ Set-ClusterQuorum –Cluster CONTOSO-FC1 -NodeMajority
 Set-ClusterQuorum -NodeAndDiskMajority "Cluster Disk 2"
 ```
 
-次の例では、ローカル クラスターのクォーラム構成をノード マジョリティと監視構成に変更します。 * \\ \\ CONTOSO-FS \\ cluster-fsw*という名前のファイル共有リソースは、ファイル共有監視として構成されます。
+次の例では、ローカル クラスターのクォーラム構成をノード マジョリティと監視構成に変更します。 *\\ \\ CONTOSO-FS \\ cluster-fsw* という名前のファイル共有リソースは、ファイル共有監視として構成されます。
 
 ```PowerShell
 Set-ClusterQuorum -NodeAndFileShareMajority "\\fileserver\fsw"
@@ -288,7 +288,7 @@ Net Start ClusSvc /PQ
 
 次の表に、この構成に関する考慮事項と推奨事項をまとめます。
 
-| 項目  | 説明  |
+| アイテム  | 説明  |
 | ---------| ---------|
 | 各サイトのノード数     | 同数にする必要があります。       |
 | ノードの投票の割り当て     |  すべてのノードが等しく重要なので、ノードの投票は削除してはなりません。       |
@@ -306,7 +306,7 @@ Net Start ClusSvc /PQ
 
 次の表に、この構成に関する考慮事項と推奨事項をまとめます。
 
-| 項目   |説明  |
+| アイテム   |説明  |
 | ---------| ---------|
 | 各サイトのノード数     |  <ul><li> ノードの投票をプライマリ サイト **SiteA** のノードから削除してはなりません。</li><li>ノードの投票をバックアップ サイト **SiteB** のノードから削除する必要があります。</li><li>**SiteA** で長期の停止が発生した場合、投票を **SiteB** のノードに割り当てて、回復の一部としてこのサイトでクォーラム マジョリティを有効にする必要があります。</li>       |
 | 動的なクォーラム管理     |  有効にする必要があります。       |
@@ -321,5 +321,5 @@ Net Start ClusSvc /PQ
 ## <a name="more-information"></a>説明
 
 * [フェールオーバー クラスタリング](./failover-clustering-overview.md)
-* [フェールオーバー クラスター Windows PowerShell コマンドレット](/powershell/module/failoverclusters/?view=win10-ps)
+* [フェールオーバー クラスター Windows PowerShell コマンドレット](/powershell/module/failoverclusters/)
 * [クラスターとプールのクォーラムについて](../storage/storage-spaces/understand-quorum.md)

@@ -6,12 +6,12 @@ ms.topic: get-started-article
 ms.assetid: 68c35b64-4d24-42be-90c9-184f2b5f19be
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 54d3ecbf752ce806a14d16088476bbb270e28271
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 9b8d1470b3e146625d794697231291c1f8156402
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989133"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866191"
 ---
 # <a name="remote-direct-memory-access-rdma-and-switch-embedded-teaming-set"></a>リモートダイレクトメモリアクセス \( RDMA \) およびスイッチ埋め込みチーミング \( セット\)
 
@@ -253,7 +253,7 @@ NIC チーミングとセットのもう 1 つ重要な違いは、NIC チーミ
 
 ### <a name="load-balancing-mode"></a>負荷分散モード
 
-オプション セットをチームの負荷分散の分散モードは **HYPER-V ポート** と **動的**します。
+オプション セットをチームの負荷分散の分散モードは **HYPER-V ポート** と **動的** します。
 
 **Hyper-v ポート**
 
@@ -340,19 +340,19 @@ VMQ 設定の一部では、RSS のキューの設定に見えますが、どの
 
 System Center Virtual Machine Manager VMM を使用してセットチームを管理することをお勧めし \( \) ますが、Windows PowerShell を使用して設定を管理することもできます。 次のセクションでは、Windows PowerShell コマンド セットの管理に使用できるを提供します。
 
-VMM を使用してセットチームを作成する方法の詳細については、「System Center VMM ライブラリ」トピックの「[論理スイッチの](/system-center/vmm/network-switch)セットアップ」セクションを参照してください。
+VMM を使用してセットチームを作成する方法の詳細については、「System Center VMM ライブラリ」トピックの「 [論理スイッチの](/system-center/vmm/network-switch)セットアップ」セクションを参照してください。
 
 ### <a name="create-a-set-team"></a>セットチームを作成する
 
 **新しい-VMSwitch** Windows PowerShell コマンドを使用して、Hyper-v 仮想スイッチを作成するときに、セットチームを作成する必要があります。
 
-Hyper-v 仮想スイッチを作成する場合は、コマンド構文に新しい**EnableEmbeddedTeaming**パラメーターを含める必要があります。 次の例では、埋め込みチーミングと2つの初期チームメンバーを含む**Teamedvswitch**という名前の hyper-v スイッチが作成されています。
+Hyper-v 仮想スイッチを作成する場合は、コマンド構文に新しい **EnableEmbeddedTeaming** パラメーターを含める必要があります。 次の例では、埋め込みチーミングと2つの初期チームメンバーを含む  **Teamedvswitch** という名前の hyper-v スイッチが作成されています。
 
 ```
 New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 2" -EnableEmbeddedTeaming $true
 ```
 
-**EnableEmbeddedTeaming**パラメーターは、 **NetAdapterName**の引数が1つの Nic ではなく nic の配列である場合に、Windows PowerShell によって想定されます。 その結果、次のように前のコマンドを変更する可能性があります。
+**EnableEmbeddedTeaming** パラメーターは、 **NetAdapterName** の引数が1つの Nic ではなく nic の配列である場合に、Windows PowerShell によって想定されます。 その結果、次のように前のコマンドを変更する可能性があります。
 
 ```
 New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 2"
@@ -366,7 +366,7 @@ New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1" -EnableEmbeddedTeaming 
 
 ### <a name="adding-or-removing-a-set-team-member"></a>追加または SET チーム メンバーを削除します。
 
-**VMSwitchTeam**コマンドには、 **NetAdapterName**オプションが含まれています。 セットチーム内のチームメンバーを変更するには、 **NetAdapterName**オプションの後にチームメンバーの必要な一覧を入力します。 **Teamedvswitch**が最初に nic 1 と nic 2 で作成された場合、次のコマンド例では、set チームメンバー "nic 2" を削除し、新しいセットチームメンバー "nic 3" を追加します。
+**VMSwitchTeam** コマンドには、 **NetAdapterName** オプションが含まれています。 セットチーム内のチームメンバーを変更するには、 **NetAdapterName** オプションの後にチームメンバーの必要な一覧を入力します。 **Teamedvswitch** が最初に nic 1 と nic 2 で作成された場合、次のコマンド例では、set チームメンバー "nic 2" を削除し、新しいセットチームメンバー "nic 3" を追加します。
 
 ```
 Set-VMSwitchTeam -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 3"
@@ -374,7 +374,7 @@ Set-VMSwitchTeam -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 3"
 
 ### <a name="removing-a-set-team"></a>セットのチームを削除します。
 
-セットチームを削除できるのは、セットチームを含む Hyper-v 仮想スイッチを削除することだけです。  Hyper-v 仮想スイッチを削除する方法については、「 [remove-VMSwitch](/powershell/module/hyper-v/remove-vmswitch?view=win10-ps) 」を参照してください。 次の例では、 **Setvswitch**という名前の仮想スイッチを削除します。
+セットチームを削除できるのは、セットチームを含む Hyper-v 仮想スイッチを削除することだけです。  Hyper-v 仮想スイッチを削除する方法については、「 [remove-VMSwitch](/powershell/module/hyper-v/remove-vmswitch) 」を参照してください。 次の例では、 **Setvswitch** という名前の仮想スイッチを削除します。
 
 ```
 Remove-VMSwitch "SETvSwitch"
@@ -382,9 +382,9 @@ Remove-VMSwitch "SETvSwitch"
 
 ### <a name="changing-the-load-distribution-algorithm-for-a-set-team"></a>セット チームの負荷分散アルゴリズムを変更します。
 
-**VMSwitchTeam**コマンドレットには、 **LoadBalancingAlgorithm**オプションがあります。 このオプションは、 **Hypervport**または**Dynamic**の2つの値のいずれかを使用します。 を設定またはスイッチに組み込まれたチームの負荷分散アルゴリズムを変更するには、このオプションを使用します。
+**VMSwitchTeam** コマンドレットには、 **LoadBalancingAlgorithm** オプションがあります。 このオプションは、 **Hypervport** または **Dynamic** の2つの値のいずれかを使用します。 を設定またはスイッチに組み込まれたチームの負荷分散アルゴリズムを変更するには、このオプションを使用します。
 
-次の例では、 **Teamedvswitch**という名前の VMSwitchTeam は、**動的**負荷分散アルゴリズムを使用しています。
+次の例では、 **Teamedvswitch** という名前の VMSwitchTeam は、 **動的** 負荷分散アルゴリズムを使用しています。
 ```
 Set-VMSwitchTeam -Name TeamedvSwitch -LoadBalancingAlgorithm Dynamic
 ```

@@ -6,12 +6,12 @@ ms.topic: get-started-article
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 838ce8dfc11cb08b20349f121405991fcbe00270
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: f266ac90478bb25a540ad3a3b88a5c096fe2de87
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991344"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866481"
 ---
 # <a name="network-controller-high-availability"></a>ネットワーク コントローラーの高可用性
 
@@ -30,7 +30,7 @@ ms.locfileid: "87991344"
 
 ## <a name="network-controller-as-a-service-fabric-application"></a>Service Fabric アプリケーションとしてのネットワークコントローラー
 
-高可用性とスケーラビリティを実現するために、ネットワークコントローラーは Service Fabric に依存しています。 Service Fabric には、スケーラブルで信頼性が高く、管理が容易なアプリケーションを構築するための分散システムプラットフォームが用意されています。
+高可用性とスケーラビリティを実現するため、ネットワーク コントローラーは Service Fabric に依存しています。 Service Fabric には、スケーラブルで信頼性が高く、管理が容易なアプリケーションを構築するための分散システムプラットフォームが用意されています。
 
 プラットフォームとして Service Fabric には、スケーラブルな分散システムの構築に必要な機能が用意されています。 複数のオペレーティングシステムインスタンスでのサービスホスティング、インスタンス間での状態情報の同期、リーダーの選定すること、障害検出、負荷分散などを提供します。
 
@@ -60,7 +60,7 @@ ms.locfileid: "87991344"
 
 ### <a name="persistent-storage"></a>永続ストレージ
 
-ネットワークコントローラーアプリケーションの構成と状態には、大規模な記憶域が必要です。 また、計画された停止や計画外の停止でもアプリケーションを使用できる必要があります。 このため、Service Fabric には、 \( \) レプリケートされたトランザクションストアおよび永続化ストアである KVS キー値ストアが用意されています。
+ネットワークコントローラーアプリケーションの構成と状態には、大規模な記憶域が必要です。 また、計画された停止や計画外の停止でもアプリケーションを使用できる必要があります。 このため、Service Fabric には、 \( \) レプリケートされたトランザクションおよび永続化ストアである、Key-Value ストアが用意されています。
 
 ### <a name="modularity"></a>モジュール性
 
@@ -78,10 +78,10 @@ Service Fabric のモジュール化では、サービスモデルスキーマ�
 
 ## <a name="network-controller-deployment-options"></a>ネットワークコントローラーの展開オプション
 
-System Center Virtual Machine Manager vmm を使用してネットワークコントローラーを展開する方法に \( \) ついては、「 [vmm ファブリックでの SDN ネットワークコントローラーのセットアップ](/system-center/vmm/sdn-controller?view=sc-vmm-2019)」を参照してください。
+System Center Virtual Machine Manager vmm を使用してネットワークコントローラーを展開する方法に \( \) ついては、「 [vmm ファブリックでの SDN ネットワークコントローラーのセットアップ](/system-center/vmm/sdn-controller)」を参照してください。
 
-スクリプトを使用してネットワークコントローラーを展開する方法については、「[スクリプトを使用したソフトウェア定義ネットワークインフラストラクチャの展開](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)」を参照してください。
+スクリプトを使用してネットワークコントローラーを展開する方法については、「 [スクリプトを使用したソフトウェア定義ネットワークインフラストラクチャの展開](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)」を参照してください。
 
 Windows PowerShell を使用してネットワークコントローラーを展開するには、「 [Windows powershell を使用したネットワークコントローラーの展開](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)」を参照してください。
 
-ネットワークコントローラーの詳細については、「[ネットワークコントローラー](Network-Controller.md)」を参照してください。
+ネットワークコントローラーの詳細については、「 [ネットワークコントローラー](Network-Controller.md)」を参照してください。

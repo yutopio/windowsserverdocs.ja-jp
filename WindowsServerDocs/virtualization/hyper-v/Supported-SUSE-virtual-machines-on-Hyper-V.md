@@ -6,12 +6,12 @@ ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 04/07/2020
-ms.openlocfilehash: 92dd65669a537d619d9104378adae26c91878dca
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: cae0a1218badc9d3110a14c81f95ffa2a944702b
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746737"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866390"
 ---
 # <a name="supported-suse-virtual-machines-on-hyper-v"></a>HYPER-V でサポートされている SUSE 仮想マシン
 
@@ -23,7 +23,7 @@ SUSE では、HYPER-V 用の組み込みの SUSE Linux Enterprise Service ドラ
 
 ## <a name="table-legend"></a>表の凡例
 
-* **組み込み** の LIS は、この Linux ディストリビューションの一部として含まれています。Microsoft 提供の LIS ダウンロードパッケージは、この配布では機能しないため、インストールしないでください。組み込み LIS のカーネルモジュールのバージョン番号 (たとえば、 **lsmod**によって示されている) は、Microsoft 提供の lis ダウンロードパッケージのバージョン番号とは異なります。 組み込みの LIS の項目が古いことに不一致が示されません。
+* **組み込み** の LIS は、この Linux ディストリビューションの一部として含まれています。Microsoft 提供の LIS ダウンロードパッケージは、この配布では機能しないため、インストールしないでください。組み込み LIS のカーネルモジュールのバージョン番号 (たとえば、 **lsmod** によって示されている) は、Microsoft 提供の lis ダウンロードパッケージのバージョン番号とは異なります。 組み込みの LIS の項目が古いことに不一致が示されません。
 
 * & #10004 です。の機能使用
 
@@ -36,7 +36,7 @@ SLES12 + は64ビットのみです。
 |**可用性**||組み込み|組み込み|組み込み|組み込み|組み込み|組み込み|組み込み|
 |**[コア](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Windows Server 2016 の正確な時刻|2019、2016|&#10004;|&#10004;|&#10004;|&#10004;||||
-|**[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|||||||||
+|**[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|||||||||
 |Jumbo Frame|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |VLAN のタグ付けとトランキング|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |ライブ マイグレーション|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -50,13 +50,13 @@ SLES12 + は64ビットのみです。
 |仮想マシンのライブバックアップ|2019、2016、2012 R2|&#10004; メモ2、3、8|&#10004;メモ2、3、8|&#10004; メモ2、3、8|&#10004; メモ2、3、8|&#10004; メモ2、3、8|&#10004; メモ2、3、8|&#10004; メモ2、3、8|
 |トリムのサポート|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
 |SCSI WWN|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||||
-|**[メモリ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|||||||||
+|**[[メモリ]](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|||||||||
 |PAE カーネルサポート|2019、2016、2012 R2|該当なし|該当なし|該当なし|該当なし|該当なし|&#10004;|&#10004;|
 |MMIO ギャップの構成|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |動的メモリでホット アド|2019、2016、2012 R2|&#10004; メモ6|&#10004;メモ6|&#10004; メモ6|&#10004; メモ6|&#10004; メモ6|&#10004; メモ4、5、6|&#10004; メモ4、5、6|
 |動的メモリ - バルーニング|2019、2016、2012 R2|&#10004; メモ6|&#10004; メモ6|&#10004; メモ6|&#10004; メモ6|&#10004; メモ6|&#10004; メモ4、5、6|&#10004; メモ4、5、6|
 |ランタイムのメモリのサイズ変更|2019、2016|&#10004; メモ6|&#10004; メモ6|&#10004; メモ6|&#10004; メモ6||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||||
+|**[ビデオ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||||
 |Hyper-v 固有のビデオデバイス|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[その他](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|||||||||
 |キーと値のペア|2019、2016、2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|& #10004 です。注 7|& #10004 です。注 7|
@@ -100,7 +100,7 @@ SLES12 + は64ビットのみです。
 
 ## <a name="see-also"></a>関連項目
 
-* [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+* [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 * [CentOS をサポートし、HYPER-V 上の Red Hat Enterprise Linux 仮想マシン](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

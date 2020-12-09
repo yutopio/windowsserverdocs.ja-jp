@@ -6,12 +6,12 @@ ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 10/11/2016
-ms.openlocfilehash: 7b756127e7396ec96e3f8e6901aaabef1d5664aa
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 22f9890fd1a3a90fcbab59a9ed1de8481e117e75
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746027"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866161"
 ---
 # <a name="configure-virtual-local-area-networks-for-hyper-v"></a>Hyper-v の仮想ローカルエリアネットワークを構成する
 仮想ローカルエリアネットワーク \( vlan \) は、ネットワークトラフィックを分離するための1つの方法を提供します。 Vlan は、802.1 q をサポートするスイッチとルーターで構成されます。 複数の Vlan を構成し、それらの間で通信が行われるようにするには、ネットワークデバイスでそのような構成を行う必要があります。
@@ -39,7 +39,7 @@ Vlan を構成するには、次のものが必要です。
 
 1. Hyper-v \- マネージャーを開きます。
 
-2. 結果ウィンドウの [ **Virtual Machines**で、適切な仮想マシンを選択し、[ **設定**] を右クリックします。
+2. 結果ウィンドウの [ **Virtual Machines** で、適切な仮想マシンを選択し、[ **設定**] を右クリックします。
 
 3. [ **ハードウェア**] で、VLAN が設定されている仮想スイッチを選択します。
 
@@ -49,7 +49,7 @@ Vlan を構成するには、次のものが必要です。
 
 - より多くの仮想ネットワークアダプターを適切な仮想スイッチに接続し、VLAN Id を割り当てます。 IP アドレスが正しく構成されていること、および VLAN 経由でルーティングするトラフィックにも正しい IP アドレスが使用されていることを確認してください。
 
-- [Set \- set-vmnetworkadaptervlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan?view=win10-ps)コマンドレットを使用して、仮想ネットワークアダプターをトランクモードで構成します。
+- [Set \- set-vmnetworkadaptervlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan)コマンドレットを使用して、仮想ネットワークアダプターをトランクモードで構成します。
 
 ## <a name="see-also"></a>関連項目
 

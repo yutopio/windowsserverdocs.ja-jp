@@ -6,12 +6,12 @@ ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 10/04/2016
-ms.openlocfilehash: a0c89dc706e0403816317d7664325bf82f261705
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 1bb5c6492896cfdaaf9446502e0eee36ef7dd46a
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746037"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866141"
 ---
 # <a name="create-a-virtual-switch-for-hyper-v-virtual-machines"></a>HYPER-V 仮想マシン用の仮想スイッチを作成します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "90746037"
     |-------------------|---------------|
     |外部|外部ネットワーク上のサーバーおよびクライアントと通信するために、仮想マシンに物理ネットワークへのアクセスを提供します。 同じ Hyper-v サーバー上の仮想マシンが相互に通信できるようにします。|
     |内部|同じ Hyper-v サーバー上の仮想マシン間、および仮想マシンと管理ホストオペレーティングシステムの間の通信を許可します。|
-    |Private|では、同じ Hyper-v サーバー上の仮想マシン間の通信のみが許可されます。 プライベートネットワークは、Hyper-v サーバー上のすべての外部ネットワークトラフィックから分離されます。 この種類のネットワークは、分離されたテストドメインのように、分離されたネットワーク環境を作成する必要がある場合に便利です。|
+    |プライベート|では、同じ Hyper-v サーバー上の仮想マシン間の通信のみが許可されます。 プライベートネットワークは、Hyper-v サーバー上のすべての外部ネットワークトラフィックから分離されます。 この種類のネットワークは、分離されたテストドメインのように、分離されたネットワーク環境を作成する必要がある場合に便利です。|
 
 4.  [ **仮想スイッチの作成**] を選択します。
 
@@ -45,12 +45,12 @@ ms.locfileid: "90746037"
 
     ![外部ネットワークオプションを示すスクリーンショット](../media/Hyper-V-NewVSwitch-ExternalOptions.png)
 
-    |設定の名前|説明|
+    |設定名|説明|
     |----------------|---------------|
     |管理オペレーティング システムにこのネットワーク アダプターの共有を許可する|仮想スイッチ、NIC、または NIC チームの使用を Hyper-v ホストが仮想マシンと共有できるようにする場合は、このオプションを選択します。 これを有効にすると、ホストは、サービスの品質 (QoS) 設定、セキュリティ設定、または Hyper-v 仮想スイッチのその他の機能など、仮想スイッチに構成した設定のいずれかを使用できます。|
     |シングル ルート I/O 仮想化 (SR-IOV) を有効にする|このオプションは、仮想マシンのトラフィックが仮想マシンのスイッチをバイパスして物理 NIC に直接移動できるようにする場合にのみ選択します。 詳細については、「ポスターネットワーク」の「ポスターの [I/o 仮想化](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn641211(v=ws.11)#Sec4) 」を参照してください。|
 
-7.  管理 Hyper-v ホストオペレーティングシステムまたは同じ仮想スイッチを共有する他の仮想マシンからネットワークトラフィックを分離する場合は、[ **管理オペレーティングシステムの仮想 LAN id を有効に**する] を選択します。 VLAN ID は任意の数に変更することも、既定のままにすることもできます。 これは、管理オペレーティングシステムがこの仮想スイッチ経由のすべてのネットワーク通信に使用する仮想 LAN 識別番号です。
+7.  管理 Hyper-v ホストオペレーティングシステムまたは同じ仮想スイッチを共有する他の仮想マシンからネットワークトラフィックを分離する場合は、[ **管理オペレーティングシステムの仮想 LAN id を有効に** する] を選択します。 VLAN ID は任意の数に変更することも、既定のままにすることもできます。 これは、管理オペレーティングシステムがこの仮想スイッチ経由のすべてのネットワーク通信に使用する仮想 LAN 識別番号です。
 
     ![VLAN ID オプションを示すスクリーンショット](../media/Hyper-V-NewSwitch-VLAN.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "90746037"
 
 ## <a name="create-a-virtual-switch-by-using-windows-powershell"></a>Windows PowerShell を使用して仮想スイッチを作成する
 
-1.  Windows デスクトップで [スタート] ボタンをクリックし、名前の一部を入力 **Windows PowerShell**します。
+1.  Windows デスクトップで [スタート] ボタンをクリックし、名前の一部を入力 **Windows PowerShell** します。
 
 2.  [Windows PowerShell] を右クリックし、[ **管理者として実行**] を選択します。
 
@@ -72,7 +72,7 @@ ms.locfileid: "90746037"
     Get-NetAdapter
     ```
 
-4.  [新しい-VMSwitch](/powershell/module/hyper-v/new-vmswitch?view=win10-ps)コマンドレットを使用して仮想スイッチを作成します。 たとえば、ExternalSwitch という名前の外部仮想スイッチを作成し、イーサネットネットワークアダプターを使用して、[ **管理オペレーティングシステムによるこのネットワークアダプターの共有を許可する** ] がオンになっている場合は、次のコマンドを実行します。
+4.  [新しい-VMSwitch](/powershell/module/hyper-v/new-vmswitch)コマンドレットを使用して仮想スイッチを作成します。 たとえば、ExternalSwitch という名前の外部仮想スイッチを作成し、イーサネットネットワークアダプターを使用して、[ **管理オペレーティングシステムによるこのネットワークアダプターの共有を許可する** ] がオンになっている場合は、次のコマンドを実行します。
 
     ```
     New-VMSwitch -name ExternalSwitch  -NetAdapterName Ethernet -AllowManagementOS $true
@@ -93,5 +93,5 @@ ms.locfileid: "90746037"
 Windows Server 2016 の強化されたまたは新しい仮想スイッチ機能をカバーする、より高度な Windows PowerShell スクリプトについては、「 [リモートダイレクトメモリアクセスとスイッチ埋め込みチーミング](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)」を参照してください。
 
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 [HYPER-V で仮想マシンを作成します。](Create-a-virtual-machine-in-Hyper-V.md)

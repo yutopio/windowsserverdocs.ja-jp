@@ -6,12 +6,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 04a295b8f6249521c809770af2c85fdce5dd54b4
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f562a39d6b89ab117f6c3d8b274c03e5810f58c3
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971219"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866211"
 ---
 # <a name="set-target-priority-to-override-referral-ordering"></a>ターゲット優先順位を設定して紹介順序を上書きする
 
@@ -36,7 +36,7 @@ ms.locfileid: "87971219"
     -   **[すべてのターゲットのうち最初のターゲット]**  このターゲットを使用できる場合は、ユーザーが常にこのターゲットを参照するよう指定します。
     -   **[すべてのターゲットのうち最後のターゲット]**  他のすべてのターゲットを使用できない場合にのみ、ユーザーがこのターゲットを参照するよう指定します。
     -   **[コストが等しいターゲットのうち最初のターゲット]**  コストが同じ他のターゲット (通常、同じサイトに含まれる他のターゲット) に優先して、ユーザーがこのターゲットを参照するよう指定します。
-    -   **コストが等しいターゲットのうち最後** 同じコストの他のターゲット (通常は同じサイト内の他のターゲット) が使用可能な場合に、ユーザーがこのターゲットを参照しないように指定します。
+    -   **コストが等しいターゲットのうち最後**  同じコストの他のターゲット (通常は同じサイト内の他のターゲット) が使用可能な場合に、ユーザーがこのターゲットを参照しないように指定します。
 
 ## <a name="to-set-target-priority-on-a-folder-target"></a>フォルダー ターゲットにターゲット優先順位を設定するには
 
@@ -48,10 +48,10 @@ ms.locfileid: "87971219"
 
 3.  **[詳細]** ウィンドウの **[フォルダー ターゲット]** タブで、優先順位を変更するフォルダー ターゲットを右クリックし、**[プロパティ]** をクリックします。
 
-4.  [**詳細設定**] タブで、[**紹介順序を上書き**する] をクリックし、必要な優先順位をクリックします。
+4.  [ **詳細設定** ] タブで、[ **紹介順序を上書き**  する] をクリックし、必要な優先順位をクリックします。
 
 > [!NOTE]
-> Windows PowerShell を使ってターゲット優先順位を設定するには、**ReferralPriorityClass** および **ReferralPriorityRank** パラメーターを指定して [Set-DfsnRootTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) および [Set-DfsnFolderTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) コマンドレットを使います。 これらのコマンドレットは、Windows Server 2012 で導入されました。
+> Windows PowerShell を使ってターゲット優先順位を設定するには、**ReferralPriorityClass** および **ReferralPriorityRank** パラメーターを指定して [Set-DfsnRootTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad) および [Set-DfsnFolderTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad) コマンドレットを使います。 これらのコマンドレットは、Windows Server 2012 で導入されました。
 
 ## <a name="additional-references"></a>その他の参照情報
 

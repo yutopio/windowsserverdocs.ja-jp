@@ -6,12 +6,12 @@ author: JasonGerend
 ms.author: jgerend
 ms.date: 07/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 4758cc67c1dd5dc77ecacf1a8229d59f27eac60e
-ms.sourcegitcommit: 00406560a665a24d5a2b01c68063afdba1c74715
+ms.openlocfilehash: 9f31780480f2887747f80550d69792cacd5fd61a
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91716872"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865921"
 ---
 # <a name="deploy-storage-spaces-on-a-stand-alone-server"></a>スタンドアロン サーバーに記憶域スペースを展開する
 
@@ -21,7 +21,7 @@ ms.locfileid: "91716872"
 
 記憶域スペースを作成するには、まず 1 つまたは複数の記憶域プールを作成する必要があります。 記憶域プールは、物理ディスクのコレクションです。 記憶域プールでは、記憶域の集約、柔軟な容量拡張、および代理管理が可能です。
 
-1 つの記憶域プールから 1 つまたは複数の仮想ディスクを作成できます。 このような仮想ディスクは*記憶域スペース*とも呼ばれます。 Windows オペレーティング システムからは、記憶域スペースはフォーマットされたボリュームを作成できる通常のディスクと見なされます。 ファイル サービスおよび記憶域サービスのユーザー インターフェイスを使用して仮想ディスクを作成する場合、回復性の種類 (シンプル、ミラー、またはパリティ)、プロビジョニングの種類 (仮想または固定)、およびサイズを構成できます。 Windows PowerShell を使用すると、列数、インタリーブ値、プール内の使用する物理ディスクなど、追加のパラメーターを設定できます。 これらの追加パラメーターの詳細については、 [VirtualDisk](/powershell/module/storage/new-virtualdisk?view=win10-ps) および [Windows Server ストレージフォーラム](/answers/topics/windows-server-storage.html)を参照してください。
+1 つの記憶域プールから 1 つまたは複数の仮想ディスクを作成できます。 このような仮想ディスクは *記憶域スペース* とも呼ばれます。 Windows オペレーティング システムからは、記憶域スペースはフォーマットされたボリュームを作成できる通常のディスクと見なされます。 ファイル サービスおよび記憶域サービスのユーザー インターフェイスを使用して仮想ディスクを作成する場合、回復性の種類 (シンプル、ミラー、またはパリティ)、プロビジョニングの種類 (仮想または固定)、およびサイズを構成できます。 Windows PowerShell を使用すると、列数、インタリーブ値、プール内の使用する物理ディスクなど、追加のパラメーターを設定できます。 これらの追加パラメーターの詳細については、 [VirtualDisk](/powershell/module/storage/new-virtualdisk) および [Windows Server ストレージフォーラム](/answers/topics/windows-server-storage.html)を参照してください。
 
 > [!NOTE]
 > 記憶域スペースを使用して Windows オペレーティングシステムをホストすることはできません。
@@ -49,7 +49,7 @@ ms.locfileid: "91716872"
 |ディスク バスの種類|- SAS (シリアル接続 SCSI)<br>- SATA (シリアル アドバンスト テクノロジ アタッチメント)<br>- iSCSI およびファイバー チャネル コントローラー。 |USB ドライブを使用することもできます。 ただし、サーバー環境で USB ドライブを使用するのは最適ではありません。<br>記憶域スペースは、上位に作成された仮想ディスクが回復不能 (任意の数の列を含む) である限り、iSCSI およびファイバーチャネル (FC) コントローラーでサポートされます。<br>|
 |ディスク構成|-物理ディスクは 4 GB 以上である必要があります。<br>-ディスクは空白で、フォーマットされていない必要があります。 ボリュームは作成しないでください。||
 |HBA に関する考慮事項|- RAID 機能をサポートしていない単純なホスト バス アダプター (HBA) をお勧めします<br>- RAID 対応の場合、すべての RAID 機能を無効にして、HBA を非 RAID モードにする必要があります<br>- アダプターは、物理ディスクの抽象化、データのキャッシュ、または接続されているデバイスの不明瞭化を行うことはできません。 これには、接続されている JBOD (just-a-bunch-of-disks) デバイスが提供するエンクロージャー サービスも含まれます。 |記憶域スペースは、すべての RAID 機能を完全に無効にした場合にのみ、HBA と互換性があります。|
-|JBOD エンクロージャ|-JBOD エンクロージャは省略可能です<br>-Windows Server カタログに記載されている記憶域スペース認定エンクロージャを使用することをお勧めします。<br>-JBOD エンクロージャを使用している場合は、完全な機能を確保するために、エンクロージャが記憶域スペースをサポートしていることを記憶域のベンダーに確認してください。<br>-JBOD エンクロージャがエンクロージャとスロットの識別をサポートしているかどうかを判断するには、次の Windows PowerShell コマンドレットを実行します。<br><br> Get-help \| ? {$_.BusType – eq "SAS"} \| fc <br> | **れる**フィールドと**SlotNumber**フィールドに値が含まれている場合、エンクロージャはこれらの機能をサポートします。|
+|JBOD エンクロージャ|-JBOD エンクロージャは省略可能です<br>-Windows Server カタログに記載されている記憶域スペース認定エンクロージャを使用することをお勧めします。<br>-JBOD エンクロージャを使用している場合は、完全な機能を確保するために、エンクロージャが記憶域スペースをサポートしていることを記憶域のベンダーに確認してください。<br>-JBOD エンクロージャがエンクロージャとスロットの識別をサポートしているかどうかを判断するには、次の Windows PowerShell コマンドレットを実行します。<br><br> Get-PhysicalDisk \| ますか? {$_.BusType – eq "SAS"} \| fc <br> | **れる** フィールドと **SlotNumber** フィールドに値が含まれている場合、エンクロージャはこれらの機能をサポートします。|
 
 物理ディスク数とスタンドアロン サーバーの展開で望ましい回復性の種類について計画する場合は、次のガイドラインに従ってください。
 
@@ -109,7 +109,7 @@ Get-StoragePool -IsPrimordial $true | Get-PhysicalDisk -CanPool $True
 New-StoragePool –FriendlyName StoragePool1 –StorageSubsystemFriendlyName "Windows Storage*" –PhysicalDisks (Get-PhysicalDisk –CanPool $True)
 ```
 
-次の例では、使用可能なディスクの4つを使用する新しい記憶域プール *StoragePool1*を作成します。
+次の例では、使用可能なディスクの4つを使用する新しい記憶域プール *StoragePool1* を作成します。
 
 ```PowerShell
 New-StoragePool –FriendlyName StoragePool1 –StorageSubsystemFriendlyName "Windows Storage*" –PhysicalDisks (Get-PhysicalDisk PhysicalDisk1, PhysicalDisk2, PhysicalDisk3, PhysicalDisk4)
@@ -186,25 +186,25 @@ Add-PhysicalDisk –StoragePoolFriendlyName StoragePool1 –PhysicalDisks $PDToA
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
-次の例では、 *StoragePool1*という名前の記憶域プールに*VirtualDisk1*という名前の 50 GB の仮想ディスクを作成します。
+次の例では、 *StoragePool1* という名前の記憶域プールに *VirtualDisk1* という名前の 50 GB の仮想ディスクを作成します。
 
 ```PowerShell
 New-VirtualDisk –StoragePoolFriendlyName StoragePool1 –FriendlyName VirtualDisk1 –Size (50GB)
 ```
 
-次の例では、 *StoragePool1*という名前の記憶域プールに*VirtualDisk1*という名前のミラー化された仮想ディスクを作成します。 ディスクは、記憶域プールの最大記憶域容量を使用します。
+次の例では、 *StoragePool1* という名前の記憶域プールに *VirtualDisk1* という名前のミラー化された仮想ディスクを作成します。 ディスクは、記憶域プールの最大記憶域容量を使用します。
 
 ```PowerShell
 New-VirtualDisk –StoragePoolFriendlyName StoragePool1 –FriendlyName VirtualDisk1 –ResiliencySettingName Mirror –UseMaximumSize
 ```
 
-次の例では、 *StoragePool1*という名前の記憶域プールに、 *VirtualDisk1*という名前の 50 GB の仮想ディスクを作成します。 このディスクは、仮想プロビジョニングの種類を使用します。
+次の例では、 *StoragePool1* という名前の記憶域プールに、 *VirtualDisk1* という名前の 50 GB の仮想ディスクを作成します。 このディスクは、仮想プロビジョニングの種類を使用します。
 
 ```PowerShell
 New-VirtualDisk –StoragePoolFriendlyName StoragePool1 –FriendlyName VirtualDisk1 –Size (50GB) –ProvisioningType Thin
 ```
 
-次の例では、 *StoragePool1*という名前の記憶域プールに*VirtualDisk1*という名前の仮想ディスクを作成します。 この仮想ディスクは 3 方向のミラーリングを使用し、20 GB の固定サイズです。
+次の例では、 *StoragePool1* という名前の記憶域プールに *VirtualDisk1* という名前の仮想ディスクを作成します。 この仮想ディスクは 3 方向のミラーリングを使用し、20 GB の固定サイズです。
 
 > [!NOTE]
 > このコマンドレットを実行するには、記憶域プールに少なくとも 5 つの物理ディスクが必要です (ホット スペアとして割り当てられているディスクは含まれません)。
@@ -264,6 +264,6 @@ Get-VirtualDisk –FriendlyName VirtualDisk1 | Get-Disk | Initialize-Disk –Pas
 ## <a name="additional-information"></a>関連情報
 
 - [記憶域スペース](overview.md)
-- [Storage Cmdlets in Windows PowerShell (Windows PowerShell の記憶域コマンドレット)](/powershell/module/storage/index?view=win10-ps)
+- [Storage Cmdlets in Windows PowerShell (Windows PowerShell の記憶域コマンドレット)](/powershell/module/storage/index)
 - [クラスター化された記憶域スペースを展開する](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11))
 - [Windows Server ストレージフォーラム](/answers/topics/windows-server-storage.html)

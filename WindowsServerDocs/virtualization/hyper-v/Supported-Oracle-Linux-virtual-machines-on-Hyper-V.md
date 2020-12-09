@@ -6,12 +6,12 @@ ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 06/05/2020
-ms.openlocfilehash: 7c1029f31abe70b09bddc83f928ee492be18ef2b
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: e4cf39e9c96a92df3962fa1a8fc2493c3022d898
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746397"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866411"
 ---
 # <a name="supported-oracle-linux-virtual-machines-on-hyper-v"></a>HYPER-V でサポートされている Oracle Linux 仮想マシン
 
@@ -45,7 +45,7 @@ ms.locfileid: "90746397"
 |       **可用性**        |   |
 |       **[コア](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019、2016、2012 R2 | &#10004; |
 |       Windows Server 2016 の正確な時刻       | 2019、2016 | &#10004; |
-|       **[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |
+|       **[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |
 |       Jumbo Frame        | 2019、2016、2012 R2 | &#10004; |
 |       VLAN のタグ付けとトランキング       | 2019、2016、2012 R2 | &#10004;  |
 |       ライブ マイグレーション      | 2019、2016、2012 R2 | &#10004; |
@@ -59,13 +59,13 @@ ms.locfileid: "90746397"
 |       仮想マシンのライブバックアップ  | 2019、2016、2012 R2 | & #10004 です。注 5 |
 |       トリムのサポート | 2019、2016、2012 R2 | &#10004;  |
 |       SCSI WWN | 2019、2016、2012 R2 | &#10004;  |
-|       **[メモリ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** | |
+|       **[[メモリ]](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** | |
 |       PAE カーネルサポート  | 2019、2016、2012 R2 |  該当なし |
 |       MMIO ギャップの構成  | 2019、2016、2012 R2 | &#10004; |
 |       動的メモリでホット アド | 2019、2016、2012 R2  | & #10004 です。7, 8, 9 に注意してください。 |
 |       動的メモリ - バルーニング | 2019、2016、2012 R2 | & #10004 です。7, 8, 9 に注意してください。 |
 |       ランタイムのメモリのサイズ変更 | 2019、2016  | &#10004;  |
-|       **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | |
+|       **[ビデオ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | |
 |       Hyper-v 固有のビデオデバイス | 2019、2016、2012 R2 | &#10004;   |
 |       **[その他](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** | |
 |       キーと値のペア  | 2019、2016、2012 R2 | &#10004;   |
@@ -86,7 +86,7 @@ ms.locfileid: "90746397"
 <tr height="50px">
 <td width="20%" rowspan="2">
 
-機能
+特徴量
 </td>
 <td width="20%" rowspan="2">
 
@@ -220,7 +220,7 @@ Windows Server 2016 の正確な時刻
 <tr height="50px">
 <td width="20%">
 
- **[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**
+ **[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**
 </td>
 <td width="20%">
 
@@ -679,7 +679,7 @@ SCSI WWN
 <tr height="50px">
 <td width="20%">
 
-**[メモリ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**
+**[[メモリ]](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**
 </td>
 <td width="20%">
 
@@ -775,7 +775,7 @@ MMIO ギャップの構成
 <tr height="50px">
 <td width="20%">
 
-ホットアド動的メモリ
+動的メモリ Hot-Add
 </td>
 <td width="20%">
 
@@ -876,7 +876,7 @@ MMIO ギャップの構成
 <tr height="50px">
 <td width="20%">
 
-**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**
+**[ビデオ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**
 </td>
 <td width="20%">
 
@@ -1272,7 +1272,7 @@ UEFI を使用したブート
 |       **可用性**     |   | LIS 4.3  | 組み込み  |
 |       **[コア](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019、2016、2012 R2 | &#10004; | &#10004;
 |       Windows Server 2016 の正確な時刻       | 2019、2016 | |
-|       **[ネットワーキング](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |  |
+|       **[ネットワーク](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |  |
 |       Jumbo Frame        | 2019、2016、2012 R2 | &#10004; | &#10004;|
 |       VLAN のタグ付けとトランキング       | 2019、2016、2012 R2 | & #10004 です。注 1 | & #10004 です。注 1 |
 |       ライブ マイグレーション      | 2019、2016、2012 R2 | &#10004; | &#10004;|
@@ -1286,13 +1286,13 @@ UEFI を使用したブート
 |       仮想マシンのライブバックアップ  | 2019、2016、2012 R2 | & #10004 です。注 5 | & #10004 です。注 5|
 |       トリムのサポート | 2019、2016、2012 R2 | &#10004;  | &#10004; |
 |       SCSI WWN | 2019、2016、2012 R2 | &#10004;  | &#10004; |
-|       **[メモリ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** | |  |
+|       **[[メモリ]](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** | |  |
 |       PAE カーネルサポート  | 2019、2016、2012 R2 |  該当なし | 該当なし
 |       MMIO ギャップの構成  | 2019、2016、2012 R2 | &#10004; | &#10004;  |
 |       動的メモリでホット アド | 2019、2016、2012 R2  | & #10004 です。6、8、9 に注意してください。 | & #10004 です。6、8、9 に注意してください。 |
 |       動的メモリ - バルーニング | 2019、2016、2012 R2 | & #10004 です。6、8、9 に注意してください。 | & #10004 です。6、8、9 に注意してください。 |
 |       ランタイムのメモリのサイズ変更 | 2019、2016  |  | |
-|       **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | | |
+|       **[ビデオ](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | | |
 |       Hyper-v 固有のビデオデバイス | 2019、2016、2012 R2 | &#10004;   | &#10004; |
 |       **[その他](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** | | |
 |       キーと値のペア  | 2019、2016、2012 R2 | &#10004; メモ10、11   | &#10004; メモ10、11  |
@@ -1323,7 +1323,7 @@ UEFI を使用したブート
 
 7. ホット アド サポートは、この配布に既定では無効です。 ホット アド サポートを有効にするには、/etc/udev/rules.d/ 下にある udev ルールを次のように追加する必要があります。
 
-   1. ファイルを作成する **/etc/udev/rules.d/100-balloon.rules**します。 ファイルの他の目的の名前を使用することがあります。
+   1. ファイルを作成する **/etc/udev/rules.d/100-balloon.rules** します。 ファイルの他の目的の名前を使用することがあります。
 
    2. 次の内容をファイルに追加します。 `SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"`
 
@@ -1343,7 +1343,7 @@ UEFI を使用したブート
 
 11. Linux ソフトウェア更新プログラムがないは、キー/値ペア (KVP) インフラストラクチャが正しく機能しない可能性があります。 この機能の問題が確認された場合に、ソフトウェア更新プログラムを取得するディストリビューションのベンダーに問い合わせてください。
 
-12. Windows Server 2012 R2 第2世代仮想マシンでは、セキュアブートオプションが無効になっていない限り、既定でセキュアブートが有効になっており、一部の Linux 仮想マシンは起動しません。 **Hyper-v マネージャー**で仮想マシンの設定の [**ファームウェア**] セクションでセキュアブートを無効にするか、Powershell を使用して無効にすることができます。
+12. Windows Server 2012 R2 第2世代仮想マシンでは、セキュアブートオプションが無効になっていない限り、既定でセキュアブートが有効になっており、一部の Linux 仮想マシンは起動しません。 **Hyper-v マネージャー** で仮想マシンの設定の [**ファームウェア**] セクションでセキュアブートを無効にするか、Powershell を使用して無効にすることができます。
 
     ```Powershell
     Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
@@ -1354,7 +1354,7 @@ UEFI を使用したブート
 
 関連項目
 
-* [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+* [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 * [CentOS をサポートし、HYPER-V 上の Red Hat Enterprise Linux 仮想マシン](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

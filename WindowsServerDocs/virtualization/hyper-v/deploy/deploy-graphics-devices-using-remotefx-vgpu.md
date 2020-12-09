@@ -7,12 +7,12 @@ ms.author: rickman
 manager: stevelee
 ms.topic: article
 ms.date: 07/14/2020
-ms.openlocfilehash: 38d0ae70e0b6e70e87cc962ec5776d4ffb950fe5
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: b92e1fa6906298b3f78476d105f963d6f51f6b82
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995610"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866151"
 ---
 # <a name="deploy-graphics-devices-using-remotefx-vgpu"></a>RemoteFX vGPU を使ったグラフィックス デバイスの展開
 
@@ -51,8 +51,8 @@ Windows Server 2016 ホストで RemoteFX vGPU を構成するには、次のよ
 既定では、RemoteFX vGPU は使用可能なすべての Gpu を使用します。 RemoteFX vGPU が使用する Gpu を制限するには、次の手順を実行します。
 
 1. Hyper-V マネージャーで Hyper-V 設定に移動します。
-2. [Hyper-v の設定] で [**物理 gpu** ] を選択します。
-3. 使用しない GPU を選択し、[ **RemoteFX でこの gpu を使用**する] をオフにします。
+2. [Hyper-v の設定] で [ **物理 gpu** ] を選択します。
+3. 使用しない GPU を選択し、[ **RemoteFX でこの gpu を使用** する] をオフにします。
 
 ### <a name="configure-the-remotefx-vgpu-3d-adapter"></a>RemoteFX vGPU 3D アダプターを構成する
 
@@ -61,8 +61,8 @@ RemoteFX vGPU 3D グラフィックス アダプターを構成するには、Hy
 #### <a name="configure-remotefx-vgpu-with-hyper-v-manager"></a>Hyper-v マネージャーを使用して RemoteFX vGPU を構成する
 
 1. 現在実行中の場合は、VM を停止します。
-2. Hyper-v マネージャーを開き、[VM の**設定**] に移動して、[**ハードウェアの追加**] を選択します。
-3. [ **RemoteFX 3D グラフィックスアダプター**] を選択し、[**追加**] を選択します。
+2. Hyper-v マネージャーを開き、[VM の **設定**] に移動して、[ **ハードウェアの追加**] を選択します。
+3. [ **RemoteFX 3D グラフィックスアダプター**] を選択し、[ **追加**] を選択します。
 4. 最大モニター数、最大モニター解像度、および専用ビデオ メモリを設定するか、既定値のままにします。
 
    > [!NOTE]
@@ -75,10 +75,10 @@ RemoteFX vGPU 3D グラフィックス アダプターを構成するには、Hy
 
 次の PowerShell コマンドレットを使用して、アダプターを追加、確認、および構成します。
 
-- [VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/add-vmremotefx3dvideoadapter?view=win10-ps)
-- [VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/get-vmremotefx3dvideoadapter?view=win10-ps)
-- [VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/set-vmremotefx3dvideoadapter?view=win10-ps)
-- [取得-VMRemoteFXPhysicalVideoAdapter](/powershell/module/hyper-v/get-vmremotefxphysicalvideoadapter?view=win10-ps)
+- [VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/add-vmremotefx3dvideoadapter)
+- [VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/get-vmremotefx3dvideoadapter)
+- [VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/set-vmremotefx3dvideoadapter)
+- [取得-VMRemoteFXPhysicalVideoAdapter](/powershell/module/hyper-v/get-vmremotefxphysicalvideoadapter)
 
 ## <a name="monitor-performance"></a>パフォーマンスの監視
 
@@ -108,4 +108,4 @@ VGPU が有効なすべての仮想デスクトップには、ホストサーバ
 
 GPU のリソースが不足している場合、読み取りと書き込みの操作が完了するまでに時間がかかります。 管理者は、パフォーマンスカウンターを使用して、リソースを調整してユーザーのダウンタイムを回避するタイミングを知ることができます。
 
-RemoteFX vGPU 動作を監視するためのパフォーマンスカウンターの詳細については、「[リモートデスクトップでのグラフィックスパフォーマンスの問題の診断」](/azure/virtual-desktop/remotefx-graphics-performance-counters)を参照してください。
+RemoteFX vGPU 動作を監視するためのパフォーマンスカウンターの詳細については、「 [リモートデスクトップでのグラフィックスパフォーマンスの問題の診断」](/azure/virtual-desktop/remotefx-graphics-performance-counters)を参照してください。

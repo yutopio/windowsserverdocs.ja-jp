@@ -8,12 +8,12 @@ manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
 ms.date: 12/23/2019
-ms.openlocfilehash: 0b6b09960e6d5f344aa4873d4c821ebdfb6f6a30
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 4b3c32a6382e7538ccfb1fab22b4d2be9495b3b0
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994223"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866051"
 ---
 # <a name="performance-tuning-network-adapters"></a>ネットワーク アダプターのパフォーマンス チューニング
 
@@ -30,12 +30,12 @@ ms.locfileid: "87994223"
 
 以下のセクションでは、パフォーマンス チューニング オプションの一部について説明します。
 
-##  <a name="enabling-offload-features"></a><a name="bkmk_offload"></a>オフロード機能の有効化
+##  <a name="enabling-offload-features"></a><a name="bkmk_offload"></a> オフロード機能の有効化
 
 ネットワーク アダプターのオフロード機能の調整には、一般的にメリットがあります。 ただし、ネットワークアダプターは、高スループットでオフロード機能を処理するのに十分ではない可能性があります。
 
 > [!IMPORTANT]
-> オフロード機能の**IPsec タスクオフ**ロードまたは**TCP chimney オフロード**を使用しないでください。 これらのテクノロジは Windows Server 2016 で非推奨とされており、サーバーとネットワークのパフォーマンスに悪影響を及ぼす可能性があります。 さらに、これらのテクノロジはマイクロソフトによって今後サポートされない可能性があります。
+> オフロード機能の **IPsec タスクオフ** ロードまたは **TCP chimney オフロード** を使用しないでください。 これらのテクノロジは Windows Server 2016 で非推奨とされており、サーバーとネットワークのパフォーマンスに悪影響を及ぼす可能性があります。 さらに、これらのテクノロジはマイクロソフトによって今後サポートされない可能性があります。
 
 たとえば、ハードウェアリソースが限られているネットワークアダプターを考えてみます。
 この場合、セグメント化オフロード機能を有効にすると、アダプターの維持可能な最大スループットが低下する可能性があります。 ただし、スループットの低下が許容できる場合は、セグメント化オフロード機能を有効にすることをお勧めします。
@@ -43,7 +43,7 @@ ms.locfileid: "87994223"
 > [!NOTE]
 > 一部のネットワークアダプターでは、送信パスと受信パスに対して個別にオフロード機能を有効にする必要があります。
 
-##  <a name="enabling-receive-side-scaling-rss-for-web-servers"></a><a name="bkmk_rss_web"></a>Web サーバーの receive side scaling (RSS) の有効化
+##  <a name="enabling-receive-side-scaling-rss-for-web-servers"></a><a name="bkmk_rss_web"></a> Web サーバーの receive side scaling (RSS) の有効化
 
 サーバーの論理プロセッサよりもネットワーク アダプター数が少ない場合、RSS で Web のスケーラビリティとパフォーマンスを改善できます。 すべての web トラフィックが RSS 対応のネットワークアダプターを経由する場合、サーバーは異なる Cpu 間で同時に異なる接続からの受信 web 要求を処理できます。
 
@@ -54,11 +54,11 @@ ms.locfileid: "87994223"
 
 ### <a name="rss-profiles-and-rss-queues"></a>RSS プロファイルと RSS キュー
 
-既定の RSS 定義済みプロファイルは**Numastatic**です。これは、以前のバージョンの Windows で使用されていた既定とは異なります。 RSS プロファイルの使用を開始する前に、利用可能なプロファイルを確認して、どのような利点があるか、およびネットワーク環境とハードウェアにどのように適用されるかを理解してください。
+既定の RSS 定義済みプロファイルは **Numastatic** です。これは、以前のバージョンの Windows で使用されていた既定とは異なります。 RSS プロファイルの使用を開始する前に、利用可能なプロファイルを確認して、どのような利点があるか、およびネットワーク環境とハードウェアにどのように適用されるかを理解してください。
 
 たとえば、タスクマネージャーを開き、サーバー上の論理プロセッサを確認し、受信トラフィックに使用率が低いと思われる場合は、RSS キューの数を既定の2からネットワークアダプターでサポートされている最大の数に増やすことができます。 ネットワーク アダプターによっては、ドライバーの一部として RSS キュー数を変更するオプションがあります。
 
-##  <a name="increasing-network-adapter-resources"></a><a name="bkmk_resources"></a>ネットワークアダプターのリソースを増やす
+##  <a name="increasing-network-adapter-resources"></a><a name="bkmk_resources"></a> ネットワークアダプターのリソースを増やす
 
 受信バッファーや送信バッファーなどのリソースを手動で構成できるネットワークアダプターの場合は、割り当てられたリソースを増やす必要があります。
 
@@ -73,13 +73,13 @@ ms.locfileid: "87994223"
 
 CPU にバインドされたワークロードでは、割り込みのモデレーションを考慮する必要があります。 割り込みモデレーションを使用する場合は、割り込みと待機時間の短縮により、ホストの CPU 節約率と待機時間の間のトレードオフについて検討します。 ネットワークアダプターが割り込みのモデレーションを実行しないが、バッファーの合体を公開している場合は、結合されたバッファーの数を増やして、送信または受信ごとにより多くのバッファーを許可することで、パフォーマンスを向上させることができます。
 
-##  <a name="performance-tuning-for-low-latency-packet-processing"></a><a name="bkmk_low"></a>待機時間の短いパケット処理のパフォーマンスチューニング
+##  <a name="performance-tuning-for-low-latency-packet-processing"></a><a name="bkmk_low"></a> 待機時間の短いパケット処理のパフォーマンスチューニング
 
 多くのネットワーク アダプターには、オペレーティング システムが原因の待機時間を最適化するオプションがあります。 待機時間は、ネットワーク ドライバーが着信パケットを処理してから、ネットワーク ドライバーがパケットを返送するまでの経過時間です。 通常、この時間はマイクロ秒単位で測定されます。 比較のために、通常、長距離間のパケット送信の送信時間は、ミリ秒単位 (1 桁大きい単位) で測定されます。 この調整によって、パケットの送信にかかる時間は短縮されません。
 
 次に、精度がマイクロ秒のネットワークのパフォーマンス チューニングをいくつか提案します。
 
-- コンピューターの BIOS を、C 状態を無効にして **High Performance (高パフォーマンス)** に設定します。 この設定はシステムと BIOS によって変わる点に注意してください。一部のシステムは、オペレーティング システムが電源管理を制御している場合に、パフォーマンスが高くなります。 電源管理設定の確認と調整は、**設定**から行うことも、 **powercfg**コマンドを使用して行うこともできます。 詳細については、「 [Powercfg のコマンドラインオプション](/windows-hardware/design/device-experiences/powercfg-command-line-options)」を参照してください。
+- コンピューターの BIOS を、C 状態を無効にして **High Performance (高パフォーマンス)** に設定します。 この設定はシステムと BIOS によって変わる点に注意してください。一部のシステムは、オペレーティング システムが電源管理を制御している場合に、パフォーマンスが高くなります。 電源管理設定の確認と調整は、 **設定** から行うことも、 **powercfg** コマンドを使用して行うこともできます。 詳細については、「 [Powercfg Command-Line オプション](/windows-hardware/design/device-experiences/powercfg-command-line-options)」を参照してください。
 
 - オペレーティング システムの電源管理プロファイルを **高パフォーマンス** システムに設定します。
    > [!NOTE]
@@ -93,7 +93,7 @@ CPU にバインドされたワークロードでは、割り込みのモデレ�
 
 - パケットを処理するプログラム (ユーザー スレッド) に使用されているコアと CPU キャッシュを共有しているコア プロセッサで、ネットワーク アダプターの割り込みと DPC を処理します。 CPU アフィニティの調整を使用してプロセスを特定の論理プロセッサに誘導し、RSS の構成と組み合わせて、この処理を実行することができます。 割り込み、DPC、ユーザー モード スレッドに同じコアを使用すると、コアの使用に関する ISR、DPC、およびスレッドが競合することで負荷が増えるため、パフォーマンスが低下します。
 
-##  <a name="system-management-interrupts"></a><a name="bkmk_smi"></a>システム管理の割り込み
+##  <a name="system-management-interrupts"></a><a name="bkmk_smi"></a> システム管理の割り込み
 
 多くのハードウェアシステムでは、エラー修正コード (ECC) メモリエラーの報告、レガシ USB 互換性の維持、ファンの制御、BIOS 制御電源設定の管理など、さまざまなメンテナンス機能にシステム管理割り込み (SMI-S) を使用しています。
 
@@ -106,13 +106,13 @@ SMI-S はシステムの最高優先度の割り込みで、CPU を管理モー�
 > [!NOTE]
 > オペレーティングシステムは、論理プロセッサが特別なメンテナンスモードで実行されているため、SMIs を制御できません。これにより、オペレーティングシステムの介入ができなくなります。
 
-##  <a name="performance-tuning-tcp"></a><a name="bkmk_tcp"></a>TCP のパフォーマンスチューニング
+##  <a name="performance-tuning-tcp"></a><a name="bkmk_tcp"></a> TCP のパフォーマンスチューニング
 
  次の項目を使用して、TCP のパフォーマンスを調整できます。
 
-###  <a name="tcp-receive-window-autotuning"></a><a name="bkmk_tcp_params"></a>TCP 受信ウィンドウの自動チューニング
+###  <a name="tcp-receive-window-autotuning"></a><a name="bkmk_tcp_params"></a> TCP 受信ウィンドウの自動チューニング
 
-Windows Vista、Windows Server 2008、およびそれ以降のバージョンの Windows では、Windows ネットワークスタックは、tcp 受信ウィンドウの自動*チューニングレベル*という機能を使用して、tcp 受信ウィンドウサイズをネゴシエートします。 この機能は、tcp ハンドシェイク中に TCP 通信ごとに定義された受信ウィンドウサイズをネゴシエートできます。
+Windows Vista、Windows Server 2008、およびそれ以降のバージョンの Windows では、Windows ネットワークスタックは、tcp 受信ウィンドウの自動 *チューニングレベル* という機能を使用して、tcp 受信ウィンドウサイズをネゴシエートします。 この機能は、tcp ハンドシェイク中に TCP 通信ごとに定義された受信ウィンドウサイズをネゴシエートできます。
 
 以前のバージョンの Windows では、Windows ネットワークスタックは固定サイズの受信ウィンドウ (65535 バイト) を使用しています。これにより、接続の総スループットが制限されていました。 TCP 接続の達成可能なスループットの合計によって、ネットワークの使用シナリオが制限される可能性があります。 TCP 受信ウィンドウ自動調整では、これらのシナリオでネットワークを完全に使用できます。
 
@@ -134,17 +134,17 @@ Windows Vista、Windows Server 2008、およびそれ以降のバージョンの
 また、この機能では、ネットワークのパフォーマンスを向上させるために、他の機能もすべて使用できます。 これらの機能には、 [RFC 1323](https://tools.ietf.org/html/rfc1323)で定義されている残りの TCP オプションが含まれます。 これらの機能を使用することにより、Windows ベースのコンピューターでは、サイズの小さい TCP 受信ウィンドウサイズをネゴシエートできますが、構成によっては定義された値でスケーリングされます。 この動作により、ネットワークデバイスのサイズがより簡単に処理できるようになります。
 
 > [!NOTE]
-> [RFC 1323](https://tools.ietf.org/html/rfc1323)で定義されているように、ネットワークデバイスが**TCP ウィンドウスケールオプション**に準拠していないという問題が発生する可能性があります。そのため、はスケールファクターをサポートしていません。 このような場合は、この KB 934430 を参照してください。[ファイアウォールデバイスの背後で Windows Vista を使用しようとすると、ネットワーク接続が失敗](https://support.microsoft.com/help/934430/network-connectivity-fails-when-you-try-to-use-windows-vista-behind-a)します。または、ネットワークデバイスベンダーのサポートチームに問い合わせてください。
+> [RFC 1323](https://tools.ietf.org/html/rfc1323)で定義されているように、ネットワークデバイスが **TCP ウィンドウスケールオプション** に準拠していないという問題が発生する可能性があります。そのため、はスケールファクターをサポートしていません。 このような場合は、この KB 934430 を参照してください。 [ファイアウォールデバイスの背後で Windows Vista を使用しようとすると、ネットワーク接続が失敗](https://support.microsoft.com/help/934430/network-connectivity-fails-when-you-try-to-use-windows-vista-behind-a) します。または、ネットワークデバイスベンダーのサポートチームに問い合わせてください。
 
 #### <a name="review-and-configure-tcp-receive-window-autotuning-level"></a>TCP 受信ウィンドウの自動チューニングレベルを確認して構成する
 
 Netsh コマンドまたは Windows PowerShell コマンドレットを使用して、TCP 受信ウィンドウの自動チューニングレベルを確認または変更できます。
 
 > [!NOTE]
-> Windows 10 または Windows Server 2019 より前のバージョンの Windows では、レジストリを使用して TCP 受信ウィンドウサイズを構成することはできません。 非推奨の設定の詳細については、「[非推奨の TCP パラメーター](#deprecated-tcp-parameters)」を参照してください。
+> Windows 10 または Windows Server 2019 より前のバージョンの Windows では、レジストリを使用して TCP 受信ウィンドウサイズを構成することはできません。 非推奨の設定の詳細については、「 [非推奨の TCP パラメーター](#deprecated-tcp-parameters)」を参照してください。
 
 > [!NOTE]
-> 使用可能な自動チューニングレベルの詳細については、「自動[チューニングレベル](#autotuning-levels)」を参照してください。
+> 使用可能な自動チューニングレベルの詳細については、「自動 [チューニングレベル](#autotuning-levels)」を参照してください。
 
 **Netsh を使用して自動チューニングレベルを確認または変更するには**
 
@@ -185,7 +185,7 @@ netsh interface tcp set global autotuninglevel=<Value>
 > [!NOTE]
 > 上記のコマンドで、は \<*Value*> 自動チューニングレベルの新しい値を表します。
 
-このコマンドの詳細については、「[インターフェイス伝送制御プロトコル用の Netsh コマンド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731258(v=ws.10))」を参照してください。
+このコマンドの詳細については、「 [インターフェイス伝送制御プロトコル用の Netsh コマンド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731258(v=ws.10))」を参照してください。
 
 **Powershell を使用して自動チューニングレベルを確認または変更するには**
 
@@ -219,14 +219,14 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
 
 これらのコマンドレットの詳細については、次の記事を参照してください。
 
-- [NetTCPSetting](/powershell/module/nettcpip/get-nettcpsetting?view=win10-ps)
-- [NetTCPSetting](/powershell/module/nettcpip/set-nettcpsetting?view=win10-ps)
+- [NetTCPSetting](/powershell/module/nettcpip/get-nettcpsetting)
+- [NetTCPSetting](/powershell/module/nettcpip/set-nettcpsetting)
 
 #### <a name="autotuning-levels"></a>自動チューニングレベル
 
-受信ウィンドウの自動チューニングは、5つのレベルのいずれかに設定できます。 既定のレベルは**Normal**です。 次の表では、これらのレベルについて説明します。
+受信ウィンドウの自動チューニングは、5つのレベルのいずれかに設定できます。 既定のレベルは **Normal** です。 次の表では、これらのレベルについて説明します。
 
-|Level |16 進数値 |コメント |
+|Level |16 進数値 |説明 |
 | --- | --- | --- |
 |[標準] (既定) |0x8 (スケールファクターは 8) |ほとんどすべてのシナリオに対応できるように、TCP 受信ウィンドウを拡張するように設定します。 |
 |無効 |使用できるスケールファクターがありません |TCP 受信ウィンドウを既定値で設定します。 |
@@ -236,7 +236,7 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
 
 アプリケーションを使用してネットワークパケットをキャプチャする場合、アプリケーションは、ウィンドウの自動チューニングレベルの設定に応じて、次のようなデータを報告する必要があります。
 
-- 自動チューニングレベル:**標準 (既定の状態)**
+- 自動チューニングレベル: **標準 (既定の状態)**
 
    ```
    Frame: Number = 492, Captured Frame Length = 66, MediaType = ETHERNET
@@ -261,7 +261,7 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
    + SACKPermitted:
    ```
 
-- 自動チューニングレベル:**無効**
+- 自動チューニングレベル: **無効**
 
    ```
    Frame: Number = 353, Captured Frame Length = 62, MediaType = ETHERNET
@@ -284,7 +284,7 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
    + SACKPermitted:
    ```
 
-- 自動チューニングレベル:**制限付き**
+- 自動チューニングレベル: **制限付き**
 
    ```
    Frame: Number = 3, Captured Frame Length = 66, MediaType = ETHERNET
@@ -309,7 +309,7 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
    + SACKPermitted:
    ```
 
-- 自動チューニングレベル:**高い制限**
+- 自動チューニングレベル: **高い制限**
 
    ```
    Frame: Number = 115, Captured Frame Length = 66, MediaType = ETHERNET
@@ -334,7 +334,7 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
    + SACKPermitted:
    ```
 
-- 自動チューニングレベル:**試験段階**
+- 自動チューニングレベル: **試験段階**
 
    ```
    Frame: Number = 238, Captured Frame Length = 66, MediaType = ETHERNET
@@ -369,13 +369,13 @@ Windows Server 2003 の次のレジストリ設定はサポートされなくな
 
 これらの設定はすべて、次のレジストリサブキーにありました。
 
-> **HKEY_LOCAL_MACHINE \System\CurrentControlSet\Services\Tcpip\Parameters**
+> **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters**
 
-###  <a name="windows-filtering-platform"></a><a name="bkmk_wfp"></a>Windows フィルタリングプラットフォーム
+###  <a name="windows-filtering-platform"></a><a name="bkmk_wfp"></a> Windows フィルタリングプラットフォーム
 
 Windows Vista および Windows Server 2008 では、Windows Filtering Platform (WFP) が導入されました。 WFP は、Microsoft 以外の独立系ソフトウェアベンダー (Isv) に Api を提供して、パケット処理フィルターを作成します。 たとえば、ファイアウォールとウイルス対策ソフトウェアが含まれています。
 
 > [!NOTE]
-> 正しく記述されていない WFP フィルターを使用すると、サーバーのネットワークパフォーマンスが大幅に低下する可能性があります。 詳細については、Windows デベロッパーセンターの「[パケット処理ドライバーとアプリを WFP に移植する](/windows-hardware/drivers/network/porting-packet-processing-drivers-and-apps-to-wfp)」を参照してください。
+> 正しく記述されていない WFP フィルターを使用すると、サーバーのネットワークパフォーマンスが大幅に低下する可能性があります。 詳細については、Windows デベロッパーセンターの「 [Packet-Processing ドライバーとアプリを WFP に移植する](/windows-hardware/drivers/network/porting-packet-processing-drivers-and-apps-to-wfp) 」を参照してください。
 
-このガイドのすべてのトピックへのリンクについては、「[ネットワークサブシステムのパフォーマンスチューニング](net-sub-performance-top.md)」を参照してください。
+このガイドのすべてのトピックへのリンクについては、「 [ネットワークサブシステムのパフォーマンスチューニング](net-sub-performance-top.md)」を参照してください。

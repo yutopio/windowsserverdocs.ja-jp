@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.date: 12/20/2016
 ms.topic: article
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
-ms.openlocfilehash: 9056beec7d07d1657ece3703f461ecfe5d9cd0fc
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: f82ccc4e6dc2dbd7a34d829c0bc753fc6533f8dd
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746447"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866111"
 ---
 # <a name="manage-hyper-v-integration-services"></a>Hyper-v Integration Services を管理する
 
@@ -34,7 +34,7 @@ Integration Services ウィンドウには、Hyper-v ホストで使用可能な
 
 ### <a name="turn-an-integration-service-on-or-off-using-powershell"></a>PowerShell を使用して統合サービスをオンまたはオフにする
 
-PowerShell でこれを行うには、 [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice?view=win10-ps) を使用し、 [-Vmintegrationservice を無効](/powershell/module/hyper-v/disable-vmintegrationservice?view=win10-ps)にします。
+PowerShell でこれを行うには、 [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice) を使用し、 [-Vmintegrationservice を無効](/powershell/module/hyper-v/disable-vmintegrationservice)にします。
 
 次の例では、"demovm" という名前の仮想マシンのゲストファイルコピー統合サービスをオンまたはオフにする方法を示します。
 
@@ -133,9 +133,9 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 ## <a name="start-and-stop-an-integration-service-from-a-linux-guest"></a>Linux ゲストから統合サービスを開始および停止する
 
-一般的に、Linux 統合サービスは Linux カーネルで提供されます。 Linux integration services ドライバーには **hv_utils**という名前が付けられています。
+一般的に、Linux 統合サービスは Linux カーネルで提供されます。 Linux integration services ドライバーには **hv_utils** という名前が付けられています。
 
-1. **Hv_utils**が読み込まれているかどうかを確認するには、次のコマンドを使用します。
+1. **Hv_utils** が読み込まれているかどうかを確認するには、次のコマンドを使用します。
 
    ``` BASH
    lsmod | grep hv_utils
@@ -227,7 +227,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 > [!NOTE]
 > イメージファイル vmguest .iso は、Windows 10/Windows Server 2016/2019 の Hyper-v に含まれていません。これは不要になったためです。
 
-| ゲスト  | 更新方法 | メモ |
+| ゲスト  | 更新方法 | Notes |
 |:---------|:---------|:---------|
 | Windows 10 | Windows Update | |
 | Windows 8.1 | Windows Update | |
@@ -250,7 +250,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 **Windows 8.1 または Windows Server 2012R2 ホストで実行されている仮想マシンの場合:**
 
-| ゲスト  | 更新方法 | メモ |
+| ゲスト  | 更新方法 | Notes |
 |:---------|:---------|:---------|
 | Windows 10 | Windows Update | |
 | Windows 8.1 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
@@ -275,7 +275,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 **Windows 8 または Windows Server 2012 ホストで実行されている仮想マシンの場合:**
 
-| ゲスト  | 更新方法 | メモ |
+| ゲスト  | 更新方法 | Notes |
 |:---------|:---------|:---------|
 | Windows 8.1 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
 | Windows 8 | 統合サービス ディスク | 以下の [手順](#install-or-update-integration-services)を参照してください。 |
@@ -312,6 +312,6 @@ Integration services を手動でインストールまたは更新する手順�
 4.  インストールが完了すると、すべての統合サービスを使用できるようになります。
 
 > [!NOTE]
-> これらの手順は、**オンライン**仮想マシン用の Windows PowerShell セッション内で自動化または実行**することはできません**。
-> **オフライン**の VHDX イメージに適用できます。「[仮想マシンが実行されていない場合の統合サービスのインストール方法」を](/virtualization/community/team-blog/2013/20130418-how-to-install-integration-services-when-the-virtual-machine-is-not-running)参照してください。
-> また、Vm を**オンライン**で**Configuration Manager**を使用した統合サービスのデプロイを自動化することもできますが、インストールの最後に vm を再起動する必要があります。「 [Config Manager と DISM を使用した vm への hyper-v Integration Services のデプロイ](/archive/blogs/manageabilityguys/deploying-hyper-v-integration-services-to-vms-using-config-manager-and-dism)」を参照してください。
+> これらの手順は、**オンライン** 仮想マシン用の Windows PowerShell セッション内で自動化または実行 **することはできません**。
+> **オフライン** の VHDX イメージに適用できます。「[仮想マシンが実行されていない場合の統合サービスのインストール方法」を](/virtualization/community/team-blog/2013/20130418-how-to-install-integration-services-when-the-virtual-machine-is-not-running)参照してください。
+> また、Vm を **オンライン** で **Configuration Manager** を使用した統合サービスのデプロイを自動化することもできますが、インストールの最後に vm を再起動する必要があります。「 [Config Manager と DISM を使用した vm への hyper-v Integration Services のデプロイ](/archive/blogs/manageabilityguys/deploying-hyper-v-integration-services-to-vms-using-config-manager-and-dism)」を参照してください。

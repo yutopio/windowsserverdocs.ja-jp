@@ -6,12 +6,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: b8410cb5804e8cbac3ce03e575c2f33c2bc61388
-ms.sourcegitcommit: 00406560a665a24d5a2b01c68063afdba1c74715
+ms.openlocfilehash: 84d90e8c1de81498cbc832c8cf068e2ac339ac97
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91716862"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866201"
 ---
 # <a name="advanced-data-deduplication-settings"></a>高度なデータ重複除去の設定
 
@@ -20,16 +20,16 @@ ms.locfileid: "91716862"
 このドキュメントでは、高度な[データ重複除去](overview.md)の設定を変更する方法について説明します。 [推奨されるワークロード](install-enable.md#enable-dedup-candidate-workloads)については、既定の設定で十分です。 これらの設定を変更する主な理由は、その他の種類のワークロードでのデータ重複除去のパフォーマンス向上です。
 
 ## <a name="modifying-data-deduplication-job-schedules"></a><a id="modifying-job-schedules"></a>データ重複除去ジョブ スケジュールの変更
-[既定のデータ重複除去ジョブ スケジュール](understand.md#job-info)は、([**バックアップ**使用法の種類](understand.md#usage-type-backup)に対して有効な*優先順位最適化*ジョブを除いて) 推奨されるワークロードで適切に動作し、可能な限り悪影響を及ぼさないように設計されています。 ワークロードには、サイズの大きいリソース要件がある場合、ジョブがアイドル状態の時間内にのみ実行されるようにしたり、データ重複除去ジョブが使用できるシステム リソースの量を増減したりできます。
+[既定のデータ重複除去ジョブ スケジュール](understand.md#job-info)は、([**バックアップ** 使用法の種類](understand.md#usage-type-backup)に対して有効な *優先順位最適化* ジョブを除いて) 推奨されるワークロードで適切に動作し、可能な限り悪影響を及ぼさないように設計されています。 ワークロードには、サイズの大きいリソース要件がある場合、ジョブがアイドル状態の時間内にのみ実行されるようにしたり、データ重複除去ジョブが使用できるシステム リソースの量を増減したりできます。
 
 ### <a name="changing-a-data-deduplication-schedule"></a><a id="modifying-job-schedules-change-schedule"></a>データ重複除去のスケジュールの変更
 データ重複除去ジョブは、Windows タスク スケジューラを使用してスケジュールされ、パス Microsoft\Windows\Deduplication で表示および編集できます。 データ重複除去には、スケジュールを簡単にするいくつかのコマンドレットが含まれます。
-* [`Get-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/get-dedupschedule?view=win10-ps) 現在スケジュールされているジョブを表示します。
-* [`New-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/new-dedupschedule?view=win10-ps) スケジュールされた新しいジョブを作成します。
-* [`Set-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/set-dedupschedule?view=win10-ps) 既存のスケジュールされたジョブを変更します。
-* [`Remove-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/remove-dedupschedule?view=win10-ps) スケジュールされたジョブを削除します。
+* [`Get-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/get-dedupschedule) 現在スケジュールされているジョブを表示します。
+* [`New-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/new-dedupschedule) スケジュールされた新しいジョブを作成します。
+* [`Set-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/set-dedupschedule) 既存のスケジュールされたジョブを変更します。
+* [`Remove-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/remove-dedupschedule) スケジュールされたジョブを削除します。
 
-データ重複除去ジョブを実行する時間を変更する最も一般的な理由は、ジョブが業務時間外に実行されるようにするためです。 次の手順の例は、週末と平日の午後 7:00 にアイドル状態となるハイパーコンバージド Hyper-V ホストの、*晴れた日*のシナリオでデータ重複除去スケジュールを変更する方法を示しています。 スケジュールを変更するには、管理者コンテキストで次の PowerShell コマンドレットを実行します。
+データ重複除去ジョブを実行する時間を変更する最も一般的な理由は、ジョブが業務時間外に実行されるようにするためです。 次の手順の例は、週末と平日の午後 7:00 にアイドル状態となるハイパーコンバージド Hyper-V ホストの、*晴れた日* のシナリオでデータ重複除去スケジュールを変更する方法を示しています。 スケジュールを変更するには、管理者コンテキストで次の PowerShell コマンドレットを実行します。
 
 1. スケジュールされた時間単位の[最適化](understand.md#job-info-optimization)ジョブを無効にします。
     ```PowerShell
@@ -49,7 +49,7 @@ ms.locfileid: "91716862"
     ```
 
     >[!NOTE]
-    > `-Start` に提供される `System.Datetime` の*日付*部分は (過去日付である限り) 使用されませんが、*時間*部分はジョブを開始する時間を指定します。
+    > `-Start` に提供される `System.Datetime` の *日付* 部分は (過去日付である限り) 使用されませんが、*時間* 部分はジョブを開始する時間を指定します。
 4. 高優先順位で、システム上のすべての CPU と使用可能なメモリを使用して土曜日の午前 7時 00分に実行される、週単位のガベージ コレクション ジョブを作成します。
     ```PowerShell
     New-DedupSchedule -Name "WeeklyGarbageCollection" -Type GarbageCollection -DurationHours 23 -Memory 100 -Cores 100 -Priority High -Days @(6) -Start (Get-Date "2016-08-13 07:00:00")
@@ -86,7 +86,7 @@ ms.locfileid: "91716862"
             <td>この値は、スケジュールされている必要があるジョブの種類であるため、必要です。 タスクをスケジュールした後は、この値を変更できません。</td>
         </tr>
         <tr>
-            <td>優先度</td>
+            <td>Priority</td>
             <td>スケジュールされたジョブのシステム優先順位</td>
             <td>
                 <ul>
@@ -325,8 +325,8 @@ ms.locfileid: "91716862"
 <a id="faq-full-v-regular-gc"></a>**フルガベージコレクションと通常のガベージコレクションの違いは何ですか。**
 [ガベージ コレクション](understand.md#job-info-gc)には、次の 2 つの種類があります。
 
-- *通常のガベージ コレクション*は統計アルゴリズムを使用して、特定の基準 (メモリと IOPS が少ない) に適合する大きな参照されていないチャンクを検索します。 通常のガベージ コレクションでは、チャンクの最小の割合が参照されていない場合にのみ、チャンク格納コンテナーが圧縮されます。 この種類のガベージ コレクションは、フル ガベージ コレクションより実行が速く、使用されるリソースはより少なくなります。 通常のガベージ コレクション ジョブの既定のスケジュールでは、実行は毎週 1 回です。
-- *フル ガベージ コレクション*は、参照されていないチャンクをより綿密に検索し、より多くのディスク領域を解放します。 フル ガベージ コレクションでは、コンテナー内の単一のチャンクだけが参照されていない場合でも、すべてのコンテナーが圧縮されます。 フル ガベージ コレクションでは、最適化ジョブ中にクラッシュや電源障害があった場合に使用されていた可能性のある領域も解放されます。 フル ガベージ コレクション ジョブは、通常のガベージ コレクションジョブと比較してより多くの時間とシステム リソースを費やして、重複解除されたボリューム上で回復できる利用可能な領域を 100% 回復します。 フル ガベージ コレクション ジョブは一般的に、通常のガベージ コレクション ジョブより最大 5% 多くの参照されていないデータを検出して解放します。 既定のスケジュールでは、フル ガベージ コレクション ジョブは通常のガベージ コレクションのスケジュールの 4 回目ごとに実行されます。
+- *通常のガベージ コレクション* は統計アルゴリズムを使用して、特定の基準 (メモリと IOPS が少ない) に適合する大きな参照されていないチャンクを検索します。 通常のガベージ コレクションでは、チャンクの最小の割合が参照されていない場合にのみ、チャンク格納コンテナーが圧縮されます。 この種類のガベージ コレクションは、フル ガベージ コレクションより実行が速く、使用されるリソースはより少なくなります。 通常のガベージ コレクション ジョブの既定のスケジュールでは、実行は毎週 1 回です。
+- *フル ガベージ コレクション* は、参照されていないチャンクをより綿密に検索し、より多くのディスク領域を解放します。 フル ガベージ コレクションでは、コンテナー内の単一のチャンクだけが参照されていない場合でも、すべてのコンテナーが圧縮されます。 フル ガベージ コレクションでは、最適化ジョブ中にクラッシュや電源障害があった場合に使用されていた可能性のある領域も解放されます。 フル ガベージ コレクション ジョブは、通常のガベージ コレクションジョブと比較してより多くの時間とシステム リソースを費やして、重複解除されたボリューム上で回復できる利用可能な領域を 100% 回復します。 フル ガベージ コレクション ジョブは一般的に、通常のガベージ コレクション ジョブより最大 5% 多くの参照されていないデータを検出して解放します。 既定のスケジュールでは、フル ガベージ コレクション ジョブは通常のガベージ コレクションのスケジュールの 4 回目ごとに実行されます。
 
 <a id="faq-why-disable-full-gc"></a>**フルガベージコレクションを無効にする理由**
 - ガベージ コレクションは、ボリュームの有効期間のシャドウ コピーと増分バックアップのサイズに悪影響を与える可能性があります。 頻繁に変化する、または I/O 集中型のワークロードは、フル ガベージ コレクション ジョブによってパフォーマンスが低下する可能性があります。

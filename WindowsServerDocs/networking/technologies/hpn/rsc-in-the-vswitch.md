@@ -6,12 +6,12 @@ ms.topic: article
 ms.author: dacuo
 author: dcuomo
 ms.date: 09/07/2018
-ms.openlocfilehash: 66f0f72dc6a577030ad43103e5f9d08a9458e64d
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: b9288e289da063b9a6175a9409154940a6d19d1f
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995100"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866251"
 ---
 # <a name="rsc-in-the-vswitch"></a>VSwitch 内の RSC
 >適用対象:Windows Server 2019
@@ -24,7 +24,7 @@ Windows Server 2012 以降には、受信セグメントの結合とも呼ばれ
 
 データパスが仮想スイッチを通過するワークロードでは、この機能を活用できます。
 
-例:
+次に例を示します。
 
 -   以下を含む仮想 Nic をホストします。
 
@@ -77,4 +77,4 @@ Set-VMSwitch -Name vSwitchName -EnableSoftwareRsc $false
 ```PowerShell
 Set-VMSwitch -Name vSwitchName -EnableSoftwareRsc $True
 ```
-詳細については、「 [Set-VMSwitch](/powershell/module/hyper-v/set-vmswitch?view=win10-ps)」を参照してください。
+詳細については、「 [Set-VMSwitch](/powershell/module/hyper-v/set-vmswitch)」を参照してください。

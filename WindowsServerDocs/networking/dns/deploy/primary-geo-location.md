@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: ef9828f8-c0ad-431d-ae52-e2065532e68f
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9a1abc00bd8683c716563159aac889a98f364f87
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 36089433b9168e8c49e443b77317c29366c6b9e5
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996877"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866521"
 ---
 # <a name="use-dns-policy-for-geo-location-based-traffic-management-with-primary-servers"></a>プライマリ サーバーでの地理的な場所ベースのトラフィック管理に DNS ポリシーを使用する
 
@@ -20,23 +20,23 @@ ms.locfileid: "87996877"
 このトピックは、最も近いリソースの IP アドレスがクライアントに提供する、クライアントと、クライアントが接続しようとするのにリソースの両方の地理的場所に基づいて、DNS クライアント クエリに応答するのにプライマリ DNS サーバーを許可するように DNS のポリシーを構成するのに方法については、使用できます。
 
 >[!IMPORTANT]
->このシナリオでは、のみプライマリ DNS サーバーを使用しているときに、地理的な場所ベースのトラフィック管理用の DNS のポリシーを展開する方法を示します。 プライマリとセカンダリの両方の DNS サーバーがある場合は、地理的な場所ベースのトラフィック管理を行うこともできます。 プライマリセカンダリ展開がある場合は、まずこのトピックの手順を完了してから、トピック「[プライマリセカンダリ展開による Geo ロケーションベースのトラフィック管理に DNS ポリシーを使用する](primary-secondary-geo-location.md)」に記載されている手順を実行します。
+>このシナリオでは、のみプライマリ DNS サーバーを使用しているときに、地理的な場所ベースのトラフィック管理用の DNS のポリシーを展開する方法を示します。 プライマリとセカンダリの両方の DNS サーバーがある場合は、地理的な場所ベースのトラフィック管理を行うこともできます。 プライマリセカンダリの展開がある場合は、まずこのトピックの手順を完了してから、トピック「 [Primary-Secondary の展開での Geo-Location ベースのトラフィック管理に DNS ポリシーを使用する](primary-secondary-geo-location.md)」に記載されている手順を実行します。
 
 新しい DNS ポリシーを使用するには、DNS サーバーは、Web サーバーの IP アドレスの入力を求めるクライアントのクエリに応答できるようにする DNS ポリシーを作成することができます。 Web サーバーのインスタンスは、物理的に異なる場所でさまざまなデータ センターに存在する可能性があります。 DNS は、クライアントと Web サーバーの場所を評価し、クライアントに提供する Web サーバーの IP アドレスをクライアントに近い場所に物理的に位置している Web サーバーによって、クライアントの要求に対応します。
 
 次の DNS ポリシー パラメーターを使用すると、DNS クライアントからのクエリには、DNS サーバーの応答を制御します。
 
 - **クライアントサブネット**。 定義済みのクライアントのサブネットの名前です。 クエリの送信元となるサブネットを確認するために使用します。
-- **トランスポートプロトコル**。 トランスポート プロトコル クエリで使用をします。 可能なエントリは **UDP** と **TCP**します。
-- **インターネットプロトコル**。 クエリで使用されるネットワーク プロトコルです。 可能なエントリは **IPv4** と **IPv6**します。
-- **サーバーのインターフェイスの IP アドレス**です。 DNS 要求を受信する DNS サーバーのネットワーク インターフェイスの IP アドレス。
+- **トランスポートプロトコル**。 トランスポート プロトコル クエリで使用をします。 可能なエントリは **UDP** と **TCP** します。
+- **インターネットプロトコル**。 クエリで使用されるネットワーク プロトコルです。 可能なエントリは **IPv4** と **IPv6** します。
+- **サーバーのインターフェイスの IP アドレス** です。 DNS 要求を受信する DNS サーバーのネットワーク インターフェイスの IP アドレス。
 - **FQDN**。 完全修飾ドメイン名 (FQDN)、クエリ内のレコードのワイルドカードを使用する可能性です。
 - **クエリの種類**。 (A、SRV、TXT など) に照会しているレコードの型。
 - **時刻**。 クエリが受信した時刻。
 
 ポリシーの式を考案するために、論理演算子 (/) は、次の条件を組み合わせることができます。 これらの式に一致すると、ポリシーは、次の操作を実行するに必要です。
 
-- **無視**します。 DNS サーバーは、サイレント モードでクエリを削除します。
+- **無視**。 DNS サーバーは、サイレント モードでクエリを削除します。
 - **[拒否]**。 DNS サーバーは、そのクエリのようなエラー応答を返します。
 - **[許可]**。 DNS サーバーは、管理トラフィックの応答で応答します。
 
@@ -96,7 +96,7 @@ Add-DnsServerClientSubnet -Name "USSubnet" -IPv4Subnet "192.0.0.0/24"
 Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet "141.1.0.0/24"
 ```
 
-詳細については、次を参照してください。 [追加 DnsServerClientSubnet](/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerClientSubnet](/powershell/module/dnsserver/add-dnsserverclientsubnet)します。
 
 ### <a name="create-zone-scopes"></a><a name="bkmk_scopes"></a>ゾーンのスコープを作成します。
 クライアントのサブネットを構成した後は、2 つの異なるゾーン スコープにリダイレクトするトラフィックの 1 つのスコープに構成されている DNS クライアントのサブネットごとのゾーンをパーティション分割する必要があります。
@@ -115,12 +115,12 @@ Add-DnsServerZoneScope -ZoneName "woodgrove.com" -Name "USZoneScope"
 Add-DnsServerZoneScope -ZoneName "woodgrove.com" -Name "EuropeZoneScope"
 ```
 
-詳細については、「 [DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)」を参照してください。
+詳細については、「 [DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope)」を参照してください。
 
 ### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records"></a>レコードをゾーンのスコープに追加します。
 2 つのゾーンのスコープに web サーバーのホストを表すレコードを追加する必要があります。
 
-たとえば、 **USZoneScope** と **EuropeZoneScope**します。 USZoneScope、u. s. データ センター; にある IP アドレス、192.0.0.1 レコード www.woodgrove.com を追加することができます。EuropeZoneScope ヨーロッパ データ センターの IP アドレス 141.1.0.1 で同じレコード (www.woodgrove.com) を追加できます。
+たとえば、 **USZoneScope** と **EuropeZoneScope** します。 USZoneScope、u. s. データ センター; にある IP アドレス、192.0.0.1 レコード www.woodgrove.com を追加することができます。EuropeZoneScope ヨーロッパ データ センターの IP アドレス 141.1.0.1 で同じレコード (www.woodgrove.com) を追加できます。
 
 次の Windows PowerShell コマンドを使用して、レコードをゾーンのスコープに追加することができます。
 
@@ -138,7 +138,7 @@ Add-DnsServerResourceRecord -ZoneName "woodgrove.com" -A -Name "www" -IPv4Addres
 
 **ゾーン範囲ゾーン** パラメーターは、既定のスコープでレコードを追加するときに含まれません。 これは、標準の DNS ゾーンにレコードを追加すると同じです。
 
-詳細については、次を参照してください。 [追加 DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord)します。
 
 ### <a name="create-the-policies"></a><a name="bkmk_policies"></a>ポリシーを作成します。
 サブネットを作成した後は、しパーティション (ゾーン スコープ) には、レコードを追加した、サブネット、およびパーティションに接続しているポリシーは、DNS クライアントのサブネットのいずれかのソースから、クエリの結果が、クエリの応答が、ゾーンの正しい範囲から返されます。 を作成する必要があります。 ポリシーの既定のゾーンのスコープをマッピングするため必要はありません。
@@ -150,7 +150,7 @@ Add-DnsServerQueryResolutionPolicy -Name "USPolicy" -Action ALLOW -ClientSubnet 
 Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "EuropeZoneScope,1" -ZoneName "woodgrove.com"
 ```
 
-詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)します。
+詳細については、次を参照してください。 [追加 DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy)します。
 
 DNS サーバーが、必要な DNS のポリシーに地理的な場所に基づいて、トラフィックをリダイレクトするよう構成されました。
 

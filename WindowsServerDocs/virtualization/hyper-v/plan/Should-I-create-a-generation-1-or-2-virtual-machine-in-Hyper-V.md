@@ -6,12 +6,12 @@ ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 12/05/2016
-ms.openlocfilehash: f9cdb144e7edacf8a1be0f2d98509517adf5c87e
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: 19416bbb8800f12d37d3fdd28760082eb8ea523d
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746597"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866011"
 ---
 # <a name="should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v"></a>HYPER-V でジェネレーション 1 または 2 の仮想マシンを作成するか。
 
@@ -219,7 +219,7 @@ Debian のバージョンとして使用できます、ゲスト オペレーテ
 
 ### <a name="use-ipv6-instead-of-ipv4"></a>IPv4 ではなく IPv6 を使用する
 
-既定では、第 2 世代仮想マシンは IPv4 を使用します。 代わりに IPv6 を使用するには、 [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps) Windows PowerShell コマンドレットを実行します。 たとえば、次のコマンドは、TestVM という名前の仮想マシンの IPv6 に優先プロトコルを設定します。
+既定では、第 2 世代仮想マシンは IPv4 を使用します。 代わりに IPv6 を使用するには、 [Set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware) Windows PowerShell コマンドレットを実行します。 たとえば、次のコマンドは、TestVM という名前の仮想マシンの IPv6 に優先プロトコルを設定します。
 
 ```powershell
 Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6
@@ -231,13 +231,13 @@ COM ポートは、追加するまで、第2世代仮想マシンでは使用で
 
 COM ポートを追加するには:
 
-1. セキュア ブートを無効にします。 カーネルデバッグはセキュアブートと互換性がありません。 バーチャルマシンがオフ状態であることを確認してから、 [set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps) コマンドレットを使用してください。 たとえば、次のコマンドでは、仮想マシン TestVM でセキュア ブートを無効にします。
+1. セキュア ブートを無効にします。 カーネルデバッグはセキュアブートと互換性がありません。 バーチャルマシンがオフ状態であることを確認してから、 [set-vmfirmware](/powershell/module/hyper-v/set-vmfirmware) コマンドレットを使用してください。 たとえば、次のコマンドでは、仮想マシン TestVM でセキュア ブートを無効にします。
 
     ```powershell
     Set-VMFirmware -Vmname TestVM -EnableSecureBoot Off
     ```
 
-2. COM ポートを追加します。 これを行うには、 [Set VMComPort](/powershell/module/hyper-v/set-vmcomport?view=win10-ps) コマンドレットを使用します。 たとえば、次のコマンドは、仮想マシンの名前付きパイプ TestPipe、ローカル コンピューター上に接続するための TestVM で最初の COM ポートを構成します。
+2. COM ポートを追加します。 これを行うには、 [Set VMComPort](/powershell/module/hyper-v/set-vmcomport) コマンドレットを使用します。 たとえば、次のコマンドは、仮想マシンの名前付きパイプ TestPipe、ローカル コンピューター上に接続するための TestVM で最初の COM ポートを構成します。
 
     ```powershell
     Set-VMComPort -VMName TestVM 1 \\.\pipe\TestPipe

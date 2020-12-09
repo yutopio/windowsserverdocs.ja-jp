@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: cda60c65772a41322a20b7277a7d7c80a4daf9e1
-ms.sourcegitcommit: a640c2d7f2d21d7cd10a9be4496e1574e5e955f0
+ms.openlocfilehash: cb21a6bfda238adb1a0a03731a179f13f441ddc9
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89446775"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866331"
 ---
 # <a name="confirm-guarded-hosts-can-attest"></a>保護されたホストが証明できることを確認する
 
@@ -29,7 +29,7 @@ ms.locfileid: "89446775"
 
 3. ホストのキーの保護と構成証明の Url を構成します。
 
-    - **Windows powershell を使用**する: 管理者特権の windows powershell コンソールで次のコマンドを実行して、キーの保護と構成証明の url を構成できます。 FQDN の場合 &lt; &gt; は、hgs クラスターの完全修飾ドメイン名 (fqdn) を使用します (たとえば、hgs サーバーで **HgsServer** コマンドレットを実行して、url を取得するように hgs 管理者に指示します)。
+    - **Windows powershell を使用** する: 管理者特権の windows powershell コンソールで次のコマンドを実行して、キーの保護と構成証明の url を構成できます。 FQDN の場合 &lt; &gt; は、hgs クラスターの完全修飾ドメイン名 (fqdn) を使用します (たとえば、hgs サーバーで **HgsServer** コマンドレットを実行して、url を取得するように hgs 管理者に指示します)。
 
         ```PowerShell
         Set-HgsClientConfiguration -AttestationServerUrl 'http://<FQDN>/Attestation' -KeyProtectionServerUrl 'http://<FQDN>/KeyProtection'
@@ -37,7 +37,7 @@ ms.locfileid: "89446775"
 
         フォールバック HGS サーバーを構成するには、このコマンドを繰り返し、キーの保護と構成証明サービスのフォールバック Url を指定します。 詳細については、「 [フォールバック構成](guarded-fabric-manage-branch-office.md#fallback-configuration)」を参照してください。
 
-    - **Vmm から**: SYSTEM CENTER VIRTUAL MACHINE MANAGER (vmm) を使用している場合は、vmm で構成証明とキー保護の url を構成できます。 詳細については、「 **VMM で保護**されたホストのプロビジョニング」の「[グローバル HGS 設定を構成する](/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#configure-global-hgs-settings)」を参照してください。
+    - **Vmm から**: SYSTEM CENTER VIRTUAL MACHINE MANAGER (vmm) を使用している場合は、vmm で構成証明とキー保護の url を構成できます。 詳細については、「 **VMM で保護** されたホストのプロビジョニング」の「[グローバル HGS 設定を構成する](/system-center/vmm/guarded-deploy-host#configure-global-hgs-settings)」を参照してください。
 
     >**メモ**
     > - Hgs 管理者が [hgs サーバーで HTTPS を有効](guarded-fabric-configure-hgs-https.md)にした場合は、で url を開始し `https://` ます。
@@ -53,7 +53,7 @@ ms.locfileid: "89446775"
     Get-HgsClientConfiguration
     ```
 
-    コマンドの出力は、ホストが構成証明を受けたかどうかを示し、現在は保護されています。 `IsHostGuarded`が**True**を返さない場合は、HGS 診断ツール[HgsTrace](https://technet.microsoft.com/library/mt718831.aspx)を実行して調査できます。 診断を実行するには、ホストの管理者特権の Windows PowerShell プロンプトで次のコマンドを入力します。
+    コマンドの出力は、ホストが構成証明を受けたかどうかを示し、現在は保護されています。 `IsHostGuarded`が **True** を返さない場合は、HGS 診断ツール [HgsTrace](https://technet.microsoft.com/library/mt718831.aspx)を実行して調査できます。 診断を実行するには、ホストの管理者特権の Windows PowerShell プロンプトで次のコマンドを入力します。
 
     ```powershell
     Get-HgsTrace -RunDiagnostics -Detailed

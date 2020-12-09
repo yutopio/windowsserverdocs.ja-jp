@@ -5,17 +5,17 @@ ms.author: billmath
 manager: mtillman
 ms.date: 06/28/2018
 ms.topic: article
-ms.openlocfilehash: e5cb939fcf862d16837c2f9e05548644faf3bf71
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5aa751f29eb83777370dbd350cdbabf9ae3226d3
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956489"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866290"
 ---
 # <a name="ad-fs-and-banned-ip-addresses"></a>AD FS と禁止された IP アドレス
 
 
-2018年6月に、Windows Server 2016 の AD FS では、AD FS 6 月の2018更新プログラムで禁止された**ip**が導入されました。  この更新プログラムを使用すると、AD FS でグローバルに IP アドレスのセットを構成できます。これにより、これらの IP アドレスから送信された要求や、 **x 転送**された-**クライアント-ip**ヘッダー内の ip アドレスを持つ要求が AD FS によってブロックされるようになります。
+2018年6月に、Windows Server 2016 の AD FS では、AD FS 6 月の2018更新プログラムで禁止された **ip** が導入されました。  この更新プログラムを使用すると、AD FS でグローバルに IP アドレスのセットを構成できます。これにより、これらの IP アドレスから送信された要求や、 **x 転送** された- **クライアント-ip** ヘッダー内の ip アドレスを持つ要求が AD FS によってブロックされるようになります。
 
 ## <a name="adding-banned-ips"></a>禁止 Ip の追加
 禁止された Ip をグローバルリストに追加するには、次の Powershell コマンドレットを使用します。
@@ -54,9 +54,9 @@ BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
 
 
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 [Active Directory フェデレーションサービス (AD FS) をセキュリティで保護するためのベストプラクティス](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
-[Set-adfsproperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)
+[Set-adfsproperties](/powershell/module/adfs/set-adfsproperties)
 
 [AD FS の運用](../ad-fs-operations.md)

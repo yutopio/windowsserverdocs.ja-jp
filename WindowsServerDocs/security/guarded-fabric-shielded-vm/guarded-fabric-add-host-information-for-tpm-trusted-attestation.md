@@ -7,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 06/21/2019
-ms.openlocfilehash: 2f4f684b0c18c19cdbdf09e672c83e51f426ca04
-ms.sourcegitcommit: e164aeffc01069b8f1f3248bf106fcdb7f64f894
+ms.openlocfilehash: 6a199792408bc9086186308758cb5d85d21d6c41
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91388853"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865701"
 ---
 # <a name="add-host-information-for-tpm-trusted-attestation"></a>TPM で信頼された構成証明のホスト情報を追加する
 
@@ -56,8 +56,8 @@ TPM モードでは、ファブリック管理者は3種類のホスト情報を
     Add-HgsAttestationTpmPolicy -Path <Filename>.tcglog -Name '<PolicyName>'
     ```
 
-これで、TPM モード用に HGS クラスターを構成するプロセスが完了します。 ファブリック管理者は、ホストの構成を完了する前に、HGS から2つの Url を指定する必要がある場合があります。 これらの Url を取得するには、HGS サーバーで [HgsServer](/powershell/module/hgsserver/get-hgsserver?view=win10-ps)を実行します。
+これで、TPM モード用に HGS クラスターを構成するプロセスが完了します。 ファブリック管理者は、ホストの構成を完了する前に、HGS から2つの Url を指定する必要がある場合があります。 これらの Url を取得するには、HGS サーバーで [HgsServer](/powershell/module/hgsserver/get-hgsserver)を実行します。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [構成証明を確認する](guarded-fabric-confirm-hosts-can-attest-successfully.md)

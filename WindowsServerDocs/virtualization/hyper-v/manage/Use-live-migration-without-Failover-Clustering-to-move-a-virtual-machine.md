@@ -6,12 +6,12 @@ ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 01/17/2017
-ms.openlocfilehash: b02c30a612ef6aa1ed56e1c26e86c21a48b5b138
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: f006b20c023f009bc366da97b3f7982b985aa2c4
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746637"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865761"
 ---
 # <a name="use-live-migration-without-failover-clustering-to-move-a-virtual-machine"></a>フェールオーバー クラスタ リングのないライブ マイグレーションを使用して仮想マシンを移動するには
 
@@ -33,9 +33,9 @@ ms.locfileid: "90746637"
 
 1.  Hyper-V マネージャーを開きます。 (サーバーマネージャーから、[**ツール**  >> ] をクリックします。**Hyper-v マネージャー**)
 
-2.  ナビゲーション ウィンドウで、サーバーのいずれかを選択します。 (表示されていない場合は右クリック **HYPER-V マネージャーで**, 、] をクリックして **サーバーへの接続**, サーバー名を入力し、クリックして、 **OK**します。 繰り返してサーバーを追加します。)
+2.  ナビゲーション ウィンドウで、サーバーのいずれかを選択します。 (表示されていない場合は右クリック **HYPER-V マネージャーで**, 、] をクリックして **サーバーへの接続**, サーバー名を入力し、クリックして、 **OK** します。 繰り返してサーバーを追加します。)
 
-3.  **仮想マシン** ] ウィンドウで、仮想マシンを右クリックし、順にクリックして **移動**します。 移動ウィザードが開きます。
+3.  **仮想マシン** ] ウィンドウで、仮想マシンを右クリックし、順にクリックして **移動** します。 移動ウィザードが開きます。
 
 4.  ウィザードのページを使用すると、移動、移行先サーバー、およびオプションの種類を選択できます。
 
@@ -69,11 +69,11 @@ PS C:\> Move-VM LMTest TestServer02 -IncludeStorage -DestinationStoragePath D:\L
  この問題を解決するには、仮想マシンをシャット ダウンし、プロセッサの互換性設定を有効にします。
 
 1. HYPER-V マネージャーからの **仮想マシン** ] ウィンドウが仮想マシンを右クリックし、[設定] をクリックします。
-2. ナビゲーション ウィンドウで [ **プロセッサ** ] をクリック **互換性**します。
-3. 確認 **異なるプロセッサ バージョンがコンピューターへ移行する**です。
+2. ナビゲーション ウィンドウで [ **プロセッサ** ] をクリック **互換性** します。
+3. 確認 **異なるプロセッサ バージョンがコンピューターへ移行する** です。
 4. **[OK]** をクリックします。
 
-   Windows PowerShell を使用する、 [Set-vmprocessor](/powershell/module/hyper-v/set-vmprocessor?view=win10-ps) コマンドレット。
+   Windows PowerShell を使用する、 [Set-vmprocessor](/powershell/module/hyper-v/set-vmprocessor) コマンドレット。
 
    ```
    PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true

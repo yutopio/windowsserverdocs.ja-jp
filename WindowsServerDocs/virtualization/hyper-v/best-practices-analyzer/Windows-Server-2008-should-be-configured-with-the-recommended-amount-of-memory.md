@@ -6,12 +6,12 @@ author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: a98a8594-603b-487a-8739-78887c568e57
 ms.date: 8/16/2016
-ms.openlocfilehash: 1dc343c19dc02fdf5dc0408db70649290025e2d2
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: d712ca14527fec503d8767ac08e608fdf325cfe9
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746187"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865861"
 ---
 # <a name="windows-server-2008-should-be-configured-with-the-recommended-amount-of-memory"></a>Windows Server 2008 は、推奨されるメモリ量で構成する必要があります。
 
@@ -38,7 +38,7 @@ ms.locfileid: "90746187"
 
 \<list of virtual machine names>
 
-## <a name="resolution"></a>解決策
+## <a name="resolution"></a>解決方法
 
 *Hyper-v マネージャーを使用して、この仮想マシンに割り当てられているメモリを少なくとも 2 GB に増やします。*
 
@@ -58,7 +58,7 @@ ms.locfileid: "90746187"
 
 1.  Windows PowerShell を開きます。 (デスクトップから [ **スタート** ] をクリックし、「 **Windows PowerShell**」と入力を開始します)。
 
-2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行**します。
+2.  右クリック **Windows PowerShell** ] をクリック **管理者として実行** します。
 
 3.  次のようなコマンドを実行し \<MyVM> ます。を仮想マシンの名前に、を少なくとも以下の値に置き換えます。
 
@@ -67,4 +67,4 @@ Set-VMMemory <MyVM> -StartupBytes 2GB
 ```
 
 ## <a name="see-also"></a>関連項目
-[設定-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[設定-VMMemory](/powershell/module/hyper-v/set-vmmemory)

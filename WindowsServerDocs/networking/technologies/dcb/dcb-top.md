@@ -6,12 +6,12 @@ ms.assetid: da58f312-bd3b-4bb6-98ca-6177869dd6ad
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 81c35d1a5673793220ec860266d129a4ecdb4046
-ms.sourcegitcommit: b18effcba95c85d6e08e7d29808b576491a5352e
+ms.openlocfilehash: eab47e24ad8c2bd5436b3516babee9237c3c80f3
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88243194"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865571"
 ---
 # <a name="data-center-bridging-dcb"></a>データ センター ブリッジング\(DCB\)
 
@@ -72,7 +72,7 @@ DCB には、次のような機能があります。
 7. は、Windows Server 2016 のサービス品質 QoS ソリューションの共存をサポートしてい \( \) ます。
 
 >[!NOTE]
->Rdma の集約型イーサネット roce バージョンを使用する前に \( \) 、DCB を有効にする必要があります。 インターネットワイドエリア RDMA プロトコルの iwarp ネットワークには必要ありません \( \) が、テストでは、すべてのイーサネット \- ベースの RDMA テクノロジが DCB で動作しやすくなっていると判断しました。 このため、iWARP RDMA のデプロイには DCB を使用することを検討してください。 詳細については、「 [リモートダイレクトメモリアクセス (RDMA) とスイッチ埋め込みチーミング (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)」を参照してください。
+>Rdma の集約型イーサネット roce バージョンを使用する前に \( \) 、DCB を有効にする必要があります。 インターネットワイドエリア RDMA プロトコルの iwarp ネットワークには必要ありません \( \) が、テストでは、すべてのイーサネット \- ベースの RDMA テクノロジが DCB で動作しやすくなっていると判断しました。 このため、iWARP RDMA のデプロイには DCB を使用することを検討してください。 詳細については、「[リモート ダイレクト メモリ アクセス (RDMA) とスイッチ埋め込みチーミング (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)」を参照してください。
 
 ##  <a name="practical-applications-of-dcb"></a>DCB の実用的なアプリケーション
 
@@ -102,10 +102,10 @@ Windows Server 2016 と Windows Server 2012 R2 の両方に対応する DCB Wind
 
 Windows Server 2016 の次のトピックでは、Windows PowerShell コマンドレットの説明と構文を提供しており、すべてのデータセンターブリッジング \( DCB Quality Of Service QoS 固有のコマンドレットについて説明して \) \( \) \- います。 コマンドレットの先頭の動詞に基づいて、アルファベット順に記載しています。
 
-- [DcbQoS モジュール](/powershell/module/dcbqos/?view=win10-ps)
+- [DcbQoS モジュール](/powershell/module/dcbqos/)
 
 ### <a name="windows-server-2012-r2-windows-powershell-commands-for-dcb"></a>DCB 用の windows Server 2012 R2 Windows PowerShell コマンド
 
 Windows Server 2012 R2 の次のトピックでは、Windows PowerShell コマンドレットの説明と構文を提供しており、すべてのデータセンターブリッジング \( DCB \) Quality of Service QoS 固有のコマンドレットについて説明し \( \) \- ます。 コマンドレットの先頭の動詞に基づいて、アルファベット順に記載しています。
 
-- [Windows PowerShell のデータ センター ブリッジング (DCB) サービス品質 (QoS) コマンドレット](/powershell/module/dcbqos/?view=win10-ps&viewFallbackFrom=winserverr2-ps)
+- [Windows PowerShell のデータ センター ブリッジング (DCB) サービス品質 (QoS) コマンドレット](/powershell/module/dcbqos/)

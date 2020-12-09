@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 97abf182-4725-4026-801c-122db96964ed
 ms.author: anpaul
 author: AnirbanPaul
-ms.openlocfilehash: 43591a1cca143037e9abe555321276cb0f83263b
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 1dc52e6b2bebf66f6a80e846481ec3f1656db443
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995508"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866491"
 ---
 # <a name="software-load-balancing-slb-for-sdn"></a>SDN のソフトウェア負荷分散 \( SLB \)
 
@@ -70,7 +70,7 @@ Vip はで、SLB マルチプレクサー (マルチプレクサー) にあり�
 
 受信ネットワーク トラフィックが SLB マルチプレクサーを完全にバイパスする最初のネットワーク トラフィック フローが確立されると、します。
 
-次の図では、クライアントコンピューターは、会社の SharePoint サイト (この場合は Contoso という架空の会社) の IP アドレスに対して DNS クエリを実行します。 次の処理が行われます。
+次の図では、クライアント コンピューターによって、会社の SharePoint サイト (この場合は Contoso という架空の会社) の IP アドレスに対して DNS クエリが実行されます。 次の処理が行われます。
 
 -   DNS サーバーは、VIP 107.105.47.60 をクライアントに返します。
 
@@ -150,7 +150,7 @@ SLB ホスト エージェントは、ネットワーク コント ローラー�
 ### <a name="sdn-enabled-hyper-v-virtual-switch"></a>SDN には、HYPER-V 仮想スイッチが有効になっています。
 SLB と互換性がある仮想スイッチの HYPER-V 仮想スイッチ マネージャーまたは Windows PowerShell コマンドを使用して、スイッチを作成する必要があり、仮想スイッチ仮想フィルタ リング プラットフォーム (VFP) を有効にする必要があります。
 
-仮想スイッチの VFP を有効にする方法については、Windows PowerShell コマンドを参照してください。 [Get-vmsystemswitchextension](/powershell/module/hyper-v/get-vmsystemswitchextension?view=win10-ps) と [有効にする VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension?f=255&MSPPError=-2147217396&view=win10-ps)します。
+仮想スイッチの VFP を有効にする方法については、Windows PowerShell コマンドを参照してください。 [Get-vmsystemswitchextension](/powershell/module/hyper-v/get-vmsystemswitchextension) と [有効にする VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension?f=255&MSPPError=-2147217396)します。
 
 SDN には、HYPER-V 仮想スイッチが有効になっている SLB に対して、次の操作を実行します。
 
@@ -206,13 +206,13 @@ SLB の機能と機能の一部を次に示します。
 
 -   SLB をアクティブ/アクティブ構成で 2 つ以上のノードに配置することができます。
 
--   MUXes を追加し、SLB サービスに影響を与えずに MUX プールから削除します。 これにより、個々の Mux の修正プログラムが適用されるときに SLB の可用性が維持されます。
+-   MUXes を追加し、SLB サービスに影響を与えずに MUX プールから削除します。 これにより、個々の MUX に修正プログラムが適用されているときでも、SLB の可用性が維持されます。
 
 -   個々 のマルチプレクサー インスタンス 99% の稼働時間があります。
 
 -   正常性の監視データはエンティティの管理に使用可能です
 
-**アラインメント**
+**配置**
 
 -   展開して、SCVMM と SLB を構成することができます。
 

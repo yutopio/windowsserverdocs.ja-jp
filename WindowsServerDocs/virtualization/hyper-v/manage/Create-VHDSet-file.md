@@ -6,12 +6,12 @@ ms.author: jiwool
 ms.date: 01/26/2017
 ms.topic: article
 ms.assetid: 444e1496-9e5a-41cf-bfbc-306e2ed8e00a
-ms.openlocfilehash: 7e2c287666115b9a81c6ab5585187f26dad7a5e3
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.openlocfilehash: bc49260471394ab1efd342fa51b8649b680b2851
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746467"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96865801"
 ---
 # <a name="create-hyper-v-vhd-set-files"></a>Hyper-v VHD セットファイルの作成
 VHD セットファイルは、Windows Server 2016 のゲストクラスター用の新しい共有仮想ディスクモデルです。 VHD セットファイルは、共有仮想ディスクのオンラインサイズ変更をサポートし、Hyper-v レプリカをサポートします。また、アプリケーション整合性チェックポイントに含めることができます。
@@ -33,7 +33,7 @@ Hyper-v では、チェックポイントチェーンの管理と共有 VHD セ�
 
 ## <a name="create-a-vhd-set-file-from-windows-powershell"></a>Windows PowerShell からの VHD セットファイルの作成
 
-ファイルの種類を使用して、 [新しい VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps) コマンドレットを使用します。ファイルパス内の VHD。 この例では、10 Gb の base .vhd という名前の VHD セットファイルを作成します。
+ファイルの種類を使用して、 [新しい VHD](/powershell/module/hyper-v/new-vhd) コマンドレットを使用します。ファイルパス内の VHD。 この例では、10 Gb の base .vhd という名前の VHD セットファイルを作成します。
 
 ``` PowerShell
 PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB

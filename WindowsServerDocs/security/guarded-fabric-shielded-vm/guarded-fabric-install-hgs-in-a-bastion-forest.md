@@ -5,12 +5,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 358fae9a9ee477537d3ee929ff81920175d58298
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 34aa075b088e556695ea1697e578682e6c801bbb
+ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766415"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96866321"
 ---
 # <a name="install-hgs-in-an-existing-bastion-forest"></a>既存の要塞フォレストに HGS をインストールする
 
@@ -41,7 +41,7 @@ HGS を初期化するアカウントにドメイン内のコンピューター�
 
 ## <a name="group-managed-service-account"></a>グループの管理されたサービス アカウント
 
-グループの管理されたサービスアカウント (gMSA) は、HGS が証明書を取得して使用するために使用する id です。 GMSA を作成するには、 [New-ADServiceAccount](/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps) を使用します。
+グループの管理されたサービスアカウント (gMSA) は、HGS が証明書を取得して使用するために使用する id です。 GMSA を作成するには、 [New-ADServiceAccount](/powershell/module/addsadministration/new-adserviceaccount) を使用します。
 ドメイン内の最初の gMSA の場合は、キー配布サービスのルートキーを追加する必要があります。
 
 各 HGS ノードには、gMSA パスワードへのアクセスが許可されている必要があります。
@@ -81,7 +81,7 @@ HGS を管理するために JEA を使用する必要はありませんが、Hg
 JEA エンドポイントの構成は、HGS 管理者と HGS レビューアーを含む2つのセキュリティグループを指定することで構成されます。
 管理者グループに属するユーザーは、HGS でポリシーを追加、変更、または削除できます。レビュー担当者は、現在の構成のみを表示できます。
 
-Active Directory 管理ツールまたは [新しい-ADGroup](/powershell/module/addsadministration/new-adgroup?view=win10-ps)を使用して、これらの jea グループに2つのセキュリティグループを作成します。
+Active Directory 管理ツールまたは [新しい-ADGroup](/powershell/module/addsadministration/new-adgroup)を使用して、これらの jea グループに2つのセキュリティグループを作成します。
 
 ```powershell
 New-ADGroup -Name 'HgsJeaReviewers' -GroupScope DomainLocal
@@ -140,7 +140,7 @@ HGS を高度にロックされた環境に展開する場合、特定のグル�
 
 **ポリシー名:** ネットワークセキュリティ: Kerberos で許可される暗号化の種類を構成する
 
-**アクション**: このポリシーが構成されている場合、このポリシーでサポートされている暗号化の種類のみを使用するように、gMSA アカウントを [adserviceaccount](/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) に更新する必要があります。 たとえば、ポリシーで AES128 hmac sha1 と AES256 hmac sha1 のみが許可されている場合は、を \_ \_ 実行する \_ \_ 必要があり `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256` ます。
+**アクション**: このポリシーが構成されている場合、このポリシーでサポートされている暗号化の種類のみを使用するように、gMSA アカウントを [adserviceaccount](/powershell/module/addsadministration/set-adserviceaccount) に更新する必要があります。 たとえば、ポリシーで AES128 hmac sha1 と AES256 hmac sha1 のみが許可されている場合は、を \_ \_ 実行する \_ \_ 必要があり `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256` ます。
 
 
 
