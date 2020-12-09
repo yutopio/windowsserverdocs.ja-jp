@@ -6,12 +6,12 @@ ms.topic: get-started-article
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9b0b23b6058655baf599ed66877228b39eb807f9
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 5dee105eaf14c92145e1fe70fe4627d37b2baa82
+ms.sourcegitcommit: b0c73df80d7b4ff0c332d77e0cc07f7e6e061600
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87993930"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96925563"
 ---
 # <a name="whats-new-in-dhcp"></a>DHCP の新機能
 
@@ -28,6 +28,10 @@ DHCP は、インターネット技術標準化委員会 (IETF) 標準であり�
 Windows 10 の DHCP クライアントは、2020年5月の更新プログラム (Windows 10 バージョン2004とも呼ばれます) で更新されました。 Windows クライアントを実行していて、テザリングさ Android phone 経由でインターネットに接続している場合、接続は "従量制" としてマークされます。 以前は、接続は未測定としてマークされていました。 すべての Android テザリングさフォンが従量制課金として検出されるわけではなく、他のネットワークの一部が従量制課金として表示される場合もあります。
 
 また、一部の Windows ベースのデバイスでは、従来のクライアントベンダー名が更新されています。 この値は、単に MSFT 5.0 として使用されます。 一部のデバイスは、MSFT 5.0 XBOX として表示されるようになりました。
+
+## <a name="new-dhcp-client-side-features-in-the-windows-10-april-2018-update"></a>Windows 10 April 2018 更新プログラムの DHCP クライアント側の新機能
+
+Windows 10 の DHCP クライアントは、windows 4 月2018更新プログラム (Windows 10 version 1803 とも呼ばれます) で更新されており、システムが接続する DHCP サーバーからオプション 119 (ドメイン検索オプション) が適用されます。 ドメイン検索オプションは、短い名前の DNS 参照用の DNS サフィックスを提供します。 [RFC 3397](https://tools.ietf.org/html/rfc3397)では、DHCP オプション119が指定されています。
 
 ## <a name="dhcp-subnet-selection-options"></a>DHCP サブネットの選択オプション
 
@@ -56,9 +60,9 @@ NAP サポートは、windows Server 2008 で DHCP サーバーの役割に導�
 | Windows Server 2008 R2 |サポートされています|
 | Windows Server 2012 |サポートされています|
 | Windows Server 2012 R2 |サポートされています|
-| Windows Server 2016|サポートなし|
+| Windows Server 2016|サポートされていません|
 
-Nap 展開では、nap をサポートするオペレーティングシステムを実行している DHCP サーバーは、nap DHCP 強制方法の NAP 強制ポイントとして機能できます。 NAP の DHCP の詳細については、「[チェックリスト: Dhcp 強制設計の実装](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd314186(v=ws.10))」を参照してください。
+Nap 展開では、nap をサポートするオペレーティングシステムを実行している DHCP サーバーは、nap DHCP 強制方法の NAP 強制ポイントとして機能できます。 NAP の DHCP の詳細については、「 [チェックリスト: Dhcp 強制設計の実装](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd314186(v=ws.10))」を参照してください。
 
 Windows Server 2016 では、DHCP サーバーは NAP ポリシーを強制しません。また、DHCP スコープを NAP で有効にすることはできません \- 。 また、NAP クライアントである DHCP クライアントコンピューターは \( \) 、dhcp 要求を使用して正常性ステートメントの SoH を送信します。 DHCP サーバーで Windows Server 2016 が実行されている場合、これらの要求は SoH が存在しないかのように処理されます。 DHCP サーバーは、クライアントに通常の DHCP リースを付与します。
 
