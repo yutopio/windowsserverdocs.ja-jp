@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/16/2019
+ms.date: 12/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 12e2535092b2842cf23fcc573b417f7520e99504
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fe553c03e85f3cb68f76b1a8d27e1da93bf9d9a3
+ms.sourcegitcommit: dce404a0a4500a693e294e0431c93f0ae90f8b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961836"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563782"
 ---
 # <a name="windows-desktop-client-for-admins"></a>管理者のための Windows デスクトップ クライアント
 
@@ -42,12 +42,14 @@ msiexec.exe /i `<path to the MSI>` /qn ALLUSERS=2 MSIINSTALLPERUSER=1
 
 ### <a name="configure-update-notifications"></a>更新プログラム通知を構成する
 
-既定では、更新プログラムがあるたびにクライアントから通知されます。 通知をオフにするには、次のレジストリ情報を設定します。
+既定では、更新プログラムがあるたびにクライアントから通知され、クライアントが閉じていて、アクティブな接続がないときに、クライアントは自動的に更新されます。 アクティブな接続がない場合でも、msrdc.exe プロセスはバックグラウンドで実行されるので、クライアントを再度開いたときにすぐに再接続することができます。 msrdc.exe を停止するには、システム トレイ領域の Windows Virtual Desktop アイコンを右クリックし、ドロップダウン メニューの **[セッションをすべて切断]** を選択します。
+
+通知をオフにするには、次のレジストリ情報を設定します。
 
 - **キー:** HKLM\Software\Microsoft\MSRDC\Policies
 - **型:** REG_DWORD
 - **名前:** AutomaticUpdates
-- **データ:** 0 = 通知を無効にする。 1 = 通知を表示する。
+- **データ:** 0 = 通知を無効にする。 1 = 通知を表示する。 2 = 通知を表示し、クローズ時に自動更新する。
 
 ### <a name="configure-user-groups"></a>ユーザー グループを構成する
 

@@ -5,14 +5,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/10/2020
+ms.date: 12/01/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: b5ee2f76acad471533c615ef2e5c68e7f827dbf6
-ms.sourcegitcommit: 7420c7c2ef14154f27e5bb810e774783a594b8e8
+ms.openlocfilehash: a9d10b23da6dc5fcd414bdab05afc20e15273763
+ms.sourcegitcommit: 090be8d858a830e46e1a9097afafd9c4275477b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94497417"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96578435"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows デスクトップ クライアントの新機能
 
@@ -24,23 +24,23 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 
 |ユーザー グループ |最新バージョン  |サポートされる最低バージョン |
 |-----------|----------------|--------------------------|
-|パブリック     |1.2.1446        |1.2.945                   |
-|Insider    |1.2.1520        |1.2.945                   |
+|パブリック     |1.2.1524        |1.2.945                   |
+|Insider    |1.2.1524        |1.2.945                   |
 
-## <a name="updates-for-version-121520-insider"></a>バージョン 1.2.1520 の更新内容 (Insider)
+## <a name="updates-for-version-121524"></a>バージョン 1.2.1524 の更新内容
 
-*公開日:2020 年 11 月 10 日*
+*公開日:2020 年 12 月 1 日*
 
-ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139233)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139144)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139369)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139456)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
-- 長いアプリ名が読みやすくなるように、リモート アプリのリスト ビューを作成しました。
-- クライアントの更新プログラムが入手可能になったときに表示されるアイコンを変更しました。
+- 長いアプリ名が読みやすくなるように、リモート リソースのリスト ビューを追加しました。
+- クライアントの更新プログラムが入手可能になったときに表示される通知アイコンを追加しました。
 
 ## <a name="updates-for-version-121446"></a>バージョン 1.2.1446 の更新内容
 
 *公開日:2020 年 10 月 27 日*
 
-ダウンロード:[Windows 64 ビット](https://go.microsoft.com/fwlink/?linkid=2139369)、[Windows 32 ビット](https://go.microsoft.com/fwlink/?linkid=2139456)、[Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Hq7C)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4HvgF)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ho64)
 
 - 自動更新機能が追加されました。これにより、クライアントは最新の更新プログラムを自動的にインストールできます。
 - クライアントで、接続センター内のさまざまなフィードが区別されるようになりました。
@@ -51,8 +51,6 @@ Windows デスクトップ クライアントの詳細については、「[Wind
 ## <a name="updates-for-version-121364"></a>バージョン 1.2.1364 の更新内容
 
 *公開日:2020 年 9 月 22 日*
-
-ダウンロード:[Windows 64 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMK)、[Windows 32 ビット](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4G1t9)、[Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMI)
 
 - シングル サインオン (SSO) が Windows 7 で動作しなかった問題を修正しました。
 - 別のアプリでオーディオ ストリームが排他モードで開かれている場合、および Teams のメディア最適化が有効になっている場合に、Teams の通話の呼び出しまたは参加時に発生していた接続エラーを修正しました。

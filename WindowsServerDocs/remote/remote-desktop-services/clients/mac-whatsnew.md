@@ -5,20 +5,38 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/06/2020
+ms.date: 12/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: b53046f493fca630b24f31818ae724403ffc3c53
-ms.sourcegitcommit: 5fc77b4325a18d8c22385d899b14fe724a662347
+ms.openlocfilehash: b9b811f3a0beb71461f868c61f0508566136a5d8
+ms.sourcegitcommit: dce404a0a4500a693e294e0431c93f0ae90f8b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94361159"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563822"
 ---
 # <a name="whats-new-in-the-macos-client"></a>macOS クライアントの新機能
 
 [macOS のリモート デスクトップ クライアント](remote-desktop-mac.md)は定期的に更新され、新機能の追加や問題の修正が行われています。 ここでは、最新の更新プログラムを紹介します。
 
 問題が生じた場合は、 **[ヘルプ]**  >  **[問題の報告]** に移動してマイクロソフトに問い合わせることができます。
+
+## <a name="updates-for-version-1050"></a>バージョン 10.5.0 の更新内容
+
+*公開日:2020 年 12 月 2 日*
+
+新しい更新プログラムのリリースについてお知らせします。 バグを報告し、問題の診断と解決に協力していただきありがとうございます。 このバージョンでは、次の変更を行いました。
+
+- 発行された PC 接続の表示、デバイス、およびフォルダー リダイレクトの設定を編集できるようになりました。
+- リモート アプリ ウィンドウが、最小化されたときにドックに縮小されるようになりました。
+- 現在の帯域幅と往復時間を表示する [接続情報] ダイアログを追加しました。
+- RD ゲートウェイの同意と管理メッセージのサポートを追加しました。
+- gatewayusagemethod 値 0 または 4 を指定する RDP ファイルが正しくインポートされなかった問題を修正しました。
+- [ワークスペースの編集] シートにワークスペースの最終更新時刻が表示されるようになりました。
+- *--script* パラメーターを使用するときに出力されていたトレースの spew を削除しました。
+- RD ゲートウェイ サーバーを使用して接続した場合に、クライアントで 0x30000066 エラーが返される問題に対処しました。
+- 認証の拡張保護がサーバーに設定されていると、ユーザーが資格情報の入力を繰り返し求められる問題を修正しました。
+- クラッシュ レポートを通してユーザーが特定した信頼性に関する問題に対処しました。
+- キーボードと VoiceOver に関連するアクセシビリティのバグに対処しました。
 
 ## <a name="updates-for-version-1041"></a>バージョン 10.4.1 の更新内容
 

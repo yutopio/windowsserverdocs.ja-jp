@@ -8,12 +8,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: a9664d11e61d69faab87f351ae5f9915afd47f98
-ms.sourcegitcommit: 094482d0e7a8a9688790af06968d68f0294b78df
+ms.openlocfilehash: 076bc138620cb3babe2fbd08253577f3f740d976
+ms.sourcegitcommit: f18097c21e50a09aef2f1937f52608b0042ef0e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94550735"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755409"
 ---
 # <a name="securing-privileged-access"></a>特権アクセスの保護
 
@@ -99,7 +99,7 @@ Azure Active Directory と従来のオンプレミス Active Directory の管理
 
 ### <a name="4-identity-attack-detection"></a>4.ID 攻撃の検出
 
-[Azure Advanced Threat Protection (ATP)](/azure-advanced-threat-protection/what-is-atp) はクラウド ベースのセキュリティ ソリューションであり、オンプレミスの Active Directory 環境を対象とする高度な脅威、侵害された ID、および悪意のあるインサイダーによるアクションの識別、検出、調査支援を行います。
+[Microsoft Defender for Identity](https://docs.microsoft.com/defender-for-identity/what-is) はクラウド ベースのセキュリティ ソリューションであり、オンプレミスの Active Directory 環境を対象とする高度な脅威、侵害された ID、および悪意のあるインサイダーによるアクションの識別、検出、調査支援を行います。
 
 ## <a name="phase-2-significant-incremental-improvements"></a>フェーズ 2:大幅な漸進的な改善
 
@@ -134,9 +134,9 @@ Credential Guard を有効にすると、NTLM パスワード ハッシュ、Ker
 
 Microsoft Azure AD Identity Protection を有効にすると、資格情報が漏洩したユーザーについてレポートを作成し、修復することが可能になります。 [Azure AD Identity Protection](/azure/active-directory/identity-protection/index) を利用して、組織が脅威からクラウド環境やハイブリッド環境を保護できるようにすることができます。
 
-### <a name="6-azure-atp-lateral-movement-paths"></a>6.Azure ATP の横移動パス
+### <a name="6-microsoft-defender-for-identity-lateral-movement-paths"></a>6。Microsoft Defender for Identity の横移動パス
 
-必ず、特権アクセス アカウントの所有者が PAW を管理のみに使用していることを確認してください。これにより、侵害された特権のないアカウントが、Pass-the-Hash や Pass-the-Ticket などの資格情報盗用攻撃を介して特権アカウントにアクセスするリスクを最小限に抑えます。 [Azure ATP の横移動パス (LMP)](/azure-advanced-threat-protection/use-case-lateral-movement-path) では、特権アカウントが危険にさらされる可能性がある場所を特定するための、わかりやすいレポートが提供されます。
+必ず、特権アクセス アカウントの所有者が PAW を管理のみに使用していることを確認してください。これにより、侵害された特権のないアカウントが、Pass-the-Hash や Pass-the-Ticket などの資格情報盗用攻撃を介して特権アカウントにアクセスするリスクを最小限に抑えます。 [Microsoft Defender for Identity の横移動パス (LMP)](https://docs.microsoft.com/defender-for-identity/use-case-lateral-movement-path) では、特権アカウントが危険にさらされる可能性がある場所を特定するための、わかりやすいレポートが提供されます。
 
 ## <a name="phase-3-security-improvement-and-sustainment"></a>フェーズ 3: セキュリティの向上と維持
 
@@ -158,7 +158,7 @@ Microsoft Azure AD Identity Protection を有効にすると、資格情報が�
 
 一元管理された SIEM ツールにログを統合することにより、組織でセキュリティ イベントの分析、検出、対応を行うことができます。 「[Active Directory の侵害の兆候を監視する](../ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise.md)」および「[付録 L: 監視するイベント](../ad-ds/plan/appendix-l--events-to-monitor.md)」の記事で、環境で監視する必要があるイベントに関するガイダンスを提供しています。
 
-セキュリティ情報およびイベント管理 (SIEM) でのアラートの集計、作成、およびチューニングには熟練したアナリストが必要なため、これは計画を超える部分です (すぐに使用できるアラートが含まれている 30 日の計画の Azure ATP とは異なります)。
+セキュリティ情報およびイベント管理 (SIEM) でのアラートの集計、作成、およびチューニングには熟練したアナリストが必要なため、これは計画を超える手順です (すぐに使用できるアラートが含まれている 30 日の計画の Microsoft Defender for Identity とは異なります)。
 
 ### <a name="4-leaked-credentials---force-password-reset"></a>4.漏洩した資格情報 - パスワードのリセットを強制する
 
