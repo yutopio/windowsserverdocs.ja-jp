@@ -5,15 +5,15 @@ ms.author: stevenek
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 09/09/2020
+ms.date: 12/09/2020
 description: Windows Server の記憶域スペースダイレクトを使用して、ハイパー集約型インフラストラクチャまたは収束 (disaggregated とも呼ばれます) インフラストラクチャとしてソフトウェア定義記憶域を展開する手順について説明します。
 ms.localizationpriority: medium
-ms.openlocfilehash: c7ff6b1cf017405d90ae7e27d1d5853286a78b89
-ms.sourcegitcommit: c56e74743e5ad24b28ae81668668113d598047c6
+ms.openlocfilehash: 649d9154e08dcde0752447d2b8a290dce9dc15d2
+ms.sourcegitcommit: f95a991491ff09260d979078e248e2636bd2db54
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987312"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96997849"
 ---
 # <a name="deploy-storage-spaces-direct"></a>記憶域スペース ダイレクトの展開
 
@@ -22,7 +22,7 @@ ms.locfileid: "91987312"
 このトピックでは、Windows Server に [記憶域スペースダイレクト](storage-spaces-direct-overview.md) を展開する手順について説明します。 Azure Stack HCI の一部として記憶域スペースダイレクトを展開する方法については、「 [AZURE STACK HCI の展開プロセス](/azure-stack/hci/deploy/deployment-overview)」を参照してください。
 
 > [!Tip]
-> ハイパー集約型インフラストラクチャの取得を検討していますか? Microsoft は、パートナーから検証済みのハードウェア/ソフトウェア Azure Stack HCI ソリューションを購入することをお勧めします。 これらのソリューションは、互換性と信頼性を確保するために、Microsoft の参照アーキテクチャに照らして設計、組み立て、検証されているため、迅速に稼働させることができます。 Azure Stack HCI で動作するハードウェア/ソフトウェアソリューションのカタログを参照するには、 [AZURE STACK HCI カタログ](https://azure.microsoft.com/products/azure-stack/hci/catalog/)を参照してください。
+> ハイパー集約型インフラストラクチャの取得を検討していますか? Microsoft は、パートナーから検証済みのハードウェア/ソフトウェア Azure Stack HCI ソリューションを購入することをお勧めします。 これらのソリューションは、互換性と信頼性を確保するために、Microsoft の参照アーキテクチャに照らして設計、組み立て、検証されているため、迅速に稼働させることができます。 Azure Stack HCI で動作するハードウェア/ソフトウェアソリューションのカタログを参照するには、 [AZURE STACK HCI カタログ](https://aka.ms/azurestackhcicatalog)を参照してください。
 
 > [!Tip]
 > Microsoft Azure に含まれる Hyper-v 仮想マシンを使用して、 [ハードウェアなしで記憶域スペースダイレクトを評価](storage-spaces-direct-in-vm.md)することができます。 また、トレーニング目的で使用する [Windows Server の迅速なラボデプロイスクリプト](https://aka.ms/wslab)を確認することもできます。
@@ -60,7 +60,7 @@ ms.locfileid: "91987312"
 - 同じドメインまたは完全に信頼されたドメインに参加している
 - Hyper-V およびフェールオーバー クラスタリング用のリモート サーバー管理ツール (RSAT) と PowerShell モジュール。 RSAT ツールと PowerShell モジュールは Windows Server で使用でき、その他の機能をインストールしなくてもインストールできます。 Windows 10 管理 PC に [リモートサーバー管理ツール](https://www.microsoft.com/download/details.aspx?id=45520) をインストールすることもできます。
 
-管理システムで、フェールオーバー クラスターと Hyper-V 管理ツールをインストールします。 この操作は、サーバー マネージャーで**役割と機能の追加**ウィザードを使用して行うことができます。 **[機能]** ページで、**[リモート サーバー管理ツール]** を選択し、インストールするツールを選択します。
+管理システムで、フェールオーバー クラスターと Hyper-V 管理ツールをインストールします。 この操作は、サーバー マネージャーで **役割と機能の追加** ウィザードを使用して行うことができます。 **[機能]** ページで、**[リモート サーバー管理ツール]** を選択し、インストールするツールを選択します。
 
 PS セッションを開始し、接続するノードのサーバー名または IP アドレスを使用します。 このコマンドを実行した後でパスワードの入力を求められます。 Windows のセットアップ時に指定した管理者パスワードを入力してください。
 
@@ -78,7 +78,7 @@ PS セッションを開始し、接続するノードのサーバー名また�
    ```
 
 > [!TIP]
-> 管理システムからリモートで展開している場合、 *WinRM で要求を処理できない*ようなエラーが発生することがあります。 この問題を解決するには、Windows PowerShell を使用して、管理コンピューターの信頼されたホストの一覧に各サーバーを追加します。
+> 管理システムからリモートで展開している場合、 *WinRM で要求を処理できない* ようなエラーが発生することがあります。 この問題を解決するには、Windows PowerShell を使用して、管理コンピューターの信頼されたホストの一覧に各サーバーを追加します。
 >
 > `Set-Item WSMAN:\Localhost\Client\TrustedHosts -Value Server01 -Force`
 >
@@ -384,7 +384,7 @@ CD $ScriptFolder
 
 クラスター化されたファイルサーバーをデプロイした後は、実際のワークロードを導入する前に、合成ワークロードを使用してソリューションのパフォーマンスをテストすることをお勧めします。 これにより、ソリューションが正常に実行されていることを確認し、残存している問題を解決してからワークロードの複雑さを増すことができます。 詳細については、「 [合成ワークロードを使用した記憶域スペースのパフォーマンスのテスト](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn894707(v=ws.11))」を参照してください。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 -   [記憶域スペース ダイレクトの概要](storage-spaces-direct-overview.md)
 -   [記憶域スペース ダイレクトのキャッシュについて](understand-the-cache.md)

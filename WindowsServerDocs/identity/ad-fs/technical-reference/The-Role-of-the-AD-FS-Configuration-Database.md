@@ -1,17 +1,18 @@
 ---
 ms.assetid: 68db7f26-d6e3-4e67-859b-80f352e6ab6a
 title: AD FS 構成データベースの役割
+description: AD FS の1つのインスタンスを表す構成データをすべて格納するための構成データベースの役割について説明します。
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 86799d8cb2b6031105f7f4a86d6a29846c9bb8dc
-ms.sourcegitcommit: 03048411c07c1a1d0c8bb0b2a60c1c17c9987314
+ms.openlocfilehash: 7adcd3a62ff85167172fcd856a3214fb51d9bd0b
+ms.sourcegitcommit: f95a991491ff09260d979078e248e2636bd2db54
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96939002"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96997839"
 ---
 # <a name="the-role-of-the-ad-fs-configuration-database"></a>AD FS 構成データベースの役割
 AD FS 構成データベースには、Active Directory フェデレーションサービス (AD FS) AD FS の1つのインスタンスを表すすべての構成データ \( \) \( (フェデレーションサービス) が格納され \) ます。 AD FS 構成データベースでは、フェデレーション サービスは、パートナー、証明書、属性ストア、要求、およびこれらの関連エンティティに関するさまざまなデータを識別するために必要なパラメーターのセットを定義します。 この構成データは、 &reg; \( \) windows Server 2012 以降に含まれている Microsoft SQL Server データベースまたは windows Internal database WID 機能のいずれかに格納できます。
@@ -74,10 +75,10 @@ WID の同期プロセスでは、中程度の変更をより効率的に転送�
 ```
 PS C:\> Get-ADFSSyncProperties
 ```
-プライマリ AD FS サーバーでは、このコマンドレットは、ロールがプライマリコンピューターであることのみを示します。 セカンダリメンバーでは、プライマリコンピューターからの最後の同期の完全な Quallified ドメイン名、最後の同期の状態と時刻、ポーリングの期間、現在構成されているプライマリ computername、プライマリコンピューターのポート、セカンダリコンピューターの役割を含む、構成の残りの部分が表示されます。 
+プライマリ AD FS サーバーでは、このコマンドレットは、ロールがプライマリコンピューターであることのみを示します。 セカンダリメンバーでは、プライマリコンピューターからの最後の同期の完全な Quallified ドメイン名、最後の同期の状態と時刻、ポーリングの期間、現在構成されているプライマリ computername、プライマリコンピューターのポート、セカンダリコンピューターの役割を含む、構成の残りの部分が表示されます。
 
 **ADFSSyncProperties** コマンドレットは、Active Directory フェデレーションサービス (AD FS) (AD FS) 構成データベースの同期の頻度を変更します。
-また、このコマンドレットでは、フェデレーションサーバーファーム内のプライマリサーバーとなるフェデレーションサーバーも指定します。 
+また、このコマンドレットでは、フェデレーションサーバーファーム内のプライマリサーバーとなるフェデレーションサーバーも指定します。
 
 > [!NOTE]
 > プライマリ フェデレーション サーバーがクラッシュしてオフラインになった場合でも、すべてのセカンダリ フェデレーション サーバーは通常どおり要求を処理し続けます。 ただし、プライマリ フェデレーション サーバーがオンライン状態に戻るまで、フェデレーション サービスに新たに変更を加えることはできません。 セカンダリ フェデレーション サーバーを Windows PowerShell を使用して、プライマリ フェデレーション サーバーを指定できます。 新しいプライマリサーバーを指名する場合は、新しいプライマリサーバーを反映するようにサーバーを変更する必要があります。 WID ファームに2つのプライマリがあると、ファームの stableness に影響し、データを失う passibility が生じます。
@@ -102,9 +103,10 @@ PS C:\> Set-AdfsSyncProperties -Role "PrimaryComputer"
 PS C:\> Set-AdfsSyncProperties -Role "SecondaryComputer" -PrimaryComputerName "<FQDN of primary server>"
 ```
 
-このコマンドは、WID ファームのプライマリ AD FS サーバーをセカンダリサーバーに変更します。 プライマリサーバーの完全修飾ドメイン名を指定する必要があります。 そうしないと、すべてのセカンダリ AD FS サーバーが正常に同期されない可能性があります。 注: プライマリサーバーは、セカンダリサーバーからのポート80で HTTP 経由でアクセスできる必要があります。
+このコマンドは、WID ファームのプライマリ AD FS サーバーをセカンダリサーバーに変更します。 プライマリサーバーの完全修飾ドメイン名を指定する必要があります。 そうしないと、すべてのセカンダリ AD FS サーバーが正常に同期されない可能性があります。
+注: プライマリサーバーは、セカンダリサーバーからのポート80で HTTP 経由でアクセスできる必要があります。
 
-詳細については[、「AdfsSyncProperties](https://docs.microsoft.com/en-us/powershell/module/adfs/set-adfssyncproperties?view=win10-ps) 」を参照してください。
+詳細については[、「AdfsSyncProperties](https://docs.microsoft.com/powershell/module/adfs/set-adfssyncproperties?view=win10-ps) 」を参照してください。
 
 
 ## <a name="using-sql-server-to-store-the-ad-fs-configuration-database"></a>SQL Server を使用して AD FS 構成データベースを保存する

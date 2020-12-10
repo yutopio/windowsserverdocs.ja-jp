@@ -5,17 +5,17 @@ ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 01/08/2019
-ms.openlocfilehash: 2e5cf6c94d0127a283c640a48aaa2fced5472e9d
-ms.sourcegitcommit: dd1fbb5d7e71ba8cd1b5bfaf38e3123bca115572
+ms.date: 12/09/2020
+ms.openlocfilehash: 3c00a81d2e93f6ba39b76f0bfc4612f6f26f15fc
+ms.sourcegitcommit: f95a991491ff09260d979078e248e2636bd2db54
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90746727"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96997829"
 ---
 # <a name="supported-windows-guest-operating-systems-for-hyper-v-on-windows-server"></a>Windows Server 上の Hyper-v でサポートされている Windows ゲストオペレーティングシステム
 
->適用先:Windows Server 2019、Windows Server 2016
+>適用対象: Windows Server 2016、Windows Server 2019、Azure Stack HCI、バージョン20H2
 
 Hyper-v では、ゲストオペレーティングシステムとして仮想マシンで実行するために、Windows Server、Windows、および Linux のディストリビューションの複数のバージョンをサポートしています。 この記事では、サポートされている Windows Server と Windows ゲスト オペレーティング システムについて説明します。 Linux および FreeBSD のディストリビューションでは、次を参照してください。 [Windows にインストールされた Hyper-v の仮想マシンをサポートされている Linux および FreeBSD](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)します。
 
