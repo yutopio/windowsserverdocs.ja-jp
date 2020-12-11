@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「要求の説明の追加」を参照してください。
 ms.assetid: 7d230527-f4fe-4572-8838-0b354ee0b06b
 title: 要求記述を追加する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 31c04f557900cee661c2283957f590caf370bbe5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: bdf57eddd1ad76c5bf9217e9aab97cfef9332b61
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942736"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044300"
 ---
 # <a name="add-a-claim-description"></a>要求記述を追加する
 
@@ -22,22 +23,22 @@ ms.locfileid: "87942736"
 
 要求を追加するには、次の手順を実行します。
 
-この手順を完了するには、ローカル コンピューター上の **Administrators** または同等のメンバーシップが最低限必要です。  適切なアカウントおよびグループメンバーシップの使用方法の詳細については、「[ローカルおよびドメインの既定のグループ](https://go.microsoft.com/fwlink/?LinkId=83477)」を参照してください。
+この手順を完了するには、ローカル コンピューター上の **Administrators** または同等のメンバーシップが最低限必要です。  適切なアカウントおよびグループメンバーシップの使用方法の詳細については、「 [ローカルおよびドメインの既定のグループ](https://go.microsoft.com/fwlink/?LinkId=83477)」を参照してください。
 
 ## <a name="to-add-a-claim-description"></a>要求の説明を追加するには
 
 1. サーバー マネージャーで、 **[ツール]** をクリックし、次に **[AD FS の管理]** を選択します。
 
-2. [**サービス**] を展開し、右側の [**要求の説明の追加**] をクリックします。
+2. [ **サービス** ] を展開し、右側の [ **要求の説明の追加**] をクリックします。
    ![要求の説明の追加](media/Add-a-Claim-Description/claimdesc1.png)
 
-3. [要求の説明の追加] ダイアログボックスの [**表示名**] に、この要求のグループまたはロールを識別する一意の名前を入力します。
+3. [要求の説明の追加] ダイアログボックスの [ **表示名**] に、この要求のグループまたはロールを識別する一意の名前を入力します。
 
-4. **短い名前**を追加します。
+4. **短い名前** を追加します。
 
-5. [**要求識別子**] に、使用する要求のグループまたはロールに関連付けられている URI を入力します。
+5. [ **要求識別子**] に、使用する要求のグループまたはロールに関連付けられている URI を入力します。
 
-6. [**説明**] に、この要求の目的に最も適したテキストを入力します。
+6. [ **説明**] に、この要求の目的に最も適したテキストを入力します。
 
 7. 組織のニーズに応じて、次のいずれかのチェックボックスをオンにして、この要求をフェデレーションメタデータに発行します。
 
@@ -52,5 +53,5 @@ ms.locfileid: "87942736"
 ![要求の説明の追加](media/Add-a-Claim-Description/claimdesc2.png)
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [AD FS の運用](../ad-fs-operations.md)

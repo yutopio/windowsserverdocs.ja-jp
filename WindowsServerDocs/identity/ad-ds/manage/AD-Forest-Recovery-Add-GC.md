@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「AD フォレストの回復-GC の追加」を参照してください。
 title: AD フォレストの回復-GC の追加
 ms.author: daveba
 author: iainfoulds
@@ -6,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: 91f638c5a73b334c63a1ce765aaf0fb776806d5d
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: ed64cf4830fb47da58190721f5b1fe056bc4e4a2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067994"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043010"
 ---
 # <a name="ad-forest-recovery---adding-the-gc"></a>AD フォレストの回復-GC の追加
 
@@ -21,10 +22,10 @@ ms.locfileid: "93067994"
 
 ## <a name="to-add-the-global-catalog"></a>グローバルカタログを追加するには
 
-1. [ **スタート** ] をクリックし、[ **すべてのプログラム** ]、[ **管理ツール** ] の順にポイントして、[ **Active Directory サイトとサービス** ] をクリックします。
+1. [ **スタート**] をクリックし、[ **すべてのプログラム**]、[ **管理ツール**] の順にポイントして、[ **Active Directory サイトとサービス**] をクリックします。
 2. コンソールツリーで、[ **サイト** ] コンテナを展開し、対象サーバーが含まれている適切なサイトを選択します。
 3. [ **サーバー** ] コンテナーを展開し、グローバルカタログを追加する DC のサーバーオブジェクトを展開します。
-4. [ **NTDS 設定** ] を右クリックし、[ **プロパティ** ] をクリックします。
+4. [ **NTDS 設定**] を右クリックし、[ **プロパティ**] をクリックします。
 5. [ **グローバルカタログ** ] チェックボックスをオンにします。
 ![GC の追加](media/AD-Forest-Recovery-Add-GC/addgc1.png)
 

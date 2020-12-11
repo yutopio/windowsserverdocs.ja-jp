@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 保護されたアカウントの構成方法'
 title: 保護されるアカウントの構成方法
 ms.topic: article
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: f50e5494210c349a1438570140d6733dce17dcb9
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: c9f5e16d6dc6ccdc8233ad6daac1d917d47fdec8
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89639039"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039580"
 ---
 # <a name="how-to-configure-protected-accounts"></a>保護されるアカウントの構成方法
 
@@ -55,16 +56,16 @@ Protected Users は、新しいユーザーや既存のユーザーを追加で�
 
 -   最初の 4 時間の有効期間後のユーザー チケット (TGT) の更新
 
-グループにユーザーを追加するには、Active Directory 管理センター (ADAC)、Active Directory ユーザーとコンピューターなどの [UI ツール](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753515(v=ws.11)) 、または [Dsmod group](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732423(v=ws.11))などのコマンドラインツール、または Windows PowerShell [add-adgroupmember](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617210(v=technet.10)) コマンドレットを使用できます。 サービスとコンピューターのアカウントは、Protected Users グループのメンバーに*しないでください*。 これらのアカウントのメンバーシップでは、パスワードまたは証明書が常にホストで利用できるため、ローカル保護が提供されません。
+グループにユーザーを追加するには、Active Directory 管理センター (ADAC)、Active Directory ユーザーとコンピューターなどの [UI ツール](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753515(v=ws.11)) 、または [Dsmod group](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732423(v=ws.11))などのコマンドラインツール、または Windows PowerShell [add-adgroupmember](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617210(v=technet.10)) コマンドレットを使用できます。 サービスとコンピューターのアカウントは、Protected Users グループのメンバーに *しないでください*。 これらのアカウントのメンバーシップでは、パスワードまたは証明書が常にホストで利用できるため、ローカル保護が提供されません。
 
 > [!WARNING]
 > 認証の制限には回避策はありません。つまり、Enterprise Admins グループや Domain Admins グループのように高い権限を持つグループのメンバーであっても、Protected Users グループの他のメンバーと同じ制限が適用されます。 このようなグループのすべてのメンバーが Protected Users グループに追加されると、それらのすべてのアカウントがロックアウトされる可能性があります。潜在的な影響を十分にテストするまでは、高い特権を持つアカウントを Protected Users グループに追加しないでください。
 
 Protected Users グループのメンバーは、Kerberos で高度暗号化標準 (AES) を使用して認証できる必要があります。 この方法では、Active Directory のアカウントに対する AES キーが必要です。 パスワードが Windows Server 2008 を実行するドメイン コント ローラーに変更されたか、後でない限り、組み込みの管理者は AES キーを持ちません。 また、以前のバージョンの Windows Server を実行しているドメインコントローラーでパスワードが変更されたアカウントは、すべてロックアウトされます。そのため、次のベストプラクティスに従ってください。
 
--   テストしていないドメインにしない限り、 **2008 またはそれ以降、すべてのドメイン コント ローラーが Windows Server を実行**します。
+-   テストしていないドメインにしない限り、 **2008 またはそれ以降、すべてのドメイン コント ローラーが Windows Server を実行** します。
 
--   ドメインの**作成前**に作成されたすべてのドメイン アカウントの*パスワードを変更*してください。 そうしないと、これらのアカウントを認証できません。
+-   ドメインの **作成前** に作成されたすべてのドメイン アカウントの *パスワードを変更* してください。 そうしないと、これらのアカウントを認証できません。
 
 -   **パスワードの変更** アカウントを Protected Users に追加する前にユーザーごとにグループ化や、パスワードが Windows Server 2008 を実行するドメイン コント ローラーで最近変更された、またはそれ以降であることを確認します。
 
@@ -125,9 +126,9 @@ Protected Users に関連するイベントのトラブルシューティング�
 
 Windows Server 2012 では、ダイナミック アクセス制御には、組織全体でファイル サーバーを構成する簡単な方法を提供する集約型アクセス ポリシーと呼ばれる Active Directory フォレスト スコープ オブジェクトのクラスが導入されました。 Windows Server 2012 r2、Windows Server 2012 R2 のドメイン内のアカウント クラスに認証の構成を適用する認証ポリシー (objectClass Msds-authnpolicies) と呼ばれる新しいオブジェクト クラスを使用できます。 次の Active Directory アカウント クラスがあります。
 
--   ユーザー
+-   User
 
--   コンピューター
+-   Computer
 
 -   管理されたサービス アカウントおよびグループの管理されたサービス アカウント (GMSA)
 
@@ -167,7 +168,7 @@ AP 交換は通常、アプリケーション プロトコル内部のデータ�
 
 ### <a name="requirements-for-using-authentication-policies"></a>認証ポリシーを使用するための要件
 
-|ポリシー|必要条件|
+|ポリシー|要件|
 |-----|--------|
 |TGT の有効期間のカスタマイズ| Windows Server 2012 R2 のドメイン機能レベルのアカウント ドメイン|
 |ユーザー サインオンの制限|-ダイナミック アクセス制御のサポート Windows Server 2012 R2 のドメイン機能レベルのアカウント ドメイン<br />-動的 Access Control サポートを備えた windows 8、Windows 8.1、Windows Server 2012、または Windows Server 2012 R2 のデバイス|
@@ -217,9 +218,9 @@ AP 交換は通常、アプリケーション プロトコル内部のデータ�
 
     認証ポリシーは、Active Directory のアカウントの種類に基づいて適用されます。 それぞれの種類に対する設定を構成することで、1 つのポリシーを 3 つのアカウントの種類すべてに適用できます。 次のアカウントの種類があります。
 
-    -   ユーザー
+    -   User
 
-    -   コンピューター
+    -   Computer
 
     -   管理されたサービス アカウントおよびグループの管理されたサービス アカウント
 
@@ -227,7 +228,7 @@ AP 交換は通常、アプリケーション プロトコル内部のデータ�
 
 4.  ユーザー アカウントの TGT の有効期間を構成するには、**[ユーザー アカウントのチケット保証チケットの有効期間を指定します]** チェック ボックスをオンにして、時間を分単位で入力します。
 
-    ![ユーザーアカウントのチケット保証チケットの有効期間を指定する](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TGTLifetime.gif)
+    ![ユーザーアカウントの Ticket-Granting チケットの有効期間を指定します](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_TGTLifetime.gif)
 
     たとえば、TGT の最長有効期間を 10 時間にする場合は、画面に示すように「**600**」と入力します。 TGT の有効期間を構成しない場合、アカウントが **Protected Users** グループのメンバーであれば、TGT の有効期間および更新は 4 時間に設定されます。 そうでない場合、TGT の有効期間および更新はドメイン ポリシーによって異なります。例として、あるドメインの既定の設定が表示されている [グループ ポリシー管理エディター] ウィンドウを次に示します。
 
@@ -256,7 +257,7 @@ AP 交換は通常、アプリケーション プロトコル内部のデータ�
 
 3.  オブジェクトの種類を変更するには、**[オブジェクトの種類]** をクリックします。
 
-    ![オブジェクト型](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_ChangeObjects.gif)
+    ![オブジェクトの種類](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_ChangeObjects.gif)
 
 4.  Active Directory 内のコンピューター オブジェクトを選択するには、**[コンピューター]** をクリックし、**[OK]** をクリックします。
 
@@ -414,7 +415,7 @@ PS C:\> Get-ADAuthenticationPolicy -Filter 'Enforce -eq $false' | Remove-ADAuthe
 
 #### <a name="to-create-an-authentication-policy-silo-by-using-active-directory-administrative-center"></a>Active Directory 管理センターを使用して認証ポリシー サイロを作成するには
 
-1.  **Active Directory 管理センター**を開き、**[認証]** をクリックして **[認証ポリシー サイロ]** を右クリックし、**[新規]**、**[認証ポリシー サイロ]** の順にクリックします。
+1.  **Active Directory 管理センター** を開き、**[認証]** をクリックして **[認証ポリシー サイロ]** を右クリックし、**[新規]**、**[認証ポリシー サイロ]** の順にクリックします。
 
     ![* * Active Directory 管理センター * * を開き、* * 認証 * * をクリックし、* * 認証ポリシーサイロ * * を右クリックして * * [新規] * * をクリックし、* * [認証ポリシーサイロ] * * をクリックします。](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_CreateNewAuthNPolicySilo.gif)
 

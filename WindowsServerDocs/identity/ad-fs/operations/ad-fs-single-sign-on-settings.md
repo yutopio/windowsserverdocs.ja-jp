@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「単一 Sign-On 設定の AD FS」を参照してください。
 ms.assetid: 1a443181-7ded-4912-8e40-5aa447faf00c
 title: AD FS 2016 シングル サイン オンの設定
 author: billmath
@@ -6,20 +7,20 @@ ms.author: billmath
 manager: femila
 ms.date: 08/17/2017
 ms.topic: article
-ms.openlocfilehash: 5d558717e3baa2f849636f4a8f347ce327cb787c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0a6596805107e728417da99496de565a549ae7cc
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966939"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041920"
 ---
-# <a name="ad-fs-single-sign-on-settings"></a>AD FS のシングルサインオンの設定
+# <a name="ad-fs-single-sign-on-settings"></a>単一 Sign-On 設定の AD FS
 
-シングルサインオン (SSO) を使用すると、ユーザーは1回認証するだけで、追加の資格情報の入力を求められることなく、複数のリソースにアクセスできます。  この記事では、SSO の既定の AD FS 動作、およびこの動作をカスタマイズするための構成設定について説明します。
+シングル Sign-On (SSO) を使用すると、ユーザーは1回認証するだけで、追加の資格情報の入力を求められることなく、複数のリソースにアクセスできます。  この記事では、SSO の既定の AD FS 動作、およびこの動作をカスタマイズするための構成設定について説明します。
 
-## <a name="supported-types-of-single-sign-on"></a>サポートされているシングルサインオンの種類
+## <a name="supported-types-of-single-sign-on"></a>サポートされている単一 Sign-On の種類
 
-AD FS は、いくつかの種類のシングルサインオンエクスペリエンスをサポートしています。
+AD FS は、いくつかの種類のシングル Sign-On エクスペリエンスをサポートしています。
 
 -   **セッション SSO**
 
@@ -43,7 +44,7 @@ AD FS は、いくつかの種類のシングルサインオンエクスペリ�
 
  前述のように、永続的 SSO が無効になっている場合を除き、登録済みデバイスのユーザーは常に永続的 SSO を取得します。 登録されていないデバイスの場合は、"サインインしたままにする" (KMSI) 機能を有効にすることで、永続的 SSO を実現できます。
 
- Windows Server 2012 R2 では、"サインインしたままにする" シナリオで PSSO を有効にするには、この修正プログラムをインストールする必要があります。この[修正プログラム](https://support.microsoft.com/kb/2958298/)は、 [windows RT 8.1、Windows 8.1、および Windows Server 2012 R2 の年 8 2014 月の更新プログラムのロールアップ](https://support.microsoft.com/kb/2975719)の一部でもあります。
+ Windows Server 2012 R2 では、"サインインしたままにする" シナリオで PSSO を有効にするには、この修正プログラムをインストールする必要があります。この [修正プログラム](https://support.microsoft.com/kb/2958298/) は、 [windows RT 8.1、Windows 8.1、および Windows Server 2012 R2 の年 8 2014 月の更新プログラムのロールアップ](https://support.microsoft.com/kb/2975719)の一部でもあります。
 
 タスク | PowerShell | 説明
 ------------ | ------------- | -------------
@@ -52,9 +53,9 @@ AD FS は、いくつかの種類のシングルサインオンエクスペリ�
 
 
 
-## <a name="ad-fs-2016---single-sign-on-and-authenticated-devices"></a>AD FS 2016-シングルサインオンと認証されたデバイス
+## <a name="ad-fs-2016---single-sign-on-and-authenticated-devices"></a>AD FS 2016-1 つの Sign-On と認証されたデバイス
 AD FS 2016 は、要求元が登録されているデバイスから最大90日まで増加し、14日以内に認証が要求される場合、PSSO を変更します ([デバイスの使用状況] ウィンドウ)。
-最初に資格情報を入力した後、既定では、登録されたデバイスを持つユーザーは、少なくとも14日ごとに1回以上 AD FS リソースにアクセスするためにデバイスを使用するため、最大90日間のシングルサインオンを利用できます。  資格情報を指定してから15日間待っている場合、ユーザーは資格情報の入力を再度求められます。
+最初に資格情報を入力した後、既定では、登録されたデバイスを持つユーザーは、少なくとも14日ごとに1回、AD FS リソースにアクセスするためにデバイスを使用するので、最大90日間、1つの Sign-On を取得します。  資格情報を指定してから15日間待っている場合、ユーザーは資格情報の入力を再度求められます。
 
 永続的 SSO は既定で有効になっています。 無効になっている場合、PSSO クッキーは書き込まれません |。
 
@@ -62,19 +63,19 @@ AD FS 2016 は、要求元が登録されているデバイスから最大90日�
 Set-AdfsProperties –EnablePersistentSso <Boolean\>
 ```
 
-[デバイスの使用量] ウィンドウ (既定では14日) は、AD FS プロパティ**DeviceUsageWindowInDays**によって管理されます。
+[デバイスの使用量] ウィンドウ (既定では14日) は、AD FS プロパティ **DeviceUsageWindowInDays** によって管理されます。
 
 ``` powershell
 Set-AdfsProperties -DeviceUsageWindowInDays
 ```
-シングルサインオンの最大期間 (既定では90日) は AD FS プロパティ**PersistentSsoLifetimeMins**によって管理されます。
+最大1つの Sign-On 期間 (既定では90日) は、AD FS プロパティ **PersistentSsoLifetimeMins** によって管理されます。
 
 ``` powershell
 Set-AdfsProperties -PersistentSsoLifetimeMins
 ```
 
 ## <a name="keep-me-signed-in-for-unauthenticated-devices"></a>認証されていないデバイスにサインインしたままにする
-登録されていないデバイスの場合、シングルサインオンの期間は、[サインインした**ままにする (KMSI)** ] 機能の設定によって決まります。  KMSI は既定で無効になっており、AD FS プロパティ KmsiEnabled を True に設定することによって有効にすることができます。
+登録されていないデバイスの場合、シングルサインオンの期間は、[サインインした **ままにする (KMSI)** ] 機能の設定によって決まります。  KMSI は既定で無効になっており、AD FS プロパティ KmsiEnabled を True に設定することによって有効にすることができます。
 
 ``` powershell
 Set-AdfsProperties -EnableKmsi $true
@@ -124,7 +125,7 @@ Set-AdfsProperties -PersistentSsoCutoffTime <DateTime>
 ```
 
 ## <a name="enable-psso-for-office-365-users-to-access-sharepoint-online"></a>Office 365 ユーザーが SharePoint Online にアクセスできるように PSSO を有効にする
- PSSO が有効になり AD FS で構成されると、ユーザーが認証された後、AD FS は永続的な cookie を書き込みます。 次回ユーザーがサインインしたときに、永続的な cookie がまだ有効である場合、ユーザーは資格情報を入力して再度認証する必要はありません。 また、Microsoft Azure AD と SharePoint Online で永続化をトリガーするために AD FS で次の2つの要求規則を構成することで、Office 365 および SharePoint Online ユーザーの追加の認証プロンプトを回避することもできます。  Office 365 ユーザーが SharePoint online にアクセスできるようにするには、この修正プログラムをインストールする必要があります。この[修正プログラム](https://support.microsoft.com/kb/2958298/)は、 [windows RT 8.1、Windows 8.1、および Windows Server 2012 R2 の年 8 2014 月の更新プログラムのロールアップ](https://support.microsoft.com/kb/2975719)の一部でもあります。
+ PSSO が有効になり AD FS で構成されると、ユーザーが認証された後、AD FS は永続的な cookie を書き込みます。 次回ユーザーがサインインしたときに、永続的な cookie がまだ有効である場合、ユーザーは資格情報を入力して再度認証する必要はありません。 また、Microsoft Azure AD と SharePoint Online で永続化をトリガーするために AD FS で次の2つの要求規則を構成することで、Office 365 および SharePoint Online ユーザーの追加の認証プロンプトを回避することもできます。  Office 365 ユーザーが SharePoint online にアクセスできるようにするには、この修正プログラムをインストールする必要があります。この [修正プログラム](https://support.microsoft.com/kb/2958298/) は、 [windows RT 8.1、Windows 8.1、および Windows Server 2012 R2 の年 8 2014 月の更新プログラムのロールアップ](https://support.microsoft.com/kb/2975719)の一部でもあります。
 
  InsideCorporateNetwork 要求を通過する発行変換規則
 
@@ -200,10 +201,10 @@ c:[Type == "https://schemas.microsoft.com/2014/03/psso"]
  - [x] 管理者が KMSI 機能を有効にしました [および]
  - [x] ユーザーがフォームログインページで KMSI チェックボックスをクリックします。
 
-  
+  
 新しい更新トークンの有効性が前のトークンより長い場合にのみ、ADFS は新しい更新トークンを発行します。 トークンの最長有効期間は84日ですが、AD FS 14 日間のスライディングウィンドウでトークンが有効なままになります。 更新トークンが、通常の SSO 時間である8時間有効な場合、新しい更新トークンは発行されません。
- 
+ 
 
 **次のことをお勧めします。** <br>
-**Lastpasswordchangetimestamp**属性が同期されていないフェデレーションユーザーは、**最大有効期間の値が12時間の**セッション cookie と更新トークンを発行します。<br>
+**Lastpasswordchangetimestamp** 属性が同期されていないフェデレーションユーザーは、**最大有効期間の値が12時間の** セッション cookie と更新トークンを発行します。<br>
 これは、古い資格情報 (変更されたパスワードなど) に関連付けられているトークンを取り消すタイミングを Azure AD が判断できないために発生します。 したがって、ユーザーとそれに関連付けられているトークンが良好な状態であることを確認するために、Azure AD を頻繁に確認する必要があります。

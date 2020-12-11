@@ -1,17 +1,18 @@
 ---
 ms.assetid: 01c8cece-66ce-4a83-a81e-aa6cc98e51fc
 title: 高度なデータ重複除去の設定
+description: 詳細については、「データ重複除去の詳細設定」を参照してください。
 ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: 84d90e8c1de81498cbc832c8cf068e2ac339ac97
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: aa5f34f1c1fdc2b2a706cb0dfe1b7cf5a30456eb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866201"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039200"
 ---
 # <a name="advanced-data-deduplication-settings"></a>高度なデータ重複除去の設定
 
@@ -86,7 +87,7 @@ ms.locfileid: "96866201"
             <td>この値は、スケジュールされている必要があるジョブの種類であるため、必要です。 タスクをスケジュールした後は、この値を変更できません。</td>
         </tr>
         <tr>
-            <td>Priority</td>
+            <td>優先度</td>
             <td>スケジュールされたジョブのシステム優先順位</td>
             <td>
                 <ul>
@@ -130,7 +131,7 @@ ms.locfileid: "96866201"
             <td>ジョブを削除せずに無効にするため</td>
         </tr>
         <tr>
-            <td>[完全]</td>
+            <td>完全</td>
             <td>フル ガベージ コレクション ジョブのスケジュール</td>
             <td>スイッチ (true または false)</td>
             <td>既定では、4 番目のジョブはすべてガベージ コレクション ジョブです。 このスイッチを使用して、より頻繁に実行されるフル ガベージ コレクションをスケジュールできます。</td>
@@ -163,7 +164,7 @@ ms.locfileid: "96866201"
             <td>開始</td>
             <td>ジョブを開始する時刻の指定</td>
             <td><code>System.DateTime</code></td>
-            <td><em>date</em> <code>System.Datetime</code> を<em>開始</em>するために提供されるの日付部分は (過去の&#39;) ではなく、ジョブの開始<em>時刻</em>を指定します。</td>
+            <td><em></em> <code>System.Datetime</code> を<em>開始</em>するために提供されるの日付部分は (過去の&#39;) ではなく、ジョブの開始<em>時刻</em>を指定します。</td>
         </tr>
         <tr>
             <td>StopWhenSystemBusy</td>

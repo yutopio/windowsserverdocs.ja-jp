@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フェデレーションサーバープロキシの容量の計画」を参照してください。
 ms.assetid: 3ecb6e87-17f1-4d38-97d2-9c4d52b7cf39
 title: フェデレーション サーバー プロキシのキャパシティ プランニング
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 5ea4ae7c9dcffc8d0aa464feb1043833e80877d7
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a8454210db5c9d15cd308e67e23717e00724b81c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947478"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039980"
 ---
 # <a name="planning-for-federation-server-proxy-capacity"></a>フェデレーション サーバー プロキシのキャパシティ プランニング
 
@@ -31,7 +32,7 @@ ms.locfileid: "87947478"
 > 運用環境の展開では、展開する各フェデレーションサーバーファームインスタンスに対して、少なくとも2つのフェデレーションサーバープロキシを使用することをお勧めします。
 
 ## <a name="estimate-the-number-of-federation-server-proxies-required-for-your-organization"></a>組織に必要なフェデレーションサーバープロキシの数を推定する
-必要な AD FS フェデレーションサーバープロキシコンピューターの数を推定するには、まず、組織に展開するフェデレーションサーバーの合計数を決定する必要があります。 この方法の詳細については、「[フェデレーションサーバーの容量の計画](Planning-for-Federation-Server-Capacity.md)」を参照してください。
+必要な AD FS フェデレーションサーバープロキシコンピューターの数を推定するには、まず、組織に展開するフェデレーションサーバーの合計数を決定する必要があります。 この方法の詳細については、「 [フェデレーションサーバーの容量の計画](Planning-for-Federation-Server-Capacity.md)」を参照してください。
 
 フェデレーションサーバーの数を決定したら、この数のサーバーを、企業ネットワークの外部にある外部ユーザーからの受信フェデレーション認証要求の割合で乗算し \( \) ます。 この計算の値によって、外部ユーザーに対する受信認証要求を処理するフェデレーションサーバープロキシの推定数が示されます。
 
@@ -41,5 +42,5 @@ AD FS 製品チームによって実行されるテストでは、各フェデ�
 
 ただし、フォールトトレランスのためには、展開する各フェデレーションサーバーファームに対して、少なくとも2つのフェデレーションサーバープロキシを使用することをお勧めします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

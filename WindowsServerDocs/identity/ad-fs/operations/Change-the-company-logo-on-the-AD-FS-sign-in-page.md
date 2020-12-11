@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AD FS サインインページで会社のロゴを変更する'
 ms.assetid: f7f6bac2-1100-4b00-a248-4ca3eb3cdbe9
 title: AD FS サインインページで会社のロゴを変更する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 03/08/2017
 ms.topic: article
-ms.openlocfilehash: bc5bf9dcd0277980144d367e0bc539b555c05c83
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a04f7a81c26dea4234fbb92edc44125ae11e51f6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956649"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040280"
 ---
 # <a name="changing-the-company-logo-on-the-ad-fs-sign-in-page"></a>AD FS サインインページで会社のロゴを変更する
 
@@ -29,8 +30,8 @@ Set-AdfsWebTheme -TargetName default -Logo @{path="c:\Contoso\logo.png"}
 ```
 
 > [!NOTE]
-> `TargetName` パラメーターは必須です。 AD FS と共にリリースされる既定のテーマには、 *default*という名前が付けられます。
+> `TargetName` パラメーターは必須です。 AD FS と共にリリースされる既定のテーマには、 *default* という名前が付けられます。
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 [AD FS ユーザーサインインのカスタマイズ](AD-FS-user-sign-in-customization.md)

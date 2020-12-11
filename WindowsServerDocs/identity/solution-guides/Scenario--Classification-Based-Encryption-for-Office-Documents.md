@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: シナリオ: Office ドキュメントの Classification-Based 暗号化'
 ms.assetid: 73542e1c-53ef-4ddb-89b1-bc563b2bfb49
 title: Office ドキュメントに対する分類ベースの暗号化をシナリオ
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 23709df02bc1a475573f2703db5e4ff9477cfc98
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 9f8588b5ff2ef9e895e05c45ba0a5d8607add281
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952709"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044750"
 ---
 # <a name="scenario-classification-based-encryption-for-office-documents"></a>シナリオ:Office ドキュメントに対する分類ベースの暗号化
 
@@ -26,7 +27,7 @@ AD RMS 暗号化により、ファイル保護のための新しい層が追加�
 
 ![ソリューション ガイド](media/Scenario--Classification-Based-Encryption-for-Office-Documents/DynamicAccessControl_RevGuide_6.JPG)
 
-**図 6**分類ベースの RMS 保護
+**図 6** 分類ベースの RMS 保護
 
 マイクロソフト以外のファイル形式については、マイクロソフト以外のベンダーがサポートしています。 AD RMS 暗号化による保護が適用されたファイルには、検索ベースやコンテンツベースの分類などのデータ管理機能は使用できません。
 

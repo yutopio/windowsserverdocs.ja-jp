@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ホーム領域検出のカスタマイズ'
 ms.assetid: 626e33fc-4ac2-4d38-9ac9-addaa4c8d9bb
 title: ホーム領域検出のカスタマイズ
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b747d29aa4ceba7d7f3a12fc5a6a74155e058050
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3a3bc01b4ec28d28d4815fc46c797b3f6ff62cfe
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954248"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039860"
 ---
 # <a name="home-realm-discovery-customization"></a>ホーム領域検出のカスタマイズ
 
@@ -60,5 +61,5 @@ Id プロバイダーを構成する \(IDP\), など `fabrikam`, を特定の電
 > [!IMPORTANT]
 > 証明書利用者の id プロバイダーの一覧が構成されている場合も、前の設定が有効であるに注意してくださいと、ユーザーにアクセスするイントラネット、AD FS であっても、ホーム領域検出 \(HRD\) ページです。 この場合に HRD をバイパスするには、この証明書利用者の IDP 一覧に "Active Directory" も追加する必要があります。
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 [AD FS ユーザーサインインのカスタマイズ](AD-FS-user-sign-in-customization.md)

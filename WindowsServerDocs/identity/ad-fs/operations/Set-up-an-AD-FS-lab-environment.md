@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「AD FS ラボ環境のセットアップ」を参照してください。
 ms.assetid: 276a7f7d-5faa-4c00-a51c-3fa511fe52f9
 title: AD FS ラボ環境を設定する
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: d9625992d7098a1f5cd510901be07187702b3771
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0b7c4c40ea37c9d8f7f2e7dd5639245a98a25aab
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967089"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039690"
 ---
 # <a name="set-up-an-ad-fs-lab-environment"></a>AD FS ラボ環境を設定する
 
@@ -39,7 +40,7 @@ ms.locfileid: "87967089"
 4.  [手順 4: クライアント コンピューター (Client1) を構成する](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
 
 ## <a name="step-1-configure-the-domain-controller-dc1"></a><a name="BKMK_1"></a>手順 1: ドメイン コントローラー (DC1) を構成する
-このテスト環境では、ルート Active Directory ドメイン**contoso.com**を呼び出し、 <strong>pass@word1</strong> 管理者パスワードとしてを指定できます。
+このテスト環境では、ルート Active Directory ドメイン **contoso.com** を呼び出し、 <strong>pass@word1</strong> 管理者パスワードとしてを指定できます。
 
 -   AD DS の役割サービスをインストールし Active Directory Domain Services (AD DS) をインストールして、Windows Server 2012 R2 でコンピューターをドメインコントローラーにします。 この操作により、ドメインコントローラーの作成の一環として AD DS スキーマがアップグレードされます。 詳細と詳細な手順については、「[ https://technet.microsoft.com/ library/hh472162.aspx http://technet.microsoft.com/library/hh472162.aspx](../../ad-ds/deploy/install-active-directory-domain-services--level-100-.md)」を参照してください。
 
@@ -48,7 +49,7 @@ ms.locfileid: "87967089"
 
 次のアカウントを作成します。
 
-- ユーザー: **Robert Hatley**次の資格情報: ユーザー名: **roth th** and password:<strong>P@ssword</strong>
+- ユーザー: **Robert Hatley** 次の資格情報: ユーザー名: **roth th** and password: <strong>P@ssword</strong>
 
 - グループ: **Finance**
 
@@ -70,7 +71,7 @@ Active Directory フェデレーションサービス (AD FS) (AD FS) のイン�
     ```
 
 ## <a name="step-2-configure-the-federation-server-adfs1-by-using-device-registration-service"></a><a name="BKMK_4"></a>手順 2: デバイス登録サービスを使用してフェデレーション サーバー (ADFS1) を構成する
-別の仮想マシンをセットアップするには、Windows Server 2012 R2 をインストールし、ドメイン**contoso.com**に接続します。 ドメインに参加した後、コンピューターをセットアップし、AD FS の役割のインストールと構成に進みます。
+別の仮想マシンをセットアップするには、Windows Server 2012 R2 をインストールし、ドメイン **contoso.com** に接続します。 ドメインに参加した後、コンピューターをセットアップし、AD FS の役割のインストールと構成に進みます。
 
 これらの手順を説明したビデオを視聴するには、「 [Active Directory フェデレーション サービスの使い方ビデオ シリーズ: AD FS サーバー ファームのインストール](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)」を参照してください。
 
@@ -93,7 +94,7 @@ ADFS1 サーバーのサーバー SSL (Secure Socket Layer) 証明書を、ロ�
 
 1. ドメイン管理者アカウントを使用してサーバーにログオン administrator@contoso.com します。
 
-2. Server Manager を起動します。 サーバー マネージャーを起動するには、Windows の**スタート**画面で **[サーバー マネージャー]** をクリックするか、または Windows デスクトップの Windows タスク バーで **[サーバー マネージャー]** をクリックします。 **[ダッシュボード]** ページにある **[ようこそ]** タイルの **[クイック スタート]** タブで、**[役割と機能の追加]** をクリックします。 または、**[管理]** メニューの **[役割と機能の追加]** をクリックすることもできます。
+2. Server Manager を起動します。 サーバー マネージャーを起動するには、Windows の **スタート** 画面で **[サーバー マネージャー]** をクリックするか、または Windows デスクトップの Windows タスク バーで **[サーバー マネージャー]** をクリックします。 **[ダッシュボード]** ページにある **[ようこそ]** タイルの **[クイック スタート]** タブで、**[役割と機能の追加]** をクリックします。 または、**[管理]** メニューの **[役割と機能の追加]** をクリックすることもできます。
 
 3. **[開始する前に]** ページで、 **[次へ]** をクリックします。
 
@@ -118,7 +119,7 @@ ADFS1 サーバーのサーバー SSL (Secure Socket Layer) 証明書を、ロ�
 
 1.  Server Manager の [**ダッシュボード**] ページで、[**通知**] フラグをクリックし、[**サーバーにフェデレーション サービスを構成します**] をクリックします。
 
-    **Active Directory フェデレーション サービス構成ウィザード**が開きます。
+    **Active Directory フェデレーション サービス構成ウィザード** が開きます。
 
 2.  **[ようこそ]** ページで、**[フェデレーション サーバー ファームに最初のフェデレーション サーバーを作成します]** を選択し、**[次へ]** をクリックします。
 
@@ -164,12 +165,12 @@ ADFS1 サーバーのサーバー SSL (Secure Socket Layer) 証明書を、ロ�
     Enable-AdfsDeviceRegistration
     ```
 
-2.  ADFS1 サーバーで、**AD FS 管理**コンソールの **[認証ポリシー]** に移動します。 **[グローバル プライマリ認証の編集]** を選択します。 **[デバイス認証の有効化]** の横にあるチェック ボックスをオンにして、**[OK]** をクリックします。
+2.  ADFS1 サーバーで、**AD FS 管理** コンソールの **[認証ポリシー]** に移動します。 **[グローバル プライマリ認証の編集]** を選択します。 **[デバイス認証の有効化]** の横にあるチェック ボックスをオンにして、**[OK]** をクリックします。
 
 ### <a name="add-host-a-and-alias-cname-resource-records-to-dns"></a>ホスト (A) およびエイリアス (CNAME) リソース レコードの DNS への追加
 DC1 では、デバイス登録サービス用に次のドメイン ネーム システム (DNS) レコードを作成する必要があります。
 
-|入力|種類|Address|
+|入力|Type|Address|
 |---------|--------|-----------|
 |adfs1|ホスト (A)|AD FS サーバーの IP アドレス|
 |enterpriseregistration|エイリアス (CNAME)|adfs1.contoso.com|
@@ -198,7 +199,7 @@ DC1 では、デバイス登録サービス用に次のドメイン ネーム �
     > 実際の展開では、会社に複数のユーザー プリンシパル名 (UPN) サフィックスがある場合、DNS の各 UPN サフィックスに 1 つずつ、複数の CNAME レコードを作成する必要があります。
 
 ## <a name="step-3-configure-the-web-server-webserv1-and-a-sample-claims-based-application"></a><a name="BKMK_5"></a>手順 3: Web サーバー (WebServ1) とサンプルの要求ベースのアプリケーションを構成する
-Windows Server 2012 R2 オペレーティングシステムをインストールして仮想マシン (WebServ1) をセットアップし、それをドメイン**contoso.com**に接続します。 ドメインに参加したら、Web サーバーの役割のインストールと構成を開始できます。
+Windows Server 2012 R2 オペレーティングシステムをインストールして仮想マシン (WebServ1) をセットアップし、それをドメイン **contoso.com** に接続します。 ドメインに参加したら、Web サーバーの役割のインストールと構成を開始できます。
 
 このトピックの最初に示したチュートリアルを完了するには、フェデレーション サーバー (ADFS1) で保護されたサンプル アプリケーションが必要です。
 
@@ -297,15 +298,15 @@ Windows Server 2012 R2 オペレーティングシステムをインストール
 
     6.  **[既定の Web サイト]** を右クリックし、**[アプリケーションの追加]** を選択します。
 
-    7.  エイリアスを**claimapp**に設定し、物理パスを**c:inetpubclaimapp**に設定します。
+    7.  エイリアスを **claimapp** に設定し、物理パスを **c:inetpubclaimapp** に設定します。
 
 5.  フェデレーション サーバーで動作するように **claimapp** を構成するには、次の手順を実行します。
 
-    1.  FedUtil.exe を実行します。これは、 **C:program files Files (x86) Windows Identity Foundation sdkv 3.5**にあります。
+    1.  FedUtil.exe を実行します。これは、 **C:program files Files (x86) Windows Identity Foundation sdkv 3.5** にあります。
 
-    2.  アプリケーションの構成の場所を**C:inetputclaimappweb.config**に設定し、アプリケーションの URI にサイトの URL ( ** https://webserv1.contoso.com /claimapp/**) を設定します。 **[次へ]** をクリックします。
+    2.  アプリケーションの構成の場所を **C:inetputclaimappweb.config** に設定し、アプリケーションの URI にサイトの URL ( **https://webserv1.contoso.com /claimapp/**) を設定します。 **[次へ]** をクリックします。
 
-    3.  [**既存の STS を使用**する] を選択し、AD FS サーバーのメタデータ URL を参照し **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** ます。 **[次へ]** をクリックします。
+    3.  [ **既存の STS を使用** する] を選択し、AD FS サーバーのメタデータ URL を参照し **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** ます。 **[次へ]** をクリックします。
 
     4.  **[証明書チェーンの検証を無効にする]** を選択し、**[次へ]** をクリックします。
 
@@ -319,7 +320,7 @@ Web サーバーで実行されるサンプルアプリケーションを AD FS 
 
 ### <a name="create-a-relying-party-trust-on-your-federation-server"></a><a name="BKMK_11"></a>フェデレーション サーバーで証明書利用者信頼を作成する
 
-1.  フェデレーション サーバー (ADFS1) で、**AD FS 管理コンソール**の **[証明書利用者信頼]** に移動し、**[証明書利用者信頼の追加]** をクリックします。
+1.  フェデレーション サーバー (ADFS1) で、**AD FS 管理コンソール** の **[証明書利用者信頼]** に移動し、**[証明書利用者信頼の追加]** をクリックします。
 
 2.  **[データ ソースの選択]** ページで、**[オンラインまたはローカル ネットワークで公開されている証明書利用者についてのデータをインポートする]** を選択して、**claimapp** のメタデータ URL を入力し、**[次へ]** をクリックします。 FedUtil.exe の実行時にメタデータの .xml ファイルが作成されています。 このファイルはにあり **https://webserv1.contoso.com/claimapp/federationmetadata/2007-06/federationmetadata.xml** ます。
 
@@ -352,10 +353,10 @@ Web サーバーで実行されるサンプルアプリケーションを AD FS 
 
 さらに、Client1 にログオンするには、Microsoft アカウントをセットアップして使用する必要があります。
 
-## <a name="see-also"></a>参照
-[Active Directory フェデレーションサービス (AD FS) 方法に関するビデオシリーズ: AD FS サーバーファーム](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
- のインストール[Active Directory フェデレーションサービス (AD FS) 方法に関するビデオシリーズ: 証明書](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
- の更新[Active Directory フェデレーションサービス (AD FS) 操作方法ビデオシリーズ: 証明書利用者信頼](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
- を追加する[Active Directory フェデレーションサービス (AD FS) 方法に関するビデオシリーズ: デバイス登録サービス](https://channel9.msdn.com/) 
- を有効にする[Active Directory フェデレーションサービス (AD FS) 方法に関するビデオシリーズ: Web アプリケーションプロキシのインストール](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
+## <a name="see-also"></a>関連項目
+[Active Directory フェデレーションサービス (AD FS) How-To ビデオシリーズ: AD FS サーバーファーム](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
+ のインストール[Active Directory フェデレーションサービス (AD FS) How-To ビデオシリーズ: 証明書](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
+ の更新[Active Directory フェデレーションサービス (AD FS) How-To ビデオシリーズ: 証明書利用者信頼](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search) 
+ を追加する[Active Directory フェデレーションサービス (AD FS) How-To ビデオシリーズ: デバイス登録サービス](https://channel9.msdn.com/) 
+ を有効にする[Active Directory フェデレーションサービス (AD FS) How-To ビデオシリーズ: Web アプリケーションプロキシのインストール](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
 

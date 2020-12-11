@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: サーバー認証証明書の秘密キーの部分をエクスポートする'
 ms.assetid: cd4d4902-dcdf-49dd-8059-82a56bf4b585
 title: サーバー認証証明書の秘密キーの部分をエクスポートする
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: dcc6332881fa4ff0143604eebb491f8ed48283c2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b4c845d6444a84f653e775b4b725cc1c6ba176d7
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972219"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041120"
 ---
 # <a name="export-the-private-key-portion-of-a-server-authentication-certificate"></a>サーバー認証証明書の秘密キーの部分をエクスポートする
 
@@ -22,19 +23,19 @@ Active Directory フェデレーションサービス (AD FS) AD FS ファーム
 > [!NOTE]
 > AD FS 管理スナップインは、 \- サービス通信証明書としてのフェデレーションサーバーのサーバー認証証明書を参照します。
 
-このコンピューターが再生する役割に応じて、サーバー認証証明書を秘密キーと共にインストールしたフェデレーションサーバーコンピューターまたはフェデレーションサーバープロキシコンピューターで、この手順を実行します。 手順を完了すると、ファーム内の各サーバーの既定の Web サイトでこの証明書をインポートできるようになります。 詳細については、「[サーバー認証証明書を既定の Web サイトにインポートする](Import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)」を参照してください。
+このコンピューターが再生する役割に応じて、サーバー認証証明書を秘密キーと共にインストールしたフェデレーションサーバーコンピューターまたはフェデレーションサーバープロキシコンピューターで、この手順を実行します。 手順を完了すると、ファーム内の各サーバーの既定の Web サイトでこの証明書をインポートできるようになります。 詳細については、「 [サーバー認証証明書を既定の Web サイトにインポートする](Import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)」を参照してください。
 
-この手順を完了するには、ローカル コンピューター上の **Administrators** または同等のメンバーシップが最低限必要です。  適切なアカウントおよびグループメンバーシップの使用方法の詳細については、「[ローカルおよびドメインの既定のグループ](https://go.microsoft.com/fwlink/?LinkId=83477)」を参照してください。
+この手順を完了するには、ローカル コンピューター上の **Administrators** または同等のメンバーシップが最低限必要です。  適切なアカウントおよびグループメンバーシップの使用方法の詳細については、「 [ローカルおよびドメインの既定のグループ](https://go.microsoft.com/fwlink/?LinkId=83477)」を参照してください。
 
 ### <a name="to-export-the-private-key-portion-of-a-server-authentication-certificate"></a>サーバー認証証明書の秘密キーの部分をエクスポートするには
 
-1. **スタート**画面で、「**インターネットインフォメーションサービス \( IIS \) Manager**」と入力し、enter キーを押します。
+1. **スタート** 画面で、「**インターネットインフォメーションサービス \( IIS \) Manager**」と入力し、enter キーを押します。
 
 2. コンソール ツリーで、[**コンピューター名**] をクリックします。
 
-3. 中央のウィンドウで、 \- [**サーバー証明書**] をダブルクリックします。
+3. 中央のウィンドウで、 \- [ **サーバー証明書**] をダブルクリックします。
 
-4. 中央のウィンドウで、 \- エクスポートする証明書を右クリックし、[**エクスポート**] をクリックします。
+4. 中央のウィンドウで、 \- エクスポートする証明書を右クリックし、[ **エクスポート**] をクリックします。
 
 5. [**証明書のエクスポート**] ダイアログボックスで、[.. **.** ] をクリックします。 ボタンを選択します。
 
@@ -49,7 +50,7 @@ Active Directory フェデレーションサービス (AD FS) AD FS ファーム
 
 9. フェデレーション サービスをインストールする前に、新しいサーバー上の証明書ストアにサーバー認証証明書をインポートします。 証明書をインポートする方法の詳細については、「サーバー証明書のインポート \( [http: \/ \/ go.microsoft.com \/ fwlink \/ ?」を参照してください。LinkId \= 108283](https://go.microsoft.com/fwlink/?LinkId=108283) \) 。
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 [チェックリスト:フェデレーション サーバーのセットアップ](Checklist--Setting-Up-a-Federation-Server.md)
 
 [チェックリスト:フェデレーション サーバー プロキシのセットアップ](Checklist--Setting-Up-a-Federation-Server-Proxy.md)

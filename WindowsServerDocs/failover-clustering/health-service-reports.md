@@ -1,16 +1,17 @@
 ---
+description: 詳細については、ヘルスサービスレポート」を参照してください。
 title: レポートのヘルスサービス
 manager: eldenc
 ms.author: cosdar
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 1e6b11bc73ef34e5247ca43140d3e2122e77ab61
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: e453744524381240f8b870326275fae56eca1635
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990781"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039500"
 ---
 # <a name="health-service-reports"></a>レポートのヘルスサービス
 
@@ -28,7 +29,7 @@ ms.locfileid: "87990781"
 Get-StorageSubSystem Cluster* | Get-StorageHealthReport
 ```
 
-省略可能な**Count**パラメーターは、1秒間隔で返される値のセット数を示します。
+省略可能な **Count** パラメーターは、1秒間隔で返される値のセット数を示します。
 
 ```PowerShell
 Get-StorageSubSystem Cluster* | Get-StorageHealthReport -Count <Count>
@@ -44,9 +45,9 @@ Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 
 ## <a name="usage-in-net-and-c"></a>.NET および C での使用#
 
-### <a name="connect"></a>接続
+### <a name="connect"></a>接続する
 
-ヘルスサービスを照会するには、クラスターで**CimSession**を確立する必要があります。 これを行うには、完全な .NET でしか使用できないものが必要になります。つまり、web アプリまたはモバイルアプリから直接この操作を行うことはできません。 これらのコードサンプルでは \# 、このデータアクセス層で最も単純な選択肢である C を使用します。
+ヘルスサービスを照会するには、クラスターで **CimSession** を確立する必要があります。 これを行うには、完全な .NET でしか使用できないものが必要になります。つまり、web アプリまたはモバイルアプリから直接この操作を行うことはできません。 これらのコードサンプルでは \# 、このデータアクセス層で最も単純な選択肢である C を使用します。
 
 ```
 using System.Security;
@@ -71,13 +72,13 @@ public CimSession Connect(string Domain = "...", string Computer = "...", string
 
 指定されたユーザー名は、対象のコンピューターのローカル管理者である必要があります。
 
-パスワード**SecureString**をユーザー入力から直接作成することをお勧めします。そのため、パスワードはクリアテキストでメモリに格納されることはありません。 これは、さまざまなセキュリティの問題を軽減するのに役立ちます。 しかし実際には、プロトタイプ作成は、プロトタイプ作成の目的では一般的です。
+パスワード **SecureString** をユーザー入力から直接作成することをお勧めします。そのため、パスワードはクリアテキストでメモリに格納されることはありません。 これは、さまざまなセキュリティの問題を軽減するのに役立ちます。 しかし実際には、プロトタイプ作成は、プロトタイプ作成の目的では一般的です。
 
 ### <a name="discover-objects"></a>オブジェクトを検出します
 
-**CimSession**を確立したら、クラスターで WINDOWS MANAGEMENT INSTRUMENTATION (WMI) を照会できます。
+**CimSession** を確立したら、クラスターで WINDOWS MANAGEMENT INSTRUMENTATION (WMI) を照会できます。
 
-エラーまたはメトリックを取得するには、いくつかの関連オブジェクトのインスタンスを取得する必要があります。 最初に、クラスター上の記憶域スペースダイレクトを表す**MSFT \_ StorageSubSystem** 。 これを使用すると、クラスター内のすべての**msft \_ storagenode**情報と、すべての**msft \_ ボリューム**(データボリューム) を取得できます。 最後に、 **MSFT \_ storagehealth**、ヘルスサービス自体も必要になります。
+エラーまたはメトリックを取得するには、いくつかの関連オブジェクトのインスタンスを取得する必要があります。 最初に、クラスター上の記憶域スペースダイレクトを表す **MSFT \_ StorageSubSystem** 。 これを使用すると、クラスター内のすべての **msft \_ storagenode** 情報と、すべての **msft \_ ボリューム**(データボリューム) を取得できます。 最後に、 **MSFT \_ storagehealth**、ヘルスサービス自体も必要になります。
 
 ```
 CimInstance Cluster;
@@ -105,9 +106,9 @@ public void DiscoverObjects(CimSession Session)
 }
 ```
 
-これらは、 **StorageSubSystem**、 **get-storagenode**ようなコマンドレットを使用して PowerShell で**取得した**ものと同じオブジェクトです。
+これらは、 **StorageSubSystem**、 **get-storagenode** ようなコマンドレットを使用して PowerShell で **取得した** ものと同じオブジェクトです。
 
-「[ストレージ管理 API クラス](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes)」で説明されているすべての同じプロパティにアクセスできます。
+「 [ストレージ管理 API クラス](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes)」で説明されているすべての同じプロパティにアクセスできます。
 
 ```
 using System.Diagnostics;
@@ -119,7 +120,7 @@ foreach (CimInstance Node in Nodes)
 }
 ```
 
-**Getreport**を呼び出して、重要なメトリックの curated リストのストリーミングサンプルを開始します。これは、クラスターメンバーシップを検出するための組み込みロジックを使用して、効率的に収集され、ノード間で動的に集計されます。 サンプルは、その後、1秒ごとに到着します。 値はすべて、リアルタイムかつ特定の時点のみのものです。
+**Getreport** を呼び出して、重要なメトリックの curated リストのストリーミングサンプルを開始します。これは、クラスターメンバーシップを検出するための組み込みロジックを使用して、効率的に収集され、ノード間で動的に集計されます。 サンプルは、その後、1秒ごとに到着します。 値はすべて、リアルタイムかつ特定の時点のみのものです。
 
 メトリックは、クラスター、任意のノード、任意のボリュームの3つのスコープに対してストリーミングできます。
 
@@ -127,7 +128,7 @@ Windows Server 2016 の各スコープで利用可能なメトリックの完全
 
 ### <a name="iobserveronnext"></a>IObserver. OnNext ()
 
-このサンプルコードでは、[オブザーバーデザインパターン](/dotnet/standard/events/observer-design-pattern)を使用して、新しいメトリックの各サンプルが到着したときに**onnext ()** メソッドが呼び出されるオブザーバーを実装します。 **Oncompleted ()** メソッドは、streaming が終了した場合に呼び出されます。 たとえば、ストリーミングを再開に使用して、無期限に続行することができます。
+このサンプルコードでは、 [オブザーバーデザインパターン](/dotnet/standard/events/observer-design-pattern) を使用して、新しいメトリックの各サンプルが到着したときに **onnext ()** メソッドが呼び出されるオブザーバーを実装します。 **Oncompleted ()** メソッドは、streaming が終了した場合に呼び出されます。 たとえば、ストリーミングを再開に使用して、無期限に続行することができます。
 
 ```
 class MetricsObserver<T> : IObserver<T>
@@ -172,7 +173,7 @@ class MetricsObserver<T> : IObserver<T>
 
 オブザーバーを定義したら、ストリーミングを開始できます。
 
-メトリックの対象となるターゲット**CimInstance**を指定します。 クラスター、任意のノード、任意のボリュームを指定できます。
+メトリックの対象となるターゲット **CimInstance** を指定します。 クラスター、任意のノード、任意のボリュームを指定できます。
 
 Count パラメーターは、ストリーミングが終了する前のサンプルの数です。
 
@@ -205,11 +206,11 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 
 メトリックのすべてのサンプルは、個々のメトリックに対応する多くの "レコード" を含む "レポート" です。
 
-完全なスキーマについては、 *storagewmi .mof*の**msft \_ StorageHealthReport**クラスと**msft \_ HealthRecord**クラスを調べます。
+完全なスキーマについては、 *storagewmi .mof* の **msft \_ StorageHealthReport** クラスと **msft \_ HealthRecord** クラスを調べます。
 
 各メトリックには、このテーブルにつき3つのプロパティしかありません。
 
-| **Property** | **例**       |
+| **プロパティ** | **例**       |
 | -------------|-------------------|
 | 名前         | IOLatencyAverage  |
 | 値        | 0.00021           |
@@ -217,13 +218,13 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 
 Units = {0, 1, 2, 3, 4}、0 = "Bytes"、1 = "BytesPerSecond"、2 = "CountPerSecond"、3 = "Seconds"、または 4 = "パーセント"。
 
-## <a name="coverage"></a>カバレッジ
+## <a name="coverage"></a>対象範囲
 
 Windows Server 2016 の各スコープで使用可能なメトリックを以下に示します。
 
 ### <a name="msft_storagesubsystem"></a>MSFT_StorageSubSystem
 
-| **Name**                        | **ユニット** |
+| **名前**                        | **ユニット** |
 |---------------------------------|-----------|
 | CPUUsage                        | 4         |
 | CapacityPhysicalPooledAvailable | 0         |
@@ -247,7 +248,7 @@ Windows Server 2016 の各スコープで使用可能なメトリックを以下
 
 ### <a name="msft_storagenode"></a>MSFT_StorageNode
 
-| **Name**            | **ユニット** |
+| **名前**            | **ユニット** |
 |---------------------|-----------|
 | CPUUsage            | 4         |
 | IOLatencyAverage    | 3         |
@@ -264,7 +265,7 @@ Windows Server 2016 の各スコープで使用可能なメトリックを以下
 
 ### <a name="msft_volume"></a>MSFT_Volume
 
-| **Name**            | **ユニット** |
+| **名前**            | **ユニット** |
 |---------------------|-----------|
 | CapacityAvailable   | 0         |
 | CapacityTotal       | 0         |

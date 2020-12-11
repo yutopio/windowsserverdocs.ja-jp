@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 既存のドメインをアップグレードするか新しいドメインを展開するかを決定する'
 ms.assetid: c20231dd-2b83-4494-9385-1172272e00d6
 title: 既存のドメインをアップグレードするか新しいドメインを展開するかを決定する
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 2b7a1bcc6bb157c91b32edd9d4465ac54fb1ea42
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: b89ea1c898fc1c7a6859b88d2b7ba21d47516d06
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069214"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044070"
 ---
 # <a name="determining-whether-to-upgrade-existing-domains-or-deploy-new-domains"></a>既存のドメインをアップグレードするか新しいドメインを展開するかを決定する
 

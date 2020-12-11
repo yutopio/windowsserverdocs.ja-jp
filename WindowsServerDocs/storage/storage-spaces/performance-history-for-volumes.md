@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ボリュームのパフォーマンス履歴'
 title: ボリュームのパフォーマンス履歴
 ms.author: cosdar
 manager: eldenc
@@ -6,12 +7,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 02/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 367866739f18e426ad7c61dba3dac60b12692bbe
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 009289d026c3f0ee2994efaca58d61822363e4d3
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954649"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044520"
 ---
 # <a name="performance-history-for-volumes"></a>ボリュームのパフォーマンス履歴
 
@@ -76,7 +77,7 @@ ms.locfileid: "87954649"
    > カウンターは、サンプリングされるのではなく、間隔全体にわたって測定されます。 たとえば、ボリュームが9秒間アイドル状態で、30秒間 30 Io が完了した場合、 `volume.iops.total` この10秒間に平均で1秒あたり 3 io として記録されます。 これにより、パフォーマンス履歴がすべてのアクティビティをキャプチャし、ノイズに対して堅牢になります。
 
    > [!TIP]
-   > これらは、一般的な[VM](https://github.com/Microsoft/diskspd/blob/master/Frameworks/VMFleet/watch-cluster.ps1)車両ベンチマークフレームワークで使用されるものと同じカウンターです。
+   > これらは、一般的な [VM](https://github.com/Microsoft/diskspd/blob/master/Frameworks/VMFleet/watch-cluster.ps1) 車両ベンチマークフレームワークで使用されるものと同じカウンターです。
 
 シリーズは、 `size.*` WMI のクラスから収集され `MSFT_Volume` ます。ボリュームごとに1つのインスタンスがあります。
 

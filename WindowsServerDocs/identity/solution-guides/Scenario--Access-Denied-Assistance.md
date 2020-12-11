@@ -1,17 +1,18 @@
 ---
+description: '詳細については、「シナリオ: Access-Denied のサポート」を参照してください。'
 ms.assetid: aae907eb-11cf-4a87-a046-8680872ed0b1
-title: アクセス拒否アシスタンスのシナリオ
+title: シナリオ Access-Denied サポート
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: fe269b92e8c8fcd9fc58c82307ea8b180231a87a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: dbe440b7fc5ddc95767ec9af303cbd86cc879fd2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952740"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044430"
 ---
 # <a name="scenario-access-denied-assistance"></a>シナリオ:アクセス拒否アシスタンス
 
@@ -38,7 +39,7 @@ Windows Server 2012 のアクセス拒否アシスタンスは、関連するア
 
 「[アクセス拒否アシスタンスの計画](assetId:///b169f0a4-8b97-4da8-ae4a-c8f1986d19e1)」に、アクセス拒否アシスタンスを構成するための計画に関する情報があります。
 
-アクセス拒否アシスタンスの構成に関する手順については、「[アクセス拒否アシスタンスの展開 &#40;デモンストレーション手順&#41;](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md)」を参照してください。
+アクセス拒否アシスタンスの構成の手順については、「 [デプロイ Access-Denied アシスタンス」 &#40;デモンストレーション手順&#41;](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md)を参照してください。
 
 ## <a name="in-this-scenario"></a>このシナリオの内容
 このシナリオは、ダイナミック アクセス制御のシナリオの一部です。 ダイナミック アクセス制御の追加情報については、次のトピックを参照してください。

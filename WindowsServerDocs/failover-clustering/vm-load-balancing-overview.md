@@ -1,4 +1,5 @@
 ---
+description: 詳細については、仮想マシンの負荷分散の概要に関するページを参照してください。
 ms.assetid: f0d4cecc-5a03-448c-bef9-86c4730b4eb0
 title: 仮想マシンの負荷分散の概要
 ms.topic: article
@@ -6,12 +7,12 @@ manager: eldenc
 ms.author: johnmar
 author: JasonGerend
 ms.date: 09/19/2016
-ms.openlocfilehash: 868f5c0646b3842f605447d1fe8fdbe74593c2a6
-ms.sourcegitcommit: 7a8a608df059b4278a974c52ed7b865421a83aa6
+ms.openlocfilehash: 1ea777f2e48482bce32cd81b8d8cc5de814d19b4
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833301"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040520"
 ---
 # <a name="virtual-machine-load-balancing-overview"></a>仮想マシンの負荷分散の概要
 
@@ -25,7 +26,7 @@ ms.locfileid: "91833301"
 ## <a name="what-is-virtual-machine-load-balancing"></a><a id="what-is-vm-load-balancing"></a>仮想マシンの負荷分散とは
 <abbr title="仮想マシン">VM</abbr> 負荷分散は、フェールオーバークラスター内のノードの使用を最適化することができる Windows Server 2019 および Windows Server 2016 のインボックス機能です。 過剰コミットされたノードを識別し、再配布します。 <abbr title="[仮想マシン]">VM</abbr> これらのノードから、コミットされていないノードにします。 この機能には、次のような特徴があります。
 
-* *ダウンタイムなしのソリューション*です。 <abbr title="仮想マシン">VM</abbr> アイドル状態のノードにライブ移行されます。
+* *ダウンタイムなしのソリューション* です。 <abbr title="仮想マシン">VM</abbr> アイドル状態のノードにライブ移行されます。
 * *既存のクラスター環境とのシームレスな統合*: 障害ポリシー (アンチアフィニティ、障害ドメイン、実行可能な所有者など) が受け入れられます。
 * *分散のヒューリスティック*: <abbr title="仮想マシン">VM</abbr> ノードのメモリ負荷と CPU 使用率。
 * *詳細な制御*: 既定で有効になっています。 オンデマンドで、または一定の間隔でアクティブ化できます。
@@ -52,7 +53,7 @@ ms.locfileid: "91833301"
 3. 負荷の優先順位を決定するために、負荷の高いノードが特定されます。
 4. <abbr title="仮想マシン">VM</abbr> [最小しきい値] の下のノードに対して、しきい値を超えるノードからライブ移行されます (ダウンタイムはありません)。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 * [仮想マシンの負荷分散の詳細](vm-load-balancing-deep-dive.md)
 * [フェールオーバー クラスタリング](failover-clustering-overview.md)
 * [Hyper-v の概要](../virtualization/hyper-v/Hyper-V-on-Windows-Server.md)

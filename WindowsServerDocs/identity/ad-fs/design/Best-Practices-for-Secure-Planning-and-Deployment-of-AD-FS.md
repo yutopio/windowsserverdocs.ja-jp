@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AD FS のセキュリティで保護された計画と展開のベストプラクティス'
 ms.assetid: 963a3d37-d5f1-4153-b8d5-2537038863cb
 title: AD FS のセキュリティを考慮した設計と展開のベスト プラクティス
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f21eb5737bb1729999ae6d298ca868dc3f7d52d6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e4de8bf5564277a41ee5719aba9bb54041c2dff0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954348"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041300"
 ---
 # <a name="best-practices-for-secure-planning-and-deployment-of-ad-fs"></a>AD FS のセキュリティを考慮した設計と展開のベスト プラクティス
 
@@ -44,7 +45,7 @@ ms.locfileid: "87954348"
 
     AD FS の役割の拡張を SCW で適用するには、次の手順を順番に実行してください。
 
-    1.  AD FS をインストールし、そのコンピューターに適したサーバーの役割を選択します。 詳細については、「AD FS 展開ガイド」の「[フェデレーションサービスプロキシの役割サービスのインストール](../../ad-fs/deployment/Install-the-Federation-Service-Proxy-Role-Service.md)」を参照してください。
+    1.  AD FS をインストールし、そのコンピューターに適したサーバーの役割を選択します。 詳細については、「AD FS 展開ガイド」の「 [フェデレーションサービスプロキシの役割サービスのインストール](../../ad-fs/deployment/Install-the-Federation-Service-Proxy-Role-Service.md) 」を参照してください。
 
     2.  Scwcmd コマンドライン ツールを使用して適切な役割拡張ファイルを登録します。 下記の表で、コンピューターに構成される役割でこのツールを使用する方法の詳細を参照してください。
 
@@ -72,7 +73,7 @@ ms.locfileid: "87954348"
 
     トークンの暗号化は、AD FS のデプロイに対して試行される可能性がある man-in-the-middle (MITM) 攻撃に対するセキュリティと保護を強化するために強くお勧めします。 暗号化の使用はスループットに多少影響する可能性がありますが、認識されることは通常なく、多くの展開においてセキュリティの強化のメリットはサーバーのパフォーマンスの点であらゆるコストに勝ります。
 
-    トークンの暗号化を有効にするには、最初に証明書利用者信頼の暗号化証明書を設定して追加します。 暗号化証明書は、証明書利用者信頼の作成時または後で構成できます。 後で既存の証明書利用者信頼に暗号化証明書を追加するには、AD FS スナップインを使用しているときに、信頼プロパティ内の [**暗号化**] タブで使用する証明書を設定します。 AD FS コマンドレットを使用して既存の信頼の証明書を指定するには、 **ClaimsProviderTrust**コマンドレットまたは**set-relyingpartytrust**コマンドレットの encryptioncertificate パラメーターを使用します。 トークンを復号化するときに使用するフェデレーションサービスの証明書を設定するには、 **get-adfscertificate**コマンドレットを使用し、 `Token-Encryption` *certificatetype*パラメーターに "" を指定します。 特定の証明書利用者信頼に対する暗号化を有効または無効にするには、*Set-RelyingPartyTrust* コマンドレットの **EncryptClaims** パラメーターを使用します。
+    トークンの暗号化を有効にするには、最初に証明書利用者信頼の暗号化証明書を設定して追加します。 暗号化証明書は、証明書利用者信頼の作成時または後で構成できます。 後で既存の証明書利用者信頼に暗号化証明書を追加するには、AD FS スナップインを使用しているときに、信頼プロパティ内の [ **暗号化** ] タブで使用する証明書を設定します。 AD FS コマンドレットを使用して既存の信頼の証明書を指定するには、 **ClaimsProviderTrust** コマンドレットまたは **set-relyingpartytrust** コマンドレットの encryptioncertificate パラメーターを使用します。 トークンを復号化するときに使用するフェデレーションサービスの証明書を設定するには、 **get-adfscertificate** コマンドレットを使用し、 `Token-Encryption` *certificatetype* パラメーターに "" を指定します。 特定の証明書利用者信頼に対する暗号化を有効または無効にするには、*Set-RelyingPartyTrust* コマンドレットの **EncryptClaims** パラメーターを使用します。
 
 -   **認証に対する保護の強化を活用する**
 
@@ -85,8 +86,8 @@ ms.locfileid: "87954348"
     |パラメーター値|セキュリティ レベル|保護設定|
     |-------------------|------------------|----------------------|
     |必須|サーバーは完全にセキュリティで保護されます。|保護の強化が適用され常時必須です。|
-    |Allow|サーバーは部分的にセキュリティで保護されます。|保護の強化は、関係するシステムでパッチによってサポートされている場合に適用されます。|
-    |None|サーバーは保護されていません。|保護の強化は適用されません。|
+    |許可|サーバーは部分的にセキュリティで保護されます。|保護の強化は、関係するシステムでパッチによってサポートされている場合に適用されます。|
+    |なし|サーバーは保護されていません。|保護の強化は適用されません。|
 
 -   **ログとトレースを使用する場合は、すべての機密情報のプライバシーを確保する**
 
@@ -106,19 +107,19 @@ ms.locfileid: "87954348"
 
     Web アプリケーションプロキシ経由で無効な (正しくない) パスワードを使用した認証要求の形式で攻撃が発生した場合、AD FS エクストラネットロックアウトを使用すると、AD FS アカウントロックアウトからユーザーを保護することができます。 AD FS アカウントロックアウトからユーザーを保護するだけでなく、AD FS のエクストラネットロックアウトでは、ブルートフォースパスワード推測攻撃から保護することもできます。
 
-    Windows Server 2012 R2 の AD FS のエクストラネットのソフトロックアウトについては[AD FS 「エクストラネットのソフトロックアウト保護](../../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md)」を参照してください。
+    Windows Server 2012 R2 の AD FS のエクストラネットのソフトロックアウトについては [AD FS 「エクストラネットのソフトロックアウト保護](../../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md)」を参照してください。
 
-     Windows Server 2016 の AD FS のエクストラネットのスマートロックアウトについては[AD FS 「エクストラネットのスマートロックアウトの保護](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md)」を参照してください。
+     Windows Server 2016 の AD FS のエクストラネットのスマートロックアウトについては [AD FS 「エクストラネットのスマートロックアウトの保護](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md)」を参照してください。
 
 ## <a name="sql-serverspecific-security-best-practices-for-ad-fs"></a>SQL Server 特有の AD FS のセキュリティに関するベスト プラクティス
 以下のセキュリティのベストプラクティスは、これらのデータベーステクノロジを使用して &reg; AD FS の設計と展開でデータを管理する場合に、Microsoft SQL Server または Windows Internal Database (WID) の使用に固有のものです。
 
 > [!NOTE]
-> これらの推奨事項は SQL Server 製品のセキュリティ ガイダンスを強化するためのものであって、取って代わるものではありません。 セキュリティで保護された SQL Server インストールの計画の詳細については、「[セキュリティで保護された SQL インストールのセキュリティに関する考慮事項](https://go.microsoft.com/fwlink/?LinkID=139831)」 (を参照してください https://go.microsoft.com/fwlink/?LinkID=139831) 。
+> これらの推奨事項は SQL Server 製品のセキュリティ ガイダンスを強化するためのものであって、取って代わるものではありません。 セキュリティで保護された SQL Server インストールの計画の詳細については、「 [セキュリティで保護された SQL インストールのセキュリティに関する考慮事項](https://go.microsoft.com/fwlink/?LinkID=139831) 」 (を参照してください https://go.microsoft.com/fwlink/?LinkID=139831) 。
 
 -   **常に SQL Server を物理的にセキュリティで保護されたネットワーク環境内のファイアウォールの背後に展開する。**
 
-    SQL Server のインストールを直接インターネットに公開しないでください。 データセンター内のコンピューターのみが、AD FS をサポートする SQL server インストールに接続できるようにする必要があります。 詳細については、「[セキュリティのベストプラクティスのチェックリスト](https://go.microsoft.com/fwlink/?LinkID=189229)」 (を参照してください https://go.microsoft.com/fwlink/?LinkID=189229) 。
+    SQL Server のインストールを直接インターネットに公開しないでください。 データセンター内のコンピューターのみが、AD FS をサポートする SQL server インストールに接続できるようにする必要があります。 詳細については、「 [セキュリティのベストプラクティスのチェックリスト](https://go.microsoft.com/fwlink/?LinkID=189229) 」 (を参照してください https://go.microsoft.com/fwlink/?LinkID=189229) 。
 
 -   **既定のビルトイン システム サービス アカウントを使用せずに、別のサービス アカウントで SQL Server を実行する。**
 
@@ -126,11 +127,11 @@ ms.locfileid: "87954348"
 
 -   **SQL Server での外部からのアクセスを最小限にする。**
 
-    必要な SQL Server エンドポイントのみを有効にしてください。 SQL Server では、既定で組み込みの TCP エンドポイント (削除不可) が 1 つ提供されています。 AD FS には、この TCP エンドポイントを Kerberos 認証に対して有効にする必要があります。 現状の TCP エンドポイントを確認してユーザー定義の別の TCP ポートが SQL のインストールに追加されていないか調べるには、Transact-SQL (T-SQL) セッションで "SELECT * FROM sys.tcp_endpoints" クエリ ステートメントを使用できます。 SQL Server エンドポイント構成の詳細については、「[方法: 複数の TCP ポートでリッスンするようにデータベースエンジンを構成](https://go.microsoft.com/fwlink/?LinkID=189231)する」 (を参照してください https://go.microsoft.com/fwlink/?LinkID=189231) 。
+    必要な SQL Server エンドポイントのみを有効にしてください。 SQL Server では、既定で組み込みの TCP エンドポイント (削除不可) が 1 つ提供されています。 AD FS には、この TCP エンドポイントを Kerberos 認証に対して有効にする必要があります。 現状の TCP エンドポイントを確認してユーザー定義の別の TCP ポートが SQL のインストールに追加されていないか調べるには、Transact-SQL (T-SQL) セッションで "SELECT * FROM sys.tcp_endpoints" クエリ ステートメントを使用できます。 SQL Server エンドポイント構成の詳細については、「 [方法: 複数の TCP ポートでリッスンするようにデータベースエンジンを構成](https://go.microsoft.com/fwlink/?LinkID=189231) する」 (を参照してください https://go.microsoft.com/fwlink/?LinkID=189231) 。
 
 -   **SQL ベースの認証を使用しない。**
 
-    ネットワークでパスワードをクリア テキストとして転送したり、構成設定にパスワードを保存したりすることを避けるために、SQL Server インストールで Windows 認証のみを使用してください。 SQL Server 認証は以前の認証モードです。 SQL Server 認証の使用時に構造化照会言語 (SQL) ログイン資格証明書 (SQL ユーザー名とパスワード) を保存することは推奨されません。 詳細については、「[認証モード](https://go.microsoft.com/fwlink/?LinkID=189232)」 (を参照してください https://go.microsoft.com/fwlink/?LinkID=189232) 。
+    ネットワークでパスワードをクリア テキストとして転送したり、構成設定にパスワードを保存したりすることを避けるために、SQL Server インストールで Windows 認証のみを使用してください。 SQL Server 認証は以前の認証モードです。 SQL Server 認証の使用時に構造化照会言語 (SQL) ログイン資格証明書 (SQL ユーザー名とパスワード) を保存することは推奨されません。 詳細については、「 [認証モード](https://go.microsoft.com/fwlink/?LinkID=189232) 」 (を参照してください https://go.microsoft.com/fwlink/?LinkID=189232) 。
 
 -   **SQL のインストールで追加のチャネル セキュリティが必要か慎重に評価する。**
 
@@ -140,11 +141,11 @@ ms.locfileid: "87954348"
 
     ネットワークで何らかの SQL データの参照または改ざんの可能性が懸念される場合は、インターネット プロトコル セキュリティ (IPsec) または Secure Sockets Layer (SSL) を使用して SQL 接続をセキュリティで保護してください。 ただし、SQL Server のパフォーマンスに悪影響を及ぼす可能性があります。これは、状況によっては AD FS のパフォーマンスに影響を与えたり、制限したりする可能性があります。 たとえば、SQL ベースの属性ストアからの属性参照がトークンの発行に不可欠な場合、トークンの発行での AD FS のパフォーマンスが低下する可能性があります。 SQL の改ざんの脅威は、境界セキュリティの構成を強固にすることでより確実に排除することができます。 たとえば、SQL Server のインストールをセキュリティで保護するためのより良いソリューションは、SQL Server に対して、インターネット ユーザーとコンピューターはアクセスできない状態にし、データセンター環境内のユーザーとコンピューターのみがアクセスできる状態にすることです。
 
-    詳細については、「 [SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?LinkID=189234)」または「 [SQL Server 暗号化](https://go.microsoft.com/fwlink/?LinkID=189233)」を参照してください。
+    詳細については、「 [SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?LinkID=189234) 」または「 [SQL Server 暗号化](https://go.microsoft.com/fwlink/?LinkID=189233)」を参照してください。
 
 -   **ストアドプロシージャを使用して、sql に格納されているデータの AD FS によって SQL ベースのすべての参照を実行することで、安全に設計されたアクセスを構成します。**
 
     サービスとデータの分離をより確実にするために、すべての属性ストア参照コマンドのためにストアド プロシージャを作成できます。 次に、ストアド プロシージャを実行する権限を付与するデータベースの役割を作成できます。 AD FS Windows サービスのサービス id をこのデータベースロールに割り当てます。 AD FS Windows サービスは、属性参照に使用される適切なストアドプロシージャ以外の他の SQL ステートメントを実行できないようにする必要があります。 このような方法で SQL Server データベースへのアクセスをロックダウンすることで、特権の昇格攻撃のリスクが低減されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

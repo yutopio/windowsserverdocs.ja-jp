@@ -1,17 +1,18 @@
 ---
 title: HGS の証明書を取得する
+description: '詳細情報: HGS の証明書の取得'
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: c6f20ebdf2bedd74af98e075ccf6f6ff60f96767
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: a4e301ebb8bb11927f86a4af594c31ae02fd6de8
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864161"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044030"
 ---
 # <a name="obtain-certificates-for-hgs"></a>HGS の証明書を取得する
 
@@ -93,7 +94,7 @@ SSL 証明書のプロパティ | 必須値
 HGS サーバーを初期化するときにこの証明書を指定するためのオプションについては、「 [最初の hgs ノードの構成](guarded-fabric-initialize-hgs.md)」を対象としています。
 また、 [HgsServer](/powershell/module/hgsserver/set-hgsserver) コマンドレットを使用して、後で SSL 証明書を追加または変更することもできます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [HGS のインストール](guarded-fabric-choose-where-to-install-hgs.md)

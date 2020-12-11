@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「AD フォレストの回復-DNS サーバーサービスの構成」を参照してください。
 title: AD フォレストの回復-DNS サーバーサービスの構成
 ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 6dd9caff9f4dc36ee2e55850bb764dd298c2bc7e
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: c03d223bcfcf4be9360d175bfcc9f70e7b4cd59e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067954"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042940"
 ---
 # <a name="ad-forest-recovery---configuring-the-dns-server-service"></a>AD フォレストの回復-DNS サーバーサービスの構成
 
@@ -29,19 +30,19 @@ ms.locfileid: "93067954"
 
 ### <a name="to-install-and-the-dns-server-service-using-server-manager"></a>サーバーマネージャーを使用してと DNS サーバーサービスをインストールするには
 
-1. サーバーマネージャーを開き、[ **役割と機能の追加** ] をクリックします。
-2. 役割の追加ウィザードで、[ **開始する前に** ] ページが表示されたら、[ **次へ** ] をクリックします。
-3. [ **インストールの種類** ] 画面で [ **役割ベースまたは機能ベースのインストール** ] を選択し、[ **次へ** ] をクリックします。
-4. [ **サーバーの選択** ] 画面で、サーバーを選択し、[ **次へ** ] をクリックします。
-5. [ **サーバーの役割** ] 画面で [ **DNS サーバー** ] を選択します。メッセージが表示されたら、[ **機能の追加** ] をクリックし、[ **次へ** ]
-6. [ **機能** ] 画面で [ **次へ** ] をクリックします。
-7. [ **DNS サーバー** ] ページの情報を読み、[ **次へ** ] をクリックします。
+1. サーバーマネージャーを開き、[ **役割と機能の追加**] をクリックします。
+2. 役割の追加ウィザードで、[ **開始する前に** ] ページが表示されたら、[ **次へ**] をクリックします。
+3. [ **インストールの種類** ] 画面で [ **役割ベースまたは機能ベースのインストール** ] を選択し、[ **次へ**] をクリックします。
+4. [ **サーバーの選択** ] 画面で、サーバーを選択し、[ **次へ**] をクリックします。
+5. [ **サーバーの役割** ] 画面で [ **DNS サーバー**] を選択します。メッセージが表示されたら、[ **機能の追加** ] をクリックし、[ **次へ**]
+6. [ **機能** ] 画面で [ **次へ**] をクリックします。
+7. [ **DNS サーバー** ] ページの情報を読み、[ **次へ**] をクリックします。
    ![DNS サーバー](media/AD-Forest-Recovery-Configure-DNS/dns1.png)
-8. [ **確認** ] ページで、DNS サーバーの役割がインストールされていることを確認し、[ **インストール** ] をクリックします。
+8. [ **確認** ] ページで、DNS サーバーの役割がインストールされていることを確認し、[ **インストール**] をクリックします。
 
 ### <a name="to-configure-the-dns-server-service"></a>DNS サーバーサービスを構成するには
 
-1. サーバーマネージャーを開き、[ **ツール** ] をクリックし、[ **DNS** ] をクリックします。
+1. サーバーマネージャーを開き、[ **ツール** ] をクリックし、[ **DNS**] をクリックします。
    ![DNS サーバー](media/AD-Forest-Recovery-Configure-DNS/dns2.png)
 2. 重大な誤動作を行う前に、DNS サーバーでホストされていたのと同じ DNS ドメイン名の DNS ゾーンを作成します。 詳細については、「前方参照ゾーンを追加する」 () を参照してください [https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574) 。
 3. 重大な障害の前に存在していた DNS データを構成します。 次に例を示します。

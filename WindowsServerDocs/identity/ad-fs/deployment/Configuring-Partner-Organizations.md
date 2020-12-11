@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: パートナー組織の構成'
 ms.assetid: 4d002764-58b4-4137-9c86-1e55b02e07ce
 title: パートナー組織の構成
 author: billmath
@@ -6,19 +7,19 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 123968fdc9ce9e30b3cf78d25fe37b30e46fd473
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6f62c900e1b1f168f863e3bf34bd7e5f013d7a9b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962976"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043490"
 ---
 # <a name="configuring-partner-organizations"></a>パートナー組織の構成
 
-Active Directory フェデレーションサービス (AD FS) AD FS に新しいパートナー組織を展開するに \( \) は、AD FS の設計に応じて、「[リソースパートナー組織の構成](Checklist--Configuring-the-Resource-Partner-Organization.md)」または「[チェックリスト: アカウントパートナー組織の](Checklist--Configuring-the-Account-Partner-Organization.md)構成」のいずれかのタスクを実行します。
+Active Directory フェデレーションサービス (AD FS) AD FS に新しいパートナー組織を展開するに \( \) は、AD FS の設計に応じて、「 [リソースパートナー組織の構成](Checklist--Configuring-the-Resource-Partner-Organization.md) 」または「 [チェックリスト: アカウントパートナー組織の](Checklist--Configuring-the-Account-Partner-Organization.md)構成」のいずれかのタスクを実行します。
 
 > [!NOTE]
-> これらのチェックリストのいずれかを使用する場合は、最初に[Windows Server 2012 の AD FS 設計ガイド](../design/ad-fs-design-guide-in-windows-server-2012.md)の「アカウントパートナーまたはリソースパートナーの計画に関するガイダンス」を参照してから、新しいパートナー組織のセットアップ手順に進むことを強くお勧めします。 この方法でチェックリストに従うことで、アカウントパートナーまたはリソースパートナー組織の完全な AD FS 設計と展開のストーリーについて理解を深めることができます。
+> これらのチェックリストのいずれかを使用する場合は、最初に [Windows Server 2012 の AD FS 設計ガイド](../design/ad-fs-design-guide-in-windows-server-2012.md) の「アカウントパートナーまたはリソースパートナーの計画に関するガイダンス」を参照してから、新しいパートナー組織のセットアップ手順に進むことを強くお勧めします。 この方法でチェックリストに従うことで、アカウントパートナーまたはリソースパートナー組織の完全な AD FS 設計と展開のストーリーについて理解を深めることができます。
 
 ## <a name="about-account-partner-organizations"></a>アカウントパートナー組織について
 アカウントパートナーは、ユーザーアカウントを AD FS サポートされている属性ストアに物理的に格納する、フェデレーションの信頼関係にある組織です。 アカウント パートナーは、ユーザーの資格情報の収集と認証、そのユーザー用の要求の作成、およびセキュリティ トークンへの要求のパッケージを行います。 これらのトークンは、 \- リソースパートナー組織に配置されている Web ベースのリソースへのアクセスを可能にするために、フェデレーションの信頼を通じて提示されます。

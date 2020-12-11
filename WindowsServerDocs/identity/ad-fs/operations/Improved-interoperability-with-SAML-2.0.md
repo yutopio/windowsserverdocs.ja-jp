@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「SAML 2.0 との相互運用性の向上」を参照してください。
 ms.assetid: 80b5335b-fa02-4944-900c-5fe4f5c6111d
 title: SAML 2.0 との相互運用性の向上
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d92859a7f8ae37f847a68dae9ca7fd0245308b6a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 741e3370b2957bfaa4f5e908617f6c35210f4a22
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954228"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039821"
 ---
 # <a name="improved-interoperability-with-saml-20"></a>SAML 2.0 との相互運用性の向上
 
@@ -28,7 +29,7 @@ Windows Server 2016 の AD FS には、複数のエンティティを含むメ�
 
 さらに、AD FS 2016 では、「SAML コア仕様」セクション3.4.1.2 で説明されているように、スコープパラメーターがサポートされています。 この要素により、証明書利用者は認証要求に1つ以上の id プロバイダーを指定できます。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 ```
 Add-AdfsClaimsProviderTrustsGroup -MetadataUrl "https://www.contosoconsortium.com/metadata/metadata.xml"
@@ -40,10 +41,10 @@ Add-AdfsClaimsProviderTrustsGroup -MetadataUrl "https://www.contosoconsortium.co
 Add-AdfsClaimsProviderTrustsGroup -MetadataFile "C:\metadata.xml"
 ```
 
-## <a name="references"></a>References
+## <a name="references"></a>リファレンス
 
-EGov 2.0 プロファイルについては、こちらを参照[してください。](https://kantarainitiative.org/confluence/download/attachments/60817482/kantara-report-egov-saml2-profile-2.0.pdf?version=1&modificationDate=1345580916000&api=v2)
+EGov 2.0 プロファイルについては、こちらを参照 [してください。](https://kantarainitiative.org/confluence/download/attachments/60817482/kantara-report-egov-saml2-profile-2.0.pdf?version=1&modificationDate=1345580916000&api=v2)
 
-SAML コア仕様については、こちらを参照[してください。](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf)
+SAML コア仕様については、こちらを参照 [してください。](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf)
 
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「記憶域スペースダイレクトのドライブの選択」を参照してください。
 ms.assetid: 1368bc83-9121-477a-af09-4ae73ac16789
 title: 記憶域スペース ダイレクト用のドライブの選択
 ms.author: cosdar
@@ -7,12 +8,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 07/01/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: e01966d268968a5bdec3d704d32bcc84b2638b27
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 7de0e6017a532d6ceefc5791450d144aabfdbaa1
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961035"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041290"
 ---
 # <a name="choosing-drives-for-storage-spaces-direct"></a>記憶域スペース ダイレクト用のドライブの選択
 
@@ -46,7 +47,7 @@ ms.locfileid: "87961035"
             <img src="media/understand-the-cache/SSD-100px.png" alt="Image of SSD drive">
         </td>
         <td style="padding: 10px; border: 0;" valign="middle">
-            <b>SSD</b>は、従来の SATA または SAS 経由で接続するソリッドステートドライブを指します。
+            <b>SSD</b> は、従来の SATA または SAS 経由で接続するソリッドステートドライブを指します。
         </td>
     </tr>
     <tr style="border: 0;">
@@ -54,7 +55,7 @@ ms.locfileid: "87961035"
             <img src="media/understand-the-cache/HDD-100px.png" alt="Image of HDD">
         </td>
         <td style="padding: 10px; border: 0;" valign="middle">
-            <b>Hdd</b>は、大量の記憶域容量を提供する、磁気ハードディスクドライブの回転を指します。
+            <b>Hdd</b> は、大量の記憶域容量を提供する、磁気ハードディスクドライブの回転を指します。
         </td>
     </tr>
 </table>
@@ -116,7 +117,7 @@ ms.locfileid: "87961035"
 
 各サーバーには、少なくとも 2 つのキャッシュ ドライブ (冗長性のために必要な最小値) が必要です。 容量ドライブの数は、キャッシュ ドライブの数の倍数にすることをお勧めします。 たとえば、4 台のキャッシュ ドライブがある場合、7 台や 9 台よりも 8 台の容量ドライブ (1:2 の比率) を使用した方がより一貫性のあるパフォーマンスを得ることができます。
 
-キャッシュは、アプリケーションとワークロードのワーキングセット (つまり、特定の時点でアクティブに読み取りおよび書き込みを行っているすべてのデータ) に合わせてサイズ設定する必要があります。 それを超えるキャッシュ サイズの要件はありません。 Hdd を使用した展開では、1台のサーバーの容量が10% になります。たとえば、各サーバーに4× 4 TB HDD = 16 TB の容量がある場合は、サーバーあたり 2 x 800 GB SSD = 1.6 TB のキャッシュが必要です。 すべてのフラッシュデプロイ (特に非常に[耐久性の高い](https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024)ssd) では、容量の5% に近い状態にすることができます。たとえば、各サーバーに 24 x 1.2 tb SSD = 28.8 TB の容量がある場合は、サーバーあたり 2 x 750 GB NVMe = 1.5 tb のキャッシュを使用します。 キャッシュ ドライブは、後でいつでも追加または削除して調整できます。
+キャッシュは、アプリケーションとワークロードのワーキングセット (つまり、特定の時点でアクティブに読み取りおよび書き込みを行っているすべてのデータ) に合わせてサイズ設定する必要があります。 それを超えるキャッシュ サイズの要件はありません。 Hdd を使用した展開では、1台のサーバーの容量が10% になります。たとえば、各サーバーに4× 4 TB HDD = 16 TB の容量がある場合は、サーバーあたり 2 x 800 GB SSD = 1.6 TB のキャッシュが必要です。 すべてのフラッシュデプロイ (特に非常に [耐久性の高い](https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024) ssd) では、容量の5% に近い状態にすることができます。たとえば、各サーバーに 24 x 1.2 tb SSD = 28.8 TB の容量がある場合は、サーバーあたり 2 x 750 GB NVMe = 1.5 tb のキャッシュを使用します。 キャッシュ ドライブは、後でいつでも追加または削除して調整できます。
 
 ### <a name="general"></a>全般
 

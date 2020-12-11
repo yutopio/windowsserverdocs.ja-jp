@@ -1,16 +1,17 @@
 ---
+description: '詳細については、次を参照してください: 記憶域スペースダイレクトにおけるボリュームの割り当てを区切る'
 title: 記憶域スペースダイレクトのボリュームの割り当てを区切ります。
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.author: cosdar
 ms.date: 03/29/2018
-ms.openlocfilehash: 394d9dbb41f502fe9be273e97177237dea79fde7
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: b0d036b08ab3c538a134cdbc294c2208d8d547aa
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078497"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041410"
 ---
 # <a name="delimit-the-allocation-of-volumes-in-storage-spaces-direct"></a>記憶域スペースダイレクトのボリュームの割り当てを区切ります。
 > 適用対象:Windows Server 2019
@@ -52,7 +53,7 @@ Windows Server 2019 では、記憶域スペースダイレクトでボリュー
 
 ### <a name="new-delimited-allocation"></a>新規: 区切られた割り当て
 
-区切られた割り当てでは、使用するサーバーのサブセットを指定します (最小 4)。 ボリュームは、以前と同様に3回コピーされるスラブに分割されますが、すべてのサーバーに割り当てられるのではなく、 **指定したサーバーのサブセットにのみスラブが割り当てら**れます。
+区切られた割り当てでは、使用するサーバーのサブセットを指定します (最小 4)。 ボリュームは、以前と同様に3回コピーされるスラブに分割されますが、すべてのサーバーに割り当てられるのではなく、 **指定したサーバーのサブセットにのみスラブが割り当てら** れます。
 
 たとえば、8ノードクラスター (ノード 1 ~ 8) を使用している場合は、ノード1、2、3、4のディスクにのみ配置するボリュームを指定できます。
 #### <a name="advantages"></a>長所
@@ -102,7 +103,7 @@ New-Volume -FriendlyName "MyRegularVolume" -Size 100GB
 
 ### <a name="see-a-delimited-allocation"></a>区切られた割り当てを表示する
 
-*Myvolume*がどのように割り当てられているかを確認するには、 `Get-VirtualDiskFootprintBySSU.ps1` [付録](#appendix)のスクリプトを使用します。
+*Myvolume* がどのように割り当てられているかを確認するには、 `Get-VirtualDiskFootprintBySSU.ps1` [付録](#appendix)のスクリプトを使用します。
 
 ```PowerShell
 PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
@@ -112,7 +113,7 @@ VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 S
 MyVolume                300 GB         100 GB  100 GB  100 GB  100 GB  0       0
 ```
 
-Server1、Server2、Server3、およびサーバー4にのみ、 *Myvolume*のスラブが含まれていることに注意してください。
+Server1、Server2、Server3、およびサーバー4にのみ、 *Myvolume* のスラブが含まれていることに注意してください。
 
 ### <a name="change-a-delimited-allocation"></a>区切られた割り当てを変更する
 
@@ -120,13 +121,13 @@ Server1、Server2、Server3、およびサーバー4にのみ、 *Myvolume*の�
 
 たとえば、1台のサーバーで *Myvolume* を移動するには、次のようにします。
 
-1. 5番目のサーバーがスラブ*Myvolume*を格納**できる**ことを指定します。
+1. 5番目のサーバーがスラブ *Myvolume* を格納 **できる** ことを指定します。
 
     ```PowerShell
     Get-VirtualDisk MyVolume | Add-StorageFaultDomain -StorageFaultDomains $Servers[4]
     ```
 
-2. 最初のサーバーがスラブの*Myvolume*を格納**できない**ことを指定します。
+2. 最初のサーバーがスラブの *Myvolume* を格納 **できない** ことを指定します。
 
     ```PowerShell
     Get-VirtualDisk MyVolume | Remove-StorageFaultDomain -StorageFaultDomains $Servers[0]

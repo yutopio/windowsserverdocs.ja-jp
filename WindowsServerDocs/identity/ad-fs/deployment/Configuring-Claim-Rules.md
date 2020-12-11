@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 要求規則の構成'
 ms.assetid: 46dce9d4-7293-4b1c-9710-78b04f2e347a
 title: 要求規則の構成
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 398c03def2ed531710e365c005cf7b9f6ecbe480
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 70d3c1f562d4faf9cea6608be9e2825dd39e8744
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87963016"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044171"
 ---
 # <a name="configuring-claim-rules"></a>要求規則の構成
 
@@ -37,6 +38,6 @@ AD FS は、要求とその他のコンテキスト情報の形式で提供さ�
 
 -   [カスタム規則を使用して要求を送信する規則を作成する](../../ad-fs/operations/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md)
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 [AD FS の運用](../ad-fs-operations.md)

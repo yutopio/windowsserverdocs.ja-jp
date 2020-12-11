@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「デバイス登録サービスを使用してフェデレーションサーバーを構成する」を参照してください。
 ms.assetid: fdd1c1fd-55aa-4eb8-ae84-53f811de042c
 title: デバイス登録サービスを使用してフェデレーション サーバーを構成する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: cba3f26a2c5e3d17e1c29609e44115c667838613
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ae72874eb575579691c00e9331adc0aee18fa1b8
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87963073"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044230"
 ---
 # <a name="configure-a-federation-server-with-device-registration-service"></a>デバイス登録サービスを使用してフェデレーション サーバーを構成する
 
@@ -32,7 +33,7 @@ ms.locfileid: "87963073"
     Initialize-ADDeviceRegistration
     ```
 
-2.  [ServiceAccountName] が要求されたら、AD FS のサービス アカウントとして選択したサービス アカウントの名前を入力します。  GMSA アカウントの場合は、**ドメイン \\ accountname $** 形式でアカウントを入力します。 ドメインアカウントの場合は、ドメインアカウント**の \\ **形式を使用します。
+2.  [ServiceAccountName] が要求されたら、AD FS のサービス アカウントとして選択したサービス アカウントの名前を入力します。  GMSA アカウントの場合は、 **ドメイン \\ accountname $** 形式でアカウントを入力します。 ドメインアカウントの場合は、ドメインアカウント **の \\** 形式を使用します。
 
 ## <a name="enable-device-registration-service-on-a-federation-server-farm-node"></a>フェデレーションサーバーファームノードでデバイス登録サービスを有効にする
 
@@ -71,7 +72,7 @@ ms.locfileid: "87963073"
 
 2.  資格情報の入力を求められたら、フェデレーションサーバーに対する管理者権限を持つアカウントの資格情報を入力します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [AD FS 展開](../../ad-fs/AD-FS-Deployment.md)
 

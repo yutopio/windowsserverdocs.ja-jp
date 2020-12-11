@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: SMB: ファイルとプリンターの共有ポートを開く'
 title: SMB ファイルとプリンターの共有ポートを開く
 ms.date: 07/02/2012
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: dc2e1d7f5408ad123297b8df2dc06f59053fe870
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ca4e8cb86e567786385da0449223b6282347909b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954769"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041060"
 ---
 # <a name="smb-file-and-printer-sharing-ports-should-be-open"></a>SMB: ファイルとプリンターの共有ポートが開いていること
 
@@ -18,7 +19,7 @@ ms.locfileid: "87954769"
 
 適用対象: windows Server 2019、Windows Server 2016、Windows Server 2012 R2、windows server 2012、windows server 2008 R2
 
-*このトピックは、ベストプラクティスアナライザースキャンによって識別される特定の問題に対処することを目的としています。このトピックの情報は、ファイルベストプラクティスアナライザーサービスが実行されていて、このトピックで対処している問題が発生しているコンピューターにのみ適用する必要があります。ベストプラクティスとスキャンの詳細については、「ベストプラクティスアナライザー」を参照してください* [Best Practices Analyzer](https://go.microsoft.com/fwlink/?linkid=122786%0d%0a)。
+*このトピックは、ベストプラクティスアナライザースキャンによって識別される特定の問題に対処することを目的としています。このトピックの情報は、ファイルベストプラクティスアナライザーサービスが実行されていて、このトピックで対処している問題が発生しているコンピューターにのみ適用する必要があります。ベストプラクティスとスキャンの詳細については、「ベストプラクティスアナライザー」を参照してください* [](https://go.microsoft.com/fwlink/?linkid=122786%0d%0a)。
 
 
 <table>
@@ -36,7 +37,7 @@ ms.locfileid: "87954769"
 <td><p>ファイル サービス</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>重大度</strong></p></td>
+<td><p><strong>Severity</strong></p></td>
 <td><p>エラー</p></td>
 </tr>
 <tr class="even">
@@ -62,14 +63,14 @@ ms.locfileid: "87954769"
 
 ## <a name="to-open-the-firewall-ports-to-enable-file-and-printer-sharing"></a>ファイアウォールポートを開いてファイルとプリンターの共有を有効にするには
 
-1.  コントロールパネルを開き、[**システムとセキュリティ**] をクリックし、[ **Windows ファイアウォール**] をクリックします。
+1.  コントロールパネルを開き、[ **システムとセキュリティ**] をクリックし、[ **Windows ファイアウォール**] をクリックします。
 
-2.  左側のウィンドウで、[**詳細設定**] をクリックし、コンソールツリーで [**受信の規則**] をクリックします。
+2.  左側のウィンドウで、[ **詳細設定**] をクリックし、コンソールツリーで [ **受信の規則**] をクリックします。
 
-3.  [**受信の規則**] で、規則**ファイルとプリンターの共有 (NB セッション)** と、**ファイルとプリンターの共有 (SMB 受信)** を見つけます。
+3.  [ **受信の規則**] で、規則 **ファイルとプリンターの共有 (NB セッション)** と、 **ファイルとプリンターの共有 (SMB 受信)** を見つけます。
 
 4.  各規則を右クリックして、 **[規則の有効化]** をクリックします。
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 
 [共有フォルダーと Windows ファイアウォールについて](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731402(v=ws.11))(https://technet.microsoft.com/library/cc731402.aspx)

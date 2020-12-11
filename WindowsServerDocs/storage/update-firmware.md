@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ドライブのファームウェアの更新'
 ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
 title: ドライブのファームウェアの更新
 ms.author: toklima
@@ -6,12 +7,12 @@ manager: dmoss
 ms.topic: article
 author: toklima
 ms.date: 10/04/2016
-ms.openlocfilehash: 15e0d6dedc6bb81c0b511479ee342dbd463654e2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2393afa82b61d432a4191753771b27db22e1691c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946215"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039170"
 ---
 # <a name="updating-drive-firmware"></a>ドライブのファームウェアの更新
 >適用対象: Windows Server 2019、Windows Server 2016、Windows 10
@@ -118,7 +119,7 @@ Windows Server 2016 には、記憶域スペース ダイレクト展開 (Micros
 
 この時点で、ヘルス サービスは XML を検査して解析し、目的のファームウェア バージョンが展開されていないドライブを特定します。 次に、影響を受けるドライブから (ノードごとに) I/O をリダイレクトし、ドライブ上のファームウェアを更新します。 記憶域スペース ダイレクト クラスターは、複数のサーバー ノードにデータを分散させることで、回復性を実現します。ヘルス サービスによって、ドライブを更新する価値があるノード全体を分離できます。 ノードが更新されると、記憶域スペースの修復が開始され、すべてのデータのコピーが相互に同期を保った状態でクラスターに戻されてから、次のノードに進みます。 ファームウェアのロール アウト中に、記憶域スペースの処理が "デグレード" モードに移行することが予想されます。そしてそれは通常のことです。
 
-新しいファームウェア イメージの安定したロールアウトと十分な検証時間を確保するために、複数のサーバーを更新する間隔は長く設定されています。 既定では、ヘルスサービスは 2<sup>nd</sup>サーバーを更新する前に7日間待機します。 後続のサーバー (3<sup>rd</sup>、4<sup>番目</sup>、...) は、1日の遅延で更新されます。 管理者がファームウェアを不安定、または望ましくないと判断した場合、いつでもヘルス サービスで以降のロールアウトを停止できます。 ファームウェアが検証済みで、迅速なロールアウトが望ましい場合、これらの既定値を日単位から時間単位や分単位に変更できます。
+新しいファームウェア イメージの安定したロールアウトと十分な検証時間を確保するために、複数のサーバーを更新する間隔は長く設定されています。 既定では、ヘルスサービスは 2<sup>nd</sup> サーバーを更新する前に7日間待機します。 後続のサーバー (3<sup>rd</sup>、4<sup>番目</sup>、...) は、1日の遅延で更新されます。 管理者がファームウェアを不安定、または望ましくないと判断した場合、いつでもヘルス サービスで以降のロールアウトを停止できます。 ファームウェアが検証済みで、迅速なロールアウトが望ましい場合、これらの既定値を日単位から時間単位や分単位に変更できます。
 
 次に、一般的な記憶域スペース ダイレクト クラスター向けのサポートされるコンポーネントの XML 例を示します。
 
@@ -162,7 +163,7 @@ $NewDoc = Get-Content <Path> | Out-String
 $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $NewDoc
 ```
 
-ヘルスサービスの動作を確認し、そのロールアウトメカニズムの詳細については、次のビデオを参照してください。https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
+ヘルスサービスの動作を確認し、そのロールアウトメカニズムの詳細については、次のビデオを参照してください。 https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 

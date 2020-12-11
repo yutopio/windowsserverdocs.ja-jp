@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「AD FS サーバーの容量の計画」を参照してください。
 ms.assetid: ef91f1d8-2991-4d90-b687-5fa189737c88
 title: AD FS サーバーの容量計画
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 29881c667d52ef4e61edf0e76fc5bda3237d0235
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: f396f86ad3ddf410dbb3adf69ab77afdf3d4bbed
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938191"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044650"
 ---
 # <a name="planning-for-ad-fs-server-capacity"></a>AD FS サーバーの容量計画
 
@@ -46,9 +47,9 @@ Active Directory フェデレーションサービス (AD FS) AD FS のキャパ
 |Windows Server 2016 の AD FS キャパシティプランニングスプレッドシート|Windows Server 2016 用に更新された計画ワークシート|[AD FS Windows Server 2016 の容量計画](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx)
 
 ## <a name="ad-fs-capacity-planning-terms"></a><a name="bk_terms"></a>AD FS キャパシティ プランニングの用語
-次の表では、AD FS 設計ガイドのこの容量計画のセクションでよく使用される重要な用語について説明します。 AD FS の用語の完全な一覧については、「[キー AD FS の概念につい](../../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)て」を参照してください。
+次の表では、AD FS 設計ガイドのこの容量計画のセクションでよく使用される重要な用語について説明します。 AD FS の用語の完全な一覧については、「 [キー AD FS の概念につい](../../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)て」を参照してください。
 
-|期間|定義|
+|項目|定義|
 |--------|--------------|
 |同時ユーザー数|サービスへの要求を送信するユーザーの数の、所定の時間あたりの見積もり。通常はピーク アクティビティ期間の数値です。|
 |アクティブ ユーザー|システム上でアクティブであるユーザー (要求を送信するとは限らない) の数の、所定の時間あたりのおおよその平均値。|
@@ -98,5 +99,5 @@ Active Directory フェデレーションサービス (AD FS) AD FS のキャパ
 
 -   [フェデレーション サーバー プロキシの容量計画](Planning-for-Federation-Server-Proxy-Capacity.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フェデレーションサーバーファームのサービスアカウントを手動で構成する」を参照してください。
 ms.assetid: 5a1ae56b-adcb-447e-9e34-c0629d7cb241
 title: フェデレーション サーバー ファームのサービス アカウントを手動で構成する
 author: billmath
@@ -6,19 +7,19 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 32a32a27eb86bd8977d7d1b4e83f5a7e6f445356
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: afedde422f0a46975fcbb61912773a992c688309
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972139"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043330"
 ---
 # <a name="manually-configure-a-service-account-for-a-federation-server-farm"></a>フェデレーション サーバー ファームのサービス アカウントを手動で構成する
 
 Active Directory フェデレーションサービス (AD FS) AD FS でフェデレーションサーバーファーム環境を構成する場合は \( 、 \) \( ファームが配置される Active Directory Domain Services AD DS で専用のサービスアカウントを作成し、構成する必要があり \) ます。 次に、このアカウントを使用するために、ファーム内の各フェデレーション サーバーを構成します。 企業ネットワーク上のクライアントコンピューターが Windows 統合認証を使用して AD FS ファーム内のいずれかのフェデレーションサーバーに対して認証を行うことができるようにするには、組織で次のタスクを完了する必要があります。
 
 > [!IMPORTANT]
-> AD FS 3.0 (Windows Server 2012 R2) の場合、AD FS は、グループの管理された[サービスアカウント](../../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md) \( gMSA をサービスアカウントとして使用することをサポートしてい \) ます。  これは、時間の経過と共にサービスアカウントのパスワードを管理する必要がないため、推奨されるオプションです。  このドキュメントでは、Windows Server 2008 R2 以前のドメイン機能レベル dfl をまだ実行しているドメインなど、従来のサービスアカウントを使用する別のケースについて説明し \( \) ます。
+> AD FS 3.0 (Windows Server 2012 R2) の場合、AD FS は、グループの管理された [サービスアカウント](../../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md) \( gMSA をサービスアカウントとして使用することをサポートしてい \) ます。  これは、時間の経過と共にサービスアカウントのパスワードを管理する必要がないため、推奨されるオプションです。  このドキュメントでは、Windows Server 2008 R2 以前のドメイン機能レベル dfl をまだ実行しているドメインなど、従来のサービスアカウントを使用する別のケースについて説明し \( \) ます。
 
 > [!NOTE]
 > この手順のタスクは、フェデレーション サーバー ファーム全体で 1 回のみ実行する必要があります。 後になって、AD FS フェデレーション サーバーの構成ウィザードを使ってフェデレーション サーバーを作成する場合、ファーム内のフェデレーション サーバーごとに、**[サービス アカウント]** ウィザード ページでこれと同じアカウントを指定する必要があります。

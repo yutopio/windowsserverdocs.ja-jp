@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「任意のデバイスからの職場への参加による企業アプリケーション間での SSO とシームレスな2要素認証」を参照してください。
 ms.assetid: e22d84a5-113d-4bec-b484-036ed29f0c28
 title: 任意のデバイスからの職場への参加による業務用アプリケーション間の SSO とシームレスな 2 要素認証
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 12/05/2017
 ms.topic: article
-ms.openlocfilehash: 584088900bea8acb83da076311d29ed5f45ea71e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3f681ba75ea55245948b1ed9acfd84830b3f3909
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954238"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039800"
 ---
 # <a name="join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications"></a>任意のデバイスからの職場への参加による業務用アプリケーション間の SSO とシームレスな 2 要素認証
 
@@ -40,7 +41,7 @@ ms.locfileid: "87954238"
 
 -   信頼されたデバイスから社内リソースにアクセスするユーザーに、よりシームレスなサインイン エクスペリエンスを提供します。
 
-### <a name="single-sign-on"></a>[Single Sign-On]
+### <a name="single-sign-on"></a>シングル サインオン
 このシナリオで使用されるシングル サインオン (SSO) は、既知のデバイスから社内リソースにアクセスするためにエンド ユーザーが入力する必要があるパスワード プロンプトの表示回数を減らす機能です。 この機能により、SSO の有効期間内であれば、ユーザーはパスワードを 1 回入力するだけで、既知のデバイスから会社のアプリケーションやリソースにアクセスできます。 デバイスでワークプレース ジョインを使用する場合、このデバイスを使用するよう登録されたユーザーの SSO は既定で 7 日間、有効になります。 このユーザーには、同一セッションまたは新しいセッションでシームレスなサインイン エクスペリエンスが提供されます。
 
 ## <a name="solution-overview"></a>ソリューションの概要
@@ -57,5 +58,5 @@ ms.locfileid: "87954238"
 
 3.  [チュートリアル: Workplace Join で Android デバイスをワークプレースに参加させる](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [デバイス登録サービスを使用してフェデレーションサーバーを構成する](../deployment/configure-a-federation-server-with-device-registration-service.md)

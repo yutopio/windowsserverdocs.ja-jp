@@ -1,16 +1,17 @@
 ---
 title: AlwaysOn 可用性グループを使用した AD FS 展開の設定
+description: 詳細については、「AlwaysOn 可用性グループを使用した AD FS デプロイの設定」を参照してください。
 author: billmath
 ms.author: billmath
 manager: daveba
 ms.date: 01/20/2020
 ms.topic: article
-ms.openlocfilehash: fac086cdcc08cb8941eba1dda9f4c41058d1b5d2
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 3d1ad6745eb7051857bc27b4fc60400f40b01731
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865071"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039420"
 ---
 # <a name="setting-up-an-ad-fs-deployment-with-alwayson-availability-groups"></a>AlwaysOn 可用性グループを使用した AD FS 展開の設定
 高可用性の geo 分散トポロジでは、次のことが実現されます。
@@ -49,14 +50,14 @@ AlwaysOn 可用性グループの概要については、「 [Always On 可用�
 次の表では、WID と SQL データベース間でサポートされる機能の違いについて説明します。
 
 
-| カテゴリ      | 特徴量       | WID でサポート  | サポート対象 (SQL) |
+| カテゴリ      | 機能       | WID でサポート  | サポート対象 (SQL) |
 | ------------------ |:-------------:| :---:|:---: |
-| AD FS 機能     | フェデレーション サーバー ファーム展開 | はい  | Yes |
+| AD FS 機能     | フェデレーション サーバー ファーム展開 | はい  | はい |
 | AD FS 機能     | SAML アーティファクト解決。 注: これは、SAML アプリケーションでは一般的ではありません。     |   いいえ | はい  |
 | AD FS 機能 | SAML/WS-FEDERATION トークンリプレイ検出。 注: AD FS が外部 IDPs からトークンを受信する場合にのみ必要です。 AD FS がフェデレーションパートナーとして機能していない場合は、この操作は必要ありません。      |    いいえ  | はい |
 | データベース機能     |   プルレプリケーションを使用した基本的なデータベース冗長化 (データベースの読み取り専用コピーをホストしている1つ以上のサーバーが、データベースの読み取り/書き込みコピーをホストする、ソースサーバーで変更を要求する)    |   いいえ | いいえ  |
 | データベース機能 | クラスター化やミラーリング (データベース層での) などの高可用性ソリューションを使用したデータベースの冗長性      |    いいえ  | はい |
-| 追加機能 | OAuth Authcode のシナリオ     |   はい  | Yes |
+| 追加機能 | OAuth Authcode のシナリオ     |   はい  | はい |
 
 100を超える信頼関係を持つ大規模な組織で、内部ユーザーと外部ユーザーの両方にフェデレーションアプリケーションまたはサービスへのシングルサインオンアクセスを提供する必要がある場合は、SQL を使用することをお勧めします。
 

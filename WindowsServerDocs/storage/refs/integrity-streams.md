@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ReFS 整合性ストリーム」を参照してください。
 title: ReFS 整合性ストリーム
 author: gawatu
 ms.author: jgerend
@@ -6,12 +7,12 @@ manager: dmoss
 ms.date: 10/16/2018
 ms.topic: article
 ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
-ms.openlocfilehash: 15c4b7942be949af33e70d2a5f299af426040e7b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: aed3de02a21f59102bcaa4d0efce2ef6e2816856
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87950506"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041260"
 ---
 # <a name="refs-integrity-streams"></a>ReFS 整合性ストリーム
 >適用対象: Windows Server 2019、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server (半期チャネル)、Windows 10
@@ -54,7 +55,7 @@ ReFS では、すべての破損がシステム イベント ログに記録さ�
 
 既定ではスクラブ機能が 4 週間ごとに実行されますが、この間隔は、タスク スケジューラーの [Microsoft]\[Windows]\[データ整合性スキャン ]で構成できます。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 ファイル データの整合性の設定を監視および変更するには、ReFS は **Get-FileIntegrity** および **Set-FileIntegrity** コマンドレットを使用します。
 
 ### <a name="get-fileintegrity"></a>Get-FileIntegrity

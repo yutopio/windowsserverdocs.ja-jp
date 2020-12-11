@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「シナリオ: ファイルサーバーでの情報の保持を実装する」を参照してください。'
 ms.assetid: 81c55015-82e5-4ba1-b15e-cc7b49af28fc
 title: ファイルサーバーに関する情報の保持を実装するシナリオ
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 479aaaf96eab094f3ba7556c0c0416c9915f4620
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 497703300b87ac07f06741fa6bd5274975f2d711
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940214"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044560"
 ---
 # <a name="scenario-implement-retention-of-information-on-file-servers"></a>シナリオ:ファイル サーバーでの情報の保持を実装する
 
@@ -24,7 +25,7 @@ ms.locfileid: "87940214"
 
 「[ファイル サーバーでの情報の保持の計画](assetId:///edf13190-7077-455a-ac01-f534064a9e0c)」に、保持の構成に関する計画情報があります。
 
-訴訟ホールドのためにファイルを分類するための手順を確認し、「[ファイルサーバーに情報の保持を実装](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md)する」で保存期間を構成して &#40;デモンストレーション手順&#41;ます。
+訴訟ホールドのためにファイルを分類するための手順を確認し、「 [ファイルサーバーに情報の保持を実装 ](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md)する」で保存期間を構成して &#40;デモンストレーション手順&#41;ます。
 
 > [!NOTE]
 > このシナリオでは、訴訟ホールドのためにドキュメントを手動で分類する方法のみが説明されています。 ただし、Windows Server 2012 では、訴訟ホールドのためにドキュメントを自動的に分類することができます。 これを行う 1 つの方法として、訴訟ホールド下のユーザー アカウントのリストに対してファイル所有者を比較する Windows PowerShell 分類子を作成する方法があります。 ファイル所有者がユーザー アカウント リストの一部である場合、ファイルは訴訟ホールドとして分類されます。

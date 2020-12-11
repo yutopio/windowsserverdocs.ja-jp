@@ -1,17 +1,18 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: AD FS エクストラネット ソフト ロックアウト保護を構成する
+description: 詳細については、AD FS エクストラネットロックアウト保護の構成に関するページを参照してください。
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 02/01/2019
 ms.topic: article
-ms.openlocfilehash: 0511063581fd633b56803999b761156c8217c967
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: d64e30e3d59cf47ad3a8eb448ad5f856d28f1bea
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864501"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040140"
 ---
 # <a name="configure-ad-fs-extranet-lockout-protection"></a>AD FS エクストラネットロックアウト保護の構成
 
@@ -70,11 +71,11 @@ AD FS のエクストラネットロックアウト機能は、AD ロックア�
 ### <a name="example-2"></a>例 2
 ![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/two.png)
 
-上の例からわかるように、 **Badpwdcount** が0にリセットされる条件は2つあります。 1つは、ログオンに成功した場合です。 もう1つは、設定後に [ **アカウントロックアウトカウンターのリセット** ] で定義したカウンターをリセットする時間です。 ExtranetObservationWindow の **後にアカウントロックアウトカウンターをリセット** すると &lt; **ExtranetObservationWindow**、アカウントに AD によってロックアウトされるリスクがありません。 ただし、ExtranetObservationWindow の後に [**アカウントロックアウト] カウンターをリセット** すると、アカウントが &gt; **ExtranetObservationWindow** AD によってロックアウトされる可能性がありますが、"遅延" の状態になります。 構成によっては、AD によってアカウントがロックアウトされるまでにしばらく時間がかかることがあります。 AD FS では、 **Badpwdcount** が **Account Locked Threshold しきい値** に達するまで、監視期間中は1つの無効なパスワードの試行のみが許可されます。
+上の例からわかるように、 **Badpwdcount** が0にリセットされる条件は2つあります。 1つは、ログオンに成功した場合です。 もう1つは、設定後に [ **アカウントロックアウトカウンターのリセット** ] で定義したカウンターをリセットする時間です。 ExtranetObservationWindow の **後にアカウントロックアウトカウンターをリセット** すると &lt; 、アカウントに AD によってロックアウトされるリスクがありません。 ただし、ExtranetObservationWindow の後に [**アカウントロックアウト] カウンターをリセット** すると、アカウントが &gt; AD によってロックアウトされる可能性がありますが、"遅延" の状態になります。 構成によっては、AD によってアカウントがロックアウトされるまでにしばらく時間がかかることがあります。 AD FS では、 **Badpwdcount** が **Account Locked Threshold しきい値** に達するまで、監視期間中は1つの無効なパスワードの試行のみが許可されます。
 
 詳細については、「 [アカウントロックアウトの構成](/archive/blogs/secguide/configuring-account-lockout)」を参照してください。
 
-## <a name="known-issues"></a>の既知の問題
+## <a name="known-issues"></a>既知の問題
 AD ユーザーアカウントが AD FS で認証できないという既知の問題があります。これは、ADFS がクエリを実行しているドメインコントローラーに **Badpwdcount** 属性がレプリケートされていないためです。 詳細については、「 [2971171](https://support.microsoft.com/help/2971171/adfs-authentication-issue-for-active-directory-users-when-extranet-loc) 」を参照してください。 [ここ](../deployment/updates-for-active-directory-federation-services-ad-fs.md)までにリリースされたすべての AD FS qfe を見つけることができます。
 
 ## <a name="key-points-to-remember"></a>覚えておくべき重要事項
@@ -94,5 +95,3 @@ AD ユーザーアカウントが AD FS で認証できないという既知の�
 - [Set-adfsproperties](/powershell/module/adfs/set-adfsproperties)
 
 [AD FS の運用](../ad-fs-operations.md)
-
-

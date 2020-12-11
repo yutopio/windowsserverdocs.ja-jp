@@ -1,17 +1,18 @@
 ---
 title: HGS で必要な TPM モード情報をキャプチャする
+description: '詳細情報: TPM ベースの構成証明を使用して保護されたホストを承認する'
 ms.topic: article
 ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 04/01/2019
-ms.openlocfilehash: 8ce4528ec7e8143c6f9af977079eed1cf8cc3940
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 3ef32427191b5bd1639319f8d5688e364129e8c6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865661"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043740"
 ---
 # <a name="authorize-guarded-hosts-using-tpm-based-attestation"></a>TPM ベースの構成証明を使用して保護されたホストを承認する
 
@@ -170,7 +171,7 @@ Windows Server バージョン1709以降では、サンプルコードの整合�
     Add-HgsAttestationTpmPolicy -Path <Filename>.tcglog -Name '<PolicyName>'
     ```
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [構成証明を確認する](guarded-fabric-confirm-hosts-can-attest-successfully.md)

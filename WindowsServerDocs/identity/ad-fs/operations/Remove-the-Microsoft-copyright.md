@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Microsoft 著作権情報の削除'
 ms.assetid: c89a977c-b09f-44ec-be42-41e76a6cf3ad
 title: Microsoft 著作権情報を削除する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: ec7d9cb02508fc046ce3e8f0378e63c82eecca8d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a5b377989315462789b9b33faf5267211c93bf8c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949776"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039730"
 ---
 # <a name="remove-the-microsoft-copyright"></a>Microsoft 著作権情報を削除する
 
@@ -35,7 +36,7 @@ ms.locfileid: "87949776"
    Export-AdfsWebTheme -Name custom -DirectoryPath C:\CustomWebTheme
    ```
 
-3. `Style.css`出力フォルダーにあるファイルを見つけます。 前の例を使用すると、パスは次のようになります。`C:\CustomWebTheme\Css\Style.css.`
+3. `Style.css`出力フォルダーにあるファイルを見つけます。 前の例を使用すると、パスは次のようになります。 `C:\CustomWebTheme\Css\Style.css.`
 
 4. メモ帳などのエディターを使用してファイルを開き `Style.css` ます。
 
@@ -61,5 +62,5 @@ ms.locfileid: "87949776"
 
 ![著作権情報の削除](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1a.png)
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 [AD FS ユーザーサインインのカスタマイズ](AD-FS-user-sign-in-customization.md)

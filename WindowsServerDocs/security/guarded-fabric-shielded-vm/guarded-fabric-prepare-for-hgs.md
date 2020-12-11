@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ホストガーディアンサービスの前提条件の確認」を参照してください。
 title: HGS の前提条件を確認する
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
@@ -6,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: a8a0f469e2fe0052a3894a2f8b59a4a3ab233a9e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a5c551718afc5578432f5a32c12b04ea12e4d051
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971299"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043910"
 ---
 # <a name="review-prerequisites-for-the-host-guardian-service"></a>ホストガーディアンサービスの前提条件を確認する
 
@@ -34,9 +35,9 @@ ms.locfileid: "87971299"
 
 ## <a name="upgrading-hgs"></a>HGS をアップグレードしています
 
-既に HGS を展開済みで、そのオペレーティングシステムをアップグレードする場合は、[アップグレードのガイダンス](guarded-fabric-upgrade-to-2019.md)に従って、Hgs および hyper-v サーバーを最新の OS にアップグレードします。
+既に HGS を展開済みで、そのオペレーティングシステムをアップグレードする場合は、 [アップグレードのガイダンス](guarded-fabric-upgrade-to-2019.md) に従って、Hgs および hyper-v サーバーを最新の OS にアップグレードします。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [HGS の証明書を取得する](guarded-fabric-obtain-certs.md)

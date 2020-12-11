@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Active Directory Domain Services の概要'
 ms.assetid: f052dfcd-dace-4485-8d0a-cc7df5cf3751
 title: Active Directory Domain Services の概要
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 27c903aea659b973a63130e16a914d881e6e13f2
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 0d9569b9941810e8eea6ac1d54e646b215f2710c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070984"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043160"
 ---
 # <a name="active-directory-domain-services-overview"></a>Active Directory Domain Services の概要
 
@@ -33,7 +34,7 @@ Active Directory には次のものも含まれます。
 * ディレクトリ内のすべてのオブジェクトに関する情報を含む **グローバルカタログ** 。 これにより、ユーザーと管理者は、ディレクトリ内のどのドメインにデータが実際に格納されているかに関係なく、ディレクトリ情報を検索できます。 グローバルカタログの詳細については、「グローバルカタログの役割」を参照してください。
 
 
-* **クエリとインデックスのメカニズム** 。オブジェクトとそのプロパティを発行して、ネットワークユーザーやアプリケーションが検出することができます。 ディレクトリに対するクエリの詳細については、「ディレクトリ情報の検索」を参照してください。
+* **クエリとインデックスのメカニズム**。オブジェクトとそのプロパティを発行して、ネットワークユーザーやアプリケーションが検出することができます。 ディレクトリに対するクエリの詳細については、「ディレクトリ情報の検索」を参照してください。
 
 
 * ネットワーク経由でディレクトリデータを分散する **レプリケーションサービス** 。 ドメイン内のすべてのドメインコントローラーは、レプリケーションに参加し、ドメインのすべてのディレクトリ情報の完全なコピーを格納します。 ディレクトリ データへの変更は、ドメイン内のすべてのドメイン コントローラーに対してレプリケートされます。 Active Directory レプリケーションの詳細については、「レプリケーションの概要」を参照してください。

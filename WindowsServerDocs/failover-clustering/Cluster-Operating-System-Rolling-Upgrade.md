@@ -1,17 +1,18 @@
 ---
 title: Cluster Operating System Rolling Upgrade (クラスター オペレーティング システムのローリング アップグレード)
+description: 詳細については、クラスターのオペレーティングシステムのローリングアップグレードに関するページを参照してください。
 ms.topic: get-started-article
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: jasongerend
 ms.author: jgerend
 manager: lizross
 ms.date: 03/27/2018
-ms.openlocfilehash: a61025f972445f37aeeece764558aab853dc90df
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: e1e4cd3cc7258b1670de58a7df5e5930274ae3b6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866401"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041700"
 ---
 # <a name="cluster-operating-system-rolling-upgrade"></a>クラスターのオペレーティングシステムのローリングアップグレード
 
@@ -44,7 +45,7 @@ ms.locfileid: "96866401"
 
 クラスター OS のローリングアップグレードは、System Center Virtual Machine Manager (SCVMM) 2016 で完全にサポートされています。 SCVMM 2016 を使用している場合は、クラスターのアップグレードとこのドキュメントで説明されている手順の自動化に関するガイダンスについて、「 [VMM で hyper-v ホストクラスターの Windows Server 2016 へのローリングアップグレードを実行](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807) する」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 クラスター OS のローリングアップグレードプロセスを開始する前に、次の要件を完了してください。
 
 - Windows Server (半期チャネル)、Windows Server 2016、または Windows Server 2012 R2 を実行するフェールオーバークラスターから開始します。
@@ -114,7 +115,7 @@ Update-ClusterFunctionalLevelcmdlet が実行されると、クラスターは "
         ![Disable-CauClusterRole コマンドレットの出力を示す ](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_DisableCAU.png) **図 9: [`Disable-CauClusterRole`](/powershell/module/clusterawareupdating/Disable-CauClusterRole) コマンドレットを使用してクラスター対応更新の役割を無効** にする
 
 2. クラスター内の各ノードについて、次の手順を実行します。
-    1. クラスターマネージャー UI を使用してノードを選択し、[一時停止] を使用します。 **Pause | Drain** ノードをドレインするための [ドレイン] メニューオプション (図10を参照) またはコマンドレットを使用し [`Suspend-ClusterNode`](/powershell/module/failoverclusters/Suspend-ClusterNode) ます (図11を参照)。
+    1. クラスターマネージャー UI を使用してノードを選択し、[一時停止] を使用します。 ノードをドレインするための [ドレイン] メニューオプション (図10を参照) またはコマンドレットを使用し [`Suspend-ClusterNode`](/powershell/module/failoverclusters/Suspend-ClusterNode) ます (図11を参照)。
 
         ![スクリーンショットを使用して役割をドレインする方法を示す ](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png) **図 10: フェールオーバークラスターマネージャーを使用してノードからロールをドレイン** する
 
@@ -178,7 +179,7 @@ Update-ClusterFunctionalLevelcmdlet が実行されると、クラスターは "
             Move-ClusterVirtualMachineRole -Name VM1 -Node robhind-host3
             ```
 
-        2. **Move** [`Move-ClusterGroup`](/powershell/module/failoverclusters/Move-ClusterGroup) 他のクラスターワークロードには、フェールオーバークラスターマネージャーまたはコマンドレットからの移動を使用します。
+        2.  [`Move-ClusterGroup`](/powershell/module/failoverclusters/Move-ClusterGroup) 他のクラスターワークロードには、フェールオーバークラスターマネージャーまたはコマンドレットからの移動を使用します。
 
 3. すべてのノードが Windows Server 2016 にアップグレードされ、クラスターに戻された場合、またはその他の Windows Server 2012 R2 ノードが削除された場合は、次の手順を実行します。
 

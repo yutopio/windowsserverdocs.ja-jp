@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「共有記憶域を使用したストレッチクラスターレプリケーション」を参照してください。
 title: 共有記憶域を使用したストレッチ クラスター レプリケーション
 manager: eldenc
 ms.author: nedpyle
@@ -6,12 +7,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
-ms.openlocfilehash: efc2727c913ac2bab5ea619101ebef12f40a69b2
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 096d1258cd74dec51e93b4b26266478206742beb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87991513"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043760"
 ---
 # <a name="stretch-cluster-replication-using-shared-storage"></a>共有記憶域を使用したストレッチ クラスター レプリケーション
 
@@ -77,7 +78,7 @@ ms.locfileid: "87991513"
         **ServerManager.exe** を実行し、**[管理]**、**[サーバーの追加]** をクリックしてすべてのサーバー ノードを追加します。
 
         > [!IMPORTANT]
-        > **フェールオーバー クラスタリング**と**記憶域レプリカ**の役割と機能を各ノードでインストールし、再起動します。 Hyper-V、ファイル サーバーなどの役割を使用する予定の場合は、この時点でそれらもインストールできます。
+        > **フェールオーバー クラスタリング** と **記憶域レプリカ** の役割と機能を各ノードでインストールし、再起動します。 Hyper-V、ファイル サーバーなどの役割を使用する予定の場合は、この時点でそれらもインストールできます。
 
     -   **Windows PowerShell を使用する方法**
 
@@ -112,7 +113,7 @@ ms.locfileid: "87991513"
 
         1.  ペアリングされた各サーバー ノードのセットがそのサイトのストレージ格納装置 (つまり非対称記憶域) のみを参照できることと、SAS 接続が正しく構成されていることを確認します。
 
-        2.  記憶域スペースを使用して記憶域をプロビジョニングします。これには、「[スタンドアロン サーバーに記憶域スペースを展開する](../storage-spaces/deploy-standalone-storage-spaces.md)」の**手順 1 - 3** に従い、Windows PowerShell またはサーバー マネージャーを使用します。
+        2.  記憶域スペースを使用して記憶域をプロビジョニングします。これには、「[スタンドアロン サーバーに記憶域スペースを展開する](../storage-spaces/deploy-standalone-storage-spaces.md)」の **手順 1 - 3** に従い、Windows PowerShell またはサーバー マネージャーを使用します。
 
     -   **iSCSI ストレージの場合:**
 
@@ -132,7 +133,7 @@ ms.locfileid: "87991513"
 *  [Hyper-V フェールオーバー クラスター](#BKMK_HyperV)
 *  [汎用クラスター用のファイル サーバー](#BKMK_FileServer)
 
-### <a name="configure-a-hyper-v-failover-cluster"></a><a name="BKMK_HyperV"></a>Hyper-v フェールオーバークラスターの構成
+### <a name="configure-a-hyper-v-failover-cluster"></a><a name="BKMK_HyperV"></a> Hyper-v フェールオーバークラスターの構成
 
 >[!NOTE]
 > Hyper-V クラスターではなくファイル サーバー クラスターを作成する場合は、このセクションをスキップして、「[汎用クラスター用のファイル サーバーを構成する](#BKMK_FileServer)」セクションに進んでください。
@@ -141,14 +142,14 @@ ms.locfileid: "87991513"
 
 #### <a name="graphical-method"></a>グラフィカルな方法
 
-1. **Cluadmin.msc**を実行します。
+1. **Cluadmin.msc** を実行します。
 
 2. 提案されたクラスターを検証し、結果を分析して、続行できることを確認します。
 
    > [!NOTE]
    > 非対称ストレージ使用のために起こる、クラスター検証からのストレージ エラーを予測する必要があります。
 
-3. Hyper-V コンピューター クラスターを作成します。 クラスター名が 15 文字以下であることを確認します。 以下で使用する例は、SR-SRVCLUS です。 ノードが異なるサブネットに存在する場合は、各サブネットのクラスター名の IP アドレスを作成し、"OR" 依存関係を使用する必要があります。  詳細につい[ては、「マルチサブネットクラスターの IP アドレスと依存関係の構成–パート III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)」を参照してください。
+3. Hyper-V コンピューター クラスターを作成します。 クラスター名が 15 文字以下であることを確認します。 以下で使用する例は、SR-SRVCLUS です。 ノードが異なるサブネットに存在する場合は、各サブネットのクラスター名の IP アドレスを作成し、"OR" 依存関係を使用する必要があります。  詳細につい [ては、「マルチサブネットクラスターの IP アドレスと依存関係の構成–パート III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)」を参照してください。
 
 4. サイトの停止が発生した場合に、クォーラムを提供するために、ファイル共有監視またはクラウド監視を構成します。
 
@@ -180,7 +181,7 @@ ms.locfileid: "87991513"
    7. オンライン記憶域をこの空の役割に追加し、「**新しい役割 (2)**」という名前を付けます。
    8. これで、ドライブ文字を付けてすべての記憶域をマウントしたため、`Test-SRTopology` を使用してクラスターを評価できます。
 
-        例:
+        次に例を示します。
 
         ```
         MD c:\temp
@@ -189,7 +190,7 @@ ms.locfileid: "87991513"
         ```
 
       > [!IMPORTANT]
-      > 評価期間中に指定したソース ボリュームに対する書き込み IO ワークロードのないテスト サーバーを使用している場合は、ワークロードの追加を検討してください。負荷がない場合、Test-SRTopology で有用なレポートは生成されません。 実際の数値および推奨されるログのサイズを確認するには、実稼働環境と同様のワークロードでテストする必要があります。 または、単に、テスト中にソース ボリュームにいくつかのファイルをコピーするか、DISKSPD をダウンロードして実行することでも書き込み I/O を生成できます。 たとえば、D: ボリュームに対して10分間の低書き込み IO ワークロードを使用する例を次に示します。`Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`
+      > 評価期間中に指定したソース ボリュームに対する書き込み IO ワークロードのないテスト サーバーを使用している場合は、ワークロードの追加を検討してください。負荷がない場合、Test-SRTopology で有用なレポートは生成されません。 実際の数値および推奨されるログのサイズを確認するには、実稼働環境と同様のワークロードでテストする必要があります。 または、単に、テスト中にソース ボリュームにいくつかのファイルをコピーするか、DISKSPD をダウンロードして実行することでも書き込み I/O を生成できます。 たとえば、D: ボリュームに対して10分間の低書き込み IO ワークロードを使用する例を次に示します。 `Diskspd.exe -c1g -d600 -W5 -C5 -b4k -t2 -o2 -r -w5 -i100 d:\test.dat`
 
 1.  **TestSrTopologyReport-< date >.html** レポートを調べて、記憶域レプリカの要件を満たしていることを確認し、初期同期時間の予想およびログの推奨事項をメモします。
 
@@ -241,14 +242,14 @@ ms.locfileid: "87991513"
    > [!NOTE]
    >  非対称ストレージ使用のために起こる、クラスター検証からのストレージ エラーを予測する必要があります。
 
-2. 一般使用ストレージクラスター用のファイルサーバーを作成します (クラスターが使用する独自の静的 IP アドレスを指定する必要があります)。 クラスター名が 15 文字以下であることを確認します。  ノードが異なるサブネットに存在する場合は、"OR" 依存関係を使用して追加のサイトの IP アドレスを作成する必要があります。 詳細につい[ては、「マルチサブネットクラスターの IP アドレスと依存関係の構成–パート III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)」を参照してください。
+2. 一般使用ストレージクラスター用のファイルサーバーを作成します (クラスターが使用する独自の静的 IP アドレスを指定する必要があります)。 クラスター名が 15 文字以下であることを確認します。  ノードが異なるサブネットに存在する場合は、"OR" 依存関係を使用して追加のサイトの IP アドレスを作成する必要があります。 詳細につい [ては、「マルチサブネットクラスターの IP アドレスと依存関係の構成–パート III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)」を参照してください。
    ```PowerShell
    New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>
    Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
    Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
    ```
 
-3. ドメイン コントローラーまたはその他のなんらかの独立したサーバーでホストされている共有を指す各クラスター内でファイル共有監視またはクラウド (Azure) 監視を構成します。 例:
+3. ドメイン コントローラーまたはその他のなんらかの独立したサーバーでホストされている共有を指す各クラスター内でファイル共有監視またはクラウド (Azure) 監視を構成します。 次に例を示します。
 
    ```PowerShell
    Set-ClusterQuorum -FileShareWitness \\someserver\someshare
@@ -299,7 +300,7 @@ ms.locfileid: "87991513"
 
 
 
-### <a name="configure-a-file-server-for-general-use-cluster"></a><a name="BKMK_FileServer"></a>汎用クラスター用のファイルサーバーを構成する
+### <a name="configure-a-file-server-for-general-use-cluster"></a><a name="BKMK_FileServer"></a> 汎用クラスター用のファイルサーバーを構成する
 
 >[!NOTE]
 > 「[HYPER-V フェールオーバー クラスターを構成する](#BKMK_HyperV)」の説明に従って既に HYPER-V フェールオーバー クラスターを構成している場合は、このセクションをスキップしてください。
@@ -313,7 +314,7 @@ ms.locfileid: "87991513"
 2. 提案されたクラスターを検証し、結果を分析して、続行できることを確認します。
    >[!NOTE]
    >非対称ストレージ使用のために起こる、クラスター検証からのストレージ エラーを予測する必要があります。
-3. 汎用記憶域クラスター用のファイル サーバーを作成します。 クラスター名が 15 文字以下であることを確認します。 以下で使用する例は、SR-SRVCLUS です。  ノードが異なるサブネットに存在する場合は、各サブネットのクラスター名の IP アドレスを作成し、"OR" 依存関係を使用する必要があります。  詳細につい[ては、「マルチサブネットクラスターの IP アドレスと依存関係の構成–パート III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)」を参照してください。
+3. 汎用記憶域クラスター用のファイル サーバーを作成します。 クラスター名が 15 文字以下であることを確認します。 以下で使用する例は、SR-SRVCLUS です。  ノードが異なるサブネットに存在する場合は、各サブネットのクラスター名の IP アドレスを作成し、"OR" 依存関係を使用する必要があります。  詳細につい [ては、「マルチサブネットクラスターの IP アドレスと依存関係の構成–パート III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)」を参照してください。
 
 4. サイトの停止が発生した場合に、クォーラムを提供するために、ファイル共有監視またはクラウド監視を構成します。
    >[!NOTE]
@@ -335,7 +336,7 @@ ms.locfileid: "87991513"
 
 9. **[汎用ファイル サーバー]** が選択されたままにし、**[次へ]** をクリックします。
 
-10. **クライアント アクセス ポイント**名 (15 文字以下) を指定し、**[次へ]** をクリックします。
+10. **クライアント アクセス ポイント** 名 (15 文字以下) を指定し、**[次へ]** をクリックします。
 
 11. データ ボリュームにするディスクを選択して **[次へ]** をクリックします。
 
@@ -378,7 +379,7 @@ ms.locfileid: "87991513"
     > [!NOTE]
     >  非対称ストレージ使用のために起こる、クラスター検証からのストレージ エラーを予測する必要があります。
 
-2.  HYPER-V 計算クラスターを作成します (クラスターで使用する独自の静的 IP アドレスを指定する必要があります)。 クラスター名が 15 文字以下であることを確認します。  ノードが異なるサブネットに存在する場合は、"OR" 依存関係を使用して追加のサイトの IP アドレスを作成する必要があります。 詳細につい[ては、「マルチサブネットクラスターの IP アドレスと依存関係の構成–パート III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)」を参照してください。
+2.  HYPER-V 計算クラスターを作成します (クラスターで使用する独自の静的 IP アドレスを指定する必要があります)。 クラスター名が 15 文字以下であることを確認します。  ノードが異なるサブネットに存在する場合は、"OR" 依存関係を使用して追加のサイトの IP アドレスを作成する必要があります。 詳細につい [ては、「マルチサブネットクラスターの IP アドレスと依存関係の構成–パート III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698)」を参照してください。
 
     ```PowerShell
     New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>
@@ -389,7 +390,7 @@ ms.locfileid: "87991513"
     ```
 
 
-3. ドメイン コントローラーまたはその他のなんらかの独立したサーバーでホストされている共有を指す各クラスター内でファイル共有監視またはクラウド (Azure) 監視を構成します。 例:
+3. ドメイン コントローラーまたはその他のなんらかの独立したサーバーでホストされている共有を指す各クラスター内でファイル共有監視またはクラウド (Azure) 監視を構成します。 次に例を示します。
 
     ```PowerShell
     Set-ClusterQuorum -FileShareWitness \\someserver\someshare
@@ -398,7 +399,7 @@ ms.locfileid: "87991513"
     >[!NOTE]
     > Windows Server には、Azure を使用したクラウド監視のオプションが追加されました。 ファイル共有監視に代えてこのクォーラム オプションを選択できます。
 
-   クォーラム構成の詳細については、「[クラスターとプールのクォーラム](../storage-spaces/understand-quorum.md)について」を参照してください。 Set-ClusterQuorum コマンドレットの詳細については、「[Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum)」を参照してください。
+   クォーラム構成の詳細については、「 [クラスターとプールのクォーラム](../storage-spaces/understand-quorum.md)について」を参照してください。 Set-ClusterQuorum コマンドレットの詳細については、「[Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum)」を参照してください。
 
 4.  2 ノード ストレッチ クラスターを作成する場合は、作業を続行する前にすべての記憶域を追加する必要があります。 これを行うには、クラスター ノードで管理者アクセス許可を使用して PowerShell セッションを開き、コマンド `Get-ClusterAvailableDisk -All | Add-ClusterDisk` を実行します。
 
@@ -406,7 +407,7 @@ ms.locfileid: "87991513"
 
 5. クラスター ネットワークが最適に構成されていることを確認します。
 
-6.  ファイル サーバーの役割を構成します。 例:
+6.  ファイル サーバーの役割を構成します。 次に例を示します。
 
     ```PowerShell
     Get-ClusterResource
@@ -605,7 +606,7 @@ ms.locfileid: "87991513"
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL
         ```
 
-    4.  または、レプリカのレプリケーション先サーバー グループでは、コピーの残りのバイト数が常時示されており、PowerShell を使って照会できます。 例:
+    4.  または、レプリカのレプリケーション先サーバー グループでは、コピーの残りのバイト数が常時示されており、PowerShell を使って照会できます。 次に例を示します。
 
         ```PowerShell
         (Get-SRGroup).Replicas | Select-Object numofbytesremaining
@@ -667,7 +668,7 @@ ms.locfileid: "87991513"
         > [!NOTE]
         > 記憶域レプリカは、宛先ボリュームをマウント解除します。 これは仕様です。
 
-4.  ログサイズを既定の 8 GB から変更するには、コピー元とコピー先の両方のログディスクを右クリックし、[**レプリケーションログ**] タブをクリックします。次に、両方のディスクのサイズを一致するように変更します。
+4.  ログサイズを既定の 8 GB から変更するには、コピー元とコピー先の両方のログディスクを右クリックし、[ **レプリケーションログ** ] タブをクリックします。次に、両方のディスクのサイズを一致するように変更します。
 
     > [!NOTE]
     > 既定のログのサイズは 8 GB です。 `Test-SRTopology` コマンドレットの結果に応じて、より大きい値または小さい値を指定して `-LogSizeInBytes` を使用することを検討してください。
@@ -686,7 +687,7 @@ ms.locfileid: "87991513"
     3.  必要に応じて、将来のテスト用に CSV から記憶域を削除し、使用可能な記憶域に戻します。
 
         > [!NOTE]
-        > 場合によっては、使用可能な記憶域に戻した後で**DiskMgmt.msc** または **ServerManager.exe** を使用して、ドライブ文字をボリュームに戻す必要があります。
+        > 場合によっては、使用可能な記憶域に戻した後で **DiskMgmt.msc** または **ServerManager.exe** を使用して、ドライブ文字をボリュームに戻す必要があります。
 
 #### <a name="windows-powershell-method"></a>Windows PowerShell による方法
 
@@ -771,7 +772,7 @@ ms.locfileid: "87991513"
         > [!NOTE]
         > 記憶域レプリカは、宛先ボリュームをマウント解除します。 これは仕様です。
 
-4.  ログサイズを既定の 8 GB から変更するには、ソースとターゲットの両方のストレージレプリカグループで**セット-SRGroup**を使用します。   たとえば、すべてのログを 2GB に設定するには、次の手順を実行します。
+4.  ログサイズを既定の 8 GB から変更するには、ソースとターゲットの両方のストレージレプリカグループで **セット-SRGroup** を使用します。   たとえば、すべてのログを 2GB に設定するには、次の手順を実行します。
 
     ```PowerShell
     Get-SRGroup | Set-SRGroup -LogSizeInBytes 2GB
@@ -800,6 +801,6 @@ ms.locfileid: "87991513"
 - [記憶域レプリカ: 既知の問題](storage-replica-known-issues.md)
 - [記憶域レプリカ:よく寄せられる質問](storage-replica-frequently-asked-questions.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [Windows Server 2016](../../index.yml)
 - [Windows Server 2016 での記憶域スペース ダイレクト](../storage-spaces/storage-spaces-direct-overview.md)

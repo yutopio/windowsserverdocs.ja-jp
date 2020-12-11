@@ -1,17 +1,18 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: AD FS エクストラネット スマート ロックアウト保護を構成する
+description: 詳細については、「AD FS エクストラネットのロックアウトとエクストラネットのスマートロックアウト」を参照してください。
 author: billmath
 ms.author: billmath
 manager: mtilman
 ms.date: 05/20/2019
 ms.topic: article
-ms.openlocfilehash: a5ce41597c7cb25202be61f47c640d3f749568b4
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 182d529ce2cd5bdf8ce0dc833cb43a283f874218
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864541"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040150"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>AD FS エクストラネットのロックアウトおよびエクストラネットのスマート ロックアウト
 

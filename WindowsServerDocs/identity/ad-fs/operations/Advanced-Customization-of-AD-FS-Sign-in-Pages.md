@@ -6,20 +6,20 @@ ms.author: billmath
 manager: femila
 ms.date: 01/16/2019
 ms.topic: article
-ms.openlocfilehash: dd0fa97024f286d90f096da9fa132f40c1a78aae
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 296d3e310818dcaee8443810b922ce6bf0389537
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956669"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040260"
 ---
 # <a name="advanced-customization-of-ad-fs-sign-in-pages"></a>AD FS サインインページの高度なカスタマイズ
 
 
 ## <a name="advanced-customization-of-ad-fs-sign-in-pages"></a>AD FS サインインページの高度なカスタマイズ \-
-Windows Server 2012 R2 の AD FS には \- 、サインインエクスペリエンスをカスタマイズするためのサポートが組み込まれて \- います。 これらのシナリオの大部分では、組み込みの \- Windows PowerShell コマンドレットが必要です。  組み込みの Windows PowerShell コマンドを使用して、 \- 可能な限り AD FS サインインエクスペリエンスの標準要素をカスタマイズすることをお勧め \- します。  詳細については[、「AD FS ユーザーサインインのカスタマイズ](AD-FS-user-sign-in-customization.md)」を参照してください。
+Windows Server 2012 R2 の AD FS には \- 、サインインエクスペリエンスをカスタマイズするためのサポートが組み込まれて \- います。 これらのシナリオの大部分では、組み込みの \- Windows PowerShell コマンドレットが必要です。  組み込みの Windows PowerShell コマンドを使用して、 \- 可能な限り AD FS サインインエクスペリエンスの標準要素をカスタマイズすることをお勧め \- します。  詳細については [、「AD FS ユーザーサインインのカスタマイズ](AD-FS-user-sign-in-customization.md) 」を参照してください。
 
-場合によっては、AD FS 管理者が、 \- AD FS box で出荷される既存の PowerShell コマンドを使用して実行できない追加のサインインエクスペリエンスを提供することがあり \- ます。 特定のインスタンスでは、 \( 管理者がサインインエクスペリエンスをさらにカスタマイズするために、次に示すガイドラインに従うことをお勧めします。これは、 \) \- AD FS によって提供される**onload.js**にロジックを追加して、すべての AD FS ページで実行されます。
+場合によっては、AD FS 管理者が、 \- AD FS box で出荷される既存の PowerShell コマンドを使用して実行できない追加のサインインエクスペリエンスを提供することがあり \- ます。 特定のインスタンスでは、 \( 管理者がサインインエクスペリエンスをさらにカスタマイズするために、次に示すガイドラインに従うことをお勧めします。これは、 \) \- AD FS によって提供される **onload.js** にロジックを追加して、すべての AD FS ページで実行されます。
 
 ## <a name="things-to-know-before-you-start"></a>開始する前に理解しておくべきこと
 
@@ -27,7 +27,7 @@ Windows Server 2012 R2 の AD FS には \- 、サインインエクスペリエ�
 
 -   既定の web テーマに付属する元の onload.js には、さまざまなフォームファクターのページレンダリングを処理するコードが含まれています。 元の onload.js コンテンツは変更しないことをお勧めしますが、カスタムロジックを処理する既存の onload.js にコードを追加するだけです。
 
--   AD FS に \- は、既定と呼ばれる組み込みの web テーマが付属しています。 既定の web テーマの onload.js を変更することはできません。 onload.js を更新するには、AD FS サインインページのカスタム web テーマを作成して使用する必要があり \- ます。  カスタム web テーマを作成する方法については[、「AD FS ユーザーサインインのカスタマイズ](AD-FS-user-sign-in-customization.md)」を参照してください。
+-   AD FS に \- は、既定と呼ばれる組み込みの web テーマが付属しています。 既定の web テーマの onload.js を変更することはできません。 onload.js を更新するには、AD FS サインインページのカスタム web テーマを作成して使用する必要があり \- ます。  カスタム web テーマを作成する方法については [、「AD FS ユーザーサインインのカスタマイズ](AD-FS-user-sign-in-customization.md) 」を参照してください。
 
 -   同じ onload.js がすべての ADFS ページ ex で実行され \( ます。 フォーム \- ベースのログオンページ、ホーム領域検出ページ \) など。 スクリプト内のコードがデザイン時にのみ実行されるようにし、予期せずに実行されないようにする必要があります。
 
@@ -101,7 +101,7 @@ if (loginMessage)
 ```
 
 ### <a name="example-2-accept-sam-account-name-as-a-login-format-on-an-ad-fs-form-based-sign-in-page"></a>例 2: \- AD FS フォーム \- ベースのサインインページで SAM アカウント名をログイン形式として受け入れる \-
-既定の AD FS フォーム \- ベースのサインインページでは、 \- ユーザープリンシパル名 upn のログイン形式 \( \) \( (たとえば、 <strong>johndoe@contoso.com</strong> \) ドメイン修飾 sam \- アカウント名 \( **contoso \\ johndoe**または**contoso.com \\ johndoe**) \) がサポートされています。 すべてのユーザーが同じドメインからのものであり、sam アカウント名のみを認識している場合は、 \- ユーザーが sam アカウント名のみを使用してサインインできるシナリオをサポートすることをお勧めし \- ます。 このシナリオをサポートするために次のコードを onload.js に追加することができます。次の例のドメイン "contoso.com" を、使用するドメインに置き換えるだけです。
+既定の AD FS フォーム \- ベースのサインインページでは、 \- ユーザープリンシパル名 upn のログイン形式 \( \) \( (たとえば、 <strong>johndoe@contoso.com</strong> \) ドメイン修飾 sam \- アカウント名 \( **contoso \\ johndoe** または **contoso.com \\ johndoe**) \) がサポートされています。 すべてのユーザーが同じドメインからのものであり、sam アカウント名のみを認識している場合は、 \- ユーザーが sam アカウント名のみを使用してサインインできるシナリオをサポートすることをお勧めし \- ます。 このシナリオをサポートするために次のコードを onload.js に追加することができます。次の例のドメイン "contoso.com" を、使用するドメインに置き換えるだけです。
 
 ```
 if (typeof Login != 'undefined'){
@@ -133,7 +133,7 @@ if (typeof Login != 'undefined'){
 
 ```
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 [AD FS ユーザーサインインのカスタマイズ](AD-FS-user-sign-in-customization.md)
 
 

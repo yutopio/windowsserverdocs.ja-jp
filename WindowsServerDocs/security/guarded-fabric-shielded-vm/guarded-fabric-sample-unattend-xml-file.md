@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「OS 特殊化応答ファイルを作成する」を参照してください。
 title: OS 特殊化応答ファイルの作成
 ms.topic: article
 ms.assetid: 299aa38e-28d2-4cbe-af16-5b8c533eba1f
@@ -6,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 7ae16c6a923b8d9bb9cd0c8b345be0fc1655c9ca
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3bc7149bd8129c5fcac7d683b8327cfa5959791b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971309"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043930"
 ---
 # <a name="create-os-specialization-answer-file"></a>OS 特殊化応答ファイルの作成
 
@@ -19,11 +20,11 @@ ms.locfileid: "87971309"
 
 シールドされた Vm を展開する準備として、オペレーティングシステムの特殊化応答ファイルを作成する必要がある場合があります。 Windows では、これは "unattend.xml" ファイルと呼ばれることがよくあります。 **ShieldingDataAnswerFile** Windows PowerShell 関数を使用すると、これを行うことができます。 この応答ファイルは、System Center Virtual Machine Manager (またはその他のファブリックコントローラー) を使用してテンプレートからシールドされた Vm を作成するときに使用できます。
 
-シールドされた Vm の無人セットアップファイルに関する一般的なガイドラインについては、「[応答ファイルを作成](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file)する」を参照してください。
+シールドされた Vm の無人セットアップファイルに関する一般的なガイドラインについては、「 [応答ファイルを作成](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file)する」を参照してください。
 
-## <a name="downloading-the-new-shieldingdataanswerfile-function"></a>ShieldingDataAnswerFile 関数のダウンロード
+## <a name="downloading-the-new-shieldingdataanswerfile-function"></a>New-ShieldingDataAnswerFile 関数のダウンロード
 
-[PowerShell ギャラリー](https://aka.ms/gftools)から**ShieldingDataAnswerFile**関数を取得できます。 コンピューターがインターネットに接続されている場合は、次のコマンドを使用して PowerShell からインストールできます。
+[PowerShell ギャラリー](https://aka.ms/gftools)から **ShieldingDataAnswerFile** 関数を取得できます。 コンピューターがインターネットに接続されている場合は、次のコマンドを使用して PowerShell からインストールできます。
 
 ```powershell
 Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
@@ -90,7 +91,7 @@ Virtual Machine Manager は、IP プール (IPv4 アドレス、IPv6 アドレ�
 
 ![静的 IP を使用するようにハードウェアを構成する](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-network-adapter-settings.png)
 
-次に、パラメーターを使用して、 `-StaticIPPool` 静的 IP 要素を応答ファイルに含めることができます。 `@IPAddr-1@`応答ファイルのパラメーター、 `@NextHop-1-1@` 、およびは、 `@DNSAddr-1-1@` デプロイ時に Virtual Machine Manager で指定した実際の値に置き換えられます。
+次に、パラメーターを使用して、  `-StaticIPPool` 静的 IP 要素を応答ファイルに含めることができます。 `@IPAddr-1@`応答ファイルのパラメーター、 `@NextHop-1-1@` 、およびは、 `@DNSAddr-1-1@` デプロイ時に Virtual Machine Manager で指定した実際の値に置き換えられます。
 
 ```powershell
 $adminCred = Get-Credential -Message "Local administrator account"
@@ -115,7 +116,7 @@ New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials
 ## <a name="basic-linux-answer-file"></a>基本的な Linux 応答ファイル
 
 Windows Server バージョン1709以降では、シールドされた Vm で特定の Linux ゲスト Os を実行できます。
-System Center Virtual Machine Manager Linux エージェントを使用してこれらの Vm を特殊化する場合は、ShieldingDataAnswerFile コマンドレットを使用して、互換性のある応答ファイルを作成できます。
+System Center Virtual Machine Manager Linux エージェントを使用してこれらの Vm を特殊化している場合は、New-ShieldingDataAnswerFile コマンドレットで互換性のある応答ファイルを作成できます。
 
 Linux の応答ファイルには、通常、ルートパスワード、ルート SSH キー、および必要に応じて静的 IP プール情報が含まれます。
 次のスクリプトを実行する前に、SSH キーのパブリック半分にパスを置き換えます。

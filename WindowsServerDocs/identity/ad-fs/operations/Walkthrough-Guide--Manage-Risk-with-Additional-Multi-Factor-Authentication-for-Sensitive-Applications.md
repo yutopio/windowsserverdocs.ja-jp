@@ -1,17 +1,18 @@
 ---
 ms.assetid: 5fd4063d-34dc-4b15-9a88-cc6c1fff455a
 title: 'チュートリアル ガイド: 追加の多要素認証による個人情報アプリケーションのリスクを管理します。'
+description: '詳細については、「チュートリアルガイド: 追加の Multi-Factor Authentication による機密アプリケーションのリスク管理」を参照してください。'
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 1dc0b0c278577e7318ead6b4e3ebba04b21c8a9c
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 15e2355dfa04bc53ac232b9f20bd7d26ea3535f6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866285"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039540"
 ---
 # <a name="walkthrough-guide-manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications"></a>チュートリアル ガイド:追加の多要素認証による個人情報アプリケーションのリスク管理
 
@@ -202,7 +203,7 @@ AD FS 管理コンソールまたは Windows PowerShell のいずれかを使用
 
 ##### <a name="to-configure-the-mfa-policy-based-on-users-group-membership-data-for-claimapp--via-the-ad-fs-management-console"></a>AD FS 管理コンソールを使用して 'claimapp' 用のユーザーのグループ メンバーシップ データに基づく MFA ポリシーを構成するには
 
-1.  フェデレーションサーバーの AD FS 管理コンソールで、[ **Authentication Policies** \\ **証明書利用者信頼ごと** の認証ポリシー] ノードに移動し、サンプルアプリケーション (**claimapp**) を表す証明書利用者信頼を選択します。
+1.  フェデレーションサーバーの AD FS 管理コンソールで、[  \\ **証明書利用者信頼ごと** の認証ポリシー] ノードに移動し、サンプルアプリケーション (**claimapp**) を表す証明書利用者信頼を選択します。
 
 2.  **[操作]** ページで、または **[claimapp]** を右クリックして、**[カスタム多要素認証の編集]** を選択します。
 

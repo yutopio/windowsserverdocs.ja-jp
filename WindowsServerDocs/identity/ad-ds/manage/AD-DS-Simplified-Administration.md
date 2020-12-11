@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AD DS の簡略化された管理'
 ms.assetid: f74eec9a-2485-4ee0-a0d8-cce01250a294
 title: AD DS の簡略化された管理
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 6390fcea3cf0b08cf36b9c8e73514b3af284122e
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 680664d1ef24e714b86661d5fb334b82250137f5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93068134"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043110"
 ---
 # <a name="ad-ds-simplified-administration"></a>AD DS の簡略化された管理
 
@@ -111,7 +112,7 @@ AD DS のサイト トポロジとレプリケーションの詳細について�
 
 Windows 2000 Active Directory では、RID マスターが導入されました。これは、ユーザー、グループ、コンピューターといったセキュリティ トラスティのセキュリティ識別子 (SID) を作成するために、相対識別子のプールをドメイン コントローラーに対して発行します。  既定では、このグローバル RID 空間は、ドメイン内で作成される合計 2<sup>30</sup> (つまり 1,073,741,823) 個の SID に制限されています。 SID をプールに戻したり、再発行したりすることはできません。 時間の経過と共に、大規模なドメインでは RID の残数が少なくなったり、何らかのアクシデントによって RID が無駄に減り、最終的に枯渇したりする場合があります。
 
-Windows Server 2012 では、RID の発行と管理に関する多数の問題に対処しています。それらの問題は、1999 年に最初の Active Directory ドメインが作成されて以降、AD DS が進化を続ける過程で、お客様と Microsoft カスタマー サポートによって発見されたものです。 次の設定があります。
+Windows Server 2012 では、RID の発行と管理に関する多数の問題に対処しています。それらの問題は、1999 年に最初の Active Directory ドメインが作成されて以降、AD DS が進化を続ける過程で、お客様と Microsoft カスタマー サポートによって発見されたものです。 これには以下が含まれます。
 
 - RID 消費の警告が定期的にイベント ログに書き込まれます。
 - 管理者が RID プールを無効にすると、イベントがログに記録されます。
@@ -174,7 +175,7 @@ Adprep をスキーマ マスター上で実行する必要はなくなりまし
 
 Windows PowerShell の ADDSDeployment マネージド コードに組み込まれている前提条件チェック システムは、操作に基づいてさまざまなモードで動作します。 次の表に、各テストについて、それがいつ使用され、何がどのような方法で検証されるのかについて説明します。 検証が失敗し、エラー情報だけでは問題のトラブルシューティングを行えない場合に、この表が役立ちます。
 
-これらのテストのログは、 **DirectoryServices-Deployment** 操作イベント ログ チャネルのタスク カテゴリ **Core** に、常にイベント ID **103** で記録されます。
+これらのテストのログは、**DirectoryServices-Deployment** 操作イベント ログ チャネルのタスク カテゴリ **Core** に、常にイベント ID **103** で記録されます。
 
 ### <a name="prerequisite-windows-powershell"></a>前提条件のための Windows PowerShell
 

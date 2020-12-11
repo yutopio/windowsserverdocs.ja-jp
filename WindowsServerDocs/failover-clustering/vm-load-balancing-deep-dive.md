@@ -1,4 +1,5 @@
 ---
+description: 仮想マシンの負荷分散の詳細については、こちらを参照してください。
 ms.assetid: 5b5bab7a-727b-47ce-8efa-1d37a9639cba
 title: 仮想マシンの負荷分散の詳細
 ms.topic: article
@@ -6,12 +7,12 @@ manager: eldenc
 ms.author: johnmar
 author: JasonGerend
 ms.date: 09/19/2016
-ms.openlocfilehash: 7fc9b449b11b5faf05ac279628f093053e292e8c
-ms.sourcegitcommit: 7a8a608df059b4278a974c52ed7b865421a83aa6
+ms.openlocfilehash: 719aad65d5b4683e7c3a4472ae29098522c89f2e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833316"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040540"
 ---
 # <a name="virtual-machine-load-balancing-deep-dive"></a>仮想マシンの負荷分散の詳細
 
@@ -62,7 +63,7 @@ VM の負荷分散は、既定で有効になっており、負荷分散が発�
 ## <a name="vm-load-balancing-vs-system-center-virtual-machine-manager-dynamic-optimization"></a>VM の負荷分散と System Center Virtual Machine Manager の動的最適化
 ノードの公平性機能には、インボックス機能が用意されており、System Center Virtual Machine Manager (SCVMM) を使用しない展開を対象としています。 Scvmm の動的最適化は、SCVMM デプロイのためにクラスターで仮想マシンの負荷を分散するために推奨されるメカニズムです。 動的最適化を有効にすると、Windows Server VM の負荷分散が自動的に無効になります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 * [仮想マシンの負荷分散の概要](vm-load-balancing-overview.md)
 * [フェールオーバー クラスタリング](failover-clustering-overview.md)
 * [Hyper-v の概要](../virtualization/hyper-v/Hyper-V-on-Windows-Server.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「SQL Server を使用したフェデレーションサーバーファーム」を参照してください。
 ms.assetid: 6618b3ce-0e94-4009-b887-d8e05453358b
 title: SQL Server を使用したフェデレーションサーバーファームの AD FS
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3c796dcdeaf5fa3dfcd85e7f7db850e5ca85ef4f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 4a537f6dead197b19d2f4ada4f0028c8194dc2bb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942756"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039210"
 ---
 # <a name="federation-server-farm-using-sql-server"></a>SQL Server を使用するフェデレーション サーバー ファーム
 
@@ -41,7 +42,7 @@ Active Directory フェデレーションサービス (AD FS) AD FS のこのト
 > [!NOTE]
 > SQL Server は、フェールオーバークラスタリング、データベースミラーリング、およびさまざまな種類の SQL Server レプリケーションなど、さまざまなデータおよびアプリケーション冗長オプションをサポートしています。
 
-Microsoft の \( it 部門は、 \) 安全性の高い同期モードおよびフェールオーバークラスタリングで SQL Server データベースミラーリングを使用して、 \- \( \) \- SQL Server インスタンスの高可用性をサポートしています。 SQL Server \( のトランザクションピアツー \- \- ピア \) とマージレプリケーションは、Microsoft の AD FS 製品チームによってテストされていません。 SQL Server の詳細については、「[高可用性ソリューションの概要](https://go.microsoft.com/fwlink/?LinkId=179853)」または[適切な種類のレプリケーションの選択](https://go.microsoft.com/fwlink/?LinkId=214648)に関するトピックを参照してください。
+Microsoft の \( it 部門は、 \) 安全性の高い同期モードおよびフェールオーバークラスタリングで SQL Server データベースミラーリングを使用して、 \- \( \) \- SQL Server インスタンスの高可用性をサポートしています。 SQL Server \( のトランザクションピアツー \- \- ピア \) とマージレプリケーションは、Microsoft の AD FS 製品チームによってテストされていません。 SQL Server の詳細については、「 [高可用性ソリューションの概要](https://go.microsoft.com/fwlink/?LinkId=179853) 」または [適切な種類のレプリケーションの選択](https://go.microsoft.com/fwlink/?LinkId=214648)に関するトピックを参照してください。
 
 ### <a name="supported-sql-server-versions"></a>サポートされている SQL Server バージョン
 Windows Server 2012 と共にインストールされた AD FS では、次のバージョンの SQL server がサポートされています。
@@ -57,7 +58,7 @@ WID トポロジを持つフェデレーションサーバーファームと同�
 
 ![SQL を使用したサーバーファーム](media/FarmSQLProxies.gif)
 
-フェデレーションサーバーまたはフェデレーションサーバープロキシで使用するネットワーク環境を構成する方法の詳細については、「フェデレーションサーバー[の名前解決の要件](Name-Resolution-Requirements-for-Federation-Servers.md)」または「[フェデレーションサーバープロキシの名前解決の要件](Name-Resolution-Requirements-for-Federation-Server-Proxies.md)」を参照してください。
+フェデレーションサーバーまたはフェデレーションサーバープロキシで使用するネットワーク環境を構成する方法の詳細については、「フェデレーションサーバー [の名前解決の要件](Name-Resolution-Requirements-for-Federation-Servers.md) 」または「 [フェデレーションサーバープロキシの名前解決の要件](Name-Resolution-Requirements-for-Federation-Server-Proxies.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

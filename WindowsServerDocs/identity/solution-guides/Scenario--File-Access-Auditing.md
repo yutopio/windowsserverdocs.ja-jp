@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「シナリオ: ファイルアクセスの監査」を参照してください。'
 ms.assetid: 7be1f2cb-02d5-4209-ba79-edf496a88f47
 title: シナリオ ファイル アクセスの監査
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7cd1619204a6406d2570e29f752538d781893ee3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ea5f416bd3652a1766cbf88bbee9e8258e82708b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940265"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044570"
 ---
 # <a name="scenario-file-access-auditing"></a>シナリオ:ファイル アクセスの監査
 

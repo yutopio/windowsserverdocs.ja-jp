@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ネットワークアダプターのパフォーマンス履歴'
 title: ネットワークアダプターのパフォーマンス履歴
 ms.author: cosdar
 manager: eldenc
@@ -6,12 +7,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: ee8204d14ff1d54d3a4a5b1760055fecdc952d05
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c47b5f2ce60a952eb8c7773284d976e6b99d1477
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87957259"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040090"
 ---
 # <a name="performance-history-for-network-adapters"></a>ネットワークアダプターのパフォーマンス履歴
 
@@ -36,7 +37,7 @@ ms.locfileid: "87957259"
 | `netadapter.bandwidth.rdma.total`    | 1秒あたりのビット数 |
 
    > [!NOTE]
-   > ネットワークアダプターのパフォーマンス履歴は、1秒あたりのバイト数ではなく、**ビット**単位で記録されます。 1 10 GbE ネットワークアダプターは、理論的に最大で約10億ビット = 1億2500万バイト = 1.25 GB/秒を送受信できます。
+   > ネットワークアダプターのパフォーマンス履歴は、1秒あたりのバイト数ではなく、 **ビット** 単位で記録されます。 1 10 GbE ネットワークアダプターは、理論的に最大で約10億ビット = 1億2500万バイト = 1.25 GB/秒を送受信できます。
 
 ## <a name="how-to-interpret"></a>解釈する方法
 
@@ -55,16 +56,16 @@ ms.locfileid: "87957259"
 
 | 系列                           | ソースカウンター           |
 |----------------------------------|--------------------------|
-| `netadapter.bandwidth.inbound`   | 8×`Bytes Received/sec` |
-| `netadapter.bandwidth.outbound`  | 8×`Bytes Sent/sec`     |
-| `netadapter.bandwidth.total`     | 8×`Bytes Total/sec`    |
+| `netadapter.bandwidth.inbound`   | 8× `Bytes Received/sec` |
+| `netadapter.bandwidth.outbound`  | 8× `Bytes Sent/sec`     |
+| `netadapter.bandwidth.total`     | 8× `Bytes Total/sec`    |
 
 シリーズは、 `rdma.*` `RDMA Activity` ネットワークアダプターがインストールされているサーバー上のパフォーマンスカウンターセットから収集されます。これは、RDMA が有効になっているネットワークアダプターごとに1つのインスタンスです。
 
 | 系列                               | ソースカウンター           |
 |--------------------------------------|--------------------------|
-| `netadapter.bandwidth.rdma.inbound`  | 8×`Inbound bytes/sec`  |
-| `netadapter.bandwidth.rdma.outbound` | 8×`Outbound bytes/sec` |
+| `netadapter.bandwidth.rdma.inbound`  | 8× `Inbound bytes/sec`  |
+| `netadapter.bandwidth.rdma.outbound` | 8× `Outbound bytes/sec` |
 | `netadapter.bandwidth.rdma.total`    | *上記の8倍の合計*   |
 
    > [!NOTE]

@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「ヘルスサービスエラー」を参照してください。
 title: ヘルスサービスエラー
 manager: eldenc
 ms.author: cosdar
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 5f35c52e6b4aaf382c80507ca562b52ce27da953
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 8ac4740481d29f877e70c37993848bb397874691
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87990790"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039520"
 ---
 # <a name="health-service-faults"></a>ヘルスサービスエラー
 
@@ -70,9 +71,9 @@ Get-FileShare -Name <Name> | Debug-FileShare
 
 ## <a name="usage-in-net-and-c"></a>.NET および C での使用#
 
-### <a name="connect"></a>接続
+### <a name="connect"></a>接続する
 
-ヘルスサービスを照会するには、クラスターで**CimSession**を確立する必要があります。 これを行うには、完全な .NET でしか使用できないものが必要になります。つまり、web アプリまたはモバイルアプリから直接この操作を行うことはできません。 これらのコードサンプルでは \# 、このデータアクセス層で最も単純な選択肢である C を使用します。
+ヘルスサービスを照会するには、クラスターで **CimSession** を確立する必要があります。 これを行うには、完全な .NET でしか使用できないものが必要になります。つまり、web アプリまたはモバイルアプリから直接この操作を行うことはできません。 これらのコードサンプルでは \# 、このデータアクセス層で最も単純な選択肢である C を使用します。
 
 ```
 using System.Security;
@@ -97,13 +98,13 @@ public CimSession Connect(string Domain = "...", string Computer = "...", string
 
 指定されたユーザー名は、対象のコンピューターのローカル管理者である必要があります。
 
-パスワード**SecureString**をユーザー入力から直接作成することをお勧めします。そのため、パスワードはクリアテキストでメモリに格納されることはありません。 これは、さまざまなセキュリティの問題を軽減するのに役立ちます。 しかし実際には、プロトタイプ作成は、プロトタイプ作成の目的では一般的です。
+パスワード **SecureString** をユーザー入力から直接作成することをお勧めします。そのため、パスワードはクリアテキストでメモリに格納されることはありません。 これは、さまざまなセキュリティの問題を軽減するのに役立ちます。 しかし実際には、プロトタイプ作成は、プロトタイプ作成の目的では一般的です。
 
 ### <a name="discover-objects"></a>オブジェクトを検出します
 
-**CimSession**を確立したら、クラスターで WINDOWS MANAGEMENT INSTRUMENTATION (WMI) を照会できます。
+**CimSession** を確立したら、クラスターで WINDOWS MANAGEMENT INSTRUMENTATION (WMI) を照会できます。
 
-エラーまたはメトリックを取得するには、いくつかの関連オブジェクトのインスタンスを取得する必要があります。 最初に、クラスター上の記憶域スペースダイレクトを表す**MSFT \_ StorageSubSystem** 。 これを使用すると、クラスター内のすべての**msft \_ storagenode**情報と、すべての**msft \_ ボリューム**(データボリューム) を取得できます。 最後に、 **MSFT \_ storagehealth**、ヘルスサービス自体も必要になります。
+エラーまたはメトリックを取得するには、いくつかの関連オブジェクトのインスタンスを取得する必要があります。 最初に、クラスター上の記憶域スペースダイレクトを表す **MSFT \_ StorageSubSystem** 。 これを使用すると、クラスター内のすべての **msft \_ storagenode** 情報と、すべての **msft \_ ボリューム**(データボリューム) を取得できます。 最後に、 **MSFT \_ storagehealth**、ヘルスサービス自体も必要になります。
 
 ```
 CimInstance Cluster;
@@ -131,9 +132,9 @@ public void DiscoverObjects(CimSession Session)
 }
 ```
 
-これらは、 **StorageSubSystem**、 **get-storagenode**ようなコマンドレットを使用して PowerShell で**取得した**ものと同じオブジェクトです。
+これらは、 **StorageSubSystem**、 **get-storagenode** ようなコマンドレットを使用して PowerShell で **取得した** ものと同じオブジェクトです。
 
-「[ストレージ管理 API クラス](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes)」で説明されているすべての同じプロパティにアクセスできます。
+「 [ストレージ管理 API クラス](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes)」で説明されているすべての同じプロパティにアクセスできます。
 
 ```
 using System.Diagnostics;
@@ -147,7 +148,7 @@ foreach (CimInstance Node in Nodes)
 
 ### <a name="query-faults"></a>クエリエラー
 
-**診断**を呼び出して、ターゲット**CimInstance**(クラスターまたは任意のボリューム) にスコープが設定されている現在のエラーを取得します。
+**診断** を呼び出して、ターゲット **CimInstance**(クラスターまたは任意のボリューム) にスコープが設定されている現在のエラーを取得します。
 
 Windows Server 2016 の各スコープで使用できる障害の完全な一覧については、以下で説明します。
 
@@ -172,7 +173,7 @@ public void GetFaults(CimSession Session, CimInstance Target)
 
 ### <a name="optional-myfault-class"></a>省略可能: MyFault クラス
 
-独自のエラー表現を構築して永続化することが適切な場合もあります。 たとえば、この**Myfault**クラスは、 **FaultId**を含む、エラーのいくつかの重要なプロパティを格納します。このプロパティは、後で更新または削除通知を関連付けたり、同じエラーが何度も検出された場合に重複除去するために使用できます。
+独自のエラー表現を構築して永続化することが適切な場合もあります。 たとえば、この **Myfault** クラスは、 **FaultId** を含む、エラーのいくつかの重要なプロパティを格納します。このプロパティは、後で更新または削除通知を関連付けたり、同じエラーが何度も検出された場合に重複除去するために使用できます。
 
 ```
 public class MyFault {
@@ -210,7 +211,7 @@ foreach (CimInstance DiagnoseResult in DiagnoseResults)
 
 エラーを作成、削除、または更新すると、ヘルスサービスによって WMI イベントが生成されます。 これらは、頻繁にポーリングせずにアプリケーションの状態を同期させるために不可欠です。たとえば、電子メール通知を送信するタイミングを決定する場合などに役立ちます。 このサンプルコードでは、これらのイベントをサブスクライブするために、オブザーバーデザインパターンを再度使用します。
 
-まず、 **MSFT \_ StorageFaultEvent**イベントをサブスクライブします。
+まず、 **MSFT \_ StorageFaultEvent** イベントをサブスクライブします。
 
 ```
 public void ListenForFaultEvents()
@@ -223,9 +224,9 @@ public void ListenForFaultEvents()
 }
 ```
 
-次に、新しいイベントが生成されるたびに**Onnext ()** メソッドが呼び出されるオブザーバーを実装します。
+次に、新しいイベントが生成されるたびに **Onnext ()** メソッドが呼び出されるオブザーバーを実装します。
 
-各イベントには、エラーが作成、削除、または更新されているかどうかを示す**ChangeType**と、関連する**FaultId**が含まれます。
+各イベントには、エラーが作成、削除、または更新されているかどうかを示す **ChangeType** と、関連する **FaultId** が含まれます。
 
 さらに、エラー自体のすべてのプロパティが含まれています。
 
@@ -281,9 +282,9 @@ class FaultsObserver : IObserver
 
 ### <a name="properties-of-faults"></a>エラーのプロパティ
 
-次の表は、fault オブジェクトのいくつかの重要なプロパティを示しています。 完全なスキーマでは、 *storagewmi .mof*の**MSFT \_ StorageDiagnoseResult**クラスを調べます。
+次の表は、fault オブジェクトのいくつかの重要なプロパティを示しています。 完全なスキーマでは、 *storagewmi .mof* の **MSFT \_ StorageDiagnoseResult** クラスを調べます。
 
-| **Property**              | **例**                                                     |
+| **プロパティ**              | **例**                                                     |
 |---------------------------|-----------------------------------------------------------------|
 | FaultId                   | {12345-12345-12345-12345-12345}                                 |
 | FaultType                 | Microsoft. 正常性の種類. Volume. 容量                      |
@@ -293,23 +294,23 @@ class FaultsObserver : IObserver
 | FaultingObjectLocation    | ラック A06、RU 25、スロット11                                        |
 | RecommendedActions        | {"ボリュームを拡張する"。 "ワークロードを他のボリュームに移行する"}   |
 
-**FaultId**1つのクラスターのスコープ内で一意です。
+**FaultId** 1つのクラスターのスコープ内で一意です。
 
-**PerceivedSeverity**PerceivedSeverity = {4, 5, 6} = {"情報"、"Warning"、および "Error"}、または青、黄、赤などの同等の色。
+**PerceivedSeverity** PerceivedSeverity = {4, 5, 6} = {"情報"、"Warning"、および "Error"}、または青、黄、赤などの同等の色。
 
-**FaultingObjectDescription**ハードウェアのパーツ情報 (通常はソフトウェアオブジェクトの場合は空白)。
+**FaultingObjectDescription** ハードウェアのパーツ情報 (通常はソフトウェアオブジェクトの場合は空白)。
 
-**FaultingObjectLocation**ハードウェアの場所情報。通常、ソフトウェアオブジェクトの場合は空白になります。
+**FaultingObjectLocation** ハードウェアの場所情報。通常、ソフトウェアオブジェクトの場合は空白になります。
 
-**RecommendedActions**独立しており、特定の順序ではない、推奨されるアクションの一覧。 現在、このリストの長さは1です。
+**RecommendedActions** 独立しており、特定の順序ではない、推奨されるアクションの一覧。 現在、このリストの長さは1です。
 
 ## <a name="properties-of-fault-events"></a>Fault イベントのプロパティ
 
-次の表は、fault イベントのいくつかの重要なプロパティを示しています。 完全なスキーマでは、 *storagewmi .mof*の**MSFT \_ StorageFaultEvent**クラスを調べます。
+次の表は、fault イベントのいくつかの重要なプロパティを示しています。 完全なスキーマでは、 *storagewmi .mof* の **MSFT \_ StorageFaultEvent** クラスを調べます。
 
-**ChangeType**は、エラーが作成、削除、または更新されているかどうか、および**FaultId**を示すことに注意してください。 イベントには、影響を受けたエラーのすべてのプロパティも含まれます。
+**ChangeType** は、エラーが作成、削除、または更新されているかどうか、および **FaultId** を示すことに注意してください。 イベントには、影響を受けたエラーのすべてのプロパティも含まれます。
 
-| **Property**              | **例**                                                     |
+| **プロパティ**              | **例**                                                     |
 |---------------------------|-----------------------------------------------------------------|
 | ChangeType                | 0                                                               |
 | FaultId                   | {12345-12345-12345-12345-12345}                                 |
@@ -320,9 +321,9 @@ class FaultsObserver : IObserver
 | FaultingObjectLocation    | ラック A06、RU 25、スロット11                                        |
 | RecommendedActions        | {"ボリュームを拡張する"。 "ワークロードを他のボリュームに移行する"}   |
 
-**ChangeType**ChangeType = {0, 1, 2} = {"作成"、"削除"、"更新"}。
+**ChangeType** ChangeType = {0, 1, 2} = {"作成"、"削除"、"更新"}。
 
-## <a name="coverage"></a>カバレッジ
+## <a name="coverage"></a>対象範囲
 
 Windows Server 2016 では、ヘルスサービスによって次のエラーカバレッジが提供されます。
 
@@ -408,7 +409,7 @@ Windows Server 2016 では、ヘルスサービスによって次のエラーカ
 
 #### <a name="faulttype-microsofthealthfaulttypeserverisolated"></a>FaultType: Microsoft. Health. サーバー分離
 * 重大度: Critical
-* 理由:*接続の問題により、サーバーがクラスターから分離されています。*
+* 理由: *接続の問題により、サーバーがクラスターから分離されています。*
 * RecommendedAction: *"分離が維持されている場合は、ネットワークを確認するか、ワークロードを他のノードに移行します。"*
 
 #### <a name="faulttype-microsofthealthfaulttypeserverquarantined"></a>FaultType: Microsoft. Health. サーバー. 検疫済み
@@ -442,7 +443,7 @@ Windows Server 2016 では、ヘルスサービスによって次のエラーカ
 
 #### <a name="faulttype-microsofthealthfaulttypenetworkadapterdisabled"></a>FaultType: ネットワークアダプターは無効です。
 * 重要度: 警告
-* 理由: *"ネットワークインターフェイス {network interface} が有効になっ*ておらず、使用されていません。"
+* 理由: *"ネットワークインターフェイス {network interface} が有効になっ* ておらず、使用されていません。"
 * RecommendedAction: *"ネットワークインターフェイスを有効にする"*
 
 ### <a name="enclosure-6"></a>**エンクロージャ (6)**
@@ -511,8 +512,8 @@ Windows Server 2016 では、ヘルスサービスによって次のエラーカ
 * 理由: *"1 つ以上のストレージコンシューマー (通常は Virtual Machines) が、id {id} の存在しないポリシーを使用しています。"*
 * RecommendedAction: *"不足している記憶域 QoS ポリシーを再作成します。"*
 
-<sup>1</sup>ボリュームが 80% full (軽微な重大度) または 90% full (重要度) に達したことを示します。
-<sup>2</sup>は、ボリューム上の一部の .vhd が、24時間枠のローリングで 10% (マイナー)、30% (メジャー)、または 50% (重大) の最小 IOPS を満たしていないことを示します。
+<sup>1</sup>  ボリュームが 80% full (軽微な重大度) または 90% full (重要度) に達したことを示します。
+<sup>2</sup> は、ボリューム上の一部の .vhd が、24時間枠のローリングで 10% (マイナー)、30% (メジャー)、または 50% (重大) の最小 IOPS を満たしていないことを示します。
 
 >[!NOTE]
 > ファン、電源、センサーなどのストレージ格納装置コンポーネントの正常性は、SCSI エンクロージャ サービス (SES) から取得されます。 この情報は、ベンダーから提供されていない場合はヘルス サービスで表示されません。

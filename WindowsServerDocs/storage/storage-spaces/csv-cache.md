@@ -1,4 +1,5 @@
 ---
+description: 詳細については、CSV インメモリ読み取りキャッシュでの記憶域スペースダイレクトの使用に関するページを参照してください。
 title: メモリ内読み取りキャッシュの記憶域スペースダイレクト
 ms.author: eldenc
 manager: siroy
@@ -6,12 +7,12 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 09/21/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 94f541b38e0084ae3284dc0e56b2643f23b15bfe
-ms.sourcegitcommit: 8a826e992f28a70e75137f876a5d5e61238a24e4
+ms.openlocfilehash: abda5d2bfeb5bcf65c66609c1e89ab2371089330
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91365335"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040530"
 ---
 # <a name="using-storage-spaces-direct-with-the-csv-in-memory-read-cache"></a>CSV インメモリ読み取りキャッシュでの記憶域スペースダイレクトの使用
 
@@ -30,7 +31,7 @@ ms.locfileid: "91365335"
 CSV インメモリ読み取りキャッシュ用に、物理メモリの合計の最大 80% を使用できます。
 
   > [!TIP]
-  > コンピューティングとストレージが同じサーバー上で実行されるハイパー収束デプロイの場合は、仮想マシン用に十分なメモリを確保するように注意してください。 収束スケールアウトファイルサーバー (SoFS) のデプロイでは、メモリの競合が少ないため、この設定は適用されません。
+  > コンピューティングとストレージが同じサーバー上で実行されるハイパー収束デプロイの場合は、仮想マシン用に十分なメモリを確保するように注意してください。 収束 Scale-Out ファイルサーバー (SoFS) の展開では、メモリの競合が少ないため、これは適用されません。
 
   > [!NOTE]
   > DISKSPD や [VM Fleet](https://github.com/Microsoft/diskspd/tree/master/Frameworks/VMFleet) など、一部のマイクロベンチマーク ツールでは、CSV インメモリ読み取りキャッシュがない場合より、有効になっている場合に、より悪い結果が出ることがあります。 既定では、VM は仮想マシンごとに 1 10 ギビバイト (GiB) の VHDX を作成し、100 vm では約 1 TiB の合計を作成した後、 *一様にランダム* な読み取りと書き込みを実行します。 実際のワークロードとは異なり、読み取りは予測可能なパターンまたは反復パターンに従わないため、インメモリ キャッシュは効果がなく、オーバーヘッドが発生します。
@@ -70,6 +71,6 @@ Get-ClusterSharedVolume | ForEach {
 }
 ```
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 - [記憶域スペース ダイレクトの概要](storage-spaces-direct-overview.md)

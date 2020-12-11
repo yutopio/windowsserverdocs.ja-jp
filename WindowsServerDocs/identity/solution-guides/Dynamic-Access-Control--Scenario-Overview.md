@@ -1,17 +1,18 @@
 ---
 ms.assetid: 7b22adfa-298d-413c-88d0-1231825b7d4d
 title: 'ダイナミック アクセス制御: シナリオの概要'
+description: '詳細については、「Dynamic Access Control: シナリオの概要」を参照してください。'
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 74757b269ef0660de2c9a68a4c37a0c2fa8ffab4
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 32529f157f628429fd7b30a925a7f5fd805945a0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866101"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040560"
 ---
 # <a name="dynamic-access-control-scenario-overview"></a>ダイナミック アクセス制御:シナリオの概要
 
@@ -60,7 +61,7 @@ Windows Server 2012 では、ファイルサーバー全体にデータガバナ
 |----------------|--------------|
 |**製品評価**|- [動的 Access Control レビュー担当者ガイド](/previous-versions/orphan-topics/ws.10/cc732148(v=ws.10))<br>- [動的 Access Control 開発者向けガイダンス](/previous-versions/windows/desktop/dacx/dynamic-access-control-developer-extensibility-roadmap)|
 |**Planning**|- [集約型アクセスポリシーの展開の計画](./scenario--central-access-policy.md)<br>- [ファイルアクセスの監査の計画](Plan-for-File-Access-Auditing.md)|
-|**配置**|- [Active Directory の展開](../ad-ds/deploy/ad-ds-deployment.md)<br>- [ファイルサービスおよび記憶域サービスの展開](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v=ws.11))|
+|**展開**|- [Active Directory の展開](../ad-ds/deploy/ad-ds-deployment.md)<br>- [ファイルサービスおよび記憶域サービスの展開](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v=ws.11))|
 |**操作**|[ダイナミック アクセス制御 PowerShell リファレンスに関するページ](/powershell/module/addsadministration/)|
 |**ツールと設定**|[Data Classification Toolkit に関するページ](https://www.microsoft.com/download/details.aspx?id=27123)|
 |**コミュニティ リソース**|[ディレクトリ サービス フォーラムに関するページ](/answers/topics/windows-active-directory.html)|

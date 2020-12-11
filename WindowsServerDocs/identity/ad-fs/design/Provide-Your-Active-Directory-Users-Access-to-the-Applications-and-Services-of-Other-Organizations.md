@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Active Directory ユーザーが他の組織のアプリケーションやサービスにアクセスできるようにする'
 ms.assetid: 2d62386c-b466-4a54-b6fa-5d16cda120d8
 title: Active Directory ユーザーに他の組織のアプリケーションとサービスへのアクセスを提供する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 0d1bf60c276932a77573acff2e4e011831e65a05
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8b174331e4fd0f014646e89d038c89c016b3bc17
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967569"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041400"
 ---
 # <a name="provide-your-active-directory-users-access-to-the-applications-and-services-of-other-organizations"></a>Active Directory ユーザーに他の組織のアプリケーションとサービスへのアクセスを提供する
 
@@ -41,5 +42,5 @@ ms.locfileid: "87967569"
 
 ![アプリへのアクセスします。](media/50af4837-31e0-451f-a942-e705c2300065.gif)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

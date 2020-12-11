@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 記憶域レプリカに関する既知の問題'
 title: 記憶域レプリカに関する既知の問題
 manager: siroy
 ms.author: nedpyle
@@ -6,12 +7,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 06/25/2019
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
-ms.openlocfilehash: ed566e5db46cb147925799b055e8bde8ead57b25
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2609d52cfa4ccc84125617567dbe4c44f16b6bfb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87961176"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043230"
 ---
 # <a name="known-issues-with-storage-replica"></a>記憶域レプリカに関する既知の問題
 
@@ -53,13 +54,13 @@ Windows Server 2016 では、以前レプリケートされていたボリュー
 
 ## <a name="during-initial-sync-see-event-log-4004-warnings"></a>初回同期時にイベント ログ 4004 の警告が表示される
 
-Windows Server 2016 では、レプリケーションを構成するときに、移行元と移行先の両方のサーバーで、最初の同期中に複数の **StorageReplica\Admin*log 4004 警告が表示されることがあります。 "API を完了するには、システムリソースが不足しています" という状態になります。 5014 エラーも表示される可能性があります。 これは、初回同期とワークロードの実行の両方を行うのに十分なメモリ (RAM) がサーバーにないことを示します。 RAM を追加するか、記憶域レプリカ以外の機能とアプリケーションで使用されている RAM を削減してください。
+Windows Server 2016 では、レプリケーションを構成するときに、移行元と移行先の両方のサーバーで、最初の同期中に複数の **StorageReplica\Admin* log 4004 警告が表示されることがあります。 "API を完了するには、システムリソースが不足しています" という状態になります。 5014 エラーも表示される可能性があります。 これは、初回同期とワークロードの実行の両方を行うのに十分なメモリ (RAM) がサーバーにないことを示します。 RAM を追加するか、記憶域レプリカ以外の機能とアプリケーションで使用されている RAM を削減してください。
 
 ## <a name="when-using-guest-clusters-with-shared-vhdx-and-a-host-without-a-csv-virtual-machines-stop-responding-after-configuring-replication"></a>共有 VHDX を使用するゲスト クラスターと CSV を使用しないホストを併用すると、仮想マシンがレプリケーションの構成後に応答を停止する
 
 Windows Server 2016 では、記憶域レプリカのテストまたはデモのために Hyper-V ゲスト クラスターを使用し、ゲスト クラスターの記憶域として共有 VHDX を使用すると、レプリケーションの構成後に仮想マシンの応答が停止します。 Hyper-V ホストを再起動すると仮想マシンは応答を開始しますが、レプリケーションの構成が不完全になり、レプリケーションは発生しません。
 
-この動作は、CSV を実行している Hyper-v ホストの要件を回避するために、**fltmc.exe attach svhdxflt*を使用している場合に発生します。 このコマンド使用はサポートされておらず、用途はテストとデモのみに限られています。
+この動作は、CSV を実行している Hyper-v ホストの要件を回避するために、**fltmc.exe attach svhdxflt* を使用している場合に発生します。 このコマンド使用はサポートされておらず、用途はテストとデモのみに限られています。
 
 遅延の原因は、Windows Server 2016 の記憶域 QoS 機能と、手動で接続されている共有 VHDX フィルターの間にある、仕様による相互運用性の問題です。 この問題を解決するには、記憶域 QoS フィルター ドライバーを無効にし、Hyper-V ホストを再起動します。
 
@@ -75,7 +76,7 @@ SC config storqosflt start= disabled
 Data partition sizes are different in those two groups
 ```
 
-ボリュームの作成とフォーマットには、`New-Volume` ではなく `New-Partition**` を使用してください。これは、前者のコマンドレットは、異なるストレージ アレイ上のボリューム サイズを丸める場合があるためです。 NTFS ボリュームをすでに作成してある場合、`Resize-Partition` を使用してボリュームのいずれかを拡大または縮小し、もう片方のボリュームに一致させることができます (これは、ReFS ボリュームでは行うことができません)。 **Diskmgmt.msc*-または**サーバーマネージャー**を使用する場合、丸め処理は行われません。
+ボリュームの作成とフォーマットには、`New-Volume` ではなく `New-Partition**` を使用してください。これは、前者のコマンドレットは、異なるストレージ アレイ上のボリューム サイズを丸める場合があるためです。 NTFS ボリュームをすでに作成してある場合、`Resize-Partition` を使用してボリュームのいずれかを拡大または縮小し、もう片方のボリュームに一致させることができます (これは、ReFS ボリュームでは行うことができません)。 **Diskmgmt.msc*-または **サーバーマネージャー** を使用する場合、丸め処理は行われません。
 
 ## <a name="running-test-srtopology-fails-with-name-related-errors"></a>Test-SRTopology を実行すると、名前関連のエラーが発生して失敗する
 
@@ -251,11 +252,11 @@ No disks suitable for cluster disks found. For diagnostic information about disk
 Get-ClusterAvailableDisk -All | Add-ClusterDisk
 ```
 
-これは、ノードのローカル ストレージでは機能しません。 記憶域レプリカを使うと、**それぞれ独自の共有ストレージ セットを使う**合計 2 つのノード間でストレッチ クラスターをレプリケートできます。
+これは、ノードのローカル ストレージでは機能しません。 記憶域レプリカを使うと、**それぞれ独自の共有ストレージ セットを使う** 合計 2 つのノード間でストレッチ クラスターをレプリケートできます。
 
 ## <a name="the-smb-bandwidth-limiter-fails-to-throttle-storage-replica-bandwidth"></a>記憶域レプリカの帯域幅を調整する SMB 帯域幅リミッタが失敗する
 
-記憶域レプリカに帯域幅の制限を指定する場合、制限は無視され、帯域幅全体を使用します。 例:
+記憶域レプリカに帯域幅の制限を指定する場合、制限は無視され、帯域幅全体を使用します。 次に例を示します。
 
 ```
 Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB
@@ -265,7 +266,7 @@ Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB
 
 ## <a name="event-1241-warning-repeated-during-initial-sync"></a>初期同期中に イベント 1241 警告が繰り返される
 
-レプリケーション パートナーシップを非同期に指定すると、ソース コンピューターで警告イベント 1241 が記憶域レプリカの管理者チャネルで繰り返し記録されます。 例:
+レプリケーション パートナーシップを非同期に指定すると、ソース コンピューターで警告イベント 1241 が記憶域レプリカの管理者チャネルで繰り返し記録されます。 次に例を示します。
 
 ```
 Log Name:      Microsoft-Windows-StorageReplica/Admin
@@ -328,11 +329,11 @@ A process has requested access to an object, but has not been granted those acce
 Guidance: Possible causes include network failures, share creation failures for the remote replication group, or firewall settings. Make sure SMB traffic is allowed and there are no connectivity issues between the local computer and the remote computer. You should expect this event when suspending replication or removing a replication partnership.
 ```
 
-というメッセージに注意してください。 `Status: "{Access Denied}"` `A process has requested access to an object, but has not been granted those access rights.` これは、ストレージレプリカ内の既知の問題であり、2017年9月12日の品質更新プログラム (OS ビルド 14393.1715) で修正されました。https://support.microsoft.com/help/4038782/windows-10-update-kb4038782
+というメッセージに注意してください。 `Status: "{Access Denied}"` `A process has requested access to an object, but has not been granted those access rights.` これは、ストレージレプリカ内の既知の問題であり、2017年9月12日の品質更新プログラム (OS ビルド 14393.1715) で修正されました。 https://support.microsoft.com/help/4038782/windows-10-update-kb4038782
 
 ## <a name="error-failed-to-bring-the-resource-cluster-disk-x-online-with-a-stretch-cluster"></a>ストレッチ クラスターで「リソース 'クラスター ディスク x' をオンラインにできませんでした」エラーが発生する ストレッチクラスターを使用する
 
-正常なフェールオーバー後にクラスター ディスクをオンラインにしようとするとき、元のソース サイトを再度プライマリにしようとすると、フェールオーバー クラスター マネージャーでエラーが発生します。 例:
+正常なフェールオーバー後にクラスター ディスクをオンラインにしようとするとき、元のソース サイトを再度プライマリにしようとすると、フェールオーバー クラスター マネージャーでエラーが発生します。 次に例を示します。
 
 ```
 Error
@@ -343,7 +344,7 @@ Error Code: 0x80071397
 The operation failed because either the specified cluster node is not the owner of the resource, or the node is not a possible owner of the resource.
 ```
 
-ディスクまたは CSV を手動で移動しようとすると、さらにエラーが表示されます。 例:
+ディスクまたは CSV を手動で移動しようとすると、さらにエラーが表示されます。 次に例を示します。
 
 ```
 Error
@@ -400,7 +401,7 @@ Run Get-Cluster | fl - on each node.
 の場合 `ClusterFunctionalLevel = 9` 、これは、このノードに記憶域レプリカを実装するために必要な Windows 2016 ClusterFunctionalLevel バージョンです。
 ClusterFunctionalLevel が 9でない場合、このノードで記憶域レプリカを実装するためには、ClusterFunctionalLevel を更新する必要があります。
 
-この問題を解決するには、PowerShell コマンドレット[ClusterFunctionalLevel](/powershell/module/failoverclusters/update-clusterfunctionallevel)を実行して、クラスターの機能レベルを上げます。
+この問題を解決するには、PowerShell コマンドレット [ClusterFunctionalLevel](/powershell/module/failoverclusters/update-clusterfunctionallevel)を実行して、クラスターの機能レベルを上げます。
 
 ## <a name="small-unknown-partition-listed-in-diskmgmt-for-each-replicated-volume"></a>レプリケートされた各ボリュームに対し、DISKMGMT に小さな不明パーティションが表示される
 
@@ -432,9 +433,9 @@ Hdd で記憶域スペースダイレクトを使用する場合、キャッシ�
 
 この回避策はもちろん理想的ではなく、一部のお客様はそれを利用できない可能性があります。 ストレージレプリカチームは、今後、これらの人為的なボトルネックを減らすために、最適化および更新されたログメカニズムに取り組んでいます。 この v2.0 ログは、Windows Server 2019 で最初に利用可能になり、パフォーマンスが向上したことが、 [Server Storage のブログ](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)で説明されています。
 
-## <a name="error-could-not-find-file-when-running-test-srtopology-between-two-clusters"></a>2つのクラスター間で Test-srtopology を実行すると、"ファイルが見つかりませんでした" というエラーが発生する
+## <a name="error-could-not-find-file-when-running-test-srtopology-between-two-clusters"></a>2つのクラスター間で Test-SRTopology を実行すると、"ファイルが見つかりませんでした" というエラーが発生する
 
-2つのクラスターとその CSV パスの間で Test-srtopology を実行すると、次のエラーで失敗します。
+2つのクラスターとその CSV パスの間で Test-SRTopology を実行すると、次のエラーで失敗します。
 
 ```powershell
 PS C:\Windows\system32> Test-SRTopology -SourceComputerName NedClusterA -SourceVolumeName C:\ClusterStorage\Volume1 -SourceLogVolumeName L: -DestinationComputerName NedClusterB -DestinationVolumeName C:\ClusterStorage\Volume1 -DestinationLogVolumeName L: -DurationInMinutes 1 -ResultPath C:\Temp
@@ -455,9 +456,9 @@ At line:1 char:1
 
 これは、Windows Server 2016 の既知のコードの不具合が原因で発生します。 この問題は、Windows Server、バージョン1709、および関連する RSAT ツールで最初に修正されました。 ダウンレベルの解決方法については、Microsoft サポートに連絡し、バックポートの更新を依頼してください。 対応策はありません。
 
-## <a name="error-specified-volume-could-not-be-found-when-running-test-srtopology-between-two-clusters"></a>2つのクラスター間で Test-srtopology を実行中に、"指定されたボリュームが見つかりませんでした" というエラーが発生する
+## <a name="error-specified-volume-could-not-be-found-when-running-test-srtopology-between-two-clusters"></a>2つのクラスター間で Test-SRTopology を実行すると、"指定されたボリュームが見つかりませんでした" というエラーが発生する
 
-2つのクラスターとその CSV パスの間で Test-srtopology を実行すると、次のエラーで失敗します。
+2つのクラスターとその CSV パスの間で Test-SRTopology を実行すると、次のエラーで失敗します。
 
 ```
 PS C:\> Test-SRTopology -SourceComputerName RRN44-14-09 -SourceVolumeName C:\ClusterStorage\Volume1 -SourceLogVolumeName L: -DestinationComputerName RRN44-14-13 -DestinationVolumeName C:\ClusterStorage\Volume1 -DestinationLogVolumeName L: -DurationInMinutes 30 -ResultPath c:\report
@@ -486,7 +487,7 @@ SR パートナーシップを無効にして記憶域レプリカを削除し�
 
 ## <a name="test-failover-doesnt-mount-when-using-asynchronous-replication"></a>非同期レプリケーションを使用する場合、テストフェールオーバーがマウントされない
 
-テストフェールオーバー機能の一部として、マウント先ボリュームをオンラインにするためにマウントツーターゲットを実行すると、次のエラーで失敗します。
+テストフェールオーバー機能の一部として移行先ボリュームをオンラインにするために Mount-SRDestination を実行すると、次のエラーで失敗します。
 
 ```
 Mount-SRDestination: Unable to mount SR group <TEST>, detailed reason: The group or resource is not in the correct state to perform the supported operation.

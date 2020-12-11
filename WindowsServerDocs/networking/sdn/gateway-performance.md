@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「Windows Server 2019 ゲートウェイのパフォーマンス」を参照してください。
 title: Windows Server 2019 ゲートウェイのパフォーマンス
 manager: grcusanz
 ms.topic: get-started-article
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/22/2018
-ms.openlocfilehash: d7ca57b9cb1013d1e6c1081bdf7c5c50fa6a918d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d6e20febf5730d1b0f249e0979037de298157e56
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969539"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044360"
 ---
 # <a name="windows-server-2019-gateway-performance"></a>Windows Server 2019 ゲートウェイのパフォーマンス
 
@@ -23,18 +24,18 @@ Windows Server 2019 では、数 soaring は 1.8 Gbps、15 Gbps は IPsec と GR
 
 ## <a name="enable-high-performance-with-gateways-in-windows-server-2019"></a>Windows Server 2019 でゲートウェイを使用して高パフォーマンスを実現する
 
-**GRE 接続**の場合、ゲートウェイ vm 上で Windows Server 2019 のビルドをデプロイ/アップグレードすると、パフォーマンスが向上したことが自動的に確認されます。 手動の手順は含まれません。
+**GRE 接続** の場合、ゲートウェイ vm 上で Windows Server 2019 のビルドをデプロイ/アップグレードすると、パフォーマンスが向上したことが自動的に確認されます。 手動の手順は含まれません。
 
-**IPsec 接続**の場合、既定では、仮想ネットワークの接続を作成すると、Windows Server 2016 のデータパスとパフォーマンス番号が取得されます。 Windows Server 2019 のデータパスを有効にするには、次の手順を実行します。
+**IPsec 接続** の場合、既定では、仮想ネットワークの接続を作成すると、Windows Server 2016 のデータパスとパフォーマンス番号が取得されます。 Windows Server 2019 のデータパスを有効にするには、次の手順を実行します。
 
-   1. SDN ゲートウェイ VM で、[**サービス**] コンソール (services.msc) にアクセスします。
-   2. **Azure ゲートウェイサービス**という名前のサービスを探し、スタートアップの種類を [**自動**] に設定します。
+   1. SDN ゲートウェイ VM で、[ **サービス** ] コンソール (services.msc) にアクセスします。
+   2. **Azure ゲートウェイサービス** という名前のサービスを探し、スタートアップの種類を [**自動**] に設定します。
    3. ゲートウェイ VM を再起動します。
       このゲートウェイのアクティブな接続は、冗長なゲートウェイ VM にフェールオーバーします。
    4. ゲートウェイ Vm の残りの部分に対して、前の手順を繰り返します。
 
 >[!TIP]
->最適なパフォーマンスの結果を得るには、IPsec 接続の [quickMode 設定] の cipherTransformationConstant と authenticationTransformConstant で**GCMAES256** cipher suite が使用されていることを確認します。
+>最適なパフォーマンスの結果を得るには、IPsec 接続の [quickMode 設定] の cipherTransformationConstant と authenticationTransformConstant で **GCMAES256** cipher suite が使用されていることを確認します。
 >
 >最大のパフォーマンスを向上させるには、ゲートウェイホストハードウェアが AES-NI および PCLMULQDQ CPU 命令セットをサポートしている必要があります。 これらは、Westmere (32nm) 以降の Intel CPU で使用できます。ただし、AES-NI が無効になっているモデルは除きます。 ハードウェアベンダーのドキュメントを参照して、CPU が AES-NI と PCLMULQDQ の CPU 命令セットをサポートしているかどうかを確認できます。
 
@@ -90,6 +91,6 @@ New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -Virtua
 
 ## <a name="testing-results"></a>テスト結果
 
-Microsoft では、テストラボで SDN ゲートウェイの広範なパフォーマンステストを行ってきました。 このテストでは、SDN シナリオと非 SDN シナリオで、Windows Server 2019 とゲートウェイネットワークパフォーマンスを比較しました。 検索結果とテストセットアップの詳細については、[こちら](https://blogs.technet.microsoft.com/networking/2018/08/15/high-performance-gateways/)のブログ記事で確認できます。
+Microsoft では、テストラボで SDN ゲートウェイの広範なパフォーマンステストを行ってきました。 このテストでは、SDN シナリオと非 SDN シナリオで、Windows Server 2019 とゲートウェイネットワークパフォーマンスを比較しました。 検索結果とテストセットアップの詳細については、 [こちら](https://blogs.technet.microsoft.com/networking/2018/08/15/high-performance-gateways/)のブログ記事で確認できます。
 
 ---

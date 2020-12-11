@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「集約型アクセスポリシーの展開 (デモンストレーション手順)」を参照してください。
 ms.assetid: 8738c03d-6ae8-49a7-8b0c-bef7eab81057
 title: 集約型アクセス ポリシーの展開 (デモンストレーション手順)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 406674f26039f80cbca5ed3ba96e041bc8624729
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8f61fd4e483ef28e6887b8f530bc311b09b8d563
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952793"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040580"
 ---
 # <a name="deploy-a-central-access-policy-demonstration-steps"></a>集約型アクセス ポリシーの展開 (デモンストレーション手順)
 
@@ -63,7 +64,7 @@ ms.locfileid: "87952793"
 
 2. Active Directory 管理センターを開きます。
 
-3. **ツリー ビュー アイコン**をクリックし、[**ダイナミック アクセス制御**] を展開し、[**要求の種類**] を選択します。
+3. **ツリー ビュー アイコン** をクリックし、[**ダイナミック アクセス制御**] を展開し、[**要求の種類**] を選択します。
 
    [**要求の種類**] を右クリックし、[**新規作成**] をクリックしてから、[**要求の種類**] をクリックします。
 
@@ -82,7 +83,7 @@ ms.locfileid: "87952793"
 
 9. 上記ステップを繰り返します。 [**提案された値の追加**] ダイアログ ボックスの [**値**] フィールドおよび [**表示名**] フィールドに **JP** と入力してから、[**OK**] をクリックします。
 
-![ソリューションガイド](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -98,7 +99,7 @@ New-ADClaimType department -SourceAttribute department
 
 #### <a name="to-create-and-enable-pre-created-resource-properties"></a>事前作成のリソース プロパティを作成して有効にするには
 
-1.  Active Directory 管理センターの左側のウィンドウで、[**ツリー ビュー**] をクリックします。 [**ダイナミック アクセス制御**] を展開してから、[**リソース プロパティ**] を選択します。
+1.  Active Directory 管理センターの左ペインで、[_ * ツリービュー * *] をクリックします。 [**ダイナミック アクセス制御**] を展開してから、[**リソース プロパティ**] を選択します。
 
 2.  [**リソース プロパティ**] を右クリックし、[**新規作成**] をクリックしてから、[**参照用リソース プロパティ**] をクリックします。
 
@@ -117,7 +118,7 @@ New-ADClaimType department -SourceAttribute department
 
     -   部署
 
-![ソリューションガイド](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -154,7 +155,7 @@ Add-ADResourcePropertyListMember "Global Resource Property List" -Members Depart
 
 #### <a name="to-create-a-central-access-rule"></a>集約型アクセス規則を作成するには
 
-1. Active Directory 管理センターの左側のウィンドウで、[**ツリー ビュー**] をクリックし、[**ダイナミック アクセス制御**] を選択してから、[**集約型アクセス規則**] をクリックします。
+1. Active Directory 管理センターの左ペインで、[_ * ツリービュー * *] をクリックし、[ **動的 Access Control**] を選択して、[ **集約型アクセス規則**] をクリックします。
 
 2. [**集約型アクセス規則**] を右クリックし、[**新規作成**] をクリックしてから、[**集約型アクセス規則**] をクリックします。
 
@@ -169,7 +170,7 @@ Add-ADResourcePropertyListMember "Global Resource Property List" -Members Depart
 
 6. [**アクセス許可のアクセス許可エントリ**] ダイアログ ボックスで [**プリンシパルの選択**] をクリックし、「**Authenticated Users**」と入力してから、[**OK**] をクリックします。
 
-7. [**アクセス許可のアクセス許可エントリ**] ダイアログボックスで [**条件の追加**] をクリックし、次の条件を追加します。 [**ユーザー**] [**country**] [**いずれか**を満たす] [**リソース**] [**country**] [**条件の追加**] をクリックします。
+7. [ **アクセス許可のアクセス許可エントリ** ] ダイアログボックスで [ **条件の追加**] をクリックし、次の条件を追加します。 [**ユーザー**] [**country**] [**いずれか** を満たす] [**リソース**] [**country**] [ **条件の追加**] をクリックします。
     [**And**]。[**ユーザー**] [**Department**] [**いずれかを満たす**] [**リソース**] [**Department**] をクリックします。 [**アクセス許可**] を [**読み取り**] に設定します。
 
 8. [**OK**] をクリックしてから、[**追加**] をクリックします。 [**プリンシパルの選択**] をクリックし、**FinanceAdmin** と入力してから、[**OK**] をクリックします。
@@ -180,7 +181,7 @@ Add-ADResourcePropertyListMember "Global Resource Property List" -Members Depart
 
 11. [**OK**] を 3 回クリックして終了し、Active Directory 管理センターに戻ります。
 
-![ソリューションガイド](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -201,7 +202,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 
 #### <a name="to-add-a-central-access-rule-to-a-central-access-policy"></a>集約型アクセス規則を集約型アクセス ポリシーに追加するには
 
-1. Active Directory 管理センターの左側のウィンドウで、[**ダイナミック アクセス制御**] をクリックしてから、[**集約型アクセス ポリシー**] をクリックします。
+1. Active Directory 管理センターの左側のウィンドウで、[_ * Dynamic Access Control * *] をクリックし、[ **集約型アクセスポリシー**] をクリックします。
 
 2. [**タスク**] ウィンドウの [**新規作成**] をクリックし、[**集約型アクセス ポリシー**] をクリックします。
 
@@ -213,7 +214,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 
 6. [**OK**] をクリックして完了します。 これで、金融ポリシーという集約型アクセス ポリシーが作成されました。
 
-![ソリューションガイド](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -225,7 +226,7 @@ New-ADCentralAccessPolicy "Finance Policy" Add-ADCentralAccessPolicyMember
 
 #### <a name="to-apply-the-central-access-policy-across-file-servers-by-using-group-policy"></a>グループ ポリシーを使用してファイル サーバー全体で集約型アクセス ポリシーを適用するには
 
-1.  [**スタート**] 画面の [**検索**] ボックスに「**グループ ポリシーの管理**」と入力します。 [**グループ ポリシーの管理**] をダブルクリックします。
+1.  _ *スタート** 画面で、 **検索** ボックスに「 **グループポリシー管理**」と入力します。 [**グループ ポリシーの管理**] をダブルクリックします。
 
     > [!TIP]
     > [**管理ツールを表示**] の設定が無効になっていると、[**管理ツール**] フォルダーとその内容は [**設定**] の結果に表示されません。
@@ -233,7 +234,7 @@ New-ADCentralAccessPolicy "Finance Policy" Add-ADCentralAccessPolicyMember
     > [!TIP]
     > 運用環境では、ファイル サーバー組織単位 (OU) を作成し、このポリシーを適用するすべてのファイル サーバーをその OU に追加する必要があります。 次に、グループ ポリシーを作成し、この OU をそのポリシーに追加できます。
 
-2.  この手順では、テスト環境のセクション「[ドメイン コントローラーを作成する](Appendix-B--Setting-Up-the-Test-Environment.md#BKMK_Build)」で作成したグループ ポリシー オブジェクトを編集して、作成した集約型アクセス ポリシーを組み込みます。 グループポリシー管理エディターで、ドメイン内の組織単位 (この例では contoso.com) に移動して選択します。**グループポリシー管理**、**フォレスト: contoso.com**、**ドメイン**、 **contoso.com**、 **contoso**、 **fileserverou]** です。
+2.  この手順では、テスト環境のセクション「[ドメイン コントローラーを作成する](Appendix-B--Setting-Up-the-Test-Environment.md#BKMK_Build)」で作成したグループ ポリシー オブジェクトを編集して、作成した集約型アクセス ポリシーを組み込みます。 グループポリシー管理エディターで、ドメイン内の組織単位 (この例では contoso.com) に移動して選択します。 **グループポリシー管理**、 **フォレスト: contoso.com**、 **ドメイン**、 **contoso.com**、 **contoso**、 **fileserverou]** です。
 
 3.  [**FlexibleAccessGPO**] を右クリックしてから、[**編集**] をクリックします。
 
@@ -316,7 +317,7 @@ New-ADCentralAccessPolicy "Finance Policy" Add-ADCentralAccessPolicyMember
 
 2.  [**セキュリティ**] タブをクリックし、[**詳細設定**] をクリックしてから、[**有効なアクセス**] タブをクリックします。
 
-3.  ユーザーのアクセス許可を確認するには、[**ユーザーの選択**] をクリックし、ユーザーの名前を入力して、[有効な**アクセスの表示**] をクリックします。有効なアクセス権が表示されます。 例:
+3.  ユーザーのアクセス許可を確認するには、[ **ユーザーの選択**] をクリックし、ユーザーの名前を入力して、[有効な  **アクセスの表示** ] をクリックします。有効なアクセス権が表示されます。 次に例を示します。
 
     -   Myriam Delesalle (MDelesalle) は金融部門に属しており、フォルダーに対する読み取りアクセス権を必要としています。
 
@@ -370,9 +371,9 @@ New-ADCentralAccessPolicy "Finance Policy" Add-ADCentralAccessPolicyMember
 
 5. [**提案されたアクセス許可**] セクションで [**アクセス許可のステージング構成を有効にする**] チェック ボックスを選択し、[**編集**] をクリックしてから、[**追加**] をクリックします。 [**提案されたアクセス許可のアクセス許可エントリ**] ウィンドウで [**プリンシパルの選択**] リンクをクリックし、「**Authenticated Users**」と入力してから、[**OK**] をクリックします。
 
-6. [**条件の追加**] リンクをクリックし、次の条件を追加します。 [**ユーザー**] [**country**] [**いずれか**] [**リソース**] [**country**]。
+6. [ **条件の追加** ] リンクをクリックし、次の条件を追加します。 [**ユーザー**] [**country**] [**いずれか**] [**リソース**] [**country**]。
 
-7. [**条件の追加**] をもう一度クリックし、次の条件を追加します。 [**と**] [**デバイス**] [**country**] [**いずれかの**] [**リソース**] [**country**]
+7. [ **条件の追加** ] をもう一度クリックし、次の条件を追加します。 [**と**] [**デバイス**] [**country**] [**いずれかの**] [**リソース**] [**country**]
 
 8. [**条件の追加**] を再度クリックし、次の条件を追加します。
    と[**ユーザー**][**グループ**][**すべてのメンバーのメンバー**][**値**] \(**FinanceException**)
@@ -385,7 +386,7 @@ New-ADCentralAccessPolicy "Finance Policy" Add-ADCentralAccessPolicyMember
 
 12. [**OK**] を 2 回クリックして完了します。
 
-![ソリューションガイド](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -407,13 +408,13 @@ Set-ADCentralAccessRule
 
 1. Hyper-v マネージャーでファイルサーバー FILE1 に接続し、パスワードを使用して contoso\administrator としてログオンし <strong>pass@word1</strong> ます。
 
-2. コマンド プロンプト ウィンドウを開き、**gpupdate /force** と入力します。 これにより、グループ ポリシーの変更がサーバーで有効になります。
+2. コマンドプロンプトウィンドウを開き、「_ * gpupdate/force * *」と入力します。 これにより、グループ ポリシーの変更がサーバーで有効になります。
 
 3. Hyper-V マネージャーでサーバー CLIENT1 に接続します。 現在ログオンしているユーザーをログオフします。 仮想マシン CLIENT1 を再起動します。 次に、contoso\EValle を使用してコンピューターにログオンし pass@word1 ます。
 
 4. \FILE1\Finance Documents へのデスクトップショートカットをダブルクリックし \\ ます。 EValle は引き続きファイルにアクセスできます。 FILE1 に切り替えます。
 
-5. デスクトップのショートカットから [**イベント ビューアー**] を開きます。 [**Windows ログ**] を展開してから、[**セキュリティ**] を選択します。 [**集約型アクセスポリシーステージング**] タスクカテゴリで、**イベント ID 4818**のエントリを開きます。 EValle にアクセスが許可されていたことがわかります。ただし、ステージング ポリシーに従えば、このユーザーはアクセスが拒否されていました。
+5. デスクトップのショートカットから [**イベント ビューアー**] を開きます。 [**Windows ログ**] を展開してから、[**セキュリティ**] を選択します。 [**集約型アクセスポリシーステージング**] タスクカテゴリで、**イベント ID 4818** のエントリを開きます。 EValle にアクセスが許可されていたことがわかります。ただし、ステージング ポリシーに従えば、このユーザーはアクセスが拒否されていました。
 
 ## <a name="next-steps"></a>次の手順
 System Center Operations Manager などの集約型サーバー管理システムがある場合、イベントをモニターするように構成することもできます。 これにより、管理者は、集約型アクセス ポリシーを適用する前にその効果をモニターできます。

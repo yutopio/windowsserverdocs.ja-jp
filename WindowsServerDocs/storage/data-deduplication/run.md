@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「データ重複除去の実行」をご覧ください。
 ms.assetid: f15c02d7-1cbd-4eba-a571-0ea34ab93ef4
 title: データ重複除去の実行
 ms.topic: article
@@ -6,12 +7,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: f382d229458f27795c09e0377e0f0b23ef7b395b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 55d5d3ee542ed0c16f66d9e882ae5d6dafd1af99
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936233"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040350"
 ---
 # <a name="running-data-deduplication"></a>データ重複除去の実行
 
@@ -48,9 +49,9 @@ Start-DedupJob -Type Optimization -Volume <Your-Volume-Here> -Memory 100 -Cores 
 [最適化ジョブ](understand.md#job-info-optimization)の失敗を示す指標の 1 つは、最適化率が下降傾向であることです。この場合、最適化ジョブが変更の速度 (チャーン) に対応できていない可能性があります。 最適化率を確認するには、 [`Get-DedupStatus`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)) PowerShell コマンドレットを使用します。
 
 > [!Important]
-> `Get-DedupStatus`には、最適化率に関連する2つのフィールド (と) があり `OptimizedFilesSavingsRate` `SavingsRate` ます。 これらの値はどちらも追跡する必要がありますが、それぞれの意味合いは異なります。
-> - `OptimizedFilesSavingsRate`最適化のために "ポリシー内" のファイルにのみ適用され `space used by optimized files after optimization / logical size of optimized files` ます ()。
-> - `SavingsRate`ボリューム全体 () に適用さ `space used by optimized files after optimization / total logical size of the optimization` れます。
+> `Get-DedupStatus` には、最適化率に関連する2つのフィールド (と) があり `OptimizedFilesSavingsRate` `SavingsRate` ます。 これらの値はどちらも追跡する必要がありますが、それぞれの意味合いは異なります。
+> - `OptimizedFilesSavingsRate` 最適化のために "ポリシー内" のファイルにのみ適用され `space used by optimized files after optimization / logical size of optimized files` ます ()。
+> - `SavingsRate` ボリューム全体 () に適用さ `space used by optimized files after optimization / total logical size of the optimization` れます。
 
 ## <a name="disabling-data-deduplication"></a><a id="disabling-dedup"></a>データ重複除去の無効化
 データ重複除去を無効にするには、[非最適化ジョブ](understand.md#job-info-unoptimization)を実行します。 ボリュームの最適化を元に戻すには、次のコマンドを実行します。

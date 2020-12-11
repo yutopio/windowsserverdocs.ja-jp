@@ -1,4 +1,5 @@
 ---
+description: 詳細については、既存の DNS インフラストラクチャへの AD DS の統合に関するページを参照してください。
 ms.assetid: 4981b32f-741e-4afc-8734-26a8533ac530
 title: AD DS を既存の DNS インフラストラクチャに統合する
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 6c1a2af42d588cf8a8a2d2a940a6f67ccfad9311
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: aba44d8797e6ef77f33afc973b51dfd664f68e71
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93071114"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042810"
 ---
 # <a name="integrating-ad-ds-into-an-existing-dns-infrastructure"></a>AD DS を既存の DNS インフラストラクチャに統合する
 
@@ -28,13 +29,13 @@ ms.locfileid: "93071114"
 
 -   各地域ドメインのドメインコントローラーが、Active Directory ドメインに対応する DNS ゾーンをホストするように構成します。
 
--   Active Directory フォレスト全体のロケーターレコードを含むゾーン (つまり、_msdcs を構成します。 *forestname* ゾーン)。フォレスト全体の dns アプリケーションディレクトリパーティションを使用して、フォレスト内のすべての dns サーバーにレプリケートします。
+-   Active Directory フォレスト全体のロケーターレコードを含むゾーン (つまり、_msdcs を構成します。*forestname* ゾーン)。フォレスト全体の dns アプリケーションディレクトリパーティションを使用して、フォレスト内のすべての dns サーバーにレプリケートします。
 
     > [!NOTE]
     > DNS サーバーサービスが Active Directory ドメインサービスインストールウィザードと共にインストールされると (このオプションをお勧めします)、前のすべてのタスクが自動的に実行されます。 詳細については、「 [Windows Server 2008 のフォレストルートドメインの展開](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731174(v=ws.10))」を参照してください。
 
     > [!NOTE]
-    > AD DS は、フォレスト全体のロケーターレコードを使用して、レプリケーションパートナーが互いを検索し、クライアントがグローバルカタログサーバーを検索できるようにします。 AD DS では、フォレスト全体のロケーターレコードが _msdcs に格納されます。 *forestname* ゾーン。 ゾーン内の情報は広く使用可能である必要があるため、フォレスト全体の DNS アプリケーションディレクトリパーティションによって、このゾーンはフォレスト内のすべての DNS サーバーにレプリケートされます。
+    > AD DS は、フォレスト全体のロケーターレコードを使用して、レプリケーションパートナーが互いを検索し、クライアントがグローバルカタログサーバーを検索できるようにします。 AD DS では、フォレスト全体のロケーターレコードが _msdcs に格納されます。*forestname* ゾーン。 ゾーン内の情報は広く使用可能である必要があるため、フォレスト全体の DNS アプリケーションディレクトリパーティションによって、このゾーンはフォレスト内のすべての DNS サーバーにレプリケートされます。
 
 既存の DNS 構造はそのまま残ります。 サーバーやゾーンを移動する必要はありません。 Active Directory 統合された DNS ゾーンの委任を既存の DNS 階層から作成するだけで済みます。
 

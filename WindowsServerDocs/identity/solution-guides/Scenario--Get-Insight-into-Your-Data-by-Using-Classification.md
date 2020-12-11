@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: シナリオ: 分類を使用してデータに関する洞察を得る'
 ms.assetid: ad3f0480-99f7-428a-ab33-6d165a440840
 title: シナリオでは、分類を使用してデータに関する洞察を得ます
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7c06cc4bbca7e21ffa5ef58ec6e33fc43b3f9e49
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 386f3a1f40cb3f93fb9ece34b667f51057f5347a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940245"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044550"
 ---
 # <a name="scenario-get-insight-into-your-data-by-using-classification"></a>シナリオ:分類を使用してデータの情報を得る
 
@@ -30,7 +31,7 @@ ms.locfileid: "87940245"
 
 「[自動ファイル分類の計画](assetId:///e3c3bb4b-3034-42b7-b391-8ef5f5851955)」に、自動ファイル分類を構成するための計画に関する情報があります。
 
-「自動ファイル分類の展開」でファイルを自動的に分類する方法の手順については[&#41;「デモンストレーション手順 &#40;](Deploy-Automatic-File-Classification--Demonstration-Steps-.md)」を参照してください。
+「自動ファイル分類の展開」でファイルを自動的に分類する方法の手順については [&#41;「デモンストレーション手順 &#40;](Deploy-Automatic-File-Classification--Demonstration-Steps-.md)」を参照してください。
 
 ## <a name="in-this-scenario"></a>このシナリオの内容
 このシナリオは、ダイナミック アクセス制御のシナリオの一部です。 ダイナミック アクセス制御の追加情報については、次のトピックを参照してください。

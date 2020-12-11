@@ -1,4 +1,5 @@
 ---
+description: 詳細については、オンプレミスのデバイスベースの条件付きアクセスの計画に関するページを参照してください。
 ms.assetid: c5eb3fa0-550c-4a2f-a0bc-698b690c4199
 title: オンプレミスのデバイス ベースの条件付きアクセスを計画する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7f331aac7b58cc22f696130647a7f5e95ea808c9
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8301cb1396785d56d81e08e2ad3d52ee4d66d887
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945478"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97043310"
 ---
 # <a name="plan-device-based-conditional-access-on-premises"></a>オンプレミスのデバイス ベースの条件付きアクセスを計画する
 
@@ -61,25 +62,25 @@ AD FS 2016 では、シームレスなデバイスとユーザー両方 PRT と 
 
 - 特定のグループまたはグループのメンバーを除き、企業ネットワークの外部からアクセスする登録されていないデバイスの多要素認証を要求します。
 
-Ad FS 2016 でこれらのポリシーを構成しても、特定のデバイスの信頼レベルを要求するには、具体的には: か **認証**, 、**管理**, 、または **準拠**します。
+Ad FS 2016 でこれらのポリシーを構成しても、特定のデバイスの信頼レベルを要求するには、具体的には: か **認証**, 、**管理**, 、または **準拠** します。
 
 AD FS の構成の詳細については、アクセス制御ポリシーは、「 [AD FS でのアクセス制御ポリシー](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)します。
 
 #### <a name="authenticated-devices"></a>認証済みのデバイス
 認証済みのデバイスは、登録されているデバイス (Intune およびサード パーティの mdm で有効 for Windows 10、Android と iOS のみの Intune) MDM に登録していないですです。
 
-認証済みのデバイスがある、 **isManaged** AD FS 要求の値を持つ **FALSE**します。 (登録されていないデバイスは、この要求を一切受けません)。 認証されたデバイス (およびすべての登録済みデバイス) には、isKnown の AD FS 要求の値が**TRUE**になります。
+認証済みのデバイスがある、 **isManaged** AD FS 要求の値を持つ **FALSE** します。 (登録されていないデバイスは、この要求を一切受けません)。 認証されたデバイス (およびすべての登録済みデバイス) には、isKnown の AD FS 要求の値が **TRUE** になります。
 
 #### <a name="managed-devices"></a>マネージド デバイス:
 
 マネージド デバイスは、MDM. に登録されている登録済みのデバイス
 
-マネージド デバイスが isManaged AD FS クレームの値が **TRUE**します。
+マネージド デバイスが isManaged AD FS クレームの値が **TRUE** します。
 
 #### <a name="devices-compliant-with-mdm-or-group-policies"></a>(MDM またはグループ ポリシー) に準拠したデバイス
 対応のデバイスはのみに登録されていない MDM が MDM ポリシーに準拠して、登録済みのデバイスです。 (対応情報は、MDM とおよび Azure AD に書き込まれます)。
 
-準拠デバイスでは、 **isCompliant** AD FS 要求の値を持つ **TRUE**します。
+準拠デバイスでは、 **isCompliant** AD FS 要求の値を持つ **TRUE** します。
 
 AD FS 2016 デバイスと条件付きアクセスの信頼性情報の一覧については、次を参照してください。 [参照](#reference)します。
 

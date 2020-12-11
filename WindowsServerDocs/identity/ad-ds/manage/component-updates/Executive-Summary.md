@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: エグゼクティブ概要'
 ms.assetid: 85ca191c-0cc7-4453-a72c-42060ddf2ea2
 title: 概要
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/08/2018
 ms.topic: article
-ms.openlocfilehash: 6259883f5aaba6869c6643b30995a51f1e9df422
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 7f795a162d69c1aa9f055dfb5edf8e2311019f93
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070694"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042840"
 ---
 # <a name="executive-summary"></a>概要
 
@@ -61,7 +62,7 @@ ms.locfileid: "93070694"
 
     - ドメインコントローラのセキュリティを十分に管理できません。
 
-  - 通常、 **特権昇格および伝達** 固有のアカウント、サーバー、およびインフラストラクチャコンポーネントは、Active Directory に対する攻撃の主な対象となります。 それらのアカウントを次に示します。
+  - 通常、**特権昇格および伝達** 固有のアカウント、サーバー、およびインフラストラクチャコンポーネントは、Active Directory に対する攻撃の主な対象となります。 それらのアカウントを次に示します。
 
     - 永続的に特権を持つアカウント
 
@@ -180,5 +181,5 @@ ms.locfileid: "93070694"
 | エンドユーザーのセキュリティを簡略化します。 | 戦略的 | 予防 |
 | ホストベースのファイアウォールを使用して、通信を制御し、セキュリティで保護します。 | 戦術的 | 予防 |
 | パッチデバイス。 | 戦術的 | 予防 |
-| IT 資産のためのビジネス中心のライフサイクル管理を実装します。 | 戦略的 | N/A |
+| IT 資産のためのビジネス中心のライフサイクル管理を実装します。 | 戦略的 | 該当なし |
 | インシデント復旧計画を作成または更新します。 | 戦略的 | N/A |

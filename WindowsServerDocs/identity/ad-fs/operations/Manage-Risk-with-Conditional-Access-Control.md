@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「条件付き Access Control によるリスク管理」を参照してください。
 ms.assetid: a0f7bb11-47a5-47ff-a70c-9e6353382b39
 title: 条件付きアクセス制御によってリスクを管理する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 97466c5f7d0a6c89980195d7b71e6697748db334
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2bfc8fa387ba98be10c9849b2e777f95179deb46
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954218"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039700"
 ---
 # <a name="manage-risk-with-conditional-access-control"></a>条件付きアクセス制御によってリスクを管理する
 
@@ -35,7 +36,7 @@ AD FS のアクセス制御は、発行承認要求規則を使用して実装�
 
 これらの規則のオプションとロジックの詳細については、「[承認要求規則を使用する場合](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913560(v=ws.11))」を参照してください。
 
-Windows Server 2012 R2 の AD FS では、アクセス制御は、ユーザー、デバイス、場所、認証データを含む複数の要因によって強化されています。 このアクセス制御の拡張は、承認要求規則で利用できるさまざまな種類の要求によって実現されます。  言い換えると、Windows Server 2012 R2 の AD FS では、ユーザー id またはグループメンバーシップ、ネットワークの場所、デバイス (社内参加しているかどうかにかかわらず) に基づいて条件付きアクセス制御を適用することができます。詳細については、「[任意のデバイスからの職場への参加](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)」を参照してください。
+Windows Server 2012 R2 の AD FS では、アクセス制御は、ユーザー、デバイス、場所、認証データを含む複数の要因によって強化されています。 このアクセス制御の拡張は、承認要求規則で利用できるさまざまな種類の要求によって実現されます。  言い換えると、Windows Server 2012 R2 の AD FS では、ユーザー id またはグループメンバーシップ、ネットワークの場所、デバイス (社内参加しているかどうかにかかわらず) に基づいて条件付きアクセス制御を適用することができます。詳細については、「 [任意のデバイスからの職場への参加](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)」を参照してください。
 
 Windows Server 2012 R2 の AD FS での条件付きアクセス制御には、次のような利点があります。
 
@@ -86,7 +87,7 @@ Windows Server 2012 R2 の AD FS での条件付きアクセス制御には、�
 |クライアント ユーザー エージェント|クライアントがアプリケーションへのアクセスに使用しているデバイスの種類。|
 |クライアント IP|クライアントの IP アドレス。|
 |エンドポイント パス|クライアントがアクティブかパッシブかの決定に使用できるエンドポイントの絶対パス。|
-|Proxy (プロキシ)|要求が渡されるフェデレーション サーバー プロキシの DNS 名。|
+|プロキシ|要求が渡されるフェデレーション サーバー プロキシの DNS 名。|
 |アプリケーション識別子|証明書利用者の識別子。|
 |アプリケーション ポリシー|証明書のアプリケーション ポリシー。|
 |機関キー識別子|発行された証明書への署名に使用した証明書の機関キー識別子 (拡張子)。|
@@ -171,6 +172,6 @@ Windows Server 2012 R2 の AD FS での条件付きアクセス制御を実装�
 
     ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [チュートリアルガイド: 条件付き Access Control](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md) 
  によるリスク管理[Windows Server 2012 R2 で AD FS 用のラボ環境をセットアップする](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)

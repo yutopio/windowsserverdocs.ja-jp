@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「既定のコンテナーと Ou の管理を委任する」を参照してください。
 ms.assetid: ac6604b0-7459-4ff3-af1c-4936897f5d14
 title: 既定のコンテナーと OU の管理を委任する
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 8f52ca20cce86c869f66ea9d0e2e795956a0c75f
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 4056c01ec9d940a6c7c405b57b270a4f3a749f02
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069414"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039291"
 ---
 # <a name="delegating-administration-of-default-containers-and-ous"></a>既定のコンテナーと OU の管理を委任する
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「OpenID Connect を使用した web アプリケーションの構築」 AD FS 2016 以降を参照してください。
 ms.assetid: d282bb4e-38a0-4c7c-83d8-f6ea89278057
 title: AD FS 2016 以降で OpenID Connect を使用して web アプリケーションを構築する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.openlocfilehash: 5fd97c3953bcae9037b0ea971eb454eaa7ef58d1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 24c6918cc4f0a438bd45317364207b71a5e9b192
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942786"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041580"
 ---
 # <a name="build-a-web-application-using-openid-connect-with-ad-fs-2016-and-later"></a>AD FS 2016 以降で OpenID Connect を使用して web アプリケーションを構築する
 
@@ -29,23 +30,23 @@ ms.locfileid: "87942786"
 
 #### <a name="create-application-group"></a>アプリケーショングループの作成
 
-1.  AD FS 管理] で、[アプリケーショングループ] を右クリックし、[**アプリケーショングループの追加**] を選択します。
+1.  AD FS 管理] で、[アプリケーショングループ] を右クリックし、[ **アプリケーショングループの追加**] を選択します。
 
-2.  アプリケーショングループウィザードの [名前] に「 **ADFSSSO** 」と入力し、[**クライアント-サーバーアプリケーション**] で、web**アプリケーションテンプレートにアクセスする web ブラウザー**を選択します。  **[次へ]** をクリックします。
+2.  アプリケーショングループウィザードの [名前] に「 **ADFSSSO** 」と入力し、[ **クライアント-サーバーアプリケーション** ] で、web **アプリケーションテンプレートにアクセスする web ブラウザー** を選択します。  **[次へ]** をクリックします。
 
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_1.PNG)
 
-3.  [**クライアント識別子**の値をコピーします。  この値は、アプリケーション web.config ファイルの ida: ClientId の値として後で使用されます。
+3.  [ **クライアント識別子** の値をコピーします。  この値は、アプリケーション web.config ファイルの ida: ClientId の値として後で使用されます。
 
-4.  **リダイレクト URI**には、次のように入力し  -  **https://localhost:44320/** ます。  **[追加]** をクリックします。 **[次へ]** をクリックします。
+4.  **リダイレクト URI** には、次のように入力し  -  **https://localhost:44320/** ます。  **[追加]** をクリックします。 **[次へ]** をクリックします。
 
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_2.PNG)
 
-5.  [**概要**] 画面で、[**次へ**] をクリックします。
+5.  [ **概要** ] 画面で、[ **次へ**] をクリックします。
 
     ![AD FS OpenID](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_3.PNG)
 
-6.  [**完了**] 画面で、[**閉じる**] をクリックします。
+6.  [ **完了** ] 画面で、[ **閉じる**] をクリックします。
 
 ## <a name="download-and-modify-sample-application-to-authenticate-via-openid-connect-and-ad-fs"></a>OpenID Connect と AD FS を使用して認証するサンプルアプリケーションをダウンロードして変更する
 このセクションでは、サンプル Web アプリをダウンロードし、Visual Studio で変更する方法について説明します。   [ここに記載](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect)されている Azure AD サンプルを使用します。

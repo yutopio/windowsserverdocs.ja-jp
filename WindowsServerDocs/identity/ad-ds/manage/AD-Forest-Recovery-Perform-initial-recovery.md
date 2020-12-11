@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 初回回復の実行'
 title: AD フォレストの回復-最初の回復を実行する
 ms.author: daveba
 author: iainfoulds
@@ -6,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: 8b0498b30966c22ec8dca267988e109d976f6b69
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: d0a260b248b18286861e92cc6f3a2f1c914cc36c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067744"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040020"
 ---
 # <a name="perform-initial-recovery"></a>初期回復の実行
 

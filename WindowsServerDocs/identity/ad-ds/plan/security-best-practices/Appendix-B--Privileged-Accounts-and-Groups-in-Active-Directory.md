@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「付録 B: Active Directory の特権アカウントとグループ」を参照してください。'
 ms.assetid: 79b9c912-ea3e-4679-ab41-893e096c4d09
 title: 付録 B-Active Directory の特権アカウントとグループ
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 2f720c09ee59544376693cdb97ecf7af54e308bd
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 52de3df2c5801c7356fa1501e7c9c5cc3ab20178
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070474"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041560"
 ---
 # <a name="appendix-b-privileged-accounts-and-groups-in-active-directory"></a>付録 B: Active Directory の特権アカウントとグループ
 

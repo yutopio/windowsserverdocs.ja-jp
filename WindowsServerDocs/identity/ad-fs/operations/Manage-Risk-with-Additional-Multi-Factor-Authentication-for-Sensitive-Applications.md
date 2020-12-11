@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「機密性の高いアプリケーションの追加 Multi-Factor Authentication によるリスク管理」を参照してください。
 ms.assetid: 934ac796-e2ee-490d-8265-6a818be5ee79
 title: 追加の多要素認証による個人情報アプリケーションのリスク管理
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b9f764b64a50b0c69116cf19e253097da464cdbb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3054109150402e44ba108215b4ac662ce6932b0c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954298"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97039720"
 ---
 # <a name="manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications"></a>追加の多要素認証による個人情報アプリケーションのリスク管理
 
@@ -27,14 +28,14 @@ ms.locfileid: "87954298"
 ## <a name="in-this-guide"></a>このガイドの内容
 このガイドでは、次の情報を提供します。
 
--   [AD FS の認証メカニズム](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_1)-Windows Server 2012 R2 の Active Directory フェデレーションサービス (AD FS) (AD FS) で使用できる認証メカニズムについて説明します。
+-   [AD FS の認証メカニズム](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_1) -Windows Server 2012 R2 の Active Directory フェデレーションサービス (AD FS) (AD FS) で使用できる認証メカニズムについて説明します。
 
--   [シナリオの概要](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2)-Active Directory フェデレーションサービス (AD FS) (AD FS) を使用して、ユーザーのグループメンバーシップに基づいて多要素認証 (MFA) を有効にするシナリオの説明。
+-   [シナリオの概要](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2) -Active Directory フェデレーションサービス (AD FS) (AD FS) を使用して、ユーザーのグループメンバーシップに基づいて多要素認証 (MFA) を有効にするシナリオの説明。
 
     > [!NOTE]
     > Windows Server 2012 R2 の AD FS では、ネットワークの場所、デバイス id、ユーザー id またはグループメンバーシップに基づいて MFA を有効にすることができます。
 
-    このシナリオの構成と確認の詳細な手順については、「[チュートリアルガイド: 追加の Multi-Factor Authentication による機密アプリケーションのリスク管理](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)」を参照してください。
+    このシナリオの構成と確認の詳細な手順については、「 [チュートリアルガイド: 追加の Multi-Factor Authentication による機密アプリケーションのリスク管理](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)」を参照してください。
 
 ## <a name="key-concepts---authentication-mechanisms-in-ad-fs"></a><a name="BKMK_1"></a>主要な概念 – AD FS での認証メカニズム
 
@@ -48,7 +49,7 @@ Windows Server 2012 R2 の Active Directory フェデレーションサービス
     -   シームレスな 2 要素認証に対してデバイス認証を有効にする。 これにより、リソースへのアクセスに使用される登録済みデバイスにユーザー id が関連付けられるため、保護されたリソースにアクセスする前に、より安全な複合 id の検証を行うことができます。
 
         > [!NOTE]
-        > デバイスオブジェクト、デバイス登録サービス、Workplace Join、およびシームレスな2要素認証と SSO としてのデバイスの詳細については、「[任意のデバイスからの職場への参加](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)」を参照してください。
+        > デバイスオブジェクト、デバイス登録サービス、Workplace Join、およびシームレスな2要素認証と SSO としてのデバイスの詳細については、「 [任意のデバイスからの職場への参加](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)」を参照してください。
 
     -   保護されたリソースにアクセスするために使用されるユーザーの id、ネットワークの場所、またはデバイスに基づいて、すべてのエクストラネットアクセスまたは条件付きで MFA 要件を設定します。
 
@@ -91,7 +92,7 @@ Windows Server 2012 R2 の AD FS でプライマリ認証を使用する場合�
 また、シームレスな 2 要素認証に対してデバイス認証を有効にすることもできます。 これにより、リソースへのアクセスに使用される登録済みデバイスにユーザー id が関連付けられるため、保護されたリソースにアクセスする前に、より安全な複合 id の検証を行うことができます。
 
 > [!NOTE]
-> デバイスオブジェクト、デバイス登録サービス、Workplace Join、およびシームレスな2要素認証と SSO としてのデバイスの詳細については、「[任意のデバイスからの職場への参加](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)」を参照してください。
+> デバイスオブジェクト、デバイス登録サービス、Workplace Join、およびシームレスな2要素認証と SSO としてのデバイスの詳細については、「 [任意のデバイスからの職場への参加](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)」を参照してください。
 
 イントラネット リソースに対して Windows 認証方法 (既定のオプション) を指定した場合、Windows 認証をサポートするブラウザーで認証を要求したユーザーはシームレスにこの方法で認証を受けます。
 
@@ -111,7 +112,7 @@ Windows Server 2012 R2 の AD FS で MFA を構成するには、次の2つの�
 
     Windows Server 2012 R2 は、デバイスオブジェクトがと企業間の関係を表す、最新のデバイスへのユーザー中心のアプローチを採用し user@device ています。 デバイスオブジェクトは、Windows Server 2012 R2 の AD の新しいクラスであり、アプリケーションやサービスへのアクセスを提供するときに、複合 id を提供するために使用できます。 AD FS の新しいコンポーネントであるデバイス登録サービス (DRS) は、Active Directory 内のデバイス ID をプロビジョニングし、一般ユーザー向けデバイスのデバイス ID を表すために使用される証明書を設定します。 このデバイス ID を使用してデバイスを職場に参加させることができます。つまり、個人のデバイスを職場の Active Directory に接続できます。 個人用のデバイスを職場に参加させると、それらのデバイスは既知のデバイスになり、保護済みのリソースやアプリケーションでは、シームレスな 2 要素認証を使用できるようになります。 つまり、デバイスが職場に参加した後、ユーザーの id はこのデバイスに関連付けられ、保護されたリソースにアクセスする前に、シームレスな複合 id の検証に使用できます。
 
-    Workplace join と leave の詳細については、「[任意のデバイスからの職場への参加](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)」を参照してください。
+    Workplace join と leave の詳細については、「 [任意のデバイスからの職場への参加](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)」を参照してください。
 
 -   保護済みリソースに対するアクセス要求をエクストラネットまたはイントラネットのいずれかから行うときは、MFA を必須とすることができます。
 
@@ -124,27 +125,27 @@ Windows Server 2012 R2 の AD FS で MFA を構成するには、次の2つの�
 
 AD FS で MFA を有効にするその他のシナリオを次に示します。
 
--   アクセス要求がエクストラネットから送られた場合に MFA を有効にする。 「[チュートリアルガイド: 追加 Multi-Factor Authentication を使用したリスク管理](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)」の「MFA ポリシーの設定」セクションに示されているコードを変更して、次の情報を確認できます。
+-   アクセス要求がエクストラネットから送られた場合に MFA を有効にする。 「 [チュートリアルガイド: 追加 Multi-Factor Authentication を使用したリスク管理](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) 」の「MFA ポリシーの設定」セクションに示されているコードを変更して、次の情報を確認できます。
 
     ```
     'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type="https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );'
     ```
 
--   アクセス要求が職場未参加のデバイスから送られた場合に MFA を有効にする。  「[チュートリアルガイド: 追加 Multi-Factor Authentication を使用したリスク管理](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)」の「MFA ポリシーの設定」セクションに示されているコードを変更して、次の情報を確認できます。
+-   アクセス要求が職場未参加のデバイスから送られた場合に MFA を有効にする。  「 [チュートリアルガイド: 追加 Multi-Factor Authentication を使用したリスク管理](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) 」の「MFA ポリシーの設定」セクションに示されているコードを変更して、次の情報を確認できます。
 
     ```
     'NOT EXISTS([type=="https://schemas.microsoft.com/2012/01/devicecontext/claims/registrationid"]) => issue (type="https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn");'
 
     ```
 
--   ユーザーのデバイスが職場に参加しているがこのユーザーに登録されていない場合、そのユーザーからのアクセスがあるときは、MFA を有効にします。 「[チュートリアルガイド: 追加 Multi-Factor Authentication を使用したリスク管理](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)」の「MFA ポリシーの設定」セクションに示されているコードを変更して、次の情報を確認できます。
+-   ユーザーのデバイスが職場に参加しているがこのユーザーに登録されていない場合、そのユーザーからのアクセスがあるときは、MFA を有効にします。 「 [チュートリアルガイド: 追加 Multi-Factor Authentication を使用したリスク管理](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) 」の「MFA ポリシーの設定」セクションに示されているコードを変更して、次の情報を確認できます。
 
     ```
     'c:[type=="https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser", value == "false"] => issue (type="https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn");'
 
     ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [チュートリアルガイド: 追加の Multi-Factor Authentication による機密アプリケーション](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) 
  のリスク管理[Windows Server 2012 R2 で AD FS 用のラボ環境をセットアップする](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 

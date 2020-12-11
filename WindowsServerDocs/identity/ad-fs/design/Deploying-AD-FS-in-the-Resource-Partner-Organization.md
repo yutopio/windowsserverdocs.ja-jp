@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リソースパートナー組織へのレガシ AD FS のデプロイ」を参照してください。
 ms.assetid: 41d6b897-1e72-4522-aad6-eece1154a154
 title: リソースパートナー組織でのレガシ AD FS の展開
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: a129423c4d646549b0b569fb9920e0b550a1fdbb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ab08b257a9779aacf137f81217034e047d8e4c35
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942896"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044680"
 ---
 # <a name="deploying-legacy-ad-fs-in-the-resource-partner-organization"></a>リソースパートナー組織でのレガシ AD FS の展開
 
@@ -30,5 +31,5 @@ Active Directory フェデレーションサービス (AD FS) AD FS のリソー
 -   [リソース パートナーでのフェデレーション アプリケーション戦略を決定する](Determine-Your-Federated-Application-Strategy-in-the-Resource-Partner.md)
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

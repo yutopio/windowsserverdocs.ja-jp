@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「チェックリスト: アカウントパートナー組織の構成」を参照してください。'
 ms.assetid: 826974ea-3635-40df-aa37-77dd12a363c8
 title: チェックリスト-アカウントパートナー組織の構成
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: e1fc3dea0d25cc428081964372dc2269d78c9d6d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a8b968bfb7f1e051e0cabcadd76b549d8d302482
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938581"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041970"
 ---
 # <a name="checklist-configuring-the-account-partner-organization"></a>チェックリスト: アカウントパートナー組織の構成
 
@@ -19,10 +20,10 @@ ms.locfileid: "87938581"
 
 このチェックリストには \( \) 、アカウントパートナー組織に Active Directory フェデレーションサービス (AD FS) AD FS を展開するためのタスクが含まれています。 また、フェデレーションパートナーシップの半分を確立するために必要なコンポーネントを構成するためのタスクも含まれてい \- ます。
 
-[WEB SSO 設計](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807033(v=ws.11))をデプロイする場合は、このチェックリストに従う必要はありません。 ただし、[フェデレーション WEB SSO 設計](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807050(v=ws.11))を正常に展開するには、このチェックリストのタスクを完了する必要があります。
+[WEB SSO 設計](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807033(v=ws.11))をデプロイする場合は、このチェックリストに従う必要はありません。 ただし、 [フェデレーション WEB SSO 設計](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807050(v=ws.11))を正常に展開するには、このチェックリストのタスクを完了する必要があります。
 
 > [!IMPORTANT]
-> リソースパートナー組織の管理者が、 [「チェックリスト: リソースパートナー組織の構成](Checklist--Configuring-the-Resource-Partner-Organization.md)」のガイダンスに従って、フェデレーションパートナーシップの後半を正常に作成するために必要なすべての展開タスクが完了するようにしてください。
+> リソースパートナー組織の管理者が、 [「チェックリスト: リソースパートナー組織の構成](Checklist--Configuring-the-Resource-Partner-Organization.md) 」のガイダンスに従って、フェデレーションパートナーシップの後半を正常に作成するために必要なすべての展開タスクが完了するようにしてください。
 
 > [!NOTE]
 > このチェックリストのタスクは順番に実行してください。 参照リンクによって手順に移動した場合は、このチェックリストの残りのタスクを進めることができるように、その手順の作業が完了したらこのトピックに戻ります。

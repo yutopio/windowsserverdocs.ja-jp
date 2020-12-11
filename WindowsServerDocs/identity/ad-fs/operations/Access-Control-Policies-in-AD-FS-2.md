@@ -1,16 +1,17 @@
 ---
+description: 詳細については、AD FS 2.0 のクライアント Access Control ポリシーに関するページを参照してください。
 title: Active Directory フェデレーションサービス (AD FS) 2.0 のクライアント Access Control ポリシー
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3cf37c1fad67c652f67f4e862780c740ae5ebe60
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b4402b2e8186f723c2c2a46ad10616f8986e21e5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947296"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044350"
 ---
 # <a name="client-access-control-policies-in-ad-fs-20"></a>AD FS 2.0 のクライアント Access Control ポリシー
 Active Directory フェデレーションサービス (AD FS) 2.0 のクライアントアクセスポリシーでは、リソースへのアクセスを制限または許可することができます。  このドキュメントでは、AD FS 2.0 でクライアントアクセスポリシーを有効にする方法と、最も一般的なシナリオを構成する方法について説明します。
@@ -40,7 +41,7 @@ Active Directory 要求プロバイダー信頼で、新しい要求コンテキ
 4. [規則テンプレートの選択] ページの [要求規則テンプレート] で、[入力方向の要求をパススルーまたはフィルター処理する] を選択し、[次へ] をクリックします。
 5. [規則の構成] ページの [要求規則名] に、この規則の表示名を入力します。[入力方向の要求の種類] で、次の要求の種類の URL を入力し、[すべての要求値をパススルー] を選択します。</br>
         `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`</br>
-6. 規則を確認するには、一覧で規則を選択し、[規則の編集] をクリックして、[規則言語の表示] をクリックします。 要求規則言語は次のようになります。`c:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip"] => issue(claim = c);`
+6. 規則を確認するには、一覧で規則を選択し、[規則の編集] をクリックして、[規則言語の表示] をクリックします。 要求規則言語は次のようになります。 `c:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip"] => issue(claim = c);`
 7. [完了] をクリックします。
 8. [要求規則の編集] ダイアログボックスで、[OK] をクリックして規則を保存します。
 9. 手順 2. ~ 6. を繰り返して、5つのすべてのルールが作成されるまで、下に示す4つの要求の種類ごとに追加の要求規則を作成します。
@@ -75,7 +76,7 @@ Active Directory 要求プロバイダー信頼で、新しい要求コンテキ
 2. コンソールツリーの [AD FS 2.0 \ 信頼関係] で、[証明書利用者信頼] をクリックし、Microsoft Office 365 Id プラットフォーム信頼を右クリックして、[要求規則の編集] をクリックします。
 3. [要求規則の編集] ダイアログボックスで、[発行承認規則] タブを選択し、[規則の追加] をクリックして、要求規則ウィザードを開始します。
 4. [規則テンプレートの選択] ページの [要求規則テンプレート] で、[カスタム規則を使用して要求を送信する] を選択し、[次へ] をクリックします。
-5. [規則の構成] ページの [要求規則名] に、この規則の表示名を入力します。 [カスタム規則] で、次の要求規則言語構文を入力するか貼り付けます。`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. [規則の構成] ページの [要求規則名] に、この規則の表示名を入力します。 [カスタム規則] で、次の要求規則言語構文を入力するか貼り付けます。 `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"])
     => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "true");`
@@ -98,7 +99,7 @@ Active Directory 要求プロバイダー信頼で、新しい要求コンテキ
 2. コンソールツリーの [AD FS 2.0 \ 信頼関係] で、[証明書利用者信頼] をクリックし、Microsoft Office 365 Id プラットフォーム信頼を右クリックして、[要求規則の編集] をクリックします。
 3. [要求規則の編集] ダイアログボックスで、[発行承認規則] タブを選択し、[規則の追加] をクリックして、要求規則ウィザードを開始します。
 4. [規則テンプレートの選択] ページの [要求規則テンプレート] で、[カスタム規則を使用して要求を送信する] を選択し、[次へ] をクリックします。
-5. [規則の構成] ページの [要求規則名] に、この規則の表示名を入力します。 [カスタム規則] で、次の要求規則言語構文を入力するか貼り付けます。`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. [規則の構成] ページの [要求規則名] に、この規則の表示名を入力します。 [カスタム規則] で、次の要求規則言語構文を入力するか貼り付けます。 `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application",
     Value=="Microsoft.Exchange.Autodiscover"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application",
@@ -127,7 +128,7 @@ Active Directory 要求プロバイダー信頼で、新しい要求コンテキ
 2. コンソールツリーの [AD FS 2.0 \ 信頼関係] で、[証明書利用者信頼] をクリックし、Microsoft Office 365 Id プラットフォーム信頼を右クリックして、[要求規則の編集] をクリックします。
 3. [要求規則の編集] ダイアログボックスで、[発行承認規則] タブを選択し、[規則の追加] をクリックして、要求規則ウィザードを開始します。
 4. [規則テンプレートの選択] ページの [要求規則テンプレート] で、[カスタム規則を使用して要求を送信する] を選択し、[次へ] をクリックします。
-5. [規則の構成] ページの [要求規則名] に、この規則の表示名を入力します。 [カスタム規則] で、次の要求規則言語構文を入力するか貼り付けます。`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. [規則の構成] ページの [要求規則名] に、この規則の表示名を入力します。 [カスタム規則] で、次の要求規則言語構文を入力するか貼り付けます。 `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value == "/adfs/ls/"])
@@ -147,7 +148,7 @@ Active Directory 要求プロバイダー信頼で、新しい要求コンテキ
 2. コンソールツリーの [AD FS 2.0 \ 信頼関係] で、[証明書利用者信頼] をクリックし、Microsoft Office 365 Id プラットフォーム信頼を右クリックして、[要求規則の編集] をクリックします。
 3. [要求規則の編集] ダイアログボックスで、[発行承認規則] タブを選択し、[規則の追加] をクリックして、要求規則ウィザードを開始します。
 4. [規則テンプレートの選択] ページの [要求規則テンプレート] で、[カスタム規則を使用して要求を送信する] を選択し、[次へ] をクリックします。
-5. [規則の構成] ページの [要求規則名] に、この規則の表示名を入力します。 [カスタム規則] で、次の要求規則言語構文を入力するか貼り付けます。`exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
+5. [規則の構成] ページの [要求規則名] に、この規則の表示名を入力します。 [カスタム規則] で、次の要求規則言語構文を入力するか貼り付けます。 `exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy"]) &&
     exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "Group SID value of allowed AD group"]) &&
     NOT exists([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip",
     Value=~"customer-provided public ip address regex"])
