@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: TPM キーの構成証明'
 ms.assetid: 16a344a9-f9a6-4ae2-9bea-c79a0075fd04
 title: TPM キーの構成証明
 author: iainfoulds
@@ -6,18 +7,18 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 18bf859e6e02d3c01fead9291d31c8dac3f002f1
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 7b8e311d395b31361b0ee705bf7bddf272011087
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070634"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048750"
 ---
 # <a name="tpm-key-attestation"></a>TPM キーの構成証明
 
 >適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 
-**Author** : Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
+**Author**: Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
 
 > [!NOTE]
 > この内容は Microsoft カスタマー サポート エンジニアによって作成され、TechNet が通常提供しているトピックよりも詳細な Windows Server 2012 R2 の機能やソリューションの技術的説明を求めている、経験豊かな管理者とシステム設計者を対象としています。 ただし、TechNet と同様の編集過程は実施されていないため、言語によっては通常より洗練されていない文章が見られる場合があります。
@@ -51,7 +52,7 @@ TPM キーの構成証明とは、証明書の要求に含まれる RSA キー�
 ### <a name="why-is-tpm-key-attestation-important"></a>TPM キーの構成証明が重要なのはなぜですか。
 TPM 証明キーを使用するユーザー証明書は、エクスポート、ハンマリング、TPM によって提供されるキーの分離によってバックアップされた、高いセキュリティ保証を提供します。
 
-TPM キーの構成証明を使用すると、新しい管理パラダイムが可能になりました。管理者は、ユーザーが企業リソース (VPN やワイヤレスアクセスポイントなど) にアクセスするために使用できるデバイスのセットを定義し、他のデバイスがそれらにアクセスすることができないようにする **ことができ** ます。 この新しいアクセス制御パラダイムは、ソフトウェアベースの資格情報よりも強力な *ハードウェアバインド* ユーザー id に関連付けられているため、 **強力** です。
+TPM キーの構成証明を使用すると、新しい管理パラダイムが可能になりました。管理者は、ユーザーが企業リソース (VPN やワイヤレスアクセスポイントなど) にアクセスするために使用できるデバイスのセットを定義し、他のデバイスがそれらにアクセスすることができないようにする **ことができ** ます。 この新しいアクセス制御パラダイムは、ソフトウェアベースの資格情報よりも強力な *ハードウェアバインド* ユーザー id に関連付けられているため、**強力** です。
 
 ### <a name="how-does-tpm-key-attestation-work"></a>TPM キーの構成証明はどのように機能しますか。
 一般に、TPM キーの構成証明は、次の柱に基づいています。
@@ -115,11 +116,11 @@ TPM キーの構成証明用の証明書テンプレートを構成するには�
 
 2.  **[暗号化]** タブ
 
-    [ **プロバイダー] カテゴリ** に [ **キー記憶域プロバイダー** ] が選択されていることと、 **アルゴリズム名** に **RSA** が選択されていることを確認します。 [ **プロバイダー** ] で [ **次のプロバイダーのいずれかを使用する必要があり****ます] が** 選択されていることを確認します。
+    [**プロバイダー] カテゴリ** に [**キー記憶域プロバイダー** ] が選択されていることと、**アルゴリズム名** に **RSA** が選択されていることを確認します。 [**プロバイダー**] で [**次のプロバイダーのいずれかを使用する必要があり****ます] が** 選択されていることを確認します。
 
     ![TPM キーの構成証明](media/TPM-Key-Attestation/GTR_ADDS_CryptoTab.gif)
 
-3.  [ **キーの構成証明** ] タブ
+3.  [**キーの構成証明**] タブ
 
     これは、Windows Server 2012 R2 の新しいタブです。
 
@@ -222,17 +223,17 @@ TPM キーの構成証明用の証明書テンプレートを構成するには�
 
 1.  互換性設定が正しく構成されていません。 次のように構成されていることを確認します。
 
-    1.  **証明機関** : **Windows Server 2012 R2**
+    1.  **証明機関**: **Windows Server 2012 R2**
 
-    2.  **証明書の受信者** : **Windows 8.1/Windows Server 2012 R2**
+    2.  **証明書の受信者**: **Windows 8.1/Windows Server 2012 R2**
 
 2.  暗号化の設定が正しく構成されていません。 次のように構成されていることを確認します。
 
-    1.  **プロバイダーカテゴリ** : **キー記憶域プロバイダー**
+    1.  **プロバイダーカテゴリ**: **キー記憶域プロバイダー**
 
-    2.  **アルゴリズム名** : **RSA**
+    2.  **アルゴリズム名**: **RSA**
 
-    3.  **プロバイダー** : **Microsoft プラットフォーム暗号化プロバイダー**
+    3.  **プロバイダー**: **Microsoft プラットフォーム暗号化プロバイダー**
 
 3.  要求処理の設定が正しく構成されていません。 次のように構成されていることを確認します。
 
@@ -272,6 +273,6 @@ Windows PowerShell コマンドレット **CAEndorsementKeyInfo** を使用し�
         PS C:>new-object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\diagnose\myEKcert.cer" | Confirm-CAEndorsementKeyInfo
         ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [トラステッドプラットフォームモジュールテクノロジの概要](/previous-versions/windows/it-pro/windows-8.1-and-8/jj131725(v=ws.11)) 
 [外部リソース: トラステッドプラットフォームモジュール](http://www.cs.unh.edu/~it666/reading_list/Hardware/tpm_fundamentals.pdf)

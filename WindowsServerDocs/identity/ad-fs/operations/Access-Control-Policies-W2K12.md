@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Windows Server 2012 R2 および Windows Server 2012 の Access Control ポリシー AD FS」を参照してください。
 ms.assetid: 5728847d-dcef-4694-9080-d63bfb1fe24b
 title: Windows Server 2012 R2 の AD FS の Access Control ポリシー
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 06/05/2018
 ms.topic: article
-ms.openlocfilehash: b09c9da43d25d7921f7687475c154540ec9d2907
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: da683cec35c7cf43f5fbf5b29ed7441fadf0b218
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947321"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048670"
 ---
 # <a name="access-control-policies-in-windows-server-2012-r2-and-windows-server-2012-ad-fs"></a>Windows Server 2012 R2 および Windows Server 2012 の Access Control ポリシー AD FS
 
@@ -61,78 +62,78 @@ Windows 10 のドメイン参加とサインオンに必要な AD FS エンド�
 |シナリオ 4: 指定された Active Directory グループを除く Office 365 への外部アクセスをすべてブロックする|このシナリオは、クライアントアクセスポリシーの展開をテストおよび検証するために使用されます。 1つ以上の Active Directory グループのメンバーに対してのみ、Office 365 への外部アクセスをブロックします。 また、グループのメンバーに対してのみ外部アクセスを提供するためにも使用できます。|
 
 ## <a name="enabling-client-access-policy"></a>クライアントアクセスポリシーを有効にする
- Windows Server 2012 R2 の AD FS でクライアントアクセスポリシーを有効にするには、Microsoft Office 365 Id プラットフォーム証明書利用者信頼を更新する必要があります。 次のシナリオ例のいずれかを選択して、組織のニーズに最も合った**Microsoft Office 365 Id プラットフォーム**証明書利用者信頼の要求規則を構成します。
+ Windows Server 2012 R2 の AD FS でクライアントアクセスポリシーを有効にするには、Microsoft Office 365 Id プラットフォーム証明書利用者信頼を更新する必要があります。 次のシナリオ例のいずれかを選択して、組織のニーズに最も合った **Microsoft Office 365 Id プラットフォーム** 証明書利用者信頼の要求規則を構成します。
 
-###  <a name="scenario-1-block-all-external-access-to-office-365"></a><a name="scenario1"></a>シナリオ 1: Office 365 への外部アクセスをすべてブロックする
+###  <a name="scenario-1-block-all-external-access-to-office-365"></a><a name="scenario1"></a> シナリオ 1: Office 365 への外部アクセスをすべてブロックする
  このクライアントアクセスポリシーのシナリオでは、すべての内部クライアントからのアクセスを許可し、外部クライアントの IP アドレスに基づいてすべての外部クライアントをブロックします。 次の手順を使用して、適切な発行承認規則を、選択したシナリオの Office 365 証明書利用者信頼に追加できます。
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365"></a>Office 365 への外部アクセスをすべてブロックするルールを作成するには
 
-1.  **サーバーマネージャー**で、[**ツール**] をクリックし、[ **AD FS の管理**] をクリックします。
+1.  **サーバーマネージャー** で、[**ツール**] をクリックし、[ **AD FS の管理**] をクリックします。
 
-2.  コンソールツリーの [ **AD Fs\ 信頼関係**] で、[**証明書利用者信頼**] をクリックし、 **Microsoft Office 365 id プラットフォーム**信頼を右クリックして、[**要求規則の編集**] をクリックします。
+2.  コンソールツリーの [ **AD Fs\ 信頼関係**] で、[ **証明書利用者信頼**] をクリックし、 **Microsoft Office 365 id プラットフォーム** 信頼を右クリックして、[ **要求規則の編集**] をクリックします。
 
-3.  [**要求規則の編集**] ダイアログボックスで、[**発行承認規則**] タブを選択し、[**規則の追加**] をクリックして、要求規則ウィザードを開始します。
+3.  [ **要求規則の編集** ] ダイアログボックスで、[ **発行承認規則** ] タブを選択し、[ **規則の追加** ] をクリックして、要求規則ウィザードを開始します。
 
-4.  [**規則テンプレートの選択**] ページの [**要求規則テンプレート**] で、[**カスタム規則を使用して要求を送信**する] を選択し、[**次へ**] をクリックします。
+4.  [ **規則テンプレートの選択** ] ページの [ **要求規則テンプレート**] で、[ **カスタム規則を使用して要求を送信** する] を選択し、[ **次へ**] をクリックします。
 
-5.  [**規則の構成**] ページの [**要求規則名**] の下に、この規則の表示名を入力します。たとえば、"目的の範囲外の IP 要求がある場合は拒否する" などです。 [**カスタムルール**] で、次の要求規則言語構文を入力するか貼り付けます ("x-y-forward-client-ip" の上の値を有効な ip 式に置き換えます)。`c1:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");` </br>
-6.  **[完了]** をクリックします。 [発行承認規則] の一覧に新しい規則が表示されていることを確認してから、[**すべてのユーザーへのアクセスを許可**する] 規則に追加します (拒否規則は、一覧の前に表示されている場合でも優先されます)。  既定の許可アクセス規則がない場合は、次のように要求規則言語を使用して、リストの末尾に1つを追加できます。  </br>
+5.  [ **規則の構成** ] ページの [ **要求規則名**] の下に、この規則の表示名を入力します。たとえば、"目的の範囲外の IP 要求がある場合は拒否する" などです。 [ **カスタムルール**] で、次の要求規則言語構文を入力するか貼り付けます ("x-y-forward-client-ip" の上の値を有効な ip 式に置き換えます)。 `c1:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");` </br>
+6.  **[完了]** をクリックします。 [発行承認規則] の一覧に新しい規則が表示されていることを確認してから、[ **すべてのユーザーへのアクセスを許可** する] 規則に追加します (拒否規則は、一覧の前に表示されている場合でも優先されます)。  既定の許可アクセス規則がない場合は、次のように要求規則言語を使用して、リストの末尾に1つを追加できます。  </br>
 
     `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true"); `
 
-7.  新しいルールを保存するには、[**要求規則の編集**] ダイアログボックスで [ **OK]** をクリックします。 結果の一覧は次のようになります。
+7.  新しいルールを保存するには、[ **要求規則の編集** ] ダイアログボックスで [ **OK]** をクリックします。 結果の一覧は次のようになります。
 
      ![発行認証ルール](media/Access-Control-Policies-W2K12/clientaccess1.png "ADFS_Client_Access_1")
 
-###  <a name="scenario-2-block-all-external-access-to-office-365-except-exchange-activesync"></a><a name="scenario2"></a>シナリオ 2: Exchange ActiveSync 以外の Office 365 への外部アクセスをすべてブロックする
+###  <a name="scenario-2-block-all-external-access-to-office-365-except-exchange-activesync"></a><a name="scenario2"></a> シナリオ 2: Exchange ActiveSync 以外の Office 365 への外部アクセスをすべてブロックする
  次の例では、Outlook を含む社内クライアントから、Exchange Online を含むすべての Office 365 アプリケーションにアクセスできるようにします。 クライアントの IP アドレスで示されているように、企業ネットワークの外部に存在するクライアントからのアクセスをブロックします。ただし、スマートフォンなどの Exchange ActiveSync クライアントは除きます。
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365-except-exchange-activesync"></a>Exchange ActiveSync 以外の Office 365 への外部アクセスをすべてブロックするルールを作成するには
 
-1.  **サーバーマネージャー**で、[**ツール**] をクリックし、[ **AD FS の管理**] をクリックします。
+1.  **サーバーマネージャー** で、[**ツール**] をクリックし、[ **AD FS の管理**] をクリックします。
 
-2.  コンソールツリーの [ **AD Fs\ 信頼関係**] で、[**証明書利用者信頼**] をクリックし、 **Microsoft Office 365 id プラットフォーム**信頼を右クリックして、[**要求規則の編集**] をクリックします。
+2.  コンソールツリーの [ **AD Fs\ 信頼関係**] で、[ **証明書利用者信頼**] をクリックし、 **Microsoft Office 365 id プラットフォーム** 信頼を右クリックして、[ **要求規則の編集**] をクリックします。
 
-3.  [**要求規則の編集**] ダイアログボックスで、[**発行承認規則**] タブを選択し、[**規則の追加**] をクリックして、要求規則ウィザードを開始します。
+3.  [ **要求規則の編集** ] ダイアログボックスで、[ **発行承認規則** ] タブを選択し、[ **規則の追加** ] をクリックして、要求規則ウィザードを開始します。
 
-4.  [**規則テンプレートの選択**] ページの [**要求規則テンプレート**] で、[**カスタム規則を使用して要求を送信**する] を選択し、[**次へ**] をクリックします。
+4.  [ **規則テンプレートの選択** ] ページの [ **要求規則テンプレート**] で、[ **カスタム規則を使用して要求を送信** する] を選択し、[ **次へ**] をクリックします。
 
-5.  [**規則の構成**] ページの [**要求規則名**] に、この規則の表示名を入力します。たとえば、"目的の範囲外の IP 要求がある場合は、ipoutsiderange 要求を発行します" と表示されます。 [**カスタムルール**] で、次の要求規則言語構文を入力するか貼り付けます ("x-y-forward-client-ip" の上の値を有効な ip 式に置き換えます)。
+5.  [ **規則の構成** ] ページの [ **要求規則名**] に、この規則の表示名を入力します。たとえば、"目的の範囲外の IP 要求がある場合は、ipoutsiderange 要求を発行します" と表示されます。 [ **カスタムルール**] で、次の要求規則言語構文を入力するか貼り付けます ("x-y-forward-client-ip" の上の値を有効な ip 式に置き換えます)。
 
     `c1:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`
 
-6.  **[完了]** をクリックします。 [**発行承認規則**] の一覧に新しい規則が表示されていることを確認します。
+6.  **[完了]** をクリックします。 [ **発行承認規則** ] の一覧に新しい規則が表示されていることを確認します。
 
-7.  次に、[**要求規則の編集**] ダイアログボックスの [**発行承認規則**] タブで、[**規則の追加**] をクリックして、要求規則ウィザードを再び開始します。
+7.  次に、[ **要求規則の編集** ] ダイアログボックスの [ **発行承認規則** ] タブで、[ **規則の追加** ] をクリックして、要求規則ウィザードを再び開始します。
 
-8.  [**規則テンプレートの選択**] ページの [**要求規則テンプレート**] で、[**カスタム規則を使用して要求を送信**する] を選択し、[**次へ**] をクリックします。
+8.  [ **規則テンプレートの選択** ] ページの [ **要求規則テンプレート**] で、[ **カスタム規則を使用して要求を送信** する] を選択し、[ **次へ**] をクリックします。
 
-9. [**規則の構成**] ページの [**要求規則名**] の下に、この規則の表示名を入力します。たとえば、"目的の範囲外の IP があり、非 EAS-Ms-chap 要求がある場合、拒否" と表示されます。 [**カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます。
+9. [ **規則の構成** ] ページの [ **要求規則名**] の下に、この規則の表示名を入力します。たとえば、"目的の範囲外の IP があり、非 EAS-Ms-chap 要求がある場合、拒否" と表示されます。 [ **カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます。
 
     ```
     c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application", Value != "Microsoft.Exchange.ActiveSync"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");
     ```
 
-10. **[完了]** をクリックします。 [**発行承認規則**] の一覧に新しい規則が表示されていることを確認します。
+10. **[完了]** をクリックします。 [ **発行承認規則** ] の一覧に新しい規則が表示されていることを確認します。
 
-11. 次に、[**要求規則の編集**] ダイアログボックスの [**発行承認規則**] タブで、[**規則の追加**] をクリックして、要求規則ウィザードを再び開始します。
+11. 次に、[ **要求規則の編集** ] ダイアログボックスの [ **発行承認規則** ] タブで、[ **規則の追加** ] をクリックして、要求規則ウィザードを再び開始します。
 
-12. [**規則テンプレートの選択**] ページの [**要求規則テンプレート**] で、[**カスタム規則を使用して要求を送信**する] を選択し、[**次へ**] をクリックします。
+12. [ **規則テンプレートの選択** ] ページの [ **要求規則テンプレート** ] で、[ **カスタム規則を使用して要求を送信** する] を選択し、[ **次へ**] をクリックします。
 
-13. [**規則の構成**] ページの [**要求規則名**] に、この規則の表示名を入力します。たとえば、"アプリケーション要求が存在するかどうかを確認する" などです。 [**カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます。
+13. [ **規則の構成** ] ページの [ **要求規則名**] に、この規則の表示名を入力します。たとえば、"アプリケーション要求が存在するかどうかを確認する" などです。 [ **カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます。
 
     ```
     NOT EXISTS([Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application"]) => add(Type = "http://custom/xmsapplication", Value = "fail");
     ```
 
-14. **[完了]** をクリックします。 [**発行承認規則**] の一覧に新しい規則が表示されていることを確認します。
+14. **[完了]** をクリックします。 [ **発行承認規則** ] の一覧に新しい規則が表示されていることを確認します。
 
-15. 次に、[**要求規則の編集**] ダイアログボックスの [**発行承認規則**] タブで、[**規則の追加**] をクリックして、要求規則ウィザードを再び開始します。
+15. 次に、[ **要求規則の編集** ] ダイアログボックスの [ **発行承認規則** ] タブで、[ **規則の追加** ] をクリックして、要求規則ウィザードを再び開始します。
 
-16. [**規則テンプレートの選択**] ページの [**要求規則テンプレート**] で、[**カスタム規則を使用して要求を送信**する] を選択し、[**次へ**] をクリックします。
+16. [ **規則テンプレートの選択** ] ページの [ **要求規則テンプレート** ] で、[ **カスタム規則を使用して要求を送信** する] を選択し、[ **次へ**] をクリックします。
 
-17. [**規則の構成**] ページの [**要求規則名**] に、この規則の表示名を入力します。たとえば、"deny users with ipoutsiderange true and application fail" などです。 [**カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます。
+17. [ **規則の構成** ] ページの [ **要求規則名**] に、この規則の表示名を入力します。たとえば、"deny users with ipoutsiderange true and application fail" などです。 [ **カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます。
 
     ```
     c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://custom/xmsapplication", Value == "fail"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");
@@ -144,86 +145,86 @@ Windows 10 のドメイン参加とサインオンに必要な AD FS エンド�
         c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");
         ```
 
-1.  新しいルールを保存するには、[**要求規則の編集**] ダイアログボックスで [OK] をクリックします。 結果の一覧は次のようになります。
+1.  新しいルールを保存するには、[ **要求規則の編集** ] ダイアログボックスで [OK] をクリックします。 結果の一覧は次のようになります。
 
     ![発行承認ルール](media/Access-Control-Policies-W2K12/clientaccess2.png )
 
-###  <a name="scenario-3-block-all-external-access-to-office-365-except-browser-based-applications"></a><a name="scenario3"></a>シナリオ 3: ブラウザーベースのアプリケーションを除く Office 365 への外部アクセスをすべてブロックする
+###  <a name="scenario-3-block-all-external-access-to-office-365-except-browser-based-applications"></a><a name="scenario3"></a> シナリオ 3: ブラウザーベースのアプリケーションを除く Office 365 への外部アクセスをすべてブロックする
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365-except-browser-based-applications"></a>ブラウザーベースのアプリケーションを除く Office 365 への外部アクセスをすべてブロックするルールを作成するには
 
-1.  **サーバーマネージャー**で、[**ツール**] をクリックし、[ **AD FS の管理**] をクリックします。
+1.  **サーバーマネージャー** で、[**ツール**] をクリックし、[ **AD FS の管理**] をクリックします。
 
-2.  コンソールツリーの [ **AD Fs\ 信頼関係**] で、[**証明書利用者信頼**] をクリックし、 **Microsoft Office 365 id プラットフォーム**信頼を右クリックして、[**要求規則の編集**] をクリックします。
+2.  コンソールツリーの [ **AD Fs\ 信頼関係**] で、[ **証明書利用者信頼**] をクリックし、 **Microsoft Office 365 id プラットフォーム** 信頼を右クリックして、[ **要求規則の編集**] をクリックします。
 
-3.  [**要求規則の編集**] ダイアログボックスで、[**発行承認規則**] タブを選択し、[**規則の追加**] をクリックして、要求規則ウィザードを開始します。
+3.  [ **要求規則の編集** ] ダイアログボックスで、[ **発行承認規則** ] タブを選択し、[ **規則の追加** ] をクリックして、要求規則ウィザードを開始します。
 
-4.  [**規則テンプレートの選択**] ページの [**要求規則テンプレート**] で、[**カスタム規則を使用して要求を送信**する] を選択し、[**次へ**] をクリックします。
+4.  [ **規則テンプレートの選択** ] ページの [ **要求規則テンプレート**] で、[ **カスタム規則を使用して要求を送信** する] を選択し、[ **次へ**] をクリックします。
 
-5.  [**規則の構成**] ページの [**要求規則名**] に、この規則の表示名を入力します。たとえば、"目的の範囲外の IP 要求がある場合は、ipoutsiderange 要求を発行します" と表示されます。 [**カスタムルール**] で、次の要求規則言語構文を入力するか貼り付けます ("x-y-forward-client-ip" の上の値を有効な ip 式に置き換えます)。
+5.  [ **規則の構成** ] ページの [ **要求規則名**] に、この規則の表示名を入力します。たとえば、"目的の範囲外の IP 要求がある場合は、ipoutsiderange 要求を発行します" と表示されます。 [ **カスタムルール**] で、次の要求規則言語構文を入力するか貼り付けます ("x-y-forward-client-ip" の上の値を有効な ip 式に置き換えます)。
 
    ```
    c1:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");
    ```
 
-1.  **[完了]** をクリックします。 [**発行承認規則**] の一覧に新しい規則が表示されていることを確認します。
+1.  **[完了]** をクリックします。 [ **発行承認規則** ] の一覧に新しい規則が表示されていることを確認します。
 
-2.  次に、[**要求規則の編集**] ダイアログボックスの [**発行承認規則**] タブで、[**規則の追加**] をクリックして、要求規則ウィザードを再び開始します。
+2.  次に、[ **要求規則の編集** ] ダイアログボックスの [ **発行承認規則** ] タブで、[ **規則の追加** ] をクリックして、要求規則ウィザードを再び開始します。
 
-3.  [**規則テンプレートの選択**] ページの [**要求規則テンプレート**] で、[**カスタム規則を使用して要求を送信**する] を選択し、[**次へ**] をクリックします。
+3.  [ **規則テンプレートの選択** ] ページの [ **要求規則テンプレート** ] で、[ **カスタム規則を使用して要求を送信** する] を選択し、[ **次へ**] をクリックします。
 
-4. [**規則の構成**] ページの [**要求規則名**] の下に、この規則の表示名を入力します。たとえば、"目的の範囲外の IP があり、エンドポイントが/Adfs/ls ではない場合、拒否します。" と表示されます。 [**カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます。
+4. [ **規則の構成** ] ページの [ **要求規則名**] の下に、この規則の表示名を入力します。たとえば、"目的の範囲外の IP があり、エンドポイントが/Adfs/ls ではない場合、拒否します。" と表示されます。 [ **カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます。
 
     ```
     c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path", Value != "/adfs/ls/"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");`
     ```
 
-10. **[完了]** をクリックします。 [発行承認規則] の一覧に新しい規則が表示されていることを確認してから、[**すべてのユーザーへのアクセスを許可**する] 規則に追加します (拒否規則は、一覧の前に表示されている場合でも優先されます)。  </br></br> 既定の許可アクセス規則がない場合は、次のように要求規則言語を使用して、リストの末尾に1つを追加できます。
+10. **[完了]** をクリックします。 [発行承認規則] の一覧に新しい規則が表示されていることを確認してから、[ **すべてのユーザーへのアクセスを許可** する] 規則に追加します (拒否規則は、一覧の前に表示されている場合でも優先されます)。  </br></br> 既定の許可アクセス規則がない場合は、次のように要求規則言語を使用して、リストの末尾に1つを追加できます。
 
    `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");`
 
-11. 新しいルールを保存するには、[**要求規則の編集**] ダイアログボックスで [ **OK]** をクリックします。 結果の一覧は次のようになります。
+11. 新しいルールを保存するには、[ **要求規則の編集** ] ダイアログボックスで [ **OK]** をクリックします。 結果の一覧は次のようになります。
 
     ![発行](media/Access-Control-Policies-W2K12/clientaccess3.png)
 
-###  <a name="scenario-4-block-all-external-access-to-office-365-except-for-designated-active-directory-groups"></a><a name="scenario4"></a>シナリオ 4: 指定された Active Directory グループを除く Office 365 への外部アクセスをすべてブロックする
- 次の例では、IP アドレスに基づいて内部クライアントからのアクセスを有効にします。 これは、指定された Active Directory グループ内の個人を除き、外部クライアント IP アドレスを持つ企業ネットワークの外部にあるクライアントからのアクセスをブロックします。要求規則ウィザードを使用して、 **Microsoft Office 365 Id プラットフォーム**証明書利用者信頼に正しい発行承認規則を追加するには、次の手順を実行します。
+###  <a name="scenario-4-block-all-external-access-to-office-365-except-for-designated-active-directory-groups"></a><a name="scenario4"></a> シナリオ 4: 指定された Active Directory グループを除く Office 365 への外部アクセスをすべてブロックする
+ 次の例では、IP アドレスに基づいて内部クライアントからのアクセスを有効にします。 これは、指定された Active Directory グループ内の個人を除き、外部クライアント IP アドレスを持つ企業ネットワークの外部にあるクライアントからのアクセスをブロックします。要求規則ウィザードを使用して、 **Microsoft Office 365 Id プラットフォーム** 証明書利用者信頼に正しい発行承認規則を追加するには、次の手順を実行します。
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365-except-for-designated-active-directory-groups"></a>指定された Active Directory グループを除き、Office 365 への外部アクセスをすべてブロックするルールを作成するには
 
-1.  **サーバーマネージャー**で、[**ツール**] をクリックし、[ **AD FS の管理**] をクリックします。
+1.  **サーバーマネージャー** で、[**ツール**] をクリックし、[ **AD FS の管理**] をクリックします。
 
-2.  コンソールツリーの [ **AD Fs\ 信頼関係**] で、[**証明書利用者信頼**] をクリックし、 **Microsoft Office 365 id プラットフォーム**信頼を右クリックして、[**要求規則の編集**] をクリックします。
+2.  コンソールツリーの [ **AD Fs\ 信頼関係**] で、[ **証明書利用者信頼**] をクリックし、 **Microsoft Office 365 id プラットフォーム** 信頼を右クリックして、[ **要求規則の編集**] をクリックします。
 
-3.  [**要求規則の編集**] ダイアログボックスで、[**発行承認規則**] タブを選択し、[**規則の追加**] をクリックして、要求規則ウィザードを開始します。
+3.  [ **要求規則の編集** ] ダイアログボックスで、[ **発行承認規則** ] タブを選択し、[ **規則の追加** ] をクリックして、要求規則ウィザードを開始します。
 
-4.  [**規則テンプレートの選択**] ページの [**要求規則テンプレート**] で、[**カスタム規則を使用して要求を送信**する] を選択し、[**次へ**] をクリックします。
+4.  [ **規則テンプレートの選択** ] ページの [ **要求規則テンプレート**] で、[ **カスタム規則を使用して要求を送信** する] を選択し、[ **次へ**] をクリックします。
 
-5.  [**規則の構成**] ページの [**要求規則名**] に、この規則の表示名を入力します。たとえば、「必要な範囲外の IP 要求がある場合は、ipoutsiderange 要求を発行します」と入力します。 [**カスタムルール**] で、次の要求規則言語構文を入力するか貼り付けます ("x-y-forward-client-ip" の上の値を有効な ip 式に置き換えます)。
+5.  [ **規則の構成** ] ページの [ **要求規則名**] に、この規則の表示名を入力します。たとえば、「必要な範囲外の IP 要求がある場合は、ipoutsiderange 要求を発行します」と入力します。 [ **カスタムルール**] で、次の要求規則言語構文を入力するか貼り付けます ("x-y-forward-client-ip" の上の値を有効な ip 式に置き換えます)。
 
     ```
     `c1:[Type == "https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] && c2:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`
     ```
 
-6. **[完了]** をクリックします。 [**発行承認規則**] の一覧に新しい規則が表示されていることを確認します。
+6. **[完了]** をクリックします。 [ **発行承認規則** ] の一覧に新しい規則が表示されていることを確認します。
 
-7. 次に、[**要求規則の編集**] ダイアログボックスの [**発行承認規則**] タブで、[**規則の追加**] をクリックして、要求規則ウィザードを再び開始します。
+7. 次に、[ **要求規則の編集** ] ダイアログボックスの [ **発行承認規則** ] タブで、[ **規則の追加** ] をクリックして、要求規則ウィザードを再び開始します。
 
-8. [**規則テンプレートの選択**] ページの [**要求規則テンプレート**] で、[**カスタム規則を使用して要求を送信**する] を選択し、[**次へ**] をクリックします。
+8. [ **規則テンプレートの選択** ] ページの [ **要求規則テンプレート** ] で、[ **カスタム規則を使用して要求を送信** する] を選択し、[ **次へ**] をクリックします。
 
-9. [**規則の構成**] ページの [**要求規則名**] に、この規則の表示名を入力します。たとえば、"check group SID" のように指定します。 [**カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます ("groupsid" は、使用している AD グループの実際の sid に置き換えます)。
+9. [ **規則の構成** ] ページの [ **要求規則名**] に、この規則の表示名を入力します。たとえば、"check group SID" のように指定します。 [ **カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます ("groupsid" は、使用している AD グループの実際の sid に置き換えます)。
 
     ```
     NOT EXISTS([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-100"]) => add(Type = "http://custom/groupsid", Value = "fail");
     ```
 
-10. **[完了]** をクリックします。 [**発行承認規則**] の一覧に新しい規則が表示されていることを確認します。
+10. **[完了]** をクリックします。 [ **発行承認規則** ] の一覧に新しい規則が表示されていることを確認します。
 
-11. 次に、[**要求規則の編集**] ダイアログボックスの [**発行承認規則**] タブで、[**規則の追加**] をクリックして、要求規則ウィザードを再び開始します。
+11. 次に、[ **要求規則の編集** ] ダイアログボックスの [ **発行承認規則** ] タブで、[ **規則の追加** ] をクリックして、要求規則ウィザードを再び開始します。
 
-12. [**規則テンプレートの選択**] ページの [**要求規則テンプレート**] で、[**カスタム規則を使用して要求を送信**する] を選択し、[**次へ**] をクリックします。
+12. [ **規則テンプレートの選択** ] ページの [ **要求規則テンプレート** ] で、[ **カスタム規則を使用して要求を送信** する] を選択し、[ **次へ**] をクリックします。
 
-13. [**規則の構成**] ページの [**要求規則名**] に、この規則の表示名を入力します。たとえば、"deny users with ipoutsiderange true and groupsid fail" のように指定します。 [**カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます。
+13. [ **規則の構成** ] ページの [ **要求規則名**] に、この規則の表示名を入力します。たとえば、"deny users with ipoutsiderange true and groupsid fail" のように指定します。 [ **カスタム規則**] で、次の要求規則言語構文を入力するか貼り付けます。
 
    ```
    c1:[Type == "http://custom/ipoutsiderange", Value == "true"] && c2:[Type == "http://custom/groupsid", Value == "fail"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");
@@ -235,11 +236,11 @@ Windows 10 のドメイン参加とサインオンに必要な AD FS エンド�
    c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");
    ```
 
-15. 新しいルールを保存するには、[**要求規則の編集**] ダイアログボックスで [OK] をクリックします。 結果の一覧は次のようになります。
+15. 新しいルールを保存するには、[ **要求規則の編集** ] ダイアログボックスで [OK] をクリックします。 結果の一覧は次のようになります。
 
      ![発行](media/Access-Control-Policies-W2K12/clientaccess4.png)
 
-##  <a name="building-the-ip-address-range-expression"></a><a name="buildingip"></a>IP アドレス範囲の作成
+##  <a name="building-the-ip-address-range-expression"></a><a name="buildingip"></a> IP アドレス範囲の作成
  HTTP ヘッダーは、現在 Exchange Online によってのみ設定されています。これにより、認証要求を AD FS に渡すときにヘッダーが設定されます。 要求の値には、次のいずれかを指定できます。
 
 > [!NOTE]
@@ -307,7 +308,7 @@ Windows 10 のドメイン参加とサインオンに必要な AD FS エンド�
  Windows Server 2012 R2 の AD FS では、次の要求の種類を使用して要求コンテキスト情報を提供します。
 
 ### <a name="x-ms-forwarded-client-ip"></a>X-ミリ秒-クライアント-IP
- 要求の種類:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`
+ 要求の種類: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`
 
  この AD FS 要求は、要求を行っているユーザー (Outlook クライアントなど) の IP アドレスを突き止めるに "最適な試行" を表します。 この要求には、要求を転送したすべてのプロキシのアドレスを含む、複数の IP アドレスを含めることができます。  この要求は、HTTP から設定されます。 要求の値には、次のいずれかを指定できます。
 
@@ -329,7 +330,7 @@ Windows 10 のドメイン参加とサインオンに必要な AD FS エンド�
 > 現在、Exchange Online は IPV4 アドレスのみをサポートしています。IPV6 アドレスはサポートされていません。
 
 ### <a name="x-ms-client-application"></a>X-MS-クライアント-アプリケーション
- 要求の種類:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
+ 要求の種類: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
 
  この AD FS 要求は、エンドクライアントが使用するプロトコルを表します。このプロトコルは、使用されているアプリケーションに対して弱くなります。  この要求は、現在 Exchange Online によって設定されている HTTP ヘッダーから作成されます。これは、認証要求を AD FS に渡すときに、ヘッダーを入力します。 アプリケーションによっては、この要求の値は次のいずれかになります。
 
@@ -356,7 +357,7 @@ Windows 10 のドメイン参加とサインオンに必要な AD FS エンド�
     - Microsoft. Exchange. Imap
 
 ### <a name="x-ms-client-user-agent"></a>X-MS-クライアント-ユーザーエージェント
- 要求の種類:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
+ 要求の種類: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
 
  この AD FS 要求は、クライアントがサービスにアクセスするために使用しているデバイスの種類を表す文字列を提供します。 これは、特定のデバイス (特定の種類のスマートフォンなど) へのアクセスをユーザーが禁止する場合に使用できます。  この要求の値の例には、以下の値が含まれます (ただし、これらに限定されません)。
 
@@ -379,23 +380,23 @@ Windows 10 のドメイン参加とサインオンに必要な AD FS エンド�
   この値が空である可能性もあります。
 
 ### <a name="x-ms-proxy"></a>X-MS-プロキシ
- 要求の種類:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
+ 要求の種類: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
 
  この AD FS 要求は、要求が Web アプリケーションプロキシを経由して渡されたことを示します。  この要求は、Web アプリケーションプロキシによって作成されます。これにより、バックエンドフェデレーションサービスに認証要求を渡すときにヘッダーが設定されます。 AD FS は、それをクレームに変換します。
 
  要求の値は、要求を受けた Web アプリケーションプロキシの DNS 名です。
 
 ### <a name="insidecorporatenetwork"></a>InsideCorporateNetwork
- 要求の種類:`https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`
+ 要求の種類: `https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`
 
  上記のように、この要求の種類は、要求が web アプリケーションプロキシを経由して渡されたかどうかを示します。 Insidecorporatenetwork とは異なり、このブール値は True で、企業ネットワーク内からフェデレーションサービスに直接要求を示します。
 
 ### <a name="x-ms-endpoint-absolute-path-active-vs-passive"></a>X-MS-エンドポイント-絶対パス (アクティブとパッシブ)
- 要求の種類:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
+ 要求の種類: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
 
  この要求の種類を使用して、"アクティブ" (リッチ) クライアントと "パッシブ" (web ブラウザーベース) クライアントからの要求を特定できます。 これにより、Outlook Web アクセス、SharePoint Online、Office 365 ポータルなどのブラウザーベースのアプリケーションからの外部要求が許可されますが、Microsoft Outlook などのリッチクライアントからの要求はブロックされます。
 
  要求の値は、要求を受信した AD FS サービスの名前です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [AD FS の運用](../ad-fs-operations.md)

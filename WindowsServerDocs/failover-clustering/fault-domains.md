@@ -1,4 +1,5 @@
 ---
+description: 詳細については、障害ドメインの認識
 ms.assetid: 56fc7f80-9558-467e-a6e9-a04c9abbee33
 title: フォールト ドメインの認識
 ms.author: cosdar
@@ -6,12 +7,12 @@ manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/16/2016
-ms.openlocfilehash: 8b54c2ee9f6c1b47d99e8d7329749aedda7d3a35
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 5f0c3df62ec7385a3402a8b71b8f50d4a7b359a2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87992929"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048660"
 ---
 # <a name="fault-domain-awareness"></a>フォールト ドメインの認識
 
@@ -186,11 +187,11 @@ Set-ClusterFaultDomainXML -XML $xml
 
 ### <a name="optional-location-and-description-metadata"></a>省略可能: 場所と説明のメタデータ
 
-任意の障害ドメインに対して、任意の**場所**または**説明**のメタデータを指定できます。 この情報を指定すると、ヘルス サービスからのハードウェアのアラートにこの情報が含まれるようになります。 この短いビデオでは、このような記述子を追加するための値を示します。
+任意の障害ドメインに対して、任意の **場所** または **説明** のメタデータを指定できます。 この情報を指定すると、ヘルス サービスからのハードウェアのアラートにこの情報が含まれるようになります。 この短いビデオでは、このような記述子を追加するための値を示します。
 
 [![障害ドメインに位置記述子を追加することの値を示す短いビデオを表示する場合にクリックします](media/Fault-Domains-in-Windows-Server-2016/part-4-location-description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [Windows Server 2019 の概要](../get-started-19/get-started-19.md)
 - [Windows Server 2016 を使ってみる](../get-started/server-basics.md)
 -   [記憶域スペース ダイレクトの概要](../storage/storage-spaces/storage-spaces-direct-overview.md)

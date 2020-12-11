@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フォレスト間での信頼性情報の展開 (デモンストレーション手順)」を参照してください。
 ms.assetid: 846c3680-b321-47da-8302-18472be42421
 title: フォレスト間にわたる信頼性情報の展開 (デモンストレーション手順)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 828b7256854f9d2fd6d58567c773d4abc288cd0a
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 16f175baade8cffb16225ef195edf425762e839b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952874"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048520"
 ---
 # <a name="deploy-claims-across-forests-demonstration-steps"></a>フォレスト間にわたる信頼性情報の展開 (デモンストレーション手順)
 
@@ -62,10 +63,10 @@ Adatum Corporation は、Contoso, Ltd. に金融サービスを提供してい�
 
 このシナリオを完了するには、次の情報を使用します。
 
-|Objects|詳細情報|
+|Objects|詳細|
 |-----------|-----------|
 |ユーザー|Jeff 安値、Contoso|
-|Adatum および Contoso でのユーザー要求|ID: ad://ext/Company:ContosoAdatum、<p>ソース属性: company<p>提案される値: Contoso, Adatum**重要:** 要求変換が機能するためには、Contoso と adatum の両方で "Company" 要求の種類の ID を同じに設定する必要があります。|
+|Adatum および Contoso でのユーザー要求|ID: ad://ext/Company:ContosoAdatum、<p>ソース属性: company<p>提案される値: Contoso, Adatum **重要:** 要求変換が機能するためには、Contoso と adatum の両方で "Company" 要求の種類の ID を同じに設定する必要があります。|
 |Contoso の集約型アクセス規則|Adatumemployeeaccessrule が|
 |Contoso の集約型アクセスポリシー|Adatum Only アクセスポリシー|
 |Adatum と Contoso の要求変換ポリシー|DenyAllExcept 会社|
@@ -74,7 +75,7 @@ Adatum Corporation は、Contoso, Ltd. に金融サービスを提供してい�
 ## <a name="set-up-claims-transformation-on-trusted-forest-adatum"></a><a name="BKMK_3"></a>信頼されているフォレスト (Adatum) で要求変換を設定する
 このステップでは、Adatum で変換ポリシーを作成して、Contoso に渡す "Company" 以外のすべての要求を拒否します。
 
-Windows PowerShell の Active Directory モジュールには、 **Denyallexcept**引数が用意されています。これにより、変換ポリシー内の指定された要求以外のすべてが削除されます。
+Windows PowerShell の Active Directory モジュールには、 **Denyallexcept** 引数が用意されています。これにより、変換ポリシー内の指定された要求以外のすべてが削除されます。
 
 要求変換を設定するには、要求変換ポリシーを作成して、信頼されているフォレストと信頼する側のフォレスト間でリンクする必要があります。
 
@@ -100,7 +101,7 @@ Windows PowerShell の Active Directory モジュールには、 **Denyallexcept
 
 ##### <a name="to-apply-the-claims-transformation-policy"></a>要求変換ポリシーを適用するには
 
-1. ドメインコントローラーにサインインし、パスワードを使用して Administrator として adatum.com し <strong>pass@word1</strong> ます。
+1. ドメインコントローラーにサインインし、パスワードを使用して Administrator として adatum.com し  <strong>pass@word1</strong> ます。
 
 2. Windows PowerShell で管理者特権でのコマンドプロンプトを開き、次のように入力します。
 
@@ -168,9 +169,9 @@ Windows PowerShell の Active Directory モジュールには、 **Denyallexcept
 
 |                                                 シナリオ                                                 |                                                                                                                                                                                                                                           ポリシー                                                                                                                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                  Adatum から Contoso Adatum に送られるすべての要求を許可します                  |                                                          コード <br />新規-ADClaimTransformPolicy\`<br /> -Description: "すべての要求を許可する要求変換ポリシー"\`<br />-Name: "AllowAllClaimsPolicy"\`<br />-AllowAll\`<br />-サーバー "contoso .com"\`<br />Set-ADClaimTransformLink\`<br />-Identity: .com .com "\`<br />-ポリシー: "AllowAllClaimsPolicy"\`<br />-TrustRole: 信頼\`<br />-サーバー "contoso .com"\`                                                          |
-|                  Adatum から Contoso Adatum に送られるすべての要求を拒否します                   |                                                            コード <br />新規-ADClaimTransformPolicy\`<br />-Description: "すべての要求を拒否する要求変換ポリシー"\`<br />-Name: "DenyAllClaimsPolicy"\`<br /> -DenyAll\`<br />-サーバー "contoso .com"\`<br />Set-ADClaimTransformLink\`<br />-Identity: .com .com "\`<br />-ポリシー: "DenyAllClaimsPolicy"\`<br />-TrustRole: 信頼\`<br />-サーバー "contoso .com"\`                                                             |
-| Adatum に由来する "Company" と "Department" 以外のすべての要求を Contoso Adatum に移行できるようにします。 | コード <br />-New-Adclaimトランスポリシー\`<br />-Description: "会社と部署以外のすべての要求を許可する要求の変換ポリシー"\`<br /> -Name: "AllowAllClaimsExceptCompanyAndDepartmentPolicy"\`<br />-AllowAllExcept: company、department\`<br />-サーバー "contoso .com"\`<br />Set-ADClaimTransformLink\`<br /> -Identity: .com .com "\`<br />-ポリシー: "AllowAllClaimsExceptCompanyAndDepartmentPolicy"\`<br /> -TrustRole: 信頼\`<br />-サーバー "contoso .com"\` |
+|                  Adatum から Contoso Adatum に送られるすべての要求を許可します                  |                                                          コード <br />New-ADClaimTransformPolicy \`<br /> -Description: "すべての要求を許可する要求変換ポリシー" \`<br />-Name: "AllowAllClaimsPolicy" \`<br />-AllowAll \`<br />-サーバー "contoso .com" \`<br />Set-ADClaimTransformLink \`<br />-Identity: .com .com " \`<br />-ポリシー: "AllowAllClaimsPolicy" \`<br />-TrustRole: 信頼 \`<br />-サーバー "contoso .com" \`                                                          |
+|                  Adatum から Contoso Adatum に送られるすべての要求を拒否します                   |                                                            コード <br />New-ADClaimTransformPolicy \`<br />-Description: "すべての要求を拒否する要求変換ポリシー" \`<br />-Name: "DenyAllClaimsPolicy" \`<br /> -DenyAll \`<br />-サーバー "contoso .com" \`<br />Set-ADClaimTransformLink \`<br />-Identity: .com .com " \`<br />-ポリシー: "DenyAllClaimsPolicy" \`<br />-TrustRole: 信頼 \`<br />-サーバー "contoso .com"\`                                                             |
+| Adatum に由来する "Company" と "Department" 以外のすべての要求を Contoso Adatum に移行できるようにします。 | コード <br />-New-ADClaimTransformationPolicy \`<br />-Description: "会社と部署以外のすべての要求を許可する要求の変換ポリシー" \`<br /> -Name: "AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br />-AllowAllExcept: company、department \`<br />-サーバー "contoso .com" \`<br />Set-ADClaimTransformLink \`<br /> -Identity: .com .com " \`<br />-ポリシー: "AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br /> -TrustRole: 信頼 \`<br />-サーバー "contoso .com" \` |
 
 ## <a name="see-also"></a><a name="BKMK_Links"></a>関連項目
 

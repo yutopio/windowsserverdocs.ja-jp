@@ -1,4 +1,5 @@
 ---
+description: 詳細については、コマンドラインプロセスの監査に関するページを参照してください。
 ms.assetid: c8597cc8-bdcb-4e59-a09e-128ef5ebeaf8
 title: コマンド ライン プロセスの監査
 author: iainfoulds
@@ -6,18 +7,18 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d08032a01a1c3bf2fd03ba302d6eaba5162c317d
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 24d4541da55e97b5506719b7b6df0566695c4e5f
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070744"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049460"
 ---
 # <a name="command-line-process-auditing"></a>コマンド ライン プロセスの監査
 
 >適用対象: Windows Server 2016 の場合は Windows Server 2012 R2
 
-**Author** : Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
+**Author**: Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
 
 > [!NOTE]
 > この内容は Microsoft カスタマー サポート エンジニアによって作成され、TechNet が通常提供しているトピックよりも詳細な Windows Server 2012 R2 の機能やソリューションの技術的説明を求めている、経験豊かな管理者とシステム設計者を対象としています。 ただし、TechNet と同様の編集過程は実施されていないため、言語によっては通常より洗練されていない文章が見られる場合があります。

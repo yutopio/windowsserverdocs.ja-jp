@@ -6,12 +6,12 @@ ms.author: billmath
 manager: femila
 ms.date: 03/20/2020
 ms.topic: article
-ms.openlocfilehash: cea61a282a560645613b4444aa4de06086bb7dbe
-ms.sourcegitcommit: 03048411c07c1a1d0c8bb0b2a60c1c17c9987314
+ms.openlocfilehash: c7779522e874fb484f3801780495f96ddcead990
+ms.sourcegitcommit: 4165d4a9198228d4ec809ccd7d791f8de2aeb159
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96938992"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97091276"
 ---
 # <a name="configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>AD FS で Windows 統合認証 (WIA) を使用するようにブラウザーを構成する
 
@@ -20,7 +20,7 @@ ms.locfileid: "96938992"
 AD FS 2016 には、Edge ブラウザーが WIA を実行できるようにする、改善された既定の設定が用意されています。また、Windows Phone を正しくキャッチすることもありません。
 
 ```
-=~Windows\s*NT.*Edge
+=~Windows\s*NT.*Edg.*
 ```
 
 上記の方法では、頻繁に更新される場合でも、一般的なエッジシナリオをサポートするように個々のユーザーエージェント文字列を構成する必要がなくなりました。

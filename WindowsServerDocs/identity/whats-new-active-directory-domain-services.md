@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Windows Server 2016 の Active Directory Domain Services の新機能」を参照してください。
 ms.assetid: 6a852428-c1ec-4703-b3b3-a4bfdf8cbb9d
 title: Windows Server 2016 での Active Directory Domain Services の新機能
 ms.author: joflore
@@ -6,12 +7,12 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 727e3dde99c0c2e7d4aa8999a91a2b913d9a314b
-ms.sourcegitcommit: 1808ce451b9e37ec1110bd684e1b0d3812fc77e0
+ms.openlocfilehash: d13e4f64d0e73d9066bf0c614e8c653b94a6db1e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91772402"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050060"
 ---
 # <a name="whats-new-in-active-directory-domain-services-for-windows-server-2016"></a>Windows Server 2016 の Active Directory Domain Services の新機能
 
@@ -60,18 +61,18 @@ Azure Active Directory Join を使用すると、企業や個人のデバイス�
 
 利点:
 
-- 企業所有の Windows デバイスで**最新の設定を利用**できます。 酸素 Services は、個人の Microsoft アカウントを必要としなくなりました。コンプライアンスを確保するために、ユーザーの既存の職場アカウントを使用して実行されるようになりました。 酸素 Services は、オンプレミスの Windows ドメインに参加している Pc と、Azure AD テナント ("クラウドドメイン") に "参加" している Pc とデバイスで動作します。 設定は次のとおりです。
+- 企業所有の Windows デバイスで **最新の設定を利用** できます。 酸素 Services は、個人の Microsoft アカウントを必要としなくなりました。コンプライアンスを確保するために、ユーザーの既存の職場アカウントを使用して実行されるようになりました。 酸素 Services は、オンプレミスの Windows ドメインに参加している Pc と、Azure AD テナント ("クラウドドメイン") に "参加" している Pc とデバイスで動作します。 設定は次のとおりです。
 
    - ローミングまたは個人用設定、ユーザー補助の設定および資格情報
    - バックアップと復元
    - 職場アカウントを使用した Microsoft Store へのアクセス
    - ライブタイルと通知
 
-- Windows ドメインに参加できないモバイルデバイス (携帯電話、タブレット) の**組織のリソースにアクセス**します。これは、企業所有か byod かにかかわらず、Windows ドメインに参加することはできません。
-- Office 365 およびその他の組織のアプリ、web サイト、リソースに**シングルサイン**オンします。
-- **BYOD デバイスで**は、(オンプレミスのドメインまたは Azure AD から) 個人所有のデバイスに職場アカウントを追加して、条件付きアカウント制御やデバイスの正常性構成証明などの新しい機能に確実に準拠させることができるように、アプリと web で作業リソースの SSO を利用できます。
+- Windows ドメインに参加できないモバイルデバイス (携帯電話、タブレット) の **組織のリソースにアクセス** します。これは、企業所有か byod かにかかわらず、Windows ドメインに参加することはできません。
+- Office 365 およびその他の組織のアプリ、web サイト、リソースに **シングルサイン** オンします。
+- **BYOD デバイスで** は、(オンプレミスのドメインまたは Azure AD から) 個人所有のデバイスに職場アカウントを追加して、条件付きアカウント制御やデバイスの正常性構成証明などの新しい機能に確実に準拠させることができるように、アプリと web で作業リソースの SSO を利用できます。
 - **Mdm 統合** を使用すると、Mdm (Intune またはサードパーティ) にデバイスを自動登録できます。
-- 組織内の複数のユーザーに対して **、"キオスク" モードと共有デバイスを設定**します。
+- 組織内の複数のユーザーに対して **、"キオスク" モードと共有デバイスを設定** します。
 - **開発者エクスペリエンス** を使用すると、共有されたプログラミングスタックで企業と個人の両方のコンテキストに対応するアプリを構築できます。
 - **イメージング** オプションを使用すると、イメージングを選択し、ユーザーが最初の実行時に企業所有のデバイスを直接構成できるようにすることができます。
 

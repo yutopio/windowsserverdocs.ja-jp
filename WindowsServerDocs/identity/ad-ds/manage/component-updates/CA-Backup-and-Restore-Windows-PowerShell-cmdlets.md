@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CA のバックアップと復元の Windows PowerShell コマンドレット」を参照してください。
 ms.assetid: 7e195f5b-b194-40f3-a26d-5cf4ade5fc4d
 title: CA のバックアップと復元の Windows PowerShell コマンドレット
 author: iainfoulds
@@ -6,18 +7,18 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 1a36e72858e5ea2ae95cc0f1730e5906b3c85866
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: f6db1828b52a2987ee3df9f1028a66db4536c0a8
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070734"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049470"
 ---
 # <a name="ca-backup-and-restore-windows-powershell-cmdlets"></a>CA のバックアップと復元の Windows PowerShell コマンドレット
 
 > 適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 >
-> **Author** : Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
+> **Author**: Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
 >
 > [!NOTE]
 > この内容は Microsoft カスタマー サポート エンジニアによって作成され、TechNet が通常提供しているトピックよりも詳細な Windows Server 2012 R2 の機能やソリューションの技術的説明を求めている、経験豊かな管理者とシステム設計者を対象としています。 ただし、TechNet と同様の編集過程は実施されていないため、言語によっては通常より洗練されていない文章が見られる場合があります。

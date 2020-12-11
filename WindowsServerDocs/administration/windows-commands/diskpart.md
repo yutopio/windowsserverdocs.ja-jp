@@ -5,12 +5,12 @@ ms.topic: reference
 author: jasongerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 1d2f4cc814dad4313e7eb0925b60f44ec0348a30
-ms.sourcegitcommit: de207e887575757f3389ccf940c2e0ad2dc70bd3
+ms.openlocfilehash: 3bdb980754fedefebddfb33b998b37b621c3505a
+ms.sourcegitcommit: 4165d4a9198228d4ec809ccd7d791f8de2aeb159
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94617202"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97091286"
 ---
 # <a name="diskpart"></a>diskpart
 
@@ -80,7 +80,7 @@ Diskpart コマンドインタープリターから次のコマンドを実行�
 | [format](format.md) | Windows ファイルを受け入れるようにディスクをフォーマットします。 |
 | [gpt](gpt.md) | ベーシック GUID パーティションテーブル (gpt) ディスクにフォーカスがあるパーティションに gpt 属性を割り当てます。 |
 | [help](help.md) | 使用可能なコマンドの一覧、または指定したコマンドの詳細なヘルプ情報を表示します。 |
-| [import](import.md) | 外部ディスクグループをローカルコンピューターのディスクグループにインポートします。 |
+| [import](import_1.md) | 外部ディスクグループをローカルコンピューターのディスクグループにインポートします。 |
 | [inactive](inactive.md) | 基本マスターブートレコード (MBR) ディスクで、フォーカスがあるシステムパーティションまたはブートパーティションを非アクティブとしてマークします。 |
 | [list](list.md) | ディスクのパーティション、ディスク内のボリューム、またはバーチャルハードディスク (Vhd) のディスクの一覧を表示します。 |
 | [merge vdisk](merge-vdisk.md) | 差分仮想ハード_ディスク (VHD)、対応する親 VHD をマージします。 |

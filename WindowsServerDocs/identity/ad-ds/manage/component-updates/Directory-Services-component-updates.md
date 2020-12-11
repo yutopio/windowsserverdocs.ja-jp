@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ディレクトリサービスコンポーネントの更新」を参照してください。
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: ディレクトリ サービス コンポーネントの更新
 author: iainfoulds
@@ -6,18 +7,18 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 85095e1b75ca5c2ae781ffddbeed43e5bb3a3864
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: a5836f3dda9615a449c89fe130798566e7481906
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070764"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049660"
 ---
 # <a name="directory-services-component-updates"></a>ディレクトリ サービス コンポーネントの更新
 
 >適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 
-**Author** : Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
+**Author**: Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
 
 > [!NOTE]
 > この内容は Microsoft カスタマー サポート エンジニアによって作成され、TechNet が通常提供しているトピックよりも詳細な Windows Server 2012 R2 の機能やソリューションの技術的説明を求めている、経験豊かな管理者とシステム設計者を対象としています。 ただし、TechNet と同様の編集過程は実施されていないため、言語によっては通常より洗練されていない文章が見られる場合があります。
@@ -269,13 +270,13 @@ Log Record Bytes Generated: 0
 
 1.  LDP.exe を開き、ドメインコントローラーに接続してバインドします。
 
-2.  [ **オプション** ] メニューの [ **コントロール** ] をクリックします。
+2.  [ **オプション** ] メニューの [ **コントロール**] をクリックします。
 
-3.  [コントロール] ダイアログボックスで、[ **事前定義済み** ] プルダウンメニューを展開し、[ **検索統計** ] をクリックして、[ **OK** ] をクリックします。
+3.  [コントロール] ダイアログボックスで、[ **事前定義済み** ] プルダウンメニューを展開し、[ **検索統計** ] をクリックして、[ **OK**] をクリックします。
 
     ![ディレクトリサービスの更新](media/Directory-Services-component-updates/GTR_ADDS_Controls.gif)
 
-4.  [ **参照** ] メニューの [ **検索** ] をクリックします。
+4.  [**参照**] メニューの [**検索**] をクリックします。
 
 5.  [検索] ダイアログボックスで、[ **オプション** ] ボタンを選択します。
 

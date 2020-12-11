@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「自動ファイル分類の展開 (デモンストレーション手順)」を参照してください。
 ms.assetid: 01988844-df02-4952-8535-c87aefd8a38a
 title: Deploy Automatic File Classification (Demonstration Steps)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 19c2ddbdc7ae00c32147023b2204efface9c4727
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 218fd28153631828dcb1ee076bda379de61a725b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952884"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048560"
 ---
 # <a name="deploy-automatic-file-classification-demonstration-steps"></a>Deploy Automatic File Classification (Demonstration Steps)
 
@@ -53,7 +54,7 @@ Impact リソース プロパティおよび Personally Identifiable Information
 
 5.  [**Personally Identifiable Information**] を右クリックし、[**有効にする**] をクリックします。
 
-![ソリューションガイド](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -71,7 +72,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
 
 1.  Administrators セキュリティ グループのメンバーとしてファイル サーバーにログオンします。
 
-2.  Windows PowerShell コマンド プロンプトで「**Update-FsrmClassificationPropertyDefinition**」と入力してから、Enter キーを押します。 これにより、ドメイン コントローラーで作成されたプロパティ定義がファイル サーバーに同期されます。
+2.  Windows PowerShell コマンドプロンプトで、「_ *update-fsrmclassificationpropertydefinition**」と入力し、enter キーを押します。 これにより、ドメイン コントローラーで作成されたプロパティ定義がファイル サーバーに同期されます。
 
 3.  ファイル サーバー リソース マネージャーを開きます。 サーバー マネージャーで [**ツール**] をクリックしてから、[**ファイル サーバー リソース マネージャー**] をクリックします。
 
@@ -104,7 +105,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
 
 13. [**評価の種類**] タブで [**既存のプロパティ値を再評価する**] チェック ボックスを選択し、[**既存の値を上書きする**] をクリックしてから、[**OK**] をクリックします。
 
-![ソリューションガイド](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -124,7 +125,7 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
 
 1.  Administrators セキュリティ グループのメンバーとしてファイル サーバーにサインインします。
 
-2.  Windows PowerShell コマンド プロンプトで「**Update-FsrmClassificationPropertyDefinition**」と入力してから、Enter キーを押します。 これにより、ドメイン コントローラーで作成されたプロパティ定義がファイル サーバーに同期されます。
+2.  Windows PowerShell コマンドプロンプトで、「_ * Update-fsrmclassificationpropertydefinition * *」と入力し、enter キーを押します。 これにより、ドメイン コントローラーで作成されたプロパティ定義がファイル サーバーに同期されます。
 
 3.  ファイル サーバー リソース マネージャーを開きます。 サーバー マネージャーで [**ツール**] をクリックしてから、[**ファイル サーバー リソース マネージャー**] をクリックします。
 
@@ -146,13 +147,13 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
 
 9. [**式の種類**] 列で [**正規表現**] を選択します。
 
-10. [**式**] 列に「 **^ (?!」と入力します。000) ([0-7] \d {2} | 7 ([0-7] \d | 7 [012])) ([-]?)(?!00)、(?!)0000) \d {4} $**
+10. [ **式** ] 列に「 **^ (?!」と入力します。000) ([0-7] \d {2} | 7 ([0-7] \d | 7 [012])) ([-]?)(?!00)、(?!)0000) \d {4} $**
 
 11. [**最小項目**] 列に **10** と入力してから、[**OK**] をクリックします。
 
 12. [**評価の種類**] タブで [**既存のプロパティ値を再評価する**] チェック ボックスを選択し、[**既存の値を上書きする**] をクリックしてから、[**OK**] をクリックします。
 
-![ソリューションガイド](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -167,7 +168,7 @@ New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5
 
 1.  ファイル サーバーで、ファイル サーバー リソース マネージャーを使用して分類規則を実行します。
 
-    1.  [**分類管理**] をクリックし、[**分類規則**] を右クリックしてから、[**すべての規則で今すぐ分類を実行する**] をクリックします。
+    1.  [分類管理] * * をクリックし、[ **分類規則**] を右クリックして、[ **すべての規則との分類を今すぐ実行** する] をクリックします。
 
     2.  [**分類の完了を待つ**] オプションをクリックしてから、[**OK**] をクリックします。
 

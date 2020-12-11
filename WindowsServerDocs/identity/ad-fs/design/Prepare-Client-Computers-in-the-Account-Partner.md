@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「アカウントパートナーでクライアントコンピューターを準備する」を参照してください。
 ms.assetid: cea6011d-3753-4b95-aaa5-38d4e97d6e42
 title: アカウント パートナー内のクライアント コンピューターを準備する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b78c3d3b4c5562acfcc7b2657f6e49119fc491e2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 27c7e49fa35a47c7cfa60e9495600a1988f8e776
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967599"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049450"
 ---
 # <a name="prepare-client-computers-in-the-account-partner"></a>アカウント パートナー内のクライアント コンピューターを準備する
 
@@ -25,8 +26,8 @@ ms.locfileid: "87967599"
 
 -   \( \) \( 各クライアントコンピューターの信頼されたルートにチェーンする SSL 証明書または同等の証明書 Secure Sockets Layer、適切なアカウントフェデレーションサーバー、リソースフェデレーションサーバー、および Web サーバーをインストールし \) ます。
 
-    詳細については、「グループポリシーを使用した[クライアントコンピューターへの証明書の配布](../../ad-fs/deployment/Distribute-Certificates-to-Client-Computers-by-Using-Group-Policy.md)」を参照してください。
+    詳細については、「グループポリシーを使用した [クライアントコンピューターへの証明書の配布](../../ad-fs/deployment/Distribute-Certificates-to-Client-Computers-by-Using-Group-Policy.md)」を参照してください。
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

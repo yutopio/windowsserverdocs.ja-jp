@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「AD FS と Web アプリケーションプロキシを使用したワークフォルダーの展開: ステップ1、セットアップ」を参照してください AD FS'
 title: 'AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開 - 手順 1: AD FS のセットアップ'
 ms.topic: article
 manager: klaasl
@@ -6,12 +7,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 10/18/2018
 ms.assetid: 938cdda2-f17e-4964-9218-f5868fd96735
-ms.openlocfilehash: f9cb2a47b4478e440b6f9491358a2de4822912cb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 0cb9e88455a6c7c1b3d917a8ad839d7f7217a6a3
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965839"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048580"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 1: AD FS のセットアップ
 
@@ -107,7 +108,7 @@ enterpriseregistration SAN は Workplace Join に必要となります。
 ## <a name="install-the-ad-fs-role-service"></a>AD FS 役割サービスをインストールする
 AD FS をインストールするには、次の手順に従います。
 
-1.  AD FS をインストールする物理または仮想マシンにログオンして、**サーバー マネージャー**を開き、役割と機能の追加ウィザードを開始します。
+1.  AD FS をインストールする物理または仮想マシンにログオンして、**サーバー マネージャー** を開き、役割と機能の追加ウィザードを開始します。
 
 2.  **[サーバーの役割]** ページで、**[Active Directory フェデレーション サービス (AD FS)]** の役割を選択し、**[次へ]** をクリックします。
 
@@ -143,7 +144,7 @@ Add-WindowsFeature ADFS-Federation –IncludeManagementTools
 
 6.  **[サービス アカウントの指定]** ページで、管理されたサービス アカウントとして使用する名前を入力します。 このテストの例では、**[管理されたサービス アカウント グループを作成します]** を選択し、**[アカウント名]** で **「ADFSService」** と入力します。 **[次へ]** をクリックします。
 
-7.  [**構成データベースの指定**] ページで、[ **Windows Internal database を使用してこのサーバーにデータベースを作成する**] を選択し、[**次へ**] をクリックします。
+7.  [ **構成データベースの指定** ] ページで、[ **Windows Internal database を使用してこのサーバーにデータベースを作成する**] を選択し、[ **次へ**] をクリックします。
 
 8.  **[オプションの確認]** ページでは、選択したオプションの概要が表示されます。 **[次へ]** をクリックします。
 
@@ -175,13 +176,13 @@ AD FS を構成した後で、前の手順で作成した管理されたサー�
 AD FS ファームをセットアップするには:
 
 ```powershell
-$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match blueadfs.contoso.com} | sort $_.NotAfter -Descending | select -first 1 
+$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match blueadfs.contoso.com} | sort $_.NotAfter -Descending | select -first 1 
 $thumbprint = $cert.Thumbprint
 Install-ADFSFarm -CertificateThumbprint $thumbprint -FederationServiceDisplayName "Contoso Corporation" –FederationServiceName blueadfs.contoso.com -GroupServiceAccountIdentifier contoso\ADFSService$ -OverwriteConfiguration -ErrorAction Stop
 ```
 
 次の手順: [AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 2、AD FS の構成後の作業](deploy-work-folders-adfs-step2.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ワーク フォルダーの概要](Work-Folders-Overview.md)
 
