@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「Kerberos 認証の新機能」を参照してください。
 title: What's New in Kerberos Authentication
 ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
 author: justinha
 ms.author: Justinha
 ms.date: 11/09/2016
-ms.openlocfilehash: eac9e1abd2891b21e818eac1d69b0eac231a02b4
-ms.sourcegitcommit: 7cacfc38982c6006bee4eb756bcda353c4d3dd75
+ms.openlocfilehash: 26e5e373fe1b5ef8f39edbc5cfcda2bbeb886b23
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078539"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048840"
 ---
 # <a name="whats-new-in-kerberos-authentication"></a>What's New in Kerberos Authentication
 
@@ -33,7 +34,7 @@ Windows Server 2016 以降では、Kdc は PKInit 鮮度拡張機能をサポー
 構成した場合、ドメインが Windows Server 2016 ドメインの機能レベル (DFL) の場合、次のオプションがサポートされます。
 
 - **無効**: KDC は、PKInit 鮮度拡張機能を提供しません。また、有効な認証要求を受け入れるかどうかを確認する必要はありません。 ユーザーは、新しい公開キー id SID を受け取ることはありません。
-- **サポートされて**います: PKInit 鮮度拡張機能は要求でサポートされています。 PKInit 鮮度拡張機能を使用して正常に認証された Kerberos クライアントは、新しい公開キー id SID を受け取ります。
+- **サポートされて** います: PKInit 鮮度拡張機能は要求でサポートされています。 PKInit 鮮度拡張機能を使用して正常に認証された Kerberos クライアントは、新しい公開キー id SID を受け取ります。
 - **必須**: 認証を成功させるには、PKInit 鮮度拡張機能が必要です。 PKInit 鮮度拡張機能をサポートしていない Kerberos クライアントは、公開キーの資格情報を使用すると、常に失敗します。
 
 ## <a name="domain-joined-device-support-for-authentication-using-public-key"></a>ドメインに参加しているデバイスで、公開キーを使用した認証がサポートされる
@@ -69,6 +70,6 @@ Windows Server 2016 以降では、ドメインコントローラーは、キー
     2. SAN に UPN がない場合は、マッピングのために AltSecID が試行されます。
     3. SAN に UPN がある場合は、マッピングのために UPN が試行されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Kerberos Authentication Overview](kerberos-authentication-overview.md)

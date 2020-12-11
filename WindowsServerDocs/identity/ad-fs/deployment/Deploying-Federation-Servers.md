@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フェデレーションサーバーの展開」を参照してください。
 ms.assetid: c4d83dd3-2846-4658-8b9c-93901ee69766
 title: フェデレーション サーバーの展開
 author: billmath
@@ -6,24 +7,24 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: e648f77593f90e976389601d8db5504f6693ce0d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d8342fe7e884c856bf687a0deda6b174b94355b9
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962846"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044940"
 ---
 # <a name="deploying-federation-servers"></a>フェデレーション サーバーの展開
 
-Active Directory フェデレーションサービス (AD FS) AD FS でフェデレーションサーバーを展開するには \( \) 、「[チェックリスト: フェデレーションサーバーのセットアップ](Checklist--Setting-Up-a-Federation-Server.md)」の各タスクを実行します。
+Active Directory フェデレーションサービス (AD FS) AD FS でフェデレーションサーバーを展開するには \( \) 、「 [チェックリスト: フェデレーションサーバーのセットアップ](Checklist--Setting-Up-a-Federation-Server.md)」の各タスクを実行します。
 
 > [!NOTE]
-> このチェックリストを使用する場合は、まず、サーバーの構成手順を開始する前に、 [Windows server 2012 の AD FS 設計ガイド](../design/ad-fs-design-guide-in-windows-server-2012.md)の「フェデレーションサーバーの計画」を参照することをお勧めします。 この方法でチェックリストに従うことで、フェデレーションサーバーの設計と展開のプロセスについて理解を深めることができます。
+> このチェックリストを使用する場合は、まず、サーバーの構成手順を開始する前に、 [Windows server 2012 の AD FS 設計ガイド](../design/ad-fs-design-guide-in-windows-server-2012.md) の「フェデレーションサーバーの計画」を参照することをお勧めします。 この方法でチェックリストに従うことで、フェデレーションサーバーの設計と展開のプロセスについて理解を深めることができます。
 
 ## <a name="about-federation-servers"></a>フェデレーションサーバーについて
 フェデレーションサーバーは、Windows Server 2008 を実行しているコンピューターで、フェデレーションサーバーの役割で動作するように構成されている AD FS ソフトウェアがインストールされています。 フェデレーションサーバーは、他の組織のユーザーアカウント、およびインターネット上の任意の場所に配置できるクライアントコンピューターから、要求を認証またはルーティングします。
 
-コンピューターに AD FS ソフトウェアをインストールし、AD FS フェデレーションサーバー構成ウィザードを使用してフェデレーションサーバーの役割を構成することにより、そのコンピューターをフェデレーションサーバーにすることができます。 また \- 、[ ** \\ \\ 管理ツールの開始**] メニューで、そのコンピューターの [AD FS 管理] スナップインを使用できるようになり、次の項目を指定できるようになります。
+コンピューターに AD FS ソフトウェアをインストールし、AD FS フェデレーションサーバー構成ウィザードを使用してフェデレーションサーバーの役割を構成することにより、そのコンピューターをフェデレーションサーバーにすることができます。 また \- 、[ **\\ \\ 管理ツールの開始**] メニューで、そのコンピューターの [AD FS 管理] スナップインを使用できるようになり、次の項目を指定できるようになります。
 
 -   パートナー組織およびアプリケーションがトークン要求と応答を送信する AD FS ホスト名
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AD FS デプロイトポロジを決定する'
 ms.assetid: f67b0bc9-e5af-4891-9da0-d9be539af42d
 title: AD FS 展開トポロジの決定
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: dfb863cf85f9e9bffadbe10ca017491341596dad
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1c5bd925318a6f18513fa7267c2dfe2ab5381281
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972119"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047700"
 ---
 # <a name="determine-your-ad-fs-deployment-topology"></a>AD FS 展開トポロジの決定
 
@@ -37,8 +38,8 @@ Active Directory フェデレーションサービス (AD FS) AD FS の展開を
 
 -   [SQL Server を使用するフェデレーション サーバー ファーム](Federation-Server-Farm-Using-SQL-Server-2012.md)
 
-AD FS 展開トポロジの選択が完了したら、トピック「 [AD FS サーバー容量の計画](Planning-for-AD-FS-Server-Capacity.md)」を参照して、このトポロジをサポートするために展開する必要があるサーバーの推奨数を決定することをお勧めします。
+AD FS 展開トポロジの選択が完了したら、トピック「 [AD FS サーバー容量の計画](Planning-for-AD-FS-Server-Capacity.md) 」を参照して、このトポロジをサポートするために展開する必要があるサーバーの推奨数を決定することをお勧めします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

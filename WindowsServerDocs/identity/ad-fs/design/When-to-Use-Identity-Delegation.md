@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Id 委任を使用する場合」を参照してください。
 ms.assetid: 6e711a96-9055-4508-b6d4-318d6aa95fd1
 title: ID 委任が必要になるシナリオ
 author: billmath
@@ -6,17 +7,17 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f10ee03f7c9ca5e875c64bddfb427200072d9dca
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a2d3987e4051ad4248381e9a425b2d728755eb55
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962746"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044970"
 ---
 # <a name="when-to-use-identity-delegation"></a>ID 委任が必要になるシナリオ
 
 ## <a name="what-is-identity-delegation"></a>ID 委任はどのような場合に必要になるか
-Id 委任は、 \( \) 管理者が指定したアカウントでユーザーの権限を借用できるようにする Active Directory フェデレーションサービス (AD FS) AD FS の機能です \- 。 ユーザーの権限を借用するアカウントを、** 代理人と呼びます。 この委任機能は、元の要求の承認チェーン内にある各アプリケーション、データベース、またはサービスに対して、一連のアクセス制御チェックを順次行う必要がある、多くの分散アプリケーションにおいて非常に重要です。 実際 \- のシナリオとして、web アプリケーションの "フロントエンド" が、Microsoft SQL Server データベースに接続されている web サービスなど、より安全な "バックエンド" からデータを取得する必要がある場合があります。
+Id 委任は、 \( \) 管理者が指定したアカウントでユーザーの権限を借用できるようにする Active Directory フェデレーションサービス (AD FS) AD FS の機能です \- 。 ユーザーの権限を借用するアカウントを、代理人と呼びます。 この委任機能は、元の要求の承認チェーン内にある各アプリケーション、データベース、またはサービスに対して、一連のアクセス制御チェックを順次行う必要がある、多くの分散アプリケーションにおいて非常に重要です。 実際 \- のシナリオとして、web アプリケーションの "フロントエンド" が、Microsoft SQL Server データベースに接続されている web サービスなど、より安全な "バックエンド" からデータを取得する必要がある場合があります。
 
 たとえば、既存のパーツの \- 注文 Web サイトをプログラムによって拡張し、パートナー組織が独自の購入履歴やアカウントの状態を表示できるようにすることができます。 セキュリティ上の理由から、パートナーの財務データはすべて、専用の SQL server 構造化照会言語上のセキュリティで保護されたデータベースに格納され \( \) ます。 このような状況では、フロントエンドアプリケーションのコードは、 \- 取引先組織の財務データについて何も認識していません。 そのため、この場合は、そのデータを、このケースでホストされているネットワーク上の他の別のコンピューターから取得する必要があり \( ます。この場合、 \) 部分データベースの Web サービスは \( バックエンドになり \) ます。
 
@@ -55,5 +56,5 @@ Id 委任を構成するには、AD FS 管理スナップインで証明書利�
 ## <a name="configuring-the-front-end-web-application-for-identity-delegation"></a>\-Id 委任用のフロントエンド Web アプリケーションの構成
 開発者は、Web フロントエンドアプリケーションまたはサービスを適切にプログラムして、 \- 委任要求を AD FS コンピューターにリダイレクトするために使用できるオプションがいくつかあります。 Web アプリケーションをカスタマイズして ID 委任と連携させる方法の詳細については、「[Windows Identity Foundation SDK](https://go.microsoft.com/fwlink/?LinkId=122266)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

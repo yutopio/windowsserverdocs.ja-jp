@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: ブランチオフィスの考慮事項'
 title: ブランチオフィスに関する考慮事項
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.openlocfilehash: 140888bdaa27d5040ff723b94df2e28f3bbab167
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 793cbf9e43aa7d8b5842a3d3647253a09997d0b6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996162"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047220"
 ---
 # <a name="branch-office-considerations"></a>ブランチ オフィスに関する考慮事項
 

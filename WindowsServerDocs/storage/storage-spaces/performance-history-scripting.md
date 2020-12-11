@@ -1,4 +1,5 @@
 ---
+description: 詳細については、PowerShell を使用したスクリプト作成と記憶域スペースダイレクトパフォーマンスの履歴を参照してください。
 title: 記憶域スペースダイレクトパフォーマンス履歴を使用したスクリプト作成
 ms.author: cosdar
 manager: eldenc
@@ -6,18 +7,18 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 05/15/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: a0e04034c79a82bb245b611eca291acca0e40f9f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3894e6ce2e5f89c98d064ceedb3822cf9ab7061a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935783"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048930"
 ---
 # <a name="scripting-with-powershell-and-storage-spaces-direct-performance-history"></a>PowerShell と記憶域スペースダイレクトパフォーマンス履歴を使用したスクリプト
 
 > 適用対象:Windows Server 2019
 
-Windows Server 2019 では、[記憶域スペースダイレクト](storage-spaces-direct-overview.md)は、仮想マシン、サーバー、ドライブ、ボリューム、ネットワークアダプターなどのさまざまな[パフォーマンス履歴](performance-history.md)を記録して格納します。 パフォーマンス履歴は PowerShell でのクエリと処理が簡単であるため、*生データ*から次*のような質問にすばやく*アクセスできます。
+Windows Server 2019 では、 [記憶域スペースダイレクト](storage-spaces-direct-overview.md) は、仮想マシン、サーバー、ドライブ、ボリューム、ネットワークアダプターなどのさまざまな [パフォーマンス履歴](performance-history.md) を記録して格納します。 パフォーマンス履歴は PowerShell でのクエリと処理が簡単であるため、 *生データ* から次 *のような質問にすばやく* アクセスできます。
 
 1. 先週、CPU のスパイクが発生しましたか?
 2. 物理ディスクに異常な待機時間が発生しているか。
@@ -39,7 +40,7 @@ Windows Server 2019 では、[記憶域スペースダイレクト](storage-spac
 
 ### <a name="screenshot"></a>Screenshot
 
-次のスクリーンショットでは、*サーバー-02*に先週のスパイクがあることがわかります。
+次のスクリーンショットでは、 *サーバー-02* に先週のスパイクがあることがわかります。
 
 ![PowerShell のスクリーンショット](media/performance-history/Show-CpuMinMaxAvg.png)
 
@@ -106,7 +107,7 @@ $Output | Sort-Object ClusterNode | Format-Table
 
 まず、が一貫していることを確認して、アイドル状態またはほぼアイドル状態のドライブを除外し `PhysicalDisk.Iops.Total` `-Gt 1` ます。 アクティブな HDD ごとに、 `LastHour` 10 秒間隔で360測定で構成された時間帯をにパイプ処理して、 `Measure-Object -Average` 過去1時間の平均待機時間を取得します。 これにより、作成が設定されます。
 
-母集団の平均と標準偏差を調べるために、[広く知ら](http://www.mathsisfun.com/data/standard-deviation.html)れている数式を実装して `μ` `σ` います。 すべてのアクティブな HDD について、平均待機時間と母集団平均を比較し、標準偏差で除算します。 生の値は保持されるので、結果は得 `Sort-Object` られますが、整形のヘルパー関数を使用して、表示される内容を確認することができ `Format-Latency` ます ( `Format-StandardDeviation` 省略可能)。
+母集団の平均と標準偏差を調べるために、 [広く知ら](http://www.mathsisfun.com/data/standard-deviation.html) れている数式を実装して `μ` `σ` います。 すべてのアクティブな HDD について、平均待機時間と母集団平均を比較し、標準偏差で除算します。 生の値は保持されるので、結果は得 `Sort-Object` られますが、整形のヘルパー関数を使用して、表示される内容を確認することができ `Format-Latency` ます ( `Format-StandardDeviation` 省略可能)。
 
 いずれかのドライブが +3 σよりも大きい場合は、 `Write-Host` 赤で点灯します。それ以外の場合は緑になります。
 
@@ -201,7 +202,7 @@ Else {
 
 ## <a name="sample-3-noisy-neighbor-thats-write"></a>サンプル 3: 雑音の多い近隣 これで書き込みが可能です。
 
-パフォーマンス履歴は、*現時点*でも質問に回答できます。 新しい測定値は、10秒ごとにリアルタイムで使用できます。 このサンプルでは、タイムフレームのシリーズを使用して、 `VHD.Iops.Total` `MostRecent` クラスター内のすべてのホスト間で最も多くの記憶域 IOPS を消費している仮想マシン ("noisiest" など) を特定し、アクティビティの読み取り/書き込みの内訳を表示します。
+パフォーマンス履歴は、 *現時点* でも質問に回答できます。 新しい測定値は、10秒ごとにリアルタイムで使用できます。 このサンプルでは、タイムフレームのシリーズを使用して、 `VHD.Iops.Total` `MostRecent` クラスター内のすべてのホスト間で最も多くの記憶域 IOPS を消費している仮想マシン ("noisiest" など) を特定し、アクティビティの読み取り/書き込みの内訳を表示します。
 
 ### <a name="screenshot"></a>Screenshot
 
@@ -257,7 +258,7 @@ $Output | Sort-Object RawIopsTotal -Descending | Select-Object -First 10 | Forma
 
 ### <a name="screenshot"></a>Screenshot
 
-次のスクリーンショットでは、1つの*FABRIKAM NX-4 Pro #2*最後の日にピークされていることがわかります。
+次のスクリーンショットでは、1つの *FABRIKAM NX-4 Pro #2* 最後の日にピークされていることがわかります。
 
 ![PowerShell のスクリーンショット](media/performance-history/Show-NetworkSaturation.png)
 
@@ -266,7 +267,7 @@ $Output | Sort-Object RawIopsTotal -Descending | Select-Object -First 10 | Forma
 `Invoke-Command`すべてのサーバーに対して上記のトリックを繰り返し、にパイプを実行し `Get-NetAdapter` `Get-ClusterPerf` ます。 その過程で、2つの関連するプロパティ ( `LinkSpeed` "10 Gbps" のような文字列) と、100億のような生の整数を取得します `Speed` 。 は、 `Measure-Object` 過去1日の平均とピークを取得するために使用します (リマインダー: 期間内の各測定値は `LastDay` 5 分を表します)。また、1バイトあたり8ビットずつ乗算され、りんごの比較が実現されます。
 
    > [!NOTE]
-   > Chelsio などの一部のベンダーは、*ネットワークアダプター*のパフォーマンスカウンターにリモートダイレクトメモリアクセス (RDMA) アクティビティを含めているため、シリーズに含まれてい `NetAdapter.Bandwidth.Total` ます。 Mellanox のような他の人は、そうでない場合があります。 ベンダーがない場合は、 `NetAdapter.Bandwidth.RDMA.Total` このスクリプトのバージョンに系列を追加してください。
+   > Chelsio などの一部のベンダーは、 *ネットワークアダプター* のパフォーマンスカウンターにリモートダイレクトメモリアクセス (RDMA) アクティビティを含めているため、シリーズに含まれてい `NetAdapter.Bandwidth.Total` ます。 Mellanox のような他の人は、そうでない場合があります。 ベンダーがない場合は、 `NetAdapter.Bandwidth.RDMA.Total` このスクリプトのバージョンに系列を追加してください。
 
 ### <a name="script"></a>スクリプト
 
@@ -329,7 +330,7 @@ $Output | Sort-Object PsComputerName, InterfaceDescription | Format-Table PsComp
 
 ### <a name="screenshot"></a>Screenshot
 
-次のスクリーンショットでは、*バックアップ*ボリュームが1日あたり約 15 GB を追加していることがわかります。
+次のスクリーンショットでは、 *バックアップ* ボリュームが1日あたり約 15 GB を追加していることがわかります。
 
 ![PowerShell のスクリーンショット](media/performance-history/Show-StorageTrend.png)
 
@@ -337,7 +338,7 @@ $Output | Sort-Object PsComputerName, InterfaceDescription | Format-Table PsComp
 
 ### <a name="how-it-works"></a>しくみ
 
-この `LastYear` 期間には1日あたり1つのデータポイントがあります。 傾向線に合わせるために必要なポイントは厳密に2つだけですが、実際には、14日など、さらに多くの点が必要になります。 を使用して、 `Select-Object -Last 14` [1, 14] の範囲の*x*の配列 *(x, y)* を設定します。 これらのポイントを使用して、単純な[線形最小二乗アルゴリズム](http://mathworld.wolfram.com/LeastSquaresFitting.html)を実装 `$A` し、 `$B` 最も近い*y = ax + b*の行をパラメーター化します。 この後も、高校にようこそ。
+この `LastYear` 期間には1日あたり1つのデータポイントがあります。 傾向線に合わせるために必要なポイントは厳密に2つだけですが、実際には、14日など、さらに多くの点が必要になります。 を使用して、 `Select-Object -Last 14` [1, 14] の範囲の *x* の配列 *(x, y)* を設定します。 これらのポイントを使用して、単純な [線形最小二乗アルゴリズム](http://mathworld.wolfram.com/LeastSquaresFitting.html) を実装 `$A` し、 `$B` 最も近い *y = ax + b* の行をパラメーター化します。 この後も、高校にようこそ。
 
 ボリュームのプロパティを `SizeRemaining` 傾向 (傾斜) で割ることによって、 `$A` crudely は、ボリュームがいっぱいになるまで、現在の記憶域の増加率における日数を見積もることができます。 `Format-Bytes`、 `Format-Trend` 、および `Format-Days` ヘルパー関数は、出力を整形します。
 
@@ -450,7 +451,7 @@ $Output | Format-Table
 
 ### <a name="how-it-works"></a>しくみ
 
-上で紹介した `Invoke-Command` トリックを `Get-VM` すべてのサーバーに対して繰り返します。 を使用し `Measure-Object -Average` て、各 VM の毎月の平均を取得し、次にを使用し `Sort-Object` て `Select-Object -First 10` スコアボードを取得します。 (または、これが*最も必要*なリストかもしれません)。
+上で紹介した `Invoke-Command` トリックを `Get-VM` すべてのサーバーに対して繰り返します。 を使用し `Measure-Object -Average` て、各 VM の毎月の平均を取得し、次にを使用し `Sort-Object` て `Select-Object -First 10` スコアボードを取得します。 (または、これが *最も必要* なリストかもしれません)。
 
 ### <a name="script"></a>スクリプト
 

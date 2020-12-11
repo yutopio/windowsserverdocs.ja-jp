@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「ディレクトリレプリケーションをサポートする DNS 機能の確認」を参照してください。
 ms.assetid: 709353b0-b913-4367-8580-44745183e2bc
 title: ディレクトリ レプリケーションをサポートする DNS 機能を確認する
 ms.author: daveba
 ms.date: 05/31/2017
 author: Femila
-ms.openlocfilehash: 0a79a4b73a9e3d610408076c8e7526f504055d53
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 540b62236acb9a1026219193de208b2948c2b12d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93071254"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046310"
 ---
 # <a name="verify-dns-functionality-to-support-directory-replication"></a>ディレクトリ レプリケーションをサポートする DNS 機能を確認する
 
@@ -40,7 +41,7 @@ ms.locfileid: "93071254"
 ### <a name="to-verify-basic-dns-functionality"></a>基本的な DNS 機能を確認するには:
 
 
-1. テストするドメインコントローラー、または Active Directory Domain Services (AD DS) ツールがインストールされているドメインメンバーコンピューターで、管理者としてコマンドプロンプトを開きます。 管理者としてコマンド プロンプトを開くには、[ **スタート** ] ボタンをクリックします。
+1. テストするドメインコントローラー、または Active Directory Domain Services (AD DS) ツールがインストールされているドメインメンバーコンピューターで、管理者としてコマンドプロンプトを開きます。 管理者としてコマンド プロンプトを開くには、[**スタート**] ボタンをクリックします。
 2. [検索開始] で、「コマンド プロンプト」と入力します。
 3. [スタート] メニューの上部で [コマンド プロンプト] を右クリックしてから [管理者として実行] をクリックします。 [ユーザー アカウント制御] ダイアログ ボックスが表示されたら、表示された操作が正しいことを確認し、[続行] をクリックします。
 4. コマンドプロンプトで、次のコマンドを入力し、enter キーを押します。 `dcdiag /test:dns /v /s:<DCName> /DnsBasic /f:dcdiagreport.txt`
@@ -73,8 +74,8 @@ ms.locfileid: "93071254"
 - **エイリアス (CNAME):** レプリケーションパートナーを検索するグローバル一意識別子 (GUID) ベースのリソースレコード
 - **ホスト (A):**  ドメインコントローラーの IP アドレスを含むホストリソースレコード
 - **LDAP SRV:** ldap サーバーを検索するサービス (SRV) リソースレコード
-- **GC SRV** : グローバルカタログサーバーを検索するサービス (SRV) リソースレコード
-- **PDC SRV** : プライマリドメインコントローラー (pdc) エミュレーターの操作マスターを検索するサービス (srv) リソースレコード
+- **GC SRV**: グローバルカタログサーバーを検索するサービス (SRV) リソースレコード
+- **PDC SRV**: プライマリドメインコントローラー (pdc) エミュレーターの操作マスターを検索するサービス (srv) リソースレコード
 
 エイリアス (CNAME) リソースレコードの登録だけを確認するには、次の手順に従います。
 

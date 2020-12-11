@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「WID を使用したフェデレーションサーバーファーム」を参照してください。
 ms.assetid: 663a2482-33d1-4c19-8607-2e24eef89fcb
 title: WID を使用してフェデレーションサーバーファームを AD FS する
 author: billmath
@@ -6,20 +7,20 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: be8a54e171e304fab5911050d2ad60507064ec7d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ffc15afdea63755689d78c6567ea6d0a4cb8af69
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945407"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046960"
 ---
 # <a name="federation-server-farm-using-wid"></a>WID を使用するフェデレーション サーバー ファーム
 
 Active Directory フェデレーションサービス (AD FS) AD FS の既定の \( トポロジ \) は、Windows Internal Database WID を使用するフェデレーションサーバーファームです \( 。これは、 \) 組織のフェデレーションサービスをホストする最大5台のフェデレーションサーバーで構成されます。 このトポロジでは、AD FS は、そのファームに参加しているすべてのフェデレーションサーバーの AD FS 構成データベースのストアとして WID を使用します。 ファームでは、構成データベースのフェデレーション サービス データがファーム内の各サーバー間で複製されて管理されます。
 
-ファームに最初のフェデレーション サーバーが作成されると、新しいフェデレーション サービスも作成されます。 AD FS 構成データベースに WID を使用する場合、ファームで作成する最初のフェデレーションサーバーは*プライマリフェデレーションサーバー*と呼ばれます。 つまり、このコンピューターは \/ AD FS 構成データベースの読み取り/書き込みコピーを使用して構成されます。
+ファームに最初のフェデレーション サーバーが作成されると、新しいフェデレーション サービスも作成されます。 AD FS 構成データベースに WID を使用する場合、ファームで作成する最初のフェデレーションサーバーは *プライマリフェデレーションサーバー* と呼ばれます。 つまり、このコンピューターは \/ AD FS 構成データベースの読み取り/書き込みコピーを使用して構成されます。
 
-このファーム用に構成した他のすべてのフェデレーションサーバーは、プライマリフェデレーションサーバーで行われたすべての変更を、ローカルに格納されている AD FS 構成データベースの読み取り専用コピーにレプリケートする必要があるため、*セカンダリフェデレーション*サーバーと呼ばれ \- ます。
+このファーム用に構成した他のすべてのフェデレーションサーバーは、プライマリフェデレーションサーバーで行われたすべての変更を、ローカルに格納されている AD FS 構成データベースの読み取り専用コピーにレプリケートする必要があるため、 *セカンダリフェデレーション* サーバーと呼ばれ \- ます。
 
 > [!NOTE]
 > 負荷分散構成では、少なくとも2つのフェデレーションサーバーを使用することをお勧めし \- ます。
@@ -36,7 +37,7 @@ Active Directory フェデレーションサービス (AD FS) AD FS の既定の
 -   冗長でスケーラブルなサービスを必要とする小規模の組織
 
 > [!NOTE]
-> 大規模なデータベースを使用する組織は、このセクションの後半で説明する SQL Server 展開トポロジを[使用したフェデレーションサーバーファーム](Federation-Server-Farm-Using-SQL-Server.md)の使用を検討する必要があります。 ネットワークの外部からログインするユーザーを持つ組織は、 [SQL Server トポロジを使用し](Federation-Server-Farm-Using-SQL-Server.md)て、 [WID とプロキシトポロジを使用するフェデレーションサーバーファーム](Federation-Server-Farm-Using-WID-and-Proxies.md)またはフェデレーションサーバーファームを使用することを検討する必要があります。
+> 大規模なデータベースを使用する組織は、このセクションの後半で説明する SQL Server 展開トポロジを [使用したフェデレーションサーバーファーム](Federation-Server-Farm-Using-SQL-Server.md) の使用を検討する必要があります。 ネットワークの外部からログインするユーザーを持つ組織は、 [SQL Server トポロジを使用し](Federation-Server-Farm-Using-SQL-Server.md)て、 [WID とプロキシトポロジを使用するフェデレーションサーバーファーム](Federation-Server-Farm-Using-WID-and-Proxies.md)またはフェデレーションサーバーファームを使用することを検討する必要があります。
 
 ### <a name="what-are-the-benefits-of-using-this-topology"></a>このトポロジを使用する利点とは
 
@@ -67,7 +68,7 @@ NLB ホストは、この NLB クラスターで定義されている設定を�
 > [!NOTE]
 > この単一の NLB ホストで障害が発生した場合、ユーザーはフェデレーションアプリケーションまたはサービスにアクセスできなくなります。 ビジネス要件でこのような単一障害点を容認できない場合は、別の NLB ホストを追加します。
 
-フェデレーションサーバーで使用するネットワーク環境を構成する方法の詳細については、AD FS 設計ガイドの「[フェデレーションサーバーの名前解決の要件](Name-Resolution-Requirements-for-Federation-Servers.md)」を参照してください。
+フェデレーションサーバーで使用するネットワーク環境を構成する方法の詳細については、AD FS 設計ガイドの「 [フェデレーションサーバーの名前解決の要件](Name-Resolution-Requirements-for-Federation-Servers.md) 」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

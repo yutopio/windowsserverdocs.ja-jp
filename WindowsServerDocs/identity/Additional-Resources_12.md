@@ -1,18 +1,19 @@
 ---
+description: '詳細情報: その他のリソース'
 ms.assetid: 20dff664-2370-469b-96a8-df1acf7c7f12
-title: その他の情報
+title: その他のリソース
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
-ms.openlocfilehash: fc42d406f150c96fe40e00888bc3f42a13bb2774
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 382ae7c0ece085ab17a325a7fece79dfd3cdaf7b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965219"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047160"
 ---
-# <a name="additional-resources"></a>その他の情報
+# <a name="additional-resources"></a>その他のリソース
 
 >適用先:Windows Server
 

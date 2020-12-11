@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 要求対応ではない証明書利用者信頼を作成する'
 ms.assetid: 7b7ae389-5032-44f7-9c0a-94398c3e4d88
 title: 要求対応ではない証明書利用者信頼を作成する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d8a3c8e34c9b1ca655447b52152eb9d34c466c38
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5238f93656c1d918122fc9cbb3a6b73232fce548
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967300"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048870"
 ---
 # <a name="create-a-non-claims-aware-relying-party-trust"></a>要求対応ではない証明書利用者信頼を作成する
 
@@ -22,15 +23,15 @@ AD FS 管理スナップインで \- は、要求に対応していない \- \- 
 
 AD FS 管理スナップインを使用して、要求に対応していない新しい証明書利用者信頼を追加するには、 \- \- \- 次の手順を実行します。
 
-この手順を完了するには、ローカル コンピューター上の **Administrators** または同等のメンバーシップが最低限必要です。  適切なアカウントおよびグループメンバーシップの使用方法の詳細については、「[ローカルおよびドメインの既定のグループ](https://go.microsoft.com/fwlink/?LinkId=83477)」を参照してください。
+この手順を完了するには、ローカル コンピューター上の **Administrators** または同等のメンバーシップが最低限必要です。  適切なアカウントおよびグループメンバーシップの使用方法の詳細については、「 [ローカルおよびドメインの既定のグループ](https://go.microsoft.com/fwlink/?LinkId=83477)」を参照してください。
 
 ## <a name="to-create-a-non-claims-aware-relying-party-trust-manually"></a>要求対応ではない証明書利用者信頼を手動で作成するには
 1. サーバー マネージャーで、 **[ツール]** をクリックし、次に **[AD FS の管理]** を選択します。
 
-2.  [**操作**] の [**証明書利用者信頼の追加**] をクリックします。
+2.  [ **操作**] の [ **証明書利用者信頼の追加**] をクリックします。
 ![証明書利用者](media/Create-a-Relying-Party-Trust/addtrust1.PNG)
 
-3.  [**ようこそ**] ページで、[**要求に対応しない**] を選択し、[**開始**] をクリックします。
+3.  [ **ようこそ** ] ページで、[ **要求に対応しない** ] を選択し、[ **開始**] をクリックします。
 ![証明書利用者](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon1.PNG)
 
 4.  **[表示名の指定]** ページで、**[表示名]** に名前を入力し、**[メモ]** にこの証明書利用者の説明を入力して、**[次へ]** をクリックします。
@@ -48,5 +49,5 @@ AD FS 管理スナップインを使用して、要求に対応していない�
 8. **[完了]** ページで、**[閉じる]** をクリックします。 これにより、自動的に **[要求規則の編集]** ダイアログ ボックスが表示されます。
 ![証明書利用者](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon6.PNG)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [AD FS の運用](../ad-fs-operations.md)

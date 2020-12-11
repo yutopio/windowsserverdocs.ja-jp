@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ハイパフォーマンスネットワーク (HPN)」を参照してください。
 title: 高パフォーマンスネットワーク (HPN)
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
@@ -6,12 +7,12 @@ manager: dougkim
 ms.author: lizross
 author: eross-msft
 ms.date: 09/20/2018
-ms.openlocfilehash: 7b0e18f2ab6673357c225468d214e8ed30ed731e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c2427c01d7e5ee6433de1764ffac1d0c071b4dd7
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966469"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045240"
 ---
 # <a name="high-performance-networking-hpn"></a>高パフォーマンスネットワーク (HPN)
 

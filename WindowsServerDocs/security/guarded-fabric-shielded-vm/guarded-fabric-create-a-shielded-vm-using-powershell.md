@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: PowerShell を使用してシールドされた VM を作成する'
 title: PowerShell を使用してシールドされた VM を作成する
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 09/25/2019
-ms.openlocfilehash: 3272f1dd75f3e8df506341d49c1c32346bb5dbce
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 51a91559c808792d0be71a5a96573c96799822f7
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971329"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047420"
 ---
 # <a name="create-a-shielded-vm-using-powershell"></a>PowerShell を使用してシールドされた VM を作成する
 
@@ -41,16 +42,16 @@ Save-VolumeSignatureCatalog -TemplateDiskPath "C:\temp\MyTemplateDisk.vhdx" -Vol
 シールドされた VM を実行する仮想化ファブリックごとに、ファブリックの HGS クラスターのガーディアンメタデータを取得する必要があります。
 ホスティングプロバイダーは、この情報を提供できる必要があります。
 
-エンタープライズ環境で、HGS サーバーと通信できる場合、ガーディアンのメタデータは*http:// \<HGSCLUSTERNAME\> /Keyprotection/Service/-07/metadata.xml*で入手できます。
+エンタープライズ環境で、HGS サーバーと通信できる場合、ガーディアンのメタデータは *http:// \<HGSCLUSTERNAME\> /Keyprotection/Service/-07/metadata.xml* で入手できます。
 
 ## <a name="create-shielding-data-pdk-file"></a>シールドデータ (PDK) ファイルの作成
 
 シールドデータは、テナント VM の所有者によって作成および所有され、シールドされた VM の管理者パスワードなど、ファブリック管理者から保護する必要があるシールドされた Vm を作成するために必要なシークレットを含みます。
 シールドデータは、HGS サーバーとテナントのみが暗号化を解除できるように暗号化されます。
 テナントまたは VM の所有者によって作成された後、結果として得られる PDK ファイルを保護されたファブリックにコピーする必要があります。
-詳細については、「[シールドデータとは」および「必要な理由](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary)」を参照してください。
+詳細については、「 [シールドデータとは」および「必要な理由](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary)」を参照してください。
 
-また、無人インストール応答ファイル (Windows の場合は unattend.xml、Linux の場合は異なる) が必要です。 応答ファイルに含める内容のガイダンスについては[、「応答ファイルの作成](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file)」を参照してください。
+また、無人インストール応答ファイル (Windows の場合は unattend.xml、Linux の場合は異なる) が必要です。 応答ファイルに含める内容のガイダンスについては [、「応答ファイルの作成](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file) 」を参照してください。
 
 シールドされた Vm のリモートサーバー管理ツールがインストールされているコンピューターで、次のコマンドレットを実行します。
 Linux VM 用の PDK を作成する場合は、Windows Server バージョン1709以降を実行しているサーバーでこれを行う必要があります。
@@ -77,7 +78,7 @@ Windows Server 2016 を実行しているホストでは、プロビジョニン
 
 テンプレートディスクファイル (ServerOS .vhdx) と PDK ファイル (contoso. pdk) を保護されたホストにコピーして、展開の準備をします。
 
-保護されたホストで、保護されたファブリックツールの PowerShell モジュールをインストールします。このモジュールには、プロビジョニングプロセスを簡略化する ShieldedVM コマンドレットが含まれています。 保護されたホストがインターネットにアクセスできる場合は、次のコマンドを実行します。
+保護されたホストで、保護されたファブリックツールの PowerShell モジュールをインストールします。このモジュールには、プロビジョニングプロセスを簡略化するために New-ShieldedVM コマンドレットが含まれています。 保護されたホストがインターネットにアクセスできる場合は、次のコマンドを実行します。
 
 ```powershell
 Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
@@ -129,7 +130,7 @@ Add-ClusterVirtualMachineRole -VMName 'MyShieldedVM' -Cluster <Hyper-V cluster n
 
 シールドされた VM をクラスター内でライブ移行できるようになりました。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [VMM を使用してシールドを展開する](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)

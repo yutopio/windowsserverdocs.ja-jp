@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Windows PowerShell を使用したレプリケーションとトポロジ管理の Active Directory に関するページを参照してください。
 ms.assetid: 853b7f02-bc69-416e-87b1-556f51cb2cea
 title: Windows PowerShell を使用した Active Directory レプリケーションおよびトポロジ管理
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 8a3b238f056f337aa72ca204539c50f3595419fc
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 0e7ab0c012d31f4be80b0d66509260a603461e78
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070484"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046430"
 ---
 # <a name="active-directory-replication-and-topology-management-using-windows-powershell"></a>Windows PowerShell を使用した Active Directory レプリケーションおよびトポロジ管理
 

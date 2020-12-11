@@ -1,4 +1,5 @@
 ---
+description: 詳細については、記憶域スペースダイレクトのパフォーマンス履歴を参照してください。
 title: 記憶域スペース ダイレクトのパフォーマンス履歴
 ms.author: cosdar
 manager: eldenc
@@ -6,18 +7,18 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: f3c0babfad0ebecdac40262a783ecf683d6dc1e8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b90f010d45dc9e9013c2bc661232fb444247b661
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87968789"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048920"
 ---
 # <a name="performance-history-for-storage-spaces-direct"></a>記憶域スペース ダイレクトのパフォーマンス履歴
 
 > 適用対象:Windows Server 2019
 
-パフォーマンス履歴は、ホストサーバー、ドライブ、ボリューム、仮想マシンなどの過去のコンピューティング、メモリ、ネットワーク、およびストレージの測定に、[記憶域スペースダイレクト](storage-spaces-direct-overview.md)管理者が簡単にアクセスできるようにする新しい機能です。 パフォーマンス履歴は、最大1年間、自動的に収集され、クラスターに格納されます。
+パフォーマンス履歴は、ホストサーバー、ドライブ、ボリューム、仮想マシンなどの過去のコンピューティング、メモリ、ネットワーク、およびストレージの測定に、 [記憶域スペースダイレクト](storage-spaces-direct-overview.md) 管理者が簡単にアクセスできるようにする新しい機能です。 パフォーマンス履歴は、最大1年間、自動的に収集され、クラスターに格納されます。
 
    > [!IMPORTANT]
    > この機能は、Windows Server 2019 で新しく追加された機能です。 Windows Server 2016 では使用できません。
@@ -83,17 +84,17 @@ Get-ClusterPerformanceHistory
 ```
 
    > [!TIP]
-   > 一部のキーストロークを保存するには、 **Get ClusterPerf**エイリアスを使用します。
+   > 一部のキーストロークを保存するには、 **Get ClusterPerf** エイリアスを使用します。
 
 ### <a name="example"></a>例
 
-過去1時間の仮想マシン*Myvm*の CPU 使用率を取得します。
+過去1時間の仮想マシン *Myvm* の CPU 使用率を取得します。
 
 ```PowerShell
 Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 ```
 
-より高度な例については、公開されている[サンプルスクリプト](performance-history-scripting.md)を参照してください。ピーク値の検索、平均の計算、傾向線のプロット、外れ値検出の実行などを行うためのスタートコードが用意されています。
+より高度な例については、公開されている [サンプルスクリプト](performance-history-scripting.md) を参照してください。ピーク値の検索、平均の計算、傾向線のプロット、外れ値検出の実行などを行うためのスタートコードが用意されています。
 
 ### <a name="specify-the-object"></a>オブジェクトを指定する
 
@@ -151,7 +152,7 @@ Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 
 ボリュームは記憶域スペースによってバックアップされ、クラスター内のノードの数に応じて、単純な双方向ミラーまたは3方向ミラー回復性のいずれかを使用します。 記憶域スペースダイレクトの他のボリュームと同様に、ドライブまたはサーバーの障害が発生した後に修復されます。
 
-ボリュームは ReFS を使用しますが、クラスターの共有ボリューム (CSV) ではないため、クラスターグループの所有者ノードにのみ表示されます。 自動的に作成されるだけでなく、このボリュームに関して特別なことはありません。これは、表示、参照、サイズ変更、または削除 (推奨されません) です。 問題が発生した場合は、「[トラブルシューティング](#troubleshooting)」を参照してください。
+ボリュームは ReFS を使用しますが、クラスターの共有ボリューム (CSV) ではないため、クラスターグループの所有者ノードにのみ表示されます。 自動的に作成されるだけでなく、このボリュームに関して特別なことはありません。これは、表示、参照、サイズ変更、または削除 (推奨されません) です。 問題が発生した場合は、「 [トラブルシューティング](#troubleshooting)」を参照してください。
 
 ### <a name="object-discovery-and-data-collection"></a>オブジェクト検出とデータ収集
 
@@ -161,11 +162,11 @@ Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 
 ### <a name="handling-measurement-gaps"></a>測定ギャップの処理
 
-期間で説明されているよう[に、測定](#timeframes)値をより詳細な系列にマージすると、不足しているデータの期間は除外されます。 たとえば、サーバーが30分間停止し、次の30分間に50% の CPU で実行されている場合、 `ClusterNode.Cpu.Usage` その時間の平均は 50% (25%) として正しく記録されます。
+期間で説明されているよう [に、測定](#timeframes)値をより詳細な系列にマージすると、不足しているデータの期間は除外されます。 たとえば、サーバーが30分間停止し、次の30分間に50% の CPU で実行されている場合、 `ClusterNode.Cpu.Usage` その時間の平均は 50% (25%) として正しく記録されます。
 
 ### <a name="extensibility-and-customization"></a>拡張性とカスタマイズ
 
-パフォーマンス履歴はスクリプトに適しています。 PowerShell を使用して、データベースから使用可能な履歴を直接取得し、自動レポートまたはアラートを構築したり、保管のためのエクスポート履歴を作成したり、独自の視覚エフェクトをロールしたりできます。便利なスタートコードについては、公開されている[サンプルスクリプト](performance-history-scripting.md)を参照してください。
+パフォーマンス履歴はスクリプトに適しています。 PowerShell を使用して、データベースから使用可能な履歴を直接取得し、自動レポートまたはアラートを構築したり、保管のためのエクスポート履歴を作成したり、独自の視覚エフェクトをロールしたりできます。便利なスタートコードについては、公開されている [サンプルスクリプト](performance-history-scripting.md) を参照してください。
 
 追加のオブジェクト、期間、または系列の履歴を収集することはできません。
 
@@ -204,7 +205,7 @@ Stop-ClusterPerformanceHistory -DeleteHistory
 
 ### <a name="the-cmdlet-doesnt-work"></a>コマンドレットが機能しない
 
-"" と*いう用語は、コマンドレットの名前として認識されません*"というエラーメッセージが表示されます。これは、機能が使用できないか、インストールされていないことを意味します。 Windows Server Insider Preview ビルド17692以降がインストールされていること、および記憶域スペースダイレクト実行していることを確認します。
+"" と *いう用語は、コマンドレットの名前として認識されません*"というエラーメッセージが表示されます。これは、機能が使用できないか、インストールされていないことを意味します。 Windows Server Insider Preview ビルド17692以降がインストールされていること、および記憶域スペースダイレクト実行していることを確認します。
 
    > [!NOTE]
    > この機能は、Windows Server 2016 以前では使用できません。
@@ -219,7 +220,7 @@ Stop-ClusterPerformanceHistory -DeleteHistory
 
 2. ページを最新の情報に更新するか、次のバックグラウンド更新 (最大30秒) 待ちます。
 
-3. 一部の特殊なオブジェクトは、クラスター化されていない仮想マシンや、クラスターの共有ボリューム (CSV) ファイルシステムを使用しないボリュームなど、パフォーマンス履歴から除外されます。 詳細については、「[ボリュームのパフォーマンス履歴](performance-history-for-volumes.md)」など、オブジェクトの種類のサブトピックを確認してください。
+3. 一部の特殊なオブジェクトは、クラスター化されていない仮想マシンや、クラスターの共有ボリューム (CSV) ファイルシステムを使用しないボリュームなど、パフォーマンス履歴から除外されます。 詳細については、「 [ボリュームのパフォーマンス履歴](performance-history-for-volumes.md)」など、オブジェクトの種類のサブトピックを確認してください。
 
 4. 問題が引き続き発生する場合は、管理者として PowerShell を開き、コマンドレットを実行し `Get-ClusterPerf` ます。 このコマンドレットには、Clusterパフォーマンス履歴ボリュームが見つからない場合など、一般的な問題を特定するトラブルシューティングロジックが含まれており、修復の手順が示されています。
 

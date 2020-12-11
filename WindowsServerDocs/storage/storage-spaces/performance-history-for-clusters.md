@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「クラスターのパフォーマンス履歴」を参照してください。
 title: クラスターのパフォーマンス履歴
 ms.author: cosdar
 manager: eldenc
@@ -6,12 +7,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: ea80be97e3940850f9892c50c534c3449fd3ecdb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 14e2c493b4d93268d7d3e458c3cd3b2f53de1e1f
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954669"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046170"
 ---
 # <a name="performance-history-for-clusters"></a>クラスターのパフォーマンス履歴
 

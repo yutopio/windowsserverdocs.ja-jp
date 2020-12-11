@@ -1,4 +1,5 @@
 ---
+description: 詳細については、パスワードの有効期限要求を送信するように AD FS を構成する
 ms.assetid: 03c82f43-ae2d-4038-b286-ae3858aed35a
 title: パスワードの有効期限クレームを送信するように AD FS を構成する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: e53c33f1fef30570db46cf658bd1481343e846cd
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d043f86486d0f3370a310ec12cf1d0dfd937795b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962546"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046710"
 ---
 # <a name="configure-ad-fs-to-send-password-expiry-claims"></a>パスワードの有効期限クレームを送信するように AD FS を構成する
 
@@ -32,5 +33,5 @@ c1:[Type == "http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
 > [!NOTE]
 > 14日間の期間があるため、パスワードの有効期限が14日以内に切れる場合にのみ、送信された要求に値が設定されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [AD FS の運用](../ad-fs-operations.md)

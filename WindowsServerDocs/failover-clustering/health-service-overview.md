@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Windows Server でのヘルスサービスに関するページを参照してください。
 title: Windows Server でのヘルスサービス
 manager: eldenc
 ms.author: cosdar
@@ -6,12 +7,12 @@ ms.topic: article
 ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin
 ms.date: 02/09/2018
-ms.openlocfilehash: 69bf8d66fdd3e7fac4066791d0521173484a894f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 486234923a9eff0c185249701b4f9ee28c752e24
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953418"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047730"
 ---
 # <a name="health-service-in-windows-server"></a>Windows Server でのヘルスサービス
 
@@ -23,19 +24,19 @@ ms.locfileid: "87953418"
 
 既定では、ヘルス サービスは記憶域スペース ダイレクトで有効になっています。 ヘルス サービスを設定または開始するために、他の操作は必要ありません。 記憶域スペースダイレクトの詳細については、「 [Windows Server 2016 の記憶域スペースダイレクト](../storage/storage-spaces/storage-spaces-direct-overview.md)」を参照してください。
 
-## <a name="reports"></a>Reports
+## <a name="reports"></a>レポート
 
-「[ヘルスサービスレポート](health-service-reports.md)」を参照してください。
+「 [ヘルスサービスレポート](health-service-reports.md)」を参照してください。
 
 ## <a name="faults"></a>障害
 
-「[ヘルスサービスのエラー](health-service-faults.md)」を参照してください。
+「 [ヘルスサービスのエラー](health-service-faults.md)」を参照してください。
 
-## <a name="actions"></a>アクション
+## <a name="actions"></a>操作
 
-「[ヘルスサービスアクション](health-service-actions.md)」を参照してください。
+「 [ヘルスサービスアクション](health-service-actions.md)」を参照してください。
 
-## <a name="automation"></a>オートメーション
+## <a name="automation"></a>Automation
 
 このセクションでは、ディスクのライフサイクルにおいて、ヘルス サービスで自動化されるワークフローについて説明します。
 
@@ -54,7 +55,7 @@ ms.locfileid: "87953418"
 -   応答不能: 物理ディスクで 5.0 秒以上の待機時間が 1 時間以内に 3 回以上発生しています。
 
 >[!NOTE]
-> 一度に多数の物理ディスク、1 つのノード全体、またはストレージ格納装置の接続が失われた場合、こうしたディスクが根本原因である可能性は低いため、ヘルス サービスではこれらのディスクを使用停止*しません*。
+> 一度に多数の物理ディスク、1 つのノード全体、またはストレージ格納装置の接続が失われた場合、こうしたディスクが根本原因である可能性は低いため、ヘルス サービスではこれらのディスクを使用停止 *しません*。
 
 使用停止されたディスクが他の多くの物理ディスクのキャッシュとして機能していた場合、これらの物理ディスクは別のキャッシュ ディスクに自動的に再割り当てされます (利用可能なキャッシュ ディスクがある場合)。 ユーザーの操作は特に必要ありません。
 
@@ -90,7 +91,7 @@ ms.locfileid: "87953418"
 
 ### <a name="usage"></a>使用方法
 
-サポートされているコンポーネントドキュメントでは、XML による構文を使用します。 無料の[Visual Studio Code](https://code.visualstudio.com/)やメモ帳などの任意のテキストエディターを使用して、保存して再利用できる XML ドキュメントを作成することをお勧めします。
+サポートされているコンポーネントドキュメントでは、XML による構文を使用します。 無料の [Visual Studio Code](https://code.visualstudio.com/) やメモ帳などの任意のテキストエディターを使用して、保存して再利用できる XML ドキュメントを作成することをお勧めします。
 
 #### <a name="sections"></a>セクション
 
@@ -98,7 +99,7 @@ ms.locfileid: "87953418"
 
 セクションが指定されている場合、に表示され `Disks` ているドライブ (as `Disk` ) のみがプールに参加できます。 一覧にないドライブはプールに参加できないため、運用環境での使用が実質的に妨げられます。 このセクションを空のままにすると、すべてのドライブがプールに参加できるようになります。
 
-セクションが指定されている場合は、表示され `Cache` ているドライブ (as `CacheDisk` ) だけがキャッシュに使用されます。 このセクションを空のままにした場合、記憶域スペースダイレクト[メディアの種類とバスの種類に基づいて推測](../storage/storage-spaces/understand-the-cache.md#cache-drives-are-selected-automatically)が試行されます。 ここに表示されているドライブは、にも表示され `Disks` ます。
+セクションが指定されている場合は、表示され `Cache` ているドライブ (as `CacheDisk` ) だけがキャッシュに使用されます。 このセクションを空のままにした場合、記憶域スペースダイレクト [メディアの種類とバスの種類に基づいて推測](../storage/storage-spaces/understand-the-cache.md#cache-drives-are-selected-automatically)が試行されます。 ここに表示されているドライブは、にも表示され `Disks` ます。
 
 >[!IMPORTANT]
 > サポートされているコンポーネントのドキュメントは、既にプールおよび使用されているドライブには、遡及的には適用されません。
@@ -164,7 +165,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.S
 Get-PhysicalDisk | Select Model, Manufacturer, FirmwareVersion
 ```
 
-## <a name="settings"></a>Settings
+## <a name="settings"></a>設定
 
 [ヘルスサービス設定](health-service-settings.md)を参照してください。
 

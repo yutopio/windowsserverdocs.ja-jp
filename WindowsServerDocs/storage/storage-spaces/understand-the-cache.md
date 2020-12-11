@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「記憶域スペースダイレクトでのキャッシュについて」を参照してください。
 title: 記憶域スペース ダイレクトのキャッシュについて
 ms.assetid: 69b1adc0-ee64-4eed-9732-0fb216777992
 ms.author: cosdar
@@ -7,12 +8,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 09/21/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 502b04676fcb9a9c7342e701e71be473890f9668
-ms.sourcegitcommit: 8a826e992f28a70e75137f876a5d5e61238a24e4
+ms.openlocfilehash: a6ab48a2079513e69538eb2673be4cf7d656b94f
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91365355"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047760"
 ---
 # <a name="understanding-the-cache-in-storage-spaces-direct"></a>記憶域スペース ダイレクトのキャッシュについて
 
@@ -130,7 +131,7 @@ SSD と HDD がある場合、SSD が HDD のキャッシュとして使用さ�
 
 ## <a name="handling-cache-drive-failures"></a>キャッシュ ドライブの障害の処理
 
-キャッシュ ドライブで障害が発生すると、まだステージング解除されていない書き込みはすべて*ローカル サーバーから*失われ、(他のサーバー上の) 他のコピーだけが存在する状態になります。 他のドライブ障害が発生した場合と同様に、記憶域スペースは、残っているコピーを調べて自動的に回復できます。
+キャッシュ ドライブで障害が発生すると、まだステージング解除されていない書き込みはすべて *ローカル サーバーから* 失われ、(他のサーバー上の) 他のコピーだけが存在する状態になります。 他のドライブ障害が発生した場合と同様に、記憶域スペースは、残っているコピーを調べて自動的に回復できます。
 
 一時的に、失われたキャッシュ ドライブにバインドされていた容量ドライブが異常と表示されます。 キャッシュの再バインドが (自動) 実行され、データの (自動) 修復が完了すると、再び正常として表示されます。
 
@@ -164,7 +165,7 @@ CSV キャッシュを使用するかどうかはユーザーが自由に選択�
 耐久性の高いドライブを使って同じ種類の耐久性の低いドライブをキャッシュするには、**Enable-ClusterS2D** コマンドレットの **-CacheDeviceModel** パラメーターに、キャッシュとして使用するドライブ モデルを指定します。 記憶域スペース ダイレクトが有効になると、そのモデルのすべてのドライブがキャッシュに使用されます。
 
    >[!TIP]
-   > モデルの文字列は、**Get-PhysicalDisk**の出力に示されるものと完全に一致させる必要があります。
+   > モデルの文字列は、**Get-PhysicalDisk** の出力に示されるものと完全に一致させる必要があります。
 
 ####  <a name="example"></a>例
 
@@ -201,7 +202,7 @@ Enable-ClusterS2D -CacheDeviceModel "FABRIKAM NVME-1710"
 
 キャッシュの既定の動作をオーバーライドできます。 たとえば、オールフラッシュ デプロイでも、読み取りをキャッシュするように設定できます。 既定値がワークロードに合わないことが明らかな場合を除き、動作を変更することはお勧めしません。
 
-動作をオーバーライドするには、パラメーター **-CacheModeSSD** と **-CacheModeHDD** を指定して **Set-ClusterStorageSpacesDirect**コマンドレットを使用します。 **CacheModeSSD** パラメーターは、ソリッド ステート ドライブのキャッシュ時のキャッシュ動作を設定します。 **CacheModeHDD** パラメーターは、ハード ディスク ドライブのキャッシュ時のキャッシュ動作を設定します。 これは記憶域スペース ダイレクトを有効にした後、いつでも実行できます。
+動作をオーバーライドするには、パラメーター **-CacheModeSSD** と **-CacheModeHDD** を指定して **Set-ClusterStorageSpacesDirect** コマンドレットを使用します。 **CacheModeSSD** パラメーターは、ソリッド ステート ドライブのキャッシュ時のキャッシュ動作を設定します。 **CacheModeHDD** パラメーターは、ハード ディスク ドライブのキャッシュ時のキャッシュ動作を設定します。 これは記憶域スペース ダイレクトを有効にした後、いつでも実行できます。
 
 **Get-ClusterStorageSpacesDirect** を使用して、動作が設定されていることを確認できます。
 
@@ -249,8 +250,8 @@ Windows の組み込みのパフォーマンス モニター (PerfMon.exe) ユ�
 
 普遍的な規則ではありませんが、読み取りのキャッシュ ミスが多すぎる場合は、キャッシュのサイズが不足している可能性があるため、キャッシュ ドライブを追加してキャッシュを拡張することを検討してください。 キャッシュ ドライブまたは容量ドライブは、必要時にいつでも個別に追加できます。
 
-## <a name="additional-references"></a>その他のリファレンス
+## <a name="additional-references"></a>その他の参照情報
 
 - [ドライブと回復性の種類の選択](choosing-drives.md)
-- [フォールト トレランスとストレージの効率性](storage-spaces-fault-tolerance.md)
+- [フォールト トレランスと記憶域の効率](storage-spaces-fault-tolerance.md)
 - [記憶域スペース ダイレクトのハードウェア要件](storage-spaces-direct-hardware-requirements.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、AD FS での Uri の使用方法に関するページを参照してください。
 ms.assetid: 53ee93e2-09ea-4f8b-adb7-c24c59f055ea
 title: AD FS での URI の使用
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 25f017da1d450484110dd43b3bc8cb25cbe06afb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 236f75152c64cf841ce1196415d6f95e92a252ca
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937949"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045340"
 ---
 # <a name="how-uris-are-used-in-ad-fs"></a>AD FS での URI の使用
 Uniform Resource Identifier \( URI \) は、一意の識別子として使用される文字列です。  AD FS では、パートナー ネットワークのアドレスと構成オブジェクトの両方を識別するために URI を使用します。  パートナー ネットワーク アドレスの識別に使用されるときは、URI は常に URL です。  構成オブジェクトの識別に使用されるときは、URI は URN または URL の場合があります。  URI についての一般的な情報については、[RFC 2396](https://go.microsoft.com/fwlink/?LinkId=48289) および [RFC 3986](https://go.microsoft.com/fwlink/?LinkId=90453) を参照してください。
@@ -36,7 +37,7 @@ Uniform Resource Identifier \( URI \) は、一意の識別子として使用さ
 |要求の種類|この識別子は、要求の種類を定義するために使用されます。  このフェデレーション サービス、要求プロバイダー、および証明書利用者によって要求を送受信するときに使用されます。|フェデレーション サービスが要求プロバイダーから要求を受け取るとき、対応する要求プロバイダー信頼に関連付けられている要求規則により、管理者は要求の種類を比較して、要求を処理できます。  証明書利用者信頼に関連付けられている要求規則によっても、管理者は要求プロバイダー信頼規則からの要求から要求の種類を比較して、発行する要求を決定できます。|
 
 ## <a name="uri-prefix-matching-for-relying-party-identifiers"></a>証明書利用者の識別子と一致する URI プレフィックス
-URI のパス構文は階層的に編成され、すべて " \/ " 文字またはすべて ":" 文字で区切られます。したがって、パスは区切り文字に基づいてパス セクションに分割される場合があります。プレフィックスが一致する場合、各セクションは照合規則に従って完全一致である必要があり \( ます。これらの規則は一致の大文字と小文字の区別を制御し \) ます。 照合ルールの詳細については、前述の RFC を参照してください。
+URI のパス構文は階層的に編成され、すべて " \/ " 文字またはすべて ":" 文字で区切られます。  したがって、パスは区切り文字に基づいてパス セクションに分割される場合があります。  プレフィックスが一致する場合、各セクションは照合規則に従って完全一致である必要があり \( ます。これらの規則は一致の大文字と小文字の区別を制御し \) ます。 照合ルールの詳細については、前述の RFC を参照してください。
 
 証明書利用者がフェデレーション サービスへの要求で識別されたとき、AD FS は、プレフィックス一致ロジックを使用して、AD FS 構成データベースに一致する証明書利用者の信頼があるかどうかを判断します。
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「デバイス登録のテクニカルリファレンス」を参照してください。
 ms.assetid: 69ec592a-5499-4249-8ba0-afa356a8ff75
 title: デバイス登録のテクニカル リファレンス
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: fc42813829116cf3755d7807bec4e5fb00094c8e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: abe97d43e75bee50374334e33ffb8a29787ae688
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937981"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048070"
 ---
 # <a name="device-registration-technical-reference"></a>デバイス登録のテクニカル リファレンス
 デバイス登録サービス \( DRS \) は、windows Server 2012 R2 の Active Directory フェデレーションサービスロールに含まれる新しい windows サービスです。  DRS は、AD FS ファーム内のすべてのフェデレーション サーバーにインストールし、構成する必要があります。  DRS の展開の詳細については、「 [デバイス登録サービスを使用してフェデレーション サーバーを構成する](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486831(v=ws.11))」を参照してください。

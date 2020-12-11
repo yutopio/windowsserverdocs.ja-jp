@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Windows PowerShell を使用した Active Directory レプリケーションとトポロジ管理の概要 (レベル 100)'
 ms.assetid: c54b544f-cc32-4837-bb2d-a8656b22f3de
 title: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: ac50dad556ceb536a23486e20a02587a05d2e578
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 74072794f45a7eb6b56be294ef288a4d518398b0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070874"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046380"
 ---
 # <a name="introduction-to-active-directory-replication-and-topology-management-using-windows-powershell-level-100"></a>Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
 
@@ -77,7 +78,7 @@ Windows Server 2012 を実行しているサーバーに AD DS サーバーの�
     このコマンドを実行すると、ドメイン コントローラー ホスト名とそのサイトの関連性が返されます。
 
 ## <a name="manage-replication-topology"></a>レプリケーション トポロジを管理する
-前の手順では、`Get-ADDomainController -Filter * | ft Hostname,Site` コマンドを実行した後で **DC2** が **CORPORATE** サイトの一部として表示されました。 ここでは、新しいブランチ オフィス サイトの **BRANCH1** を作成し、新しいサイト リンクを作成します。次に、サイト リンク コストとレプリケーションの頻度を設定し、 **DC2** を **BRANCH1** に移動します。
+前の手順では、`Get-ADDomainController -Filter * | ft Hostname,Site` コマンドを実行した後で **DC2** が **CORPORATE** サイトの一部として表示されました。 ここでは、新しいブランチ オフィス サイトの **BRANCH1** を作成し、新しいサイト リンクを作成します。次に、サイト リンク コストとレプリケーションの頻度を設定し、**DC2** を **BRANCH1** に移動します。
 
 次の手順を実行するには、Domain Admins グループのメンバーであるか、または同等のアクセス許可を持っている必要があります。
 
@@ -95,7 +96,7 @@ Windows Server 2012 を実行しているサーバーに AD DS サーバーの�
 
     `New-ADReplicationSiteLink 'CORPORATE-BRANCH1'  -SitesIncluded CORPORATE,BRANCH1 -OtherAttributes @{'options'=1}`
 
-    このコマンドにより、 **BRANCH1** へのサイト リンクが作成され、変更通知プロセスが有効になります。
+    このコマンドにより、**BRANCH1** へのサイト リンクが作成され、変更通知プロセスが有効になります。
 
     > [!TIP]
     > Tab キーによるオートコンプリート機能を使用してパラメーター名 ( `-SitesIncluded` 、 `-OtherAttributes` ) を入力すると、手動で入力する手間を省くことができます。
@@ -106,7 +107,7 @@ Windows Server 2012 を実行しているサーバーに AD DS サーバーの�
 
     `Set-ADReplicationSiteLink CORPORATE-BRANCH1 -Cost 100 -ReplicationFrequencyInMinutes 15`
 
-    このコマンドは、 **BRANCH1** へのサイト リンク コストを **100** に設定し、サイトのレプリケーションの頻度を **15** 分に設定します。
+    このコマンドは、**BRANCH1** へのサイト リンク コストを **100** に設定し、サイトのレプリケーションの頻度を **15** 分に設定します。
 
 #### <a name="to-move-a-domain-controller-to-a-different-site"></a>ドメイン コントローラーを別のサイトに移動するには
 
@@ -120,13 +121,13 @@ Windows Server 2012 を実行しているサーバーに AD DS サーバーの�
 
 ##### <a name="to-verify-site-creation-new-site-link-and-cost-and-replication-frequency"></a>サイトの作成、新しいサイト リンク、コスト、およびレプリケーションの頻度を検証するには
 
--   **[サーバー マネージャー]** をクリックし、 **[ツール]** をクリックします。次に、 **[Active Directory サイトとサービス]** をクリックし、次のことを確認します。
+-   **[サーバー マネージャー]** をクリックし、**[ツール]** をクリックします。次に、**[Active Directory サイトとサービス]** をクリックし、次のことを確認します。
 
     **BRANCH1** サイトに Windows PowerShell コマンドの正しい値がすべて含まれていることを確認します。
 
-    **CORPORATE-BRANCH1** サイト リンクが作成され、 **BRANCH1** サイトと **CORPORATE** サイトが接続されていることを確認します。
+    **CORPORATE-BRANCH1** サイト リンクが作成され、**BRANCH1** サイトと **CORPORATE** サイトが接続されていることを確認します。
 
-    **DC2** が **BRANCH1** サイトに属していることを確認します。 または、 **[Windows PowerShell の Active Directory モジュール]** を開き、次のコマンドを入力して、 **DC2** が **BRANCH1** サイトに属していることを確認できます: `Get-ADDomainController -Filter * | ft Hostname,Site`。
+    **DC2** が **BRANCH1** サイトに属していることを確認します。 または、**[Windows PowerShell の Active Directory モジュール]** を開き、次のコマンドを入力して、**DC2** が **BRANCH1** サイトに属していることを確認できます: `Get-ADDomainController -Filter * | ft Hostname,Site`。
 
 ## <a name="view-replication-status-information"></a>レプリケーションの状態情報を表示する
 ここでは、Active Directory 用 Windows PowerShell レプリケーションおよびトポロジ管理コマンドレットの `Get-ADReplicationUpToDatenessVectorTable DC1` を使用して、各ドメイン コントローラーによって保守される最新のベクター テーブルを使用した単純なレプリケーション レポートを生成します。 この最新のベクター テーブルは、フォレスト内の各ドメイン コントローラーから見た最大発信書き込み USN を追跡します。
@@ -139,7 +140,7 @@ Windows Server 2012 を実行しているサーバーに AD DS サーバーの�
 
     `Get-ADReplicationUpToDatenessVectorTable DC1`
 
-    このコマンドは、フォレスト内のすべてのドメイン コントローラーについて **DC1** から見た最大 USN のリストを表示します。 **Server** 値は、テーブルを保守しているサーバーを表します (この場合は **DC1** )。 **Partner** 値は、変更が加えられた (直接または間接) レプリケーション パートナーを表します。 UsnFilter 値は、Partner の **DC1** から見た最大 USN です。 新しいドメインコントローラーがフォレストに追加された場合、新しいドメインコントローラーは、新しいドメインからの変更を **dc1** が受け取るまで **dc1** のテーブルに表示されません。
+    このコマンドは、フォレスト内のすべてのドメイン コントローラーについて **DC1** から見た最大 USN のリストを表示します。 **Server** 値は、テーブルを保守しているサーバーを表します (この場合は **DC1**)。 **Partner** 値は、変更が加えられた (直接または間接) レプリケーション パートナーを表します。 UsnFilter 値は、Partner の **DC1** から見た最大 USN です。 新しいドメインコントローラーがフォレストに追加された場合、新しいドメインコントローラーは、新しいドメインからの変更を **dc1** が受け取るまで **dc1** のテーブルに表示されません。
 
 #### <a name="to-view-the-up-to-dateness-vector-table-for-all-domain-controllers-in-a-domain"></a>ドメイン内のすべてのドメイン コントローラーの最新のベクター テーブルを表示するには
 
@@ -147,11 +148,11 @@ Windows Server 2012 を実行しているサーバーに AD DS サーバーの�
 
     `Get-ADReplicationUpToDatenessVectorTable * | sort Partner,Server | ft Partner,Server,UsnFilter`
 
-    このコマンドでは、すべてのドメイン コントローラーの最新のベクター テーブルを収集するために、前のコマンドの **DC1** が `*` に置き換えられています。 データは、 **Partner** と **Server** に基づいて並べ替えられた後、表形式で表示されます。
+    このコマンドでは、すべてのドメイン コントローラーの最新のベクター テーブルを収集するために、前のコマンドの **DC1** が `*` に置き換えられています。 データは、**Partner** と **Server** に基づいて並べ替えられた後、表形式で表示されます。
 
     並べ替えを行うことで、特定のレプリケーション パートナーに関して各ドメイン コントローラーから見た最後の USN を簡単に比較できます。 これにより、環境でレプリケーションが発生しているかどうかを簡単に調べることができます。 レプリケーションが適切に動作している場合、特定のレプリケーション パートナーに対して報告される UsnFilter 値は、すべてのドメイン コントローラーで類似しています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows PowerShell &#40;レベル 200&#41;を使用した高度な Active Directory レプリケーションおよびトポロジ管理 ](Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
 
 

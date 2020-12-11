@@ -1,17 +1,18 @@
 ---
 title: シールドされた VM - ホスティング サービス プロバイダーで Windows Azure Pack をセットアップする
+description: 詳細については、「シールドされた Vm-ホスティングサービスプロバイダーの設定 Windows Azure Pack」を参照してください。
 ms.topic: article
 ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 0bf64e363226be582c24d644491dcbf4f85ac52e
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: dec0272172cf3277000f0f1f592e4b7a204916bd
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96863960"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047380"
 ---
 # <a name="shielded-vms---hosting-service-provider-sets-up-windows-azure-pack"></a>シールドされた VM - ホスティング サービス プロバイダーで Windows Azure Pack をセットアップする
 
@@ -75,7 +76,7 @@ Windows Azure Pack を使用する前に、インフラストラクチャ用に�
 
 テナントが WAP で Vm を作成できるようにするには、まず、テナントがサブスクライブできるホスティングプランを作成する必要があります。 プランでは、テナントに許可されている VM クラウド、テンプレート、ネットワーク、および課金エンティティを定義します。
 
-1. ポータルの下のペインで、[ **+ 新しい** プラン] [プランの作成] の順にクリックし &gt; **PLAN** &gt; **CREATE PLAN** ます。
+1. ポータルの下のペインで、[ **+ 新しい** プラン] [プランの作成] の順にクリックし &gt;  &gt; ます。
 
 2. ウィザードの最初の手順で、プランの名前を選択します。 これは、テナントがサブスクライブするときに表示される名前です。
 

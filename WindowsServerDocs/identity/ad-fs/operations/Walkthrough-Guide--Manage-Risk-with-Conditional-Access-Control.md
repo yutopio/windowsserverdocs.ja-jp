@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「チュートリアルガイド: 条件付き Access Control によるリスク管理」を参照してください。'
 ms.assetid: 3a840b63-78b7-4e62-af7b-497026bfdb93
 title: チュートリアルガイド-条件付き Access Control によるリスク管理
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 5523f882d64f0c43456bd86aa9a60f95db033094
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8993aff4e89df0b01780703791070d9dc0664308
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956275"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048830"
 ---
 # <a name="walkthrough-guide-manage-risk-with-conditional-access-control"></a>チュートリアル ガイド:条件付きアクセス制御によってリスクを管理する
 
@@ -19,7 +20,7 @@ ms.locfileid: "87956275"
 
 
 ## <a name="about-this-guide"></a>このガイドについて
-このチュートリアルでは、Windows Server 2012 R2 の Active Directory フェデレーションサービス (AD FS) (AD FS) の条件付きアクセス制御メカニズムを通じて利用できる要因 (ユーザーデータ) の1つを使用してリスクを管理する手順について説明します。 Windows Server 2012 R2 の AD FS での条件付きアクセス制御と認証メカニズムの詳細については、「[条件付き Access Control によるリスク管理](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)」を参照してください。
+このチュートリアルでは、Windows Server 2012 R2 の Active Directory フェデレーションサービス (AD FS) (AD FS) の条件付きアクセス制御メカニズムを通じて利用できる要因 (ユーザーデータ) の1つを使用してリスクを管理する手順について説明します。 Windows Server 2012 R2 の AD FS での条件付きアクセス制御と認証メカニズムの詳細については、「 [条件付き Access Control によるリスク管理](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)」を参照してください。
 
 このチュートリアルは次のセクションで構成されています。
 
@@ -63,7 +64,7 @@ ms.locfileid: "87956275"
     アプリケーションへのアクセスが許可されます。
 
 ## <a name="step-3-configure-conditional-access-control-policy-based-on-user-data"></a><a name="BKMK_3"></a>手順 3:手順 3: ユーザー データに基づく条件付きアクセス制御ポリシーを構成する
-この手順では、ユーザーのグループ メンバーシップ データに基づくアクセス制御ポリシーを設定します。 つまり、サンプル アプリケーションである **claimapp** を表す証明書利用者信頼について、フェデレーション サーバーで**発行承認規則**を構成します。 この規則のロジックにより、 **Robert Hatley** AD ユーザーは**Finance**グループに属しているため、このアプリケーションにアクセスするために必要な要求が発行されます。 **Robert Hatley**アカウントを**Finance**グループに追加しました。「 [Windows Server 2012 R2 の AD FS 用のラボ環境をセットアップ](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)する」をご確認ください。
+この手順では、ユーザーのグループ メンバーシップ データに基づくアクセス制御ポリシーを設定します。 つまり、サンプル アプリケーションである **claimapp** を表す証明書利用者信頼について、フェデレーション サーバーで **発行承認規則** を構成します。 この規則のロジックにより、 **Robert Hatley** AD ユーザーは **Finance** グループに属しているため、このアプリケーションにアクセスするために必要な要求が発行されます。 **Robert Hatley** アカウントを **Finance** グループに追加しました。「 [Windows Server 2012 R2 の AD FS 用のラボ環境をセットアップ](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)する」をご確認ください。
 
 AD FS 管理コンソールまたは Windows PowerShell のいずれかを使用してこのタスクを完了できます。
 
@@ -75,7 +76,7 @@ AD FS 管理コンソールまたは Windows PowerShell のいずれかを使用
 
 3.  **[claimapp の要求規則の編集]** ウィンドウで、**[発行承認規則]** タブを選択し、**[規則の追加]** をクリックします。
 
-4.  **発行承認要求規則の追加ウィザード**の **[規則テンプレートの選択]** ページで、**[入力方向の要求に基づいてユーザーを許可または拒否]** 要求規則テンプレートを選択し、**[次へ]** をクリックします。
+4.  **発行承認要求規則の追加ウィザード** の **[規則テンプレートの選択]** ページで、**[入力方向の要求に基づいてユーザーを許可または拒否]** 要求規則テンプレートを選択し、**[次へ]** をクリックします。
 
 5.  **[規則の構成]** ページで、次のすべての操作を実行してから、**[完了]** をクリックします。
 
@@ -113,7 +114,7 @@ Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $G
 ## <a name="step-4-verify-conditional-access-control-mechanism"></a><a name="BKMK_4"></a>手順 4:条件付きアクセス制御メカニズムを確認する
 この手順では、前の手順で設定した条件付きアクセス制御ポリシーを確認します。 次の手順を使用して、**Finance** グループに属している AD ユーザー **Robert Hatley** はサンプル アプリケーションにアクセスでき、**Finance** グループに属していない AD ユーザーはサンプル アプリケーションにアクセスできないことを確認できます。
 
-1.  クライアントコンピューターで、ブラウザーウィンドウを開き、サンプルアプリケーションに移動します。**https://webserv1.contoso.com/claimapp**
+1.  クライアントコンピューターで、ブラウザーウィンドウを開き、サンプルアプリケーションに移動します。 **https://webserv1.contoso.com/claimapp**
 
     この操作により、要求がフェデレーション サーバーの役割に自動的にリダイレクトされた後、ユーザー名とパスワードでサインインするように求められます。
 
@@ -123,8 +124,8 @@ Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $G
 
 3.  **Finance** グループに属していない別の AD ユーザーの資格情報を入力します (AD でユーザーアカウントを作成する方法の詳細については、「」を参照してください [https://technet.microsoft.com/library/cc7833232.aspx](/previous-versions/windows/it-pro/windows-server-2003/cc783323(v=ws.10)) 。
 
-    前の手順でアクセス制御ポリシーが設定されているため、この時点で、 **Finance**グループに属していないこの AD ユーザーに対して "アクセスが拒否されました" というメッセージが表示されます。 既定のメッセージテキストは、**このサイトへのアクセスが許可されていないことを示します。ここをクリックしてサインアウトし、もう一度サインインするか、管理者にアクセス許可を問い合わせてください。** " です。ただし、このテキストはカスタマイズできます。 サインイン エクスペリエンスのカスタマイズ方法については、「 [Customizing the AD FS Sign-in Pages](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11))」を参照してください。
+    前の手順でアクセス制御ポリシーが設定されているため、この時点で、 **Finance** グループに属していないこの AD ユーザーに対して "アクセスが拒否されました" というメッセージが表示されます。 既定のメッセージテキストは、 **このサイトへのアクセスが許可されていないことを示します。ここをクリックしてサインアウトし、もう一度サインインするか、管理者にアクセス許可を問い合わせてください。** " です。ただし、このテキストはカスタマイズできます。 サインイン エクスペリエンスのカスタマイズ方法については、「 [Customizing the AD FS Sign-in Pages](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11))」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [条件付き Access Control](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md) 
  によるリスク管理[Windows Server 2012 R2 で AD FS 用のラボ環境をセットアップする](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)

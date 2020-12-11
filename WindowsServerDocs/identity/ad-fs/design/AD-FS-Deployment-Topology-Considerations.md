@@ -1,4 +1,5 @@
 ---
+description: 詳細については、AD FS 展開トポロジに関する考慮事項
 ms.assetid: 4ef052f0-61a9-4912-b780-5c96187c850f
 title: AD FS 展開トポロジに関する考慮事項
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 8e433083ce7f1bdcfa0d950b86692662044dd1ea
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3ac3c7c06b1e32140f782c2af645d9b6c686c8a1
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940439"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046010"
 ---
 # <a name="ad-fs-deployment-topology-considerations"></a>AD FS 展開トポロジに関する考慮事項
 
@@ -27,7 +28,7 @@ AD FS 機能
 |機能|WID でのサポート|SQL Server でのサポート|この機能についての詳しい情報|
 |-----------|---------------------|----------------------------|---------------------------------------|
 |フェデレーション サーバー ファーム展開|はい (ファームごとにフェデレーションサーバーを30個まで制限)|はい。 1 つのファーム内に展開できるフェデレーション サーバーの数について制限はありません。|[AD FS 展開トポロジの決定](Determine-Your-AD-FS-Deployment-Topology.md)|
-|SAML アーティファクトの解決に関する**注意:** この機能は、Microsoft Online Services、Microsoft Office 365、microsoft Exchange、または Microsoft Office SharePoint のシナリオには必要ありません。|いいえ|はい|[AD FS 構成データベースの役割](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<p>[AD FS のセキュリティを考慮した設計と展開のベスト プラクティス](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|
+|SAML アーティファクトの解決に関する **注意:** この機能は、Microsoft Online Services、Microsoft Office 365、microsoft Exchange、または Microsoft Office SharePoint のシナリオには必要ありません。|いいえ|はい|[AD FS 構成データベースの役割](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<p>[AD FS のセキュリティを考慮した設計と展開のベスト プラクティス](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|
 |SAML\/WS\-フェデレーション トークン リプレイ検出|いいえ|はい|[AD FS 構成データベースの役割](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<p>[AD FS のセキュリティを考慮した設計と展開のベスト プラクティス](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|
 
 Database の機能
@@ -60,5 +61,5 @@ SQL Server を AD FS 展開の構成データベースとして選ぶ場合は�
 
 -   ネットワーク負荷分散 \( NLB\)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

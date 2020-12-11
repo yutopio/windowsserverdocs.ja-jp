@@ -1,16 +1,17 @@
 ---
+description: '詳細については、次を参照してください: デバイス正常性構成証明'
 title: デバイス正常性構成証明
 ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
 author: brianlic-msft
 ms.author: brianlic
 ms.date: 10/12/2016
-ms.openlocfilehash: fc5b0a3e3b3da3b329baec37888fd04c9f3adc0e
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 6caff885e936809c649564a950d78a99e8fa49ce
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87995729"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047550"
 ---
 # <a name="device-health-attestation"></a>デバイス正常性構成証明
 
@@ -87,7 +88,7 @@ DHA オンプレミス サービスを、EKCert または AIKCert のいずれ�
 
 #### <a name="ekcert-validation-mode"></a>EKCert 検証モード
 
-EKCert 検証モードは、インターネットに接続されていない組織内のデバイスに向けに最適化されています。 EKCert 検証モードで実行されている DHA サービスに接続するデバイスは、インターネットに直接アクセス**できません**。
+EKCert 検証モードは、インターネットに接続されていない組織内のデバイスに向けに最適化されています。 EKCert 検証モードで実行されている DHA サービスに接続するデバイスは、インターネットに直接アクセス **できません**。
 
 DHA が EKCert 検証モードで実行されている場合は、随時 (1 年あたり約 5 - 10 回) 更新する必要がある、企業によって管理された信頼済みのチェーンを利用します。
 
@@ -126,7 +127,7 @@ Windows 展開サービスなど、好みのインストール方法を使用す
 
 Windows Server 2016 のインストールが完了すると、デバイスが再起動され、サーバー マネージャーが開きます。 サーバー マネージャーが自動的に起動しない場合は、 **[スタート]** をクリックしてから、**[サーバー マネージャー]** をクリックします。
 
-1.    [**役割と機能の追加] を**クリックします。
+1.    [ **役割と機能の追加] を** クリックします。
 2.    **[開始する前に]** ページで、 **[次へ]** をクリックします。
 3.    **[インストールの種類の選択]** ページで、**[役割ベースまたは機能ベースのインストール]** をクリックし、**[次へ]** をクリックします。
 4.    **[対象サーバーの選択]** ページで、**[サーバー プールからサーバーを選択]** を選択し、サーバーを選択して、**[次へ]** をクリックします。
@@ -142,7 +143,7 @@ Windows Server 2016 のインストールが完了すると、デバイスが再
 
 ### <a name="install-the-signing-and-encryption-certificates"></a>署名証明書および暗号化証明書をインストールする
 
-次の Windows PowerShell スクリプトを使用して、署名証明書および暗号化証明書をインストールします。 サムプリントの詳細については、「[方法: 証明書のサムプリントを取得する](/dotnet/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate)」を参照してください。
+次の Windows PowerShell スクリプトを使用して、署名証明書および暗号化証明書をインストールします。 サムプリントの詳細については、「 [方法: 証明書のサムプリントを取得する](/dotnet/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate)」を参照してください。
 
 ```
 $key = Get-ChildItem Cert:\LocalMachine\My | Where-Object {$_.Thumbprint -like "<thumbprint>"}
@@ -171,7 +172,7 @@ mkdir .\TrustedTpm
 expand -F:* .\TrustedTpm.cab .\TrustedTpm
 ```
 
-#### <a name="remove-the-trust-chains-for-tpm-vendors-that-are-not-trusted-by-your-organization-optional"></a>組織で信頼されて*いない* TPM ベンダーの信頼済みチェーンを削除する (省略可能)
+#### <a name="remove-the-trust-chains-for-tpm-vendors-that-are-not-trusted-by-your-organization-optional"></a>組織で信頼されて *いない* TPM ベンダーの信頼済みチェーンを削除する (省略可能)
 
 組織によって信頼されていない TPM ベンダーの信頼チェーンのフォルダーを削除します。
 
@@ -297,6 +298,6 @@ Set-DHASCertificateChainPolicy = $certificateChainPolicy
 DHA サービスによって MDM ソリューションに報告されるメッセージの一覧を次に示します。
 
 - **200** HTTP OK。 証明書が返されます。
-- **400**無効な要求です。 無効な要求形式、無効な正常性証明書、証明書署名の不一致、無効な正常性構成証明 Blob、または無効な正常性状態 Blob です。 応答には、診断に使用できるエラー コードとエラー メッセージとともに、応答スキーマによって記述されたメッセージも含まれます。
-- **500**内部サーバーエラーです。 これは、サービスによる証明書の発行を妨げている問題がある場合に発生することがあります。
+- **400** 無効な要求です。 無効な要求形式、無効な正常性証明書、証明書署名の不一致、無効な正常性構成証明 Blob、または無効な正常性状態 Blob です。 応答には、診断に使用できるエラー コードとエラー メッセージとともに、応答スキーマによって記述されたメッセージも含まれます。
+- **500** 内部サーバーエラーです。 これは、サービスによる証明書の発行を妨げている問題がある場合に発生することがあります。
 - **503** スロットリングがサーバーの過負荷を防ぐために要求を拒否しています。

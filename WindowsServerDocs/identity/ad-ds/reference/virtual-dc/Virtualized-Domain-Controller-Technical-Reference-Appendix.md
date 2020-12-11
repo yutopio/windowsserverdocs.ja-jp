@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「仮想化ドメインコントローラーのテクニカルリファレンス付録」を参照してください。
 ms.assetid: 73a4deba-7da6-4eae-8fdd-2a4d369f9cbb
 title: 仮想化ドメイン コントローラーのテクニカル リファレンスの付録
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: f387fd0e87887ea8e69732efa405299fb18fe800
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 3f59760b5519d636ad879e11e692ddcbdc6c3129
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070904"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045020"
 ---
 # <a name="virtualized-domain-controller-technical-reference-appendix"></a>仮想化ドメイン コントローラーのテクニカル リファレンスの付録
 
@@ -23,7 +24,7 @@ ms.locfileid: "93070904"
 
 -   [FixVDCPermissions.ps1](../../../ad-ds/reference/virtual-dc/../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_FixPDCPerms)
 
-## <a name="terminology"></a><a name="BKMK_Terms"></a>用語集
+## <a name="terminology"></a><a name="BKMK_Terms"></a>用語
 
 -   **Snapshot** -特定の時点における仮想マシンの状態。 これは、作成された以前のスナップショットのチェーン、ハードウェア、および仮想化プラットフォームに依存します。
 
@@ -33,7 +34,7 @@ ms.locfileid: "93070904"
 
 -   **差分ディスク** -親仮想マシンと仮想ディスクを継続的に共有する仮想マシンのコピー。 これにより、通常、ディスク領域が節約され、複数の仮想マシンが同じソフトウェアインストールを使用できるようになります。
 
--   **VM コピー** -仮想マシンのすべての関連ファイルとフォルダーのファイルシステムコピー。
+-   **VM コピー**-仮想マシンのすべての関連ファイルとフォルダーのファイルシステムコピー。
 
 -   **Vhd ファイルのコピー** -仮想マシンの vhd のコピー
 

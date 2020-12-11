@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「AD フォレストの回復-操作マスターの役割の強制」を参照してください。
 title: AD フォレストの回復-操作マスターの役割の強制
 ms.author: daveba
 author: iainfoulds
@@ -6,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 7e6bb370-f840-4416-b5e2-86b0ba715f4f
-ms.openlocfilehash: 76e32be8db1647a209f94b49484898cf88333040
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: d621f6382b927ddb555fa84571f8407f9b905246
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070804"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047130"
 ---
 # <a name="ad-forest-recovery---seizing-an-operations-master-role"></a>AD フォレストの回復-操作マスターの役割の強制
 

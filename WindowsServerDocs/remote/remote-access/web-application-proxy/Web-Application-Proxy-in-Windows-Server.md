@@ -1,15 +1,16 @@
 ---
+description: 詳細については、Windows Server の Web アプリケーションプロキシに関するページを参照してください。
 ms.assetid: 0b3587b2-219f-43d8-88b4-1254eaa8b910
 title: Windows Server の Web アプリケーション プロキシ
 ms.topic: article
 ms.author: kgremban
 author: eross-msft
-ms.openlocfilehash: 433ab4825ff23526b656949c0df94befd892e29e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: c95f47d057008249ca2ebc852e97b68f90d604e8
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939743"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046470"
 ---
 # <a name="web-application-proxy-in-windows-server"></a>Windows Server の Web アプリケーション プロキシ
 
@@ -51,7 +52,7 @@ ms.locfileid: "87939743"
 
 - バックエンドアプリケーションへのクライアント IP アドレスの伝達
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 -   [Windows Server 2016 の新機能](../../../get-started/whats-new-in-windows-server-2016.md)
 

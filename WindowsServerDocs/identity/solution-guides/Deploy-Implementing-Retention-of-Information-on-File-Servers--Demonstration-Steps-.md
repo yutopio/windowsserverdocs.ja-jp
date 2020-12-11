@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ファイルサーバーでの情報の保持の実装」を参照してください (デモンストレーション手順)
 ms.assetid: ee008835-7d3b-4977-adcb-7084c40e5918
 title: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 987d1af004955d7be75066de7a859272e656ffbc
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b4d74b3757e23e37116c7fafc8b1bb5f6f01ee43
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952803"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046850"
 ---
 # <a name="deploy-implementing-retention-of-information-on-file-servers-demonstration-steps"></a>Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 
@@ -54,7 +55,7 @@ ms.locfileid: "87952803"
 
 5.  [**発見可能**] を右クリックし、[**有効にする**] をクリックします。
 
-![ソリューションガイド](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -72,7 +73,7 @@ Set-ADResourceProperty -Enabled:$true -Identity:'CN=Discoverability_MS,CN=Resour
 
 1.  Administrators セキュリティ グループのメンバーとしてファイル サーバーにサインインします。
 
-2.  Windows PowerShell コマンド プロンプトで「**Update-FsrmClassificationPropertyDefinition**」と入力してから、Enter キーを押します。 これにより、ドメイン コントローラーで作成されたプロパティ定義がファイル サーバーに同期されます。
+2.  Windows PowerShell コマンドプロンプトで、「_ * Update-fsrmclassificationpropertydefinition * *」と入力し、enter キーを押します。 これにより、ドメイン コントローラーで作成されたプロパティ定義がファイル サーバーに同期されます。
 
 3.  ファイル サーバー リソース マネージャーを開きます。 サーバー マネージャーで [**ツール**] をクリックしてから、[**ファイル サーバー リソース マネージャー**] をクリックします。
 
@@ -84,11 +85,11 @@ Set-ADResourceProperty -Enabled:$true -Identity:'CN=Discoverability_MS,CN=Resour
 
     -   [**管理者である既定の受信者**] ボックスに、通知を受け取る管理者の電子メール アドレスを入力します。
 
-    -   [**既定の電子メールアドレス**] ボックスに、通知の送信に使用する電子メールアドレスを入力します。
+    -   [ **既定の電子メールアドレス** ] ボックスに、通知の送信に使用する電子メールアドレスを入力します。
 
 6.  **[OK]** をクリックします。
 
-![ソリューションガイド](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -111,7 +112,7 @@ Set-FsrmSetting -SmtpServer IP address of SMTP server -FromEmailAddress "FromEma
 
 1.  Administrators セキュリティ グループのメンバーとしてファイル サーバーにサインインします。
 
-2.  ファイル サーバー リソース マネージャーを開きます。 サーバー マネージャーで [**ツール**] をクリックしてから、[**ファイル サーバー リソース マネージャー**] をクリックします。
+2.  ファイル サーバー リソース マネージャーを開きます。 サーバーマネージャーで、[_ * ツール] * * をクリックし、[ **ファイルサーバーリソースマネージャー**] をクリックします。
 
 3.  **[ファイル管理タスク]** を右クリックし、**[ファイル管理タスクの作成]** をクリックします。
 
@@ -139,7 +140,7 @@ Set-FsrmSetting -SmtpServer IP address of SMTP server -FromEmailAddress "FromEma
 
 11. **[OK]** をクリックします。
 
-![ソリューションガイド](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -164,7 +165,7 @@ $fmj1=New-FSRMFileManagementJob -Name "Retention Task" -Namespace @('D:\Finance 
 
 2.  手順 3 で作成したファイル管理タスクのスコープで構成したフォルダーに移動します。
 
-3.  フォルダーを右クリックし、**[プロパティ]** をクリックします。
+3.  フォルダーを右クリックし、[_ * Properties] * * をクリックします。
 
 4.  [**分類**] タブで [**保有期間**] をクリックし、[**長期**] をクリックしてから、[**OK**] をクリックします。
 

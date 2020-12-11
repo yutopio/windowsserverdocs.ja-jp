@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「AD FS 2016 展開ガイド」を参照してください。
 ms.assetid: eb047a19-e5cb-43f4-a7bb-c4b7c8fc55a5
 title: AD FS 展開ガイド
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 047940c880f7ef929fbe0806b24374c0be4d80a0
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 22122ba733463d765749e11b9605e080de4fa062
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953106"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047970"
 ---
 # <a name="ad-fs-2016-deployment-guide"></a>AD FS 2016 展開ガイド
 

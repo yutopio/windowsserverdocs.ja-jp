@@ -1,17 +1,18 @@
 ---
 ms.assetid: 4ddb927d-d65e-491d-840a-16049c083d13
 title: 属性ストアの役割
+description: 詳細については、「属性ストアの役割」を参照してください。
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: b15eef56a071aea1b2af6ad2f17f7b97a86c9f88
-ms.sourcegitcommit: 853382db13aed60344a075fdd054ef42e09c34c9
+ms.openlocfilehash: dc23e15893672633c7e175d2b0313771d327fccc
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96932787"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045310"
 ---
 # <a name="the-role-of-attribute-stores"></a>属性ストアの役割
 Active Directory フェデレーションサービス (AD FS) では、"属性ストア" という用語を使用して、ユーザーアカウントとそれらに関連付けられている属性値を格納するために組織が使用するディレクトリまたはデータベースを参照します。 Id プロバイダー組織で構成された後、AD FS は、これらの属性値をストアから取得し、その情報に基づいて要求を作成します。これにより、証明書利用者組織でホストされている Web アプリケーションまたはサービスが、 \( id プロバイダー組織に格納されているユーザーが \) アプリケーションまたはサービスにアクセスしようとしたときに、その
@@ -37,4 +38,3 @@ AD FS では、管理者が定義した \- 属性値を抽出し、それらの�
 -   Microsoft SQL Server 2005、SQL Server 2008、SQL Server 2012、SQL Server 2014、および SQL Server 2016 以降のすべてのエディション
 
 -   カスタム属性ストア
-

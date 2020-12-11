@@ -1,17 +1,18 @@
 ---
 ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: ドメイン コントローラーを Windows Server 2012 R2 または Windows Server 2012 にアップグレードする
+description: 詳細については、「ドメインコントローラーを Windows Server 2012 R2 および Windows Server 2012 にアップグレードする」を参照してください。
 ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: be94260946c696eed060b9b2d85f5042ed737a1f
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: d60a4073d39cae39bea53ea57a93424f6573ba12
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866351"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045960"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012"></a>ドメイン コントローラーを Windows Server 2012 R2 または Windows Server 2012 にアップグレードする
 
@@ -70,7 +71,7 @@ Windows Update は Windows 8 および Windows Server 2012 の自動メンテナ
 
 次の表は、Windows Server 2012 R2 のAD DS 関連の新機能をまとめたものです。詳細情報がある場合は、リンクも示しています。 一部の機能に関する詳細 (要件など) については、「 [Windows Server の Active Directory の新機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn268294(v=ws.11))」を参照してください。
 
-|特徴量|説明|
+|機能|説明|
 |-----------|---------------|
 |[社内参加](../../ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications.md)|インフォメーション ワーカーが企業のリソースとサービスにアクセスするために、個人のデバイスを社内コンピューターの一部として参加させることができるようにします。|
 |[Web アプリケーション プロキシ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280942(v=ws.11))|新しいリモート アクセス役割サービスを使って Web アプリケーションへのアクセスを提供します。|
@@ -89,7 +90,7 @@ Windows Update は Windows 8 および Windows Server 2012 の自動メンテナ
 
 次の表は、Windows Server 2012 のAD DS 関連の新機能をまとめたものです。詳細情報がある場合は、リンクも示しています。 一部の機能 (要件を含む) の詳細については、「 [Active Directory Domain Services の新機能」 (AD DS)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831477(v=ws.11))を参照してください。
 
-|特徴量|説明|
+|機能|説明|
 |-----------|---------------|
 |Active Directory によるライセンス認証 (AD BA) (「 [ボリューム ライセンス認証の概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831612(v=ws.11))」を参照)|ボリューム ソフトウェア ライセンスの配布と管理を構成するタスクが簡略化されます。|
 |[Active Directory フェデレーション サービス (AD FS)](../../active-directory-federation-services.md)|サーバー マネージャー経由のサーバーの役割のインストール、信頼のセットアップの単純化、自動的な信頼管理、SAML プロトコルのサポートなどが追加されます。|

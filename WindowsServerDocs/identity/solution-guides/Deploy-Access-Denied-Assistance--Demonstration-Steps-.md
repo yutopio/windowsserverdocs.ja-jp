@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Access-Denied アシスタンスの展開 (デモンストレーション手順)'
 ms.assetid: b035e9f8-517f-432a-8dfb-40bfc215bee5
 title: Deploy Access-Denied Assistance (Demonstration Steps)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9c942b950c2f800fed89f14cc05a8715d9790f28
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fc6c452a37c6e86872bf4f53ba0279c8185548d4
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952894"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048340"
 ---
 # <a name="deploy-access-denied-assistance-demonstration-steps"></a>Deploy Access-Denied Assistance (Demonstration Steps)
 
@@ -39,7 +40,7 @@ ms.locfileid: "87952894"
 
 #### <a name="to-configure-access-denied-assistance-by-using-group-policy"></a>グループ ポリシーを使用してアクセス拒否アシスタンスを構成するには
 
-1.  グループ ポリシーの管理を開きます。 サーバー マネージャーで、**[ツール]** をクリックし、**[グループ ポリシーの管理]** をクリックします。
+1.  [グループ ポリシーの管理] を開きます。 サーバー マネージャーで、**[ツール]** をクリックし、**[グループ ポリシーの管理]** をクリックします。
 
 2.  該当するグループ ポリシーを右クリックしてから、[**編集**] をクリックします。
 
@@ -67,7 +68,7 @@ ms.locfileid: "87952894"
 
     3.  残りの既定の設定をそのままにします。
 
-![ソリューションガイド](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -89,7 +90,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\W
 
 #### <a name="to-configure-access-denied-assistance-by-using-file-server-resource-manager"></a>ファイル サーバー リソース マネージャーを使用してアクセス拒否アシスタンスを構成するには
 
-1.  ファイル サーバー リソース マネージャーを開きます。 サーバー マネージャーで [**ツール**] をクリックしてから、[**ファイル サーバー リソース マネージャー**] をクリックします。
+1.  ファイル サーバー リソース マネージャーを開きます。 サーバーマネージャーで、[_ * ツール] * * をクリックし、[ **ファイルサーバーリソースマネージャー**] をクリックします。
 
 2.  [**ファイル サーバー リソース マネージャー (ローカル)**] をクリックしてから、[**オプションの構成**] をクリックします。
 
@@ -115,7 +116,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\W
 
 8.  **[OK]** をクリックします。
 
-![ソリューションガイド](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -129,7 +130,7 @@ Set-FSRMAdrSetting -Event "AccessDenied" -DisplayMessage "Type the text that the
 
 #### <a name="to-configure-access-denied-assistance-for-all-file-types-by-using-group-policy"></a>グループ ポリシーを使用してすべてのファイルの種類に対してアクセス拒否アシスタンスを構成するには
 
-1.  グループ ポリシーの管理を開きます。 サーバー マネージャーで、**[ツール]** をクリックし、**[グループ ポリシーの管理]** をクリックします。
+1.  [グループ ポリシーの管理] を開きます。 サーバーマネージャーで、[_ * ツール] * * をクリックし、[ **グループポリシーの管理**] をクリックします。
 
 2.  該当するグループ ポリシーを右クリックしてから、[**編集**] をクリックします。
 
@@ -139,7 +140,7 @@ Set-FSRMAdrSetting -Event "AccessDenied" -DisplayMessage "Type the text that the
 
 5.  [**有効**] をクリックしてから、[**OK**] をクリックします。
 
-![ソリューションガイド](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -154,7 +155,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\SOFTWARE\Policies\Microsoft\W
 
 #### <a name="to-specify-a-separate-access-denied-message-for-a-shared-folder-by-using-file-server-resource-manager"></a>ファイル サーバー リソース マネージャーを使用して共有フォルダーに個別のアクセス拒否メッセージを指定するには
 
-1.  ファイル サーバー リソース マネージャーを開きます。 サーバー マネージャーで [**ツール**] をクリックしてから、[**ファイル サーバー リソース マネージャー**] をクリックします。
+1.  ファイル サーバー リソース マネージャーを開きます。 サーバーマネージャーで、[_ * ツール] * * をクリックし、[ **ファイルサーバーリソースマネージャー**] をクリックします。
 
 2.  [**ファイル サーバー リソース マネージャー (ローカル)**] を展開してから、[**分類管理**] をクリックします。
 
@@ -178,7 +179,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\SOFTWARE\Policies\Microsoft\W
 
 7.  **[OK]** をクリックし、 **[閉じる]** をクリックします。
 
-![ソリューションガイド](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -191,7 +192,7 @@ Set-FSRMMgmtProperty -Namespace "folder path" -Name "AccessDeniedMessage_MS" -Va
 
 [この手順を Windows PowerShell で行う](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)
 
-1.  ファイル サーバー リソース マネージャーを開きます。 サーバー マネージャーで [**ツール**] をクリックしてから、[**ファイル サーバー リソース マネージャー**] をクリックします。
+1.  ファイル サーバー リソース マネージャーを開きます。 サーバーマネージャーで、[_ * ツール] * * をクリックし、[ **ファイルサーバーリソースマネージャー**] をクリックします。
 
 2.  [**ファイル サーバー リソース マネージャー (ローカル)**] をクリックしてから、[**オプションの構成**] をクリックします。
 
@@ -201,13 +202,13 @@ Set-FSRMMgmtProperty -Namespace "folder path" -Name "AccessDeniedMessage_MS" -Va
 
     -   [**SMTP サーバー名または IP アドレス**] ボックスに、組織内の SMTP サーバーの IP アドレスの名前を入力します。
 
-    -   [管理者の**既定の受信**者] と [**既定の電子メールアドレス**] ボックスに、ファイルサーバー管理者の電子メールアドレスを入力します。
+    -   [管理者の **既定の受信** 者] と [ **既定の電子メールアドレス** ] ボックスに、ファイルサーバー管理者の電子メールアドレスを入力します。
 
 5.  [**テスト電子メールの送信**] をクリックして、電子メール通知が正しく構成されていることを確認します。
 
 6.  **[OK]** をクリックします。
 
-![ソリューションガイド](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>Windows PowerShell の同等のコマンド</em>***
+![ソリューションガイド ](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif) * *_<em>Windows PowerShell の同等のコマンド</em>_* _
 
 次の Windows PowerShell コマンドレットは、前の手順と同じ機能を実行します。 各コマンドレットを単一行に入力します。ただし、ここでは、書式上の制約があるために、複数行に改行されて表示される場合があります。
 
@@ -216,7 +217,7 @@ set-FSRMSetting -SMTPServer "server1" -AdminEmailAddress "fileadmin@contoso.com"
 ```
 
 ## <a name="step-3-verify-that-access-denied-assistance-is-configured-correctly"></a><a name="BKMK_3"></a>手順 3:アクセス拒否アシスタンスが正しく構成されていることを確認する
-アクセス拒否アシスタンスが正しく構成されていることを確認するには、Windows 8 を実行しているユーザーが、アクセス権のない共有またはその共有内のファイルにアクセスしようとします。 アクセス拒否メッセージが表示された場合、ユーザーには、[**サポートの要求**] ボタンが表示されます。 [サポートの要求] ボタンをクリックすると、ユーザーは、アクセス理由を指定してから、フォルダー所有者またはファイル サーバー管理者に電子メールを送信できます。 フォルダー所有者またはファイル サーバー管理者は、到着した電子メールに適切な詳細が含まれているかを確認できます。
+アクセス拒否アシスタンスが正しく構成されていることを確認するには、Windows 8 を実行しているユーザーが、アクセス権のない共有またはその共有内のファイルにアクセスしようとします。 アクセス拒否メッセージが表示されると、ユーザーには [*アシスタンスの要求*] * ボタンが表示されます。 [サポートの要求] ボタンをクリックすると、ユーザーは、アクセス理由を指定してから、フォルダー所有者またはファイル サーバー管理者に電子メールを送信できます。 フォルダー所有者またはファイル サーバー管理者は、到着した電子メールに適切な詳細が含まれているかを確認できます。
 
 > [!IMPORTANT]
 > Windows Server 2012 を実行しているユーザーを使用してアクセス拒否アシスタンスを確認する場合は、ファイル共有に接続する前にデスクトップエクスペリエンスをインストールする必要があります。

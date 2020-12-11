@@ -1,17 +1,18 @@
 ---
 title: iSCSI ターゲットサーバーのスケーラビリティの制限
 TOCTitle: iSCSI Target Server Scalability Limits
+description: 詳細については、「iSCSI ターゲットサーバーのスケーラビリティの制限」を参照してください。
 ms.topic: article
 author: JasonGerend
 manager: dougkim
 ms.author: jgerend
 ms.date: 09/11/2018
-ms.openlocfilehash: 14ef17f96138c23aeac8e38b93a50b562ca69bba
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 657dfea08aba671883d0cca01f53854f48871544
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865171"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048730"
 ---
 # <a name="iscsi-target-server-scalability-limits"></a>iSCSI ターゲットサーバーのスケーラビリティの制限
 
@@ -40,31 +41,31 @@ ms.locfileid: "96865171"
 <tr class="odd">
 <td><p>iscsi ターゲットサーバーあたりの iSCSI ターゲットインスタンス</p></td>
 <td><p>256</p></td>
-<td><p>No</p></td>
+<td><p>いいえ</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>iscsi ターゲットサーバーあたりの iSCSI 論理ユニット (Lu) または仮想ディスク</p></td>
 <td><p>512</p></td>
-<td><p>No</p></td>
+<td><p>いいえ</p></td>
 <td><p>含まれているテスト構成: ターゲットインスタンスあたりの平均は64ターゲット、256ターゲットインスタンスはターゲットごとに1つの LU を使用します。</p></td>
 </tr>
 <tr class="odd">
 <td><p>iscsi ターゲットインスタンスあたりの iSCSI Lu または仮想ディスク</p></td>
 <td><p>256 (Windows Server 2012 の 128)</p></td>
-<td><p>Yes</p></td>
+<td><p>はい</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>ISCSI ターゲットインスタンスに同時に接続できるセッション</p></td>
 <td><p>544 (Windows Server 2012 の 512)</p></td>
-<td><p>Yes</p></td>
+<td><p>はい</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>LU あたりのスナップショット数</p></td>
 <td><p>512</p></td>
-<td><p>Yes</p></td>
+<td><p>はい</p></td>
 <td><p>独立した iSCSI アプリケーションボリュームあたり512のスナップショットの制限があります。</p></td>
 </tr>
 <tr class="even">
@@ -97,7 +98,7 @@ ms.locfileid: "96865171"
 <tr class="odd">
 <td><p>フェールオーバークラスターノード</p></td>
 <td><p>8 (Windows Server 2012 では 5)</p></td>
-<td><p>No</p></td>
+<td><p>いいえ</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -122,7 +123,7 @@ ms.locfileid: "96865171"
 <tr class="odd">
 <td><p>ISCSI ターゲットインスタンスに同時に接続できるセッション</p></td>
 <td><p>544 (Windows Server 2012 の 512)</p></td>
-<td><p>No</p></td>
+<td><p>いいえ</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -140,7 +141,7 @@ ms.locfileid: "96865171"
 <tr class="even">
 <td><p>スタンドアロン iSCSI ターゲットサーバーから、クラスター化された iSCSI ターゲットサーバーへの変換またはその逆の変換</p></td>
 <td><p>サポートされていません</p></td>
-<td><p>No</p></td>
+<td><p>いいえ</p></td>
 <td><p>ISCSI ターゲットインスタンスと仮想ディスク構成データ (スナップショットメタデータを含む) は、変換中に失われます。</p></td>
 </tr>
 </tbody>
@@ -167,7 +168,7 @@ ms.locfileid: "96865171"
 <tr class="odd">
 <td><p>アクティブなネットワークアダプターの最大数</p></td>
 <td><p>8</p></td>
-<td><p>No</p></td>
+<td><p>いいえ</p></td>
 <td><p>アプライアンス内のネットワークアダプターの合計数ではなく、iSCSI トラフィック専用のネットワークアダプターに適用されます。</p></td>
 </tr>
 <tr class="even">
@@ -179,7 +180,7 @@ ms.locfileid: "96865171"
 <tr class="odd">
 <td><p>ネットワークポートの速度</p></td>
 <td><p>1 Gbps、10 Gbps、40Gbps、56 Gbps (Windows Server 2012 R2 以降のみ)</p></td>
-<td><p>No</p></td>
+<td><p>いいえ</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -262,40 +263,40 @@ ms.locfileid: "96865171"
 <td><p>VHD の最小フォーマットサイズ</p></td>
 <td><p>.vhdx: 3 MB</p>
 <p>.vhd: 8 MB</p></td>
-<td><p>Yes</p></td>
+<td><p>はい</p></td>
 <td><p>サポートされているすべての VHD の種類 (親、差分、固定) に適用されます。</p></td>
 </tr>
 <tr class="even">
 <td><p>親 VHD の最大サイズ</p></td>
 <td><p>.vhdx:64 TB</p>
 <p>.vhd: 2 TB</p></td>
-<td><p>Yes</p></td>
+<td><p>はい</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>VHD の最大サイズを修正</p></td>
 <td><p>.vhdx:64 TB</p>
 <p>.vhd:16 TB</p></td>
-<td><p>Yes</p></td>
+<td><p>はい</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>差分 VHD の最大サイズ</p></td>
 <td><p>.vhdx:64 TB</p>
 <p>.vhd: 2 TB</p></td>
-<td><p>Yes</p></td>
+<td><p>はい</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>VHD の固定形式</p></td>
-<td><p>サポートされています</p></td>
-<td><p>No</p></td>
+<td><p>サポート</p></td>
+<td><p>いいえ</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>VHD 差分形式</p></td>
-<td><p>サポートされています</p></td>
-<td><p>No</p></td>
+<td><p>サポート</p></td>
+<td><p>いいえ</p></td>
 <td><p>差分 VHD ベースの iSCSI 仮想ディスクを使用してスナップショットを作成することはできません。</p></td>
 </tr>
 <tr class="odd">
@@ -308,7 +309,7 @@ ms.locfileid: "96865171"
 <td><p>VHD の動的形式</p></td>
 <td><p>.vhdx: はい</p>
 <p>.vhd: はい (Windows Server 2012 ではいいえ)</p></td>
-<td><p>Yes</p></td>
+<td><p>はい</p></td>
 <td><p>マップ解除はサポートされていません&#39;。</p></td>
 </tr>
 <tr class="odd">
@@ -380,12 +381,12 @@ ms.locfileid: "96865171"
 <tbody>
 <tr class="odd">
 <td><p>スナップショットの作成</p></td>
-<td><p>サポートされています</p></td>
+<td><p>サポート</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>スナップショットの復元</p></td>
-<td><p>サポートされています</p></td>
+<td><p>サポート</p></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -420,7 +421,7 @@ ms.locfileid: "96865171"
 </tr>
 <tr class="odd">
 <td><p>ローカルマウント</p></td>
-<td><p>サポートされています</p></td>
+<td><p>サポート</p></td>
 <td><p>ローカルにマウントされた iSCSI 仮想ディスクは非推奨です-詳細については、「 <a href="/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303411(v=ws.11)">Windows Server 2012 R2 で削除された機能または非推奨の機能</a>」を参照してください。 ダイナミックディスクスナップショットをローカルにマウントすることはできません。</p></td>
 </tr>
 </tbody>
@@ -460,7 +461,7 @@ ISCSI ターゲット記憶域プロバイダーの詳細については、「 [
 <td><p>Initiator</p></td>
 <td><p>Windows Server 2012 R2</p></td>
 <td><p>Windows Server 2012</p></td>
-<td><p>説明</p></td>
+<td><p>コメント</p></td>
 </tr>
 <tr class="even">
 <td><p>Windows Server 2012 R2</p></td>

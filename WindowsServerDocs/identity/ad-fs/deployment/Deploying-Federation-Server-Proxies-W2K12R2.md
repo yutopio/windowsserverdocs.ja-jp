@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フェデレーションサーバープロキシの展開」を参照してください。
 ms.assetid: 222e9f93-7c41-4527-8a98-8f7fbc7a58af
 title: Windows Server 2012 R2 の AD FS でのフェデレーションサーバープロキシの展開
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 762a2f06ed7fa64c8d5f844ed4902d1ea9d44056
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6554cd206c459d5b0eacb8bf375d5fcd132c8530
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962866"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048890"
 ---
 # <a name="deploying-federation-server-proxies"></a>フェデレーション サーバー プロキシの展開
 
@@ -32,7 +33,7 @@ Web アプリケーション プロキシを展開するには、次のトピッ
 -   [Web アプリケーション プロキシ サーバーをインストールし、構成する](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383662(v=ws.11))
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [AD FS 展開](../../ad-fs/AD-FS-Deployment.md)
 

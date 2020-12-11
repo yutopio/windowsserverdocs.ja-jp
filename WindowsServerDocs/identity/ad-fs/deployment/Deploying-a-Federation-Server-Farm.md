@@ -1,17 +1,18 @@
 ---
 ms.assetid: bbb5b68f-00ad-4715-8176-0c2769b706c4
 title: Windows Server 2012 R2 AD FS 用のフェデレーションサーバーファームの展開
+description: 詳細については、「フェデレーションサーバーファームの展開」を参照してください。
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 2f7602e99e550e993b916e603dad33724b3b0570
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: ae1a7f99a466d3a3a24c803d0dacf5537143b324
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865041"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048860"
 ---
 # <a name="deploying-a-federation-server-farm"></a>フェデレーション サーバー ファームの展開
 
@@ -36,4 +37,3 @@ ms.locfileid: "96865041"
 [AD FS 展開](../../ad-fs/AD-FS-Deployment.md)
 
 [Windows Server 2012 R2 AD FS の展開ガイド](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
-

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AD FS の概要'
 ms.assetid: 5007a619-ef57-4636-9aa9-93b0f02be1fc
 title: AD FS 2016 の概要
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7e389e8a1612dbb85abb0792fcaa3248a48b776f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2382e7aadde74382bac49941166ac5dd601b17fd
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953126"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048810"
 ---
 # <a name="ad-fs-overview"></a>AD FS の概要
 

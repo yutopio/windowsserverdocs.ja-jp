@@ -1,4 +1,5 @@
 ---
+description: 詳細については、記憶域スペースダイレクトのボリュームの計画に関するページを参照してください。
 ms.assetid: 342173ca-4e10-44f4-b2c9-02a6c26f7a4a
 title: 記憶域スペース ダイレクトのボリュームの計画
 ms.author: cosdar
@@ -7,12 +8,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 06/28/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: dcc98fba7194da322f9fc97b67eb43d481f50133
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d1f975299593db29da20c35a621ea870e436d8be
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971149"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048940"
 ---
 # <a name="planning-volumes-in-storage-spaces-direct"></a>記憶域スペース ダイレクトのボリュームの計画
 
@@ -176,9 +177,9 @@ SQL Server データベースやパフォーマンス重視の Hyper-V 仮想マ
 
 すべてのボリュームを同じサイズにする必要はありませんが、わかりやすくするために、たとえば、それらをすべて 12 TB にします。
 
-*Volume1* と *Volume2*は、それぞれ 33.3% の効率で 12 TB 専有するため、記憶域の合計容量は 36 TB になります。
+*Volume1* と *Volume2* は、それぞれ 33.3% の効率で 12 TB 専有するため、記憶域の合計容量は 36 TB になります。
 
-*Volume3* と *Volume4*は、それぞれ 50.0% の効率で 12 TB 専有するため、記憶域の合計容量は 24 TB になります。
+*Volume3* と *Volume4* は、それぞれ 50.0% の効率で 12 TB 専有するため、記憶域の合計容量は 24 TB になります。
 
 ```
 36 TB + 36 TB + 24 TB + 24 TB = 120 TB

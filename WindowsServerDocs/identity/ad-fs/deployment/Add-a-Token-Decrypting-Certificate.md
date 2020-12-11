@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Token-Decrypting 証明書の追加」を参照してください。
 ms.assetid: 27e1e299-0beb-4e86-8143-1ba031dc3502
 title: トークン暗号化解除証明書を追加する
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 0c6e2fc3913a6a483d71441a5e2aa1f0aabb7cbb
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 86f45f534567b88ad07c1334c0536ebcfe05524e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947633"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047890"
 ---
 # <a name="add-a-token-decrypting-certificate"></a>トークン暗号化解除証明書を追加する
 
@@ -26,15 +27,15 @@ ms.locfileid: "87947633"
 
 ### <a name="to-add-a-token-decrypting-certificate"></a>トークン \- 暗号化解除証明書を追加するには
 
-1.  **スタート**画面で「**AD FS Management**」と入力し、enter キーを押します。
+1.  **スタート** 画面で「**AD FS Management**」と入力し、enter キーを押します。
 
-2.  コンソールツリーで、[サービス] をダブルクリックし、[ \- **証明書**] をクリックします。 **Service**
+2.  コンソールツリーで、[サービス] をダブルクリックし、[ \- **証明書**] をクリックします。 
 
-3.  [**操作**] ウィンドウで、[**トークン \- 暗号化解除証明書の追加**] リンクをクリックします。
+3.  [ **操作** ] ウィンドウで、[ **トークン \- 暗号化解除証明書の追加** ] リンクをクリックします。
 
-4.  [**証明書ファイルの参照**] ダイアログボックスで、追加する証明書ファイルに移動し、証明書ファイルを選択して [**開く**] をクリックします。
+4.  [ **証明書ファイルの参照** ] ダイアログボックスで、追加する証明書ファイルに移動し、証明書ファイルを選択して [ **開く**] をクリックします。
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 [チェックリスト:フェデレーション サーバーのセットアップ](Checklist--Setting-Up-a-Federation-Server.md)
 
 [フェデレーション サーバーの証明書の要件](../design/certificate-requirements-for-federation-servers.md)

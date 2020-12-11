@@ -1,18 +1,18 @@
 ---
 title: DHCP (動的ホスト構成プロトコル) の基本
-description: ''
+description: '詳細情報: DHCP (動的ホスト構成プロトコル) の基礎'
 manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: troubleshoot
 author: Deland-Han
 ms.author: delhan
 ms.reviewer: ''
-ms.openlocfilehash: 445663569fca7182e5343dd6f7ac677fd7f87f3b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 73b79eedf1d792c30c7dc6997c3005db8076d924
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970059"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045990"
 ---
 # <a name="dhcp-dynamic-host-configuration-protocol-basics"></a>DHCP (動的ホスト構成プロトコル) の基本
 
@@ -447,6 +447,6 @@ DHCP サーバーからクライアントによって取得された DHCP 情報
 
 Windows または Windows のワークグループクライアントの IP 情報を表示するには、IPCONFIG ユーティリティを使用します。 クライアントが Windows 95 の場合は、WINIPCFG を使用します。
 
-## <a name="references"></a>References
+## <a name="references"></a>リファレンス
 
-DHCP の詳細については、「RFC1541 and RFC2131」を参照してください。 Rfc は多くのサイトでインターネット経由で取得できます。たとえば、 [http://www.rfc-editor.org/](http://www.rfc-editor.org/) と[http://www.tech-nic.qc.ca/](http://www.tech-nic.qc.ca/)
+DHCP の詳細については、「RFC1541 and RFC2131」を参照してください。 Rfc は多くのサイトでインターネット経由で取得できます。たとえば、 [http://www.rfc-editor.org/](http://www.rfc-editor.org/) と [http://www.tech-nic.qc.ca/](http://www.tech-nic.qc.ca/)

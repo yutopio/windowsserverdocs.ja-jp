@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Windows 2000 組織での AD DS の展開に関するページを参照してください。
 ms.assetid: 7530cafe-98d7-46c9-95d9-e49d39caa021
 title: Windows Server 2000 組織への AD DS の展開
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 73a9f921d393bc4be244f9aa4d20d1201d93934e
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: a123153a360584c30ee51cd7fae8ca8bd0753656
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069374"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045490"
 ---
 # <a name="deploying-ad-ds-in-a-windows-2000-organization"></a>Windows Server 2000 組織への AD DS の展開
 

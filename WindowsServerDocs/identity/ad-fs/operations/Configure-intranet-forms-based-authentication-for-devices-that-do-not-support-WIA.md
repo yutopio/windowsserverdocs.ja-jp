@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: WIA をサポートしていないデバイスのイントラネットフォームベースの認証を構成する'
 ms.assetid: d562ef46-f240-48be-bbd4-fd88fc6bbbdc
 title: WIA をサポートしていないデバイスのイントラネットフォームベース認証の構成
 author: billmath
@@ -6,23 +7,23 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: c64fad4357055ca0cef5d06279f244a92815d473
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 1c3058663c01a7e90f4c67241a927923d659512a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967539"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048800"
 ---
 # <a name="configuring-intranet-forms-based-authentication-for-devices-that-do-not-support-wia"></a>WIA をサポートしていないデバイスのイントラネットフォームベース認証の構成
 
-既定では、windows 統合認証 (WIA) は、認証にブラウザーを使用する任意のアプリケーションの組織の内部ネットワーク (イントラネット) 内で発生する認証要求に対して、Windows Server 2012 R2 の Active Directory フェデレーションサービス (AD FS) (AD FS) で有効になっています。 たとえば、WS-FEDERATION または SAML プロトコルを使用するブラウザーベースのアプリケーションや、OAuth プロトコルを使用する豊富なアプリケーションにすることができます。 WIA を使用すると、エンドユーザーは、資格情報を手動で入力しなくても、アプリケーションにシームレスにログオンできます。 ただし、一部のデバイスとブラウザーでは、WIA をサポートできないため、これらのデバイスからの認証要求は失敗します。 また、NTLM にネゴシエートする特定のブラウザーの操作は望ましくありません。 推奨される方法は、このようなデバイスやブラウザーのフォームベースの認証にフォールバックすることです。
+既定では、windows 統合認証 (WIA) は、認証にブラウザーを使用する任意のアプリケーションの組織の内部ネットワーク (イントラネット) 内で発生する認証要求に対して、Windows Server 2012 R2 の Active Directory フェデレーションサービス (AD FS) (AD FS) で有効になっています。 たとえば、WS-Federation または SAML プロトコルを使用するブラウザーベースのアプリケーションや、OAuth プロトコルを使用する豊富なアプリケーションにすることができます。 WIA を使用すると、エンドユーザーは、資格情報を手動で入力しなくても、アプリケーションにシームレスにログオンできます。 ただし、一部のデバイスとブラウザーでは、WIA をサポートできないため、これらのデバイスからの認証要求は失敗します。 また、NTLM にネゴシエートする特定のブラウザーの操作は望ましくありません。 推奨される方法は、このようなデバイスやブラウザーのフォームベースの認証にフォールバックすることです。
 
 Windows Server 2016 および Windows Server 2012 R2 の AD FS を使用すると、管理者は、フォームベースの認証へのフォールバックをサポートするユーザーエージェントの一覧を構成できます。 フォールバックは、次の2つの構成によって可能になります。
 
-- コマンドレットの**Wiasupporteduseragentstrings**プロパティ `Set-ADFSProperties`
-- コマンドレットの**Windowsインテグレーション Atedfallbackenabled**プロパティ `Set-AdfsGlobalAuthenticationPolicy`
+- コマンドレットの **Wiasupporteduseragentstrings** プロパティ `Set-ADFSProperties`
+- コマンドレットの **Windowsインテグレーション Atedfallbackenabled** プロパティ `Set-AdfsGlobalAuthenticationPolicy`
 
-**Wiasupporteduseragentstrings**は、WIA をサポートするユーザーエージェントを定義します。 AD FS は、ブラウザーまたはブラウザーコントロールでログインを実行するときに、ユーザーエージェント文字列を分析します。 ユーザーエージェント文字列のコンポーネントが**Wiasupporteduseragentstrings**プロパティで構成されているユーザーエージェント文字列のどのコンポーネントとも一致しない場合、 **Windowsintegratedfallbackenabled**フラグが True に設定されていれば、AD FS はフォームベースの認証を提供するようにフォールバックします。
+**Wiasupporteduseragentstrings** は、WIA をサポートするユーザーエージェントを定義します。 AD FS は、ブラウザーまたはブラウザーコントロールでログインを実行するときに、ユーザーエージェント文字列を分析します。 ユーザーエージェント文字列のコンポーネントが **Wiasupporteduseragentstrings** プロパティで構成されているユーザーエージェント文字列のどのコンポーネントとも一致しない場合、 **Windowsintegratedfallbackenabled** フラグが True に設定されていれば、AD FS はフォームベースの認証を提供するようにフォールバックします。
 
 既定では、新しい AD FS のインストールには、一連のユーザーエージェント文字列の一致が作成されます。 ただし、これらは、ブラウザーおよびデバイスの変更に基づいて古くなっている可能性があります。 特に、Windows デバイスでは、トークンに多少の違いがある同様のユーザーエージェント文字列があります。 次の Windows PowerShell の例では、シームレスな WIA をサポートする現在の市場にあるデバイスの現在のセットについて、最適なガイダンスを提供しています。
 
@@ -77,4 +78,4 @@ Get-AdfsProperties | Select -ExpandProperty WIASupportedUserAgents
 (ここに新しいスクリーンショットが必要です) ![認証の構成](media/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA/chrome1.png)
 
 >[!NOTE]
-> 新しいブラウザーとデバイスがリリースされると、ユーザーエージェントの機能を調整し、それに応じて AD FS 構成を更新して、ブラウザーとデバイスを使用するときのユーザーの認証エクスペリエンスを最適化することをお勧めします。 具体的には、新しいデバイスまたはブラウザーの種類を WIA のサポートマトリックスに追加するときに、AD FS の**Wiasupporteduseragents**設定を再評価することをお勧めします。
+> 新しいブラウザーとデバイスがリリースされると、ユーザーエージェントの機能を調整し、それに応じて AD FS 構成を更新して、ブラウザーとデバイスを使用するときのユーザーの認証エクスペリエンスを最適化することをお勧めします。 具体的には、新しいデバイスまたはブラウザーの種類を WIA のサポートマトリックスに追加するときに、AD FS の **Wiasupporteduseragents** 設定を再評価することをお勧めします。

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「集約型監査ポリシーを使用したセキュリティ監査の展開 (デモンストレーション手順)」を参照してください。
 ms.assetid: 22347a94-aeea-44b4-85fb-af2c968f432a
 title: 集約型の監査ポリシーを使用したセキュリティ監査の展開 (デモンストレーション手順)
 author: billmath
@@ -6,18 +7,18 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 9fed82f80c03c0d8490dc88b1ec7c7d7c48a4c06
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6d55fc8b1d7a1f1c7f94b09c773a079f3488862c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956079"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046500"
 ---
 # <a name="deploy-security-auditing-with-central-audit-policies-demonstration-steps"></a>集約型の監査ポリシーを使用したセキュリティ監査の展開 (デモンストレーション手順)
 
 >適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 
-このシナリオでは、「[集約型アクセスポリシーの展開 &#40;デモンストレーション手順&#41;](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md)」で作成した finance ポリシーを使用して、finance ドキュメントフォルダー内のファイルへのアクセスを監査します。 このフォルダーへのアクセスが許可されていないユーザーがこのフォルダーにアクセスしようとすると、イベント ビューアーでそのアクティビティがキャプチャされます。
+このシナリオでは、「 [集約型アクセスポリシーの展開 &#40;デモンストレーション手順&#41;](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md)」で作成した finance ポリシーを使用して、finance ドキュメントフォルダー内のファイルへのアクセスを監査します。 このフォルダーへのアクセスが許可されていないユーザーがこのフォルダーにアクセスしようとすると、イベント ビューアーでそのアクティビティがキャプチャされます。
 このシナリオをテストするには、次の手順が必要です。
 
 |タスク|説明|

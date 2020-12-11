@@ -1,16 +1,17 @@
 ---
+description: 詳細については、AD FS を使用した OpenID Connect のシングルログアウトに関するページを参照してください。
 title: AD FS での OpenID 接続のシングル ログアウト
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 11/17/2017
 ms.topic: article
-ms.openlocfilehash: 1ab6735e09d912bac5b1a319a3793ee6e0c70fa2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 4b94ddda582c5bb51cf8b6fe987e039ee3e55957
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87964939"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047020"
 ---
 #  <a name="single-log-out-for-openid-connect-with-ad-fs"></a>AD FS での OpenID 接続のシングル ログアウト
 
@@ -70,10 +71,10 @@ Set-ADFSProperties -EnableOAuthLogout $true
 ```
 
 >[!NOTE]
-> `EnableOAuthLogout`[KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)をインストールした後、パラメーターは不使用とマークされます。 `EnableOAUthLogout`は常に true になり、ログアウト機能には影響しません。
+> `EnableOAuthLogout`[KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)をインストールした後、パラメーターは不使用とマークされます。 `EnableOAUthLogout` は常に true になり、ログアウト機能には影響しません。
 
 >[!NOTE]
->frontchannel_logout は[KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)の vcredist の後で**のみ**サポートされます。
+>frontchannel_logout は [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)の vcredist の後で **のみ** サポートされます。
 
 ## <a name="client-configuration"></a>クライアントの構成
 クライアントは、ログインしているユーザーを "ログオフ" する url を実装する必要があります。 管理者は、次の PowerShell コマンドレットを使用して、クライアント構成で LogoutUri を構成できます。
@@ -92,13 +93,13 @@ Set-AdfsClient -LogoutUri <url>
 ![ADFS ログオフユーザーダイアグラム](media/ad-fs-logout-openid-connect/adfs_single_logout2.png)
 
 1.  **セッション id を持つ oauth トークン**: AD FS id_token トークンの発行時に、oauth トークンにセッション id が含まれます。 これは、ユーザーに対してクリーンアップする関連 SSO cookie を特定するために後で AD FS によって使用されます。
-2.  **ユーザー**は、ログに記録された任意のアプリケーションからログアウトを開始できます。 この例のシナリオでは、ユーザーは、[ユーザー] からログアウトを開始します。
+2.  **ユーザー** は、ログに記録された任意のアプリケーションからログアウトを開始できます。 この例のシナリオでは、ユーザーは、[ユーザー] からログアウトを開始します。
 3.  **アプリケーションがログアウト要求を AD FS に送信する**: ユーザーがログアウトを開始した後、アプリケーションは GET 要求を AD FS の end_session_endpoint に送信します。 アプリケーションでは、必要に応じて、この要求のパラメーターとして id_token_hint を含めることができます。 Id_token_hint が存在する場合、AD FS はセッション ID と共に使用して、ログアウト後にクライアントがリダイレクトされる必要がある URI を判別します (post_logout_redirect_uri)。  Post_logout_redirect_uri は、RedirectUris パラメーターを使用して AD FS に登録されている有効な uri である必要があります。
-4.  AD FS は、ログインしている**クライアントにサインアウトを送信**します。 AD FS は、セッション識別子の値を使用して、ユーザーがログインしている関連クライアントを検索します。 識別されたクライアントは、AD FS に登録されている LogoutUri で要求を送信し、クライアント側でログアウトを開始します。
+4.  AD FS は、ログインしている **クライアントにサインアウトを送信** します。 AD FS は、セッション識別子の値を使用して、ユーザーがログインしている関連クライアントを検索します。 識別されたクライアントは、AD FS に登録されている LogoutUri で要求を送信し、クライアント側でログアウトを開始します。
 
 ## <a name="faqs"></a>FAQ
 **Q:** 探索ドキュメントに frontchannel_logout_supported と frontchannel_logout_session_supported のパラメーターが表示されません。</br>
-**A:** すべての AD FS サーバーに[KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)がインストールされていることを確認します。 [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)を使用したサーバー2016でのシングルログアウトを参照してください。
+**A:** すべての AD FS サーバーに [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801) がインストールされていることを確認します。 [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)を使用したサーバー2016でのシングルログアウトを参照してください。
 
 **Q:** 転送済みとしてシングルログアウトを構成しましたが、ユーザーは他のクライアントにログインしたままにします。</br>
 **A:**`LogoutUri`ユーザーがログインしているすべてのクライアントに対してが設定されていることを確認します。 また、AD FS は、登録されているでサインアウト要求を送信しようとして `LogoutUri` います。 クライアントは、要求を処理し、アプリケーションからユーザーをサインアウトするアクションを実行するロジックを実装する必要があります。</br>

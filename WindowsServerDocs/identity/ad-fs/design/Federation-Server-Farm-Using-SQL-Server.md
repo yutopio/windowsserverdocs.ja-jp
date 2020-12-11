@@ -1,17 +1,18 @@
 ---
 ms.assetid: e983d2ab-4153-41e7-b243-12cf7d71a552
 title: SQL Server を使用するフェデレーション サーバー ファーム
+description: 詳細については、SQL Server を使用したレガシ AD FS フェデレーションサーバーファームに関するページを参照してください。
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d283cc3ed8b848ba705a4e7773c1cd0861da1095
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 781c3d99fdd063d094b85032e1ccaca0860cba9a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864631"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046990"
 ---
 # <a name="legacy-ad-fs-federation-server-farm-using-sql-server"></a>SQL Server を使用した従来の AD FS フェデレーションサーバーファーム
 
@@ -158,4 +159,3 @@ SQL Server マージレプリケーションを使用するように AD FS を�
 ## <a name="see-also"></a>関連項目
 [AD FS の展開トポロジ](Plan-Your-AD-FS-Deployment-Topology.md) 
  を計画する[Windows Server 2012 R2 の AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
-

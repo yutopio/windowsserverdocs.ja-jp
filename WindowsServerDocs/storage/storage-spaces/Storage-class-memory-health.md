@@ -1,18 +1,19 @@
 ---
 ms.assetid: 2bab6bf6-90e7-46a7-b917-14a7a8f55366
 title: Windows での記憶域クラス メモリ (NVDIMM-N) の正常性管理
+description: 詳細については、Windows での記憶域クラスメモリ (NVDIMM) の正常性管理に関するページを参照してください。
 ms.author: jgerend
 manager: dongill
 ms.topic: article
 author: JasonGerend
 ms.date: 06/25/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: b97263c0cc1fefd71eebd6eb4d7b66ca66741a04
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 290ae790f64b5142118e16b2aca206569b16a549
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865931"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047670"
 ---
 # <a name="storage-class-memory-nvdimm-n-health-management-in-windows"></a>Windows での記憶域クラス メモリ (NVDIMM-N) の正常性管理
 

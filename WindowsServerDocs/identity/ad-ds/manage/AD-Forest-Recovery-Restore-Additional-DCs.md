@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「AD フォレストの回復-残りの Dc の再デプロイ」を参照してください。
 title: AD フォレストの回復-残りの Dc の再デプロイ
 ms.author: daveba
 author: iainfoulds
@@ -6,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: d3d826e0ec587289671723a4bd78d0d669189428
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 15e0384155b3a967dd3a0d627908ebe1565b1ba3
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070814"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047140"
 ---
 # <a name="ad-forest-recovery---redeploy-remaining-dcs"></a>AD フォレストの回復-残りの Dc の再デプロイ
 
@@ -29,7 +30,7 @@ ms.locfileid: "93070814"
    - Windows Server 2012 を実行する仮想化環境では、多数の Dc を回復するための最も高速で簡単な方法が複製されます。 1つの仮想化 DC をバックアップから復元した後で、ドメイン内のすべての仮想化 Dc の回復を自動化できます。
    - 複製と前提条件の詳細については、「 [Active Directory Domain Services (AD DS) の仮想化 (レベル 100) の概要](./managing-rid-issuance.md)」を参照してください。
 - Windows Server 2012 を実行しているサーバー (また Dcpromo.exe は以前のバージョンの Windows Server を実行しているサーバー) またはユーザーインターフェイスを使用して、Windows PowerShell を使用して AD DS を再インストールします。
-   - AD DS の再インストールを迅速に実行するには、[メディアからのインストール (IFM)] オプションを使用して、インストール中のレプリケーショントラフィックを削減します。 **Ntdsutil ifm** コマンドを使用してインストールメディアを作成する方法の詳細については、「 [メディアからの AD DS のインストール](./managing-rid-issuance.md)」を参照してください。
+   - AD DS の再インストールを迅速に実行するには、[メディアからのインストール (IFM)] オプションを使用して、インストール中のレプリケーショントラフィックを削減します。 **Ntdsutil ifm** コマンドを使用してインストールメディアを作成する方法の詳細については、「[メディアからの AD DS のインストール](./managing-rid-issuance.md)」を参照してください。
 
 仮想化 DC 複製によって、または (バックアップからの復元ではなく) AD DS をインストールして、フォレスト内で回復された各レプリカ DC について、次の点を考慮してください。
 

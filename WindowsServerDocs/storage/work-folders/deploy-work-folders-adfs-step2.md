@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「AD FS と Web アプリケーションプロキシを使用してワークフォルダーを展開する: 手順2、AD FS 構成後の作業」を参照してください。'
 title: AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開 - 手順 2、AD FS の構成後の作業
 ms.topic: article
 manager: klaasl
@@ -6,12 +7,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 06/06/2019
 ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
-ms.openlocfilehash: 84ff335514b4b9251ffa1518b613120f3b3e2869
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a830297b0adc8eb3ea0badb605570593933be918
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946195"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045370"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 2、AD FS の構成後の作業
 
@@ -102,7 +103,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
 
 7.  **[URL の構成]** ページで、**[次へ]** をクリックします。
 
-8. [**識別子の構成**] ページで、次の識別子を追加します `https://windows-server-work-folders/V1` 。 この識別子はワーク フォルダーで使われるハードコード値であり、AD FS を使って通信するときに、ワーク フォルダー サービスによって送信されます。 **[次へ]** をクリックします。
+8. [ **識別子の構成** ] ページで、次の識別子を追加します `https://windows-server-work-folders/V1` 。 この識別子はワーク フォルダーで使われるハードコード値であり、AD FS を使って通信するときに、ワーク フォルダー サービスによって送信されます。 **[次へ]** をクリックします。
 
 9. [アクセス制御ポリシーの選択] ページで、**[すべてのユーザーを許可]** を選択し、**[次へ]** をクリックします。
 
@@ -112,7 +113,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
 
 12. AD FS スナップインで、**WorkFolders** の証明書利用者信頼を選択し、[アクション] の **[要求発行ポリシーの編集]** をクリックします。
 
-13. **[WorkFolders の要求発行ポリシーの編集]** ウィンドウが開きます。 [**ルールの追加**] をクリックします。
+13. **[WorkFolders の要求発行ポリシーの編集]** ウィンドウが開きます。 **[ルールの追加]** をクリックします。
 
 14. **[要求規則テンプレート]** ドロップダウン リストで、**[LDAP 属性を要求として送信]** を選択して、**[次へ]** をクリックします。
 
@@ -149,10 +150,10 @@ AD FS の証明書利用者信頼をセットアップした後で、Windows Pow
 これらのオプションを設定するには、次のコマンドを使用します。
 
 ```powershell
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -EnableJWT $true
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -Encryptclaims $false
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -EnableJWT $true
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -Encryptclaims $false
 Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -AutoupdateEnabled $true
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -IssueOAuthRefreshTokensTo AllDevices
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -IssueOAuthRefreshTokensTo AllDevices
 Grant-AdfsApplicationPermission -ServerRoleIdentifier "https://windows-server-work-folders/V1" -AllowAllRegisteredClients -ScopeNames openid,profile
 ```
 
@@ -196,7 +197,7 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
 
 7.  **[OK]** をクリックします。
 
-8.  フォルダー**コンソール Root\Certificates \( Local Computer) \Personal\Certificates**を展開します。
+8.  フォルダー **コンソール Root\Certificates \( Local Computer) \Personal\Certificates** を展開します。
 
 9.  **[AD FS 証明書]** を右クリックし、**[すべてのタスク]**、**[エクスポート]** の順にクリックします。
 
@@ -228,7 +229,7 @@ AD FS サービス アカウントに、新しい証明書の秘密キーにア�
 
 7.  **[OK]** をクリックします。
 
-8.  フォルダー**コンソール Root\Certificates \( Local Computer) \Personal\Certificates**を展開します。
+8.  フォルダー **コンソール Root\Certificates \( Local Computer) \Personal\Certificates** を展開します。
 
 9.  **[AD FS 証明書]** を右クリックし、**[すべてのタスク]** をクリックして、**[秘密キーの管理]** をクリックします。
 
@@ -240,7 +241,7 @@ AD FS サービス アカウントに、新しい証明書の秘密キーにア�
 
 13. **[アクセス許可]** ウィンドウで、少なくとも読み取りアクセス許可をアカウントに付与して、**[OK]** をクリックします。
 
-秘密キーを管理するオプションがない場合は、次のコマンドの実行が必要になることがあります。`certutil -repairstore my *`
+秘密キーを管理するオプションがない場合は、次のコマンドの実行が必要になることがあります。 `certutil -repairstore my *`
 
 ## <a name="verify-that-ad-fs-is-operational"></a>AD FS が動作していることを確認する
 
@@ -250,5 +251,5 @@ AD FS が動作していることを確認するには、ブラウザーウィ�
 
 次の手順: [AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 3: ワーク フォルダーのセットアップ](deploy-work-folders-adfs-step3.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ワーク フォルダーの概要](Work-Folders-Overview.md)

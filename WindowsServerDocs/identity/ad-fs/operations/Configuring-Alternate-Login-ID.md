@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「代替ログイン ID の構成」を参照してください。
 ms.assetid: f0cbdd78-f5ae-47ff-b5d3-96faf4940f4a
 title: 代替ログイン ID を構成する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
-ms.openlocfilehash: 549ba062a30ce3b2d1a9f06d60357c0199766d84
-ms.sourcegitcommit: c6e2e545100bbbc4864088fd0d103bafc147fcbb
+ms.openlocfilehash: 93bca831222700f12cccd2ae6aef60ca189197b9
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88785064"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97048850"
 ---
 # <a name="configuring-alternate-login-id"></a>代替ログイン ID を構成する
 
@@ -119,9 +120,9 @@ Office アプリケーションは、代替 id 環境を識別するために、
 
 |追加するレジストリキー|レジストリキーのデータ名、型、および値|Windows 7/8|Windows 10|説明|
 |-----|-----|-----|-----|-----|
-|HKEY_CURRENT_USER \Software\Microsoft\AuthN|DomainHint</br>REG_SZ</br>contoso.com|必須|必須|このレジストリキーの値は、組織のテナントで検証されたカスタムドメイン名です。 たとえば、Contoso corp では、Contoso.com がテナント Contoso.onmicrosoft.com の検証済みのカスタムドメイン名の1つである場合、このレジストリキーに Contoso.com の値を指定できます。|
-HKEY_CURRENT_USER \Software\Microsoft\Office\16.0\Common\Identity|EnableAlternateIdSupport</br>REG_DWORD</br>1|Outlook 2016 ProPlus に必要|Outlook 2016 ProPlus に必要|このレジストリキーの値は、強化された代替 id 認証ロジックを使用する必要があるかどうかを Outlook アプリケーションに示す 1/0 にすることができます。|
-HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\contoso.com\sts|&#42;</br>REG_DWORD</br>1|必須|必須|このレジストリキーを使用して、インターネットの設定で STS を信頼済みゾーンとして設定できます。 標準の ADFS 展開では、ADFS 名前空間を Internet Explorer のローカルイントラネットゾーンに追加することをお勧めします。|
+|HKEY_CURRENT_USER\Software\Microsoft\AuthN|DomainHint</br>REG_SZ</br>contoso.com|必須|必須|このレジストリキーの値は、組織のテナントで検証されたカスタムドメイン名です。 たとえば、Contoso corp では、Contoso.com がテナント Contoso.onmicrosoft.com の検証済みのカスタムドメイン名の1つである場合、このレジストリキーに Contoso.com の値を指定できます。|
+HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity|EnableAlternateIdSupport</br>REG_DWORD</br>1|Outlook 2016 ProPlus に必要|Outlook 2016 ProPlus に必要|このレジストリキーの値は、強化された代替 id 認証ロジックを使用する必要があるかどうかを Outlook アプリケーションに示す 1/0 にすることができます。|
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\contoso.com\sts|&#42;</br>REG_DWORD</br>1|必須|必須|このレジストリキーを使用して、インターネットの設定で STS を信頼済みゾーンとして設定できます。 標準の ADFS 展開では、ADFS 名前空間を Internet Explorer のローカルイントラネットゾーンに追加することをお勧めします。|
 
 ## <a name="new-authentication-flow-after-additional-configuration"></a>追加の構成後の新しい認証フロー
 
@@ -138,7 +139,7 @@ HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\Internet Settings\Z
 
 ### <a name="non-exchange-and-skype-for-business-clients"></a>Exchange 以外のクライアントと Skype for Business クライアント
 
-|クライアント|サポートに関する声明|解説|
+|クライアント|サポートに関する声明|注釈|
 | ----- | -----|-----|
 |Microsoft Teams|サポート|<li>Microsoft Teams は、AD FS (SAML P、WS-ATOMICTRANSACTION、WS-TRUST、および OAuth) と先進認証をサポートしています。</li><li> チャンネル、チャット、ファイルなどの主要な Microsoft チームは、代替ログイン ID を使用します。</li><li>1番目とサードパーティのアプリは、顧客が個別に調査する必要があります。 これは、各アプリケーションが独自のサポート認証プロトコルを持っているためです。</li>|
 |OneDrive for Business|サポートされている-クライアント側のレジストリキーを推奨します |代替 ID が構成されている場合は、オンプレミスの UPN が検証フィールドに事前設定されていることがわかります。 これは、使用されている代替 Id に変更する必要があります。 この記事に記載されているクライアント側のレジストリキーを使用することをお勧めします。 Office 2013 および Lync 2013 では、SharePoint Online、OneDrive、および Lync Online への資格情報を定期的に確認するように求められます。|
@@ -201,5 +202,5 @@ HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\Internet Settings\Z
 |        1つのフォレストに複数のユーザーオブジェクトが見つかりました        |          ログインエラー           | イベント ID 364、例外メッセージ MSIS8015: フォレスト ' ' の id ' ' を持つ複数のユーザーアカウントが id で見つかりました {0} {1} : {2} |
 |   複数のユーザーオブジェクトが複数のフォレストにわたって検出される    |          ログインエラー           |           イベント ID 364、例外メッセージ MSIS8014: フォレストに id ' ' を持つ複数のユーザーアカウントが見つかりました {0} : {1}            |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [AD FS の運用](../ad-fs-operations.md)

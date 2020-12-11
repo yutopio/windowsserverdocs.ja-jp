@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「WID とプロキシを使用した従来の AD FS フェデレーションサーバーファーム」を参照してください。
 ms.assetid: f0464182-56a2-4bfa-a8c8-7e39c1bd62d3
 title: WID とプロキシを使用するフェデレーション サーバー ファーム
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 372d2ff3c372815823261e7e80a05db088c88331
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 186c75d6ec7660258f8b16b93e5d35bb74669ec2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945432"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046910"
 ---
 # <a name="legacy-ad-fs-federation-server-farm-using-wid-and-proxies"></a>WID とプロキシを使用する従来の AD FS フェデレーションサーバーファーム
 
@@ -58,9 +59,9 @@ ms.locfileid: "87945432"
 
 ![WID ファームとプロキシ](media/WIDFarmADFSBlue.gif)
 
-フェデレーションサーバーまたは web アプリケーションプロキシで使用するためのネットワーク環境を構成する方法の詳細については、「AD FS の[要件](AD-FS-Requirements.md)」の「名前解決の要件」セクションを参照して、 [Web アプリケーションプロキシインフラストラクチャ (WAP) を計画](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))してください。
+フェデレーションサーバーまたは web アプリケーションプロキシで使用するためのネットワーク環境を構成する方法の詳細については、「AD FS の [要件](AD-FS-Requirements.md) 」の「名前解決の要件」セクションを参照して、 [Web アプリケーションプロキシインフラストラクチャ (WAP) を計画](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [AD FS の展開トポロジ](Plan-Your-AD-FS-Deployment-Topology.md) 
  を計画する[Windows Server 2012 R2 の AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
 

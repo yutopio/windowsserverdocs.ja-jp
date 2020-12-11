@@ -1,16 +1,17 @@
 ---
 title: AD FS 2019 リスク評価モデルでプラグインを構築する
+description: 詳細については、「AD FS 2019 のリスク評価モデルを使用したプラグインのビルド」を参照してください。
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 05/05/2020
 ms.topic: article
-ms.openlocfilehash: ece40ea47c78c1d45cf55ff9daec551d940276e1
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 2c1d05450869d558d1991da2f95b72bcaeca7462
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865151"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97047820"
 ---
 # <a name="build-plug-ins-with-ad-fs-2019-risk-assessment-model"></a>AD FS 2019 リスク評価モデルでプラグインを構築する
 
@@ -237,7 +238,7 @@ RequestContext requestContext );
 
 渡されたもう1つの入力パラメーターは、 [ThreatDetectionLogger](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionlogger)型の logger です。 パラメーターを使用すると、エラー、監査、およびデバッグメッセージを AD FS ログに書き込むことができます。
 
-このメソッドは、ThrottleStatus を返します。これは、 [ThrottleStatus](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.throttlestatus) (注として、1からブロック、および 2) AD FS が返されます。その後、要求をブロックするか許可します。
+このメソッドは、ThrottleStatus を返します。これは、 [](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.throttlestatus) (注として、1からブロック、および 2) AD FS が返されます。その後、要求をブロックするか許可します。
 
 このサンプルプラグインでは、 [EvaluateRequest](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule.evaluaterequest)メソッドの実装は、 [RequestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext)パラメーターから[clientIpAddress](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext.clientipaddresses#Microsoft_IdentityServer_Public_ThreatDetectionFramework_RequestContext_ClientIpAddresses)を解析し、AD FS DB から読み込まれたすべての ip と比較します。 一致が見つかった場合、メソッドは **Block** に2を返します。それ以外の場合は、 **Allow** に1を返します。 返された値に基づいて、AD FS がブロックされるか、または要求が許可されます。
 
@@ -267,7 +268,7 @@ IList<Claim> additionalClams
 
 渡されたもう1つの入力パラメーターは、 [ThreatDetectionLogger](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionlogger)型の logger です。 パラメーターを使用すると、エラー、監査、およびデバッグメッセージを AD FS ログに書き込むことができます。
 
-このメソッドは、ThrottleStatus を返します。これは、 [ThrottleStatus](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.throttlestatus) (注として、1からブロック、および 2) AD FS が返されます。その後、要求をブロックするか許可します。
+このメソッドは、ThrottleStatus を返します。これは、 [](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.throttlestatus) (注として、1からブロック、および 2) AD FS が返されます。その後、要求をブロックするか許可します。
 
 #### <a name="ipostauthenticationthreatdetectionmodule-interface"></a>IPostAuthenticationThreatDetectionModule インターフェイス
 

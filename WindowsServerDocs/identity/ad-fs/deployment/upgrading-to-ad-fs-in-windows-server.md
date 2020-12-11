@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「WID データベースを使用して Windows Server 2016 の AD FS にアップグレードする」を参照してください。
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
 title: Windows Server 2016 での AD FS へのアップグレード
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 04/09/2018
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 683a9ce88c9809dfecf5669b41758187504634b9
-ms.sourcegitcommit: 3181fcb69a368f38e0d66002e8bc6fd9628b1acc
+ms.openlocfilehash: f1d6f9a65c6a41efd58cca82eb0597ec4cf9b451
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330514"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97046160"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>WID データベースを使用した、Windows Server 2016 での AD FS へのアップグレード
 

@@ -1,16 +1,17 @@
 ---
+description: 詳細については、ゲートウェイの帯域幅の割り当てに関するページをご覧ください
 title: ゲートウェイ帯域幅の割り当て
 manager: grcusanz
 ms.topic: get-started-article
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/22/2018
-ms.openlocfilehash: 48a24586c356650ee0e625770dcdd55ce505951c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 37982fbef7ee56ec65418aa087b631c3d19bec6d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962286"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97044920"
 ---
 # <a name="gateway-bandwidth-allocation"></a>ゲートウェイ帯域幅の割り当て
 
@@ -78,7 +79,7 @@ Windows Server 2016 から Windows Server 2019 にアップグレードする場
 
 1.  **GRE トンネルと L3 トンネル:** Windows Server 2019 の割り当てロジックは、ネットワークコントローラーノードが Windows Server 2019 に更新された後に有効になります。
 
-2.  **IPSec トンネル:** ゲートウェイプール内のすべてのゲートウェイが Windows Server 2019 にアップグレードされるまで、Windows Server 2016 ゲートウェイの割り当てロジックは引き続き機能します。 ゲートウェイプール内のすべてのゲートウェイについて、Azure ゲートウェイサービスを [**自動**] に設定する必要があります。
+2.  **IPSec トンネル:** ゲートウェイプール内のすべてのゲートウェイが Windows Server 2019 にアップグレードされるまで、Windows Server 2016 ゲートウェイの割り当てロジックは引き続き機能します。 ゲートウェイプール内のすべてのゲートウェイについて、Azure ゲートウェイサービスを [ **自動**] に設定する必要があります。
 
 >[!NOTE]
 >Windows Server 2019 にアップグレードすると、ゲートウェイが過剰にプロビジョニングされる可能性があります (割り当てロジックが Windows Server 2016 から Windows Server 2019 に変更されるため)。 この場合、ゲートウェイ上の既存の接続は引き続き存在します。 ゲートウェイの REST リソースは、ゲートウェイが過剰にプロビジョニングされていることを示す警告をスローします。 この場合は、別のゲートウェイに接続を移動する必要があります。
