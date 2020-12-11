@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フェデレーションサーバープロキシの配置を計画する」を参照してください。
 ms.assetid: d3cf4cb9-9b9e-4dcf-b6c6-8c6c42ec5f3e
 title: フェデレーション サーバー プロキシの配置の計画
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 51b8d628ec5b29ae4ddf68e01f2c255fabcae646
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3d89a55a992afcdb008fe535c6bffc6e400f05be
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87954308"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040920"
 ---
 # <a name="planning-federation-server-proxy-placement"></a>フェデレーション サーバー プロキシの配置の計画
 
@@ -34,9 +35,9 @@ Active Directory フェデレーションサービス (AD FS) AD FS インフラ
 > [!NOTE]
 > この情報は、フェデレーションサーバープロキシの配置計画に役立つ場合がありますが、プロキシの適切な数と、各 AD FS 設計のプロキシハードウェア要件を決定する方法については説明しません。
 
-2つの主要な AD FS 設計シナリオのいずれかにフェデレーションサーバープロキシを配置する方法の例については、「[配置目標の AD FS 設計へのマッピング](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)」を参照してください。
+2つの主要な AD FS 設計シナリオのいずれかにフェデレーションサーバープロキシを配置する方法の例については、「 [配置目標の AD FS 設計へのマッピング](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 
 

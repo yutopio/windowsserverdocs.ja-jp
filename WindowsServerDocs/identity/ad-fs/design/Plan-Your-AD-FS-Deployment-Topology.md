@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「AD FS の展開トポロジを計画する」を参照してください。
 ms.assetid: 5c8c6cc0-0d22-4f27-a111-0aa90db7d6c8
 title: AD FS 展開トポロジの計画
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 156a7c451038fc40cf22037138bbcf446c93de1e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: aaa2810b132bf9fb63b82850c91e8541f218b7a2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972109"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97041010"
 ---
 # <a name="plan-your-ad-fs-deployment-topology"></a>AD FS 展開トポロジの計画
 
@@ -24,7 +25,7 @@ AD FS 構成データを格納するために使用できるデータベース�
 > [!IMPORTANT]
 > 基本的な冗長性、負荷分散、フェデレーション サービスをスケーリングするオプション (必要な場合) を実装するには、使用するデータベースの種類に関係なく、すべての運用環境でフェデレーション サーバー ファームごとに少なくとも 2 つのフェデレーション サーバーを展開することが推奨されます。
 
-## <a name="determining-which-type-of-adfs-configuration-database-to-use"></a>どのタイプの AD FS 構成データベースを使用するかを決定する
+## <a name="determining-which-type-of-ad-fs-configuration-database-to-use"></a>どのタイプの AD FS 構成データベースを使用するかを決定する
 AD FS は、データベースを使用して構成を格納し、場合によっては、フェデレーションサービスに関連するトランザクションデータを格納します。 AD FS ソフトウェアを使用すると、フェデレーションサービスにデータを格納するために、組み込みの Windows Internal Database (WID) または Microsoft SQL Server 2008 以降のいずれかを選択できます。
 
 ほとんどの場合は、この 2 つのデータベース タイプはほぼ等価です。 ただし、AD FS で使用できるさまざまな展開トポロジについて理解を開始する前に、いくつかの点に注意する必要があります。 次の表は、WID データベースと SQL Server データベースでサポートされる機能の違いの説明をまとめたものです。
@@ -35,7 +36,7 @@ AD FS は、データベースを使用して構成を格納し、場合によ�
 |AD FS 機能|SAML アーティファクト解決 </br></br>**注:** この機能は、Microsoft Online Services、Microsoft Office 365、Microsoft Exchange、または Microsoft Office SharePoint シナリオには必要ありません。|いいえ|はい
 |AD FS 機能|SAML/WS-Federation トークン リプレイ検出|いいえ|はい
 |Database の機能|プル レプリケーションを使用する基本的なデータベース冗長化 (データベースの読み取り専用コピーをホストする 1 つ以上のサーバーが、データベースの読み取り/書き込みコピーをホストするソース サーバーに変更内容を要求する)|はい|いいえ
-|Database の機能|フェールオーバークラスタリングやミラーリング (データベースレイヤーのみ) などの高可用性ソリューションを使用したデータベースの冗長性**注:** すべての AD FS 展開トポロジは、AD FS サービス層でのクラスタリングをサポートしています。|いいえ|はい
+|Database の機能|フェールオーバークラスタリングやミラーリング (データベースレイヤーのみ) などの高可用性ソリューションを使用したデータベースの冗長性 **注:** すべての AD FS 展開トポロジは、AD FS サービス層でのクラスタリングをサポートしています。|いいえ|はい
 
 ## <a name="sql-server-considerations"></a>SQL Server に関する考慮事項
 SQL Server を AD FS 展開の構成データベースとして選ぶ場合は、次の事項を考慮してください。
@@ -71,5 +72,5 @@ AD FS で使用するためにファイアウォールサーバーを構成す�
 
 - [SQL Server を使用するフェデレーション サーバー ファーム](Federation-Server-Farm-Using-SQL-Server.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 R2 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)

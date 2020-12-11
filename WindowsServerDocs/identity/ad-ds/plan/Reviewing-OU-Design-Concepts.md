@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OU 設計の概念を確認する'
 ms.assetid: 41b56704-c6f9-4d29-af97-62123e300565
 title: OU の設計概念を確認する
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 837f3a4dc2c79948766373e16e91a7a17e857c62
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 2741b8871c82ec28add21d948a4d650ad4182442
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070004"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042570"
 ---
 # <a name="reviewing-ou-design-concepts"></a>OU の設計概念を確認する
 

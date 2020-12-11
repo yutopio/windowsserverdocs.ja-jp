@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「レプリケーションエラー1396ログオンエラー」を参照してください。ターゲットアカウント名が正しくありません
 ms.assetid: 399a8bbe-3375-4bb0-b55b-5f46e7050028
 title: 'レプリケーション エラー 1396。ログオン エラー: 対象のアカウント名は間違っています'
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 41b995f8212b25c7a80753a3bd91503db57895ee
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: a21d4f2a5e9772393d3e84a2adb497406c693f63
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070084"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042590"
 ---
 # <a name="replication-error-1396-logon-failure-the-target-account-name-is-incorrect"></a>レプリケーション エラー 1396。ログオン エラー: 対象のアカウント名は間違っています
 

@@ -1,17 +1,18 @@
 ---
 ms.assetid: 5052f13c-ff35-471d-bff5-00b5dd24f8aa
 title: AD FS 2016 以降で OAuth を使用して、の代理 (OBO) を使用して多層アプリケーションを構築する
+description: 詳細については、次のページを参照してください。 using (OBO) を使用して、AD FS 2016 以降で OAuth を使用して多層アプリケーションを構築する
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.openlocfilehash: b080f45d36d26ed566eacc5ae1ad84d98dd45d48
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 24dcb859c35d82ab81460ccaea2ceb1dba5e502c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864761"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040880"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>AD FS 2016 以降で OAuth を使用して、の代理 (OBO) を使用して多層アプリケーションを構築する
 
@@ -279,7 +280,7 @@ ToDoListService WebAPI を構成したときと同じように、ウィザード
 * Web.config ファイルを開きます。
 * 次のキーを変更する
 
-| Key | 値 |
+| キー | 値 |
 |:-|:-|
 | ida: 対象ユーザー | ToDoListService WebAPI の構成中に AD FS に指定された ToDoListService の ID (例:) https://localhost:44321/ |
 | ida: ClientID | ToDoListService WebAPI の構成中に AD FS に指定された ToDoListService の ID (例:) <https://localhost:44321/> </br>**Ida: Audience と ida: ClientID が相互に一致することが非常に重要です。** |

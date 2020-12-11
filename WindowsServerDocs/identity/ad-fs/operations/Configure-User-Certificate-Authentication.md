@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ユーザー証明書認証の AD FS の構成」を参照してください。
 ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: ユーザー証明書認証の AD FS サポートを構成する
 author: jenfieldmsft
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: samueld
 ms.date: 01/18/2018
 ms.topic: article
-ms.openlocfilehash: 6321b3e68b71f004a030dfba8a8f1ca7b56d4f78
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 02d1d3e6e0b1d8aac739f59c2a6ef60ce8a8088a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967519"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042270"
 ---
 # <a name="configuring-ad-fs-for-user-certificate-authentication"></a>ユーザー証明書認証の AD FS の構成
 
@@ -34,7 +35,7 @@ ms.locfileid: "87967519"
 
 AD FS 管理コンソールまたは PowerShell コマンドレットを使用して AD FS で、イントラネットまたはエクストラネットの認証方法としてユーザー証明書認証を有効にし `Set-AdfsGlobalAuthenticationPolicy` ます。
 
-Azure AD 証明書認証の AD FS を構成する場合は、証明書の発行者とシリアル番号に必要な[Azure AD 設定](/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities)と[AD FS 要求規則](/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements)を構成していることを確認します。
+Azure AD 証明書認証の AD FS を構成する場合は、証明書の発行者とシリアル番号に必要な [Azure AD 設定](/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities) と [AD FS 要求規則](/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements) を構成していることを確認します。
 
 また、いくつかのオプションの側面もあります。
 - EKU (要求の種類) に加えて、証明書のフィールドと拡張機能に基づく要求を使用する場合は、 https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku) Active Directory 要求プロバイダー信頼の規則に従って追加の要求パスを構成します。  利用可能な証明書の要求の完全な一覧については、以下を参照してください。
@@ -45,9 +46,9 @@ Azure AD 証明書認証の AD FS を構成する場合は、証明書の発行�
 - 証明書認証を行う場合は、エンドユーザーのニーズに合わせてサインインページを変更することをお勧めします。 一般的なケースとしては、(a) "X509 証明書によるサインイン" をエンドユーザーにとって使いやすいものに変更します。
 
 ## <a name="configure-seamless-certificate-authentication-for-chrome-browser-on-windows-desktops"></a>Windows デスクトップで Chrome ブラウザーのシームレスな証明書認証を構成する
-クライアント認証の目的を満たす複数のユーザー証明書 (Wi-fi 証明書など) がコンピューター上に存在する場合、Windows デスクトップの Chrome ブラウザーによって、適切な証明書を選択するように求めるメッセージが表示されます。 これは、エンドユーザーの混乱を招く可能性があります。 このエクスペリエンスを最適化するために、Chrome のポリシーを設定して、適切な証明書を自動的に選択してユーザーエクスペリエンスを向上させることができます。 このポリシーを手動で設定するには、レジストリを変更するか、GPO を使用して自動的に構成する (レジストリキーを設定する) 必要があります。 これには、AD FS に対する認証にユーザークライアント証明書が必要です。これは、他のユースケースとは別の発行者になります。
+クライアント認証の目的を満たす複数のユーザー証明書 (Wi-Fi 証明書など) がコンピューター上に存在する場合、Windows デスクトップの Chrome ブラウザーによって、適切な証明書を選択するように求めるメッセージが表示されます。 これは、エンドユーザーの混乱を招く可能性があります。 このエクスペリエンスを最適化するために、Chrome のポリシーを設定して、適切な証明書を自動的に選択してユーザーエクスペリエンスを向上させることができます。 このポリシーを手動で設定するには、レジストリを変更するか、GPO を使用して自動的に構成する (レジストリキーを設定する) 必要があります。 これには、AD FS に対する認証にユーザークライアント証明書が必要です。これは、他のユースケースとは別の発行者になります。
 
-Chrome 用にこれを構成する方法の詳細については、こちらの[リンク](http://www.chromium.org/administrators/policy-list-3#AutoSelectCertificateForUrls)を参照してください。
+Chrome 用にこれを構成する方法の詳細については、こちらの [リンク](http://www.chromium.org/administrators/policy-list-3#AutoSelectCertificateForUrls)を参照してください。
 
 
 ## <a name="troubleshoot-certificate-authentication"></a>証明書認証のトラブルシューティング
@@ -65,7 +66,7 @@ AD FS は、基になる windows オペレーティングシステムを使用�
 AD FS は、既定で証明書認証を有効にしません。 証明書認証を有効にする方法については、このドキュメントの冒頭を参照してください。
 
 ### <a name="check-if-certificate-authentication-is-enabled-in-the-ad-fs-authentication-policy"></a>AD FS 認証ポリシーで証明書認証が有効になっているかどうかを確認する
-AD FS は、AD FS と同じホスト名を持つポート49443で、既定でユーザー証明書の認証を行います (例: `adfs.contoso.com` )。 また、代替 SSL バインドを使用してポート 443 (既定の HTTPS ポート) を使用するように AD FS を構成することもできます。 ただし、この構成で使用される URL はです `certauth.<adfs-farm-name>` (例: `certauth.contoso.com` )。 詳細については、こちらの[リンク](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)を参照してください。
+AD FS は、AD FS と同じホスト名を持つポート49443で、既定でユーザー証明書の認証を行います (例: `adfs.contoso.com` )。 また、代替 SSL バインドを使用してポート 443 (既定の HTTPS ポート) を使用するように AD FS を構成することもできます。 ただし、この構成で使用される URL はです `certauth.<adfs-farm-name>` (例: `certauth.contoso.com` )。 詳細については、こちらの [リンク](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md) を参照してください。
 ネットワーク接続の最も一般的なケースは、ファイアウォールが正しく構成されていないこと、およびユーザー証明書の認証トラフィックがブロックまたは妨げになっていることです。 通常、この問題が発生すると、空の画面または500サーバーエラーが表示されます。
 1)  「」で構成したホスト名とポートに注意してください AD FS
 2)  AD FS または Web アプリケーションプロキシ (WAP) の前にあるすべてのファイアウォールが、AD FS ファームとの組み合わせを許可するように構成されていることを確認し `hostname:port` ます。 この手順を実行するには、ネットワークエンジニアに参照する必要があります。
@@ -76,20 +77,19 @@ AD FS は、AD FS と同じホスト名を持つポート49443で、既定でユ
 すべての AD FS および WAP サーバーは、提示された証明書がまだ有効であり、失効していないかどうかを検証するために、CRL エンドポイントに達している必要があります。 CRL 検証は、HTTPS、HTTP、LDAP、または OCSP (オンライン証明書状態プロトコル) 経由で実行できます。 AD FS/WAP サーバーがエンドポイントに接続できない場合、認証は失敗します。 トラブルシューティングを行うには、次の手順に従います。
 1) Pki システムからユーザー証明書を失効させるために使用する CRL エンドポイントを確認するには、PKI エンジニアに問い合わせてください。
 2)  各 AD FS/WAP サーバーで、使用されているプロトコル (通常は HTTPS または HTTP) を介して CRL エンドポイントに到達可能であることを確認します。
-3)  高度な検証を行うには、各 AD FS/WAP サーバーで[CAPI2 イベントログを有効に](/archive/blogs/benjaminperkins/enable-capi2-event-logging-to-troubleshoot-pki-and-ssl-certificate-issues)します。
+3)  高度な検証を行うには、各 AD FS/WAP サーバーで [CAPI2 イベントログを有効に](/archive/blogs/benjaminperkins/enable-capi2-event-logging-to-troubleshoot-pki-and-ssl-certificate-issues) します。
 4) CAPI2 操作ログでイベント ID 41 (失効の確認) を確認します。
-5) 確認する対象`‘\<Result value="80092013"\>The revocation function was unable to check revocation because the revocation server was offline.\</Result\>'`
+5) 確認する対象 `‘\<Result value="80092013"\>The revocation function was unable to check revocation because the revocation server was offline.\</Result\>'`
 
-***ヒント***: 特定のサーバーを指すように DNS 解決 (Windows 上の HOSTS ファイル) を構成すると、トラブルシューティングを容易にするために1つの AD FS または WAP サーバーを対象にすることができます。 これにより、サーバーを対象とするトレースを有効にすることができます。
+***ヒント** _: 特定のサーバーを指すように DNS 解決 (Windows 上の HOSTS ファイル) を構成することで、トラブルシューティングを容易にするために1つの AD FS または WAP サーバーを対象にすることができます。 これにより、サーバーを対象とするトレースを有効にすることができます。
 
 ### <a name="check-if-this-is-a-server-name-indication-sni-issue"></a>これが Server Name Indication (SNI) の問題かどうかを確認する
 AD FS では、クライアントデバイス (またはブラウザー) とロードバランサーが SNI をサポートする必要があります。 一部のクライアントデバイス (通常、古いバージョンの Android) は SNI をサポートしていない可能性があります。 また、ロードバランサーが SNI をサポートしていないか、SNI 用に構成されていない可能性があります。 これらのインスタンスでは、ユーザーの認証エラーが発生する可能性があります。
 1)  ネットワークエンジニアと協力して、AD FS/WAP の Load Balancer が SNI をサポートしていることを確認する
-2)  SNI がサポートされない場合 AD FS 次の手順に従って対処できます。
-    *   プライマリ AD FS サーバーで管理者特権でのコマンドプロンプトウィンドウを開く
-    *   入力```Netsh http show sslcert```
+2)  SNI がサポートされていない場合 AD FS 次の手順に従って、プライマリ AD FS サーバーで管理者特権でのコマンドプロンプトウィンドウを開きます。
+    *   入力 ```Netsh http show sslcert```
     *   フェデレーションサービスの ' アプリケーション GUID ' と ' certificate hash ' をコピーする
-    *   入力`netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicaitonGUID}`
+    *   入力 `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicaitonGUID}`
 
 ### <a name="check-if-the-client-device-has-been-provisioned-with-the-certificate-correctly"></a>クライアントデバイスに証明書が正しくプロビジョニングされているかどうかを確認する
 一部のデバイスは正常に機能していますが、他のデバイスは動作していません。 この場合、通常、クライアントデバイスにユーザー証明書が正しくプロビジョニングされていないことが原因です。 以下の手順に従います。
@@ -101,18 +101,18 @@ AD FS では、クライアントデバイス (またはブラウザー) とロ�
 ### <a name="check-if-the-tls-version-is-compatible-between-ad-fswap-servers-and-the-client-device"></a>TLS のバージョンが AD FS/WAP サーバーとクライアントデバイス間で互換性があるかどうかを確認します。
 まれに、クライアントデバイス (通常はモバイルデバイス) は、より新しいバージョンの TLS のみをサポートするように更新されます (たとえば、1.3)。または、AD FS/WAP サーバーが更新され、より高い TLS バージョンのみが使用され、クライアントデバイスでサポートされていない場合もあります。
 オンライン SSL ツールを使用して、AD FS/WAP サーバーを確認し、デバイスと互換性があるかどうかを確認できます。
-TLS のバージョンを制御する方法の詳細については、こちらの[リンク](manage-ssl-protocols-in-ad-fs.md)を参照してください。
+TLS のバージョンを制御する方法の詳細については、こちらの [リンク](manage-ssl-protocols-in-ad-fs.md)を参照してください。
 
 ### <a name="check-if-azure-ad-promptloginbehavior-is-configured-correctly-on-your-federated-domain-settings"></a>Azure AD PromptLoginBehavior がフェデレーションドメインの設定で正しく構成されているかどうかを確認します。
 多くの Office 365 アプリケーションは、prompt = login を Azure AD に送信します。 Azure AD、既定では、AD FS するために新しいパスワードログインに変換します。 その結果、AD FS で証明書の認証を構成した場合でも、エンドユーザーにはパスワードのログインのみが表示されます。
 1)  ' Set-msoldomainfederationsettings ' コマンドレットを使用してフェデレーションドメイン設定を取得します
 2)  PromptLoginBehavior パラメーターが ' Disabled ' または ' NativeSupport ' のいずれかに設定されていることを確認してください
 
-詳細については、こちらの[リンク](ad-fs-prompt-login.md)を参照してください。
+詳細については、こちらの [リンク](ad-fs-prompt-login.md)を参照してください。
 
 ### <a name="additional-troubleshooting"></a>その他のトラブルシューティング
 これはまれなことです。
-1)  CRL の一覧が非常に長い場合は、ダウンロードを試行したときにタイムアウトになることがあります。 その場合は、' MaxFieldLength ' と ' Maxfieldlength ' を更新する必要があります。https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows
+1)  CRL の一覧が非常に長い場合は、ダウンロードを試行したときにタイムアウトになることがあります。 その場合は、' MaxFieldLength ' と ' Maxfieldlength ' を更新する必要があります。 https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows
 
 
 

@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「ヘルスサービスアクション」を参照してください。
 title: ヘルスサービスアクション
 manager: eldenc
 ms.author: cosdar
 ms.topic: article
 author: cosmosdarwin
 ms.date: 08/14/2017
-ms.openlocfilehash: 16e8a27dc38b8908ffb7ccac94f3bcc15a5c956f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 28091a02c590325bb53e36b132aaa5fc667437dd
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945795"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042240"
 ---
 # <a name="health-service-actions"></a>ヘルスサービスアクション
 
@@ -18,7 +19,7 @@ ms.locfileid: "87945795"
 
 ヘルスサービスは、Windows Server 2016 の新機能であり、記憶域スペースダイレクトを実行しているクラスターの日常的な監視と操作エクスペリエンスを向上させます。
 
-## <a name="actions"></a>アクション
+## <a name="actions"></a>操作
 
 以下のセクションでは、ヘルス サービスにより自動化されるワークフローについて説明します。 ある操作が自立的に行われていることを検証するため、またはこの操作の進行状況や成果を追跡するために、ヘルス サービスは "アクション" を生成します。 ログとは異なり、アクションは完了後すぐに表示されなくなります。アクションは主に、パフォーマンスや容量に影響を与える可能性がある進行中のアクティビティ (回復性やデータの再調整など) についての情報を提供するためのものです。
 
@@ -30,9 +31,9 @@ ms.locfileid: "87945795"
 Get-StorageHealthAction
 ```
 
-### <a name="coverage"></a>カバレッジ
+### <a name="coverage"></a>対象範囲
 
-Windows Server 2016 では、 **StorageHealthAction**コマンドレットは次のいずれかの情報を返すことができます。
+Windows Server 2016 では、 **StorageHealthAction** コマンドレットは次のいずれかの情報を返すことができます。
 
 -   障害が発生している、接続が損失している、または応答不能の物理ディスクの使用停止
 

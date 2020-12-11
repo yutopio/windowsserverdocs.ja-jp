@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Least-Privilege 管理モデルの実装」を参照してください。
 ms.assetid: 7a7ab95c-9cb3-4a7b-985a-3fc08334cf4f
 title: 最低限の特権の管理モデルを実装する
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
-ms.openlocfilehash: 95f8158f5565c57904b7423456eb7189f9e58a2a
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 02ce80d936caff5ef77a78585a2e0f35e0b12ca5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069664"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040720"
 ---
 # <a name="implementing-least-privilege-administrative-models"></a>最低限の特権の管理モデルを実装する
 
@@ -134,7 +135,7 @@ Active Directory の各ドメインで、ドメインの作成の一環として
 
 ドメインの管理者アカウントを無効にすると、アカウントが効果的に使用できなくなりますが、アカウントが誤って、または故意に有効になっている場合に備えて、アカウントに追加の制限を実装する必要があります。 これらのコントロールは最終的に管理者アカウントによって元に戻すことができますが、その目的は、攻撃者の進行を遅らせ、アカウントが被る可能性のある損害を制限するコントロールを作成することです。
 
-1つまたは複数の Gpo を作成し、各ドメインのワークステーションとメンバーサーバーの Ou にリンクする場合は、各ドメインの管理者アカウントを、 **Computer Configuration\Policies\Windows] 権利** \ ユーザー権利の割り当ての次のユーザー権利に追加します。
+1つまたは複数の Gpo を作成し、各ドメインのワークステーションとメンバーサーバーの Ou にリンクする場合は、各ドメインの管理者アカウントを、 **Computer Configuration\Policies\Windows] 権利**\ ユーザー権利の割り当ての次のユーザー権利に追加します。
 
 - ネットワークからこのコンピューターへのアクセスを拒否
 - バッチ ジョブとしてのログオン権限を拒否する

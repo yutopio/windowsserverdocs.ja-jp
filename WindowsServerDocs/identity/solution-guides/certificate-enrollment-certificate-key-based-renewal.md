@@ -1,23 +1,24 @@
 ---
 title: カスタム ポート上で証明書キーベースの書き換え用の証明書の登録 Web サービスを構成する
+description: '詳細情報: カスタムポートで証明書キーに基づく更新の証明書の登録 Web サービスを構成する'
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 ms.date: 11/12/2019
 ms.topic: article
-ms.openlocfilehash: 9f9930cc59badf19036c598f11f2a5b423711c94
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 55ac25e37f7c7621426db031ba1ad148d3a02a98
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96866071"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97042400"
 ---
 # <a name="configuring-certificate-enrollment-web-service-for-certificate-key-based-renewal-on-a-custom-port"></a>カスタム ポート上で証明書キーベースの書き換え用の証明書の登録 Web サービスを構成する
 
 > 執筆者: Windows グループを使用した Jitesh Thakur、Meera Mohideen、Technical advisor。
 Windows グループを使用した ankit Tyagi サポートエンジニア
 
-## <a name="summary"></a>まとめ
+## <a name="summary"></a>[概要]
 
 この記事では、CEP および CES の自動更新機能を利用するための証明書キーベースの更新に443以外のカスタムポートに証明書の登録ポリシー Web サービス (CEP) と証明書の登録 Web サービス (CES) を実装する手順について説明します。
 
@@ -235,7 +236,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
 クライアントコンピューターで、登録ポリシーと自動登録ポリシーを設定します。 その手順は次のとおりです。
 
-1. [実行の **開始**] を選択し、「  >  **Run** **gpedit.msc**」と入力します。
+1. [実行の **開始**] を選択し、「  >   **gpedit.msc**」と入力します。
 
 2. [**コンピューターの構成**] [  >  **Windows の設定**  >  ] [**セキュリティ設定**] の順に選択し、[**公開キーのポリシー**] をクリックします。
 
@@ -302,7 +303,7 @@ certreq -machine -q -enroll -cert <thumbprint> renew
 > [!Note]
 > 前のスクリーンショットは、CA の日付が18に設定されているため、自動登録エンジンが想定どおりに動作することを示す例です。 そのため、証明書の発行は続行されます。 実際の状況では、この大量の更新は行われません。
 
-## <a name="references"></a>References
+## <a name="references"></a>リファレンス
 
 [Test Lab Guide: Demonstrating Certificate Key-Based Renewal](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj590165(v%3dws.11))
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Active Directory の攻撃対象領域を減らす」を参照してください。
 ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Active Directory の攻撃を削減する
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 8802091de7746844176a97acf5e958d55b0b1f92
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 0486f62f2c53c427a196cd6e68a8b879c63df2ab
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069514"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97040630"
 ---
 # <a name="reducing-the-active-directory-attack-surface"></a>Active Directory の攻撃を削減する
 
