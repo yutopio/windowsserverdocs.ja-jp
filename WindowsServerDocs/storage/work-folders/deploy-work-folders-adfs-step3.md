@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「AD FS と Web アプリケーションプロキシを使用してワークフォルダーを展開する: 手順3、ワークフォルダーをセットアップする」を参照してください。'
 title: 'AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開 - 手順 3: ワーク フォルダーのセットアップ'
 ms.topic: article
 manager: klaasl
@@ -6,12 +7,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 4/5/2017
 ms.assetid: 5a43b104-4d02-4d73-a385-da1cfb67e341
-ms.openlocfilehash: 784b4467fccaefc2911c501d49ac4c1cd9196c67
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2c85e0fc34fcbd735a79c8c768dbee70ff5e2e8d
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87970079"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049160"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-3-set-up-work-folders"></a>AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 3: ワーク フォルダーのセットアップ
 
@@ -80,13 +81,13 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name workfolders -CName  -
 
 7.  **[OK]** をクリックします。
 
-8.  フォルダー**コンソール Root\Certificates \( Local Computer) \Personal\Certificates**を展開します。
+8.  フォルダー **コンソール Root\Certificates \( Local Computer) \Personal\Certificates** を展開します。
 
 9. [**証明書**] を右クリックし、[**すべてのタスク**]、[**インポート**] の順にクリックします。
 
 10. AD FS 証明書を含むフォルダーを参照し、ウィザードの指示に従ってファイルをインポートして、証明書ストアに配置します。
 
-11. フォルダー**コンソール Root\Certificates \( Local Computer) \Trusted ルート証明書 Authorities\Certificates**を展開します。
+11. フォルダー **コンソール Root\Certificates \( Local Computer) \Trusted ルート証明書 Authorities\Certificates** を展開します。
 
 12. [**証明書**] を右クリックし、[**すべてのタスク**]、[**インポート**] の順にクリックします。
 
@@ -140,7 +141,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name workfolders -CName  -
 
 1.  **[サーバー マネージャー]** を開き、**[役割と機能の追加]** をクリックして、**[次へ]** をクリックします。
 
-2.  [**インストールの種類**] ページで、[**役割ベースまたは機能ベースのインストール**] を選択し、[**次へ**] をクリックします。
+2.  [ **インストールの種類** ] ページで、[ **役割ベースまたは機能ベースのインストール**] を選択し、[ **次へ**] をクリックします。
 
 3.  **[サーバーの選択]** ページで現在のサーバーを選択し、**[次へ]** をクリックします。
 
@@ -148,14 +149,14 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name workfolders -CName  -
 
 5.  **[役割と機能の追加ウィザード]** ページで、**[機能の追加]** をクリックし、**[次へ]** をクリックします。
 
-6.  [**機能**] ページで、[**次へ**] をクリックします。
+6.  [ **機能** ] ページで、[ **次へ**] をクリックします。
 
 7.  [**確認**] ページで [**インストール**] をクリックします。
 
 ## <a name="configure-work-folders"></a>ワーク フォルダーの構成
 ワーク フォルダーを構成するには、次の手順に従います。
 
-1.  **サーバー マネージャー**を開きます。
+1.  **サーバー マネージャー** を開きます。
 
 2.  **[ファイル サービスと記憶域サービス]**、**[ワーク フォルダー]** の順に選択します。
 
@@ -197,7 +198,7 @@ $subject = "workfolders.contoso.com"
 Try
 {
 #In case there are multiple certificates with the same subject, get the latest version
-$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match $subject} | sort $_.NotAfter -Descending | select -first 1 
+$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match $subject} | sort $_.NotAfter -Descending | select -first 1 
 $thumbprint = $cert.Thumbprint
 $Command = "http add sslcert ipport=0.0.0.0:443 certhash=$thumbprint appid={CE66697B-3AA0-49D1-BDBD-A25C8359FD5D} certstorename=MY"
 $Command | netsh
@@ -240,7 +241,7 @@ Exit
 ### <a name="set-up-ad-fs-authentication"></a>AD FS 認証のセットアップ
 AD FS 認証を使用するようにワーク フォルダーを構成するには、次の手順に従います。
 
-1.  **サーバー マネージャー**を開きます。
+1.  **サーバー マネージャー** を開きます。
 
 2.  **[サーバー]** をクリックして、一覧からワーク フォルダーのサーバーを選択します。
 
@@ -273,6 +274,6 @@ Set-SyncServerSetting -ADFSUrl "https://blueadfs.contoso.com"
 
 次の手順: [AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 4: Web アプリケーション プロキシのセットアップ](deploy-work-folders-adfs-step4.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ワーク フォルダーの概要](Work-Folders-Overview.md)
 

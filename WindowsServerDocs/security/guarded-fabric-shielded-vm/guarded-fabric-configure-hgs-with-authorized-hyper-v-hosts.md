@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 保護されたホストの展開'
 title: 保護されたホストの展開
 ms.topic: article
 ms.assetid: 2379ca26-b32d-4055-8b4b-99d1f2df37e1
@@ -6,18 +7,18 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: d69ce87349e7714a1aaf1bb0cc03fb9a145da12e
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: fb3d189ce0817d52a536af8f25fd9b78fda719e5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966139"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049880"
 ---
 # <a name="deploy-guarded-hosts"></a>保護されたホストの展開
 
 >適用対象: windows server 2019、Windows Server (半期チャネル)、Windows Server 2016
 
-このセクションのトピックでは、ファブリック管理者がホストガーディアンサービス (HGS) を使用するように Hyper-v ホストを構成するために実行する手順について説明します。 これらの手順を開始する前に、HGS クラスター内の少なくとも1つのノードがセットアップされて[いる必要があり](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)ます。
+このセクションのトピックでは、ファブリック管理者がホストガーディアンサービス (HGS) を使用するように Hyper-v ホストを構成するために実行する手順について説明します。 これらの手順を開始する前に、HGS クラスター内の少なくとも1つのノードがセットアップされて [いる必要があり](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)ます。
 
 **TPM で信頼された構成証明の場合**:
 1. [ファブリック dns を構成](guarded-fabric-configuring-fabric-dns.md)する: ファブリックドメインから HGS ドメインに DNS フォワーダーを設定する方法について説明します。

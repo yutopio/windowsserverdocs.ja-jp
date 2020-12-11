@@ -1,16 +1,17 @@
 ---
+description: 詳細については、既存の要塞フォレストで TPM モードを使用して HGS クラスターを初期化する方法に関するページを参照してください。
 title: 要塞フォレストで TPM モードを使用して HGS クラスターを初期化する
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 8f35ab031fe29a7266d9fa1124d7098d8bafb018
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: de96fa3a0ad8ce4b76bd4b3c0d484bc448906ae6
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965989"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049750"
 ---
 # <a name="initialize-the-hgs-cluster-using-tpm-mode-in-an-existing-bastion-forest"></a>既存の要塞フォレストで TPM モードを使用して HGS クラスターを初期化する
 
@@ -20,7 +21,7 @@ Active Directory Domain Services はコンピューターにインストール�
 
 [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
 
-続行する前に、ホストガーディアンサービスのクラスターオブジェクトを事前設定し、Active Directory の VCO および CNO オブジェクトに対して、ログインしているユーザーに**フルコントロール**を付与したことを確認してください。
+続行する前に、ホストガーディアンサービスのクラスターオブジェクトを事前設定し、Active Directory の VCO および CNO オブジェクトに対して、ログインしているユーザーに **フルコントロール** を付与したことを確認してください。
 仮想コンピューターのオブジェクト名は、パラメーターに、クラスター名をパラメーターに渡す必要があり `-HgsServiceName` `-ClusterName` ます。
 
 > [!TIP]
@@ -39,7 +40,7 @@ Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersG
 
 ローカルコンピューターにインストールされている証明書 (HSM ベースの証明書やエクスポートできない証明書など) を使用している場合は、 `-SigningCertificateThumbprint` 代わりにパラメーターとパラメーターを使用し `-EncryptionCertificateThumbprint` ます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [TPM ルート証明書のインストール](guarded-fabric-install-trusted-tpm-root-certificates.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Windows Server AD FS 展開ガイド」を参照してください。
 ms.assetid: 38816b32-84bd-4b19-9ab8-a05ec838a156
 title: Windows Server 2016 と 2012 R2 の AD FS 展開ガイド
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3a1a66f3b3098aa042d16e6f869eb0234945d26d
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: cc48e715339123fdf6e67fc2ec5ede6b9f83c497
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940846"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049010"
 ---
 # <a name="windows-server-ad-fs-deployment-guide"></a>Windows Server AD FS 展開ガイド
 
@@ -24,7 +25,7 @@ ms.locfileid: "87940846"
 
 -   [Azure Active Directory Connect](Azure-Active-Directory-Connect.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [AD FS 展開](../../ad-fs/AD-FS-Deployment.md)
 
 

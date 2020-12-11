@@ -1,4 +1,5 @@
 ---
+description: 詳細については、DNS インフラストラクチャ設計の作成に関するページを参照してください。
 ms.assetid: cd70b0aa-0a67-4966-a041-4dd3f302c98b
 title: DNS インフラストラクチャの設計を作成する
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: a0052c791a0af7184845be7bbdbc52db6e66f6f0
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: b9dc73b44fcfc104f8e96a7e693c3867d8072cf4
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93068905"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050000"
 ---
 # <a name="creating-a-dns-infrastructure-design"></a>DNS インフラストラクチャの設計を作成する
 

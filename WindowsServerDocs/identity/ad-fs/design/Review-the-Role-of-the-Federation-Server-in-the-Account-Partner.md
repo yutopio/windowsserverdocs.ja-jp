@@ -1,4 +1,5 @@
 ---
+description: 詳細については、アカウントパートナーのフェデレーションサーバーの役割の確認に関するページを参照してください。
 ms.assetid: d0ba3c0d-869f-4e24-89d7-499da7576f22
 title: アカウント パートナー内のフェデレーション サーバーの役割を確認する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 863ee897b632aaa1a7acfe387840e17caef4470f
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: ccde30456f09d2bb86053db457db5758fd03185b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972089"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049400"
 ---
 # <a name="review-the-role-of-the-federation-server-in-the-account-partner"></a>アカウント パートナー内のフェデレーション サーバーの役割を確認する
 
@@ -25,5 +26,5 @@ Web SSO の設計では、境界ネットワークを使用する組織は、イ
 > [!NOTE]
 > アカウントパートナー組織でフェデレーションサーバーコンピューターをセットアップする前に、まず、そのコンピューターを Active Directory フォレスト内の任意のドメインに参加させる必要があります。このフォレストでフェデレーションサーバーを使用して、そのフォレストからユーザーを認証します。 詳細については、「 [Checklist: Setting Up a Federation Server](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

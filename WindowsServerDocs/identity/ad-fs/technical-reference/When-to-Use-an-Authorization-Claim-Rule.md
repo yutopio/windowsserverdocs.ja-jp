@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 承認要求規則を使用する場合'
 ms.assetid: b734cbcb-342c-4a28-8ab5-b9cd990bb1c2
 title: 承認要求規則を使用するタイミング
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 690ae558f625ca3a4c5878be229d950902f7f5e2
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 5e576fb3ef1122eade6b1cbe5c201a0d43d5dece
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87958700"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050380"
 ---
 # <a name="when-to-use-an-authorization-claim-rule"></a>承認要求規則を使用するタイミング
 この規則は \( \) 、入力方向の要求の種類を取得して、規則で指定した値に基づいてユーザーがアクセスを許可または拒否するかどうかを決定するアクションを適用する必要がある場合に Active Directory フェデレーションサービス (AD FS) AD FS で使用できます。 この規則を使用する場合、次の規則ロジックと一致する要求を、規則で構成するオプションに基づいてパススルーまたは変換します。
@@ -35,7 +36,7 @@ ms.locfileid: "87958700"
 
 -   要求規則テンプレートでは、常に入力方向の要求の種類を指定する必要があります。 ただし、1 つの規則を使用して、要求の種類が同じ複数の要求の値を処理できます。
 
-要求規則と要求規則セットの詳細については、「[要求規則の役割](The-Role-of-Claim-Rules.md)」を参照してください。 規則の処理方法の詳細については、「[要求エンジンの役割](The-Role-of-the-Claims-Engine.md)」を参照してください。 要求規則セットの処理方法の詳細については、「[要求パイプラインの役割](The-Role-of-the-Claims-Pipeline.md)」を参照してください。
+要求規則と要求規則セットの詳細については、「 [要求規則の役割](The-Role-of-Claim-Rules.md)」を参照してください。 規則の処理方法の詳細については、「 [要求エンジンの役割](The-Role-of-the-Claims-Engine.md)」を参照してください。 要求規則セットの処理方法の詳細については、「 [要求パイプラインの役割](The-Role-of-the-Claims-Pipeline.md)」を参照してください。
 
 ## <a name="permit-all-users"></a>すべてのユーザーを許可
 "すべてのユーザーを許可" 規則テンプレートを使用すると、すべてのユーザーが、証明書利用者にアクセスできます。 ただし、追加の承認規則を使用すると、アクセスを制限できます。 証明書利用者へのユーザーのアクセスを許可する規則と、拒否する規則が存在する場合は、拒否の結果が許可の結果をオーバーライドし、ユーザーのアクセスは拒否されます。
@@ -76,7 +77,7 @@ AD FS は、ユーザーが許可されるか拒否されるかを決定する�
 2.  **拒否**: http: \/ \/ schemas.microsoft.com \/ authorization \/ 要求 \/ 拒否
 
 ## <a name="how-to-create-this-rule"></a>この規則の作成方法
-要求規則言語を使用するか、"**すべてのユーザーを許可**" 規則テンプレートまたは "**入力方向の要求に基づくユーザーの許可または拒否**" 規則テンプレートを使用して、両方の承認規則を作成するには、AD FS 管理スナップインを使用し \- ます。 "すべてのユーザーを許可" 規則テンプレートには、構成オプションは用意されていませんが、 "入力方向の要求に基づくユーザーの許可または拒否" 規則テンプレートには、次の構成オプションがあります。
+要求規則言語を使用するか、" **すべてのユーザーを許可** " 規則テンプレートまたは " **入力方向の要求に基づくユーザーの許可または拒否** " 規則テンプレートを使用して、両方の承認規則を作成するには、AD FS 管理スナップインを使用し \- ます。 "すべてのユーザーを許可" 規則テンプレートには、構成オプションは用意されていませんが、 "入力方向の要求に基づくユーザーの許可または拒否" 規則テンプレートには、次の構成オプションがあります。
 
 -   要求規則名を指定する
 
@@ -88,7 +89,7 @@ AD FS は、ユーザーが許可されるか拒否されるかを決定する�
 
 -   この入力方向の要求を行ったユーザーのアクセスを拒否
 
-このテンプレートを作成する方法の詳細については、「AD FS 展開ガイド」の「[すべてのユーザーを許可する、](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913577(v=ws.11))または[入力方向の要求に基づいてユーザーを許可または拒否する規則](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913594(v=ws.11))を作成する」を参照してください。
+このテンプレートを作成する方法の詳細については、「AD FS 展開ガイド」の「 [すべてのユーザーを許可する、](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913577(v=ws.11)) または [入力方向の要求に基づいてユーザーを許可または拒否する規則](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913594(v=ws.11)) を作成する」を参照してください。
 
 ## <a name="using-the-claim-rule-language"></a>要求規則言語の使用
 要求値がカスタム パターンに一致する場合にのみ要求を送信する場合は、カスタム規則を使用する必要があります。 詳細については、「 [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md)」を参照してください。
@@ -118,7 +119,7 @@ value == "urn:federation:authentication:windows" ]
 
 3.  何らかの理由で、どちらの方法も使用できない場合は、この目的で承認規則を作成することもできます。 正しく規則を記述しないと複雑になる可能性があるため、推奨できませんが、カスタム承認規則を使用して、Active Directory ドメイン ユーザー アカウントに、指定されたフェデレーション サービスに関連付けられているすべてのフェデレーション サーバー プロキシ間の信頼関係の作成または削除を委任することができます。
 
-    方法3を選択した場合は、次の規則構文を使用して承認要求を発行できます。この場合、指定されたユーザーは contoso frankm によって \( \\ \) 1 つ以上のフェデレーションサーバープロキシの信頼を作成フェデレーションサービスになります。 この規則は、Windows PowerShell コマンド**セット \- Set-adfsproperties AddProxyAuthorizationRules**を使用して適用する必要があります。
+    方法3を選択した場合は、次の規則構文を使用して承認要求を発行できます。この場合、指定されたユーザーは contoso frankm によって \( \\ \) 1 つ以上のフェデレーションサーバープロキシの信頼を作成フェデレーションサービスになります。 この規則は、Windows PowerShell コマンド **セット \- Set-adfsproperties AddProxyAuthorizationRules** を使用して適用する必要があります。
 
     ```
     c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", issuer=~"^AD AUTHORITY$" value == "contoso\frankm" ] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true")
@@ -131,7 +132,7 @@ value == "urn:federation:authentication:windows" ]
     c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/proxytrustid", Issuer =~ "^SELF AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("https://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustProvisioned({0})", param=c.Value );
     ```
 
-    後で、ユーザーがプロキシ信頼を作成できないようにユーザーを削除する必要がある場合は、既定のプロキシ信頼の承認規則に戻してユーザーの権限を削除し、フェデレーション サービスのプロキシ信頼を作成できます。 また、Windows PowerShell コマンド**セット \- Set-adfsproperties AddProxyAuthorizationRules**を使用して、この規則を適用する必要があります。
+    後で、ユーザーがプロキシ信頼を作成できないようにユーザーを削除する必要がある場合は、既定のプロキシ信頼の承認規則に戻してユーザーの権限を削除し、フェデレーション サービスのプロキシ信頼を作成できます。 また、Windows PowerShell コマンド **セット \- Set-adfsproperties AddProxyAuthorizationRules** を使用して、この規則を適用する必要があります。
 
     ```
     exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-544", Issuer =~ "^AD AUTHORITY$"])
@@ -142,5 +143,5 @@ value == "urn:federation:authentication:windows" ]
     c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/proxytrustid", Issuer =~ "^SELF AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("https://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustProvisioned({0})", param=c.Value );
     ```
 
-要求規則言語の使用方法の詳細については、「[要求規則言語の役割](The-Role-of-the-Claim-Rule-Language.md)」を参照してください。
+要求規則言語の使用方法の詳細については、「 [要求規則言語の役割](The-Role-of-the-Claim-Rule-Language.md)」を参照してください。
 

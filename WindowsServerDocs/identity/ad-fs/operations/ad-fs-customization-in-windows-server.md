@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Windows Server 2016 での AD FS のカスタマイズに関するページを参照してください。
 ms.assetid: 25f5aff1-6abf-4dea-b531-f1d9943bc181
 title: Windows Server 2016 での AD FS のカスタマイズ
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 248c24f0751f354ab50a53862d0811b0c1aff0e5
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e0c78eb1899b91ac57131f48cc2713330558b0a1
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87966949"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049310"
 ---
 # <a name="ad-fs-customization-in-windows-server-2016"></a>Windows Server 2016 での AD FS のカスタマイズ
 
@@ -20,7 +21,7 @@ AD FS を使用した組織からのフィードバックに応じて、AD FS �
 説明テキストやリンクなど、アプリケーションごとの web コンテンツを指定するだけでなく、アプリケーションごとに web テーマ全体を指定することもできます。  これには、ロゴ、イラスト、スタイルシート、onload.js ファイル全体が含まれます。
 
 ## <a name="global-settings"></a>グローバル設定
-全般的なグローバル設定については、Windows Server 2012 R2 の AD FS に付属している[AD FS サインインページのカスタマイズ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11))に関するページを参照してください。
+全般的なグローバル設定については、Windows Server 2012 R2 の AD FS に付属している [AD FS サインインページのカスタマイズ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11)) に関するページを参照してください。
 
 ## <a name="pre-requisites"></a>前提条件
 このドキュメントで説明されている手順を実行する前に、次の前提条件が必要です。
@@ -65,14 +66,14 @@ PS C:\>Set-AdfsRelyingPartyWebTheme
 
 RP ごとにカスタムテーマを割り当てるには、次の手順を使用します。
 
-1. の既定のグローバルテーマのコピーとして新しいテーマを作成し AD FS`New-AdfsWebTheme -Name AppSpecificTheme -SourceName default`
-2. カスタマイズ用のテーマをエクスポートする`Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme`
+1. の既定のグローバルテーマのコピーとして新しいテーマを作成し AD FS `New-AdfsWebTheme -Name AppSpecificTheme -SourceName default`
+2. カスタマイズ用のテーマをエクスポートする `Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme`
 3. お気に入りのエディターでテーマファイル (画像、css、onload.js) をカスタマイズする、またはファイルを置き換える
-4. カスタマイズしたファイルをファイルシステムから AD FS にインポートする (新しいテーマをターゲットにする)`Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}`
-5. カスタマイズした新しいテーマを特定の RP (または RP) に適用する`Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme`
+4. カスタマイズしたファイルをファイルシステムから AD FS にインポートする (新しいテーマをターゲットにする) `Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}`
+5. カスタマイズした新しいテーマを特定の RP (または RP) に適用する `Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme`
 
 ## <a name="home-realm-discovery"></a>ホーム領域検出
-ホーム領域検出のカスタマイズについて[は、「AD FS サインインページのカスタマイズ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11))」を参照してください。
+ホーム領域検出のカスタマイズについて [は、「AD FS サインインページのカスタマイズ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11))」を参照してください。
 
 ## <a name="updated-password-page"></a>更新されたパスワードページ
 [パスワードの更新] ページのカスタマイズの詳細については、「 [AD FS サインインページのカスタマイズ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11))」を参照してください。
@@ -82,7 +83,7 @@ RP ごとにカスタムテーマを割り当てるには、次の手順を使�
 
 また、AD FS サインインページをカスタマイズして、代替ログイン ID に関するヒントをエンドユーザーに与えることもできます。 カスタマイズしたサインインページの説明を追加することによってこれを行うことができます。詳細については[、「AD FS サインインページのカスタマイズ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11))」を参照してください。
 
-これを行うには、[ユーザー名] フィールドの上にある [組織のアカウントでサインインする] をカスタマイズします。  詳細については[、AD FS サインインページの高度なカスタマイズ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn636121(v=ws.11))に関するページを参照してください。
+これを行うには、[ユーザー名] フィールドの上にある [組織のアカウントでサインインする] をカスタマイズします。  詳細については [、AD FS サインインページの高度なカスタマイズ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn636121(v=ws.11))に関するページを参照してください。
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 [AD FS ユーザーサインインのカスタマイズ](AD-FS-user-sign-in-customization.md)

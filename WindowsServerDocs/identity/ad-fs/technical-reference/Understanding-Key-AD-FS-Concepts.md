@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 主要な AD FS の概念を理解する'
 ms.assetid: 204f5fe9-3611-4da0-b057-a386004b4598
 title: 主要な Active Directory フェデレーションサービス (AD FS) の概念について
 author: billmath
@@ -6,18 +7,18 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: c75f2109f7ef67cb9c83ddd05f95030904413e23
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: 0e31dfea3521fbbaac11f6fe5c1ae3666637118a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87996579"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050460"
 ---
 # <a name="understanding-key-ad-fs-concepts"></a>Understanding Key AD FS Concepts
 Active Directory フェデレーションサービス (AD FS) の重要な概念について学習し、その機能セットについて理解しておくことをお勧めします。
 
 > [!TIP]
-> その他の AD FS リソースリンクについては、「[重要な AD FS の概念]()」を参照してください。
+> その他の AD FS リソースリンクについては、「 [重要な AD FS の概念]()」を参照してください。
 
 ## <a name="ad-fs-terminology-used-in-this-guide"></a>このガイドで使用される AD FS の用語
 

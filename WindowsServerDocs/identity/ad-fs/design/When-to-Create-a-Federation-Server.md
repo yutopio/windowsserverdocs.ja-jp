@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フェデレーションサーバーを作成する場合」を参照してください。
 ms.assetid: 824005ae-c3c1-459b-9baa-1660158918ab
 title: フェデレーション サーバーを作成するのに適した状況
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 908a3ced3934ce078e4be424ec9ba33210905066
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: d3ced02154d3945b8022d565d8fa834164d2d229
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87962716"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049000"
 ---
 # <a name="when-to-create-a-federation-server"></a>フェデレーション サーバーを作成するのに適した状況
 
@@ -52,14 +53,14 @@ Active Directory フェデレーションサービス (AD FS) AD FS でフェデ
 -   フェデレーションサーバーは、企業ネットワーク上のクライアントに対して Windows 統合認証を使用することをサポートしています。フェデレーションサーバープロキシでは実行されません。 フェデレーションサーバーで Windows 統合認証を使用する方法の詳細については、「 [When To Create a Federation Server Farm](When-to-Create-a-Federation-Server-Farm.md)」を参照してください。
 
 > [!CAUTION]
-> フェデレーション サーバーと、SQL Server 構成データベース、SQL Server 属性ストア、ドメイン コント ローラー、および AD LDS インスタンスの間の通信は、整合性や機密性が既定では保護されません。この状況を回避するには、IPSEC を使用するか、これらすべてのサーバー間の接続を物理的にセキュリティ保護して、これらのサーバー間の通信チャネルを保護することを検討してください。フェデレーション サーバーと SQL server の間の通信については、接続文字列に SSL 保護を使用することを検討してください。フェデレーション サーバーとドメイン コント ローラーの間の接続については、Kerberos による署名と暗号化を有効にすることを検討してください。LDAP では、LDAP \/ は AD LDS AD DS ではサポートされていません \/ 。
+> フェデレーション サーバーと、SQL Server 構成データベース、SQL Server 属性ストア、ドメイン コント ローラー、および AD LDS インスタンスの間の通信は、整合性や機密性が既定では保護されません。 この状況を回避するには、IPSEC を使用するか、これらすべてのサーバー間の接続を物理的にセキュリティ保護して、これらのサーバー間の通信チャネルを保護することを検討してください。 フェデレーション サーバーと SQL server の間の通信については、接続文字列に SSL 保護を使用することを検討してください。 フェデレーション サーバーとドメイン コント ローラーの間の接続については、Kerberos による署名と暗号化を有効にすることを検討してください。 LDAP では、LDAP \/ は AD LDS AD DS ではサポートされていません \/ 。
 
 ## <a name="how-to-create-a-federation-server"></a>フェデレーション サーバーの作成方法
 フェデレーションサーバーを作成するには、AD FS フェデレーションサーバー構成ウィザードまたは Fsconfig.exe コマンド \- ラインツールを使用します。 これらのツールを使用する場合、フェデレーション サーバーを作成するために次のいずれかのオプションを選択できます。
 
 -   作成、スタンド\-だけでフェデレーション サーバー
 
-    スタンドアロンフェデレーションサーバーをセットアップする方法の詳細については \- 、「[スタンドアロンフェデレーションサーバーを作成](../../ad-fs/deployment/Create-a-Stand-Alone-Federation-Server.md)する」を参照してください。
+    スタンドアロンフェデレーションサーバーをセットアップする方法の詳細については \- 、「 [Create a Stand-Alone federation server](../../ad-fs/deployment/Create-a-Stand-Alone-Federation-Server.md)」を参照してください。
 
 -   フェデレーション サーバー ファーム内に最初のフェデレーション サーバーを作成する
 
@@ -73,6 +74,6 @@ Active Directory フェデレーションサービス (AD FS) AD FS でフェデ
 
 フェデレーション サーバーを展開するために必要なすべての前提条件を設定する方法の詳細については、「 [Checklist: Setting Up a Federation Server](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

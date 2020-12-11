@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「SPN と UPN の一意性」を参照してください。
 ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: SPN と UPN の一意性
 author: iainfoulds
@@ -6,18 +7,18 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: c41b532b6be241a937500485aca723e391ff9210
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 304533d7f6b810a8db338b09a5959e987a922baa
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070724"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049350"
 ---
 # <a name="spn-and-upn-uniqueness"></a>SPN と UPN の一意性
 
 >適用先:Windows Server 2016 では、Windows Server 2012 R2、Windows Server 2012
 
-**Author** : Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
+**Author**: Justin 書籍、シニアサポートエスカレーションエンジニア (Windows グループ)
 
 > [!NOTE]
 > この内容は Microsoft カスタマー サポート エンジニアによって作成され、TechNet が通常提供しているトピックよりも詳細な Windows Server 2012 R2 の機能やソリューションの技術的説明を求めている、経験豊かな管理者とシステム設計者を対象としています。 ただし、TechNet と同様の編集過程は実施されていないため、言語によっては通常より洗練されていない文章が見られる場合があります。
@@ -179,7 +180,7 @@ DN: CN=Dianne Hunt2\0ADEL:dd3ab8a4-3005-4f2f-814f-d6fc54a1a1c0,CN=Deleted Object
 
 -   選択、 **LDAP に変換** オプション ボタン
 
--   型 **(userPrincipalName = *競合*** している upn)
+-   型 **(userPrincipalName =*競合*** している upn)
 
     -   * Conflict *_Tingupn_* _ を競合している実際の upn に置き換えます。
 
@@ -320,10 +321,10 @@ servicePrincipalName Value=<SPN>
 重複する SPN の新しい値のいずれかの場合は、変更が失敗します。 上記の一覧の重要な属性は、ATT_DNS_HOST_NAME (コンピューター名) と ATT_SAM_ACCOUNT_NAME (SAM アカウント名) です。
 
 ### <a name="try-this-exploring-spn-and-upn-uniqueness"></a>SPN と UPN の一意性の表示にしてください。
-これは、最初のいくつかの" **実際に使ってみる** "、モジュール内の活動です。  このモジュールの別のラボ ガイドではありません。  **実際に使ってみる** アクティビティは、本質的に自由に使用できるアクティビティがラボ環境のレッスンの内容を表示します。  次のプロンプトまたはスクリプトのオプションを独自のアクティビティを思い付くなりません。
+これは、最初のいくつかの"**実際に使ってみる**"、モジュール内の活動です。  このモジュールの別のラボ ガイドではありません。  **実際に使ってみる** アクティビティは、本質的に自由に使用できるアクティビティがラボ環境のレッスンの内容を表示します。  次のプロンプトまたはスクリプトのオプションを独自のアクティビティを思い付くなりません。
 
 > [!NOTE]
-> -   これは、最初のいくつかの" **実際に使ってみる** "アクティビティ。
+> -   これは、最初のいくつかの"**実際に使ってみる**"アクティビティ。
 > -   このモジュールの別のラボ ガイドではありません。
 > -   **実際に使ってみる** アクティビティは、本質的に自由に使用できるアクティビティがラボ環境のレッスンの内容を表示します。
 > -   次のプロンプトまたはスクリプトのオプションを独自のアクティビティを思い付くなりません。

@@ -1,17 +1,18 @@
 ---
 title: SQL Server レプリケーションを使用した地理的な冗長性の設定
+description: 詳細については、SQL Server レプリケーションを使用した地理的冗長性の設定に関するページをご覧ください。
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
 ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
-ms.openlocfilehash: 574171b8e5569b2041492a95ebfe146cfd487523
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: dd666023e7b53af72f63edf1750321317e08f527
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96865791"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049240"
 ---
 # <a name="setup-geographic-redundancy-with-sql-server-replication"></a>SQL Server レプリケーションを使用した地理的な冗長性の設定
 
@@ -22,7 +23,7 @@ ms.locfileid: "96865791"
 SQL Server を AD FS 構成データベースとして使用している場合は、 \- SQL Server レプリケーションを使用して、AD FS ファームの geo 冗長性を設定できます。 Geo \- 冗長性は、アプリケーションがあるサイトから別のサイトに切り替えることができるように、地理的に離れた2つのサイト間でデータをレプリケートします。 これにより、1つのサイトで障害が発生した場合でも、2番目のサイトですべての構成データを使用できるようになります。 詳細については、「 [SQL Server を使用したフェデレーションサーバーファーム](../design/Federation-Server-Farm-Using-SQL-Server.md)」の「地理的冗長性の SQL Server」セクションを参照してください。
 
 ## <a name="prerequisites"></a>前提条件
-SQL server ファームをインストールして構成します。 詳細については、[https://technet.microsoft.com/evalcenter/hh225126.aspx](https://www.microsoft.com/en-us/evalcenter/) をご覧ください。 最初の SQL Server で、SQL Server エージェントサービスが実行されていて、[自動開始] に設定されていることを確認します。
+SQL server ファームをインストールして構成します。 詳細については、「[https://technet.microsoft.com/evalcenter/hh225126.aspx](https://www.microsoft.com/en-us/evalcenter/)」を参照してください。 最初の SQL Server で、SQL Server エージェントサービスが実行されていて、[自動開始] に設定されていることを確認します。
 
 ## <a name="create-the-second-replica-sql-server-for-geo-redundancy"></a>\( \) Geo 冗長性のための2番目のレプリカ SQL Server を作成する \-
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「要求パイプラインの役割」を参照してください。
 ms.assetid: ffb9d63c-ba7c-4ad1-b814-6db67f98c943
 title: 要求パイプラインの役割
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 81398a65fdfc510f8d4d3c125b77cc76fa6a8787
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3925351c6b625a52ace096f71f790e7056beb3c2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937761"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050470"
 ---
 # <a name="the-role-of-the-claims-pipeline"></a>要求パイプラインの役割
 Active Directory フェデレーション サービスで要求がパイプライン \(AD FS\) に発行する前に、フェデレーション サービスで要求が従う必要があるパスを表します。 フェデレーション サービス全体の最後で管理される\-に\-もクレーム ルール エンジンによって要求規則の処理を含む要求パイプラインのさまざまな段階でフローの要求のプロセスを終了します。

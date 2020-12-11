@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「レプリケーションエラー1753エンドポイントマッパーから使用できるエンドポイントがない」を参照してください。
 ms.assetid: 0f21951c-b1bf-43bb-a329-bbb40c58c876
 title: レプリケーション エラー 1753。エンドポイント マッパーから使用できるエンドポイントはこれ以上ありません
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 94e63d439217c21c1634e7f1b685267ad98178b4
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 359e5c39667f29deb03b8587e94e777a23232c5c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067674"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049490"
 ---
 # <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>レプリケーション エラー 1753。エンドポイント マッパーから使用できるエンドポイントはこれ以上ありません
 
@@ -193,7 +194,7 @@ NSLOOKUP -type=hostname <fully qualified computer name of source DC> <secondary 
 * サーバーアプリケーション (Active Directory et al) が RPC サーバー (ソース DC) のエンドポイントマッパーに登録されていることを確認します。
 * Active Directory は、既知と動的に登録されたポートを組み合わせて使用します。 次の表に、Active Directory ドメインコントローラーで使用される既知のポートとプロトコルを示します。
 
-| RPC サーバーアプリケーション | ポート | TCP | UDP |
+| RPC サーバーアプリケーション | Port | TCP | UDP |
 | --- | --- | --- | --- |
 | DNS サーバー | 53 | X | X |
 | Kerberos | 88 | X | X |

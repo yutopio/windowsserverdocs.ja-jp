@@ -1,4 +1,5 @@
 ---
+description: 詳細については、AD FS での AD DS 要求の使用
 ms.assetid: 460792e4-9f1d-4e7b-b6b2-53e057f839df
 title: AD FS 要求を AD DS を使用
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 942b7d88196fa32dd70fd554d76547cc5feadb26
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 3220d171bfb54a249da1e444d48b2462019650b8
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967549"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049960"
 ---
 # <a name="using-ad-ds-claims-with-ad-fs"></a>AD FS 要求を AD DS を使用
 
@@ -75,5 +76,5 @@ AD DS 発行された要求は、AD FS と共に使用して、ユーザーと�
 
 AD DS が発行されたクレームの AD FS と連動するために必要なクレーム ルールを作成する方法の詳細については、次を参照してください。 [入力方向の要求を変換するルールを作成する](../../ad-fs/operations/Create-a-Rule-to-Transform-an-Incoming-Claim.md)です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

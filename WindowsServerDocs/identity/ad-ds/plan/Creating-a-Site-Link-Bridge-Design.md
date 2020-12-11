@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: サイトリンクブリッジのデザインの作成'
 ms.assetid: 64142026-07b5-4601-840a-c8dcf6ab9814
 title: サイト リンク ブリッジ設計の作成
 ms.author: daveba
@@ -6,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.openlocfilehash: 190ded76c03c9f38edb0a2a0400a04b3adc69179
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 77d2d4e426dc0f0f41d95ce2e51e9079d4d82027
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069122"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050230"
 ---
 # <a name="creating-a-site-link-bridge-design"></a>サイト リンク ブリッジ設計の作成
 

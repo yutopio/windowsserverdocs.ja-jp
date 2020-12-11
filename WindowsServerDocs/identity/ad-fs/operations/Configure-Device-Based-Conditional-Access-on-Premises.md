@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 登録済みデバイスを使用したオンプレミスの条件付きアクセスの構成'
 ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
 title: オンプレミスのデバイス ベースの条件付きアクセスを構成する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 08/11/2017
 ms.topic: article
-ms.openlocfilehash: 2306c5ad57b7714c10076a5bb11f6cae5bb7f92d
-ms.sourcegitcommit: 5344adcf9c0462561a4f9d47d80afc1d095a5b13
+ms.openlocfilehash: 5b840243a7f17dc65db5d3c0605c3e5a321352f2
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90766885"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049720"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>登録済みデバイスを使用したオンプレミスの条件付きアクセスの構成
 
@@ -85,7 +86,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 >注: 次のコマンドは、Active Directory 管理ツールを必要と、ので場合は、フェデレーション サーバーは、また、ドメイン コント ローラーではない、まずツールをインストール、1 次の手順を使用しています。  それ以外の場合、手順 1. を省略できます。
 
-1.  **役割と機能の追加**ウィザードを実行して、**[リモート サーバー管理ツール]** -> **[役割管理ツール]** -> **[AD DS および AD LDS ツール]** の機能を選択し、**[Windows PowerShell の Active Directory モジュール]** と **[AD DS ツール]** の両方を選択します。
+1.  **役割と機能の追加** ウィザードを実行して、**[リモート サーバー管理ツール]** -> **[役割管理ツール]** -> **[AD DS および AD LDS ツール]** の機能を選択し、**[Windows PowerShell の Active Directory モジュール]** と **[AD DS ツール]** の両方を選択します。
 
 ![デバイス登録](media/Configure-Device-Based-Conditional-Access-on-Premises/device2.png)
 
@@ -208,14 +209,14 @@ Microsoft Passport for Work で Windows 10 を有効にする方法の詳細に�
 登録済みデバイスの MDM の自動登録を有効にして、アクセス制御ポリシーで isCompliant の要求を使用できるようにするには、こちらの手順に従って [ください。](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)
 
 ## <a name="troubleshooting"></a>トラブルシューティング
-1.  誤った状態で既に存在しているオブジェクトに関するエラーが発生した場合は、 `Initialize-ADDeviceRegistration` 以前に powershell コマンド Azure AD Connect を実行し、AD DS で部分構成を使用している可能性があるというメッセージが表示されます。  **Cn = Device Registration configuration、cn = Services、CN = Configuration、DC = &lt; domain &gt; **の下にあるオブジェクトを手動で削除してみてください。
+1.  誤った状態で既に存在しているオブジェクトに関するエラーが発生した場合は、 `Initialize-ADDeviceRegistration` 以前に powershell コマンド Azure AD Connect を実行し、AD DS で部分構成を使用している可能性があるというメッセージが表示されます。  **Cn = Device Registration configuration、cn = Services、CN = Configuration、DC = &lt; domain &gt;** の下にあるオブジェクトを手動で削除してみてください。
 2.  Windows 10 ドメインに追加のクライアント
     1. デバイスの認証が機能していることを確認するには、ドメインに参加しているクライアントにテストユーザーアカウントとしてサインオンします。 プロビジョニングをすばやくトリガーするには、デスクトップを少なくとも1回ロックしてロックを解除します。
     2. AD DS オブジェクトの stk キー資格情報のリンクを確認する手順 (同期は2回実行する必要がありますか)
 3.  デバイスが既に登録されているが、まだデバイスを登録していない、または登録していない Windows コンピューターを登録しようとするとエラーが発生する場合は、レジストリにデバイス登録構成のフラグメントが含まれている可能性があります。  調査し、これを削除するには、次の手順を使用します。
-    1. Windows コンピューターで、Regedit を開き、 **HKLM\Software\Microsoft\Enrollments**に移動します。
+    1. Windows コンピューターで、Regedit を開き、 **HKLM\Software\Microsoft\Enrollments** に移動します。
     2. このキーの下のサブキーがあります多く GUID 形式でします。  最大17の値を持ち、"6" の "EnrollmentType" (MDM 参加済み) または "13" (Azure AD 結合) のサブキーに移動します。
-    3. **EnrollmentType**を**0**に変更します。
+    3. **EnrollmentType** を **0** に変更します。
     4. デバイスの登録または登録をもう一度やり直してください。
 
 ### <a name="related-articles"></a>関連記事

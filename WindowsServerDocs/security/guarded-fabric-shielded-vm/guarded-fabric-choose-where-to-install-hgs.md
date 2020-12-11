@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: HGS を独自の専用フォレストまたは既存の要塞フォレストのどちらにインストールするかを選択する'
 title: HGS を独自の新しいフォレストと既存の要塞フォレストのどちらにインストールするかを選択します。
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: e1b4c015aa9b4f504d4cdf79bb2f38686588cfdd
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: cceea24bb4f843df06854e893742c79d25034021
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87989533"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049900"
 ---
 # <a name="choose-whether-to-install-hgs-in-its-own-dedicated-forest-or-in-an-existing-bastion-forest"></a>HGS を独自の専用フォレストまたは既存の要塞フォレストのどちらにインストールするかを選択します。
 
@@ -32,7 +33,7 @@ HGS の Active Directory フォレストは、管理者がシールドされた 
 運用フォレストなどの汎用フォレストは、HGS での使用に適していません。
 また、HGS はファブリック管理者から分離する必要があるため、ファブリックフォレストも適していません。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 環境に最も適したインストールオプションを選択します。
 

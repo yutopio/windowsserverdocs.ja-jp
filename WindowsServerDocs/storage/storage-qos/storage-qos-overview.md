@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「記憶域のサービスの品質」を参照してください。
 title: 記憶域のサービスの品質 (QoS)
 manager: dongill
 ms.author: JGerend
@@ -6,12 +7,12 @@ ms.topic: get-started-article
 ms.assetid: 8dcb8cf9-0e08-4fdd-9d7e-ec577ce8d8a0
 author: kumudd
 ms.date: 10/10/2016
-ms.openlocfilehash: ced2fe051f0595e8333aa2704889cc88ec1304ac
-ms.sourcegitcommit: 68444968565667f86ee0586ed4c43da4ab24aaed
+ms.openlocfilehash: f4cb836cd76933b400e472d10adfeda47b717c0b
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87994724"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050390"
 ---
 # <a name="storage-quality-of-service"></a>記憶域のサービスの品質 (QoS)
 
@@ -66,7 +67,7 @@ Hyper-V サーバーが仮想マシンを起動すると、それらはポリシ
 
 ### <a name="glossary"></a><a name="BKMK_Glossary"></a>用語集
 
-|期間|説明|
+|項目|説明|
 |--------|---------------|
 |正規化された IOPS|すべての記憶域の使用状況は、”正規化された IOPS” で測定されます。  これは、1 秒あたりの記憶域の入出力操作の数です。  8 KB 以下の IO はすべて 1 つの正規化された IO と見なされます。  8 KB より大きいすべての IO は、複数の正規化された IO と見なされます。 たとえば、256 KB の要求は、32 の正規化された IOPS として扱われます。<p>Windows Server 2016 には、IO を正規化するために使用するサイズを指定する機能が含まれています。  記憶域クラスター上で、正規化されたサイズを指定し、クラスター全体の正規化の計算に適用することができます。  既定値は、8 KB のままです。|
 |Flow|VHD または VHDX ファイルに対して Hyper-V サーバーによって開かれる各ファイル ハンドルは ”フロー” と見なされます。 仮想マシンに 2 台の仮想ハードディスクが接続されている場合、ファイルごとに 1 つのファイル サーバー クラスターへのフローがあります。 VHDX が複数の仮想マシンで共有されている場合、仮想マシンごとに 1 つのフローがあります。|
@@ -89,7 +90,7 @@ Hyper-V サーバーが仮想マシンを起動すると、それらはポリシ
 新しいフェールオーバー クラスターが構成済みであり、Windows Server 2016 上でクラスターの共有ボリューム (CSV) を構成した場合、記憶域 QoS 機能は自動的に設定されます。
 
 #### <a name="verify-storage-qos-installation"></a>記憶域 QoS のインストールを確認する
-フェールオーバー クラスターを作成し、CSV ディスクを構成した後で、**記憶域 QoS リソースが**クラスター コア リソースとして表示され、フェールオーバー クラスター マネージャーおよび Windows PowerShell の両方に表示されます。 これは、フェールオーバー クラスター システムでこのリソースを管理することを目的としており、このリソースに対してユーザーが何か操作を実行する必要はありません。  フェールオーバー クラスター マネージャーと PowerShell の両方に表示されるのは、新しいヘルス サービスなどの他のフェールオーバー クラスター システム リソースとの一貫性を維持するためです。
+フェールオーバー クラスターを作成し、CSV ディスクを構成した後で、**記憶域 QoS リソースが** クラスター コア リソースとして表示され、フェールオーバー クラスター マネージャーおよび Windows PowerShell の両方に表示されます。 これは、フェールオーバー クラスター システムでこのリソースを管理することを目的としており、このリソースに対してユーザーが何か操作を実行する必要はありません。  フェールオーバー クラスター マネージャーと PowerShell の両方に表示されるのは、新しいヘルス サービスなどの他のフェールオーバー クラスター システム リソースとの一貫性を維持するためです。
 
 ![クラスター コア リソース内に表示される記憶域 QoS リソース](media/overview-Clustering_StorageQoSFCM.png)
 
@@ -384,7 +385,7 @@ IsDeleted                     : False
 ```
 
 ### <a name="query-for-storage-qos-policies"></a>記憶域 QoS ポリシーのクエリ
-`Get-StorageQosPolicy`構成されているすべてのポリシーとその状態をスケールアウトファイルサーバーに一覧表示します。
+`Get-StorageQosPolicy` Scale-Out ファイルサーバー上で構成されているすべてのポリシーとその状態を一覧表示します。
 
 ```PowerShell
 PS C:\> Get-StorageQosPolicy
@@ -883,7 +884,7 @@ IOPSNormalizationSize
 32768
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [Windows Server 2016](../../index.yml)
 - [Windows Server 2016 の記憶域レプリカに関する記事](../storage-replica/storage-replica-overview.md)
 - [Windows Server 2016 での記憶域スペース ダイレクト](../storage-spaces/storage-spaces-direct-overview.md)

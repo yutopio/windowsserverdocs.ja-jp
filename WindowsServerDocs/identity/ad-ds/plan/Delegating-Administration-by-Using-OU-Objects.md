@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「OU オブジェクトを使用した管理の委任」を参照してください。
 ms.assetid: d8e61aa4-8e4b-4097-83ca-70cf61366b75
 title: OU オブジェクトを使用して管理を委任する
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7ce0f59dc2c9d556425b8b59b7fd438e0577fb13
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: f18552551a63547692399a73526b78952fc52a30
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93069434"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050080"
 ---
 # <a name="delegating-administration-by-using-ou-objects"></a>OU オブジェクトを使用して管理を委任する
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「AD FS と Web アプリケーションプロキシを使用してワークフォルダーを展開する: 手順5、クライアントをセットアップする」を参照してください。'
 title: 'AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 5: クライアントのセットアップ'
 ms.topic: article
 manager: klaasl
@@ -6,12 +7,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 4/5/2017
 ms.assetid: f168292b-0dbc-44b9-965f-d480e5134a0c
-ms.openlocfilehash: fd8015b1a72477c00fda0c3483bbdd6504ff86b8
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 904d5868c4f242ff00b86d0824fa9e58692db621
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965819"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049140"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-5-set-up-clients"></a>AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 5: クライアントのセットアップ
 
@@ -77,7 +78,7 @@ ms.locfileid: "87965819"
 
 2. **[ワーク フォルダーのセットアップ]** をクリックします。
 
-3. [**職場の電子メールアドレスを入力**してください] ページで、ユーザーの電子メールアドレス (など user@contoso.com ) またはワークフォルダーの URL (テスト例では、https: \/ /workfolders.contoso.com) を入力し、[**次へ**] をクリックします。
+3. [ **職場の電子メールアドレスを入力** してください] ページで、ユーザーの電子メールアドレス (など user@contoso.com ) またはワークフォルダーの URL (テスト例では、https: \/ /workfolders.contoso.com) を入力し、[ **次へ**] をクリックします。
 
 4. ユーザーが企業ネットワークに接続されている場合、Windows 統合認証によって、認証が実行されます。 ユーザーが企業ネットワークに接続されていない場合は、ADFS (OAuth) で認証が実行され、ユーザーは資格情報の入力を求められます。 資格情報を入力して、**[OK]** をクリックします。
 
@@ -122,7 +123,7 @@ ms.locfileid: "87965819"
 
 Windows Server の UI を使って、ワーク フォルダー、AD FS、Web アプリケーション プロキシを展開する手順は、以上で完了です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ワーク フォルダーの概要](Work-Folders-Overview.md)
 
 

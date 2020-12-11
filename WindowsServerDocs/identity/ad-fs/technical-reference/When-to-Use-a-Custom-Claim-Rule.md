@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: カスタム要求規則を使用する場合'
 ms.assetid: 20d183f0-ef94-44bb-9dfc-ed93799dd1a6
 title: カスタム要求規則を使用する状況
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: d98898f67ff51045e2bdd4bbaea58af8a438f9b1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 589944065bd713524be6d503eaa07e62f72bddb0
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937641"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050440"
 ---
 # <a name="when-to-use-a-custom-claim-rule"></a>カスタム要求規則を使用する状況
 要求規則言語を使用して Active Directory フェデレーションサービス (AD FS) AD FS でカスタム要求規則を記述し \( \) ます。要求規則言語は、クレーム発行エンジンがプログラムによって要求を生成、変換、パススルー、およびフィルター処理するために使用するフレームワークです。 カスタム規則を使用することで、標準的な規則テンプレートよりもさらに複雑なロジックを持つ規則を作成できます。 次の状況に該当する場合に、カスタム規則の使用を検討してください。
@@ -34,7 +35,7 @@ ms.locfileid: "87937641"
 
 出力方向の要求の値が、入力方向の要求の値に基づく必要がある場合で、その他のコンテンツも含める必要がある場合もカスタム規則を使用できます。
 
-要求規則言語は、規則ベースの言語で、 条件部分と実行部分があります。 要求規則言語の構文を使用して、組織のニーズに合わせて要求を列挙、追加、削除、または変更できます。 これらの各部分の動作の詳細については、「[要求規則言語の役割](The-Role-of-the-Claim-Rule-Language.md)」を参照してください。
+要求規則言語は、規則ベースの言語で、 条件部分と実行部分があります。 要求規則言語の構文を使用して、組織のニーズに合わせて要求を列挙、追加、削除、または変更できます。 これらの各部分の動作の詳細については、「 [要求規則言語の役割](The-Role-of-the-Claim-Rule-Language.md)」を参照してください。
 
 以下のセクションでは、要求規則の基本的な概要を説明します。 どのような場合にカスタム要求規則を使用するかにについても記載しています。
 
@@ -47,7 +48,7 @@ ms.locfileid: "87937641"
 > -   要求規則は、要求発行エンジンによって、特定の規則セット内で時系列に従って処理されます。 規則に優先順位を設定すると、特定の規則セット内の先行する規則で生成された要求をさらに調整またはフィルター処理できます。
 > -   要求規則テンプレートでは、常に入力方向の要求の種類を指定する必要があります。 ただし、1 つの規則を使用して、要求の種類が同じ複数の要求の値を処理できます。
 
-要求規則と要求規則セットの詳細については、「[要求規則の役割](The-Role-of-Claim-Rules.md)」を参照してください。 規則の処理方法の詳細については、「[要求エンジンの役割](The-Role-of-the-Claims-Engine.md)」を参照してください。 要求規則セットの処理方法の詳細については、「[要求パイプラインの役割](The-Role-of-the-Claims-Pipeline.md)」を参照してください。
+要求規則と要求規則セットの詳細については、「 [要求規則の役割](The-Role-of-Claim-Rules.md)」を参照してください。 規則の処理方法の詳細については、「 [要求エンジンの役割](The-Role-of-the-Claims-Engine.md)」を参照してください。 要求規則セットの処理方法の詳細については、「 [要求パイプラインの役割](The-Role-of-the-Claims-Pipeline.md)」を参照してください。
 
 ## <a name="how-to-create-this-rule"></a>この規則の作成方法
 この規則を作成するには、最初に要求規則言語を使用して操作に必要な構文を作成し、次に、[AD FS 管理] スナップインで、要求プロバイダー信頼または証明書利用者信頼のいずれかのプロパティにある [カスタム規則を使用して要求を送信] テンプレートに表示されるテキストボックスに結果を貼り付け \- ます。
@@ -58,11 +59,11 @@ ms.locfileid: "87937641"
 
 -   AD FS 要求規則言語を使用して、1つまたは複数のオプションの条件と発行ステートメントを入力します
 
-このテンプレートを使用してカスタムルールを作成する方法の詳細については、「AD FS 展開ガイド」の「[カスタムルールを使用して要求を送信するためのルールを作成する](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807049(v=ws.11))」を参照してください。
+このテンプレートを使用してカスタムルールを作成する方法の詳細については、「AD FS 展開ガイド」の「 [カスタムルールを使用して要求を送信するためのルールを作成する](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807049(v=ws.11)) 」を参照してください。
 
-要求規則言語のしくみについて理解を深めるには、 \- その規則のプロパティの [**規則言語の表示**] タブをクリックして、スナップインに既に存在する他の規則の要求規則言語の構文を確認します。 このセクションの情報とこのタブの構文情報を使用すると、独自のカスタム規則を作成する方法を把握できます。
+要求規則言語のしくみについて理解を深めるには、 \- その規則のプロパティの [ **規則言語の表示** ] タブをクリックして、スナップインに既に存在する他の規則の要求規則言語の構文を確認します。 このセクションの情報とこのタブの構文情報を使用すると、独自のカスタム規則を作成する方法を把握できます。
 
-要求規則言語の使用方法の詳細については、「[要求規則言語の役割](The-Role-of-the-Claim-Rule-Language.md)」を参照してください。
+要求規則言語の使用方法の詳細については、「 [要求規則言語の役割](The-Role-of-the-Claim-Rule-Language.md)」を参照してください。
 
 ## <a name="using-the-claim-rule-language"></a>要求規則言語の使用
 
@@ -84,7 +85,7 @@ count([type == "http://schemas.xmlsoap.org/claims/Reports"] ) > 0 => issue(= "ht
 ```
 
 ### <a name="example-how-to-issue-a-ppid-claim-based-on-an-ldap-attribute"></a>例: LDAP 属性に基づいて PPID 要求を発行する方法
-次の規則は、 \( \) LDAP 属性ストアのユーザーの**windowsaccountname**および**originalissuer**属性に基づいて、プライベート個人識別子の PPID 要求を発行します。
+次の規則は、 \( \) LDAP 属性ストアのユーザーの **windowsaccountname** および **originalissuer** 属性に基づいて、プライベート個人識別子の PPID 要求を発行します。
 
 ```
 c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"]
@@ -93,7 +94,7 @@ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsacco
 
 このクエリのユーザーを一意に識別するために使用できる一般的な属性には次のようなものがあります。
 
--   **user SID**
+-   **ユーザー SID**
 
 -   **windowsaccountname**
 

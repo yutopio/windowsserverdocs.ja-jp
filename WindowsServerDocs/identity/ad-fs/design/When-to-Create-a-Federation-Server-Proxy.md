@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フェデレーションサーバープロキシを作成する場合」を参照してください。
 ms.assetid: aa20c8b3-7f01-4165-8b73-92642bff9676
 title: フェデレーション サーバー プロキシを作成する状況
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 963070a15b075275cd5680fa3a39044abbb6b3ad
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 4da88560f372f56594d127c1db26f1bf8edd4bea
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972039"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049940"
 ---
 # <a name="when-to-create-a-federation-server-proxy"></a>フェデレーション サーバー プロキシを作成する状況
 
@@ -32,5 +33,5 @@ ms.locfileid: "87972039"
 
 フェデレーション サーバー プロキシの展開に必要なすべての前提条件を設定する方法の詳細については、「 [Checklist: Setting Up a Federation Server Proxy](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

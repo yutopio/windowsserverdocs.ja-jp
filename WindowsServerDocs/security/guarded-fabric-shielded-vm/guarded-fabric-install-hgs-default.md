@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「新しいフォレストに HGS をインストールする」を参照してください。
 title: 新しいフォレストに HGS をインストールする
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: c18c14435c93d08c98b1a765fd820294a273a575
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 934efb699dd1c9f37219606ebc7f1b748f61eb18
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939546"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049730"
 ---
 # <a name="install-hgs-in-a-new-forest"></a>新しいフォレストに HGS をインストールする
 
@@ -28,11 +29,11 @@ ms.locfileid: "87939546"
 
 ## <a name="next-steps"></a>次のステップ
 
-- TPM ベースの構成証明を設定する次の手順については、「[新しい専用フォレストで tpm モードを使用して HGS クラスターを初期化する (既定)](guarded-fabric-initialize-hgs-tpm-mode-default.md)」を参照してください。
-- ホストキーの構成証明を設定する次の手順については、「[新しい専用フォレストでキーモードを使用して HGS クラスターを初期化する (既定)](guarded-fabric-initialize-hgs-key-mode-default.md)」を参照してください。
-- 管理者ベースの構成2019証明をセットアップする次の手順については、「[新しい専用フォレストで AD モードを使用して HGS クラスターを初期化する (既定)](guarded-fabric-initialize-hgs-ad-mode-default.md)」を参照してください。
+- TPM ベースの構成証明を設定する次の手順については、「 [新しい専用フォレストで tpm モードを使用して HGS クラスターを初期化する (既定)](guarded-fabric-initialize-hgs-tpm-mode-default.md)」を参照してください。
+- ホストキーの構成証明を設定する次の手順については、「 [新しい専用フォレストでキーモードを使用して HGS クラスターを初期化する (既定)](guarded-fabric-initialize-hgs-key-mode-default.md)」を参照してください。
+- 管理者ベースの構成2019証明をセットアップする次の手順については、「 [新しい専用フォレストで AD モードを使用して HGS クラスターを初期化する (既定)](guarded-fabric-initialize-hgs-ad-mode-default.md)」を参照してください。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [HGS の初期化](guarded-fabric-initialize-hgs.md)

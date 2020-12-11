@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フェデレーションサーバーファームを作成する場合」を参照してください。
 ms.assetid: 02580b2f-a339-4470-947c-d700b2d55f3f
 title: フェデレーション サーバー ファームを作成するのに適した状況
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 62aacdf0662eddc7bbc99d8434346fe8e48cc944
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8728f7da22618d9c05a4016c8156b18a319da5a5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972049"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049950"
 ---
 # <a name="when-to-create-a-federation-server-farm"></a>フェデレーション サーバー ファームを作成するのに適した状況
 
@@ -20,11 +21,11 @@ ms.locfileid: "87972049"
 AD FS フェデレーションサーバー構成ウィザードを使用して、フェデレーションサーバーファームを作成するか、既存のファームに追加のフェデレーションサーバーをインストールすることができます。 詳細については、「 [When to Create a Federation Server](When-to-Create-a-Federation-Server.md)」を参照してください。
 
 > [!NOTE]
-> AD FS フェデレーションサーバー構成ウィザードを使用して**新しいフェデレーションサーバーファーム**を作成するオプションを選択すると、ウィザードは \( Active Directory で証明書を共有するためのコンテナーオブジェクトを作成しようとし \) ます。 そのため、最初に、Active Directory においてコンテナー オブジェクトを作成するのに十分なアクセス許可を持つアカウントを使用してコンピューターにログオンし、フェデレーション サーバー ロールを設定することが重要です。
+> AD FS フェデレーションサーバー構成ウィザードを使用して **新しいフェデレーションサーバーファーム** を作成するオプションを選択すると、ウィザードは \( Active Directory で証明書を共有するためのコンテナーオブジェクトを作成しようとし \) ます。 そのため、最初に、Active Directory においてコンテナー オブジェクトを作成するのに十分なアクセス許可を持つアカウントを使用してコンピューターにログオンし、フェデレーション サーバー ロールを設定することが重要です。
 
 フェデレーションサーバーをファームとしてグループ化する前に、1つの完全修飾ドメイン名の FQDN に到着した要求 \( が \) サーバーファーム内のさまざまなフェデレーションサーバーにルーティングされるように、最初にクラスター化する必要があります。 企業ネットワーク内にネットワーク負荷分散 NLB を展開することにより、サーバークラスターを作成でき \( \) ます。 このガイドでは、ファーム内の各フェデレーションサーバーをクラスター化するために NLB が適切に構成されていることを前提としています。
 
-Microsoft NLB テクノロジを使用してクラスターの FQDN を構成する方法の詳細については、「[クラスターパラメーターの指定](https://go.microsoft.com/fwlink/?LinkID=74651)」を参照してください。
+Microsoft NLB テクノロジを使用してクラスターの FQDN を構成する方法の詳細については、「 [クラスターパラメーターの指定](https://go.microsoft.com/fwlink/?LinkID=74651)」を参照してください。
 
 ## <a name="best-practices-for-deploying-a-federation-server-farm"></a>フェデレーション サーバー ファームのデプロイのベスト プラクティス
 運用環境にフェデレーションサーバーを展開する場合は、次のベストプラクティスに従うことをお勧めします。
@@ -32,7 +33,7 @@ Microsoft NLB テクノロジを使用してクラスターの FQDN を構成す
 -   複数のフェデレーションサーバーを同時に展開する場合、またはファームにサーバーをさらに追加することがわかっている場合は、ファーム内の既存のフェデレーションサーバーのサーバーイメージを作成してから、追加のフェデレーションサーバーをすばやく作成する必要がある場合はそのイメージからインストールすることを検討してください。
 
     > [!NOTE]
-    > サーバーイメージ方法を使用して追加のフェデレーションサーバーを展開する場合は、「チェックリスト: 新しいサーバーをファームに追加するたびに[フェデレーションサーバーをセットアップ](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md)する」のタスクを実行する必要はありません。
+    > サーバーイメージ方法を使用して追加のフェデレーションサーバーを展開する場合は、「チェックリスト: 新しいサーバーをファームに追加するたびに [フェデレーションサーバーをセットアップ](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md) する」のタスクを実行する必要はありません。
 
 -   NLB または他の何らかのクラスタリング方式を使用して、多くのフェデレーションサーバーコンピューターに単一の IP アドレスを割り当てることができます。
 
@@ -49,5 +50,5 @@ Microsoft NLB テクノロジを使用してクラスターの FQDN を構成す
 |証明書を取得して共有する|パブリック証明機関 \( CA (VeriSign など) から、単一のサーバー認証証明書を取得でき \) ます。 その後、すべてのフェデレーションサーバーが証明書の同じ秘密キー部分を共有するように、証明書を構成できます。 同じ証明書を共有する方法の詳細については、「 [Checklist: Setting Up a Federation Server](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md)」を参照してください。 **注:** AD FS 管理スナップインは、 \- サービス通信証明書としてのフェデレーションサーバーのサーバー認証証明書を参照します。<p>詳細については、「 [Certificate Requirements for Federation Servers](Certificate-Requirements-for-Federation-Servers.md)」を参照してください。|
 |同じ SQL Server インスタンスを参照する|AD FS 構成データベースを SQL database に格納する場合、新しいフェデレーションサーバーは、ファーム内の他のフェデレーションサーバーで使用されているのと同じ SQL Server インスタンスを参照する必要があります。これにより、新しいサーバーがファームに参加できるようになります。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

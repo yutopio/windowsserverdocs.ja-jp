@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Active Directory ユーザーに要求に対応するアプリケーションとサービスへのアクセスを提供する」を参照してください。
 ms.assetid: d254fca3-85a1-424d-ac22-d6687ec3798e
 title: Active Directory ユーザーに要求に対応するアプリケーションとサービスへのアクセスを提供する
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 6fb5779eb655534e97c5291c6b883e2e07851415
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: a37147b46dc0ed8a6aac7700ad3549052c90c4bb
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87969719"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049420"
 ---
 # <a name="provide-your-active-directory-users-access-to-your-claims-aware-applications-and-services"></a>Active Directory ユーザーに要求に対応するアプリケーションとサービスへのアクセスを提供する
 
@@ -21,7 +22,7 @@ Active の Directory フェデレーション サービスのアカウント パ
 
     Fabrikam が企業ネットワーク上の社員へのフェデレーション Web へのアクセスにするなど、\-ベースのアプリケーションの Fabrikam の境界ネットワークでホストされています。
 
--   Active Directory ドメインにログオンしたリモート従業員は、組織内のフェデレーションサーバーから AD FS トークンを取得して、 \- 組織内にあるセキュリティで保護され \- た Web ベースのアプリケーションまたはサービス AD FS へのフェデレーションアクセスを得ることができます。
+-   Active Directory ドメインにログオンしているリモートの社員は、AD FS にフェデレーション アクセスするために、組織内のフェデレーション サーバーから AD FS トークンを取得できます\-Web をセキュリティで保護された\-ベースのアプリケーションまたはも、組織内にあるサービスです。
 
 -   Active Directory 属性ストアの情報を、従業員の AD FS トークンに設定できます。
 
@@ -30,7 +31,7 @@ Active の Directory フェデレーション サービスのアカウント パ
 -   **Active Directory Domain Services \(AD DS \) :** AD DS には、AD FS トークンの生成に使用される従業員のユーザーアカウントが含まれています。 グループのメンバーシップや属性などの情報は、グループ要求およびカスタム要求として AD FS トークンに設定されます。
 
     > [!NOTE]
-    > ライトウェイトディレクトリアクセスプロトコル \( LDAP \) または構造化照会言語 SQL を使用して \( \) 、AD FS トークン生成用の id を含めることもできます。
+    > ライトウェイト ディレクトリ アクセス プロトコルを使用することもできます。 \(LDAP\) または構造化照会言語 \(SQL\) を格納するには、AD FS トークンを生成します。
 
 -   **会社の DNS:** ドメイン ネーム システムのこの実装 \(DNS\) シンプルなホストを含む \(A\) リソース レコードのイントラネット クライアントは、アカウント フェデレーション サーバーを検出できるようにします。 DNS のこの実装では、企業ネットワークで必要とされる他の DNS レコードもホストされる可能性があります。 詳細については、「[フェデレーション サーバーの名前解決の要件](Name-Resolution-Requirements-for-Federation-Servers.md)」をご覧ください。
 
@@ -52,5 +53,5 @@ Active の Directory フェデレーション サービスのアカウント パ
 
 ![要求へのアクセスします。](media/31394ea8-fecb-4372-ac3f-cc3cf566ffc9.gif)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

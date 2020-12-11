@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Web SSO の設計に関するページをご覧ください。
 ms.assetid: eb778f63-f7be-438e-8c5e-1fd9b194b967
 title: Web SSO 設計
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 7112fe6983a6292c57fc489c959b1edeb0c13c7b
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: e61402f12af51036c3eea739288ddd94e1644e5e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87949856"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049340"
 ---
 # <a name="web-sso-design"></a>Web SSO 設計
 
@@ -27,5 +28,5 @@ Web SSO 設計では、通常、 \- 境界ネットワークでセキュリテ�
 
 Web SSO 設計を計画してデプロイするために使用できる詳細なタスクの一覧については、「 [Checklist: Implementing a Web SSO Design](../../ad-fs/deployment/Checklist--Implementing-a-Web-SSO-Design.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 での AD FS 設計ガイド](AD-FS-Design-Guide-in-Windows-Server-2012.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Active Directory フェデレーションサービス (AD FS) (AD FS) と Web アプリケーションプロキシ (WAP) の必須更新プログラムに関するページを参照してください。
 ms.assetid: ed3206b4-bbfc-4bc7-a43c-981b0544a50d
 title: Active Directory フェデレーションサービス (AD FS) に必要な更新プログラム (AD FS)
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 3/29/2019
 ms.topic: article
-ms.openlocfilehash: cd1fa79d21aff61c27fbdd80dc26a307a19776ac
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b970a5e098d2d950380356a4254599859b3e39d7
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87967619"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049060"
 ---
 # <a name="required-updates-for-active-directory-federation-services-ad-fs-and-web-application-proxy-wap"></a>Active Directory フェデレーションサービス (AD FS) (AD FS) と Web アプリケーションプロキシ (WAP) に必要な更新
 
@@ -25,11 +26,11 @@ Windows Server 2016 の更新プログラムは、Windows Update によって毎
 
 |KB# |説明|リリース日
 |----- | ----- |-----
-|[4534271](https://support.microsoft.com/help/4534271/windows-10-update-kb4534271) | Google Chrome のリリース80では、新しい[SameSite](https://www.chromestatus.com/feature/5088147346030592) cookie ポリシーが既定でサポートされているため AD FS chrome エラーが発生する可能性があります。 詳細については、[こちら](/office365/troubleshoot/miscellaneous/chrome-behavior-affects-applications)を参照してください。 |2020 年 1 月|
+|[4534271](https://support.microsoft.com/help/4534271/windows-10-update-kb4534271) | Google Chrome のリリース80では、新しい [SameSite](https://www.chromestatus.com/feature/5088147346030592) cookie ポリシーが既定でサポートされているため AD FS chrome エラーが発生する可能性があります。 詳細については、 [こちら](/office365/troubleshoot/miscellaneous/chrome-behavior-affects-applications)を参照してください。 |2020 年 1 月|
 |[CVE-2019-1126](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1126) | このセキュリティ更新プログラムは、Active Directory フェデレーションサービス (AD FS) (AD FS) の脆弱性に対処します。これにより、攻撃者がエクストラネットロックアウトポリシーをバイパスできる可能性があります。 |2019 年 7 月|
 |[4489889 (OS ビルド 14393.2879)](https://support.microsoft.com/help/4489889/windows-10-update-kb4489889) | 重複証明書利用者信頼が AD FS 管理コンソールに表示される Active Directory フェデレーションサービス (AD FS) (AD FS) の問題に対処します。 これは、AD FS 管理コンソールを使用して証明書利用者信頼を作成または表示する場合に発生します。</br></br> AD FS 2016 でエクストラネットのスマートロックアウト (ESL) が有効になっている間に発生する、高 Active Directory フェデレーションサービス (AD FS) (ADFS) Web アプリケーションプロキシ (WAP) の待機時間の問題 (10,000 ミリ秒) に対処します。 このセキュリティ更新プログラムは、 [CVE-2018-16794](https://nvd.nist.gov/vuln/detail/CVE-2018-16794)で説明されている脆弱性に対処します。 |2019 年 3 月|
 |[4487006 (OS ビルド 14393.2828)](https://support.microsoft.com/help/4487006/windows-10-update-kb4487006) | PowerShell または Active Directory フェデレーションサービス (AD FS) (AD FS) 管理コンソールを使用しているときに、証明書利用者信頼の更新が失敗する原因となる問題に対処します。 この問題は、複数の PassiveRequestorEndpoint を発行するオンラインメタデータ URL を使用するように証明書利用者信頼を構成すると発生します。 "MSIS7615: 証明書利用者信頼に指定された信頼されたエンドポイントは、その証明書利用者信頼に対して一意である必要があります。" というエラーが発生します。  </br></br>Azure のパスワード保護ポリシーにより、外部の複雑さのパスワード変更に関する特定のエラーメッセージを表示する問題に対処します。 |2019 年 2 月|
-|[4462928 (OS ビルド 14393.2580)](https://support.microsoft.com/help/4462928/windows-10-update-kb4462928)|Active Directory フェデレーションサービス (AD FS) (ADFS) エクストラネットスマートロックアウト (ESL) と代替ログイン ID 間の相互運用の問題に対処します。 代替ログイン ID が有効になっている場合、AD FS Powershell コマンドレットを呼び出し、AdfsAccountActivity と AdfsAccountLockout を呼び出して、"アカウントが見つかりません" エラーを返します。 AdfsAccountActivity が呼び出されると、既存のエントリを編集する代わりに新しいエントリが追加されます。|2018 年 10 月|
+|[4462928 (OS ビルド 14393.2580)](https://support.microsoft.com/help/4462928/windows-10-update-kb4462928)|Active Directory フェデレーションサービス (AD FS) (ADFS) エクストラネットスマートロックアウト (ESL) と代替ログイン ID 間の相互運用の問題に対処します。 代替ログイン ID が有効になっている場合、AD FS Powershell コマンドレット、Get-AdfsAccountActivity および AdfsAccountLockout に対する呼び出しでは、"アカウントが見つかりません" エラーが返されます。 Set-AdfsAccountActivity が呼び出されると、既存のエントリを編集する代わりに新しいエントリが追加されます。|2018 年 10 月|
 |[4343884 (OS ビルド 14393.2457)](https://support.microsoft.com/help/4343884/windows-10-update-kb4343884)|カスタムカルチャ定義を使用するモバイルデバイスで Multi-Factor Authentication が正しく機能しない Active Directory フェデレーションサービス (AD FS) (AD FS) の問題に対処します。 </br></br>Windows Hello for Business の問題に対処します。この問題は、新規ユーザーの登録で大幅な遅延 (15 秒) が発生します。 この問題は、ハードウェアセキュリティモジュールを使用して ADFS 登録機関 (RA) 証明書を格納している場合に発生します。|2018 年 8 月|
 |[4338822 (OS ビルド 14393.2395)](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822)|コンソールから証明書利用者信頼を作成または表示するときに、AD FS 管理コンソールに重複する証明書利用者信頼を表示する AD FS の問題に対処します。</br></br>Windows Hello for Business が失敗する原因となる ADFS の問題に対処します。 この問題は、2つの要求プロバイダーがある場合に発生します。 PIN の登録が失敗し、"400 内部サーバーエラー: デバイス識別子を取得できません。" というメッセージが表示されます。</br></br> 終了しない非アクティブな接続に関連する WAP の問題に対処します。 これにより、システムリソースリーク (メモリリークなど) と、応答しなくなった WAP サービスが発生します。 ユーザーが別のログインオプションを選択できないようにする AD FS の問題に対処します。 これは、ユーザーが証明書ベースの認証を使用してログインするように選択しても、構成されていない場合に発生します。 これは、ユーザーが [証明書ベースの認証] を選択し、別のログインオプションを選択しようとした場合にも発生します。 この場合、ユーザーはブラウザーを閉じるまで、証明書ベースの認証ページにリダイレクトされます。|2018 年 7 月|
 |[4103720 (OS ビルド 14393.2273)](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720)|PreventTokenReplays が有効になっている場合に、SAML 証明書利用者への IdP によって開始されたログインが失敗するようにする ADFS の問題に対処します。 </br></br>OAUTH がデバイスまたはブラウザーアプリケーションから認証されるときに発生する ADFS の問題に対処します。 ユーザーパスワードの変更によってエラーが生成され、ユーザーはログインするためにアプリまたはブラウザーを終了する必要があります。 </br></br>UTC + 1 以上 (ヨーロッパおよびアジア) でエクストラネットのスマートロックアウトを有効にできなかった問題に対処します。 さらに、通常のエクストラネットロックアウトは、次のエラーで失敗します。 AdfsAccountActivity: UTC に変換されたときに MinValue より小さい datetime 値を JSON にシリアル化することはできません。</br></br>新しいユーザーが PIN をプロビジョニングできない ADFS Windows Hello for business の問題に対処します。 このエラーは、MFA プロバイダーが構成されていない場合に発生します。|2018 年 5 月|
@@ -48,7 +49,7 @@ Windows Server 2012 R2 の Active Directory フェデレーションサービス
 
 |KB# |説明|リリース日
 |----- | ----- |-----
-|[4534309](https://support.microsoft.com/help/4534309/windows-8-1-kb4534309)| Google Chrome のリリース80では、新しい[SameSite](https://www.chromestatus.com/feature/5088147346030592) cookie ポリシーが既定でサポートされているため AD FS chrome エラーが発生する可能性があります。 詳細については、[こちら](/office365/troubleshoot/miscellaneous/chrome-behavior-affects-applications)を参照してください。 |2020 年 1 月
+|[4534309](https://support.microsoft.com/help/4534309/windows-8-1-kb4534309)| Google Chrome のリリース80では、新しい [SameSite](https://www.chromestatus.com/feature/5088147346030592) cookie ポリシーが既定でサポートされているため AD FS chrome エラーが発生する可能性があります。 詳細については、 [こちら](/office365/troubleshoot/miscellaneous/chrome-behavior-affects-applications)を参照してください。 |2020 年 1 月
 |[4507448](https://support.microsoft.com/help/4507448/windows-8-1-update-kb4507448)| このセキュリティ更新プログラムは、Active Directory フェデレーションサービス (AD FS) (AD FS) の脆弱性に対処します。これにより、攻撃者がエクストラネットロックアウトポリシーをバイパスできる可能性があります。 |2019 年 7 月
 |[4041685](https://support.microsoft.com/kb/4041685)|要求ヘッダーの MSISConext クッキーが最終的にヘッダーサイズの制限をオーバーフローし、HTTP 状態コード400の "Bad Request-Header 長すぎます" で失敗する可能性がある AD FS の問題に対処します。</br></br>認証時に ADFS が "prompt = login" を無視できなくなる問題を修正しました。 非パスワード認証が使用される復元シナリオに "Disabled" オプションが追加されました。|更新プログラムのロールアップの2017年10月のプレビュー
 |[4019217](https://support.microsoft.com/kb/4019217)|サーバー 2012 R2 AD FS サーバーを使用しているときに、トークンブローカーを使用しているワークフォルダークライアントが機能しない|2017年5月の更新プログラムのロールアップ
@@ -56,7 +57,7 @@ Windows Server 2012 R2 の Active Directory フェデレーションサービス
 |[4015547](https://support.microsoft.com/kb/4015547)|外部ユーザーを認証せず、AD FS WAP が要求をランダムに転送できない AD FS の問題を修正した|2017年4月のセキュリティ更新プログラム
 |[4012216](https://support.microsoft.com/kb/4009970)|MS17-019 このセキュリティ更新プログラムは、Active Directory フェデレーションサービス (AD FS) (ADFS) の脆弱性を解決します。 攻撃者が特別に細工された要求を AD FS サーバーに送信すると、脆弱性によって情報漏えいが発生する可能性があります。これにより、攻撃者はターゲットシステムに関する機密情報を読み取ることができます。|2017年3月の更新プログラムのロールアップ
 |[3179574](https://support.microsoft.com/kb/3179574)|エクストラネットパスワード更新 AD FS の問題を修正した。 |2016年8月の更新プログラムのロールアップ
-|[3172614](https://support.microsoft.com/kb/3172614)|Prompt = ログイン[サポート](../overview/ad-fs-faq.md)を導入し、AD FS 管理コンソールと Always requireauthentication 設定の問題を修正しました。 |2016年7月の更新プログラムのロールアップ
+|[3172614](https://support.microsoft.com/kb/3172614)|Prompt = ログイン [サポート](../overview/ad-fs-faq.md)を導入し、AD FS 管理コンソールと Always requireauthentication 設定の問題を修正しました。 |2016年7月の更新プログラムのロールアップ
 |[3163306](https://support.microsoft.com/kb/3163306)|Active Directory フェデレーションサービス (AD FS) (AD FS) 3.0 は、接続文字列で Secure Sockets Layer (SSL) ポート636または3269を使用するように構成されているライトウェイトディレクトリアクセスプロトコル (LDAP) 属性ストアに接続できません。 |2016年6月の更新プログラムのロールアップ
 |[3148533](https://support.microsoft.com/kb/3148533)|Windows Server 2012 R2 の ADFS プロキシを介して MFA フォールバック認証が失敗する |2016 年 5 月
 |[3134787](https://support.microsoft.com/kb/3134787)|AD FS ログには、Windows Server 2012 R2 のアカウントロックアウトシナリオのクライアント IP アドレスが含まれていません。 |2016 年 2 月
@@ -99,11 +100,11 @@ AD FS 2.0 および2.1 用にリリースされている修正プログラムお
 |[2987843](https://support.microsoft.com/kb/2987843)|Windows Server 2012 で多くのユーザーが web アプリケーションにログオンすると AD FS フェデレーションサーバーのメモリ使用量が増加し続ける|2014 年 7 月|AD FS 2.1
 |[2957619](https://support.microsoft.com/kb/2957619)|委任されたトークンの AD FS に対する要求が行われると、AD FS の証明書利用者信頼が停止します。|2014 年 5 月|AD FS 2.1
 |[2926658](https://support.microsoft.com/kb/2926658)|SQL アクセス許可がない場合、ADFS SQL ファームの配置が失敗する|2014 年 10 月|AD FS 2.1
-|[2896713](https://support.microsoft.com/kb/2896713)または[2989956](https://support.microsoft.com/kb/2989956)|AD FS サーバーにセキュリティ更新プログラム2843638をインストールした後で、いくつかの問題を修正するための更新プログラムを利用できます。|2013年11月</br></br>2014 年 9 月|AD FS 2.0/2.1
+|[2896713](https://support.microsoft.com/kb/2896713) または [2989956](https://support.microsoft.com/kb/2989956)|AD FS サーバーにセキュリティ更新プログラム2843638をインストールした後で、いくつかの問題を修正するための更新プログラムを利用できます。|2013年11月</br></br>2014 年 9 月|AD FS 2.0/2.1
 |[2877424](https://support.microsoft.com/kb/2877424)|更新プログラムでは、AD FS 2.1 ファーム内の複数の証明書利用者信頼に対して1つの証明書を使用できます。|2013 年 10 月|AD FS 2.1
 |[2873168](https://support.microsoft.com/kb/2873168)|修正: サードパーティの CSP と HSM を使用し、Windows Server 2008 R2 Service Pack 1 の AD FS 2.0 の更新プログラムのロールアップ3で要求プロバイダー信頼を構成すると、エラーが発生します。|2013年9月|AD FS 2.0
 |[2861090](https://support.microsoft.com/kb/2861090)|暗号化証明書のサブジェクト名にコンマがあると、Windows Server 2008 R2 SP1 で例外が発生する|2013 年 8 月|AD FS 2.0
 |[2843639](https://support.microsoft.com/kb/2843639)|保護Active Directory フェデレーションサービス (AD FS) の脆弱性により、情報漏えいが起こる|2013年11月|AD FS 2.1
 |[2843638](https://support.microsoft.com/kb/2843638)|MS13-066: Active Directory フェデレーションサービス (AD FS) 2.0 のセキュリティ更新プログラムの説明: 2013 年8月13日|2013 年 8 月|AD FS 2.0
-|[2827748](https://support.microsoft.com/kb/2827748)|Federationmetadata.xml ファイルには、Windows Server 2012 の WS-TRUST および WS-FEDERATION エンドポイントの MEX エンドポイント情報が含まれていません|2013 年 5 月|AD FS 2.1
+|[2827748](https://support.microsoft.com/kb/2827748)|Federationmetadata.xml ファイルには、Windows Server 2012 の WS-Trust および WS-Federation エンドポイントの MEX エンドポイント情報が含まれていません|2013 年 5 月|AD FS 2.1
 |[2790338](https://support.microsoft.com/kb/2790338)|Active Directory フェデレーションサービス (AD FS) (AD FS) 2.0 の更新プログラムのロールアップ3の説明|2013 年 3 月|AD FS 2.0

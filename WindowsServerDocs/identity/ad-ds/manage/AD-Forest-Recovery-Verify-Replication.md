@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: レプリケーションが機能していることを確認するためのリソース'
 title: AD フォレストの回復-レプリケーションを確認する
 ms.author: daveba
 author: iainfoulds
@@ -6,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 302e522a-fb40-43bc-bc63-83dcc87ebde5
-ms.openlocfilehash: 6f08871e3ffa27f3bfc063c5962437ae65f8f667
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 8ae4dca67398d9604ef471d0a571bafe105b86f3
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070784"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049560"
 ---
 # <a name="resources-to-verify-replication-is-working"></a>レプリケーションが機能していることを確認するためのリソース
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: シールドされた Vm-VM シールドヘルパー VHD の準備'
 title: シールドされた Vm-VM シールドヘルパー VHD の準備
 ms.topic: article
 ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
@@ -6,23 +7,23 @@ manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: 2c6a74b3dd18465534a662e6c1afa37ac197aca6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 79c28bb51abb0bd05a4302f392d8be288b9899d5
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943992"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049110"
 ---
 # <a name="shielded-vms---preparing-a-vm-shielding-helper-vhd"></a>シールドされた Vm-VM シールドヘルパー VHD の準備
 
 >適用対象: windows server 2019、Windows Server (半期チャネル)、Windows Server 2016
 
 > [!IMPORTANT]
-> これらの手順を開始する前に、Windows Server 2016 用の最新の累積的な更新プログラムがインストールされていること、または最新の Windows 10[リモートサーバー管理ツール](https://www.microsoft.com/download/details.aspx?id=45520)を使用していることを確認してください。 それ以外の場合、プロシージャは機能しません。
+> これらの手順を開始する前に、Windows Server 2016 用の最新の累積的な更新プログラムがインストールされていること、または最新の Windows 10 [リモートサーバー管理ツール](https://www.microsoft.com/download/details.aspx?id=45520)を使用していることを確認してください。 それ以外の場合、プロシージャは機能しません。
 
 このセクションでは、既存の Vm をシールドされた Vm に変換するためのサポートを有効にするホスティングサービスプロバイダーによって実行される手順の概要を説明します。
 
-このトピックがシールドされた Vm のデプロイプロセス全体にどのように適合するかを理解するには、「保護された[ホストとシールドされた vm のホスティングサービスプロバイダーの構成手順](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)」を参照してください。
+このトピックがシールドされた Vm のデプロイプロセス全体にどのように適合するかを理解するには、「保護された [ホストとシールドされた vm のホスティングサービスプロバイダーの構成手順](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)」を参照してください。
 
 ## <a name="which-vms-can-be-shielded"></a>どの Vm をシールドすることができますか。
 
@@ -34,10 +35,10 @@ ms.locfileid: "87943992"
 
 ## <a name="prepare-helper-vhd"></a>ヘルパー VHD の準備
 
-1.  Hyper-v がインストールされているコンピューターとリモートサーバー管理ツール機能のシールドされた**VM ツール**がインストールされているコンピューターで、空の VHDX を使用して新しい第2世代の vm を作成し、WINDOWS server ISO のインストールメディアを使用して windows server 2016 をインストールします。 この VM はシールドされていないため、Server Core またはデスクトップエクスペリエンス搭載サーバーを実行する必要があります。
+1.  Hyper-v がインストールされているコンピューターとリモートサーバー管理ツール機能のシールドされた **VM ツール** がインストールされているコンピューターで、空の VHDX を使用して新しい第2世代の vm を作成し、WINDOWS server ISO のインストールメディアを使用して windows server 2016 をインストールします。 この VM はシールドされていないため、Server Core またはデスクトップエクスペリエンス搭載サーバーを実行する必要があります。
 
     > [!IMPORTANT]
-    > VM シールドヘルパー VHD は、[ホスティングサービスプロバイダー](guarded-fabric-create-a-shielded-vm-template.md)によって作成されたテンプレートディスクに関連付けられていないと、シールドされた vm テンプレートが作成され**ません**。 テンプレートディスクを再利用すると、シールドプロセス中にディスク署名の競合が発生します。これは、両方のディスクの GPT ディスク識別子が同じであるためです。 これを回避するには、新しい (空の) VHD を作成し、ISO のインストールメディアを使用して Windows Server 2016 をインストールします。
+    > VM シールドヘルパー VHD は、[ホスティングサービスプロバイダー](guarded-fabric-create-a-shielded-vm-template.md)によって作成されたテンプレートディスクに関連付けられていないと、シールドされた vm テンプレートが作成され **ません**。 テンプレートディスクを再利用すると、シールドプロセス中にディスク署名の競合が発生します。これは、両方のディスクの GPT ディスク識別子が同じであるためです。 これを回避するには、新しい (空の) VHD を作成し、ISO のインストールメディアを使用して Windows Server 2016 をインストールします。
 
 2.  VM を起動し、セットアップ手順を完了して、デスクトップにログインします。 VM が動作中の状態であることを確認したら、VM をシャットダウンします。
 
@@ -47,7 +48,7 @@ ms.locfileid: "87943992"
     Initialize-VMShieldingHelperVHD -Path 'C:\VHD\shieldingHelper.vhdx'
     ```
 
-4.  コマンドが正常に完了したら、VHDX を VMM ライブラリ共有にコピーします。 手順 1. で VM を再起動しない**で**ください。 この操作を行うと、ヘルパーディスクが破損します。
+4.  コマンドが正常に完了したら、VHDX を VMM ライブラリ共有にコピーします。 手順 1. で VM を再起動しない **で** ください。 この操作を行うと、ヘルパーディスクが破損します。
 
 5.  これで、Hyper-v の手順 1. から VM を削除できます。
 

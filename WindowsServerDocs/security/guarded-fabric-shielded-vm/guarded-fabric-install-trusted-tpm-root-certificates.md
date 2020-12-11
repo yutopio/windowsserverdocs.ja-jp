@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「信頼された TPM ルート証明書のインストール」をご覧ください。
 title: 信頼された TPM ルート証明書をインストールする
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 06/27/2019
-ms.openlocfilehash: 04beb3f517df090393690a871a12015cf0bed163
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8efc08856c234d55f6cc9b87bade9f5c81bf4332
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87971319"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049710"
 ---
 # <a name="install-trusted-tpm-root-certificates"></a>信頼された TPM ルート証明書をインストールする
 
@@ -31,7 +32,7 @@ HGS は、ベンダー証明書の "TrustedTPM_RootCA" と "TrustedTPM_Intermedi
 これらの証明書をインストールするには、次の手順を実行します。
 TPM 証明書が以下のパッケージに含まれていない場合は、TPM ベンダーまたはサーバー OEM に問い合わせて、特定の TPM モデルのルート証明書と中間証明書を取得します。
 
-**すべての HGS サーバー**で、次の手順を繰り返します。
+**すべての HGS サーバー** で、次の手順を繰り返します。
 
 1.  から最新のパッケージをダウンロードし [https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925) ます。
 
@@ -70,7 +71,7 @@ TPM 証明書が以下のパッケージに含まれていない場合は、TPM 
 以前のインストール時に、新しい証明書または意図的にスキップされた証明書を追加するには、HGS クラスター内のすべてのノードで上記の手順を繰り返します。
 既存の証明書は信頼されたままですが、拡張された cab ファイルで見つかった新しい証明書は、信頼された TPM ストアに追加されます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ファブリック DNS の構成](guarded-fabric-configuring-fabric-dns-tpm.md)

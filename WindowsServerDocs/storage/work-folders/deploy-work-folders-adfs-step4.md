@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「AD FS と Web アプリケーションプロキシを使用してワークフォルダーを展開する: 手順 4. Web アプリケーションプロキシを設定する」を参照してください。'
 title: 'AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 4: Web アプリケーション プロキシのセットアップ'
 ms.topic: article
 manager: klaasl
@@ -6,12 +7,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 06/24/2017
 ms.assetid: 4a11ede0-b000-4188-8190-790971504e17
-ms.openlocfilehash: 0b7748332d8760db24010a04d0ecf3a5094bcda6
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 8a44359e257024b9ba74ee16684a1e4226891594
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87965829"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049150"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-4-set-up-web-application-proxy"></a>AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 4: Web アプリケーション プロキシのセットアップ
 
@@ -55,7 +56,7 @@ ms.locfileid: "87965829"
 
 7.  **[OK]** をクリックします。
 
-8.  フォルダー**コンソール Root\Certificates \( Local Computer) \Personal\Certificates**を展開します。
+8.  フォルダー **コンソール Root\Certificates \( Local Computer) \Personal\Certificates** を展開します。
 
 9. [**証明書**] を右クリックし、[**すべてのタスク**]、[**インポート**] の順にクリックします。
 
@@ -63,7 +64,7 @@ ms.locfileid: "87965829"
 
 11. 手順 9 と 10 を繰り返します。今回はワーク フォルダー証明書を参照して、インポートします。
 
-12. フォルダー**コンソール Root\Certificates \( Local Computer) \Trusted ルート証明書 Authorities\Certificates**を展開します。
+12. フォルダー **コンソール Root\Certificates \( Local Computer) \Trusted ルート証明書 Authorities\Certificates** を展開します。
 
 13. [**証明書**] を右クリックし、[**すべてのタスク**]、[**インポート**] の順にクリックします。
 
@@ -136,11 +137,11 @@ Web アプリケーション プロキシを構成するには、次の手順に
 
    名前: **WorkFolders**
 
-   外部 URL:**https://workfolders.contoso.com**
+   外部 URL: **https://workfolders.contoso.com**
 
    外部証明書:**以前にインストールしたワーク フォルダー証明書**
 
-   バックエンドサーバーの URL:**https://workfolders.contoso.com**
+   バックエンドサーバーの URL: **https://workfolders.contoso.com**
 
 9. 確認ページでは、アプリケーションの公開を実行する、Windows PowerShell コマンドが表示されます。 **[発行]** をクリックします。
 
@@ -150,6 +151,6 @@ Web アプリケーション プロキシを構成するには、次の手順に
 
 次の手順: [AD FS と Web アプリケーション プロキシを使ったワーク フォルダーの展開: 手順 5: クライアントのセットアップ](deploy-work-folders-adfs-step5.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ワーク フォルダーの概要](Work-Folders-Overview.md)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 付録 M: ドキュメントのリンクと推奨資料'
 ms.assetid: 6785de86-4f7d-4ed1-9055-8de0871d59b5
 title: 付録 M-ドキュメントリンクと推奨資料
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3840f99023320629968aa3fc18ffbfa807853fea
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 5c9deb86238b64c9d2e6c0d689b725fac0cb0c91
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93068995"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049530"
 ---
 # <a name="appendix-m-document-links-and-recommended-reading"></a>付録 M: ドキュメントのリンクと推奨資料
 
@@ -167,7 +168,7 @@ ms.locfileid: "93068995"
 ### <a name="recommended-reading"></a>推奨トピック
 次の表に、Active Directory システムのセキュリティを強化する際に役立つ、推奨される読み取りの一覧を示します。
 
-| **推奨トピック** |
+| **推奨資料** |
 |--|
 | [2014レポートに関するジョージア州のサイバーの脅威](http://www.gtsecuritysummit.com/2014Report.pdf) |
 | [Microsoft セキュリティインテリジェンスレポート](https://www.microsoft.com/security/sir/default.aspx) |

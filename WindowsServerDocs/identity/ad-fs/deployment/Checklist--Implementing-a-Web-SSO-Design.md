@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「チェックリスト: Web SSO 設計の実装」を参照してください。'
 ms.assetid: 30657638-5709-48c5-87aa-98f688e07b4c
 title: チェックリスト-Web SSO 設計の実装
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 965cadc9f1e9036c2d4023478e1a4ce82a4996c1
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: eb8627434fb29b167896a4704617231adb4b1794
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945529"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050330"
 ---
 # <a name="checklist-implementing-a-web-sso-design"></a>チェックリスト:Web SSO 設計の実装
 

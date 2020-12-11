@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Winlogon 自動再起動 Sign-On (ARSO)'
 title: Winlogon 自動再起動サインオン (ARSO)
 ms.topic: article
 ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
@@ -6,12 +7,12 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
-ms.openlocfilehash: 450c57fae13dc4a970c047cceb356a8fab227066
-ms.sourcegitcommit: db2d46842c68813d043738d6523f13d8454fc972
+ms.openlocfilehash: 4a9aec72bd91bc28975dea1c9ba6c28cbb512c6c
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89638740"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050220"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>Winlogon 自動再起動サインオン (ARSO)
 
@@ -53,7 +54,7 @@ Windows 8 では、ロック画面アプリが導入されました。  これ�
 
     -   Server Sku で既定で無効になっています。
 
--   なぜでしょうか?
+-   これはなぜでしょうか。
 
     -   戻り、ユーザーがログオンするまで、一部の更新プログラムを終了できません。
 
@@ -138,6 +139,6 @@ WinLogon が自動的にロックしたときに WinLogon の状態のトレー�
 ## <a name="additional-resources"></a>その他のリソース
 **テーブル SEQ テーブル \\ \* アラビア語 3: Arso 用語集**
 
-|期間|定義|
+|項目|定義|
 |----|-------|
 |Autologon|自動ログオンは、いくつかのリリースの Windows に存在した機能です。  これは Windows の自動ログオン v3.01 などのツールがある Windows のドキュメント化された機能 *[http:/technet.microsoft.com/sysinternals/bb963905.aspx](/sysinternals/downloads/autologon)*<p>デバイスの 1 人のユーザーの資格情報を入力しなくても自動的にサインインできます。 資格情報が構成され、暗号化された LSA シークレットとしてレジストリに格納します。|

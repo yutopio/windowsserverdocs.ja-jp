@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AD FS のデプロイ目標の特定'
 ms.assetid: c81b8291-fba5-4b30-a43d-7feb2f4b66be
 title: AD FS の展開目標の dentify
 author: billmath
@@ -6,12 +7,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 3705d9c1e5675c233e91df9b5f1e73f68ce4b34c
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 2265e3150dfcfe65d4f958fecf22ad9c7e599e15
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945304"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049980"
 ---
 # <a name="identify-your-ad-fs-deployment-goals"></a>AD FS 展開目標の特定
 
@@ -87,7 +88,7 @@ Windows Server 2012 R2 の新しい AD FS 機能を次に示し &reg; ます。�
 
 -   ユーザー認証の選択 (複数の認証プロバイダーが使用可能な場合)。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Windows Server 2012 R2 での AD FS 設計ガイド](../../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
 
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「チェックリスト: フェデレーションサーバーのセットアップ」を参照してください。'
 ms.assetid: 8f954004-40d5-4c5e-8e0d-e8700c8ec7b1
 title: チェックリスト-フェデレーションサーバーのセットアップ
 author: billmath
@@ -6,12 +7,12 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.author: billmath
-ms.openlocfilehash: 929b868c1afa2dd21897526938611f881dfade37
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: b968b5a1d573901fa13813e498cbf273e93e6c14
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938558"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050310"
 ---
 # <a name="checklist-setting-up-a-federation-server"></a>チェックリスト: フェデレーション サーバーのセットアップ
 
@@ -20,7 +21,7 @@ ms.locfileid: "87938558"
 > [!NOTE]
 > このチェックリストのタスクは順番に実行してください。 参照リンクによって手順に移動した場合は、このチェックリストの残りのタスクを進めることができるように、その手順の作業が完了したらこのトピックに戻ります。
 
-![フェデレーションサーバーのセットアップの](media/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**チェックリスト: フェデレーションサーバーの**セットアップ
+![フェデレーションサーバーのセットアップの](media/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**チェックリスト: フェデレーションサーバーの** セットアップ
 
 |タスク|リファレンス|
 |--------|-------------|
@@ -38,7 +39,7 @@ ms.locfileid: "87938558"
 |\(省略可能 \) 。 CA からサーバー認証証明書を取得する代わりに、インターネットインフォメーションサービス IIS を使用して、 \( \) フェデレーションサーバーのサンプル証明書を作成できます。 **注意:** 自己 \- 署名サーバー認証証明書を使用して運用環境にフェデレーションサーバーを展開することは、セキュリティのベストプラクティスではありません。|![フェデレーションサーバーのセットアップ](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[IIS: 自己 \- 署名入りのサーバー証明書を作成](https://go.microsoft.com/fwlink/?LinkID=108271)し、「[サーバー認証証明書を既定の Web サイトにインポートする](Import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)」の手順を完了します。|
 |アカウントパートナー組織でフェデレーションサーバーファーム環境を構成する場合は、ファームが存在する AD DS Active Directory Domain Services で専用のサービスアカウントを作成して構成し、 \( \) このアカウントを使用するようにファーム内の各フェデレーションサーバーを構成する必要があります。 この手順を実行すると、企業ネットワーク上のクライアントは、Windows 統合認証を使用して、ファーム内の任意のフェデレーションサーバーに対して認証を行うことができます。|![フェデレーションサーバーのセットアップ](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[フェデレーションサーバーファームのサービスアカウントを手動で構成する](Manually-Configure-a-Service-Account-for-a-Federation-Server-Farm.md)|
 |フェデレーションサーバーとなるコンピューターにフェデレーションサービスの役割サービスをインストールします。|![フェデレーションサーバーのセットアップ](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[フェデレーションサービスの役割サービスのインストール](Install-the-Federation-Service-Role-Service.md)|
-|AD FS フェデレーションサーバー構成ウィザードを使用して、フェデレーションサーバーの役割で動作するようにコンピューターの AD FS ソフトウェアを構成します。<p>スタンドアロンフェデレーションサーバーをセットアップする場合 \- 、新しいファームに最初のフェデレーションサーバーを作成する場合、または既存のフェデレーションサーバーファームにコンピューターを参加させる場合は、次の手順に従います。 **注:** フェデレーション Web シングルサイン \- オン SSO 設計では、 \( \) アカウントパートナー組織に少なくとも1つのフェデレーションサーバーがあり、リソースパートナー組織に少なくとも1つのフェデレーションサーバーが必要です。|![フェデレーションサーバーのセットアップ](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[スタンドアロンフェデレーションサーバーを作成](Create-a-Stand-Alone-Federation-Server.md)する<p>![フェデレーションサーバーのセットアップ](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[フェデレーションサーバーファームに最初のフェデレーションサーバーを作成](Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md)する<p>![フェデレーションサーバーのセットアップフェデレーションサーバー](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[ファームへのフェデレーションサーバーの追加](Add-a-Federation-Server-to-a-Federation-Server-Farm.md)|
-|\(省略可能 \) AD FS 管理スナップインを使用して、 \- 設計を展開するために必要な AD FS 証明書を追加して構成します。 スナップインを使用して証明書を追加または変更する場合の詳細については \- 、「[フェデレーションサーバーの証明書の要件](../design/certificate-requirements-for-federation-servers.md)」を参照してください。|![フェデレーションサーバーのセットアップ](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[トークン署名証明書の追加](Add-a-Token-Signing-Certificate.md)<p>![フェデレーションサーバーのセットアップ](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[トークン暗号化解除証明書の追加](Add-a-Token-Decrypting-Certificate.md)<p>![フェデレーションサーバーのセットアップ](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[サービス通信証明書の設定](Set-a-Service-Communications-Certificate.md)|
+|AD FS フェデレーションサーバー構成ウィザードを使用して、フェデレーションサーバーの役割で動作するようにコンピューターの AD FS ソフトウェアを構成します。<p>スタンドアロンフェデレーションサーバーをセットアップする場合 \- 、新しいファームに最初のフェデレーションサーバーを作成する場合、または既存のフェデレーションサーバーファームにコンピューターを参加させる場合は、次の手順に従います。 **注:** フェデレーション Web シングルサイン \- オン SSO 設計では、 \( \) アカウントパートナー組織に少なくとも1つのフェデレーションサーバーがあり、リソースパートナー組織に少なくとも1つのフェデレーションサーバーが必要です。|![フェデレーションサーバーのセットアップ](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Stand-Alone フェデレーションサーバーの作成](Create-a-Stand-Alone-Federation-Server.md)<p>![フェデレーションサーバーのセットアップ](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[フェデレーションサーバーファームに最初のフェデレーションサーバーを作成](Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md)する<p>![フェデレーションサーバーのセットアップフェデレーションサーバー](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[ファームへのフェデレーションサーバーの追加](Add-a-Federation-Server-to-a-Federation-Server-Farm.md)|
+|\(省略可能 \) AD FS 管理スナップインを使用して、 \- 設計を展開するために必要な AD FS 証明書を追加して構成します。 スナップインを使用して証明書を追加または変更する場合の詳細については \- 、「 [フェデレーションサーバーの証明書の要件](../design/certificate-requirements-for-federation-servers.md)」を参照してください。|![フェデレーションサーバーのセットアップ](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Token-Signing 証明書の追加](Add-a-Token-Signing-Certificate.md)<p>![フェデレーションサーバーのセットアップ](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Token-Decrypting 証明書の追加](Add-a-Token-Decrypting-Certificate.md)<p>![フェデレーションサーバーのセットアップ](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[サービス通信証明書の設定](Set-a-Service-Communications-Certificate.md)|
 |これが組織内の最初のフェデレーションサーバーである場合は、AD FS の設計に準拠するようにフェデレーションサービスを構成します。|![フェデレーションサーバーのセットアップの](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[チェックリスト: アカウントパートナー組織の構成](Checklist--Configuring-the-Account-Partner-Organization.md)<p>![フェデレーションサーバーのセットアップの](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[チェックリスト: リソースパートナー組織の構成](Checklist--Configuring-the-Resource-Partner-Organization.md)|
 |クライアントコンピューターから、フェデレーションサーバーが動作可能であることを確認します。|![フェデレーションサーバーのセットアップ](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[フェデレーションサーバーが動作していることを確認する](Verify-That-a-Federation-Server-Is-Operational.md)|

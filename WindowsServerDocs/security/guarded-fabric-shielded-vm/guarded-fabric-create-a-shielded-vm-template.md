@@ -1,17 +1,18 @@
 ---
 title: Windows のシールドされた VM テンプレートディスクを作成する
+description: '詳細情報: Windows シールドされた VM テンプレートディスクの作成'
 ms.topic: article
 ms.assetid: 9c8b84e8-1f5a-47a1-83ca-b1dbd801cb0b
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 01/29/2019
-ms.openlocfilehash: 43d03727195e942c68e5ec3a982ddc6b7f756dbc
-ms.sourcegitcommit: d08965d64f4a40ac20bc81b14f2d2ea89c48c5c8
+ms.openlocfilehash: 4a8d8429373e6ebedc1b6d9b828527babeb98f0e
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96864431"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049810"
 ---
 # <a name="create-a-windows-shielded-vm-template-disk"></a>Windows のシールドされた VM テンプレートディスクを作成する
 
@@ -163,7 +164,7 @@ Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\MyLinuxTemplate.vhdx' -Vo
 ```
 
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [シールドデータファイルを作成する](guarded-fabric-tenant-creates-shielding-data.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 送信グループのメンバーシップを要求規則として使用する場合'
 ms.assetid: af16e847-47c2-461e-9df1-cc352a322043
 title: "\"グループ メンバーシップを要求として送信する\" 規則を使用するタイミング"
 author: billmath
@@ -6,19 +7,19 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 2a56b3547535123dfdff66fe764485fc53f3e908
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 912ebf3fe8c3db96de2d615d3bda6ea3c7f3f7a4
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87956239"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050430"
 ---
 # <a name="when-to-use-a-send-group-membership-as-a-claim-rule"></a>"グループ メンバーシップを要求として送信する" 規則を使用するタイミング
 この規則は、 \( \) 指定された Active Directory セキュリティグループのメンバーであるユーザーのみに対して、新しい出力方向の要求の値を発行する場合に Active Directory フェデレーションサービス (AD FS) AD FS で使用できます。 この規則を使用すると、次の表で説明するように、指定されたグループの中で、規則のロジックと一致するグループに対してのみ、1 つの要求が発行されます。
 
 |規則のオプション|規則のロジック|
 |---------------|--------------|
-|出力方向の要求の値|ユーザーのグループメンバーシップが*指定されたグループ*と同じであり、出力方向の要求の種類が*指定された要求の種類*と等しい場合は、既存のグループ名の値を*指定された出力方向の要求の値*に置き換えて、要求を発行します。|
+|出力方向の要求の値|ユーザーのグループメンバーシップが *指定されたグループ* と同じであり、出力方向の要求の種類が *指定された要求の種類* と等しい場合は、既存のグループ名の値を *指定された出力方向の要求の値* に置き換えて、要求を発行します。|
 
 以下のセクションでは、要求規則の基本的な概要を説明します。 "グループ メンバーシップの送信を要求として送信する" 規則を使用するタイミングについても詳しく説明します。
 
@@ -33,7 +34,7 @@ ms.locfileid: "87956239"
 
 -   要求規則テンプレートでは、常に入力方向の要求の種類を指定する必要があります。 ただし、1 つの規則を使用して、要求の種類が同じ複数の要求の値を処理できます。
 
-要求規則と要求規則セットの詳細については、「[要求規則の役割](The-Role-of-Claim-Rules.md)」を参照してください。 規則の処理方法の詳細については、「[要求エンジンの役割](The-Role-of-the-Claims-Engine.md)」を参照してください。 要求規則セットの処理方法の詳細については、「[要求パイプラインの役割](The-Role-of-the-Claims-Pipeline.md)」を参照してください。
+要求規則と要求規則セットの詳細については、「 [要求規則の役割](The-Role-of-Claim-Rules.md)」を参照してください。 規則の処理方法の詳細については、「 [要求エンジンの役割](The-Role-of-the-Claims-Engine.md)」を参照してください。 要求規則セットの処理方法の詳細については、「 [要求パイプラインの役割](The-Role-of-the-Claims-Pipeline.md)」を参照してください。
 
 ## <a name="outgoing-claim-value"></a>出力方向の要求の値
 "グループ メンバーシップを要求として送信する" 規則テンプレートを使用して、ユーザーが指定されたグループのメンバーであるかどうかを条件とする要求を発行できます。
@@ -58,7 +59,7 @@ ms.locfileid: "87956239"
 
 -   出力方向の要求の値を指定する
 
-このルールを作成する方法の詳細については、「[グループメンバーシップを要求として送信するルールを作成](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913569(v=ws.11))する」を参照してください。
+このルールを作成する方法の詳細については、「 [グループメンバーシップを要求として送信するルールを作成](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913569(v=ws.11))する」を参照してください。
 
 ## <a name="using-the-claim-rule-language"></a>要求規則言語の使用
 グループ SID 以外の入力方向の SID に基づいて要求を発行する場合は、"入力方向の要求の変換" 規則テンプレートを使用します。 ユーザーがメンバーとして属しているすべてのグループの名前を管理者が取得する場合は、"LDAP 属性を要求として送信する" 規則テンプレートと **tokenGroups** 属性を使用します。
@@ -71,6 +72,6 @@ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", 
 => issue(Type = "http://schemas.xmlsoap.org/claims/Group", Value = "administrators", Issuer = c.Issuer, OriginalIssuer = c.OriginalIssuer, ValueType = c.ValueType);
 ```
 
-## <a name="additional-references"></a>その他の参照情報
+## <a name="additional-references"></a>その他のリファレンス
 [LDAP 属性を要求として送信するルールを作成する](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807115(v=ws.11))
 

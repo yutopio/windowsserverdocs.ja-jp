@@ -1,16 +1,17 @@
 ---
+description: 詳細については、TPM を使用した HGS の初期化-信頼された構成証明
 title: TPM の信頼された構成証明を使用して HGS を初期化する
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
 ms.date: 08/29/2018
-ms.openlocfilehash: f8d9f2f8df0a69d8faf7d6c87200b379b55749b3
-ms.sourcegitcommit: dfa48f77b751dbc34409aced628eb2f17c912f08
+ms.openlocfilehash: 6dc4139b1204242a96b99e93d211a673756bdc5a
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939613"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97049740"
 ---
 # <a name="initialize-hgs-using-tpm-trusted-attestation"></a>TPM の信頼された構成証明を使用して HGS を初期化する
 
