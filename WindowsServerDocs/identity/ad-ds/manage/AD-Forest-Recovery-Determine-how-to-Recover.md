@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フォレストの回復方法の決定」を参照してください。
 title: AD フォレストの回復-フォレストを回復する方法を決定する
 ms.author: daveba
 author: iainfoulds
@@ -6,12 +7,12 @@ manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.openlocfilehash: 2cf48d391e675507d3fc227efc4ab691b10234bb
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 15d05a5c37b81fe059fcb2b0be111fd694bd3f57
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93071344"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045630"
 ---
 # <a name="determine-how-to-recover-the-forest"></a>フォレストを回復する方法を決定する
 

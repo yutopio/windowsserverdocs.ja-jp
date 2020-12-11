@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Active Directory レプリケーションの概念」を参照してください。
 ms.assetid: 4cc9c16c-1928-4dce-a3a8-6229be28eb65
 title: Active Directory レプリケーションの概念
 author: iainfoulds
@@ -6,12 +7,12 @@ ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.openlocfilehash: 6acd9d1974395cdd4c07df3b09d47ffb104a16ef
-ms.sourcegitcommit: b115e5edc545571b6ff4f42082cc3ed965815ea4
+ms.openlocfilehash: 3b1f4cc780b9605ef4eb8b3bff0755e1f45c0ba8
+ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93070994"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97045780"
 ---
 # <a name="active-directory-replication-concepts"></a>Active Directory レプリケーションの概念
 
@@ -75,7 +76,7 @@ Windows Server 2008 Rodc の場合、KCC の通常の機能によっていくつ
 ## <a name="failover-functionality"></a><a name="BKMK_3"></a>フェールオーバー機能
 サイトでは、ネットワーク障害やオフラインドメインコントローラーに対してレプリケーションがルーティングされるようにします。 KCC は、指定した間隔で実行され、新しいドメインコントローラーが追加され、新しいサイトが作成されたときなど、AD DS で発生する変更のレプリケーショントポロジを調整します。 KCC は、既存の接続のレプリケーションステータスを確認して、接続が機能していないかどうかを判断します。 ドメインコントローラーに障害が発生したために接続が機能していない場合は、他のレプリケーションパートナーへの一時的な接続が KCC によって自動的に作成され、レプリケーションが確実に行われます。 サイト内のすべてのドメインコントローラが使用できない場合は、KCC によって、別のサイトのドメインコントローラ間のレプリケーション接続が自動的に作成されます。
 
-## <a name="subnet"></a><a name="BKMK_4"></a>サブネット
+## <a name="subnet"></a><a name="BKMK_4"></a>Subnet
 サブネットは、一連の論理 IP アドレスが割り当てられる TCP/IP ネットワークのセグメントです。 サブネットは、ネットワーク上の物理的な距離を識別するようにコンピューターをグループ化します。 AD DS のサブネットオブジェクトは、コンピューターをサイトにマップするために使用されるネットワークアドレスを識別します。
 
 ## <a name="site"></a><a name="BKMK_5"></a>サイト
