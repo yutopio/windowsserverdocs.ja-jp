@@ -6,13 +6,13 @@ manager: dcscontentpm
 ms.topic: how-to
 ms.author: delhan
 ms.date: 10/29/2020
-ms.custom: contperfq2
-ms.openlocfilehash: a465a7e777dae0473966b6185470dbb6d563e2b7
-ms.sourcegitcommit: f18097c21e50a09aef2f1937f52608b0042ef0e1
+ms.custom: contperf-fy21q2
+ms.openlocfilehash: 6ff7fe56cdb95bb35ccce39abdd800f9665d86dc
+ms.sourcegitcommit: 36559331b20b7965a95fe26cb19a635f6e4a9723
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96755399"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97364253"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Windows で SMBv1、SMBv2、および SMBv3 を検出、有効化、および無効化する方法
 
@@ -352,7 +352,7 @@ Default: 1 = Enabled (No registry key is created)
 - **Hive**: HKEY_LOCAL_MACHINE
 - **キーのパス**: SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 - **値の名前**: SMB1
-- **値の型**:REG_DWORD
+- **値の型**: REG_DWORD
 - **値のデータ**: 0
 
 ![[新しいレジストリのプロパティ]-[全般]](media/detect-enable-and-disable-smbv1-v2-v3-4.png)
@@ -396,7 +396,7 @@ SMBv1 クライアントを無効にするには、 **MRxSMB10** の開始を無
    - **Hive**: HKEY_LOCAL_MACHINE
    - **キーのパス**: SYSTEM\CurrentControlSet\services\mrxsmb10
    - **値の名前**: Start
-   - **値の型**:REG_DWORD
+   - **値の型**: REG_DWORD
    - **値のデータ**: 4
 
    ![開始プロパティ-全般](media/detect-enable-and-disable-smbv1-v2-v3-5.png)
