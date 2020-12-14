@@ -7,12 +7,12 @@ author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.openlocfilehash: 884710e1cf327940937d627fbbbc124bb99baca9
-ms.sourcegitcommit: 65b6de6b44d41f1180c45db11cdd60cb2a093b46
+ms.openlocfilehash: 901078ec17ce744fb4eb4a2bb3a29f1d79718060
+ms.sourcegitcommit: 7c0794e257f602bd71af5eb9a11b8a03d2b9adfd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97045830"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97390330"
 ---
 # <a name="introduction-to-active-directory-administrative-center-enhancements-level-100"></a>Introduction to Active Directory Administrative Center Enhancements (Level 100)
 
@@ -151,7 +151,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 #### <a name="to-create-an-organizational-unit"></a>組織単位を作成するには
 
 1. Windows PowerShell アイコンを右クリックし、[*管理者として実行*] をクリックして、「 **dsac.exe** 」と入力して adac を開きます。
-2. [ **管理**] をクリックし、[ **ナビゲーションノードの追加** ] をクリックして、[ **ナビゲーションノードの追加** ] ダイアログボックスで適切なターゲットドメインを選択し、[OK] をクリックします。
+2. **[管理]**、**[ナビゲーション ノードの追加]** の順にクリックし、**[ナビゲーション ノードの追加]** ダイアログ ボックスで適切なターゲット ドメインを選択して **[OK]** をクリックします。
 3. **[タスク]** ウィンドウの **[新規]** をクリックし、**[組織単位]** をクリックします。
 4. **[組織単位]** に次の情報を入力して **[OK]** をクリックします。
 
@@ -432,6 +432,6 @@ Windows Server 2012 以降で Windows PowerShell 履歴ビューアーを使用�
 
     このコマンドを変更して、たとえば別のユーザーを **[group1]** に追加したり、**[test1]** を別のグループに追加したりできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Active Directory 管理センター &#40;レベル200を使用した高度な AD DS 管理&#41;](Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md)
